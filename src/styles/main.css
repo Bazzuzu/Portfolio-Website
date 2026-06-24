@@ -492,18 +492,21 @@ button {
 }
 
 .hero-tag-tooltip-title {
-  font-family: var(--font-body-md-family);
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  line-height: var(--font-label-md-line-height);
+  letter-spacing: var(--font-label-md-tracking);
   color: var(--color-text-primary);
   margin: 0 0 8px 0;
-  letter-spacing: -0.01em;
 }
 
 .hero-tag-tooltip-text {
-  font-family: var(--font-body-md-family);
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  line-height: var(--font-label-md-line-height);
+  letter-spacing: var(--font-label-md-tracking);
   color: var(--color-text-secondary);
   margin: 0;
 }
