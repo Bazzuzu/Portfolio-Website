@@ -502,7 +502,7 @@
 .about-toolkit-icon-wrapper {
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: var(--color-icon-inverse);
 }
 
 .about-toolkit-icon {

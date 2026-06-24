@@ -62,6 +62,7 @@
   --color-icon-disabled: #9ea09c;
   --color-icon-interactive: #3E70A2;
   --color-icon-brand: #D93636;
+  --color-icon-inverse: #f4f2ec;
 
   /* Overlay / Modal Scrim */
   --color-overlay-modal: rgba(18, 18, 18, 0.3);
