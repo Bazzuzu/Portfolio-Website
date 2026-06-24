@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
 import CustomIcon from "./CustomIcon";
-import portraitImg from "../assets/images/portrait.jpg";
-import workspaceImg from "../assets/images/workspace.jpg";
+import portraitImg from "../assets/images/profile/portrait.jpg";
+import workspaceImg from "../assets/images/profile/workspace.jpg";
 
 import downloadSvg from "../assets/icons/download.svg?raw";
 import checkCircleSvg from "../assets/icons/check-circle.svg?raw";
