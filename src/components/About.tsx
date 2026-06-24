@@ -8,15 +8,15 @@ import workspaceImg from "../assets/images/profile/workspace.jpg";
 
 import downloadSvg from "../assets/icons/download.svg?raw";
 import checkCircleSvg from "../assets/icons/check-circle.svg?raw";
-import shipSvg from "../assets/icons/ship.svg?raw";
-import compassSvg from "../assets/icons/compass.svg?raw";
-import workflowSvg from "../assets/icons/workflow.svg?raw";
-import zapSvg from "../assets/icons/zap.svg?raw";
-import brainSvg from "../assets/icons/brain.svg?raw";
-import lineChartSvg from "../assets/icons/line-chart.svg?raw";
-import layersSvg from "../assets/icons/layers.svg?raw";
-import timerSvg from "../assets/icons/timer.svg?raw";
-import accessibilitySvg from "../assets/icons/accessibility.svg?raw";
+import shipSvg from "../assets/icons/My Pragmatic Toolkit/Ship Measure Iterate.svg?raw";
+import compassSvg from "../assets/icons/My Pragmatic Toolkit/Architecture Before Pixels.svg?raw";
+import workflowSvg from "../assets/icons/My Pragmatic Toolkit/Modular Design Process.svg?raw";
+import zapSvg from "../assets/icons/My Pragmatic Toolkit/Rapid AI Prototyping.svg?raw";
+import brainSvg from "../assets/icons/My Pragmatic Toolkit/Cognitive Minimalism.svg?raw";
+import lineChartSvg from "../assets/icons/My Pragmatic Toolkit/Obsessive Data Coverage.svg?raw";
+import layersSvg from "../assets/icons/My Pragmatic Toolkit/Semantic Design Systems.svg?raw";
+import timerSvg from "../assets/icons/My Pragmatic Toolkit/The Quantum Physics of Time.svg?raw";
+import accessibilitySvg from "../assets/icons/My Pragmatic Toolkit/Embracing Legacy Systems.svg?raw";
 
 interface AboutProps {
   onNavigate?: (page: string) => void;
