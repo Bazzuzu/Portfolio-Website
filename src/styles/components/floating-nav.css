@@ -97,6 +97,7 @@
 .floating-nav--left {
   right: auto !important;
   left: var(--spacing-container-px-md);
+  gap: 10px !important;
 }
 
 @media (min-width: 768px) {

@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Download, CheckCircle, Ship, Compass, Workflow, Zap, Brain, LineChart, Layers, Timer, Accessibility } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
+import CustomIcon from "./CustomIcon";
 import portraitImg from "../assets/images/portrait.jpg";
 import workspaceImg from "../assets/images/workspace.jpg";
+
+import downloadSvg from "../assets/icons/download.svg?raw";
+import checkCircleSvg from "../assets/icons/check-circle.svg?raw";
+import shipSvg from "../assets/icons/ship.svg?raw";
+import compassSvg from "../assets/icons/compass.svg?raw";
+import workflowSvg from "../assets/icons/workflow.svg?raw";
+import zapSvg from "../assets/icons/zap.svg?raw";
+import brainSvg from "../assets/icons/brain.svg?raw";
+import lineChartSvg from "../assets/icons/line-chart.svg?raw";
+import layersSvg from "../assets/icons/layers.svg?raw";
+import timerSvg from "../assets/icons/timer.svg?raw";
+import accessibilitySvg from "../assets/icons/accessibility.svg?raw";
 
 interface AboutProps {
   onNavigate?: (page: string) => void;
@@ -143,7 +155,7 @@ export default function About({ onNavigate }: AboutProps) {
                   id="btn-about-cv"
                 >
                   <span>My CV</span>
-                  <Download size={16} />
+                  <CustomIcon src={downloadSvg} size={16} />
                 </a>
                 <AnimatePresence>
                   {cvSuccessMessage && (
@@ -153,7 +165,7 @@ export default function About({ onNavigate }: AboutProps) {
                       exit={{ opacity: 0, y: -10 }}
                       className="about-cv-notif"
                     >
-                      <CheckCircle size={14} style={{ color: "var(--color-text-brand)" }} />
+                      <CustomIcon src={checkCircleSvg} size={14} />
                       <span>Oleksandr_Konovalov_CV.pdf downloaded!</span>
                     </motion.div>
                   )}
@@ -264,7 +276,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 1 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Ship className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={shipSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Ship, Measure, Iterate</h3>
               <p className="about-toolkit-item-desc">
@@ -275,7 +287,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 2 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Compass className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={compassSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Architecture Before Pixels</h3>
               <p className="about-toolkit-item-desc">
@@ -286,7 +298,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 3 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Workflow className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={workflowSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Modular Design Process</h3>
               <p className="about-toolkit-item-desc">
@@ -297,7 +309,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 4 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Zap className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={zapSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Rapid AI Prototyping</h3>
               <p className="about-toolkit-item-desc">
@@ -308,7 +320,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 5 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Brain className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={brainSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Cognitive Minimalism</h3>
               <p className="about-toolkit-item-desc">
@@ -319,7 +331,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 6 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <LineChart className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={lineChartSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Obsessive Data Coverage</h3>
               <p className="about-toolkit-item-desc">
@@ -330,7 +342,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 7 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Layers className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={layersSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Semantic Design Systems</h3>
               <p className="about-toolkit-item-desc">
@@ -341,7 +353,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 8 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Timer className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={timerSvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">The Quantum Physics of Time</h3>
               <p className="about-toolkit-item-desc">
@@ -352,7 +364,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Item 9 */}
             <motion.div variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
-                <Accessibility className="about-toolkit-icon" size={32} strokeWidth={1.5} />
+                <CustomIcon src={accessibilitySvg} size={32} className="about-toolkit-icon" />
               </div>
               <h3 className="about-toolkit-item-title">Embracing Legacy Systems</h3>
               <p className="about-toolkit-item-desc">

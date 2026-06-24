@@ -213,6 +213,10 @@
   max-width: 100%;
 }
 
+.about-cv-notif .custom-icon {
+  color: var(--color-text-brand);
+}
+
 /* FAQ Section Styling - Interactive Pre-Emptive Interview */
 
 .about-faq-grid {

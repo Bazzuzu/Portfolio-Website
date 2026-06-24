@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData, CaseStudy as CaseStudyType } from "../data/portfolioData";
-import { ArrowLeft, ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
+import CustomIcon from "./CustomIcon";
+import chevronLeftSvg from "../assets/icons/chevron-left.svg?raw";
+import chevronRightSvg from "../assets/icons/chevron-right.svg?raw";
+import maximizeSvg from "../assets/icons/maximize.svg?raw";
+import xSvg from "../assets/icons/x.svg?raw";
 
 interface CaseStudyProps {
   caseStudy: CaseStudyType;
@@ -134,7 +138,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                   onClick={handlePrevSlide}
                   title="Previous image"
                 >
-                  <ChevronLeft size={20} />
+                  <CustomIcon src={chevronLeftSvg} size={20} />
                 </button>
                 <button
                   id="slide-next-btn"
@@ -142,7 +146,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                   onClick={handleNextSlide}
                   title="Next image"
                 >
-                  <ChevronRight size={20} />
+                  <CustomIcon src={chevronRightSvg} size={20} />
                 </button>
               </>
             )}
@@ -301,7 +305,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                             referrerPolicy="no-referrer"
                           />
                           <div className="discovery-image-card__zoom-indicator">
-                            <Maximize2 size={14} />
+                            <CustomIcon src={maximizeSvg} size={14} />
                           </div>
                         </div>
                       </div>
@@ -328,7 +332,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                               referrerPolicy="no-referrer"
                             />
                             <div className="discovery-image-card__zoom-indicator">
-                              <Maximize2 size={14} />
+                              <CustomIcon src={maximizeSvg} size={14} />
                             </div>
                           </div>
                         ))}
@@ -442,7 +446,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                 onClick={() => setLightboxImage(null)}
                 aria-label="Close zoomed image"
               >
-                <X size={18} />
+                <CustomIcon src={xSvg} size={18} />
               </button>
             </motion.div>
           </motion.div>

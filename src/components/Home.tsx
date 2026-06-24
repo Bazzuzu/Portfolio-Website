@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, Check } from "lucide-react";
 import { portfolioData, CaseStudy, OtherProject, MediumArticle } from "../data/portfolioData";
 import Logo from "./Logo";
+import CustomIcon from "./CustomIcon";
+import xSvg from "../assets/icons/x.svg?raw";
+import checkSvg from "../assets/icons/check.svg?raw";
 
 interface HomeProps {
   onNavigate: (page: string, params?: { caseId: string }) => void;
@@ -396,13 +398,13 @@ export default function Home({ onNavigate }: HomeProps) {
                 onClick={handleCloseModal}
                 aria-label="Close"
               >
-                <X size={20} />
+                <CustomIcon src={xSvg} size={20} />
               </button>
 
               {isSuccess ? (
                 <div className="contact-form-success">
                   <div className="contact-form-success__icon">
-                    <Check size={48} />
+                    <CustomIcon src={checkSvg} size={48} />
                   </div>
                   <h3 className="contact-form-success__title">Thank you!</h3>
                   <p className="contact-form-success__message">

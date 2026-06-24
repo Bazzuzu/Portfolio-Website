@@ -4,7 +4,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import CaseStudy from "./components/CaseStudy";
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
-import { ArrowUp, ArrowLeft } from "lucide-react";
+import CustomIcon from "./components/CustomIcon";
+import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
+import arrowLeftSvg from "./assets/icons/arrow-left.svg?raw";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
@@ -129,10 +131,9 @@ export default function App() {
           id="floating-back-nav"
           className="floating-nav floating-nav--left"
           onClick={() => navigateTo("home")}
-          style={{ cursor: "pointer", display: "inline-flex", gap: "10px", textDecoration: "none" }}
         >
-          <ArrowLeft size={16} style={{ color: "var(--color-text-primary)" }} />
-          <span className="floating-nav__link" style={{ textDecoration: "none" }}>Back to Home</span>
+          <CustomIcon src={arrowLeftSvg} size={16} />
+          <span className="floating-nav__link">Back to Home</span>
         </button>
       )}
 
@@ -228,31 +229,17 @@ export default function App() {
         {showScrollTop && (
           <motion.button
             id="scroll-to-top-btn"
+            className="scroll-to-top"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             onClick={handleScrollToTop}
-            style={{
-              position: "fixed",
-              bottom: `${bottomOffset}px`,
-              right: "2rem",
-              width: "48px",
-              height: "48px",
-              borderRadius: "var(--radius-pill)",
-              backgroundColor: "var(--color-action-primary-default)",
-              color: "var(--color-text-on-action)",
-              boxShadow: "0 8px 16px rgba(18, 18, 18, 0.15)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: "var(--z-index-sticky)",
-              cursor: "pointer"
-            }}
+            style={{ bottom: `${bottomOffset}px` }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             title="Scroll to top of page"
           >
-            <ArrowUp size={20} />
+            <CustomIcon src={arrowUpSvg} size={20} />
           </motion.button>
         )}
       </AnimatePresence>
