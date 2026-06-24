@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Check } from "lucide-react";
 import { portfolioData, CaseStudy, OtherProject, MediumArticle } from "../data/portfolioData";
+import Logo from "./Logo";
 
 interface HomeProps {
   onNavigate: (page: string, params?: { caseId: string }) => void;
@@ -95,28 +96,8 @@ export default function Home({ onNavigate }: HomeProps) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          style={{ textDecoration: "none", display: "inline-flex" }}
         >
-          <svg
-            viewBox="0 0 100 100"
-            style={{
-              width: "32px",
-              height: "32px",
-              display: "inline-block",
-              color: "var(--color-text-primary)"
-            }}
-          >
-            <g fill="currentColor">
-              {/* Top-Right Quadrant */}
-              <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" />
-              {/* Bottom-Right Quadrant (Rotated 90 deg) */}
-              <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(90 50 50)" />
-              {/* Bottom-Left Quadrant (Rotated 180 deg) */}
-              <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(180 50 50)" />
-              {/* Top-Left Quadrant (Rotated 270 deg) */}
-              <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(270 50 50)" />
-            </g>
-          </svg>
+          <Logo />
           <span>{portfolioData.designerName}</span>
         </motion.a>
 

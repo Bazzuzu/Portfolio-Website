@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Download, CheckCircle, Ship, Compass, Workflow, Zap, Brain, LineChart, Layers, Timer, Accessibility } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
+import Logo from "./Logo";
+import portraitImg from "../assets/images/portrait.jpg";
+import workspaceImg from "../assets/images/workspace.jpg";
 
 interface AboutProps {
   onNavigate?: (page: string) => void;
@@ -103,28 +106,8 @@ export default function About({ onNavigate }: AboutProps) {
               e.preventDefault();
               if (onNavigate) onNavigate("home");
             }}
-            style={{ textDecoration: "none", display: "inline-flex" }}
           >
-            <svg
-              viewBox="0 0 100 100"
-              style={{
-                width: "32px",
-                height: "32px",
-                display: "inline-block",
-                color: "var(--color-text-primary)"
-              }}
-            >
-              <g fill="currentColor">
-                {/* Top-Right Quadrant */}
-                <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" />
-                {/* Bottom-Right Quadrant (Rotated 90 deg) */}
-                <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(90 50 50)" />
-                {/* Bottom-Left Quadrant (Rotated 180 deg) */}
-                <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(180 50 50)" />
-                {/* Top-Left Quadrant (Rotated 270 deg) */}
-                <path d="M 50,31 V 18 L 61,8 L 71,18 A 16,16 0 0,0 82,29 L 92,39 L 82,50 H 69 A 24,24 0 0,0 50,31 Z" transform="rotate(270 50 50)" />
-              </g>
-            </svg>
+            <Logo />
             <span>{portfolioData.designerName}</span>
           </motion.a>
         </div>
@@ -145,7 +128,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="about-atf-left">
               <motion.div variants={itemVariants} className="about-atf-photo-wrapper">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80"
+                  src={portraitImg}
                   alt="Lex Konovalov"
                   className="about-atf-photo-img"
                   referrerPolicy="no-referrer"
@@ -257,7 +240,7 @@ export default function About({ onNavigate }: AboutProps) {
       <section id="about-workspace-section" className="about-workspace-section">
         <motion.div variants={itemVariants} className="about-workspace-container">
           <img
-            src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1920&q=80"
+            src={workspaceImg}
             alt="Oleksandr's Workspace Setup"
             className="about-workspace-image"
             referrerPolicy="no-referrer"

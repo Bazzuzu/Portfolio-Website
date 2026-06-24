@@ -1,3 +1,17 @@
+import luxuryTravel1 from "../assets/images/luxury-travel-1.jpg";
+import luxuryTravel2 from "../assets/images/luxury-travel-2.jpg";
+import luxuryTravel3 from "../assets/images/luxury-travel-3.jpg";
+import checkout1 from "../assets/images/checkout-1.jpg";
+import checkout2 from "../assets/images/checkout-2.jpg";
+import checkout3 from "../assets/images/checkout-3.jpg";
+import fintech1 from "../assets/images/fintech-1.jpg";
+import fintech2 from "../assets/images/fintech-2.jpg";
+import fintech3 from "../assets/images/fintech-3.jpg";
+import otherLlm from "../assets/images/other-llm.jpg";
+import otherDs from "../assets/images/other-ds.jpg";
+import otherAsync from "../assets/images/other-async.jpg";
+import otherToken from "../assets/images/other-token.jpg";
+
 export interface DiscoverySection {
   discoveryTitle?: string;
   discoverySubtitle?: string;
@@ -86,7 +100,7 @@ export const portfolioData: PortfolioData = {
   aboutBadge: "ABOUT ME",
   aboutTitle: "Design as a driver of core business performance.",
   aboutBio: "I design complex systems, digital platforms, and B2B workflows that turn operational constraints into measurable product value. Rather than applying surface-level aesthetics (pixel play), I dive into data structures, marketing psychology, and operational constraints to solve real friction points for agents, businesses, and consumers.\n\nWith over 8 years in the field, I bring a unique hybrid viewpoint of conversion marketing, system design engineering, and agile project delivery.",
-  cvUrl: "#", // В интерфейсе сделаем красивую заглушку на скачивание (или генерацию PDF / модалку)
+  cvUrl: "#",
   companies: ["Mews Systems", "Booking.com", "Adyen", "Stripe SaaS"],
   socialLinks: [
     { name: "LinkedIn", url: "https://linkedin.com" },
@@ -126,11 +140,7 @@ export const portfolioData: PortfolioData = {
       scope: "End-to-End Design (from Data Modeling to UI Kit)",
       status: "Shipped & Scaled (Self-sustaining system)",
       users: "Internal Agents, Managers, Accountants (5 Depts)",
-      images: [
-        "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&w=1200&q=80"
-      ],
+      images: [luxuryTravel1, luxuryTravel2, luxuryTravel3],
       imageCaptions: [
         "Workspace displaying multi-segment itineraries, parsed GDS flight records, and pricing diagnostics.",
         "Unified agent booking command center enabling keyboard-centric, terminal-fast data entries.",
@@ -144,10 +154,7 @@ export const portfolioData: PortfolioData = {
       discoveryLeft: "Building an ERP requires understanding the business better than the users themselves. I couldn't just \"digitize\" the old process; I had to fix it.",
       discoveryRightTitle: "The Investigation:",
       discoveryRight: "Asynchronous Video Analysis: I analyzed 30+ recorded sessions across the skill spectrum (from novices to power users). This helped distinguish essential \"muscle memory\" shortcuts that experts rely on from the usability blockers confusing new hires.\n\nEdge-Case Mapping: I facilitated workshops to stress-test the system against complex scenarios (e.g., partial refunds, ancillary re-configuration). We mapped the cross-functional handoffs to ensure the architecture wouldn't break under real-world pressure.",
-      discoveryImages: [
-        "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-      ]
+      discoveryImages: [luxuryTravel1, luxuryTravel2]
     },
     {
       id: "checkout-rate-optimization",
@@ -160,11 +167,7 @@ export const portfolioData: PortfolioData = {
       scope: "Checkout Redesign & Multi-variant A/B Funnels",
       status: "Completed, fully integrated into production",
       users: "B2C Shoppers across 4 continents",
-      images: [
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80"
-      ],
+      images: [checkout1, checkout2, checkout3],
       imageCaptions: [
         "High-performance mobile checkout layout with instant, friendly alphanumeric validation.",
         "Optimized progressive form structure designed to lower payment-stage drop-off rates.",
@@ -178,10 +181,7 @@ export const portfolioData: PortfolioData = {
       discoveryLeft: "Even slight layout shifts or abstract loading icons trigger buyer hesitations. We needed to reassure trust and utility at each key action step.",
       discoveryRightTitle: "The Investigation:",
       discoveryRight: "Biometric and Eye-Tracking Diagnostics: Validated that form labels outside input boundaries provide significantly less cognitive friction than internal placeholders which disappear during typing.\n\nLocalized Fallbacks: Designed smart routing so if a secondary gateway failed, the transaction migrated in the background without exposing technical errors to the cart owner.",
-      discoveryImages: [
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80"
-      ]
+      discoveryImages: [checkout1, checkout2]
     },
     {
       id: "fintech-investment-workspace",
@@ -194,11 +194,7 @@ export const portfolioData: PortfolioData = {
       scope: "SaaS Workspace Architecture & Design Token Restructure",
       status: "Released across iOS, Android, and Web platforms",
       users: "SaaS retail investors & account managers",
-      images: [
-        "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80"
-      ],
+      images: [fintech1, fintech2, fintech3],
       imageCaptions: [
         "Simplified step-by-step onboarding wizard breaking down tax declarations into digestible cards.",
         "Interactive bento-grid modular workspace illustrating asset growth profiles and history indicators.",
@@ -215,9 +211,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "With over 60% of our active traffic coming via portable viewports, ensuring that form structures maintain strict sizing constraints was our critical priority. A single wide image allows the reader to follow a sequential cognitive flow without visual distraction.",
           discoveryRightTitle: "A/B Layout Insights:",
           discoveryRight: "Our quantitative tests proved that user attention maps are far more linear on portable viewports. Single-column, full-width layouts resulted in a 14% higher reading retention score compared to multi-column inline galleries.",
-          discoveryImages: [
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80"
-          ]
+          discoveryImages: [checkout1]
         },
         {
           discoveryTitle: "Configuration 2: Two Columns of Text + 2 Symmetrical Images",
@@ -226,10 +220,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "While mobile optimization addresses swift interactions, desktop viewports require highly integrated bento panels and consistent structural alignment. We placed mobile next to desktop to preview synchronization instantly.",
           discoveryRightTitle: "Responsive Interface Audits:",
           discoveryRight: "We mapped out cross-device synchronization flows to guarantee that actions initiated on-the-go seamlessly propagated to accounting terminals in less than 300ms, minimizing discrepancies.",
-          discoveryImages: [
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-          ]
+          discoveryImages: [checkout2, luxuryTravel2]
         },
         {
           discoveryTitle: "Configuration 3: Two Columns of Text + 1 Full-Width + 2 Inline Images",
@@ -238,11 +229,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Our system takes complex, unstructured entries and breaks them down using smart, localized algorithms. This asymmetric three-image setup offers a macro view of the environment, plus close-ups of specific UX modules.",
           discoveryRightTitle: "User Testing Discoveries:",
           discoveryRight: "During research labs, users responded enthusiastically to interactive charts that dynamically updated as inputs changed. The symmetrical supporting grid helps isolate each key parameter.",
-          discoveryImages: [
-            "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=80"
-          ]
+          discoveryImages: [luxuryTravel1, checkout3, fintech1]
         },
         {
           discoveryTitle: "Configuration 4: Two Columns of Text + 4 Symmetrical Images",
@@ -251,25 +238,20 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Too much visual data can lead to user fatigue. We addressed this by chunking information into localized widgets with consistent spacing and clear labels.",
           discoveryRightTitle: "System Interface Convergence:",
           discoveryRight: "To keep our application consistent, we created a single design token system in token files. Moving variables directly to CSS let us update colors instantly.",
-          discoveryImages: [
-            "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
-          ]
+          discoveryImages: [fintech3, fintech2, checkout2, checkout1]
         },
         {
           discoveryTitle: "Configuration 5: Symmetrical Image Board with 8 Photos (No Text Columns)",
           discoverySubtitle: "When text-blocks are absent, the component transforms into an absolute visual catalog of UX deliverables, scaling dynamically up to eight records",
           discoveryImages: [
-            "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80",
-            "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80"
+            luxuryTravel1,
+            luxuryTravel2,
+            checkout3,
+            checkout2,
+            checkout1,
+            fintech1,
+            fintech2,
+            fintech3
           ]
         }
       ]
@@ -279,22 +261,22 @@ export const portfolioData: PortfolioData = {
     {
       id: "other-llm-prototyping",
       title: "ERP Module LLM Prototyping Experience",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+      image: otherLlm
     },
     {
       id: "other-design-system",
       title: "Enterprise Design System Sync",
-      image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80"
+      image: otherDs
     },
     {
       id: "other-async-ops",
       title: "Asynchronous Operations Dashboard",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+      image: otherAsync
     },
     {
       id: "other-token-handshake",
       title: "Global Checkout Tokenizer Engine",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+      image: otherToken
     }
   ],
   mediumArticles: [

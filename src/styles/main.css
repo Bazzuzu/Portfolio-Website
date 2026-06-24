@@ -1564,3 +1564,12 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   color: var(--color-text-primary);
 }
 
+.brand-logo-icon {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+  display: inline-block;
+  color: var(--color-text-primary);
+  fill: currentColor;
+}
+
+
