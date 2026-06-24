@@ -4,6 +4,7 @@
   --size-icon-md: 1.5rem; /* 24px */
   --size-icon-lg: 2rem;   /* 32px */
   --size-icon-xl: 3rem;   /* 48px */
+  --size-icon-2xl: 4rem;  /* 64px */
 
   /* Section heights (min-height boundaries) */
   --size-section-h-sm: 20rem; /* 320px */

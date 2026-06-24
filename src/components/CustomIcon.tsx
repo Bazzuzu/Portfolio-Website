@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 
 interface CustomIconProps {
   src: string;
-  size?: number;
+  size?: number | string;
   className?: string;
 }
 
@@ -30,8 +30,8 @@ export default function CustomIcon({ src, size = 24, className = "" }: CustomIco
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        width: `${size}px`,
-        height: `${size}px`,
+        width: typeof size === "number" ? `${size}px` : size,
+        height: typeof size === "number" ? `${size}px` : size,
         flexShrink: 0,
       }}
       dangerouslySetInnerHTML={{ __html: processedSvg }}
