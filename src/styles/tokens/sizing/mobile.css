@@ -55,4 +55,7 @@
   --radius-xl: 24px;
   --radius-2xl: 32px;
   --radius-pill: 9999px;
+
+  /* Aspect Ratios */
+  --aspect-ratio-card: 3 / 2;
 }

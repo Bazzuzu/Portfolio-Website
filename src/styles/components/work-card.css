@@ -14,7 +14,7 @@
 }
 
 .work-card__image-container {
-  height: 280px;
+  aspect-ratio: var(--aspect-ratio-card);
   width: 100%;
   overflow: hidden;
   position: relative;
