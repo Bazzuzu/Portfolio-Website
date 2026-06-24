@@ -89,19 +89,21 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* Above the Fold / Hero Section */}
       <section id="hero-section" className="hero">
         {/* Logo Above the Fold */}
-        <motion.a 
-          id="brand-logo"
-          href="#"
-          className="logo hero__logo"
-          variants={itemVariants}
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <Logo />
-          <span>{portfolioData.designerName}</span>
-        </motion.a>
+        <div className="home-section-container">
+          <motion.a 
+            id="brand-logo"
+            href="#"
+            className="logo hero__logo"
+            variants={itemVariants}
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <Logo />
+            <span>{portfolioData.designerName}</span>
+          </motion.a>
+        </div>
 
         <div className="home-section-container">
           <div className="hero-grid">
