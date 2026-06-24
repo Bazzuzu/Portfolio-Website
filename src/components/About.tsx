@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
@@ -24,13 +24,11 @@ interface AboutProps {
 
 export default function About({ onNavigate }: AboutProps) {
   const [cvSuccessMessage, setCvSuccessMessage] = useState(false);
-  const [expandedIndices, setExpandedIndices] = useState<Record<number, boolean>>({
-    0: true,
-    1: true,
-    2: true,
-    3: true,
-    4: true,
-    5: true
+  const [openStates, setOpenStates] = useState<Record<number, boolean>>({
+    0: true
+  });
+  const [visualExpandStates, setVisualExpandStates] = useState<Record<number, boolean>>({
+    0: true
   });
 
   const containerVariants = {
@@ -62,41 +60,88 @@ export default function About({ onNavigate }: AboutProps) {
   };
 
   const toggleFaqItem = (index: number) => {
-    setExpandedIndices(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
+    const isCurrentlyOpen = openStates[index];
+    if (!isCurrentlyOpen) {
+      setOpenStates(prev => ({ ...prev, [index]: true }));
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          setVisualExpandStates(prev => ({ ...prev, [index]: true }));
+        }, 10);
+      });
+    } else {
+      setVisualExpandStates(prev => ({ ...prev, [index]: false }));
+      setTimeout(() => {
+        setOpenStates(prev => ({ ...prev, [index]: false }));
+      }, 300);
+    }
   };
 
   const faqItems = [
     {
-      question: "What is your core design specialization?",
-      answer: "I am a Senior Product Designer specializing in Travel Tech, Enterprise SaaS, and B2B Operational UX (ERPs). I focus on translating complex database logic into highly efficient, keyboard-first interfaces."
+      question: "How do you handle collaboration across EU and US time zones?",
+      answer: "I operate on an async-first model. Based in Spain, I overlap with US teams for 2-3 hours to handle critical syncs and strategy alignment. The rest is asynchronous: I use Loom walkthroughs, Notion documentation, and hyper-detailed Figma annotations. I treat the time difference as an advantage—while your US team sleeps, I design and prep handoffs, so you wake up to unblocked work."
     },
     {
-      question: "How does your marketing background influence your UX decisions?",
-      answer: "It aligns design decisions with business KPIs. Under my 'Metrics over Pixels' philosophy, I design to improve business metrics like Revenue Per User (RPU) and operational efficiency."
+      question: "Why do you insist on Object-Oriented UX (OOUX) before wireframing?",
+      answer: "Because drawing screens without understanding the database is a recipe for developer rework. OOUX allows me to map the exact logic, entities, and relationships of a system first. It aligns the design with backend realities. It might feel like an extra step on day one, but it saves weeks of architectural fixes before launch."
     },
     {
-      question: "What is your experience with travel industry infrastructure (GDS)?",
-      answer: "I have hands-on experience with GDS (Amadeus, Sabre), PNR lifecycles, and post-booking operations (ticketing, refunds, ADMs), turning legacy constraints into frictionless user experiences."
+      question: "You work in both dense B2B systems and B2C conversion. Aren't those conflicting mindsets?",
+      answer: "They actually amplify each other. B2B design taught me how to build scalable, complex architectures and respect legacy constraints. B2C design (CRO) taught me how to measure success in dollars and conversion metrics. I use B2B logic to build a bulletproof foundation, and B2C tactics to optimize the funnel and drive revenue."
     },
     {
-      question: "Are you legally authorized to work in the EU or Germany?",
-      answer: "Yes, I am based in Spain with EU Temporary Protection. I am eligible for fast-track work authorization in Germany under Paragraph 24 (§ 24 AufenthG), requiring no standard visa sponsorship."
+      question: "How do you approach designing for legacy systems like Salesforce SLDS?",
+      answer: "I don’t fight the backend to create \"Dribbble-ready\" UI. If we are constrained by legacy frameworks or ancient .NET architectures, I design elegantly within those boundaries. My focus shifts from visual vanity to operational efficiency—optimizing task completeness, reducing error rates, and making the system faster for the end-user."
     },
     {
-      question: "How do you collaborate with engineering teams?",
-      answer: "I build tokenized Design Systems for engineering autonomy and build functional prototypes in code (using Cursor/AI IDEs) to validate complex logic before development."
+      question: "What exactly makes your design systems \"AI-adaptive\"?",
+      answer: "It’s about semantic architecture. I don’t just hand over a UI kit; I build W3C-valid token layers that are readable by both frontend developers and LLMs. This includes strict accessibility (a11y) compliance, semantic alt-texts, and logical component structures. It ensures the product can scale infinitely and integrate with AI agents without accumulating UI debt."
     },
     {
-      question: "How do you approach design trade-offs and tight deadlines?",
-      answer: "I prioritize utility and velocity over perfection. I would rather ship a solid, validated MVP and iterate based on real-world data than spend months polishing a hypothesis in isolation."
+      question: "What is your approach when a project lacks data or clear requirements?",
+      answer: "I don't guess, and I don't wait months for perfect research. I push for immediate analytics coverage. If we lack direction, I use rapid AI prototyping to spin up a high-fidelity concept, ship it, and let live user data and heatmaps dictate the next iteration. Perfect is the enemy of shipped."
+    },
+    {
+      question: "What is your work authorization and preferred contract setup?",
+      answer: "I am fully authorized to work in the EU (based in Spain). I am flexible with contract setups: I can work as an independent B2B contractor (autónomo) for global clients, or via platforms like Deel/Oyster for full-time engagements. I handle my own compliance and invoicing, making the onboarding process seamless for your HR team."
+    },
+    {
+      question: "What team structures are you most comfortable in?",
+      answer: "I thrive in cross-functional, international environments. For the past 5+ years, I’ve worked daily with distributed teams across the US, Europe, and Ukraine. I am used to partnering directly with Product Managers to define scope, Engineering Leads to validate technical constraints, and Marketing teams to align on CRO goals."
+    },
+    {
+      question: "What are your working languages?",
+      answer: "English is my primary working language. I have full professional proficiency, meaning 100% of my communication, complex OOUX documentation, and stakeholder presentations are conducted in English. I also speak Ukrainian and Russian natively, and am currently studying Spanish."
     }
   ];
 
-  const leftColItems = faqItems.slice(0, 3).map((item, idx) => ({ ...item, globalIndex: idx }));
-  const rightColItems = faqItems.slice(3, 6).map((item, idx) => ({ ...item, globalIndex: idx + 3 }));
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "faq-jsonld";
+    script.innerHTML = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.getElementById("faq-jsonld");
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <motion.div
@@ -389,13 +434,21 @@ export default function About({ onNavigate }: AboutProps) {
 
           <div className="about-faq-grid">
             {faqItems.map((item, idx) => {
-              const isExpanded = expandedIndices[idx];
+              const isOpen = openStates[idx] || false;
+              const isVisualExpanded = visualExpandStates[idx] || false;
               return (
-                <div key={idx} className="about-faq-item">
-                  <button
+                <details
+                  key={idx}
+                  className={`about-faq-item ${isVisualExpanded ? "about-faq-item--expanded" : ""}`}
+                  open={isOpen}
+                >
+                  <summary
                     className="about-faq-item__header"
-                    onClick={() => toggleFaqItem(idx)}
-                    aria-expanded={isExpanded}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleFaqItem(idx);
+                    }}
+                    aria-expanded={isVisualExpanded}
                   >
                     <span className="about-faq-item__question">{item.question}</span>
                     <span className="about-faq-item__toggle">
@@ -409,28 +462,18 @@ export default function About({ onNavigate }: AboutProps) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         style={{
-                          transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                          transform: isVisualExpanded ? "rotate(180deg)" : "rotate(0deg)",
                           transition: "transform 0.25s var(--motion-duration-normal) var(--motion-easing-standard)"
                         }}
                       >
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.215, 0.610, 0.355, 1.000] }}
-                        style={{ overflow: "hidden" }}
-                      >
-                        <p className="about-faq-item__answer">{item.answer}</p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                  </summary>
+                  <div className="about-faq-item__wrapper">
+                    <p className="about-faq-item__answer">{item.answer}</p>
+                  </div>
+                </details>
               );
             })}
           </div>
