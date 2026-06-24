@@ -1,0 +1,12 @@
+:root {
+  --font-display-lg-size: 4rem;           /* 64px */
+  --font-display-lg-line-height: 1;       /* 64px */
+  --font-display-md-size: 3.25rem;        /* 52px */
+  --font-display-sm-size: 2.5rem;         /* 40px */
+
+  --font-headline-lg-size: 2.25rem;       /* 36px */
+  --font-headline-md-size: 1.75rem;       /* 28px */
+  --font-headline-sm-size: 1.5rem;        /* 24px */
+
+  --font-body-lg-size: 1.25rem;           /* 20px */
+}

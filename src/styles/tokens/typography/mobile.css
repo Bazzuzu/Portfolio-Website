@@ -1,0 +1,120 @@
+:root {
+  /* ---------------------------------------------------- */
+  /* Reusable Base Font Family Tokens                     */
+  /* ---------------------------------------------------- */
+  --font-family-display: "Space Grotesk", sans-serif;
+  --font-family-sans: "Space Grotesk", sans-serif;
+  --font-family-serif: "Inika", serif;
+  --font-family-mono: "JetBrains Mono", monospace;
+
+  /* ---------------------------------------------------- */
+  /* Display Fonts (Space Grotesk, Large size, thin/bold) */
+  /* ---------------------------------------------------- */
+  --font-display-lg-family: var(--font-family-display);
+  --font-display-lg-size: 2.5rem;           /* 40px */
+  --font-display-lg-weight: 700;
+  --font-display-lg-line-height: 1;
+  --font-display-lg-tracking: -0.04em;
+
+  --font-display-md-family: var(--font-family-display);
+  --font-display-md-size: 2rem;         /* 32px */
+  --font-display-md-weight: 700;
+  --font-display-md-line-height: 1;
+  --font-display-md-tracking: -0.02em;
+
+  --font-display-sm-family: var(--font-family-display);
+  --font-display-sm-size: 1.75rem;           /* 28px */
+  --font-display-sm-weight: 700;
+  --font-display-sm-line-height: 1.2;
+  --font-display-sm-tracking: -0.01em;
+
+  /* ---------------------------------------------------- */
+  /* Headline Fonts (Space Grotesk, Medium bold)        */
+  /* ---------------------------------------------------- */
+  --font-headline-lg-family: var(--font-family-sans);
+  --font-headline-lg-size: 1.75rem;       /* 28px */
+  --font-headline-lg-weight: 700;
+  --font-headline-lg-line-height: 1.25;
+  --font-headline-lg-tracking: -0.01em;
+
+  --font-headline-md-family: var(--font-family-sans);
+  --font-headline-md-size: 1.5rem;        /* 24px */
+  --font-headline-md-weight: 700;
+  --font-headline-md-line-height: 1.3;
+  --font-headline-md-tracking: -0.01em;
+
+  --font-headline-sm-family: var(--font-family-sans);
+  --font-headline-sm-size: 1.25rem;       /* 20px */
+  --font-headline-sm-weight: 600;
+  --font-headline-sm-line-height: 1.35;
+  --font-headline-sm-tracking: 0;
+
+  /* ---------------------------------------------------- */
+  /* Title Fonts (Space Grotesk, UI structure elements)   */
+  /* ---------------------------------------------------- */
+  --font-title-lg-family: var(--font-family-sans);
+  --font-title-lg-size: 1.125rem;         /* 18px */
+  --font-title-lg-weight: 700;
+  --font-title-lg-line-height: 1.4;
+  --font-title-lg-tracking: 0;
+
+  --font-title-md-family: var(--font-family-sans);
+  --font-title-md-size: 1rem;             /* 16px */
+  --font-title-md-weight: 700;
+  --font-title-md-line-height: 1.4;
+  --font-title-md-tracking: 0;
+
+  --font-title-sm-family: var(--font-family-sans);
+  --font-title-sm-size: 0.875rem;         /* 14px */
+  --font-title-sm-weight: 700;
+  --font-title-sm-line-height: 1.43;
+  --font-title-sm-tracking: 0.01em;
+
+  /* ---------------------------------------------------- */
+  /* Body Fonts (Inika for editorial warmth and readable) */
+  /* ---------------------------------------------------- */
+  --font-body-lg-family: var(--font-family-serif);
+  --font-body-lg-size: 1.25rem;           /* 20px */
+  --font-body-lg-weight: 400;
+  --font-body-lg-line-height: 1.6;
+  --font-body-lg-tracking: 0;
+
+  --font-body-md-family: var(--font-family-serif);
+  --font-body-md-size: 1.125rem;          /* 18px */
+  --font-body-md-weight: 400;
+  --font-body-md-line-height: 1.55;
+  --font-body-md-tracking: 0;
+
+  --font-body-sm-family: var(--font-family-serif);
+  --font-body-sm-size: 1rem;              /* 16px */
+  --font-body-sm-weight: 400;
+  --font-body-sm-line-height: 1.5;
+  --font-body-sm-tracking: 0;
+
+  /* ---------------------------------------------------- */
+  /* Label Fonts (Space Grotesk for uppercase utility UI)*/
+  /* ---------------------------------------------------- */
+  --font-label-lg-family: var(--font-family-sans);
+  --font-label-lg-size: 0.875rem;         /* 14px */
+  --font-label-lg-weight: 500;
+  --font-label-lg-line-height: 1.43;
+  --font-label-lg-tracking: 0.05em;
+
+  --font-label-md-family: var(--font-family-sans);
+  --font-label-md-size: 0.75rem;          /* 12px */
+  --font-label-md-weight: 500;
+  --font-label-md-line-height: 1.5;
+  --font-label-md-tracking: 0.06em;
+
+  --font-label-sm-family: var(--font-family-sans);
+  --font-label-sm-size: 0.625rem;         /* 10px */
+  --font-label-sm-weight: 600;
+  --font-label-sm-line-height: 1.6;
+  --font-label-sm-tracking: 0.08em;
+
+  --font-label-code-family: "Google Sans Code", var(--font-family-mono);
+  --font-label-code-size: 14px;
+  --font-label-code-weight: 500;
+  --font-label-code-line-height: 140%;
+  --font-label-code-tracking: 0;
+}

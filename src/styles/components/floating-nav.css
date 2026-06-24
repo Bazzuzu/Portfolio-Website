@@ -1,0 +1,119 @@
+/* ---------------------------------------------------- */
+/* Floating Navigation Bar CSS                         */
+/* ---------------------------------------------------- */
+
+.floating-nav {
+  position: fixed;
+  top: 1.15rem; /* Optical horizontal alignment with the centered logo (which is centered inside an 80px static header) */
+  right: var(--spacing-container-px-md);
+  z-index: var(--z-index-modal);
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Lighter semi-translucent background using white surface token base */
+  border: 1px solid var(--color-border-subtle); /* Lighter border using subtle border token */
+  border-radius: var(--radius-pill);
+  padding: 16px 24px;
+  padding-top: 14px;
+  gap: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: none;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+              border-color var(--motion-duration-fast) var(--motion-easing-standard),
+              right var(--motion-duration-fast) var(--motion-easing-standard);
+  pointer-events: auto;
+}
+
+.floating-nav__divider {
+  width: 1px;
+  height: 1.25rem;
+  background-color: var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.floating-nav__link {
+  font-family: var(--font-title-md-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  padding: 0;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.floating-nav__link:hover {
+  color: var(--color-text-brand);
+}
+
+.floating-nav__link--disabled {
+  color: var(--color-text-disabled) !important;
+  text-decoration: none !important;
+  cursor: default;
+  pointer-events: none;
+  background-color: transparent !important;
+}
+
+/* Tablets and medium screens */
+@media (min-width: 768px) {
+  .floating-nav {
+    right: var(--spacing-container-px-lg);
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  .floating-nav {
+    right: var(--spacing-container-px-xl);
+  }
+}
+
+/* Large and high-res wide displays (aligned exactly to the max-width grid boundary) */
+@media (min-width: 1536px) {
+  .floating-nav {
+    right: calc(50% - (var(--size-container-w-2xl) / 2) + var(--spacing-container-px-xl));
+  }
+}
+
+/* On ultra-mobile devices, adjust sizes */
+@media (max-width: 480px) {
+  .floating-nav {
+    top: 1.15rem;
+    padding: 12px 18px;
+    gap: 16px;
+  }
+  
+  .floating-nav__link {
+    font-size: 0.875rem;
+  }
+}
+
+/* Floating Navigation aligned on the left */
+.floating-nav--left {
+  right: auto !important;
+  left: var(--spacing-container-px-md);
+}
+
+@media (min-width: 768px) {
+  .floating-nav--left {
+    left: var(--spacing-container-px-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .floating-nav--left {
+    left: var(--spacing-container-px-xl);
+  }
+}
+
+@media (min-width: 1536px) {
+  .floating-nav--left {
+    left: calc(50% - (var(--size-container-w-2xl) / 2) + var(--spacing-container-px-xl));
+  }
+}
+

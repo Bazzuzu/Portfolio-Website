@@ -1,0 +1,57 @@
+:root {
+  /* Icons Sizes */
+  --size-icon-sm: 1rem;   /* 16px */
+  --size-icon-md: 1.5rem; /* 24px */
+  --size-icon-lg: 2rem;   /* 32px */
+  --size-icon-xl: 3rem;   /* 48px */
+
+  /* Section heights (min-height boundaries) */
+  --size-section-h-sm: 20rem; /* 320px */
+  --size-section-h-md: 35rem; /* 560px */
+  --size-section-h-lg: 50rem; /* 800px */
+  --size-section-h-xl: 65rem; /* 1040px */
+
+  /* Container width constraints and heights */
+  --size-container-w-xs: 30rem;   /* 480px */
+  --size-container-w-sm: 40rem;   /* 640px */
+  --size-container-w-md: 48rem;   /* 768px */
+  --size-container-w-lg: 64rem;   /* 1024px */
+  --size-container-w-xl: 80rem;   /* 1280px */
+  --size-container-w-2xl: 96rem;  /* 1536px */
+
+  --size-container-h-sm: 10rem;   /* 160px */
+  --size-container-h-md: 20rem;   /* 320px */
+  --size-container-h-lg: 30rem;   /* 480px */
+  --size-container-h-xl: 40rem;   /* 640px */
+
+  /* Component dimensional constraints */
+  --size-component-h-xs: 2rem;    /* 32px */
+  --size-component-h-sm: 2.5rem;  /* 40px */
+  --size-component-h-md: 3rem;    /* 48px */
+  --size-component-h-lg: 3.5rem;  /* 56px */
+  --size-component-h-xl: 4rem;    /* 64px */
+  --size-component-h-2xl: 5rem;   /* 80px */
+
+  --size-component-w-xs: 4rem;    /* 64px */
+  --size-component-w-sm: 8rem;    /* 128px */
+  --size-component-w-md: 12rem;   /* 192px */
+  --size-component-w-lg: 16rem;   /* 256px */
+  --size-component-w-xl: 24rem;   /* 384px */
+  --size-component-w-2xl: 32rem;  /* 512px */
+
+  /* Text Wrap comfortable reading widths (ch/px equivalence) */
+  --size-text-w-sm: 25rem;  /* ~400px - small caption */
+  --size-text-w-md: 40rem;  /* ~640px - long-form readable content */
+  --size-text-w-xl: 100%;
+
+  /* Rounded Corner Radii (Mews is very light, precise and sophisticated) */
+  --radius-none: 0;
+  --radius-2xs: 2px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 9999px;
+}

@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Stories Section Component (Medium Blog Posts Feed)
+   ========================================================================== */
+
+.stories-section {
+  padding: 40px 24px;
+  border-top: 1px solid var(--color-border-default);
+}
+
+@media (min-width: 768px) {
+  .stories-section {
+    padding: 60px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stories-section {
+    padding: 80px;
+  }
+}
+
+.stories-header {
+  margin-bottom: 40px;
+}
+
+.stories-header__title {
+  font-family: var(--font-display-sm-family);
+  font-size: var(--font-display-sm-size);
+  font-weight: 700;
+  line-height: var(--font-display-sm-line-height);
+  letter-spacing: var(--font-display-sm-tracking);
+  color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+
+#section-stories-title {
+  font-family: var(--font-headline-lg-family);
+  font-size: var(--font-headline-lg-size);
+  font-weight: var(--font-headline-lg-weight);
+  line-height: var(--font-headline-lg-line-height);
+  letter-spacing: var(--font-headline-lg-tracking);
+}
+
+/* Table / Grid Structure */
+.stories-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stories-table__header {
+  display: none; /* Hidden on tiny screens, shown on tablet/desktop */
+  grid-template-columns: 120px 144px 1fr;
+  gap: 40px;
+  padding-top: var(--spacing-component-py-sm);
+  padding-bottom: var(--spacing-component-py-lg);
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-family: var(--font-label-code-family);
+  font-size: var(--font-label-code-size);
+  font-weight: var(--font-label-code-weight);
+  line-height: var(--font-label-code-line-height);
+  letter-spacing: var(--font-label-code-tracking);
+  text-transform: uppercase;
+}
+
+#header-col-published {
+  color: var(--color-text-disabled);
+}
+
+#header-col-category {
+  color: var(--color-text-secondary);
+}
+
+#header-col-title {
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 640px) {
+  .stories-table__header {
+    display: grid;
+  }
+}
+
+.stories-table__row {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--spacing-component-py-lg);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+  text-decoration: none;
+  color: inherit;
+}
+
+.stories-table__row:first-of-type {
+  padding-top: 0;
+}
+
+@media (min-width: 640px) {
+  .stories-table__row {
+    display: grid;
+    grid-template-columns: 120px 144px 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .stories-table__row:first-of-type {
+    padding-top: var(--spacing-component-py-lg);
+  }
+}
+
+.stories-cell {
+  display: flex;
+  align-items: center;
+}
+
+.stories-cell--published {
+  font-family: var(--font-label-code-family);
+  font-size: var(--font-label-code-size);
+  font-weight: var(--font-label-code-weight);
+  line-height: var(--font-label-code-line-height);
+  letter-spacing: var(--font-label-code-tracking);
+  color: var(--color-text-disabled);
+  margin-bottom: 4px;
+}
+
+@media (min-width: 640px) {
+  .stories-cell--published {
+    margin-bottom: 0;
+  }
+}
+
+.stories-cell--category {
+  font-family: var(--font-label-code-family);
+  font-size: var(--font-label-code-size);
+  font-weight: var(--font-label-code-weight);
+  line-height: var(--font-label-code-line-height);
+  letter-spacing: var(--font-label-code-tracking);
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+@media (min-width: 640px) {
+  .stories-cell--category {
+    margin-bottom: 0;
+  }
+}
+
+.stories-cell--title {
+  font-family: var(--font-label-code-family);
+  font-size: var(--font-label-code-size);
+  font-weight: var(--font-label-code-weight);
+  line-height: var(--font-label-code-line-height);
+  letter-spacing: var(--font-label-code-tracking);
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.stories-table__row:hover .stories-cell--title {
+  color: var(--color-text-brand);
+}
+
+/* Button "My Stories" styling */
+.stories-footer {
+  margin-top: var(--spacing-section-gap-md);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#btn-my-stories {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+}

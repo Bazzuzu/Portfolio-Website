@@ -1,0 +1,69 @@
+:root {
+  /* Canvas Background */
+  --color-canvas: #faf9f6;
+
+  /* Section-level Backgrounds */
+  --color-section-default: #faf9f6;
+  --color-section-sunken: #f2f0eb;
+  --color-section-subtle: #f5f4ef;
+  --color-section-accent: #e8e6e0;
+  --color-section-inverse: #121212;
+  --color-section-brand: #D93636; /* Warm terracotta primary */
+
+  /* Surface Backgrounds (Cards, Dialogs) */
+  --color-surface-default: #ffffff;
+  --color-surface-sunken: #fbfbfa;
+  --color-surface-subtle: #f5f5f4;
+  --color-surface-inverse-light: #232323;
+
+  /* Action Buttons Fill & Hovers */
+  --color-action-primary-default: #D93636; /* Gorgeous terracotta */
+  --color-action-primary-hover: #B52020;
+  --color-action-primary-pressed: #8C1414;
+  --color-action-primary-disabled: #FFBCBC;
+
+  --color-action-secondary-default: #f0eee9; /* Soft warm grey without borders */
+  --color-action-secondary-hover: #e4e1da;
+  --color-action-secondary-pressed: #d8d4cc;
+  --color-action-secondary-disabled: #f0eee9;
+
+  --color-action-brand-default: #D93636;
+  --color-action-brand-hover: #B52020;
+  --color-action-brand-pressed: #8C1414;
+  --color-action-brand-disabled: #FFBCBC;
+
+  --color-action-ghost-default: transparent;
+  --color-action-ghost-hover: rgba(18, 18, 18, 0.05);
+  --color-action-ghost-pressed: rgba(18, 18, 18, 0.1);
+  --color-action-ghost-disabled: transparent;
+
+  /* Typography Colors */
+  --color-text-primary: #121212;
+  --color-text-secondary: #5e605c;
+  --color-text-disabled: #9ea09c;
+  --color-text-interactive: #3E70A2;
+  --color-text-brand: #D93636;
+  --color-text-on-action: #ffffff;
+  --color-text-on-brand: #ffffff;
+  --color-text-on-critical: #ffffff;
+
+  /* Border Colors */
+  --color-border-default: #e2e2df; /* Ultra-thin light gray-sand */
+  --color-border-subtle: #eeeeec;
+  --color-border-sunken: #f5f5f4;
+  --color-border-strong: #121212;
+  --color-border-active: #3E70A2;
+  --color-border-focus: #305882;
+  --color-border-brand: #D93636;
+
+  /* Icon Colors */
+  --color-icon-primary: #121212;
+  --color-icon-secondary: #5e605c;
+  --color-icon-disabled: #9ea09c;
+  --color-icon-interactive: #3E70A2;
+  --color-icon-brand: #D93636;
+
+  /* Overlay / Modal Scrim */
+  --color-overlay-modal: rgba(18, 18, 18, 0.3);
+  --color-scrim-default: rgba(18, 18, 18, 0.05);
+}

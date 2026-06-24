@@ -1,0 +1,57 @@
+:root {
+  --spacing-component-px-2xs: 0.25rem; /* 4px */
+  --spacing-component-px-xs: 0.5rem;   /* 8px */
+  --spacing-component-px-sm: 0.75rem;  /* 12px */
+  --spacing-component-px-md: 1rem;     /* 16px */
+  --spacing-component-px-lg: 1.25rem;  /* 20px */
+  --spacing-component-px-xl: 1.5rem;   /* 24px */
+  --spacing-component-px-2xl: 2rem;    /* 32px */
+  
+  --spacing-component-py-2xs: 0.25rem; /* 4px */
+  --spacing-component-py-xs: 0.5rem;   /* 8px */
+  --spacing-component-py-sm: 0.75rem;  /* 12px */
+  --spacing-component-py-md: 1rem;     /* 16px */
+  --spacing-component-py-lg: 1.25rem;  /* 20px */
+  --spacing-component-py-xl: 1.5rem;   /* 24px */
+  --spacing-component-py-2xl: 2rem;    /* 32px */
+
+  --spacing-component-gap-2xs: 0.125rem; /* 2px */
+  --spacing-component-gap-xs: 0.25rem;   /* 4px */
+  --spacing-component-gap-sm: 0.5rem;    /* 8px */
+  --spacing-component-gap-md: 0.75rem;   /* 12px */
+  --spacing-component-gap-lg: 1rem;     /* 16px */
+  --spacing-component-gap-xl: 1.25rem;   /* 20px */
+  --spacing-component-gap-2xl: 1.5rem;   /* 24px */
+
+  --spacing-container-px-xs: 0.5rem;   /* 8px */
+  --spacing-container-px-sm: 1rem;     /* 16px */
+  --spacing-container-px-md: 1.5rem;   /* 24px */
+  --spacing-container-px-lg: 2.5rem;   /* 40px */
+  --spacing-container-px-xl: 5rem;     /* 80px */
+
+  --spacing-container-py-xs: 0.5rem;   /* 8px */
+  --spacing-container-py-sm: 1rem;     /* 16px */
+  --spacing-container-py-md: 1.5rem;   /* 24px */
+  --spacing-container-py-lg: 2.5rem;   /* 40px */
+  --spacing-container-py-xl: 5rem;     /* 80px */
+
+  --spacing-container-gap-xs: 0.75rem; /* 12px */
+  --spacing-container-gap-sm: 1rem;    /* 16px */
+  --spacing-container-gap-md: 1.5rem;  /* 24px */
+  --spacing-container-gap-lg: 2.5rem;  /* 40px */
+  --spacing-container-gap-xl: 4rem;    /* 64px */
+
+  --spacing-section-py-sm: 2.5rem;       /* 40px */
+  --spacing-section-py-md: 5rem;       /* 80px */
+  --spacing-section-py-lg: 10rem;      /* 160px */
+  --spacing-section-py-xl: 15rem;      /* 240px */
+
+  --spacing-section-px-sm: 2.5rem;       /* 40px */
+  --spacing-section-px-md: 5rem;       /* 80px */
+  --spacing-section-px-lg: 10rem;      /* 160px */
+  --spacing-section-px-xl: 15rem;      /* 240px */
+
+  --spacing-section-gap-sm: 1.5rem;      /* 24px */
+  --spacing-section-gap-md: 2.5rem;      /* 40px */
+  --spacing-section-gap-lg: 5rem;      /* 80px */
+}
