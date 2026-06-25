@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech? — Lex Konovalov</title>
+    <meta name="description" content="Read how Lead Product Designer Lex Konovalov used Object-Oriented UX (OOUX) and high-density UI to reduce error rates and processing time for 400+ travel agents.">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?",
+        "description": "Enterprise ERP case study demonstrating OOUX methodology and high-density UI layout implementation for 400+ agents.",
+        "author": {
+          "@type": "Person",
+          "name": "Oleksandr Konovalov",
+          "jobTitle": "Lead Product Designer"
+        },
+        "inLanguage": "en",
+        "about": [
+          "Object-Oriented UX",
+          "Information Architecture",
+          "ERP Systems",
+          "B2B Design"
+        ]
+      }
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #121212;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #FBFBFA;
+      }
+      h1, h2, h3 {
+        color: #121212;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 8px;
+      }
+      ul, ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      blockquote {
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #F4F2EC;
+        border-left: 4px solid #D93636;
+        font-style: italic;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      .tags {
+        margin-bottom: 30px;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #F4F2EC;
+        color: #121212;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        margin-right: 8px;
+        font-weight: 500;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 40px;
+        color: #3E70A2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <a href="/Portfolio-Website/" class="back-link">← Back to Portfolio</a>
+    
+    <div class="tags">
+        <span class="tag">B2B Enterprise</span>
+        <span class="tag">Information Architecture</span>
+        <span class="tag">OOUX</span>
+        <span class="tag">Design Systems</span>
+        <span class="tag">High-Density UI</span>
+    </div>
+
+    <h1>How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?</h1>
+
+    <h2>1. Executive Summary</h2>
+    <ul>
+        <li><strong>Role:</strong> Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops).</li>
+        <li><strong>Domain:</strong> B2B TravelTech / Enterprise ERP.</li>
+        <li><strong>Users:</strong> 400+ Internal Agents, Managers, and Accountants across 5 departments.</li>
+        <li><strong>The Problem:</strong> Fragmented legacy tools (Excel, GDS terminals) caused pricing errors and operational bottlenecks in high-value ($3k–$30k) luxury bookings.</li>
+        <li><strong>The Solution:</strong> A unified, OOUX-based enterprise ecosystem featuring a High-Density, Keyboard-First UI and granular Role-Based Access Control (RBAC).</li>
+        <li><strong>Business Impact:</strong> ~40% reduction in processing time, elimination of manual data-bridging errors, and 2+ years of design-free engineering autonomy.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-main-dashboard.webp" alt="Comparison of legacy fragmented travel agent workflow vs unified ERP cockpit displaying multi-segment itineraries, GDS flight records, and pricing diagnostics">
+
+    <h2>2. The Challenge: Escaping "Excel Hell"</h2>
+    <p>Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With hundreds of agents working across fragmented email threads and legacy GDS terminals, the operational ceiling was real.</p>
+    <p>Complex bookings were actively avoided by staff, and a 15-minute delay meant losing a high-net-worth client permanently. We had to replace this ecosystem from scratch.</p>
+
+    <h2>3. Information Gain: The Discovery Pivot</h2>
+    <blockquote>
+        <strong>The Failed Assumption:</strong> Initially, we thought we could just "digitize" and clean up the existing process.<br>
+        <strong>The Reality:</strong> There was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.<br>
+        <strong>The Pivot:</strong> I stopped drawing screens. I used <strong>Asynchronous Video Analysis</strong> (analyzing 30+ recorded sessions) to separate essential "muscle memory" shortcuts from actual usability blockers. We had to fix the underlying logic first.
+    </blockquote>
+
+    <h2>4. The Architecture: Structuring Chaos via OOUX</h2>
+    <p>Instead of designing pages, I designed objects. I mapped the relationships between <em>Leads, Offers</em>, and <em>Deals</em> to create a scalable Information Architecture.</p>
+    <ul>
+        <li><strong>Object Mapping:</strong> Aligned the design perfectly with database realities, preventing costly engineering reworks.</li>
+        <li><strong>Security by Design (RBAC):</strong> Defined a granular Role-Based Access Control matrix. Users only see tools relevant to their specific role, drastically reducing cognitive noise.</li>
+        <li><strong>Automated Routing:</strong> Replaced email threads with a Unified Timeline that automatically assigns tasks across 5 departments based on load and expertise.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-booking-flow.webp" alt="Object-Oriented UX entity relationship map for Leads, Offers, and Deals showing data structures and cross-functional task assignments">
+
+    <h2>5. The Interface: High-Density UI & Muscle Memory</h2>
+    <p>Travel agents are power users operating under high pressure. They don't need "white space"; they need information density and speed.</p>
+    <ul>
+        <li><strong>High-Density Architecture:</strong> Adopted a UI approach similar to Bloomberg or Linear. Used compact rows and monospaced fonts for tabular data to maximize information above the fold.</li>
+        <li><strong>Keyboard-First Navigation:</strong> To mitigate change aversion, I implemented strict keyboard navigation. Veteran agents leveraged their existing hotkey muscle memory while benefiting from modern error prevention.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp" alt="High-density enterprise UI with keyboard-first navigation for power users designed to optimize agent booking command center">
+
+    <h2>6. The Scale: Empowering Engineering</h2>
+    <p>As the sole designer on a massive product, I built a Tokenized UI Kit focused on system logic, not just visuals, to prevent becoming a bottleneck.</p>
+    <ul>
+        <li><strong>Semantic Foundation:</strong> Defined strict, W3C-valid tokens for typography, spacing, and colors.</li>
+        <li><strong>Dev-Ready Components:</strong> Created smart components (Tables, Inputs, Modals) that developers could assemble like Lego blocks.</li>
+    </ul>
+
+    <img src="../assets/images/other-projects/other-projects-design-system-tokens.webp" alt="Scalable tokenized UI kit components and token layers designed for independent engineering deployment">
+
+    <h2>7. Business Impact & The "Invisible" Designer</h2>
+    <p>My ultimate goal was to make myself obsolete on this specific product. By investing heavily in the OOUX Discovery Phase and building a rigid Design System, the results were structural:</p>
+    <ul>
+        <li><strong>Engineering Autonomy:</strong> For 2+ years post-launch, the engineering team shipped new modules independently, requiring design intervention only twice.</li>
+        <li><strong>Architectural Stability:</strong> The core OOUX model proved so stable that no major refactors were needed.</li>
+        <li><strong>Operational ROI:</strong> Agents stopped avoiding complex bookings, and processing time dropped by <strong>~40%</strong>.</li>
+    </ul>
+    <p>This project proved that the best B2B design isn't just an interface; it's an infrastructure that empowers others to build.</p>
+</body>
+</html>
