@@ -15,6 +15,29 @@ export default function App() {
   const [bottomOffset, setBottomOffset] = useState<number>(32);
   const [activeTab, setActiveTab] = useState<string>("home");
 
+  // Sync state with hash URL on load and hashchange
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#/cases/")) {
+        const caseId = hash.replace("#/cases/", "");
+        setCurrentPage("case-study");
+        setSelectedCaseId(caseId);
+      } else if (hash === "#/about") {
+        setCurrentPage("about");
+        setSelectedCaseId(null);
+      } else {
+        setCurrentPage("home");
+        setSelectedCaseId(null);
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   // Следим за прокруткой для кнопки "наверх" 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,17 +66,20 @@ export default function App() {
   }, [currentPage]);
 
   const navigateTo = (page: string, params?: { caseId: string }) => {
-    if (page === "case-study" && params?.caseId) {
-      setSelectedCaseId(params.caseId);
+    if (page === "home") {
+      window.location.hash = "#/";
+    } else if (page === "about") {
+      window.location.hash = "#/about";
+    } else if (page === "case-study" && params?.caseId) {
+      window.location.hash = `#/cases/${params.caseId}`;
     }
-    setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSelectedWorksNav = (e: React.MouseEvent) => {
     e.preventDefault();
     if (currentPage !== "home") {
-      setCurrentPage("home");
+      window.location.hash = "#/";
       // Небольшая задержка, чтобы страница перестроилась
       setTimeout(() => {
         const section = document.getElementById("selected-works");
