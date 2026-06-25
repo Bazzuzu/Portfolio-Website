@@ -496,6 +496,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {

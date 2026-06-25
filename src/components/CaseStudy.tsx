@@ -122,7 +122,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
               >
                 <img
                   src={img}
-                  alt={`${caseStudy.title} screen ${index + 1}`}
+                  alt={caseStudy.imageCaptions && caseStudy.imageCaptions[index] ? `${caseStudy.title} - ${caseStudy.imageCaptions[index]}` : `${caseStudy.title} screenshot ${index + 1}`}
                   className="slider-image slider-image--standard"
                   referrerPolicy="no-referrer"
                 />
@@ -300,7 +300,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                         >
                           <img
                             src={imgUrl}
-                            alt="Discovery session main"
+                            alt={`${caseStudy.title} - Discovery session main interface layout`}
                             className="discovery-image-card__img"
                             referrerPolicy="no-referrer"
                           />
@@ -327,7 +327,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                           >
                             <img
                               src={imgUrl}
-                              alt={`Discovery session segment ${i + pairIdx}`}
+                              alt={`${caseStudy.title} - Discovery session interface analysis segment ${i + pairIdx}`}
                               className="discovery-image-card__img"
                               referrerPolicy="no-referrer"
                             />
@@ -371,47 +371,69 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
             </div>
   
             <div className="works-grid">
-              {remainingCases.map((work: CaseStudyType) => (
-                <article
-                  key={work.id}
-                  id={`work-card-${work.id}`}
-                  className="work-card"
-                  onClick={() => onNavigate("case-study", { caseId: work.id })}
-                >
-                  <div className="work-card__image-container">
-                    <div className="work-card__tags-container">
-                      {(() => {
-                        const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
-                                        work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
-                                        work.id === "fintech-investment-workspace" ? "SaaS / Fintech" : 
-                                        work.tag;
-                        const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
-                        return tags.map((t, idx) => (
-                          <React.Fragment key={t}>
-                            {idx > 0 && <span className="work-card__tag-separator">/</span>}
-                            <span className="work-card__tag">{t}</span>
-                          </React.Fragment>
-                        ));
-                      })()}
+              {remainingCases.map((work: CaseStudyType) => {
+                const caseUrl = work.id === "luxury-travel-os" 
+                  ? "/cases/how-ooux-reduced-error-rates-in-traveltech.html"
+                  : work.id === "checkout-rate-optimization"
+                  ? "/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.html"
+                  : "/cases/how-to-build-ai-landing-page-generator.html";
+
+                const linkText = work.id === "luxury-travel-os"
+                  ? "Read how OOUX mapping reduced agent error rates"
+                  : work.id === "checkout-rate-optimization"
+                  ? "Read how we achieved a +27% mobile conversion lift"
+                  : "Read how to build an AI landing page generator";
+
+                return (
+                  <a
+                    key={work.id}
+                    id={`work-card-${work.id}`}
+                    className="work-card"
+                    href={caseUrl}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (onNavigate) onNavigate("case-study", { caseId: work.id });
+                    }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <div className="work-card__image-container">
+                      <div className="work-card__tags-container">
+                        {(() => {
+                          const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
+                                          work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
+                                          work.id === "fintech-investment-workspace" ? "SaaS / Fintech" : 
+                                          work.tag;
+                          const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
+                          return tags.map((t, idx) => (
+                            <React.Fragment key={t}>
+                              {idx > 0 && <span className="work-card__tag-separator">/</span>}
+                              <span className="work-card__tag">{t}</span>
+                            </React.Fragment>
+                          ));
+                        })()}
+                      </div>
+                      
+                      <img
+                        src={work.images[0]}
+                        alt={`${work.title} - ${work.headline}`}
+                        className="work-card__image"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
-                    
-                    <img
-                      src={work.images[0]}
-                      alt={work.title}
-                      className="work-card__image"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <div className="work-card__content">
-                    <h3 className="work-card__title">
-                      {work.title}
-                    </h3>
-                    <p className="work-card__description">
-                      {work.description}
-                    </p>
-                  </div>
-                </article>
-              ))}
+                    <div className="work-card__content">
+                      <h3 className="work-card__title">
+                        {work.title}
+                      </h3>
+                      <p className="work-card__description">
+                        {work.description}
+                      </p>
+                      <span className="work-card__link">
+                        {linkText}
+                      </span>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </motion.section>
@@ -437,7 +459,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
             >
               <img
                 src={lightboxImage}
-                alt="Zoomed view"
+                alt={`${caseStudy.title} - Zoomed high-fidelity interface view`}
                 className="lightbox__image"
                 referrerPolicy="no-referrer"
               />

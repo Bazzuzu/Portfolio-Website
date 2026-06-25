@@ -1,16 +1,16 @@
-import luxuryTravel1 from "../assets/images/case-studies/luxury-travel-os/1.jpg";
-import luxuryTravel2 from "../assets/images/case-studies/luxury-travel-os/2.jpg";
-import luxuryTravel3 from "../assets/images/case-studies/luxury-travel-os/3.jpg";
-import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/1.jpg";
-import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/2.jpg";
-import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/3.jpg";
-import fintech1 from "../assets/images/case-studies/fintech-investment-workspace/1.jpg";
-import fintech2 from "../assets/images/case-studies/fintech-investment-workspace/2.jpg";
-import fintech3 from "../assets/images/case-studies/fintech-investment-workspace/3.jpg";
-import otherLlm from "../assets/images/other-projects/other-llm.jpg";
-import otherDs from "../assets/images/other-projects/other-ds.jpg";
-import otherAsync from "../assets/images/other-projects/other-async.jpg";
-import otherToken from "../assets/images/other-projects/other-token.jpg";
+import luxuryTravel1 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-main-dashboard.webp";
+import luxuryTravel2 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-booking-flow.webp";
+import luxuryTravel3 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp";
+import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
+import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
+import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
+import fintech1 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-investment-workspace-hero.webp";
+import fintech2 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-dashboard-analytics.webp";
+import fintech3 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-portfolio-tracker.webp";
+import otherLlm from "../assets/images/other-projects/other-projects-llm-landing-page-generator.webp";
+import otherDs from "../assets/images/other-projects/other-projects-design-system-tokens.webp";
+import otherAsync from "../assets/images/other-projects/other-projects-async-collaboration.webp";
+import otherToken from "../assets/images/other-projects/other-projects-token-structure.webp";
 
 export interface DiscoverySection {
   discoveryTitle?: string;
@@ -52,6 +52,7 @@ export interface OtherProject {
   id: string;
   title: string;
   image: string;
+  alt: string;
 }
 
 export interface MediumArticle {
@@ -261,22 +262,26 @@ export const portfolioData: PortfolioData = {
     {
       id: "other-llm-prototyping",
       title: "ERP Module LLM Prototyping Experience",
-      image: otherLlm
+      image: otherLlm,
+      alt: "ERP module interface prototype designed for seamless integration with LLMs and AI agents"
     },
     {
       id: "other-design-system",
       title: "Enterprise Design System Sync",
-      image: otherDs
+      image: otherDs,
+      alt: "Design system synchronization tool mapping Figma design components directly to React code variables"
     },
     {
       id: "other-async-ops",
       title: "Asynchronous Operations Dashboard",
-      image: otherAsync
+      image: otherAsync,
+      alt: "Asynchronous task orchestration dashboard designed to reduce cognitive load in complex B2B workflows"
     },
     {
       id: "other-token-handshake",
       title: "Global Checkout Tokenizer Engine",
-      image: otherToken
+      image: otherToken,
+      alt: "Financial checkout tokenization engine interface showing secure payment security verification steps"
     }
   ],
   mediumArticles: [

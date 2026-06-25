@@ -120,3 +120,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.work-card__link {
+  font-family: var(--font-label-lg-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-interactive);
+  margin-top: var(--spacing-component-py-md);
+  text-decoration: underline;
+  display: inline-block;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.work-card:hover .work-card__link {
+  color: var(--color-text-brand);
+}

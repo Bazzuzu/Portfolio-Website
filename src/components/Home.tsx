@@ -226,48 +226,70 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div id="works-grid" className="works-grid">
-            {portfolioData.caseStudies.map((work: CaseStudy, index: number) => (
-              <motion.article
-                key={work.id}
-                id={`work-card-${work.id}`}
-                variants={itemVariants}
-                className="work-card"
-                onClick={() => onNavigate("case-study", { caseId: work.id })}
-              >
-                <div className="work-card__image-container">
-                  <div className="work-card__tags-container">
-                    {(() => {
-                      const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
-                                      work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
-                                      work.id === "fintech-investment-workspace" ? "SaaS / Fintech" : 
-                                      work.tag;
-                      const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
-                      return tags.map((t, idx) => (
-                        <React.Fragment key={t}>
-                          {idx > 0 && <span className="work-card__tag-separator">/</span>}
-                          <span className="work-card__tag">{t}</span>
-                        </React.Fragment>
-                      ));
-                    })()}
+            {portfolioData.caseStudies.map((work: CaseStudy, index: number) => {
+              const caseUrl = work.id === "luxury-travel-os" 
+                ? "/cases/how-ooux-reduced-error-rates-in-traveltech.html"
+                : work.id === "checkout-rate-optimization"
+                ? "/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.html"
+                : "/cases/how-to-build-ai-landing-page-generator.html";
+
+              const linkText = work.id === "luxury-travel-os"
+                ? "Read how OOUX mapping reduced agent error rates"
+                : work.id === "checkout-rate-optimization"
+                ? "Read how we achieved a +27% mobile conversion lift"
+                : "Read how to build an AI landing page generator";
+
+              return (
+                <motion.a
+                  key={work.id}
+                  id={`work-card-${work.id}`}
+                  variants={itemVariants}
+                  className="work-card"
+                  href={caseUrl}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigate) onNavigate("case-study", { caseId: work.id });
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="work-card__image-container">
+                    <div className="work-card__tags-container">
+                      {(() => {
+                        const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
+                                        work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
+                                        work.id === "fintech-investment-workspace" ? "SaaS / Fintech" : 
+                                        work.tag;
+                        const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
+                        return tags.map((t, idx) => (
+                          <React.Fragment key={t}>
+                            {idx > 0 && <span className="work-card__tag-separator">/</span>}
+                            <span className="work-card__tag">{t}</span>
+                          </React.Fragment>
+                        ));
+                      })()}
+                    </div>
+                    
+                    <img
+                      src={work.images[0]}
+                      alt={`${work.title} - ${work.headline}`}
+                      className="work-card__image"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
-                  
-                  <img
-                    src={work.images[0]}
-                    alt={work.title}
-                    className="work-card__image"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="work-card__content">
-                  <h3 className="work-card__title">
-                    {work.title}
-                  </h3>
-                  <p className="work-card__description">
-                    {work.description}
-                  </p>
-                </div>
-              </motion.article>
-            ))}
+                  <div className="work-card__content">
+                    <h3 className="work-card__title">
+                      {work.title}
+                    </h3>
+                    <p className="work-card__description">
+                      {work.description}
+                    </p>
+                    <span className="work-card__link">
+                      {linkText}
+                    </span>
+                  </div>
+                </motion.a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -303,7 +325,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <div className="project-card__image-container">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt}
                     className="project-card__image"
                     referrerPolicy="no-referrer"
                   />

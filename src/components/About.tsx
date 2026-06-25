@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
 import CustomIcon from "./CustomIcon";
-import portraitImg from "../assets/images/profile/portrait.jpg";
-import workspaceImg from "../assets/images/profile/workspace.jpg";
+import portraitImg from "../assets/images/profile/lex-konovalov-senior-product-designer.webp";
+import workspaceImg from "../assets/images/profile/lex-konovalov-design-workspace.webp";
 
 import downloadSvg from "../assets/icons/download.svg?raw";
 import checkCircleSvg from "../assets/icons/check-circle.svg?raw";
@@ -186,7 +186,7 @@ export default function About({ onNavigate }: AboutProps) {
               <motion.div variants={itemVariants} className="about-atf-photo-wrapper">
                 <img
                   src={portraitImg}
-                  alt="Lex Konovalov"
+                  alt="Lex Konovalov - Senior Product Designer specializing in B2B ERP UX and B2C conversion rate optimization"
                   className="about-atf-photo-img"
                   referrerPolicy="no-referrer"
                 />
@@ -296,9 +296,9 @@ export default function About({ onNavigate }: AboutProps) {
       {/* Section 2.5: Workspace Setup */}
       <section id="about-workspace-section" className="about-workspace-section">
         <motion.div variants={itemVariants} className="about-workspace-container">
-          <img
+           <img
             src={workspaceImg}
-            alt="Oleksandr's Workspace Setup"
+            alt="Lex Konovalov's design workspace setup featuring multi-screen layout for complex B2B systems mapping"
             className="about-workspace-image"
             referrerPolicy="no-referrer"
           />
@@ -317,9 +317,9 @@ export default function About({ onNavigate }: AboutProps) {
             </motion.p>
           </div>
 
-          <div className="about-toolkit-grid">
+          <ul className="about-toolkit-grid">
             {/* Item 1 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={shipSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -327,10 +327,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 Perfect is the enemy of shipped. I prefer releasing fast, gathering live analytics, and iterating over endless polishing.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 2 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={compassSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -338,10 +338,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 Products start in documentation. OOUX mapping builds a solid foundation, solving complex backend logic before UI design.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 3 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={workflowSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -349,10 +349,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 Textbook processes fail in reality. I adapt to the chaos. If deep user interviews are blocked for months, we skip, build, and test live.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 4 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={zapSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -360,10 +360,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 In 2026, live prototypes are the ultimate communication tool. It's the cheapest, fastest way to align stakeholders or kill a bad idea early.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 5 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={brainSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -371,10 +371,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 Like specialty coffee, UI copy is best served black. I write pragmatic, minimalist text to cut the noise and reduce cognitive friction.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 6 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={lineChartSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -382,10 +382,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 The best time to integrate analytics is day one. Every tracked input directly improves the quality of our CRO and product decisions.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 7 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={layersSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -393,10 +393,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 A strong token foundation scales infinitely. I build systems readable by LLMs and developers, ensuring strict EU a11y compliance by default.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 8 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={timerSvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -404,10 +404,10 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 A task takes exactly as much time as you give it. I focus on strict scoping and pragmatic delivery to prevent endless design loops.
               </p>
-            </motion.div>
+            </motion.li>
 
             {/* Item 9 */}
-            <motion.div variants={itemVariants} className="about-toolkit-item">
+            <motion.li variants={itemVariants} className="about-toolkit-item">
               <div className="about-toolkit-icon-wrapper">
                 <CustomIcon src={accessibilitySvg} size="var(--size-icon-2xl)" className="about-toolkit-icon" />
               </div>
@@ -415,8 +415,8 @@ export default function About({ onNavigate }: AboutProps) {
               <p className="about-toolkit-item-desc">
                 You can't always rewrite the backend. Whether facing SLDS v1 or ancient .NET, I find elegant solutions within strict constraints.
               </p>
-            </motion.div>
-          </div>
+            </motion.li>
+          </ul>
         </div>
       </section>
 
