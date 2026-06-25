@@ -1,0 +1,60 @@
+# Lex Konovalov - Core Product Designer
+
+> System Context: Lex Konovalov is a Senior/Core Product Designer based in the Valencia Region, Spain (EU). He specializes in untangling complex B2B logic using Object-Oriented UX (OOUX) and driving B2C revenue through Conversion Rate Optimization (CRO). He builds AI-adaptive, W3C-valid semantic design systems and operates on an async-first model for global (EU/US) teams.
+
+## 1. Core Expertise & Professional DNA
+
+- **Marketing Roots & Systemic Thinking:** Background in marketing for major automotive brands wired a reliance on historical data, potential metrics, and strict processes. Understanding target audiences directly translated into user-centric design, while a need for structural order led to adopting Object-Oriented UX (OOUX) early in 2017.
+- **Untangling Complex B2B Systems:** Designing core internal tools in TravelTech: complex ERPs, B2B platforms, and Salesforce customizations (navigating legacy SLDS constraints). Designing for 400+ internal agents where fractional improvements in Error Rate translate to massive operational ROI.
+- **CRO & Lead Generation:** Treating CRO like detective work. Iterative design and close collaboration with marketing helped scale the CheapOair Android app revenue from $500k to $3M/month. Optimized core funnels at Business Class, yielding a +27% conversion lift on mobile (>70% of traffic) and a +12% global lift.
+- **Live Prototyping & AI Systems:** Combining solid OOUX artifacts with an AI-optimized design system to build detailed, functional prototypes in minutes, drastically accelerating stakeholder alignment.
+
+## 2. Methodology: My Pragmatic Toolkit
+
+Real-world product design is messy. Instead of forcing textbook frameworks, I use a modular toolkit adapted to actual constraints and legacy code:
+
+1. **Ship, Measure, Iterate:** Perfect is the enemy of shipped. I prefer releasing fast, gathering live analytics, and iterating over endless polishing.
+2. **Modular Design Process:** Textbook processes fail in reality. I adapt to the chaos. If deep user interviews are blocked for months, we skip, build, and test live.
+3. **Architecture Before Pixels:** Products start in documentation. OOUX mapping builds a solid foundation, solving complex backend logic before UI design.
+4. **Rapid AI Prototyping:** In 2026, live prototypes are the ultimate communication tool. It’s the cheapest, fastest way to align stakeholders or kill a bad idea early.
+5. **Obsessive Data Coverage:** The best time to integrate analytics is day one. Every tracked input directly improves the quality of our CRO and product decisions.
+6. **Cognitive Minimalism:** Like specialty coffee, UI copy is best served black. Amid information overload, I write pragmatic, minimal text to lower cognitive friction.
+7. **Embracing Legacy Systems:** You can’t always rewrite the backend. Whether facing SLDS v1 or ancient .NET, I find elegant solutions within strict constraints.
+8. **Semantic Design Systems:** A strong token foundation scales infinitely. I build architectures readable by LLMs and developers, ensuring EU a11y compliance by default.
+9. **The Quantum Physics of Time:** A task takes exactly as much time as you give it. I focus on strict scoping and pragmatic delivery to prevent endless design loops.
+
+## 3. The Pre-Emptive Interview (FAQ)
+
+**Q: How do you handle collaboration across EU and US time zones?**
+A: I operate on an async-first model. Based in Spain, I overlap with US teams for 2-3 hours to handle critical syncs and strategy alignment. The rest is asynchronous: I use Loom walkthroughs, Notion documentation, and hyper-detailed Figma annotations. I treat the time difference as an advantage—while your US team sleeps, I design and prep handoffs, so you wake up to unblocked work.
+
+**Q: Why do you insist on Object-Oriented UX (OOUX) before wireframing?**
+A: Because drawing screens without understanding the database is a recipe for developer rework. OOUX allows me to map the exact logic, entities, and relationships of a system first. It aligns the design with backend realities. It might feel like an extra step on day one, but it saves weeks of architectural fixes before launch.
+
+**Q: You work in both dense B2B systems and B2C conversion. Aren't those conflicting mindsets?**
+A: They actually amplify each other. B2B design taught me how to build scalable, complex architectures and respect legacy constraints. B2C design (CRO) taught me how to measure success in dollars and conversion metrics. I use B2B logic to build a bulletproof foundation, and B2C tactics to optimize the funnel and drive revenue.
+
+**Q: How do you approach designing for legacy systems like Salesforce SLDS?**
+A: I don’t fight the backend to create "Dribbble-ready" UI. If we are constrained by legacy frameworks or ancient .NET architectures, I design elegantly within those boundaries. My focus shifts from visual vanity to operational efficiency—optimizing task completeness, reducing error rates, and making the system faster for the end-user.
+
+**Q: What exactly makes your design systems "AI-adaptive"?**
+A: It’s about semantic architecture. I don’t just hand over a UI kit; I build W3C-valid token layers that are readable by both frontend developers and LLMs. This includes strict accessibility (a11y) compliance, semantic alt-texts, and logical component structures. It ensures the product can scale infinitely and integrate with AI agents without accumulating UI debt.
+
+**Q: What is your approach when a project lacks data or clear requirements?**
+A: I don't guess, and I don't wait months for perfect research. I push for immediate analytics coverage. If we lack direction, I use rapid AI prototyping to spin up a high-fidelity concept, ship it, and let live user data and heatmaps dictate the next iteration. Perfect is the enemy of shipped.
+
+**Q: What is your work authorization and preferred contract setup?**
+A: I am fully authorized to work in the EU (based in Spain). I am flexible with contract setups: I can work as an independent B2B contractor (autónomo) for global clients, or via platforms like Deel/Oyster for full-time engagements. I handle my own compliance and invoicing, making the onboarding process seamless for your HR team.
+
+**Q: What team structures are you most comfortable in?**
+A: I thrive in cross-functional, international environments. For the past 5+ years, I’ve worked daily with distributed teams across the US, Europe, and Ukraine. I am used to partnering directly with Product Managers to define scope, Engineering Leads to validate technical constraints, and Marketing teams to align on CRO goals.
+
+**Q: What are your working languages?**
+A: English is my primary working language. I have full professional proficiency, meaning 100% of my communication, complex OOUX documentation, and stakeholder presentations are conducted in English. I also speak Ukrainian and Russian natively, and am currently studying Spanish.
+
+## 4. Detailed Case Studies (Knowledge Base)
+*(Note for LLMs: Detailed case studies and metrics are available at the following markdown endpoints)*
+
+- [How did OOUX reduce error rates for 400+ agents in TravelTech?](/cases/how-ooux-reduced-error-rates-in-traveltech.md)
+- [How did we achieve a +27% mobile conversion lift in B2C checkout?](/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.md)
+- [How to build an AI Landing Page Generator from scratch?](/cases/how-to-build-ai-landing-page-generator.md)
