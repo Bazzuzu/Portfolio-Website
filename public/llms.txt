@@ -55,6 +55,6 @@ A: English is my primary working language. I have full professional proficiency,
 ## 4. Detailed Case Studies (Knowledge Base)
 *(Note for LLMs: Detailed case studies and metrics are available at the following markdown endpoints)*
 
-- [How did OOUX reduce error rates for 400+ agents in TravelTech?](/cases/how-ooux-reduced-error-rates-in-traveltech.md)
-- [How did we achieve a +27% mobile conversion lift in B2C checkout?](/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.md)
-- [How to build an AI Landing Page Generator from scratch?](/cases/how-to-build-ai-landing-page-generator.md)
+- [How did OOUX reduce error rates for 400+ agents in TravelTech?](/cases/how-ooux-reduced-error-rates-in-traveltech.html)
+- [How did we achieve a +27% mobile conversion lift in B2C checkout?](/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.html)
+- [How to build an AI Landing Page Generator from scratch?](/cases/how-to-build-ai-landing-page-generator.html)
