@@ -7,9 +7,12 @@ import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
 import mobileLeadBeforeAfter from "../assets/images/case-studies/checkout-rate-optimization/mobile-lead-generation-funnel-before-after.webp";
 import mobileLeadStickyCta from "../assets/images/case-studies/checkout-rate-optimization/sticky-cta-trust-injection-mobile-ui.webp";
-import fintech1 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-investment-workspace-hero.webp";
-import fintech2 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-dashboard-analytics.webp";
-import fintech3 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-portfolio-tracker.webp";
+import fintech1 from "../assets/images/case-studies/ai-modular-system/fintech-saas-investment-workspace-hero.webp";
+import fintech2 from "../assets/images/case-studies/ai-modular-system/fintech-saas-dashboard-analytics.webp";
+import fintech3 from "../assets/images/case-studies/ai-modular-system/fintech-saas-portfolio-tracker.webp";
+import luxuryTravelDesktopRedesign from "../assets/images/case-studies/ai-modular-system/luxury-travel-desktop-redesign-before-after.webp";
+import smartTriggerChat from "../assets/images/case-studies/ai-modular-system/smart-trigger-chat-choreography-ui.webp";
+import aiReadyModularCms from "../assets/images/case-studies/ai-modular-system/ai-ready-modular-cms-design-system.webp";
 import otherLlm from "../assets/images/other-projects/other-projects-llm-landing-page-generator.webp";
 import otherDs from "../assets/images/other-projects/other-projects-design-system-tokens.webp";
 import otherAsync from "../assets/images/other-projects/other-projects-async-collaboration.webp";
@@ -236,7 +239,7 @@ export const portfolioData: PortfolioData = {
         {
           discoveryTitle: "6. The Takeaway & Future Roadmap",
           discoveryLeftTitle: "Impulsive Volume Optimization:",
-          discoveryLeft: "By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel. We successfully maximized volume (Conversion Rate).",
+discoveryLeft: "By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel. We successfully maximized volume (Conversion Rate).",
           discoveryRightTitle: "Future Backlog Hypotheses:",
           discoveryRight: "The behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU) in upcoming validation cycles.",
           discoveryImages: []
@@ -244,75 +247,53 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      id: "fintech-investment-workspace",
-      title: "Homepage & Funnel Structure",
-      tag: "SaaS / fintech",
-      tags: ["SaaS / Fintech", "Dashboard Design", "User Onboarding", "KYC/AML Compliance", "Design Infrastructure"],
-      headline: "Simplifying wealth-management dashboards for retail investors.",
-      description: "Redesigning a high-friction retail investment dashboard to promote long-term portfolio strategies, resulting in a 30% reduction in churn during the onboarding KYC verification stage.",
-      role: "Principal Product Designer & System Architect",
-      scope: "SaaS Workspace Architecture & Design Token Restructure",
-      status: "Released across iOS, Android, and Web platforms",
-      users: "SaaS retail investors & account managers",
-      images: [fintech1, fintech2, fintech3],
-      imageCaptions: [
-        "Simplified step-by-step onboarding wizard breaking down tax declarations into digestible cards.",
-        "Interactive bento-grid modular workspace illustrating asset growth profiles and history indicators.",
-        "Design infrastructure token schema aligning Figma layout styles with physical frontend code variables."
-      ],
-      challenge: "Onboarding drop-offs peaked on the identity verification (KYC/AML) screen due to complex tax declarations, unclear legal definitions, and massive text blocks that felt overwhelming.",
-      solution: "Broke down complex queries into a structured conversational wizard, backed by visual dynamic progression bars. Built micro-learn panels with plain-English definitions of crucial financial terms.",
-      impact: "Onboarding success skyrocketed by 30%. User satisfaction indices rose from 3.2 to 4.7 out of 5, while the design library reduced frontend component bloat by over 50%.",
+      id: "ai-modular-system",
+      title: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
+      tag: "Product Strategy",
+      tags: ["Product Strategy", "AI Integration", "Design Governance", "Stakeholder Management", "Core Web Vitals"],
+      headline: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
+      description: "A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS.",
+      role: "Lead Product Designer (Strategy, UI/UX, Logic Architecture)",
+      scope: "UX Strategy & AI-Ready Modular Design System",
+      status: "Shipped & Scaled (CMS-integrated)",
+      users: "Marketing Teams & High-Ticket Luxury Travelers",
+      images: [luxuryTravelDesktopRedesign],
+      imageCaptions: ["Desktop redesign transforming a generic travel aggregator into a premium concierge platform"],
+      challenge: "Business-Class.com is a premium concierge service, but the legacy interface mimicked a DIY search engine. This 'Expectation Mismatch' caused high friction and bounce rates. Users entered the site with a 'DIY' mindset, expecting instant automated results. Fighting the user's mental model was killing conversion. I needed to gently transition their mindset from 'I want to search' to 'I need an expert', establishing immediate trust for high-ticket ($5k+) purchases.",
+      solution: "A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS. We changed CTAs to reduce perceived commitment ('Check Your Price'), introduced smart defaults, resolved video backgrounds for Core Web Vitals (LCP), and implemented smart-trigger chats. We then built 15+ flexible modules that leverage AI to populate SEO text.",
+      impact: "We achieved a +27% lift in CTR to the booking funnel, 95% faster landing page creation for marketing via AI modular page generation, and full WCAG AA accessibility compliance.",
       discoverySections: [
         {
-          discoveryTitle: "Configuration 1: Two Columns of Text + 1 Full-Width Focal Image",
-          discoverySubtitle: "An layout option prioritizing single high-fidelity captures of target interface states",
-          discoveryLeftTitle: "The Mobile Conversion Funnel:",
-          discoveryLeft: "With over 60% of our active traffic coming via portable viewports, ensuring that form structures maintain strict sizing constraints was our critical priority. A single wide image allows the reader to follow a sequential cognitive flow without visual distraction.",
-          discoveryRightTitle: "A/B Layout Insights:",
-          discoveryRight: "Our quantitative tests proved that user attention maps are far more linear on portable viewports. Single-column, full-width layouts resulted in a 14% higher reading retention score compared to multi-column inline galleries.",
-          discoveryImages: [checkout1]
+          discoveryTitle: "3. Information Gain: The 'Recent Searches' Fallacy",
+          discoveryLeftTitle: "The Failed Assumption:",
+          discoveryLeft: "I assumed business class travelers have a non-linear decision journey, making a 'Recent Searches' shortcut critical for returning users to resume their bookings.",
+          discoveryRightTitle: "The Reality & Pivot:",
+          discoveryRight: "Post-launch data showed near-zero engagement. It competed for attention with the 'Popular Destinations' list, adding unnecessary cognitive load. Following the data, we deprecated the module in the next sprint to reduce decision fatigue.",
+          discoveryImages: [luxuryTravelDesktopRedesign]
         },
         {
-          discoveryTitle: "Configuration 2: Two Columns of Text + 2 Symmetrical Images",
-          discoverySubtitle: "An ideal viewport arrangement for dual comparisons and adaptive breakpoint previews",
-          discoveryLeftTitle: "The Desktop Dashboard Workspace:",
-          discoveryLeft: "While mobile optimization addresses swift interactions, desktop viewports require highly integrated bento panels and consistent structural alignment. We placed mobile next to desktop to preview synchronization instantly.",
-          discoveryRightTitle: "Responsive Interface Audits:",
-          discoveryRight: "We mapped out cross-device synchronization flows to guarantee that actions initiated on-the-go seamlessly propagated to accounting terminals in less than 300ms, minimizing discrepancies.",
-          discoveryImages: [checkout2, luxuryTravelOouxMap]
+          discoveryTitle: "4. The Strategy: Semantic Shifts & Smart Defaults",
+          discoveryLeftTitle: "CTAs & MVPs:",
+          discoveryLeft: "The Semantic Shift: Changed the primary CTA from 'Search Flights' to 'Check Your Price' to reduce perceived commitment.\n\nThe 'Wizard of Oz' MVP: Launched a manually curated quick-select destination list to validate engagement before building dynamic sorting.",
+          discoveryRightTitle: "Smart Defaults:",
+          discoveryRight: "Implemented IP-based detection to pre-fill 'Origin' and 'Dates' fields. This solved 'Empty State Anxiety' for first-time visitors, helping them initiate searches instantly.",
+          discoveryImages: []
         },
         {
-          discoveryTitle: "Configuration 3: Two Columns of Text + 1 Full-Width + 2 Inline Images",
-          discoverySubtitle: "A hierarchical arrangement presenting a master system view followed by micro-interaction details",
-          discoveryLeftTitle: "Advanced Data Parsing Engine:",
-          discoveryLeft: "Our system takes complex, unstructured entries and breaks them down using smart, localized algorithms. This asymmetric three-image setup offers a macro view of the environment, plus close-ups of specific UX modules.",
-          discoveryRightTitle: "User Testing Discoveries:",
-          discoveryRight: "During research labs, users responded enthusiastically to interactive charts that dynamically updated as inputs changed. The symmetrical supporting grid helps isolate each key parameter.",
-          discoveryImages: [luxuryTravelBeforeAfter, checkout3, fintech1]
+          discoveryTitle: "5. Stakeholder Management & Technical Trade-offs",
+          discoveryLeftTitle: "1. Video Background vs. LCP:",
+          discoveryLeft: "Marketing pushed for a heavy video background for a 'Luxury Feel.' I optimized the asset and implemented a static 'skeleton' image for instant loading, satisfying marketing while protecting Core Web Vitals (LCP).",
+          discoveryRightTitle: "2. Aggressive Chat triggers:",
+          discoveryRight: "Sales wanted an auto-opening chat. I proved this diluted lead quality. We engineered a 'Smart Trigger' protocol: chat is suppressed while typing, engages after 15s of inactivity, and pauses the carousel.",
+          discoveryImages: [smartTriggerChat]
         },
         {
-          discoveryTitle: "Configuration 4: Two Columns of Text + 4 Symmetrical Images",
-          discoverySubtitle: "A symmetrical grid of four high-fidelity screens representing different phases of the design sprint",
-          discoveryLeftTitle: "Cognitive Processing & Focus:",
-          discoveryLeft: "Too much visual data can lead to user fatigue. We addressed this by chunking information into localized widgets with consistent spacing and clear labels.",
-          discoveryRightTitle: "System Interface Convergence:",
-          discoveryRight: "To keep our application consistent, we created a single design token system in token files. Moving variables directly to CSS let us update colors instantly.",
-          discoveryImages: [fintech3, fintech2, checkout2, checkout1]
-        },
-        {
-          discoveryTitle: "Configuration 5: Symmetrical Image Board with 8 Photos (No Text Columns)",
-          discoverySubtitle: "When text-blocks are absent, the component transforms into an absolute visual catalog of UX deliverables, scaling dynamically up to eight records",
-          discoveryImages: [
-            luxuryTravelBeforeAfter,
-            luxuryTravelOouxMap,
-            checkout3,
-            checkout2,
-            checkout1,
-            fintech1,
-            fintech2,
-            fintech3
-          ]
+          discoveryTitle: "6. The Scale: Empowering Marketing with AI",
+          discoveryLeftTitle: "Design System Governance:",
+          discoveryLeft: "Marketing needed to launch 300+ route-specific SEO pages but was bottlenecked by development. I architected a modular system of 15+ flexible blocks (Hero, Reviews, Trust) directly into the CMS with strict styling constraints.",
+          discoveryRightTitle: "AI Integration & Results:",
+          discoveryRight: "The CMS system now leverages AI to populate SEO-optimized text within these modules. This reduced page production time by 95%, allowing the marketing team to scale operations instantly.",
+          discoveryImages: [aiReadyModularCms]
         }
       ]
     }

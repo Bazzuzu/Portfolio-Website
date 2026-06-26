@@ -231,13 +231,13 @@ export default function Home({ onNavigate }: HomeProps) {
                 ? "/cases/how-ooux-reduced-error-rates-in-traveltech.html"
                 : work.id === "checkout-rate-optimization"
                 ? "/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.html"
-                : "/cases/how-to-build-ai-landing-page-generator.html";
+                : "/cases/how-an-ai-ready-modular-system-fixed-luxury-travel.html";
 
               const linkText = work.id === "luxury-travel-os"
                 ? "Read how OOUX mapping reduced agent error rates"
                 : work.id === "checkout-rate-optimization"
                 ? "Read how we achieved a +27% mobile conversion lift"
-                : "Read how to build an AI landing page generator";
+                : "Read how an AI-ready modular system fixed a luxury travel identity crisis";
 
               return (
                 <motion.a
@@ -257,7 +257,7 @@ export default function Home({ onNavigate }: HomeProps) {
                       {(() => {
                         const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
                                         work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
-                                        work.id === "fintech-investment-workspace" ? "SaaS / Fintech" : 
+                                        work.id === "ai-modular-system" ? "Strategy / AI" : 
                                         work.tag;
                         const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
                         return tags.map((t, idx) => (

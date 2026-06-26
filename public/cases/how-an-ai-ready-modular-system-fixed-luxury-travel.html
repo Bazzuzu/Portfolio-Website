@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis? — Lex Konovalov</title>
+    <meta name="description" content="Read how Lead Product Designer Lex Konovalov fixed a premium travel brand's expectation mismatch, achieving a +27% CTR lift via an AI-ready modular CMS design system.">
+    <!-- Redirect human users to the interactive React SPA version -->
+    <script>
+      const isCrawler = /bot|googlebot|crawler|spider|robot|crawling|perplexity|gptbot/i.test(navigator.userAgent);
+      if (!isCrawler) {
+        window.location.replace('/cases/ai-modular-system');
+      }
+    </script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
+        "description": "UX realignment and modular CMS design system case study demonstrating stakeholder compromise, LCP speed performance, and AI content generation.",
+        "author": {
+          "@type": "Person",
+          "name": "Oleksandr Konovalov",
+          "jobTitle": "Lead Product Designer"
+        },
+        "inLanguage": "en",
+        "about": [
+          "Product Strategy",
+          "AI Integration",
+          "Design Governance",
+          "Stakeholder Management",
+          "Core Web Vitals"
+        ]
+      }
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #121212;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #FBFBFA;
+      }
+      h1, h2, h3 {
+        color: #121212;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 8px;
+      }
+      ul, ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      blockquote {
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #F4F2EC;
+        border-left: 4px solid #D93636;
+        font-style: italic;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      .tags {
+        margin-bottom: 30px;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #F4F2EC;
+        color: #121212;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        margin-right: 8px;
+        font-weight: 500;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 40px;
+        color: #3E70A2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to Portfolio</a>
+    
+    <div class="tags">
+        <span class="tag">Product Strategy</span>
+        <span class="tag">AI Integration</span>
+        <span class="tag">Design Governance</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Core Web Vitals</span>
+    </div>
+
+    <h1>How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?</h1>
+
+    <h2>1. Executive Summary</h2>
+    <ul>
+        <li><strong>Role:</strong> Lead Product Designer (Strategy, UI/UX, Logic Architecture).</li>
+        <li><strong>Team:</strong> Cross-functional (CMO, Head of Sales, SEO Lead, Frontend Engineers).</li>
+        <li><strong>The Problem:</strong> Business-Class.com is a premium concierge service, but the legacy interface mimicked a DIY search engine. This "Expectation Mismatch" caused high friction and bounce rates.</li>
+        <li><strong>The Solution:</strong> A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS.</li>
+        <li><strong>Business Impact:</strong> +27% lift in CTR to the booking funnel, 95% faster landing page creation via AI, and achieved WCAG AA compliance.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/ai-modular-system/luxury-travel-desktop-redesign-before-after.webp" alt="Desktop redesign transforming a generic travel aggregator into a premium concierge platform demonstrating brand realignment">
+
+    <h2>2. The Challenge: The "Expectation Mismatch"</h2>
+    <p>Users entered the site with a "DIY" mindset, expecting instant automated results. Instead, they hit a concierge lead form. Fighting the user's mental model was killing conversion.</p>
+    <p>I needed to gently transition their mindset from "I want to search" to "I need an expert", establishing immediate trust for high-ticket ($5k+) purchases.</p>
+
+    <h2>3. Information Gain: The "Recent Searches" Fallacy</h2>
+    <blockquote>
+        <strong>The Failed Hypothesis:</strong> I assumed business class travelers have a non-linear decision journey, making a "Recent Searches" shortcut critical for returning users.<br>
+        <strong>The Reality:</strong> Post-launch data showed near-zero engagement. It competed for attention with the "Popular Destinations" list, adding unnecessary cognitive load.<br>
+        <strong>The Pivot:</strong> Following the data, we deprecated the module in the next sprint. This reinforced that reducing decision fatigue is always more profitable than offering theoretical "convenience features."
+    </blockquote>
+
+    <h2>4. The Strategy: Semantic Shifts & Smart Defaults</h2>
+    <p>To lower the Interaction Cost to near zero, I redesigned the Search Widget to act as an Assistant rather than a database query.</p>
+    <ul>
+        <li><strong>The Semantic Shift:</strong> Changed the primary CTA from "Search Flights" to "Check Your Price". "Search" implies work; "Check Price" implies utility. This subtle shift drastically reduced the perceived commitment.</li>
+        <li><strong>The "Wizard of Oz" MVP:</strong> Introduced a quick-select destination list. Instead of building a complex dynamic sorting algorithm on day one, we launched with a manually curated list to validate engagement first.</li>
+        <li><strong>Smart Defaults:</strong> Implemented IP-based detection to pre-fill "Origin" and "Dates," solving "Empty State Anxiety."</li>
+    </ul>
+
+    <h2>5. Stakeholder Management & Technical Trade-offs</h2>
+    <p>Real-world design requires balancing business demands with user experience and technical performance.</p>
+    
+    <h3>Conflict 1: The Video Background (Marketing vs. Performance)</h3>
+    <ul>
+        <li><strong>The Ask:</strong> Marketing pushed for a heavy video background for a "Luxury Feel."</li>
+        <li><strong>The Compromise:</strong> I optimized the asset and implemented a static "skeleton" image for instant loading. This satisfied marketing while protecting our Core Web Vitals (LCP).</li>
+    </ul>
+
+    <h3>Conflict 2: The Aggressive Chat (Sales vs. UX)</h3>
+    <ul>
+        <li><strong>The Ask:</strong> Sales wanted an auto-opening chat to maximize lead volume. I proved this interrupted high-intent search behaviors and diluted lead quality.</li>
+        <li><strong>The Solution:</strong> Engineered a "Smart Trigger" protocol. Chat is suppressed while the user types, engages only after 15s of inactivity, and pauses the Hero Carousel if opened to prevent visual overload.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/ai-modular-system/smart-trigger-chat-choreography-ui.webp" alt="Context-aware chat modal choreography balancing aggressive sales goals with user experience flow charts">
+
+    <h2>6. The Scale: Empowering Marketing with AI</h2>
+    <p>Marketing needed to launch 300+ route-specific SEO pages but was bottlenecked by development resources.</p>
+    <ul>
+        <li><strong>Design System Governance:</strong> I architected a modular system of 15+ flexible blocks (Hero, Reviews, Trust) integrated directly into the CMS. I baked strict constraints (padding, typography rules) into the code to ensure visual integrity even when built autonomously.</li>
+        <li><strong>AI Integration:</strong> The system now leverages AI to populate SEO-optimized text within these constrained modules.</li>
+        <li><strong>The Result:</strong> Page production time was reduced by 95%, allowing the marketing team to scale operations instantly without design intervention.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/ai-modular-system/ai-ready-modular-cms-design-system.webp" alt="AI-integrated modular design system allowing marketing teams to generate SEO landing pages 95% faster showing dynamic page layouts">
+</body>
+</html>
