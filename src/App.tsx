@@ -69,11 +69,11 @@ export default function App() {
   }, [currentPage]);
 
   const navigateTo = (page: string, params?: { caseId: string }) => {
-    let targetPath = "/Portfolio-Website/";
+    let targetPath = "/";
     if (page === "about") {
-      targetPath = "/Portfolio-Website/about";
+      targetPath = "/about";
     } else if (page === "case-study" && params?.caseId) {
-      targetPath = `/Portfolio-Website/cases/${params.caseId}`;
+      targetPath = `/cases/${params.caseId}`;
     }
 
     window.history.pushState(null, "", targetPath);
@@ -91,7 +91,7 @@ export default function App() {
   const handleSelectedWorksNav = (e: React.MouseEvent) => {
     e.preventDefault();
     if (currentPage !== "home") {
-      window.history.pushState(null, "", "/Portfolio-Website/");
+      window.history.pushState(null, "", "/");
       setCurrentPage("home");
       setSelectedCaseId(null);
       // Небольшая задержка, чтобы страница перестроилась
