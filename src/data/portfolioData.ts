@@ -1,6 +1,7 @@
-import luxuryTravel1 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-main-dashboard.webp";
-import luxuryTravel2 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-booking-flow.webp";
-import luxuryTravel3 from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp";
+import luxuryTravelBeforeAfter from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-before-after.webp";
+import luxuryTravelOouxMap from "../assets/images/case-studies/luxury-travel-os/ooux-object-map-b2b-traveltech.webp";
+import luxuryTravelHighDensity from "../assets/images/case-studies/luxury-travel-os/high-density-ui-keyboard-first-navigation.webp";
+import luxuryTravelTokens from "../assets/images/case-studies/luxury-travel-os/semantic-tokenized-ui-kit-components.webp";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
@@ -132,30 +133,62 @@ export const portfolioData: PortfolioData = {
   caseStudies: [
     {
       id: "luxury-travel-os",
-      title: "Building the OS for Luxury Travel",
+      title: "How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?",
       tag: "B2B/Enterprise ERP",
-      tags: ["B2B/Enterprise", "Information Architecture", "OOUX", "Design Systems", "Stakeholder Management"],
+      tags: ["B2B Enterprise", "Information Architecture", "OOUX", "Design Systems", "High-Density UI"],
       headline: "From «Excel Hell» and Legacy GDS Terminals to a Unified Luxury Operating Engine.",
       description: "Replaced highly fragmented command-line blue screens, multi-tab Excel sheets, and chaotic email threads with a custom-engineered enterprise application, empowering agents to process $30,000 bookings with zero pricing errors.",
-      role: "Lead Product Designer (Architecture, UX/UI, Design Ops)",
-      scope: "End-to-End Design (from Data Modeling to UI Kit)",
+      role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
+      scope: "B2B TravelTech / Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
-      users: "Internal Agents, Managers, Accountants (5 Depts)",
-      images: [luxuryTravel1, luxuryTravel2, luxuryTravel3],
-      imageCaptions: [
-        "Workspace displaying multi-segment itineraries, parsed GDS flight records, and pricing diagnostics.",
-        "Unified agent booking command center enabling keyboard-centric, terminal-fast data entries.",
-        "Structured cross-department invoicing console synchronized with client financial databases."
-      ],
-      challenge: "Agents process premium and corporate travel bookings valued between $3,000 and $30,000. Operating across three legacy GDS terminals (such as Amadeus command lines), 15+ open Excel spreadsheets, and dozens of emails, they suffered from extreme cognitive overload. High-value, multi-segment complex bookings were avoided. Manual pricing calculations caused costly errors, and a strict 15-minute SLA on corporate leads pressured the team to the absolute brink.",
-      solution: "I architected and designed a unified luxury flight booking workspace from scratch. Key features included an intelligent GDS PNR Parser that instantly renders cryptic CLI texts into clean, visual segment interactive graphs, a visual route builder with live pricing indicators, and automated invoicing integration. This bridged the sales, operations, ticketing, and accounting workflows into a seamless, keyboard-driven UI.",
-      impact: "Pricing errors tied to manual data transfers completely dropped to zero. Agents stopped avoiding complex multi-stop booking leads, increasing corporate close rates by 22%. Global processing time was cut by over 80% — typical complex customized flight bookings that once took 45 minutes of manual cross-referencing now settle in less than 6 minutes. Moreover, design modularity allowed engineering to build 10+ custom internal sub-modules autonomously.",
-      discoveryTitle: "The Discovery: Uncovering the \"Black Box\" of Operational Chaos",
-      discoveryLeftTitle: "The Business Reality:",
-      discoveryLeft: "Building an ERP requires understanding the business better than the users themselves. I couldn't just \"digitize\" the old process; I had to fix it.",
-      discoveryRightTitle: "The Investigation:",
-      discoveryRight: "Asynchronous Video Analysis: I analyzed 30+ recorded sessions across the skill spectrum (from novices to power users). This helped distinguish essential \"muscle memory\" shortcuts that experts rely on from the usability blockers confusing new hires.\n\nEdge-Case Mapping: I facilitated workshops to stress-test the system against complex scenarios (e.g., partial refunds, ancillary re-configuration). We mapped the cross-functional handoffs to ensure the architecture wouldn't break under real-world pressure.",
-      discoveryImages: [luxuryTravel1, luxuryTravel2]
+      users: "400+ Agents, Managers, and Accountants (5 Departments)",
+      images: [luxuryTravelBeforeAfter],
+      imageCaptions: ["Comparison of legacy fragmented travel agent workflow vs unified ERP cockpit"],
+      challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With hundreds of agents working across fragmented email threads and legacy GDS terminals, the operational ceiling was real. Complex bookings were actively avoided by staff, and a 15-minute delay meant losing a high-net-worth client permanently. We had to replace this ecosystem from scratch.",
+      solution: "A unified, OOUX-based enterprise ecosystem featuring a High-Density, Keyboard-First UI and granular Role-Based Access Control (RBAC) that integrated sales, operations, ticketing, and accounting workflows into a seamless, high-performance workspace.",
+      impact: "Pricing errors were eliminated, processing time dropped by ~40%, and the engineering team achieved 2+ years of design-free autonomy, shipping new modules independently without breaking the core OOUX architecture.",
+      discoverySections: [
+        {
+          discoveryTitle: "3. Information Gain: The Discovery Pivot",
+          discoveryLeftTitle: "The Failed Assumption:",
+          discoveryLeft: "Initially, we thought we could just \"digitize\" and clean up the existing process. However, there was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.",
+          discoveryRightTitle: "The Pivot:",
+          discoveryRight: "I stopped drawing screens. I used Asynchronous Video Analysis (analyzing 30+ recorded sessions) to separate essential \"muscle memory\" shortcuts from actual usability blockers. We had to fix the underlying logic first.",
+          discoveryImages: [luxuryTravelBeforeAfter]
+        },
+        {
+          discoveryTitle: "4. The Architecture: Structuring Chaos via OOUX",
+          discoveryLeftTitle: "Object Mapping:",
+          discoveryLeft: "Instead of designing pages, I designed objects. I mapped the relationships between Leads, Offers, and Deals to create a scalable Information Architecture. This aligned the design perfectly with database realities, preventing costly engineering reworks.",
+          discoveryRightTitle: "Workflow Design:",
+          discoveryRight: "Security by Design (RBAC): Defined a granular Role-Based Access Control matrix. Users only see tools relevant to their specific role, drastically reducing cognitive noise.\n\nAutomated Routing: Replaced email threads with a Unified Timeline that automatically assigns tasks across 5 departments based on load and expertise.",
+          discoveryImages: [luxuryTravelOouxMap]
+        },
+        {
+          discoveryTitle: "5. The Interface: High-Density UI & Muscle Memory",
+          discoveryLeftTitle: "High-Density Architecture:",
+          discoveryLeft: "Travel agents are power users operating under high pressure. They don't need \"white space\"; they need information density and speed. We adopted a UI approach similar to Bloomberg or Linear, using compact rows and monospaced fonts for tabular data to maximize information above the fold.",
+          discoveryRightTitle: "Keyboard-First Navigation:",
+          discoveryRight: "To mitigate change aversion, I implemented strict keyboard navigation. Veteran agents leveraged their existing hotkey muscle memory while benefiting from modern error prevention.",
+          discoveryImages: [luxuryTravelHighDensity]
+        },
+        {
+          discoveryTitle: "6. The Scale: Empowering Engineering",
+          discoveryLeftTitle: "Semantic Foundation:",
+          discoveryLeft: "As the sole designer on a massive product, I built a Tokenized UI Kit focused on system logic, not just visuals, to prevent becoming a bottleneck. We defined strict, W3C-valid tokens for typography, spacing, and colors.",
+          discoveryRightTitle: "Dev-Ready Components:",
+          discoveryRight: "Created smart components (Tables, Inputs, Modals) that developers could assemble like Lego blocks, allowing them to ship new modules with complete design consistency.",
+          discoveryImages: [luxuryTravelTokens]
+        },
+        {
+          discoveryTitle: "7. Business Impact & The \"Invisible\" Designer",
+          discoveryLeftTitle: "Operational ROI:",
+          discoveryLeft: "Agents stopped avoiding complex bookings, and processing time dropped by ~40%. The core OOUX model proved so stable that no major refactors were needed.",
+          discoveryRightTitle: "Engineering Autonomy:",
+          discoveryRight: "For 2+ years post-launch, the engineering team shipped new modules independently, requiring design intervention only twice. This project proved that the best B2B design is an infrastructure that empowers others to build.",
+          discoveryImages: []
+        }
+      ]
     },
     {
       id: "checkout-rate-optimization",
