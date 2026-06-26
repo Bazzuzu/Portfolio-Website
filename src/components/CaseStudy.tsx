@@ -60,8 +60,9 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
   };
 
   return (
-    <div className="portfolio__container">
-      <div className="case-study">
+    <>
+      <div className="portfolio__container">
+        <div className="case-study">
         {/* Above the Fold Column Layout */}
         <div className="case-study__above-fold">
           <div className="case-study__above-fold-left">
@@ -350,8 +351,10 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
             );
           });
         })()}
+      </div>
+    </div>
 
-        {/* Related Works (Selected Works) section */}
+    {/* Related Works (Selected Works) section */}
         <motion.section
           id="related-works"
           initial="hidden"
@@ -437,7 +440,6 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
             </div>
           </div>
         </motion.section>
-      </div>
 
       {/* Lightbox system overlay for Zooming images */}
       <AnimatePresence>
@@ -474,6 +476,6 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }
