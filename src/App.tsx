@@ -15,15 +15,18 @@ export default function App() {
   const [bottomOffset, setBottomOffset] = useState<number>(32);
   const [activeTab, setActiveTab] = useState<string>("home");
 
-  // Sync state with hash URL on load and hashchange
+  // Sync state with clean URL path on load and popstate
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith("#/cases/")) {
-        const caseId = hash.replace("#/cases/", "");
+    const handleLocationChange = () => {
+      const path = window.location.pathname;
+      // Remove base path /Portfolio-Website and trailing slash
+      const relativePath = path.replace(/^\/Portfolio-Website/, "").replace(/\/$/, "");
+
+      if (relativePath.startsWith("/cases/")) {
+        const caseId = relativePath.replace("/cases/", "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
-      } else if (hash === "#/about") {
+      } else if (relativePath === "/about") {
         setCurrentPage("about");
         setSelectedCaseId(null);
       } else {
@@ -32,10 +35,10 @@ export default function App() {
       }
     };
 
-    handleHashChange();
+    handleLocationChange();
 
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handleLocationChange);
+    return () => window.removeEventListener("popstate", handleLocationChange);
   }, []);
 
   // Следим за прокруткой для кнопки "наверх" 
@@ -66,20 +69,31 @@ export default function App() {
   }, [currentPage]);
 
   const navigateTo = (page: string, params?: { caseId: string }) => {
-    if (page === "home") {
-      window.location.hash = "#/";
-    } else if (page === "about") {
-      window.location.hash = "#/about";
+    let targetPath = "/Portfolio-Website/";
+    if (page === "about") {
+      targetPath = "/Portfolio-Website/about";
     } else if (page === "case-study" && params?.caseId) {
-      window.location.hash = `#/cases/${params.caseId}`;
+      targetPath = `/Portfolio-Website/cases/${params.caseId}`;
     }
+
+    window.history.pushState(null, "", targetPath);
+
+    if (page === "case-study" && params?.caseId) {
+      setSelectedCaseId(params.caseId);
+    } else {
+      setSelectedCaseId(null);
+    }
+    setCurrentPage(page);
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSelectedWorksNav = (e: React.MouseEvent) => {
     e.preventDefault();
     if (currentPage !== "home") {
-      window.location.hash = "#/";
+      window.history.pushState(null, "", "/Portfolio-Website/");
+      setCurrentPage("home");
+      setSelectedCaseId(null);
       // Небольшая задержка, чтобы страница перестроилась
       setTimeout(() => {
         const section = document.getElementById("selected-works");

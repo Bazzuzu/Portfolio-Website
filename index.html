@@ -3,6 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SPA routing redirect script for GitHub Pages -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&') 
+          }).reduce(function(r, q) {
+            var p = q.split('=');
+            r[p[0]] = p[1];
+            return r;
+          }, {});
+          if (decoded.p !== undefined) {
+            var basePath = l.pathname;
+            if (basePath.endsWith('/')) {
+              basePath = basePath.slice(0, -1);
+            }
+            var targetPath = decoded.p ? (decoded.p.charAt(0) === '/' ? decoded.p : '/' + decoded.p) : '';
+            window.history.replaceState(null, null,
+              basePath + targetPath +
+              (decoded.q ? ('?' + decoded.q) : '') +
+              l.hash
+            );
+          }
+        }
+      }(window.location));
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Oleksandr Konovalov — Lead Product Designer</title>
     <!-- Person Schema JSON-LD -->
