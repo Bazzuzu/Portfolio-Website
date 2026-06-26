@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift? — Lex Konovalov</title>
+    <meta name="description" content="Read how Lead Product Designer Lex Konovalov optimized a B2C mobile checkout funnel, achieving a +29% conversion lift through sticky CTAs and strategic trust integration.">
+    <!-- Redirect human users to the interactive React SPA version -->
+    <script>
+      const isCrawler = /bot|googlebot|crawler|spider|robot|crawling|perplexity|gptbot/i.test(navigator.userAgent);
+      if (!isCrawler) {
+        window.location.replace('/Portfolio-Website/cases/checkout-rate-optimization');
+      }
+    </script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
+        "description": "B2C Conversion Rate Optimization case study demonstrating sticky CTAs, thumb-zone ergonomics, and trust architecture for mobile web forms.",
+        "author": {
+          "@type": "Person",
+          "name": "Oleksandr Konovalov",
+          "jobTitle": "Lead Product Designer"
+        },
+        "inLanguage": "en",
+        "about": [
+          "Conversion Rate Optimization",
+          "A/B Testing",
+          "Mobile UX",
+          "Behavioral Psychology"
+        ]
+      }
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #121212;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #FBFBFA;
+      }
+      h1, h2, h3 {
+        color: #121212;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 8px;
+      }
+      ul, ol {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      blockquote {
+        margin: 20px 0;
+        padding: 10px 20px;
+        background-color: #F4F2EC;
+        border-left: 4px solid #D93636;
+        font-style: italic;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      .tags {
+        margin-bottom: 30px;
+      }
+      .tag {
+        display: inline-block;
+        background-color: #F4F2EC;
+        color: #121212;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        margin-right: 8px;
+        font-weight: 500;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 40px;
+        color: #3E70A2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <a href="/Portfolio-Website/" class="back-link">← Back to Portfolio</a>
+    
+    <div class="tags">
+        <span class="tag">B2C Checkout</span>
+        <span class="tag">Conversion Rate Optimization (CRO)</span>
+        <span class="tag">A/B Testing</span>
+        <span class="tag">Mobile-First</span>
+        <span class="tag">Lead Generation</span>
+    </div>
+
+    <h1>How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?</h1>
+
+    <h2>1. Executive Summary</h2>
+    <ul>
+        <li><strong>Role:</strong> Lead Product Designer (Research, UI/UX, A/B Testing).</li>
+        <li><strong>Scope:</strong> End-to-End Mobile Funnel Redesign (Audit ➔ A/B Testing).</li>
+        <li><strong>Users:</strong> High-Intent Mobile Travelers (70% of total traffic).</li>
+        <li><strong>The Problem:</strong> Despite high-intent traffic from Kayak/Google, the legacy "Request a Quote" page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate and severe rage-clicking.</li>
+        <li><strong>The Solution:</strong> A psychology-driven redesign focusing on "Thumb Zone" accessibility, cognitive load reduction, and strategic trust placement.</li>
+        <li><strong>Business Impact:</strong> +29.6% uplift in successful submissions, +70.4% increase in CTA clicks, and time-to-convert reduced from 2:05 to 1:36.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/checkout-rate-optimization/mobile-lead-generation-funnel-before-after.webp" alt="Comparison of legacy mobile travel checkout vs optimized high-conversion thumb-zone UI layout demonstrating form optimization steps">
+
+    <h2>2. The Challenge: High Intent, Low Conversion</h2>
+    <p>We operate on an Agency Model where users don't "Buy Now"; they "Request a Quote" for $3,000+ luxury transactions. The barrier to entry should be near zero.</p>
+    <p>My UX audit revealed a "Leaky Bucket." While users arrived with specific dates and high intent, the interface fought against them:</p>
+    <ul>
+        <li><strong>Hierarchy Collapse:</strong> The hottest interaction zones were non-clickable price tags, causing rage clicks. The actual "Get Best Price" CTA faded into the background.</li>
+        <li><strong>Trust Deficit:</strong> For a $3k+ transaction, crucial trust signals were buried in the footer.</li>
+        <li><strong>Cognitive Strain:</strong> Inline placeholders and small touch targets caused input errors.</li>
+    </ul>
+
+    <h2>3. Information Gain: The Failed Hypothesis</h2>
+    <blockquote>
+        <strong>The Failed Assumption:</strong> We initially tested adding more upfront context (detailed fare rules and urgency banners) to validate the high price tag before the user scrolled.<br>
+        <strong>The Reality:</strong> It created cognitive overload. Users ignored the text, and the extra scroll depth caused the primary CTA to drop out of view, lowering conversion.<br>
+        <strong>The Pivot:</strong> We shifted from a "Data Collection" mindset to a "Value Exchange" mindset. We stripped the noise and introduced an "Always-On" conversion path.
+    </blockquote>
+
+    <h2>4. The Strategy: Frictionless Value Exchange</h2>
+    <p>To capture impulsive mobile traffic, I redesigned the core experience around speed and anxiety reduction.</p>
+    
+    <h3>1. The "Always-On" Conversion Path (Sticky CTA)</h3>
+    <ul>
+        <li><strong>The Fix:</strong> Implemented a Persistent Sticky Footer containing the price and the "Lock This Fare" button.</li>
+        <li><strong>The Logic:</strong> Ensures the conversion path is always within the "Thumb Zone," regardless of scroll depth.</li>
+        <li><strong>Result:</strong> CTA clicks skyrocketed by +70.4%.</li>
+    </ul>
+
+    <h3>2. Strategic Trust Injection</h3>
+    <ul>
+        <li><strong>The Fix:</strong> Moved the Trustpilot rating (4.7/5) and "Verified by Agents" badge from the footer to directly below the CTA.</li>
+        <li><strong>The Logic:</strong> Providing social proof exactly at the Point of Action reduces high-ticket anxiety and bounce rates.</li>
+    </ul>
+
+    <img src="../assets/images/case-studies/checkout-rate-optimization/sticky-cta-trust-injection-mobile-ui.webp" alt="Mobile UI demonstrating sticky footer CTA and strategic trust pilot integration for CRO to minimize cart abandonment">
+
+    <h2>5. The Verdict: A/B Test Results & Validation</h2>
+    <p>We ran a controlled A/B experiment to filter out seasonal trends. The data proved that clarity is the ultimate persuasion tool.</p>
+    <ul>
+        <li><strong>Control Group:</strong> +5.0% (Natural variance) | Avg time to convert: 2:05</li>
+        <li><strong>Winning Variant:</strong> +29.6% Uplift in Requests | Avg time to convert: 1:36</li>
+        <li><strong>Stabilization:</strong> Reached an 11% stabilized Key Event Rate (nearly doubling historic performance).</li>
+    </ul>
+
+    <h2>6. The Takeaway & Future Roadmap</h2>
+    <p>By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel.</p>
+    <p>While this phase successfully maximized volume (Conversion Rate), the behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU) in upcoming validation cycles.</p>
+</body>
+</html>

@@ -5,6 +5,8 @@ import luxuryTravelTokens from "../assets/images/case-studies/luxury-travel-os/s
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
+import mobileLeadBeforeAfter from "../assets/images/case-studies/checkout-rate-optimization/mobile-lead-generation-funnel-before-after.webp";
+import mobileLeadStickyCta from "../assets/images/case-studies/checkout-rate-optimization/sticky-cta-trust-injection-mobile-ui.webp";
 import fintech1 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-investment-workspace-hero.webp";
 import fintech2 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-dashboard-analytics.webp";
 import fintech3 from "../assets/images/case-studies/fintech-investment-workspace/fintech-saas-portfolio-tracker.webp";
@@ -192,30 +194,54 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "checkout-rate-optimization",
-      title: "Optimizing Mobile Lead Gen",
+      title: "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
       tag: "Conversion UX",
-      tags: ["Conversion UX", "A/B Testing", "Form Optimization", "Quantitative Research", "Friction Reduction"],
-      headline: "Optimizing the payment gateway for frictionless e-commerce.",
-      description: "A series of UX interventions and structured checkout experiments that elevated global conversion rates by 14.2% while establishing strict data privacy compliances.",
-      role: "Conversion Specialist & Lead UX Researcher",
-      scope: "Checkout Redesign & Multi-variant A/B Funnels",
-      status: "Completed, fully integrated into production",
-      users: "B2C Shoppers across 4 continents",
-      images: [checkout1, checkout2, checkout3],
-      imageCaptions: [
-        "High-performance mobile checkout layout with instant, friendly alphanumeric validation.",
-        "Optimized progressive form structure designed to lower payment-stage drop-off rates.",
-        "Detailed session-map and eye-tracking findings used to refine secondary interactive micro-layouts."
-      ],
-      challenge: "Despite robust marketing acquisition, checkout drop-off rates remained stubborn at 68%. Rigid input forms, unclear card diagnostics, and lack of contextual regional payment options frustrated users mid-transaction.",
-      solution: "Engineered an intelligent, auto-detecting form system, streamlined multi-stage checkout into a single-container progressive disclosure UI. Optimized feedback cycles on declined cards, providing descriptive suggestions rather than dry error states.",
-      impact: "We registered a permanent +14.2% lift in finalized checkouts on web-channels and a 22.4% reduction in support tickets inquiring about transaction errors. Average checkout speed reduced from 2.4 minutes to a crisp 48 seconds.",
-      discoveryTitle: "The Discovery: Micro-Anxieties in Financial Transactions",
-      discoveryLeftTitle: "The Business Reality:",
-      discoveryLeft: "Even slight layout shifts or abstract loading icons trigger buyer hesitations. We needed to reassure trust and utility at each key action step.",
-      discoveryRightTitle: "The Investigation:",
-      discoveryRight: "Biometric and Eye-Tracking Diagnostics: Validated that form labels outside input boundaries provide significantly less cognitive friction than internal placeholders which disappear during typing.\n\nLocalized Fallbacks: Designed smart routing so if a secondary gateway failed, the transaction migrated in the background without exposing technical errors to the cart owner.",
-      discoveryImages: [checkout1, checkout2]
+      tags: ["B2C Checkout", "Conversion Rate Optimization (CRO)", "A/B Testing", "Mobile-First", "Lead Generation"],
+      headline: "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
+      description: "A psychology-driven redesign focusing on 'Thumb Zone' accessibility, cognitive load reduction, and strategic trust placement to optimize B2C mobile lead funnels.",
+      role: "Lead Product Designer (Research, UI/UX, A/B Testing)",
+      scope: "End-to-End Mobile Funnel Redesign (Audit ➔ A/B Testing)",
+      status: "Completed (A/B Test Validated)",
+      users: "High-Intent Mobile Travelers (70% of total traffic)",
+      images: [mobileLeadBeforeAfter],
+      imageCaptions: ["Comparison of legacy mobile travel checkout vs optimized high-conversion thumb-zone UI"],
+      challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. The barrier to entry should be near zero. Our UX audit revealed a 'Leaky Bucket.' While users arrived with specific dates and high intent from Kayak/Google, the interface fought against them: hierarchy collapse caused rage clicks on non-clickable price tags, crucial trust signals were buried in the footer, and inline placeholders with small touch targets caused input errors.",
+      solution: "A mobile-first redesign built around speed and anxiety reduction. Key interventions included: 1) a Persistent Sticky Footer containing the price and 'Lock This Fare' CTA always within the 'Thumb Zone'; 2) strategic trust placement, moving Trustpilot ratings (4.7/5) and 'Verified by Agents' badges from the footer directly below the point of action.",
+      impact: "A controlled A/B experiment demonstrated a +29.6% uplift in successful submissions, a +70.4% increase in CTA clicks, and reduced the average time-to-convert from 2:05 to a crisp 1:36. Key Event Rate stabilized at 11% (nearly doubling historic performance).",
+      discoverySections: [
+        {
+          discoveryTitle: "3. Information Gain: The Failed Hypothesis",
+          discoveryLeftTitle: "The Failed Assumption:",
+          discoveryLeft: "We initially tested adding more upfront context (detailed fare rules and urgency banners) to validate the high price tag before the user scrolled. We assumed this would build confidence.",
+          discoveryRightTitle: "The Reality & Pivot:",
+          discoveryRight: "It created cognitive overload. Users ignored the text, and the extra scroll depth caused the primary CTA to drop out of view, lowering conversion. We shifted from a 'Data Collection' mindset to a 'Value Exchange' mindset, stripping the noise.",
+          discoveryImages: [mobileLeadBeforeAfter]
+        },
+        {
+          discoveryTitle: "4. The Strategy: Frictionless Value Exchange",
+          discoveryLeftTitle: "1. Always-On Conversion Path:",
+          discoveryLeft: "Implemented a Persistent Sticky Footer containing the price and the 'Lock This Fare' button. This ensures the conversion path is always within the 'Thumb Zone,' regardless of scroll depth, which skyrocketed CTA clicks by +70.4%.",
+          discoveryRightTitle: "2. Strategic Trust Injection:",
+          discoveryRight: "Moved the Trustpilot rating (4.7/5) and 'Verified by Agents' badge from the footer to directly below the CTA. Providing social proof exactly at the Point of Action reduces high-ticket anxiety and bounce rates.",
+          discoveryImages: [mobileLeadStickyCta]
+        },
+        {
+          discoveryTitle: "5. The Verdict: A/B Test Results & Validation",
+          discoveryLeftTitle: "Experiment Parameters:",
+          discoveryLeft: "We ran a controlled A/B experiment to filter out seasonal trends. The data proved that clarity is the ultimate persuasion tool. Control Group registered +5.0% natural variance with a 2:05 average time-to-convert.",
+          discoveryRightTitle: "The Win & Stabilization:",
+          discoveryRight: "The Winning Variant registered a +29.6% uplift in requests and cut the average time-to-convert down to 1:36. Key Event Rate stabilized at 11%, nearly doubling historic performance.",
+          discoveryImages: []
+        },
+        {
+          discoveryTitle: "6. The Takeaway & Future Roadmap",
+          discoveryLeftTitle: "Impulsive Volume Optimization:",
+          discoveryLeft: "By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel. We successfully maximized volume (Conversion Rate).",
+          discoveryRightTitle: "Future Backlog Hypotheses:",
+          discoveryRight: "The behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU) in upcoming validation cycles.",
+          discoveryImages: []
+        }
+      ]
     },
     {
       id: "fintech-investment-workspace",
