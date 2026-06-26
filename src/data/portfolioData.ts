@@ -254,7 +254,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "While mobile optimization addresses swift interactions, desktop viewports require highly integrated bento panels and consistent structural alignment. We placed mobile next to desktop to preview synchronization instantly.",
           discoveryRightTitle: "Responsive Interface Audits:",
           discoveryRight: "We mapped out cross-device synchronization flows to guarantee that actions initiated on-the-go seamlessly propagated to accounting terminals in less than 300ms, minimizing discrepancies.",
-          discoveryImages: [checkout2, luxuryTravel2]
+          discoveryImages: [checkout2, luxuryTravelOouxMap]
         },
         {
           discoveryTitle: "Configuration 3: Two Columns of Text + 1 Full-Width + 2 Inline Images",
@@ -263,7 +263,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Our system takes complex, unstructured entries and breaks them down using smart, localized algorithms. This asymmetric three-image setup offers a macro view of the environment, plus close-ups of specific UX modules.",
           discoveryRightTitle: "User Testing Discoveries:",
           discoveryRight: "During research labs, users responded enthusiastically to interactive charts that dynamically updated as inputs changed. The symmetrical supporting grid helps isolate each key parameter.",
-          discoveryImages: [luxuryTravel1, checkout3, fintech1]
+          discoveryImages: [luxuryTravelBeforeAfter, checkout3, fintech1]
         },
         {
           discoveryTitle: "Configuration 4: Two Columns of Text + 4 Symmetrical Images",
@@ -278,8 +278,8 @@ export const portfolioData: PortfolioData = {
           discoveryTitle: "Configuration 5: Symmetrical Image Board with 8 Photos (No Text Columns)",
           discoverySubtitle: "When text-blocks are absent, the component transforms into an absolute visual catalog of UX deliverables, scaling dynamically up to eight records",
           discoveryImages: [
-            luxuryTravel1,
-            luxuryTravel2,
+            luxuryTravelBeforeAfter,
+            luxuryTravelOouxMap,
             checkout3,
             checkout2,
             checkout1,
