@@ -339,52 +339,52 @@ discoveryLeft: "By removing friction and respecting the mobile user's context, w
   mediumArticles: [
     {
       id: "art-1",
+      published: "Jun 18",
+      category: "Agentic UX",
+      title: "Designing for the Zero-Click Reality",
+      url: "https://medium.com/@lex.konovalov/designing-for-the-zero-click-reality-fa63463a1de4"
+    },
+    {
+      id: "art-2",
+      published: "Jun 4",
+      category: "Design Ops",
+      title: "Design Layer #12: The Token Tax and the Death of the Handoff",
+      url: "https://medium.com/@lex.konovalov/design-layer-12-the-token-tax-and-the-death-of-the-handoff-e081acb363c3"
+    },
+    {
+      id: "art-3",
       published: "Apr 17",
       category: "AI, GEO",
       title: "Your Product Page Was Built for Humans. The Next Buyer Is an Algorithm.",
       url: "https://medium.com/@lex.konovalov/your-product-page-was-built-for-humans-the-next-buyer-is-an-algorithm-da612d4aeeab"
     },
     {
-      id: "art-2",
+      id: "art-4",
       published: "Apr 13",
-      category: "Weekly digest",
+      category: "SEO, Accessibility",
       title: "Your Accessibility Tree Is Now Your SEO",
       url: "https://medium.com/@lex.konovalov/your-accessibility-tree-is-now-your-seo-322ff33ae81b"
     },
     {
-      id: "art-3",
-      published: "Apr 9",
-      category: "Design Systems",
-      title: "Design Systems in April 2026: The Infrastructure Is Here. Most Teams Still Aren’t.",
-      url: "https://medium.com/@lex.konovalov/design-systems-in-april-2026-the-infrastructure-is-here-most-teams-still-arent-7b2649aee0f1"
-    },
-    {
-      id: "art-4",
-      published: "Apr 9",
-      category: "Weekly digest",
-      title: "The Subscription Model Just Broke",
-      url: "https://medium.com/@lex.konovalov/the-subscription-model-just-broke-eb7c8651a2d4"
-    },
-    {
       id: "art-5",
-      published: "Mar 31",
-      category: "Weekly digest",
-      title: "Your Next User Might Be an Agent",
-      url: "https://medium.com/@lex.konovalov/your-next-user-might-be-an-agent-7607730e2f5b"
+      published: "Dec 30",
+      category: "Design Eng",
+      title: "Your next design Tool isn't Figma. It's the Terminal.",
+      url: "https://medium.com/@lex.konovalov/your-next-design-tool-isnt-figma-it-s-the-terminal-0a78b88f86d4"
     },
     {
       id: "art-6",
-      published: "Mar 31",
-      category: "Weekly digest",
-      title: "UI Is Cheap Now. What’s Expensive?",
-      url: "https://medium.com/@lex.konovalov/ui-is-cheap-now-whats-expensive-157dc2095f6e"
+      published: "Dec 13",
+      category: "OOUX, B2B",
+      title: "How I used OOUX and Domain Modeling to build a complex Travel ERP from scratch",
+      url: "https://medium.com/@lex.konovalov/how-i-used-ooux-and-domain-modeling-to-build-a-complex-travel-erp-from-scratch-f1e8dc5088ba"
     },
     {
       id: "art-7",
       published: "Mar 31",
       category: "Weekly digest",
-      title: "The Design Handoff Is Dead. Now What?",
-      url: "https://medium.com/@lex.konovalov/the-design-handoff-is-dead-now-what-cbf7eaee179f"
+      title: "Your Next User Might Be an Agent",
+      url: "https://medium.com/@lex.konovalov/your-next-user-might-be-an-agent-7607730e2f5b"
     }
   ]
 };
