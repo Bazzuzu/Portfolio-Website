@@ -9,7 +9,7 @@
   background-color: var(--color-section-sunken); /* Matching oatmeal warm grey */
   border-radius: var(--radius-lg); /* Generous roundness */
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
   height: 100%;
   width: 100%;
   justify-self: center;
@@ -30,10 +30,6 @@
   object-fit: cover;
   object-position: center;
   transition: transform var(--motion-duration-normal) var(--motion-easing-standard);
-}
-
-.project-card:hover .project-card__image {
-  transform: scale(1.03); /* Subtle zoom hover effect for immersive depth */
 }
 
 .project-card__content {
@@ -60,8 +56,4 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.project-card:hover .project-card__title {
-  color: var(--color-text-brand);
 }

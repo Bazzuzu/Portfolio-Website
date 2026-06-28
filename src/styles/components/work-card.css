@@ -94,11 +94,6 @@
   letter-spacing: var(--font-headline-sm-tracking);
   margin-bottom: var(--spacing-component-py-xs);
   transition: color var(--motion-duration-fast) var(--motion-easing-standard);
-  
-  /* Single line clamp with ellipsis */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .work-card:hover .work-card__title {

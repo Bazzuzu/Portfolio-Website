@@ -221,31 +221,20 @@ export default function Home({ onNavigate }: HomeProps) {
               id="section-works-subtitle"
               className="section-header__subtitle"
             >
-              Solving complex operational and commercial challenges with data-driven design.
+              Untangling legacy systems. Scaling UI architecture. Driving B2C revenue.
             </motion.p>
           </div>
 
           <div id="works-grid" className="works-grid">
-            {portfolioData.caseStudies.map((work: CaseStudy, index: number) => {
-              const caseUrl = work.id === "luxury-travel-os" 
-                ? "/cases/how-ooux-reduced-error-rates-in-traveltech.html"
-                : work.id === "checkout-rate-optimization"
-                ? "/cases/how-to-achieve-27-percent-conversion-lift-in-b2c.html"
-                : "/cases/how-an-ai-ready-modular-system-fixed-luxury-travel.html";
-
-              const linkText = work.id === "luxury-travel-os"
-                ? "Read how OOUX mapping reduced agent error rates"
-                : work.id === "checkout-rate-optimization"
-                ? "Read how we achieved a +27% mobile conversion lift"
-                : "Read how an AI-ready modular system fixed a luxury travel identity crisis";
-
+            {portfolioData.caseStudies.map((work: CaseStudy) => {
               return (
                 <motion.a
                   key={work.id}
                   id={`work-card-${work.id}`}
                   variants={itemVariants}
                   className="work-card"
-                  href={caseUrl}
+                  href={work.href}
+                  aria-label={work.ariaLabel}
                   onClick={(e) => {
                     e.preventDefault();
                     if (onNavigate) onNavigate("case-study", { caseId: work.id });
@@ -255,11 +244,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <div className="work-card__image-container">
                     <div className="work-card__tags-container">
                       {(() => {
-                        const rawText = work.id === "luxury-travel-os" ? "ERP / B2B" : 
-                                        work.id === "checkout-rate-optimization" ? "Conversion / UX" : 
-                                        work.id === "ai-modular-system" ? "Strategy / AI" : 
-                                        work.tag;
-                        const tags = rawText.split("/").map(t => t.trim()).filter(Boolean);
+                        const tags = work.tag.split("/").map(t => t.trim()).filter(Boolean);
                         return tags.map((t, idx) => (
                           <React.Fragment key={t}>
                             {idx > 0 && <span className="work-card__tag-separator">/</span>}
@@ -271,7 +256,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     
                     <img
                       src={work.images[0]}
-                      alt={`${work.title} - ${work.headline}`}
+                      alt={work.imgAlt}
                       className="work-card__image"
                       referrerPolicy="no-referrer"
                     />
@@ -283,9 +268,6 @@ export default function Home({ onNavigate }: HomeProps) {
                     <p className="work-card__description">
                       {work.description}
                     </p>
-                    <span className="work-card__link">
-                      {linkText}
-                    </span>
                   </div>
                 </motion.a>
               );
@@ -294,7 +276,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      {/* Other Projects Section */}
+      {/* Concepts & Architecture Section */}
       <section id="other-projects" className="other-projects-section">
         <div className="home-section-container">
           <div className="section-header">
@@ -303,14 +285,14 @@ export default function Home({ onNavigate }: HomeProps) {
               id="section-other-title"
               className="section-header__title"
             >
-              Other Projects
+              Concepts & Architecture
             </motion.h2>
             <motion.p
               variants={itemVariants}
               id="section-other-subtitle"
               className="section-header__subtitle"
             >
-              Solving complex operational and commercial challenges with data-driven design.
+              Not every project needs a 10-page case study. Here is a collection of rapid AI prototypes, semantic token structures, and smaller systemic wins.
             </motion.p>
           </div>
 
@@ -323,6 +305,9 @@ export default function Home({ onNavigate }: HomeProps) {
                 className="project-card"
               >
                 <div className="project-card__image-container">
+                  <div className="work-card__tags-container">
+                    <span className="work-card__tag">In Progress</span>
+                  </div>
                   <img
                     src={project.image}
                     alt={project.alt}

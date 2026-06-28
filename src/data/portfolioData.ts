@@ -52,6 +52,9 @@ export interface CaseStudy {
   discoveryRight?: string;
   discoveryImages?: string[];
   discoverySections?: DiscoverySection[];
+  href: string;
+  ariaLabel: string;
+  imgAlt: string;
 }
 
 export interface OtherProject {
@@ -101,7 +104,7 @@ export const portfolioData: PortfolioData = {
   designerTitle: "Lead Product Designer",
   heroHeadline: "Mapping complex logic. Optimizing conversion.",
   heroSubheadline: "I use Object-Oriented UX to map dense B2B platforms and data to optimize B2C checkouts. 5+ years as a Core Product Designer in TravelTech. Currently scaling architectures with AI-integrated design systems and semantic tokens.",
-  email: "oleksandr.konovalov@gmail.com",
+  email: "lex.konovalov@gmail.com",
   phone: "+34 624 532 991",
   location: "Alicante, Spain",
   aboutBadge: "ABOUT ME",
@@ -110,7 +113,7 @@ export const portfolioData: PortfolioData = {
   cvUrl: "#",
   companies: ["Mews Systems", "Booking.com", "Adyen", "Stripe SaaS"],
   socialLinks: [
-    { name: "LinkedIn", url: "https://linkedin.com" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/lex-konovalov/" },
     { name: "Twitter", url: "https://twitter.com" },
     { name: "Read.cv", url: "https://read.cv" },
     { name: "Dribbble", url: "https://dribbble.com" }
@@ -137,12 +140,15 @@ export const portfolioData: PortfolioData = {
   ],
   caseStudies: [
     {
-      id: "luxury-travel-os",
-      title: "How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?",
-      tag: "B2B/Enterprise ERP",
+      id: "how-ooux-reduced-error-rates-in-traveltech",
+      title: "Building the OS for Travel",
+      tag: "ERP / B2B",
       tags: ["B2B Enterprise", "Information Architecture", "OOUX", "Design Systems", "High-Density UI"],
       headline: "From «Excel Hell» and Legacy GDS Terminals to a Unified Luxury Operating Engine.",
-      description: "Replaced highly fragmented command-line blue screens, multi-tab Excel sheets, and chaotic email threads with a custom-engineered enterprise application, empowering agents to process $30,000 bookings with zero pricing errors.",
+      description: "Designed a scalable ERP unifying 5 departments. The tokenized OOUX architecture enabled 100% engineering autonomy post-launch.",
+      href: "/cases/how-ooux-reduced-error-rates-in-traveltech",
+      ariaLabel: "Read how OOUX mapping reduced agent error rates for 400+ agents in TravelTech",
+      imgAlt: "TravelTech ERP dashboard interface designed to reduce cognitive load for 400+ agents",
       role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
       scope: "B2B TravelTech / Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
@@ -196,12 +202,15 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      id: "checkout-rate-optimization",
-      title: "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
-      tag: "Conversion UX",
+      id: "how-to-achieve-30-percent-conversion-lift-in-b2c",
+      title: "Optimizing Mobile Lead Gen",
+      tag: "Conversion / UX",
       tags: ["B2C Checkout", "Conversion Rate Optimization (CRO)", "A/B Testing", "Mobile-First", "Lead Generation"],
       headline: "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
-      description: "A psychology-driven redesign focusing on 'Thumb Zone' accessibility, cognitive load reduction, and strategic trust placement to optimize B2C mobile lead funnels.",
+      description: "Redesigned a critical entry point to capture impulsive mobile traffic. Lowering cognitive load resulted in a 30% increase in request submissions.",
+      href: "/cases/how-to-achieve-30-percent-conversion-lift-in-b2c",
+      ariaLabel: "Read how a psychology-driven redesign achieved a 30% mobile conversion lift in B2C lead generation",
+      imgAlt: "Mobile UI demonstrating sticky footer CTA and strategic trust pilot integration for CRO",
       role: "Lead Product Designer (Research, UI/UX, A/B Testing)",
       scope: "End-to-End Mobile Funnel Redesign (Audit ➔ A/B Testing)",
       status: "Completed (A/B Test Validated)",
@@ -247,12 +256,15 @@ discoveryLeft: "By removing friction and respecting the mobile user's context, w
       ]
     },
     {
-      id: "ai-modular-system",
-      title: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
-      tag: "Product Strategy",
+      id: "how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis",
+      title: "Homepage & Funnel Structure",
+      tag: "Strategy / AI",
       tags: ["Product Strategy", "AI Integration", "Design Governance", "Stakeholder Management", "Core Web Vitals"],
       headline: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
-      description: "A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS.",
+      description: "A strategic overhaul to build trust and guide users effectively. Aligning the visual hierarchy with business goals led to a 27% lift in click-throughs to booking.",
+      href: "/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis",
+      ariaLabel: "Read how an AI-ready modular system fixed a luxury travel identity crisis and increased CTR by 27%",
+      imgAlt: "Desktop redesign transforming a generic travel aggregator into a premium concierge platform",
       role: "Lead Product Designer (Strategy, UI/UX, Logic Architecture)",
       scope: "UX Strategy & AI-Ready Modular Design System",
       status: "Shipped & Scaled (CMS-integrated)",

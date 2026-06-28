@@ -252,7 +252,7 @@ export default function App() {
             </a>
             <span className="footer__separator">/</span>
             <a
-              href={portfolioData.socialLinks.find((s) => s.name === "LinkedIn")?.url || "https://linkedin.com"}
+              href={portfolioData.socialLinks.find((s) => s.name === "LinkedIn")?.url || "https://www.linkedin.com/in/lex-konovalov/"}
               target="_blank"
               rel="noopener noreferrer"
               className="footer__link-simple"
