@@ -2,6 +2,7 @@ import luxuryTravelBeforeAfter from "../assets/images/case-studies/luxury-travel
 import luxuryTravelOouxMap from "../assets/images/case-studies/luxury-travel-os/ooux-object-map-b2b-traveltech.webp";
 import luxuryTravelHighDensity from "../assets/images/case-studies/luxury-travel-os/high-density-ui-keyboard-first-navigation.webp";
 import luxuryTravelTokens from "../assets/images/case-studies/luxury-travel-os/semantic-tokenized-ui-kit-components.webp";
+import luxuryTravelAgentWorkspace from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
@@ -167,7 +168,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Initially, we thought we could just \"digitize\" and clean up the existing process. However, there was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.",
           discoveryRightTitle: "The Pivot:",
           discoveryRight: "I stopped drawing screens. I used Asynchronous Video Analysis (analyzing 30+ recorded sessions) to separate essential \"muscle memory\" shortcuts from actual usability blockers. We had to fix the underlying logic first.",
-          discoveryImages: [luxuryTravelBeforeAfter]
+          discoveryImages: [luxuryTravelBeforeAfter, luxuryTravelAgentWorkspace]
         },
         {
           discoveryTitle: "4. The Architecture: Structuring Chaos via OOUX",
