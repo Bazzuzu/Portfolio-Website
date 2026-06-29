@@ -3,8 +3,8 @@ import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel
 import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-unified-traveltech-erp-dark-mode-ui.jpg";
 import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-entity-relationship-database-schema.jpg";
 import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-permissions-matrix-erp-ui.jpg";
-import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/06-unified-timeline-automated-routing-ui.jpg";
-import traveltechStatusBar from "../assets/images/case-studies/luxury-travel-os/07-erp-status-transparency-bar.jpg";
+import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/06-cross-department-state-machine-workflow-erp.jpg";
+import traveltechStatusBar from "../assets/images/case-studies/luxury-travel-os/07-unified-department-status-transparency-ui.jpg";
 import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel-os/08-high-density-ui-travel-agent-dashboard.jpg";
 import traveltechTabularData from "../assets/images/case-studies/luxury-travel-os/09-compact-rows-monospaced-fonts-tabular-data.jpg";
 import traveltechKeyboardNav from "../assets/images/case-studies/luxury-travel-os/10-keyboard-first-navigation-hotkeys-ui.jpg";
@@ -206,7 +206,15 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "I replaced fragmented email threads with a Unified Timeline. As a deal moves through the pipeline, it is automatically assigned to the relevant department (e.g., Verify ➔ Ticketing).",
           discoveryRightTitle: "Automated Routing & Status:",
           discoveryRight: "Automated Routing: Tasks are pushed to agents based on load and expertise, removing the \"manager bottleneck.\"\n\nStatus Transparency: A unified status bar allows any stakeholder to see exactly where a deal is stuck (e.g., \"Pending Payment\" in Bookkeeping), eliminating status-check meetings.",
-          discoveryImages: [traveltechUnifiedTimeline, traveltechStatusBar]
+          discoveryImages: [traveltechUnifiedTimeline, traveltechStatusBar],
+          discoveryImageAlts: [
+            "State machine diagram mapping the automated cross-department workflow from Sales to Ticketing to eliminate manager bottlenecks.",
+            "Unified status transparency UI allowing stakeholders to track deal progress across all departments, eliminating status-check meetings."
+          ],
+          discoveryImageCaptions: [
+            "Mapping logic and dependencies across 5 departments",
+            "Translating abstract logic into a high-density UI"
+          ]
         },
         {
           discoveryTitle: "The Interface: Designing for Power Users & Muscle Memory",
