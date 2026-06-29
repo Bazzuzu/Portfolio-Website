@@ -301,7 +301,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                         >
                           <img
                             src={imgUrl}
-                            alt={`${caseStudy.title} - Discovery session main interface layout`}
+                            alt={section.discoveryImageAlts?.[0] || `${caseStudy.title} - Discovery session main interface layout`}
                             className="discovery-image-card__img"
                             referrerPolicy="no-referrer"
                           />
@@ -328,7 +328,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                           >
                             <img
                               src={imgUrl}
-                              alt={`${caseStudy.title} - Discovery session interface analysis segment ${i + pairIdx}`}
+                              alt={section.discoveryImageAlts?.[i + pairIdx] || `${caseStudy.title} - Discovery session interface analysis segment ${i + pairIdx}`}
                               className="discovery-image-card__img"
                               referrerPolicy="no-referrer"
                             />

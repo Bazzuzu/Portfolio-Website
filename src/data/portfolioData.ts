@@ -1,6 +1,6 @@
 import traveltechHero from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard.jpg";
-import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-asynchronous-video-analysis-ux-audit.jpg";
-import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-edge-case-mapping-cross-functional-handoffs.jpg";
+import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-legacy-b2b-travel-software-ecosystem.jpg";
+import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-unified-traveltech-erp-dark-mode-ui.jpg";
 import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-object-relationship-map-leads-offers-deals.jpg";
 import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-matrix-role-based-access-control-ui.jpg";
 import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/06-unified-timeline-automated-routing-ui.jpg";
@@ -35,6 +35,7 @@ export interface DiscoverySection {
   discoveryLeft?: string;
   discoveryRight?: string;
   discoveryImages?: string[];
+  discoveryImageAlts?: string[];
 }
 
 export interface CaseStudy {
@@ -176,7 +177,11 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Building an ERP requires understanding the business better than the users themselves. I couldn't just \"digitize\" the old process; I had to fix it.",
           discoveryRightTitle: "The Investigation:",
           discoveryRight: "• Asynchronous Video Analysis: I analyzed 30+ recorded sessions across the skill spectrum (from novices to power users). This helped distinguish essential \"muscle memory\" shortcuts that experts rely on from the usability blockers confusing new hires.\n\n• Edge-Case Mapping: I facilitated workshops to stress-test the system against complex scenarios (e.g., partial refunds, ancillary re-configuration). We mapped the cross-functional handoffs to ensure the architecture wouldn't break under real-world pressure.",
-          discoveryImages: [traveltechVideoAnalysis, traveltechEdgeCaseMapping]
+          discoveryImages: [traveltechVideoAnalysis, traveltechEdgeCaseMapping],
+          discoveryImageAlts: [
+            "Legacy B2B travel software ecosystem showing disjointed workflows across Excel and GDS terminals.",
+            "New unified TravelTech ERP interface in dark mode, designed to replace fragmented legacy tools and streamline agent workflows."
+          ]
         },
         {
           discoveryTitle: "The Architecture: Structuring the Chaos via OOUX",
