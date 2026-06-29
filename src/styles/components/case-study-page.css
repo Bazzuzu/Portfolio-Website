@@ -282,6 +282,20 @@
   .text-block__body + .text-block__body {
     margin-top: var(--spacing-component-py-lg);
   }
+}.discovery-image-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-
+.discovery-image-caption {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: var(--font-label-md-weight);
+  line-height: var(--font-label-md-line-height);
+  letter-spacing: var(--font-label-md-tracking);
+  color: var(--color-text-secondary);
+  text-align: left;
+}

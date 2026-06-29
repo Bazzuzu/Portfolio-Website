@@ -36,6 +36,7 @@ export interface DiscoverySection {
   discoveryRight?: string;
   discoveryImages?: string[];
   discoveryImageAlts?: string[];
+  discoveryImageCaptions?: string[];
 }
 
 export interface CaseStudy {
@@ -181,6 +182,10 @@ export const portfolioData: PortfolioData = {
           discoveryImageAlts: [
             "Legacy B2B travel software ecosystem showing disjointed workflows across Excel and GDS terminals.",
             "New unified TravelTech ERP interface in dark mode, designed to replace fragmented legacy tools and streamline agent workflows."
+          ],
+          discoveryImageCaptions: [
+            "The legacy process forced agents to bridge gaps between disjointed tools manually, increasing the risk of costly errors.",
+            "The new High-Density UI acts as a unified \"Cockpit.\" By grouping related objects (Passengers, Segments) and using clear visual hierarchy, we reduced cognitive load and accelerated data entry."
           ]
         },
         {

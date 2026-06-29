@@ -292,22 +292,26 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                   // Если общее число нечетное, первая строка содержит 1 изображение во всю ширину
                   if (images.length % 2 !== 0) {
                     const imgUrl = images[0];
+                    const caption = section.discoveryImageCaptions?.[0];
                     rows.push(
                       <div key="row-0" className="case-study__discovery-row case-study__discovery-row--single">
-                        <div
-                          className="discovery-image-card"
-                          onClick={() => setLightboxImage(imgUrl)}
-                          title="Click to zoom image"
-                        >
-                          <img
-                            src={imgUrl}
-                            alt={section.discoveryImageAlts?.[0] || `${caseStudy.title} - Discovery session main interface layout`}
-                            className="discovery-image-card__img"
-                            referrerPolicy="no-referrer"
-                          />
-                          <div className="discovery-image-card__zoom-indicator">
-                            <CustomIcon src={maximizeSvg} size={14} />
+                        <div className="discovery-image-container">
+                          <div
+                            className="discovery-image-card"
+                            onClick={() => setLightboxImage(imgUrl)}
+                            title="Click to zoom image"
+                          >
+                            <img
+                              src={imgUrl}
+                              alt={section.discoveryImageAlts?.[0] || `${caseStudy.title} - Discovery session main interface layout`}
+                              className="discovery-image-card__img"
+                              referrerPolicy="no-referrer"
+                            />
+                            <div className="discovery-image-card__zoom-indicator">
+                              <CustomIcon src={maximizeSvg} size={14} />
+                            </div>
                           </div>
+                          {caption && <span className="discovery-image-caption">{caption}</span>}
                         </div>
                       </div>
                     );
@@ -319,24 +323,30 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                     const pair = images.slice(i, i + 2);
                     rows.push(
                       <div key={`row-${i}`} className="case-study__discovery-row case-study__discovery-row--double">
-                        {pair.map((imgUrl, pairIdx) => (
-                          <div
-                            key={pairIdx}
-                            className="discovery-image-card"
-                            onClick={() => setLightboxImage(imgUrl)}
-                            title="Click to zoom image"
-                          >
-                            <img
-                              src={imgUrl}
-                              alt={section.discoveryImageAlts?.[i + pairIdx] || `${caseStudy.title} - Discovery session interface analysis segment ${i + pairIdx}`}
-                              className="discovery-image-card__img"
-                              referrerPolicy="no-referrer"
-                            />
-                            <div className="discovery-image-card__zoom-indicator">
-                              <CustomIcon src={maximizeSvg} size={14} />
+                        {pair.map((imgUrl, pairIdx) => {
+                          const globalIdx = i + pairIdx;
+                          const caption = section.discoveryImageCaptions?.[globalIdx];
+                          return (
+                            <div key={pairIdx} className="discovery-image-container">
+                              <div
+                                className="discovery-image-card"
+                                onClick={() => setLightboxImage(imgUrl)}
+                                title="Click to zoom image"
+                              >
+                                <img
+                                  src={imgUrl}
+                                  alt={section.discoveryImageAlts?.[globalIdx] || `${caseStudy.title} - Discovery session interface analysis segment ${globalIdx}`}
+                                  className="discovery-image-card__img"
+                                  referrerPolicy="no-referrer"
+                                />
+                                <div className="discovery-image-card__zoom-indicator">
+                                  <CustomIcon src={maximizeSvg} size={14} />
+                                </div>
+                              </div>
+                              {caption && <span className="discovery-image-caption">{caption}</span>}
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     );
                   }
