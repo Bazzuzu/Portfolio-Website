@@ -261,53 +261,94 @@ export const portfolioData: PortfolioData = {
     {
       id: "how-to-achieve-30-percent-conversion-lift-in-b2c",
       title: "Optimizing Mobile Lead Gen",
+      pageTitle: "How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?",
       tag: "Conversion / UX",
-      tags: ["B2C Checkout", "Conversion Rate Optimization (CRO)", "A/B Testing", "Mobile-First", "Lead Generation"],
-      headline: "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
+      tags: ["Mobile Growth", "CRO", "Lead Generation", "A/B Testing", "Accessibility (a11y)"],
+      headline: "How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?",
       description: "Redesigned a critical entry point to capture impulsive mobile traffic. Lowering cognitive load resulted in a 30% increase in request submissions.",
       href: "/cases/how-to-achieve-30-percent-conversion-lift-in-b2c",
       ariaLabel: "Read how a psychology-driven redesign achieved a 30% mobile conversion lift in B2C lead generation",
-      imgAlt: "Mobile UI demonstrating sticky footer CTA and strategic trust pilot integration for CRO",
+      imgAlt: "Mobile UI for luxury business class ticket request form optimized for high-ticket lead generation.",
       role: "Lead Product Designer (Research, UI/UX, A/B Testing)",
-      scope: "End-to-End Mobile Funnel Redesign (Audit ➔ A/B Testing)",
-      status: "Completed (A/B Test Validated)",
-      users: "High-Intent Mobile Travelers (70% of total traffic)",
-      images: [mobileLeadBeforeAfter],
-      imageCaptions: ["Comparison of legacy mobile travel checkout vs optimized high-conversion thumb-zone UI"],
-      challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. The barrier to entry should be near zero. Our UX audit revealed a 'Leaky Bucket.' While users arrived with specific dates and high intent from Kayak/Google, the interface fought against them: hierarchy collapse caused rage clicks on non-clickable price tags, crucial trust signals were buried in the footer, and inline placeholders with small touch targets caused input errors.",
+      scope: "End-to-End Redesign (Audit ➔ A/B Testing)",
+      status: "Shipped & Validated (Winner Variant)",
+      users: "High-Intent Mobile Travelers (70% of traffic)",
+      images: [croHero],
+      imageCaptions: ["Hero: The optimized mobile lead generation form for high-intent business class travelers."],
+      challenge: "We operate on an Agency Model. Users don't \"Buy Now\"; they \"Request a Quote\" for luxury travel. For a $3,000+ transaction, the barrier to entry should be near zero. While 70% of our traffic came from mobile (Kayak/Google) carrying high intent, the legacy page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate.",
       solution: "A mobile-first redesign built around speed and anxiety reduction. Key interventions included: 1) a Persistent Sticky Footer containing the price and 'Lock This Fare' CTA always within the 'Thumb Zone'; 2) strategic trust placement, moving Trustpilot ratings (4.7/5) and 'Verified by Agents' badges from the footer directly below the point of action.",
       impact: "A controlled A/B experiment demonstrated a +29.6% uplift in successful submissions, a +70.4% increase in CTA clicks, and reduced the average time-to-convert from 2:05 to a crisp 1:36. Key Event Rate stabilized at 11% (nearly doubling historic performance).",
       discoverySections: [
         {
-          discoveryTitle: "3. Information Gain: The Failed Hypothesis",
+          discoveryTitle: "1. The Friction: High Intent, Low Conversion",
+          discoveryLeftTitle: "The Business Context:",
+          discoveryLeft: "We operate on an Agency Model. Users don't \"Buy Now\"; they \"Request a Quote\" for luxury travel. For a $3,000+ transaction, the barrier to entry should be near zero. While 70% of our traffic came from mobile (Kayak/Google) carrying high intent, the legacy page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate.",
+          discoveryRightTitle: "The \"Leaky Bucket\" Audit:",
+          discoveryRight: "My UX audit revealed that the interface actively fought against the user:\n\n• Hierarchy Collapse & Rage Clicks: The hottest interaction zones were non-clickable price tags. The actual primary button faded into the background, performing worse than secondary navigation.\n\n• Trust Deficit: Crucial trust signals were buried in the footer, invisible at the point of decision.\n\n• Cognitive Strain: Disappearing inline placeholders and tiny touch targets caused constant input errors.",
+          discoveryImages: [croUxAudit, croHotjar],
+          discoveryImageAlts: [
+            "Detailed UX audit presentation identifying friction points and cognitive overload in the legacy mobile lead generation funnel.",
+            "HotJar heatmap analysis showing rage clicks and user drop-offs on non-interactive elements in the legacy mobile interface."
+          ],
+          discoveryImageCaptions: [
+            "Discovery: Comprehensive UX audit mapping out cognitive friction and conversion blockers.",
+            "Data: HotJar heatmap revealing rage clicks and drop-off zones in the legacy UI."
+          ]
+        },
+        {
+          discoveryTitle: "2. Information Gain: The Failed Hypothesis",
           discoveryLeftTitle: "The Failed Assumption:",
-          discoveryLeft: "We initially tested adding more upfront context (detailed fare rules and urgency banners) to validate the high price tag before the user scrolled. We assumed this would build confidence.",
+          discoveryLeft: "We initially hypothesized that adding more upfront context (detailed fare rules and urgency banners) would validate the high price tag before the user scrolled. We assumed this would build confidence.",
           discoveryRightTitle: "The Reality & Pivot:",
-          discoveryRight: "It created cognitive overload. Users ignored the text, and the extra scroll depth caused the primary CTA to drop out of view, lowering conversion. We shifted from a 'Data Collection' mindset to a 'Value Exchange' mindset, stripping the noise.",
-          discoveryImages: [mobileLeadBeforeAfter]
-        },
-        {
-          discoveryTitle: "4. The Strategy: Frictionless Value Exchange",
-          discoveryLeftTitle: "1. Always-On Conversion Path:",
-          discoveryLeft: "Implemented a Persistent Sticky Footer containing the price and the 'Lock This Fare' button. This ensures the conversion path is always within the 'Thumb Zone,' regardless of scroll depth, which skyrocketed CTA clicks by +70.4%.",
-          discoveryRightTitle: "2. Strategic Trust Injection:",
-          discoveryRight: "Moved the Trustpilot rating (4.7/5) and 'Verified by Agents' badge from the footer to directly below the CTA. Providing social proof exactly at the Point of Action reduces high-ticket anxiety and bounce rates.",
-          discoveryImages: [mobileLeadStickyCta]
-        },
-        {
-          discoveryTitle: "5. The Verdict: A/B Test Results & Validation",
-          discoveryLeftTitle: "Experiment Parameters:",
-          discoveryLeft: "We ran a controlled A/B experiment to filter out seasonal trends. The data proved that clarity is the ultimate persuasion tool. Control Group registered +5.0% natural variance with a 2:05 average time-to-convert.",
-          discoveryRightTitle: "The Win & Stabilization:",
-          discoveryRight: "The Winning Variant registered a +29.6% uplift in requests and cut the average time-to-convert down to 1:36. Key Event Rate stabilized at 11%, nearly doubling historic performance.",
+          discoveryRight: "It created severe cognitive overload. Users ignored the text, and the extra scroll depth pushed the primary CTA out of view, lowering conversion. We pivoted from a \"Data Collection\" mindset to a \"Value Exchange\" mindset—stripping the noise to introduce an \"Always-On\" conversion path.",
           discoveryImages: []
         },
         {
-          discoveryTitle: "6. The Takeaway & Future Roadmap",
-          discoveryLeftTitle: "Impulsive Volume Optimization:",
-discoveryLeft: "By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel. We successfully maximized volume (Conversion Rate).",
-          discoveryRightTitle: "Future Backlog Hypotheses:",
-          discoveryRight: "The behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU) in upcoming validation cycles.",
+          discoveryTitle: "3. The Solution: Psychology-Driven Architecture",
+          discoveryLeftTitle: "Feature A: The \"Always-On\" Conversion Path:",
+          discoveryLeft: "Mobile users scroll to explore, often losing the CTA. I shifted the UI from generic browsing to personalized ownership:\n\n• Sticky Mechanic: Implemented a persistent footer ensuring the conversion path is always within the \"Thumb Zone,\" regardless of scroll depth.\n\n• High-Contrast UI: Swapped the low-contrast brand button for Solid Black, separating the primary action from decorative elements.\n\n• Ownership-Driven Copy: Changed the generic \"Get Best Price\" to \"Get My Quote\". This psychological shift created a stronger sense of ownership.",
+          discoveryRightTitle: "Feature C: Systemic Consistency & Accessibility (a11y):",
+          discoveryRight: "I audited the interface against WCAG guidelines to eliminate \"rage taps\" and input errors:\n\n• Usability Hygiene: Expanded interactive touch targets to 48dp+ and replaced disappearing placeholders with static, top-aligned labels. Users never lose context while typing.\n\n• Visual Unification: Standardized input styles, spacing, and typography to match the core design system, making the page look professional and secure.",
+          discoveryImages: [croAboveFold, croActiveStates, croResponsive, croChatConsent],
+          discoveryImageAlts: [
+            "Before and after comparison of the mobile above-the-fold UI, demonstrating cognitive load reduction for higher conversion.",
+            "Mobile form active states showing optimized native keyboard integration, promo code entry, and intuitive route editing.",
+            "Responsive mobile UI scaling flawlessly from minimum device viewports to large mobile screens to ensure zero friction.",
+            "Mobile UI showing unobtrusive agent chat integration and GDPR-compliant cookie consent window."
+          ],
+          discoveryImageCaptions: [
+            "Above the Fold: Stripping away visual noise to focus strictly on the primary conversion action.",
+            "Micro-Interactions: Optimized active states, native keyboard triggers, and frictionless route editing.",
+            "Scalability: Ensuring frictionless UI rendering across all mobile viewports, from iPhone SE to Pro Max.",
+            "Support & Compliance: Contextual agent chat and unobtrusive GDPR cookie consent."
+          ]
+        },
+        {
+          discoveryTitle: "4. Strategic Trust Injection",
+          discoveryLeftTitle: "The Challenge of Skepticism:",
+          discoveryLeft: "Mobile users are skeptical of high-ticket offers from unknown brands. I shifted trust from a localized distraction to full-page credibility:\n\n• Anchoring Trust Above the Fold: Placed the Trustpilot badge (10,044 reviews) prominently on the first screen to validate legitimacy the second a user lands.\n\n• Deprecating Distracting Media: Removed the legacy \"actor-based\" video. Data proved it was viewed as inauthentic and distracted users from the form.",
+          discoveryRightTitle: "The Solution: Proof Combo & Anxiety Reduction:",
+          discoveryRight: "• The \"Proof Combo\": Designed a scannable block combining Real Customer Reviews with Industry Certifications exactly at the Point of Action.\n\n• Anxiety Reduction: Clear 'How We Work' and FAQ sections to address high-ticket buyer hesitations.",
+          discoveryImages: [croTrustpilot, croTrustBeforeAfter, croCleanReviews, croFaq],
+          discoveryImageAlts: [
+            "Strategic placement of Trustpilot ratings above the fold to establish immediate credibility for luxury travel leads.",
+            "Redesign of the trust section, moving from a cluttered legacy layout to a streamlined, high-conversion trust signal UI.",
+            "Comparison of legacy noisy customer reviews section versus the new concise, high-conversion layout.",
+            "Mobile screens detailing the How we work process and FAQ to reduce user anxiety for high-ticket luxury purchases."
+          ],
+          discoveryImageCaptions: [
+            "Point of Action: Injecting Trustpilot social proof directly Above the Fold to reduce bounce rates.",
+            "Trust Architecture: Redesigning the trust section to provide immediate social proof without distraction.",
+            "Social Proof: Replacing visual clutter with a clean, scannable reviews interface.",
+            "Anxiety Reduction: Clear 'How We Work' and FAQ sections to address high-ticket buyer hesitations."
+          ]
+        },
+        {
+          discoveryTitle: "5. The Verdict (Results & Validation)",
+          discoveryLeftTitle: "Business Impact:",
+          discoveryLeft: "We ran a controlled experiment to filter out seasonal trends. The results fundamentally shifted our mobile revenue channel:\n\n• +29.6% Uplift in Successful Request Submissions (Primary Metric).\n\n• +70.4% Increase in CTA Clicks via the new Sticky Button.\n\n• 11% Stabilized Key Event Rate (nearly doubling historic performance).",
+          discoveryRightTitle: "My Takeaway & Future Roadmap:",
+          discoveryRight: "On mobile, clarity is the ultimate persuasion tool. By removing friction and respecting the user's context, we didn't just fix a page – we unlocked a revenue channel.\n\nWhile this phase successfully maximized volume (Conversion Rate), the behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU), which are currently in the validation pipeline.",
           discoveryImages: []
         }
       ]
