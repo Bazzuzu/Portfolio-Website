@@ -1,8 +1,9 @@
-import luxuryTravelBeforeAfter from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-before-after.webp";
 import luxuryTravelOouxMap from "../assets/images/case-studies/luxury-travel-os/ooux-object-map-b2b-traveltech.webp";
 import luxuryTravelHighDensity from "../assets/images/case-studies/luxury-travel-os/high-density-ui-keyboard-first-navigation.webp";
 import luxuryTravelTokens from "../assets/images/case-studies/luxury-travel-os/semantic-tokenized-ui-kit-components.webp";
 import luxuryTravelAgentWorkspace from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp";
+import luxuryTravelBefore from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-before.webp";
+import luxuryTravelAfter from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-after.webp";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
@@ -156,8 +157,8 @@ export const portfolioData: PortfolioData = {
       scope: "B2B TravelTech / Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
       users: "400+ Agents, Managers, and Accountants (5 Departments)",
-      images: [luxuryTravelBeforeAfter],
-      imageCaptions: ["Comparison of legacy fragmented travel agent workflow vs unified ERP cockpit"],
+      images: [luxuryTravelAfter],
+      imageCaptions: ["Unified luxury operating engine dashboard redesign"],
       challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With hundreds of agents working across fragmented email threads and legacy GDS terminals, the operational ceiling was real. Complex bookings were actively avoided by staff, and a 15-minute delay meant losing a high-net-worth client permanently. We had to replace this ecosystem from scratch.",
       solution: "A unified, OOUX-based enterprise ecosystem featuring a High-Density, Keyboard-First UI and granular Role-Based Access Control (RBAC) that integrated sales, operations, ticketing, and accounting workflows into a seamless, high-performance workspace.",
       impact: "Pricing errors were eliminated, processing time dropped by ~40%, and the engineering team achieved 2+ years of design-free autonomy, shipping new modules independently without breaking the core OOUX architecture.",
@@ -168,7 +169,7 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Initially, we thought we could just \"digitize\" and clean up the existing process. However, there was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.",
           discoveryRightTitle: "The Pivot:",
           discoveryRight: "I stopped drawing screens. I used Asynchronous Video Analysis (analyzing 30+ recorded sessions) to separate essential \"muscle memory\" shortcuts from actual usability blockers. We had to fix the underlying logic first.",
-          discoveryImages: [luxuryTravelBeforeAfter, luxuryTravelAgentWorkspace]
+          discoveryImages: [luxuryTravelBefore, luxuryTravelAfter]
         },
         {
           discoveryTitle: "4. The Architecture: Structuring Chaos via OOUX",
