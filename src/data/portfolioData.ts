@@ -5,10 +5,10 @@ import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04
 import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-permissions-matrix-erp-ui.jpg";
 import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/06-cross-department-state-machine-workflow-erp.jpg";
 import traveltechStatusBar from "../assets/images/case-studies/luxury-travel-os/07-unified-department-status-transparency-ui.jpg";
-import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel-os/08-high-density-ui-travel-agent-dashboard.jpg";
-import traveltechTabularData from "../assets/images/case-studies/luxury-travel-os/09-compact-rows-monospaced-fonts-tabular-data.jpg";
-import traveltechKeyboardNav from "../assets/images/case-studies/luxury-travel-os/10-keyboard-first-navigation-hotkeys-ui.jpg";
-import traveltechErrorPrevention from "../assets/images/case-studies/luxury-travel-os/11-high-density-erp-error-prevention.jpg";
+import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel-os/08-traveltech-erp-trip-section-standard-ui.jpg";
+import traveltechTabularData from "../assets/images/case-studies/luxury-travel-os/09-high-density-expert-view-ui-compact-rows.jpg";
+import traveltechKeyboardNav from "../assets/images/case-studies/luxury-travel-os/10-pax-verification-dashboard-dark-mode.jpg";
+import traveltechErrorPrevention from "../assets/images/case-studies/luxury-travel-os/11-compact-tabular-data-keyboard-navigation-ui.jpg";
 import traveltechTokenizedUi from "../assets/images/case-studies/luxury-travel-os/12-tokenized-ui-kit-atomic-foundation.jpg";
 import traveltechDevReadyComponents from "../assets/images/case-studies/luxury-travel-os/13-dev-ready-smart-components-lego-system.jpg";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
@@ -222,7 +222,19 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Travel agents are \"Power Users\" operating under high pressure. They don't need \"white space\"; they need information density and speed.",
           discoveryRightTitle: "The Solution (High-Density UI):",
           discoveryRight: "• Data Visibility: Utilized compact rows and monospaced fonts for tabular data to maximize information above the fold.\n\n• Keyboard-First Navigation: To ease the transition from legacy GDS terminals, I implemented Keyboard-First Navigation. This allowed veteran agents to leverage their existing muscle memory (hotkeys) while benefiting from modern error prevention.",
-          discoveryImages: [traveltechHighDensityUi, traveltechTabularData, traveltechKeyboardNav, traveltechErrorPrevention]
+          discoveryImages: [traveltechHighDensityUi, traveltechTabularData, traveltechKeyboardNav, traveltechErrorPrevention],
+          discoveryImageAlts: [
+            "Standard density interface for the travel agent trip section, serving as a baseline for power user optimization.",
+            "High-density expert view UI utilizing compact rows to maximize data visibility above the fold for travel agents.",
+            "Passenger verification dashboard in dark mode, providing a clear visual hierarchy for the verify department.",
+            "Condensed tabular data interface in dark mode featuring monospaced fonts, optimized for rapid keyboard-first navigation."
+          ],
+          discoveryImageCaptions: [
+            "Trip Module (Expert Department) — Light Mode, Standard Density.",
+            "Trip Module (Expert Department) — Light Mode, High-Density View optimized for data-heavy workflows.",
+            "PAX Module (Verify Department) — Dark Mode, Standard Density.",
+            "PAX Module (Verify Department) — Dark Mode, High-Density View with monospaced tabular data."
+          ]
         },
         {
           discoveryTitle: "The Scale: Empowering Engineering with a \"Lego\" System",

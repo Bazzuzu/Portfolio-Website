@@ -295,7 +295,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                     const caption = section.discoveryImageCaptions?.[0];
                     rows.push(
                       <div key="row-0" className="case-study__discovery-row case-study__discovery-row--single">
-                        <div className="discovery-image-container">
+                        <figure className="discovery-image-container">
                           <div
                             className="discovery-image-card"
                             onClick={() => setLightboxImage(imgUrl)}
@@ -311,8 +311,8 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                               <CustomIcon src={maximizeSvg} size={14} />
                             </div>
                           </div>
-                          {caption && <span className="discovery-image-caption">{caption}</span>}
-                        </div>
+                          {caption && <figcaption className="discovery-image-caption">{caption}</figcaption>}
+                        </figure>
                       </div>
                     );
                     startIndex = 1;
@@ -327,7 +327,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                           const globalIdx = i + pairIdx;
                           const caption = section.discoveryImageCaptions?.[globalIdx];
                           return (
-                            <div key={pairIdx} className="discovery-image-container">
+                            <figure key={pairIdx} className="discovery-image-container">
                               <div
                                 className="discovery-image-card"
                                 onClick={() => setLightboxImage(imgUrl)}
@@ -343,8 +343,8 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                                   <CustomIcon src={maximizeSvg} size={14} />
                                 </div>
                               </div>
-                              {caption && <span className="discovery-image-caption">{caption}</span>}
-                            </div>
+                              {caption && <figcaption className="discovery-image-caption">{caption}</figcaption>}
+                            </figure>
                           );
                         })}
                       </div>
