@@ -295,5 +295,5 @@
   line-height: var(--font-label-md-line-height);
   letter-spacing: var(--font-label-md-tracking);
   color: var(--color-text-secondary);
-  text-align: left;
+  text-align: center;
 }
