@@ -1,4 +1,4 @@
-import traveltechHero from "../assets/images/case-studies/luxury-travel-os/01-traveltech-erp-user-journey-before-after.jpg";
+import traveltechHero from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard.jpg";
 import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-asynchronous-video-analysis-ux-audit.jpg";
 import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-edge-case-mapping-cross-functional-handoffs.jpg";
 import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-object-relationship-map-leads-offers-deals.jpg";
@@ -159,13 +159,13 @@ export const portfolioData: PortfolioData = {
       description: "Designed a scalable ERP unifying 5 departments. The tokenized OOUX architecture enabled 100% engineering autonomy post-launch.",
       href: "/cases/how-ooux-reduced-error-rates-in-traveltech",
       ariaLabel: "Read how OOUX mapping reduced agent error rates for 400+ agents in TravelTech",
-      imgAlt: "TravelTech ERP dashboard interface designed to reduce cognitive load for 400+ agents",
+      imgAlt: "Unified B2B TravelTech ERP welcome dashboard providing agents quick access to recent activities and core workflows to reduce cognitive load.",
       role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
       scope: "B2B TravelTech, Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
       users: "400+ Agents, Managers, and Accountants (5 Departments)",
       images: [traveltechHero],
-      imageCaptions: ["Comparison of legacy fragmented travel agent workflow vs unified ERP cockpit"],
+      imageCaptions: ["Unified B2B TravelTech ERP welcome dashboard providing agents quick access to recent activities and core workflows to reduce cognitive load."],
       challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With 250 agents working across Excel, legacy GDS terminals, and fragmented email threads, the operational ceiling was real: complex bookings got avoided, pricing errors happened regularly, and a 15-minute delay meant losing a client permanently.",
       solution: "Replace this fragmented ecosystem with a unified system, designed from scratch. No existing product to iterate on. No instrumentation on the old process — we had behavioral signals and stakeholder testimony, not dashboards.",
       impact: "Agents gradually stopped avoiding complex bookings — the cognitive cost dropped enough to make them worthwhile. Pricing errors tied to manual data-bridging effectively disappeared.\n\nFor 2+ years post-launch, engineering shipped new modules independently with design involvement only twice. Processing time down ~40% by manager estimate — no baseline instrumentation existed, so behavioral signals are the honest metric here.",
