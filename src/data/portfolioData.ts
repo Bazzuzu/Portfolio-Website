@@ -1,8 +1,8 @@
 import traveltechHero from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard.jpg";
 import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-legacy-b2b-travel-software-ecosystem.jpg";
 import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-unified-traveltech-erp-dark-mode-ui.jpg";
-import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-object-relationship-map-leads-offers-deals.jpg";
-import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-matrix-role-based-access-control-ui.jpg";
+import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-entity-relationship-database-schema.jpg";
+import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-permissions-matrix-erp-ui.jpg";
 import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/06-unified-timeline-automated-routing-ui.jpg";
 import traveltechStatusBar from "../assets/images/case-studies/luxury-travel-os/07-erp-status-transparency-bar.jpg";
 import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel-os/08-high-density-ui-travel-agent-dashboard.jpg";
@@ -194,7 +194,11 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Instead of designing pages, I designed objects. I mapped the relationships between Leads, Offers, and Deals to create a scalable Information Architecture (IA). More details on my Medium article.",
           discoveryRightTitle: "Security by Design:",
           discoveryRight: "I defined a granular RBAC (Role-Based Access Control) matrix (Superuser vs. Agent). This ensured data security and interface simplicity—users only see the tools relevant to their specific role, reducing cognitive noise.",
-          discoveryImages: [traveltechOouxMap, traveltechRbacMatrix]
+          discoveryImages: [traveltechOouxMap, traveltechRbacMatrix],
+          discoveryImageAlts: [
+            "Object-Oriented UX entity-relationship diagram mapping core database objects like Client, Request, Trip, and Offer to align UI with backend architecture.",
+            "Role-Based Access Control (RBAC) matrix UI allowing granular permission settings to ensure data security and reduce cognitive noise for agents."
+          ]
         },
         {
           discoveryTitle: "The Workflow: Creating a \"Single Source of Truth\"",
