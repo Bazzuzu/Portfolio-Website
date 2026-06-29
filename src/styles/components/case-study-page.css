@@ -50,6 +50,7 @@
   .case-study__above-fold {
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--spacing-container-gap-lg);
+    align-items: end;
   }
 }
 
