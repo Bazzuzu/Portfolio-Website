@@ -201,9 +201,6 @@
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.discovery-image-card:hover .discovery-image-card__img {
-  transform: scale(1.04);
-}
 
 .discovery-image-card__zoom-indicator {
   position: absolute;

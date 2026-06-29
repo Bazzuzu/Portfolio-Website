@@ -1427,7 +1427,7 @@ button {
   justify-content: center;
   align-items: center;
   z-index: var(--z-index-modal);
-  padding: var(--spacing-container-px-xl);
+  padding: var(--spacing-container-px-md);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--motion-duration-normal) var(--motion-easing-standard);
@@ -1440,8 +1440,9 @@ button {
 
 .lightbox__content {
   position: relative;
-  max-width: 90%;
-  max-height: 85%;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
   transform: scale(0.95);
   transition: transform var(--motion-duration-normal) var(--motion-easing-standard);
 }
@@ -1451,30 +1452,38 @@ button {
 }
 
 .lightbox__image {
+  display: block;
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 80vh;
+  max-height: calc(100vh - 2 * var(--spacing-container-px-md));
   border-radius: var(--radius-sm);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.25);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+  object-fit: contain;
 }
 
 .lightbox__close {
   position: absolute;
-  top: calc(-1 * var(--spacing-component-py-2xl));
-  right: 0;
-  width: 32px;
-  height: 32px;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(18, 18, 18, 0.4);
+  background: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--motion-duration-fast) var(--motion-easing-standard);
+  z-index: 10;
 }
 
 .lightbox__close:hover {
-  background: rgba(118, 118, 118, 0.4);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ---------------------------------------------------- */
