@@ -1,9 +1,16 @@
-import luxuryTravelOouxMap from "../assets/images/case-studies/luxury-travel-os/ooux-object-map-b2b-traveltech.webp";
-import luxuryTravelHighDensity from "../assets/images/case-studies/luxury-travel-os/high-density-ui-keyboard-first-navigation.webp";
-import luxuryTravelTokens from "../assets/images/case-studies/luxury-travel-os/semantic-tokenized-ui-kit-components.webp";
-import luxuryTravelAgentWorkspace from "../assets/images/case-studies/luxury-travel-os/b2b-traveltech-erp-agent-workspace.webp";
-import luxuryTravelBefore from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-before.webp";
-import luxuryTravelAfter from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-after.webp";
+import traveltechHero from "../assets/images/case-studies/luxury-travel-os/traveltech-erp-user-journey-before-after.webp";
+import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/asynchronous-video-analysis-ux-audit.webp";
+import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/edge-case-mapping-cross-functional-handoffs.webp";
+import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/ooux-object-relationship-map-leads-offers-deals.webp";
+import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/rbac-matrix-role-based-access-control-ui.webp";
+import traveltechUnifiedTimeline from "../assets/images/case-studies/luxury-travel-os/unified-timeline-automated-routing-ui.webp";
+import traveltechStatusBar from "../assets/images/case-studies/luxury-travel-os/erp-status-transparency-bar.webp";
+import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel-os/high-density-ui-travel-agent-dashboard.webp";
+import traveltechTabularData from "../assets/images/case-studies/luxury-travel-os/compact-rows-monospaced-fonts-tabular-data.webp";
+import traveltechKeyboardNav from "../assets/images/case-studies/luxury-travel-os/keyboard-first-navigation-hotkeys-ui.webp";
+import traveltechErrorPrevention from "../assets/images/case-studies/luxury-travel-os/high-density-erp-error-prevention.webp";
+import traveltechTokenizedUi from "../assets/images/case-studies/luxury-travel-os/tokenized-ui-kit-atomic-foundation.webp";
+import traveltechDevReadyComponents from "../assets/images/case-studies/luxury-travel-os/dev-ready-smart-components-lego-system.webp";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
@@ -148,59 +155,67 @@ export const portfolioData: PortfolioData = {
       pageTitle: "How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?",
       tag: "ERP / B2B",
       tags: ["B2B Enterprise", "Information Architecture", "OOUX", "Design Systems", "High-Density UI"],
-      headline: "From «Excel Hell» and Legacy GDS Terminals to a Unified Luxury Operating Engine.",
+      headline: "From «Excel Hell» to a Unified Enterprise Ecosystem",
       description: "Designed a scalable ERP unifying 5 departments. The tokenized OOUX architecture enabled 100% engineering autonomy post-launch.",
       href: "/cases/how-ooux-reduced-error-rates-in-traveltech",
       ariaLabel: "Read how OOUX mapping reduced agent error rates for 400+ agents in TravelTech",
       imgAlt: "TravelTech ERP dashboard interface designed to reduce cognitive load for 400+ agents",
       role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
-      scope: "B2B TravelTech / Enterprise ERP",
+      scope: "B2B TravelTech, Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
       users: "400+ Agents, Managers, and Accountants (5 Departments)",
-      images: [luxuryTravelAfter],
-      imageCaptions: ["Unified luxury operating engine dashboard redesign"],
-      challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With hundreds of agents working across fragmented email threads and legacy GDS terminals, the operational ceiling was real. Complex bookings were actively avoided by staff, and a 15-minute delay meant losing a high-net-worth client permanently. We had to replace this ecosystem from scratch.",
-      solution: "A unified, OOUX-based enterprise ecosystem featuring a High-Density, Keyboard-First UI and granular Role-Based Access Control (RBAC) that integrated sales, operations, ticketing, and accounting workflows into a seamless, high-performance workspace.",
-      impact: "Pricing errors were eliminated, processing time dropped by ~40%, and the engineering team achieved 2+ years of design-free autonomy, shipping new modules independently without breaking the core OOUX architecture.",
+      images: [traveltechHero],
+      imageCaptions: ["Comparison of legacy fragmented travel agent workflow vs unified ERP cockpit"],
+      challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With 250 agents working across Excel, legacy GDS terminals, and fragmented email threads, the operational ceiling was real: complex bookings got avoided, pricing errors happened regularly, and a 15-minute delay meant losing a client permanently.",
+      solution: "Replace this fragmented ecosystem with a unified system, designed from scratch. No existing product to iterate on. No instrumentation on the old process — we had behavioral signals and stakeholder testimony, not dashboards.",
+      impact: "Agents gradually stopped avoiding complex bookings — the cognitive cost dropped enough to make them worthwhile. Pricing errors tied to manual data-bridging effectively disappeared.\n\nFor 2+ years post-launch, engineering shipped new modules independently with design involvement only twice. Processing time down ~40% by manager estimate — no baseline instrumentation existed, so behavioral signals are the honest metric here.",
       discoverySections: [
         {
-          discoveryTitle: "3. Information Gain: The Discovery Pivot",
-          discoveryLeftTitle: "The Failed Assumption:",
-          discoveryLeft: "Initially, we thought we could just \"digitize\" and clean up the existing process. However, there was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.",
-          discoveryRightTitle: "The Pivot:",
-          discoveryRight: "I stopped drawing screens. I used Asynchronous Video Analysis (analyzing 30+ recorded sessions) to separate essential \"muscle memory\" shortcuts from actual usability blockers. We had to fix the underlying logic first.",
-          discoveryImages: [luxuryTravelBefore, luxuryTravelAfter]
+          discoveryTitle: "The Discovery: Uncovering the \"Black Box\" of Operational Chaos",
+          discoveryLeftTitle: "The Business Reality:",
+          discoveryLeft: "Building an ERP requires understanding the business better than the users themselves. I couldn't just \"digitize\" the old process; I had to fix it.",
+          discoveryRightTitle: "The Investigation:",
+          discoveryRight: "• Asynchronous Video Analysis: I analyzed 30+ recorded sessions across the skill spectrum (from novices to power users). This helped distinguish essential \"muscle memory\" shortcuts that experts rely on from the usability blockers confusing new hires.\n\n• Edge-Case Mapping: I facilitated workshops to stress-test the system against complex scenarios (e.g., partial refunds, ancillary re-configuration). We mapped the cross-functional handoffs to ensure the architecture wouldn't break under real-world pressure.",
+          discoveryImages: [traveltechVideoAnalysis, traveltechEdgeCaseMapping]
         },
         {
-          discoveryTitle: "4. The Architecture: Structuring Chaos via OOUX",
-          discoveryLeftTitle: "Object Mapping:",
-          discoveryLeft: "Instead of designing pages, I designed objects. I mapped the relationships between Leads, Offers, and Deals to create a scalable Information Architecture. This aligned the design perfectly with database realities, preventing costly engineering reworks.",
-          discoveryRightTitle: "Workflow Design:",
-          discoveryRight: "Security by Design (RBAC): Defined a granular Role-Based Access Control matrix. Users only see tools relevant to their specific role, drastically reducing cognitive noise.\n\nAutomated Routing: Replaced email threads with a Unified Timeline that automatically assigns tasks across 5 departments based on load and expertise.",
-          discoveryImages: [luxuryTravelOouxMap]
+          discoveryTitle: "The Architecture: Structuring the Chaos via OOUX",
+          discoveryLeftTitle: "The Structural Pivot:",
+          discoveryLeft: "Instead of designing pages, I designed objects. I mapped the relationships between Leads, Offers, and Deals to create a scalable Information Architecture (IA). More details on my Medium article.",
+          discoveryRightTitle: "Security by Design:",
+          discoveryRight: "I defined a granular RBAC (Role-Based Access Control) matrix (Superuser vs. Agent). This ensured data security and interface simplicity—users only see the tools relevant to their specific role, reducing cognitive noise.",
+          discoveryImages: [traveltechOouxMap, traveltechRbacMatrix]
         },
         {
-          discoveryTitle: "5. The Interface: High-Density UI & Muscle Memory",
-          discoveryLeftTitle: "High-Density Architecture:",
-          discoveryLeft: "Travel agents are power users operating under high pressure. They don't need \"white space\"; they need information density and speed. We adopted a UI approach similar to Bloomberg or Linear, using compact rows and monospaced fonts for tabular data to maximize information above the fold.",
-          discoveryRightTitle: "Keyboard-First Navigation:",
-          discoveryRight: "To mitigate change aversion, I implemented strict keyboard navigation. Veteran agents leveraged their existing hotkey muscle memory while benefiting from modern error prevention.",
-          discoveryImages: [luxuryTravelHighDensity]
+          discoveryTitle: "The Workflow: Creating a \"Single Source of Truth\"",
+          discoveryLeftTitle: "The \"Assembly Line\" Logic:",
+          discoveryLeft: "I replaced fragmented email threads with a Unified Timeline. As a deal moves through the pipeline, it is automatically assigned to the relevant department (e.g., Verify ➔ Ticketing).",
+          discoveryRightTitle: "Automated Routing & Status:",
+          discoveryRight: "Automated Routing: Tasks are pushed to agents based on load and expertise, removing the \"manager bottleneck.\"\n\nStatus Transparency: A unified status bar allows any stakeholder to see exactly where a deal is stuck (e.g., \"Pending Payment\" in Bookkeeping), eliminating status-check meetings.",
+          discoveryImages: [traveltechUnifiedTimeline, traveltechStatusBar]
         },
         {
-          discoveryTitle: "6. The Scale: Empowering Engineering",
-          discoveryLeftTitle: "Semantic Foundation:",
-          discoveryLeft: "As the sole designer on a massive product, I built a Tokenized UI Kit focused on system logic, not just visuals, to prevent becoming a bottleneck. We defined strict, W3C-valid tokens for typography, spacing, and colors.",
-          discoveryRightTitle: "Dev-Ready Components:",
-          discoveryRight: "Created smart components (Tables, Inputs, Modals) that developers could assemble like Lego blocks, allowing them to ship new modules with complete design consistency.",
-          discoveryImages: [luxuryTravelTokens]
+          discoveryTitle: "The Interface: Designing for Power Users & Muscle Memory",
+          discoveryLeftTitle: "The Constraint:",
+          discoveryLeft: "Travel agents are \"Power Users\" operating under high pressure. They don't need \"white space\"; they need information density and speed.",
+          discoveryRightTitle: "The Solution (High-Density UI):",
+          discoveryRight: "• Data Visibility: Utilized compact rows and monospaced fonts for tabular data to maximize information above the fold.\n\n• Keyboard-First Navigation: To ease the transition from legacy GDS terminals, I implemented Keyboard-First Navigation. This allowed veteran agents to leverage their existing muscle memory (hotkeys) while benefiting from modern error prevention.",
+          discoveryImages: [traveltechHighDensityUi, traveltechTabularData, traveltechKeyboardNav, traveltechErrorPrevention]
         },
         {
-          discoveryTitle: "7. Business Impact & The \"Invisible\" Designer",
-          discoveryLeftTitle: "Operational ROI:",
-          discoveryLeft: "Agents stopped avoiding complex bookings, and processing time dropped by ~40%. The core OOUX model proved so stable that no major refactors were needed.",
-          discoveryRightTitle: "Engineering Autonomy:",
-          discoveryRight: "For 2+ years post-launch, the engineering team shipped new modules independently, requiring design intervention only twice. This project proved that the best B2B design is an infrastructure that empowers others to build.",
+          discoveryTitle: "The Scale: Empowering Engineering with a \"Lego\" System",
+          discoveryLeftTitle: "The Challenge:",
+          discoveryLeft: "As the sole designer on a massive product, I needed to prevent myself from becoming a bottleneck.",
+          discoveryRightTitle: "The System & Legacy:",
+          discoveryRight: "The System: I built a Tokenized UI Kit focused on logic, not just visuals. Defined strict tokens for Typography, Spacing, and Colors, and created \"smart\" components (Tables, Inputs, Modals) that developers could assemble like Lego blocks.\n\nThe Legacy: This system allowed the engineering team to launch new features and modules independently for 2 years with zero design intervention.",
+          discoveryImages: [traveltechTokenizedUi, traveltechDevReadyComponents]
+        },
+        {
+          discoveryTitle: "The Verdict & Legacy",
+          discoveryLeftTitle: "Outcomes:",
+          discoveryLeft: "• Engineering Autonomy: The tokenized UI Kit empowered the development team to scale the product without design support.\n\n• Architectural Robustness: The core OOUX model proved so stable that no major refactors were needed post-launch.\n\n• Unified Ecosystem: Successfully merged 5 fragmented departments into a single workflow, eliminating data silos.",
+          discoveryRightTitle: "Reflection: The \"Invisible\" Designer",
+          discoveryRight: "My ultimate goal was to make myself obsolete. By investing heavily in the Discovery Phase and building a rigid Design System, I ensured the product could thrive without my daily oversight. This project taught me that the best B2B design is an infrastructure that empowers others to build.",
           discoveryImages: []
         }
       ]
