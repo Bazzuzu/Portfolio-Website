@@ -9,8 +9,8 @@ import traveltechHighDensityUi from "../assets/images/case-studies/luxury-travel
 import traveltechTabularData from "../assets/images/case-studies/luxury-travel-os/09-high-density-expert-view-ui-compact-rows.jpg";
 import traveltechKeyboardNav from "../assets/images/case-studies/luxury-travel-os/10-pax-verification-dashboard-dark-mode.jpg";
 import traveltechErrorPrevention from "../assets/images/case-studies/luxury-travel-os/11-compact-tabular-data-keyboard-navigation-ui.jpg";
-import traveltechTokenizedUi from "../assets/images/case-studies/luxury-travel-os/12-tokenized-ui-kit-atomic-foundation.jpg";
-import traveltechDevReadyComponents from "../assets/images/case-studies/luxury-travel-os/13-dev-ready-smart-components-lego-system.jpg";
+import traveltechTokenizedUi from "../assets/images/case-studies/luxury-travel-os/12-tokenized-ui-kit-figma-variables.jpg";
+import traveltechDevReadyComponents from "../assets/images/case-studies/luxury-travel-os/13-multi-variant-smart-components-lego-system.jpg";
 import checkout1 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-conversion-flow.webp";
 import checkout2 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-mobile-funnel.webp";
 import checkout3 from "../assets/images/case-studies/checkout-rate-optimization/b2c-checkout-metrics-dashboard.webp";
@@ -241,7 +241,11 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "As the sole designer on a massive product, I needed to prevent myself from becoming a bottleneck.",
           discoveryRightTitle: "The System & Legacy:",
           discoveryRight: "The System: I built a Tokenized UI Kit focused on logic, not just visuals. Defined strict tokens for Typography, Spacing, and Colors, and created \"smart\" components (Tables, Inputs, Modals) that developers could assemble like Lego blocks.\n\nThe Legacy: This system allowed the engineering team to launch new features and modules independently for 2 years with zero design intervention.",
-          discoveryImages: [traveltechTokenizedUi, traveltechDevReadyComponents]
+          discoveryImages: [traveltechTokenizedUi, traveltechDevReadyComponents],
+          discoveryImageAlts: [
+            "Figma variables interface defining strict semantic tokens for typography, spacing, and colors to ensure a scalable UI architecture.",
+            "Library of multi-variant smart components designed as a modular Lego system, empowering developers to build ERP modules independently."
+          ]
         },
         {
           discoveryTitle: "The Verdict & Legacy",
