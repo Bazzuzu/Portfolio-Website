@@ -103,13 +103,25 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
               <p className="case-study-meta-item__value">{caseStudy.status}</p>
             </div>
 
-            <div className="case-study-meta-item">
-              <div className="case-study-meta-item__header-row">
-                <span className="case-study-meta-item__title">Users</span>
-                <span className="case-study-meta-item__line"></span>
+            {caseStudy.businessImpact ? (
+              <div className="case-study-meta-item">
+                <div className="case-study-meta-item__header-row">
+                  <span className="case-study-meta-item__title">Business Impact</span>
+                  <span className="case-study-meta-item__line"></span>
+                </div>
+                <p className="case-study-meta-item__value">{caseStudy.businessImpact}</p>
               </div>
-              <p className="case-study-meta-item__value">{caseStudy.users}</p>
-            </div>
+            ) : (
+              caseStudy.users && (
+                <div className="case-study-meta-item">
+                  <div className="case-study-meta-item__header-row">
+                    <span className="case-study-meta-item__title">Users</span>
+                    <span className="case-study-meta-item__line"></span>
+                  </div>
+                  <p className="case-study-meta-item__value">{caseStudy.users}</p>
+                </div>
+              )
+            )}
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import traveltechHero from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard.jpg";
-import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-legacy-b2b-travel-software-ecosystem.jpg";
+import traveltechVideoAnalysis from "../assets/images/case-studies/luxury-travel-os/02-fragmented-legacy-travel-agent-tools-gds-excel.jpg";
 import traveltechEdgeCaseMapping from "../assets/images/case-studies/luxury-travel-os/03-unified-traveltech-erp-dark-mode-ui.jpg";
 import traveltechOouxMap from "../assets/images/case-studies/luxury-travel-os/04-ooux-entity-relationship-database-schema.jpg";
 import traveltechRbacMatrix from "../assets/images/case-studies/luxury-travel-os/05-rbac-permissions-matrix-erp-ui.jpg";
@@ -50,7 +50,8 @@ export interface CaseStudy {
   role: string;
   scope: string;
   status: string;
-  users: string;
+  users?: string;
+  businessImpact?: string;
   images: string[];
   imageCaptions?: string[];
   challenge: string;
@@ -165,7 +166,7 @@ export const portfolioData: PortfolioData = {
       role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
       scope: "B2B TravelTech, Enterprise ERP",
       status: "Shipped & Scaled (Self-sustaining system)",
-      users: "400+ Agents, Managers, and Accountants (5 Departments)",
+      businessImpact: "~40% reduction in processing time, elimination of manual data-bridging errors, and 2+ years of engineering autonomy.",
       images: [traveltechHero],
       challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With 250 agents working across Excel, legacy GDS terminals, and fragmented email threads, the operational ceiling was real: complex bookings got avoided, pricing errors happened regularly, and a 15-minute delay meant losing a client permanently.",
       solution: "Replace this fragmented ecosystem with a unified system, designed from scratch. No existing product to iterate on. No instrumentation on the old process — we had behavioral signals and stakeholder testimony, not dashboards.",
@@ -179,7 +180,7 @@ export const portfolioData: PortfolioData = {
           discoveryRight: "• Asynchronous Video Analysis: I analyzed 30+ recorded sessions across the skill spectrum (from novices to power users). This helped distinguish essential \"muscle memory\" shortcuts that experts rely on from the usability blockers confusing new hires.\n\n• Edge-Case Mapping: I facilitated workshops to stress-test the system against complex scenarios (e.g., partial refunds, ancillary re-configuration). We mapped the cross-functional handoffs to ensure the architecture wouldn't break under real-world pressure.",
           discoveryImages: [traveltechVideoAnalysis, traveltechEdgeCaseMapping],
           discoveryImageAlts: [
-            "Legacy B2B travel software ecosystem showing disjointed workflows across Excel and GDS terminals.",
+            "Collage of fragmented legacy travel agent tools including GDS terminals, Excel, and outdated CRMs causing operational chaos.",
             "New unified TravelTech ERP interface in dark mode, designed to replace fragmented legacy tools and streamline agent workflows."
           ],
           discoveryImageCaptions: [
