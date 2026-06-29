@@ -167,7 +167,6 @@ export const portfolioData: PortfolioData = {
       status: "Shipped & Scaled (Self-sustaining system)",
       users: "400+ Agents, Managers, and Accountants (5 Departments)",
       images: [traveltechHero],
-      imageCaptions: ["Unified B2B TravelTech ERP welcome dashboard providing agents quick access to recent activities and core workflows to reduce cognitive load."],
       challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With 250 agents working across Excel, legacy GDS terminals, and fragmented email threads, the operational ceiling was real: complex bookings got avoided, pricing errors happened regularly, and a 15-minute delay meant losing a client permanently.",
       solution: "Replace this fragmented ecosystem with a unified system, designed from scratch. No existing product to iterate on. No instrumentation on the old process — we had behavioral signals and stakeholder testimony, not dashboards.",
       impact: "Agents gradually stopped avoiding complex bookings — the cognitive cost dropped enough to make them worthwhile. Pricing errors tied to manual data-bridging effectively disappeared.\n\nFor 2+ years post-launch, engineering shipped new modules independently with design involvement only twice. Processing time down ~40% by manager estimate — no baseline instrumentation existed, so behavioral signals are the honest metric here.",
