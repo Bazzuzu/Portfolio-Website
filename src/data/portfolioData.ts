@@ -31,6 +31,7 @@ export interface DiscoverySection {
 export interface CaseStudy {
   id: string;
   title: string;
+  pageTitle?: string;
   tag: string;
   tags?: string[];
   headline: string;
@@ -142,6 +143,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "how-ooux-reduced-error-rates-in-traveltech",
       title: "Building the OS for Travel",
+      pageTitle: "How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?",
       tag: "ERP / B2B",
       tags: ["B2B Enterprise", "Information Architecture", "OOUX", "Design Systems", "High-Density UI"],
       headline: "From «Excel Hell» and Legacy GDS Terminals to a Unified Luxury Operating Engine.",

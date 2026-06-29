@@ -67,7 +67,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
         <div className="case-study__above-fold">
           <div className="case-study__above-fold-left">
             <h1 id="case-study-header-title" className="case-study__above-fold-title">
-              {caseStudy.title}
+              {caseStudy.pageTitle || caseStudy.title}
             </h1>
             <div className="case-study__above-fold-tags">
               {(caseStudy.tags || [caseStudy.tag]).map((tag) => (
