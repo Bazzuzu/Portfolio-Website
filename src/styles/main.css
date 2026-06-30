@@ -1162,7 +1162,7 @@ button {
 /* ---------------------------------------------------- */
 .case-study {
   padding-top: 104px;
-  padding-bottom: var(--spacing-section-py-xl);
+  padding-bottom: var(--spacing-section-py-sm);
 }
 
 .case-study__back {
