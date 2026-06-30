@@ -16,9 +16,7 @@ import croUxAudit from "../assets/images/case-studies/checkout-rate-optimization
 import croHotjar from "../assets/images/case-studies/checkout-rate-optimization/03-hotjar-heatmap-legacy-mobile-checkout-rage-clicks.jpg";
 import croAboveFold from "../assets/images/case-studies/checkout-rate-optimization/04-mobile-above-the-fold-cro-before-after.jpg";
 import croActiveStates from "../assets/images/case-studies/checkout-rate-optimization/05-mobile-form-active-states-keyboard-routing.jpg";
-import croTrustpilot from "../assets/images/case-studies/checkout-rate-optimization/06-trustpilot-integration-above-the-fold-ui.jpg";
 import croTrustBeforeAfter from "../assets/images/case-studies/checkout-rate-optimization/07-strategic-trust-signals-redesign-before-after.jpg";
-import croCleanReviews from "../assets/images/case-studies/checkout-rate-optimization/08-customer-reviews-ui-cognitive-load-reduction.jpg";
 import croFaq from "../assets/images/case-studies/checkout-rate-optimization/09-how-we-work-faq-mobile-screens.jpg";
 import croResponsive from "../assets/images/case-studies/checkout-rate-optimization/10-responsive-mobile-ui-viewport-scaling.jpg";
 import croChatConsent from "../assets/images/case-studies/checkout-rate-optimization/11-agent-chat-cookie-consent-mobile-ui.jpg";
@@ -335,17 +333,13 @@ export const portfolioData: PortfolioData = {
           discoveryLeft: "Mobile users are skeptical of high-ticket offers from unknown brands. I shifted trust from a localized distraction to full-page credibility:\n\n• Anchoring Trust Above the Fold: Placed the Trustpilot badge (10,044 reviews) prominently on the first screen to validate legitimacy the second a user lands.\n\n• Deprecating Distracting Media: Removed the legacy \"actor-based\" video. Data proved it was viewed as inauthentic and distracted users from the form.",
           discoveryRightTitle: "The Solution: Proof Combo & Anxiety Reduction:",
           discoveryRight: "• The \"Proof Combo\": Designed a scannable block combining Real Customer Reviews with Industry Certifications exactly at the Point of Action.\n\n• Anxiety Reduction: Clear 'How We Work' and FAQ sections to address high-ticket buyer hesitations.",
-          discoveryImages: [croTrustpilot, croTrustBeforeAfter, croCleanReviews, croFaq],
+          discoveryImages: [croTrustBeforeAfter, croFaq],
           discoveryImageAlts: [
-            "Strategic placement of Trustpilot ratings above the fold to establish immediate credibility for luxury travel leads.",
             "Redesign of the trust section, moving from a cluttered legacy layout to a streamlined, high-conversion trust signal UI.",
-            "Comparison of legacy noisy customer reviews section versus the new concise, high-conversion layout.",
             "Mobile screens detailing the How we work process and FAQ to reduce user anxiety for high-ticket luxury purchases."
           ],
           discoveryImageCaptions: [
-            "Point of Action: Injecting Trustpilot social proof directly Above the Fold to reduce bounce rates.",
             "Trust Architecture: Redesigning the trust section to provide immediate social proof without distraction.",
-            "Social Proof: Replacing visual clutter with a clean, scannable reviews interface.",
             "Anxiety Reduction: Clear 'How We Work' and FAQ sections to address high-ticket buyer hesitations."
           ]
         },
