@@ -1277,6 +1277,13 @@ button {
   }
 }
 
+@media (min-width: 1024px) {
+  .col-layout-2,
+  .col-layout-3 {
+    gap: var(--spacing-container-gap-lg);
+  }
+}
+
 .text-block {
   display: flex;
   flex-direction: column;
