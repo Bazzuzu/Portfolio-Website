@@ -20,12 +20,25 @@ import croTrustBeforeAfter from "../assets/images/case-studies/checkout-rate-opt
 import croFaq from "../assets/images/case-studies/checkout-rate-optimization/09-how-we-work-faq-mobile-screens.jpg";
 import croResponsive from "../assets/images/case-studies/checkout-rate-optimization/10-responsive-mobile-ui-viewport-scaling.jpg";
 import croChatConsent from "../assets/images/case-studies/checkout-rate-optimization/11-agent-chat-cookie-consent-mobile-ui.jpg";
-import fintech1 from "../assets/images/case-studies/ai-modular-system/fintech-saas-investment-workspace-hero.webp";
-import fintech2 from "../assets/images/case-studies/ai-modular-system/fintech-saas-dashboard-analytics.webp";
-import fintech3 from "../assets/images/case-studies/ai-modular-system/fintech-saas-portfolio-tracker.webp";
-import luxuryTravelDesktopRedesign from "../assets/images/case-studies/ai-modular-system/luxury-travel-desktop-redesign-before-after.webp";
-import smartTriggerChat from "../assets/images/case-studies/ai-modular-system/smart-trigger-chat-choreography-ui.webp";
-import aiReadyModularCms from "../assets/images/case-studies/ai-modular-system/ai-ready-modular-cms-design-system.webp";
+import aiHero from "../assets/images/case-studies/ai-modular-system/01-luxury-travel-desktop-redesign-ai-platform.jpg";
+import aiNewAtf from "../assets/images/case-studies/ai-modular-system/02-new-concierge-above-the-fold-ui.jpg";
+import aiOldAtf from "../assets/images/case-studies/ai-modular-system/03-old-aggregator-above-the-fold-ui.jpg";
+import aiNewSearch from "../assets/images/case-studies/ai-modular-system/04-semantic-shift-smart-defaults-search-widget.jpg";
+import aiAdvancedControls from "../assets/images/case-studies/ai-modular-system/05-search-widget-advanced-controls-ui.jpg";
+import aiVideoBg from "../assets/images/case-studies/ai-modular-system/06-luxury-video-background-hero-ui.jpg";
+import aiStaticSkeleton from "../assets/images/case-studies/ai-modular-system/07-static-skeleton-image-lcp-optimization.jpg";
+import aiNewDeals from "../assets/images/case-studies/ai-modular-system/08-data-driven-anchor-pricing-travel-deals.jpg";
+import aiOldDeals from "../assets/images/case-studies/ai-modular-system/09-legacy-generic-marketing-deals-ui.jpg";
+import aiNewChat from "../assets/images/case-studies/ai-modular-system/10-smart-trigger-chat-choreography-ui.jpg";
+import aiOldChat from "../assets/images/case-studies/ai-modular-system/11-legacy-aggressive-auto-opening-chat-ui.jpg";
+import aiCmsAtfV1 from "../assets/images/case-studies/ai-modular-system/12-ai-modular-cms-above-the-fold-v1.jpg";
+import aiCmsAtfV2 from "../assets/images/case-studies/ai-modular-system/13-ai-modular-cms-above-the-fold-v2.jpg";
+import aiBuilder1 from "../assets/images/case-studies/ai-modular-system/14-landing-page-builder-module-1.jpg";
+import aiBuilder2 from "../assets/images/case-studies/ai-modular-system/15-landing-page-builder-module-2.jpg";
+import aiBuilder3 from "../assets/images/case-studies/ai-modular-system/16-landing-page-builder-module-3.jpg";
+import aiBuilder4 from "../assets/images/case-studies/ai-modular-system/17-landing-page-builder-module-4.jpg";
+import aiAdmin1 from "../assets/images/case-studies/ai-modular-system/18-admin-panel-ai-seo-generation-1.jpg";
+import aiAdmin2 from "../assets/images/case-studies/ai-modular-system/19-admin-panel-ai-seo-generation-2.jpg";
 import otherLlm from "../assets/images/other-projects/other-projects-llm-landing-page-generator.webp";
 import otherDs from "../assets/images/other-projects/other-projects-design-system-tokens.webp";
 import otherAsync from "../assets/images/other-projects/other-projects-async-collaboration.webp";
@@ -356,54 +369,147 @@ export const portfolioData: PortfolioData = {
     {
       id: "how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis",
       title: "Homepage & Funnel Structure",
+      pageTitle: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
       tag: "Strategy / AI",
-      tags: ["Product Strategy", "AI Integration", "Design Governance", "Stakeholder Management", "Core Web Vitals"],
+      tags: ["Product Strategy", "Design Systems Governance", "AI Integration", "Stakeholder Management", "Core Web Vitals"],
       headline: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
       description: "A strategic overhaul to build trust and guide users effectively. Aligning the visual hierarchy with business goals led to a 27% lift in click-throughs to booking.",
       href: "/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis",
       ariaLabel: "Read how an AI-ready modular system fixed a luxury travel identity crisis and increased CTR by 27%",
-      imgAlt: "Desktop redesign transforming a generic travel aggregator into a premium concierge platform",
+      imgAlt: "Desktop redesign transforming a generic travel aggregator into a high-converting AI-powered concierge platform",
       role: "Lead Product Designer (Strategy, UI/UX, Logic Architecture)",
       scope: "UX Strategy & AI-Ready Modular Design System",
       status: "Shipped & Scaled (CMS-integrated)",
-      users: "Marketing Teams & High-Ticket Luxury Travelers",
-      images: [luxuryTravelDesktopRedesign],
-      imageCaptions: ["Desktop redesign transforming a generic travel aggregator into a premium concierge platform"],
+      businessImpact: "+27% Lift in Click-throughs to Booking Funnel, 95% Faster Landing Page creation (AI + Modular System), and reduced friction via Smart Defaults.",
+      images: [aiHero],
+      imageCaptions: ["Hero: The new AI-powered concierge platform desktop experience."],
       challenge: "Business-Class.com is a premium concierge service, but the legacy interface mimicked a DIY search engine. This 'Expectation Mismatch' caused high friction and bounce rates. Users entered the site with a 'DIY' mindset, expecting instant automated results. Fighting the user's mental model was killing conversion. I needed to gently transition their mindset from 'I want to search' to 'I need an expert', establishing immediate trust for high-ticket ($5k+) purchases.",
       solution: "A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS. We changed CTAs to reduce perceived commitment ('Check Your Price'), introduced smart defaults, resolved video backgrounds for Core Web Vitals (LCP), and implemented smart-trigger chats. We then built 15+ flexible modules that leverage AI to populate SEO text.",
       impact: "We achieved a +27% lift in CTR to the booking funnel, 95% faster landing page creation for marketing via AI modular page generation, and full WCAG AA accessibility compliance.",
       discoverySections: [
         {
-          discoveryTitle: "3. Information Gain: The 'Recent Searches' Fallacy",
-          discoveryLeftTitle: "The Failed Assumption:",
-          discoveryLeft: "I assumed business class travelers have a non-linear decision journey, making a 'Recent Searches' shortcut critical for returning users to resume their bookings.",
-          discoveryRightTitle: "The Reality & Pivot:",
-          discoveryRight: "Post-launch data showed near-zero engagement. It competed for attention with the 'Popular Destinations' list, adding unnecessary cognitive load. Following the data, we deprecated the module in the next sprint to reduce decision fatigue.",
-          discoveryImages: [luxuryTravelDesktopRedesign]
+          discoveryTitle: "1. The Challenge: When a Concierge Wears a Search Engine Mask",
+          discoveryLeftTitle: "The Business Reality:",
+          discoveryLeft: "Business-Class.com is a premium human-powered service, not an automated algorithm.",
+          discoveryRightTitle: "The UX Disconnect & Strategic Pivot:",
+          discoveryRight: "The legacy homepage mimicked a standard search engine. Users entered dates expecting instant results but were met with a lead form. This \"Expectation Mismatch\" caused frustration and high bounce rates. Users treated the site like an automated aggregator, entering with a \"DIY\" mindset.\n\nInstead of fighting the user's mental model (\"I want to search\"), I adapted the interface to guide them gently toward the service model (\"I need an expert\"), establishing immediate trust for high-ticket purchases ($5k+).",
+          discoveryImages: [aiNewAtf, aiOldAtf],
+          discoveryImageAlts: [
+            "New premium concierge service interface establishing immediate trust",
+            "Legacy search engine UI causing expectation mismatch and high bounce rates"
+          ],
+          discoveryImageCaptions: [
+            "New: Premium service model interface.",
+            "Old: Generic aggregator interface causing expectation mismatch."
+          ]
         },
         {
-          discoveryTitle: "4. The Strategy: Semantic Shifts & Smart Defaults",
-          discoveryLeftTitle: "CTAs & MVPs:",
-          discoveryLeft: "The Semantic Shift: Changed the primary CTA from 'Search Flights' to 'Check Your Price' to reduce perceived commitment.\n\nThe 'Wizard of Oz' MVP: Launched a manually curated quick-select destination list to validate engagement before building dynamic sorting.",
-          discoveryRightTitle: "Smart Defaults:",
-          discoveryRight: "Implemented IP-based detection to pre-fill 'Origin' and 'Dates' fields. This solved 'Empty State Anxiety' for first-time visitors, helping them initiate searches instantly.",
+          discoveryTitle: "2. Information Gain: The 'Recent Searches' Fallacy",
+          discoveryLeftTitle: "The Failed Hypothesis:",
+          discoveryLeft: "I assumed that business class travelers have a non-linear decision journey, so a \"Recent Searches\" shortcut would be critical for returning users.",
+          discoveryRightTitle: "The Reality & Pivot:",
+          discoveryRight: "Post-launch data showed unexpectedly low engagement. Instead of helping, it competed for attention with the \"Popular Destinations\" list, adding cognitive load. Following the data, we decided to deprecate this module in the next sprint to declutter the interface. This reinforced that reducing decision fatigue is more important than offering theoretical convenience features.",
           discoveryImages: []
         },
         {
-          discoveryTitle: "5. Stakeholder Management & Technical Trade-offs",
-          discoveryLeftTitle: "1. Video Background vs. LCP:",
-          discoveryLeft: "Marketing pushed for a heavy video background for a 'Luxury Feel.' I optimized the asset and implemented a static 'skeleton' image for instant loading, satisfying marketing while protecting Core Web Vitals (LCP).",
-          discoveryRightTitle: "2. Aggressive Chat triggers:",
-          discoveryRight: "Sales wanted an auto-opening chat. I proved this diluted lead quality. We engineered a 'Smart Trigger' protocol: chat is suppressed while typing, engages after 15s of inactivity, and pauses the carousel.",
-          discoveryImages: [smartTriggerChat]
+          discoveryTitle: "3. The Search Widget: Reducing Cognitive Barriers",
+          discoveryLeftTitle: "Semantic Shift & Fast Lane:",
+          discoveryLeft: "Leveraging data from our mobile wins, I reframed the primary CTA. I changed the copy from \"Search Flights\" to \"Check Your Price\". The Logic: \"Search\" implies work (browsing), while \"Check Price\" implies utility (getting an answer). This subtle semantic shift reduced the perceived commitment needed to start the funnel.\n\nI carved out a dedicated visual space for a \"Call for Exclusive Discount\" CTA inside the widget, routing urgent buyers directly to agents.",
+          discoveryRightTitle: "Intelligent Assistance (The 'Wizard of Oz'):",
+          discoveryRight: "• Popular Destinations: I introduced a quick-select list in the dropdown. We adopted a \"Wizard of Oz\" strategy—launching with a manually curated list (MVP) to validate user engagement before committing engineering resources to build a dynamic sorting algorithm.\n\n• Smart Defaults: Implemented IP-based detection to pre-fill \"Origin\" and \"Dates,\" solving \"Empty State Anxiety.\"",
+          discoveryImages: [aiNewSearch, aiAdvancedControls],
+          discoveryImageAlts: [
+            "Redesigned search widget acting as an assistant with smart defaults and semantic CTA",
+            "Additional advanced controls and fast lane routing in the new search widget"
+          ],
+          discoveryImageCaptions: [
+            "The redesigned Search Widget acting as an intelligent assistant.",
+            "Expanded widget states featuring the 'Fast Lane' routing for urgent buyers."
+          ]
         },
         {
-          discoveryTitle: "6. The Scale: Empowering Marketing with AI",
-          discoveryLeftTitle: "Design System Governance:",
-          discoveryLeft: "Marketing needed to launch 300+ route-specific SEO pages but was bottlenecked by development. I architected a modular system of 15+ flexible blocks (Hero, Reviews, Trust) directly into the CMS with strict styling constraints.",
-          discoveryRightTitle: "AI Integration & Results:",
-          discoveryRight: "The CMS system now leverages AI to populate SEO-optimized text within these modules. This reduced page production time by 95%, allowing the marketing team to scale operations instantly.",
-          discoveryImages: [aiReadyModularCms]
+          discoveryTitle: "4. Technical Trade-off: The Video Background",
+          discoveryLeftTitle: "The Conflict:",
+          discoveryLeft: "Marketing stakeholders pushed for a video background to enhance the \"Luxury Feel.\"",
+          discoveryRightTitle: "My Approach & Compromise:",
+          discoveryRight: "While video often hurts performance, I compromised by optimizing the asset and implementing a static \"skeleton\" image for instant loading. This balanced the aesthetic goals with strict Core Web Vitals (LCP) requirements.",
+          discoveryImages: [aiVideoBg, aiStaticSkeleton],
+          discoveryImageAlts: [
+            "Hero section featuring a luxury video background optimized for performance",
+            "Static skeleton image implementation to protect Core Web Vitals and LCP"
+          ],
+          discoveryImageCaptions: [
+            "The final hero section with the optimized video background.",
+            "The static skeleton image ensuring instant LCP loading."
+          ]
+        },
+        {
+          discoveryTitle: "5. Replacing Vague Marketing with Tangible Data",
+          discoveryLeftTitle: "The Problem:",
+          discoveryLeft: "The legacy \"Best Deals\" section displayed generic destinations (e.g., \"London from $1000\") that lacked contextual relevance for the user.",
+          discoveryRightTitle: "The Transformation:",
+          discoveryRight: "I renamed the section to \"Recent Client Savings\" and changed the focus from Advertising to Evidence.\n\n• Data-Driven Relevance: We analyzed sales data to identify the 300 top routes that generate 70% of revenue.\n\n• Anchor Pricing: Instead of a flat price, I introduced a comparison: \"Retail Price\" vs \"Our Price\", highlighting the specific savings amount (e.g., \"Saved $2,549\").\n\n• Personalization: Deals are now filtered by the user's IP location (e.g., showing flights departing from their actual city).",
+          discoveryImages: [aiNewDeals, aiOldDeals],
+          discoveryImageAlts: [
+            "UI transformation from generic marketing to personalized anchor pricing and savings data",
+            "Legacy Best Deals section displaying generic destinations with no contextual relevance"
+          ],
+          discoveryImageCaptions: [
+            "New: Data-driven 'Recent Client Savings' with anchor pricing and IP personalization.",
+            "Old: Generic 'Best Deals' section lacking contextual relevance."
+          ]
+        },
+        {
+          discoveryTitle: "6. Balancing Aggressive Sales Goals with User Focus",
+          discoveryLeftTitle: "The Conflict & Defense:",
+          discoveryLeft: "The Sales Team pushed for an aggressive, auto-opening chat to maximize lead volume. I demonstrated that interrupting high-intent search behaviors with low-intent chat prompts was diluting our lead quality. We agreed to shift the strategy from \"Aggressive Acquisition\" to \"Contextual Assistance.\"",
+          discoveryRightTitle: "The Solution: 'Smart Trigger' Protocol:",
+          discoveryRight: "I engineered a context-aware choreography for the chat modal:\n\n• Respect Focus: Chat is suppressed while the user types in the Search Widget.\n\n• Idle Logic: Chat only engages after 10–15s of inactivity (Teaser) or 35s (Full Open).\n\n• Conflict Resolution: If Chat opens, the Hero Carousel pauses immediately to prevent visual overload.",
+          discoveryImages: [aiNewChat, aiOldChat],
+          discoveryImageAlts: [
+            "Context-aware chat modal choreography balancing aggressive sales goals with user experience",
+            "Legacy aggressive auto-opening chat that interrupted high-intent search behaviors"
+          ],
+          discoveryImageCaptions: [
+            "New: Context-aware 'Smart Trigger' chat protocol.",
+            "Old: Aggressive auto-opening chat that caused visual overload."
+          ]
+        },
+        {
+          discoveryTitle: "7. Empowering Marketing with AI-Ready Modular Design",
+          discoveryLeftTitle: "The Bottleneck & Fix:",
+          discoveryLeft: "Marketing needed to launch 300+ route-specific SEO pages but was limited by development resources. I architected a modular Design System of 15+ flexible blocks (Hero, Reviews, FAQ, Trust) integrated directly into the CMS.",
+          discoveryRightTitle: "Governance & AI:",
+          discoveryRight: "I designed the modules with strict constraints (baked-in padding, typography rules) to ensure visual integrity remains high, even when Marketing builds pages autonomously. The system now leverages AI to populate SEO-optimized text, reducing page production time by 95%.",
+          discoveryImages: [aiCmsAtfV1, aiCmsAtfV2, aiBuilder1, aiBuilder2, aiBuilder3, aiBuilder4, aiAdmin1, aiAdmin2],
+          discoveryImageAlts: [
+            "Above the fold customization version 1 using the AI-ready modular design system",
+            "Above the fold customization version 2 using the AI-ready modular design system",
+            "Section of the modular landing page builder showing flexible design blocks",
+            "Section of the modular landing page builder showing flexible design blocks",
+            "Section of the modular landing page builder showing flexible design blocks",
+            "Section of the modular landing page builder showing flexible design blocks",
+            "Admin panel interface showing AI features for automated SEO content generation",
+            "Admin panel interface showing AI features for automated SEO content generation"
+          ],
+          discoveryImageCaptions: [
+            "Above the Fold customization (Variant 1).",
+            "Above the Fold customization (Variant 2).",
+            "Builder 1",
+            "Builder 2",
+            "Builder 3",
+            "Builder 4: Sections of the modular landing page builder integrated into the CMS.",
+            "Admin AI 1",
+            "Admin AI 2: Admin panel with built-in AI features for 95% faster page production."
+          ]
+        },
+        {
+          discoveryTitle: "8. The Verdict: Higher Intent & Faster Operations",
+          discoveryLeftTitle: "Outcomes:",
+          discoveryLeft: "• +12% Increase in Click-through to Booking.\n\n• Operational Velocity: Massive reduction in Time-to-Market for SEO pages.",
+          discoveryRightTitle: "Accessibility (a11y):",
+          discoveryRight: "Achieved WCAG AA compliance by rebalancing contrast and typography.",
+          discoveryImages: []
         }
       ]
     }
