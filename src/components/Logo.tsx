@@ -9,10 +9,10 @@ export default function Logo() {
     >
       <defs>
         <linearGradient id="holo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00f0ff" />     {/* Cyan */}
-          <stop offset="35%" stopColor="#ff66cc" />    {/* Pink */}
-          <stop offset="70%" stopColor="#ffb800" />    {/* Gold */}
-          <stop offset="100%" stopColor="#b800ff" />   {/* Violet */}
+          <stop offset="0%" stopColor="#4b90ff" />     {/* Gemini Blue */}
+          <stop offset="35%" stopColor="#9d56ff" />    {/* Gemini Purple */}
+          <stop offset="70%" stopColor="#ff6b9d" />    {/* Gemini Pink */}
+          <stop offset="100%" stopColor="#ffccd5" />   {/* Gemini Light Spark */}
         </linearGradient>
       </defs>
       {/* Base Path (Solid Color) */}
