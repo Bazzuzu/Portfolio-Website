@@ -233,6 +233,16 @@ button {
   color: var(--color-text-primary);
 }
 
+.logo span {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logo span {
+    display: inline;
+  }
+}
+
 .logo__dot {
   width: 8px;
   height: 8px;
