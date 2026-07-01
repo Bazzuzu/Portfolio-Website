@@ -19,8 +19,8 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname;
-      // Remove base path /Portfolio-Website and trailing slash
-      const relativePath = path.replace(/^\/Portfolio-Website/, "").replace(/\/$/, "");
+      // Remove trailing slash
+      const relativePath = path.replace(/\/$/, "");
 
       if (relativePath.startsWith("/cases/")) {
         const caseId = relativePath.replace("/cases/", "");

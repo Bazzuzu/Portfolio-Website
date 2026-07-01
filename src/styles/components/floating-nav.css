@@ -52,7 +52,7 @@
 }
 
 .floating-nav__link--disabled {
-  color: var(--color-text-disabled) !important;
+  color: var(--color-text-secondary) !important;
   text-decoration: none !important;
   cursor: default;
   pointer-events: none;

@@ -318,6 +318,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                               alt={section.discoveryImageAlts?.[0] || `${caseStudy.title} - Discovery session main interface layout`}
                               className="discovery-image-card__img"
                               referrerPolicy="no-referrer"
+                              loading="lazy"
                             />
                             <div className="discovery-image-card__zoom-indicator">
                               <CustomIcon src={maximizeSvg} size={14} />
@@ -350,6 +351,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                                   alt={section.discoveryImageAlts?.[globalIdx] || `${caseStudy.title} - Discovery session interface analysis segment ${globalIdx}`}
                                   className="discovery-image-card__img"
                                   referrerPolicy="no-referrer"
+                                  loading="lazy"
                                 />
                                 <div className="discovery-image-card__zoom-indicator">
                                   <CustomIcon src={maximizeSvg} size={14} />
@@ -428,6 +430,7 @@ export default function CaseStudy({ caseStudy, onBack, onNavigate }: CaseStudyPr
                         alt={work.imgAlt}
                         className="work-card__image"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
                       />
                     </div>
                     <div className="work-card__content">

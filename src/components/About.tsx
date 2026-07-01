@@ -301,6 +301,7 @@ export default function About({ onNavigate }: AboutProps) {
             alt="Lex Konovalov's design workspace setup featuring multi-screen layout for complex B2B systems mapping"
             className="about-workspace-image"
             referrerPolicy="no-referrer"
+            loading="lazy"
           />
         </motion.div>
       </section>

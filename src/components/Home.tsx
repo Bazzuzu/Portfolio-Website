@@ -259,6 +259,7 @@ export default function Home({ onNavigate }: HomeProps) {
                       alt={work.imgAlt}
                       className="work-card__image"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                   </div>
                   <div className="work-card__content">
@@ -313,6 +314,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     alt={project.alt}
                     className="project-card__image"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
                 <div className="project-card__content">

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift? — Lex Konovalov</title>
-    <meta name="description" content="Read how Lead Product Designer Lex Konovalov optimized a B2C mobile checkout funnel, achieving a +29% conversion lift through sticky CTAs and strategic trust integration.">
+    <title>How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift? — Lex Konovalov</title>
+    <meta name="description" content="Read how Lead Product Designer Lex Konovalov optimized a B2C mobile checkout funnel, achieving a +29.6% conversion lift through sticky CTAs and strategic trust integration.">
     <!-- Redirect human users to the interactive React SPA version -->
     <script>
       const isCrawler = /bot|googlebot|crawler|spider|robot|crawling|perplexity|gptbot/i.test(navigator.userAgent);
@@ -12,13 +12,13 @@
         window.location.replace('/?p=/cases/how-to-achieve-30-percent-conversion-lift-in-b2c');
       }
     </script>
-    <!-- Structured Data -->
+    <!-- Structured Data (JSON-LD Article) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "headline": "How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?",
-        "description": "B2C Conversion Rate Optimization case study demonstrating sticky CTAs, thumb-zone ergonomics, and trust architecture for mobile web forms.",
+        "@type": "Article",
+        "headline": "How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?",
+        "description": "B2C Conversion Rate Optimization case study demonstrating sticky CTAs, thumb-zone ergonomics, and trust architecture for mobile web forms, achieving a +29.6% conversion lift.",
         "author": {
           "@type": "Person",
           "name": "Oleksandr Konovalov",
@@ -57,6 +57,10 @@
         margin-top: 40px;
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 8px;
+      }
+      h3 {
+        font-size: 1.15rem;
+        margin-top: 25px;
       }
       ul, ol {
         padding-left: 20px;
@@ -101,77 +105,150 @@
       .back-link:hover {
         text-decoration: underline;
       }
+      figcaption {
+        font-size: 0.85rem;
+        color: #5e605c;
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 20px;
+      }
     </style>
 </head>
 <body>
-    <a href="/Portfolio-Website/" class="back-link">← Back to Portfolio</a>
+    <a href="/" class="back-link">← Back to Portfolio</a>
     
     <div class="tags">
-        <span class="tag">B2C Checkout</span>
-        <span class="tag">Conversion Rate Optimization (CRO)</span>
-        <span class="tag">A/B Testing</span>
-        <span class="tag">Mobile-First</span>
+        <span class="tag">Mobile Growth</span>
+        <span class="tag">CRO</span>
         <span class="tag">Lead Generation</span>
+        <span class="tag">A/B Testing</span>
+        <span class="tag">Accessibility (a11y)</span>
     </div>
 
-    <h1>How Did a Psychology-Driven Redesign Drive a +29% Mobile Lead Lift?</h1>
+    <article>
+        <h1>How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?</h1>
 
-    <h2>1. Executive Summary</h2>
-    <ul>
-        <li><strong>Role:</strong> Lead Product Designer (Research, UI/UX, A/B Testing).</li>
-        <li><strong>Scope:</strong> End-to-End Mobile Funnel Redesign (Audit ➔ A/B Testing).</li>
-        <li><strong>Users:</strong> High-Intent Mobile Travelers (70% of total traffic).</li>
-        <li><strong>The Problem:</strong> Despite high-intent traffic from Kayak/Google, the legacy "Request a Quote" page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate and severe rage-clicking.</li>
-        <li><strong>The Solution:</strong> A psychology-driven redesign focusing on "Thumb Zone" accessibility, cognitive load reduction, and strategic trust placement.</li>
-        <li><strong>Business Impact:</strong> +29.6% uplift in successful submissions, +70.4% increase in CTA clicks, and time-to-convert reduced from 2:05 to 1:36.</li>
-    </ul>
+        <ul>
+            <li><strong>My Role:</strong> Lead Product Designer (Research, UI/UX, A/B Testing)</li>
+            <li><strong>Scope:</strong> End-to-End Redesign (Audit ➔ A/B Testing)</li>
+            <li><strong>Status:</strong> Shipped & Validated (Winner Variant)</li>
+            <li><strong>Users:</strong> High-Intent Mobile Travelers (70% of traffic)</li>
+        </ul>
 
-    <img src="../assets/images/case-studies/checkout-rate-optimization/mobile-lead-generation-funnel-before-after.webp" alt="Comparison of legacy mobile travel checkout vs optimized high-conversion thumb-zone UI layout demonstrating form optimization steps">
+        <figure>
+            <img loading="lazy" src="/assets/luxury-business-class-mobile-request-form-ui.webp" alt="Mobile UI for luxury business class ticket request form optimized for high-ticket lead generation.">
+            <figcaption>Hero: The optimized mobile lead generation form for high-intent business class travelers.</figcaption>
+        </figure>
 
-    <h2>2. The Challenge: High Intent, Low Conversion</h2>
-    <p>We operate on an Agency Model where users don't "Buy Now"; they "Request a Quote" for $3,000+ luxury transactions. The barrier to entry should be near zero.</p>
-    <p>My UX audit revealed a "Leaky Bucket." While users arrived with specific dates and high intent, the interface fought against them:</p>
-    <ul>
-        <li><strong>Hierarchy Collapse:</strong> The hottest interaction zones were non-clickable price tags, causing rage clicks. The actual "Get Best Price" CTA faded into the background.</li>
-        <li><strong>Trust Deficit:</strong> For a $3k+ transaction, crucial trust signals were buried in the footer.</li>
-        <li><strong>Cognitive Strain:</strong> Inline placeholders and small touch targets caused input errors.</li>
-    </ul>
+        <h2>1. The Friction: High Intent, Low Conversion</h2>
 
-    <h2>3. Information Gain: The Failed Hypothesis</h2>
-    <blockquote>
-        <strong>The Failed Assumption:</strong> We initially tested adding more upfront context (detailed fare rules and urgency banners) to validate the high price tag before the user scrolled.<br>
-        <strong>The Reality:</strong> It created cognitive overload. Users ignored the text, and the extra scroll depth caused the primary CTA to drop out of view, lowering conversion.<br>
-        <strong>The Pivot:</strong> We shifted from a "Data Collection" mindset to a "Value Exchange" mindset. We stripped the noise and introduced an "Always-On" conversion path.
-    </blockquote>
+        <h3>The Business Context</h3>
+        <p>We operate on an Agency Model. Users don't "Buy Now"; they "Request a Quote" for luxury travel. For a $3,000+ transaction, the barrier to entry should be near zero. While 70% of our traffic came from mobile (Kayak/Google) carrying high intent, the legacy page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate.</p>
 
-    <h2>4. The Strategy: Frictionless Value Exchange</h2>
-    <p>To capture impulsive mobile traffic, I redesigned the core experience around speed and anxiety reduction.</p>
-    
-    <h3>1. The "Always-On" Conversion Path (Sticky CTA)</h3>
-    <ul>
-        <li><strong>The Fix:</strong> Implemented a Persistent Sticky Footer containing the price and the "Lock This Fare" button.</li>
-        <li><strong>The Logic:</strong> Ensures the conversion path is always within the "Thumb Zone," regardless of scroll depth.</li>
-        <li><strong>Result:</strong> CTA clicks skyrocketed by +70.4%.</li>
-    </ul>
+        <h3>The "Leaky Bucket" Audit</h3>
+        <p>My UX audit revealed that the interface actively fought against the user:</p>
+        <ul>
+            <li>Hierarchy Collapse & Rage Clicks: The hottest interaction zones were non-clickable price tags. The actual primary button faded into the background, performing worse than secondary navigation.</li>
+            <li>Trust Deficit: Crucial trust signals were buried in the footer, invisible at the point of decision.</li>
+            <li>Cognitive Strain: Disappearing inline placeholders and tiny touch targets caused constant input errors.</li>
+        </ul>
 
-    <h3>2. Strategic Trust Injection</h3>
-    <ul>
-        <li><strong>The Fix:</strong> Moved the Trustpilot rating (4.7/5) and "Verified by Agents" badge from the footer to directly below the CTA.</li>
-        <li><strong>The Logic:</strong> Providing social proof exactly at the Point of Action reduces high-ticket anxiety and bounce rates.</li>
-    </ul>
+        <figure>
+            <img loading="lazy" src="/assets/mobile-funnel-ux-audit-presentation.webp" alt="Detailed UX audit presentation identifying friction points and cognitive overload in the legacy mobile lead generation funnel.">
+            <figcaption>Discovery: Comprehensive UX audit mapping out cognitive friction and conversion blockers.</figcaption>
+        </figure>
 
-    <img src="../assets/images/case-studies/checkout-rate-optimization/sticky-cta-trust-injection-mobile-ui.webp" alt="Mobile UI demonstrating sticky footer CTA and strategic trust pilot integration for CRO">
+        <figure>
+            <img loading="lazy" src="/assets/hotjar-heatmap-legacy-mobile-checkout-rage-clicks.webp" alt="HotJar heatmap analysis showing rage clicks and user drop-offs on non-interactive elements in the legacy mobile interface.">
+            <figcaption>Data: HotJar heatmap revealing rage clicks and drop-off zones in the legacy UI.</figcaption>
+        </figure>
 
-    <h2>5. The Verdict: A/B Test Results & Validation</h2>
-    <p>We ran a controlled A/B experiment to filter out seasonal trends. The data proved that clarity is the ultimate persuasion tool.</p>
-    <ul>
-        <li><strong>Control Group:</strong> +5.0% (Natural variance) | Avg time to convert: 2:05</li>
-        <li><strong>Winning Variant:</strong> +29.6% Uplift in Requests | Avg time to convert: 1:36</li>
-        <li><strong>Stabilization:</strong> Reached an 11% stabilized Key Event Rate (nearly doubling historic performance).</li>
-    </ul>
+        <h2>2. Information Gain: The Failed Hypothesis</h2>
 
-    <h2>6. The Takeaway & Future Roadmap</h2>
-    <p>By removing friction and respecting the mobile user's context, we didn't just fix a page—we unlocked a revenue channel.</p>
-    <p>While this phase successfully maximized volume (Conversion Rate), the behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU) in upcoming validation cycles.</p>
+        <h3>The Failed Assumption</h3>
+        <p>We initially hypothesized that adding more upfront context (detailed fare rules and urgency banners) would validate the high price tag before the user scrolled.</p>
+
+        <h3>The Reality & Pivot</h3>
+        <p>It created severe cognitive overload. Users ignored the text, and the extra scroll depth pushed the primary CTA out of view, lowering conversion. We pivoted from a "Data Collection" mindset to a "Value Exchange" mindset—stripping the noise to introduce an "Always-On" conversion path.</p>
+
+        <h2>3. The Solution: Psychology-Driven Architecture</h2>
+
+        <h3>Feature A: The "Always-On" Conversion Path</h3>
+        <p>Mobile users scroll to explore, often losing the CTA. I shifted the UI from generic browsing to personalized ownership:</p>
+        <ul>
+            <li>Sticky Mechanic: Implemented a persistent footer ensuring the conversion path is always within the "Thumb Zone," regardless of scroll depth.</li>
+            <li>High-Contrast UI: Swapped the low-contrast brand button for Solid Black, separating the primary action from decorative elements.</li>
+            <li>Ownership-Driven Copy: Changed the generic "Get Best Price" to "Get My Quote". This psychological shift created a stronger sense of ownership.</li>
+        </ul>
+
+        <figure>
+            <img loading="lazy" src="/assets/mobile-above-the-fold-cro-before-after.webp" alt="Before and after comparison of the mobile above-the-fold UI, demonstrating cognitive load reduction for higher conversion.">
+            <figcaption>Above the Fold: Stripping away visual noise to focus strictly on the primary conversion action.</figcaption>
+        </figure>
+
+        <figure>
+            <img loading="lazy" src="/assets/mobile-form-active-states-keyboard-routing.webp" alt="Mobile form active states showing optimized native keyboard integration, promo code entry, and intuitive route editing.">
+            <figcaption>Micro-Interactions: Optimized active states, native keyboard triggers, and frictionless route editing.</figcaption>
+        </figure>
+
+        <h3>Feature B: Strategic Trust Injection</h3>
+        <p>Mobile users are skeptical of high-ticket offers from unknown brands. I shifted trust from a localized distraction to full-page credibility:</p>
+        <ul>
+            <li>Anchoring Trust Above the Fold: Placed the Trustpilot badge (10,044 reviews) prominently on the first screen to validate legitimacy the second a user lands.</li>
+            <li>Deprecating Distracting Media: Removed the legacy "actor-based" video. Data proved it was viewed as inauthentic and distracted users from the form.</li>
+            <li>The "Proof Combo": Designed a scannable block combining Real Customer Reviews with Industry Certifications exactly at the Point of Action.</li>
+        </ul>
+
+        <figure>
+            <img loading="lazy" src="/assets/trustpilot-integration-above-the-fold-ui.webp" alt="Strategic placement of Trustpilot ratings above the fold to establish immediate credibility for luxury travel leads.">
+            <figcaption>Point of Action: Injecting Trustpilot social proof directly Above the Fold to reduce bounce rates.</figcaption>
+        </figure>
+
+        <figure>
+            <img loading="lazy" src="/assets/strategic-trust-signals-redesign-before-after.webp" alt="Redesign of the trust section, moving from a cluttered legacy layout to a streamlined, high-conversion trust signal UI.">
+            <figcaption>Trust Architecture: Redesigning the trust section to provide immediate social proof without distraction.</figcaption>
+        </figure>
+
+        <figure>
+            <img loading="lazy" src="/assets/customer-reviews-ui-cognitive-load-reduction.webp" alt="Comparison of legacy noisy customer reviews section versus the new concise, high-conversion layout.">
+            <figcaption>Social Proof: Replacing visual clutter with a clean, scannable reviews interface.</figcaption>
+        </figure>
+
+        <figure>
+            <img loading="lazy" src="/assets/how-we-work-faq-mobile-screens.webp" alt="Mobile screens detailing the How we work process and FAQ to reduce user anxiety for high-ticket luxury purchases.">
+            <figcaption>Anxiety Reduction: Clear 'How We Work' and FAQ sections to address high-ticket buyer hesitations.</figcaption>
+        </figure>
+
+        <h3>Feature C: Systemic Consistency & Accessibility (a11y)</h3>
+        <p>I audited the interface against WCAG guidelines to eliminate "rage taps" and input errors:</p>
+        <ul>
+            <li>Usability Hygiene: Expanded interactive touch targets to 48dp+ and replaced disappearing placeholders with static, top-aligned labels. Users never lose context while typing.</li>
+            <li>Visual Unification: Standardized input styles, spacing, and typography to match the core design system, making the page look professional and secure.</li>
+        </ul>
+
+        <figure>
+            <img loading="lazy" src="/assets/responsive-mobile-ui-viewport-scaling.webp" alt="Responsive mobile UI scaling flawlessly from minimum device viewports to large mobile screens to ensure zero friction.">
+            <figcaption>Scalability: Ensuring frictionless UI rendering across all mobile viewports, from iPhone SE to Pro Max.</figcaption>
+        </figure>
+
+        <figure>
+            <img loading="lazy" src="/assets/agent-chat-cookie-consent-mobile-ui.webp" alt="Mobile UI showing unobtrusive agent chat integration and GDPR-compliant cookie consent window.">
+            <figcaption>Support & Compliance: Contextual agent chat and unobtrusive GDPR cookie consent.</figcaption>
+        </figure>
+
+        <h2>4. The Verdict (Results & Validation)</h2>
+
+        <h3>Business Impact</h3>
+        <p>We ran a controlled experiment to filter out seasonal trends. The results fundamentally shifted our mobile revenue channel:</p>
+        <ul>
+            <li>+29.6% Uplift in Successful Request Submissions (Primary Metric).</li>
+            <li>+70.4% Increase in CTA Clicks via the new Sticky Button.</li>
+            <li>11% Stabilized Key Event Rate (nearly doubling historic performance).</li>
+        </ul>
+
+        <h3>My Takeaway & Future Roadmap</h3>
+        <p>On mobile, clarity is the ultimate persuasion tool. By removing friction and respecting the user's context, we didn't just fix a page – we unlocked a revenue channel.</p>
+        <p>While this phase successfully maximized volume (Conversion Rate), the behavioral data uncovered deeper opportunities to drive value. I have formulated a new backlog of hypotheses focused on cross-selling and dynamic packaging to increase Revenue Per User (RPU), which are currently in the validation pipeline.</p>
+    </article>
 </body>
 </html>
