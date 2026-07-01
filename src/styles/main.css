@@ -1606,15 +1606,15 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
     filter: hue-rotate(0deg) brightness(1);
   }
   55% {
-    opacity: 1;
+    opacity: 0.64;
     filter: hue-rotate(90deg) brightness(1.2);
   }
   65% {
-    opacity: 1;
+    opacity: 0.64;
     filter: hue-rotate(180deg) brightness(1.35);
   }
   75% {
-    opacity: 1;
+    opacity: 0.64;
     filter: hue-rotate(270deg) brightness(1.2);
   }
 }
