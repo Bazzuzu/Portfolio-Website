@@ -44,6 +44,11 @@ import otherDs from "../assets/images/other-projects/other-projects-design-syste
 import otherAsync from "../assets/images/other-projects/other-projects-async-collaboration.webp";
 import otherToken from "../assets/images/other-projects/other-projects-token-structure.webp";
 
+// Thumbnails for home page performance optimization
+import traveltechHeroThumb from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard-thumb.webp";
+import croHeroThumb from "../assets/images/case-studies/checkout-rate-optimization/01-luxury-business-class-mobile-request-form-ui-thumb.webp";
+import aiHeroThumb from "../assets/images/case-studies/ai-modular-system/01-luxury-travel-desktop-redesign-ai-platform-thumb.webp";
+
 export interface DiscoverySection {
   discoveryTitle?: string;
   discoverySubtitle?: string;
@@ -63,6 +68,7 @@ export interface CaseStudy {
   tag: string;
   tags?: string[];
   headline: string;
+  heroThumbnail?: string;
   description: string;
   role: string;
   scope: string;
@@ -185,6 +191,7 @@ export const portfolioData: PortfolioData = {
       status: "Shipped & Scaled (Self-sustaining system)",
       businessImpact: "~40% reduction in processing time, elimination of manual data-bridging errors, and 2+ years of engineering autonomy.",
       images: [traveltechHero],
+      heroThumbnail: traveltechHeroThumb,
       challenge: "Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With 250 agents working across Excel, legacy GDS terminals, and fragmented email threads, the operational ceiling was real: complex bookings got avoided, pricing errors happened regularly, and a 15-minute delay meant losing a client permanently.",
       solution: "Replace this fragmented ecosystem with a unified system, designed from scratch. No existing product to iterate on. No instrumentation on the old process — we had behavioral signals and stakeholder testimony, not dashboards.",
       impact: "Agents gradually stopped avoiding complex bookings — the cognitive cost dropped enough to make them worthwhile. Pricing errors tied to manual data-bridging effectively disappeared.\n\nFor 2+ years post-launch, engineering shipped new modules independently with design involvement only twice. Processing time down ~40% by manager estimate — no baseline instrumentation existed, so behavioral signals are the honest metric here.",
@@ -291,6 +298,7 @@ export const portfolioData: PortfolioData = {
       status: "Shipped & Validated (Winner Variant)",
       users: "High-Intent Mobile Travelers (70% of traffic)",
       images: [croHero],
+      heroThumbnail: croHeroThumb,
       imageCaptions: ["Hero: The optimized mobile lead generation form for high-intent business class travelers."],
       challenge: "We operate on an Agency Model. Users don't \"Buy Now\"; they \"Request a Quote\" for luxury travel. For a $3,000+ transaction, the barrier to entry should be near zero. While 70% of our traffic came from mobile (Kayak/Google) carrying high intent, the legacy page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate.",
       solution: "A mobile-first redesign built around speed and anxiety reduction. Key interventions included: 1) a Persistent Sticky Footer containing the price and 'Lock This Fare' CTA always within the 'Thumb Zone'; 2) strategic trust placement, moving Trustpilot ratings (4.7/5) and 'Verified by Agents' badges from the footer directly below the point of action.",
@@ -382,6 +390,7 @@ export const portfolioData: PortfolioData = {
       status: "Shipped & Scaled (CMS-integrated)",
       businessImpact: "+27% Lift in Click-throughs to Booking Funnel, 95% Faster Landing Page creation (AI + Modular System), and reduced friction via Smart Defaults.",
       images: [aiHero],
+      heroThumbnail: aiHeroThumb,
       imageCaptions: ["Hero: The new AI-powered concierge platform desktop experience."],
       challenge: "Business-Class.com is a premium concierge service, but the legacy interface mimicked a DIY search engine. This 'Expectation Mismatch' caused high friction and bounce rates. Users entered the site with a 'DIY' mindset, expecting instant automated results. Fighting the user's mental model was killing conversion. I needed to gently transition their mindset from 'I want to search' to 'I need an expert', establishing immediate trust for high-ticket ($5k+) purchases.",
       solution: "A strategic UX realignment combining semantic shifts, smart defaults, and an AI-powered modular design system integrated directly into the CMS. We changed CTAs to reduce perceived commitment ('Check Your Price'), introduced smart defaults, resolved video backgrounds for Core Web Vitals (LCP), and implemented smart-trigger chats. We then built 15+ flexible modules that leverage AI to populate SEO text.",

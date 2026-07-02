@@ -255,7 +255,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     </div>
                     
                     <img
-                      src={work.images[0]}
+                      src={work.heroThumbnail || work.images[0]}
                       alt={work.imgAlt}
                       className="work-card__image"
                       referrerPolicy="no-referrer"
