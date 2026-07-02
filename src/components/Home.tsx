@@ -94,6 +94,7 @@ export default function Home({ onNavigate }: HomeProps) {
             id="brand-logo"
             href="#"
             className="logo hero__logo"
+            aria-label={`${portfolioData.designerName} - Home`}
             variants={itemVariants}
             onClick={(e) => {
               e.preventDefault();

@@ -158,6 +158,7 @@ export default function About({ onNavigate }: AboutProps) {
             id="brand-logo-about"
             href="#"
             className="logo"
+            aria-label={`${portfolioData.designerName} - Home`}
             variants={itemVariants}
             onClick={(e) => {
               e.preventDefault();
