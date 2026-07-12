@@ -4,7 +4,7 @@
   /* ---------------------------------------------------- */
   --font-family-display: "Space Grotesk", sans-serif;
   --font-family-sans: "Space Grotesk", sans-serif;
-  --font-family-serif: "Inika", serif;
+  --font-family-serif: "Noto Serif", serif;
   --font-family-mono: "JetBrains Mono", monospace;
 
   /* ---------------------------------------------------- */
@@ -71,25 +71,43 @@
   --font-title-sm-tracking: 0.01em;
 
   /* ---------------------------------------------------- */
-  /* Body Fonts (Inika for editorial warmth and readable) */
+  /* Body Fonts (Noto Serif for editorial warmth & readability) */
   /* ---------------------------------------------------- */
   --font-body-lg-family: var(--font-family-serif);
-  --font-body-lg-size: 1.25rem;           /* 20px */
+  --font-body-lg-size: clamp(1.125rem, 1.5vw + 0.8rem, 1.25rem);
   --font-body-lg-weight: 400;
   --font-body-lg-line-height: 1.6;
   --font-body-lg-tracking: 0;
 
+  --font-body-lg-bold-family: var(--font-body-lg-family);
+  --font-body-lg-bold-size: var(--font-body-lg-size);
+  --font-body-lg-bold-weight: 700;
+  --font-body-lg-bold-line-height: var(--font-body-lg-line-height);
+  --font-body-lg-bold-tracking: var(--font-body-lg-tracking);
+
   --font-body-md-family: var(--font-family-serif);
-  --font-body-md-size: 1.125rem;          /* 18px */
+  --font-body-md-size: clamp(1rem, 1.2vw + 0.7rem, 1.125rem);
   --font-body-md-weight: 400;
-  --font-body-md-line-height: 1.55;
+  --font-body-md-line-height: 1.6;
   --font-body-md-tracking: 0;
 
+  --font-body-md-bold-family: var(--font-body-md-family);
+  --font-body-md-bold-size: var(--font-body-md-size);
+  --font-body-md-bold-weight: 700;
+  --font-body-md-bold-line-height: var(--font-body-md-line-height);
+  --font-body-md-bold-tracking: var(--font-body-md-tracking);
+
   --font-body-sm-family: var(--font-family-serif);
-  --font-body-sm-size: 1rem;              /* 16px */
+  --font-body-sm-size: 1rem;
   --font-body-sm-weight: 400;
-  --font-body-sm-line-height: 1.5;
+  --font-body-sm-line-height: 1.6;
   --font-body-sm-tracking: 0;
+
+  --font-body-sm-bold-family: var(--font-body-sm-family);
+  --font-body-sm-bold-size: var(--font-body-sm-size);
+  --font-body-sm-bold-weight: 700;
+  --font-body-sm-bold-line-height: var(--font-body-sm-line-height);
+  --font-body-sm-bold-tracking: var(--font-body-sm-tracking);
 
   /* ---------------------------------------------------- */
   /* Label Fonts (Space Grotesk for uppercase utility UI)*/

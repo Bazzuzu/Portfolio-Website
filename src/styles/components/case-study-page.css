@@ -265,7 +265,7 @@
 }
 
 .case-study__discovery-subtitle {
-  max-width: 800px;
+  max-width: 65ch;
 }
 
 .col-layout-2--has-images {
@@ -296,4 +296,346 @@
   letter-spacing: var(--font-label-md-tracking);
   color: var(--color-text-secondary);
   text-align: center;
+}
+
+/* ==========================================================================
+   Newsletter Custom Case Study Layout
+   ========================================================================== */
+
+.case-study--custom-newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.newsletter-hero-banner {
+  background-color: var(--color-section-sunken); /* 1 tone darker than standard white canvas */
+  width: 100%;
+  padding-top: var(--spacing-newsletter-hero-pt);
+  padding-bottom: var(--spacing-newsletter-hero-pb);
+  margin-bottom: var(--spacing-newsletter-hero-mb);
+}
+
+.newsletter-hero-title {
+  text-align: center;
+  margin-bottom: var(--spacing-section-py-md);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.newsletter-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-container-gap-lg);
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .newsletter-hero-grid {
+    grid-template-columns: var(--size-newsletter-phone-w) var(--size-newsletter-column-w);
+    gap: var(--spacing-newsletter-grid-gap);
+    justify-content: center;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}
+
+.newsletter-hero-lead {
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  font-weight: var(--font-body-md-weight);
+  line-height: var(--font-body-md-line-height);
+  letter-spacing: var(--font-body-md-tracking);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-py-md);
+}
+
+.newsletter-hero-right {
+  max-width: var(--size-newsletter-column-w);
+  width: 100%;
+}
+
+.newsletter-grid-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-container-gap-lg);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .newsletter-grid-split {
+    grid-template-columns: var(--size-newsletter-column-w) var(--size-newsletter-column-w);
+    gap: var(--spacing-newsletter-grid-gap);
+    justify-content: center;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+}
+
+.newsletter-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-component-py-md);
+  width: 100%;
+  max-width: var(--size-newsletter-column-w);
+  height: 100%;
+}
+
+.newsletter-col--image-only {
+  justify-content: center;
+}
+
+.newsletter-section-title {
+  font-family: var(--font-display-md-family);
+  font-size: var(--font-display-md-size);
+  font-weight: var(--font-display-md-weight);
+  line-height: var(--font-display-md-line-height);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-py-md);
+}
+
+.newsletter-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-py-md);
+  margin-top: var(--spacing-component-py-md);
+}
+
+.newsletter-bullets li {
+  position: relative;
+  padding-left: var(--spacing-component-px-lg);
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  line-height: var(--font-body-md-line-height);
+}
+
+.newsletter-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-text-primary);
+  font-weight: bold;
+}
+
+.bullet-title {
+  font-family: var(--font-body-md-bold-family);
+  font-size: var(--font-body-md-bold-size);
+  font-weight: var(--font-body-md-bold-weight);
+  line-height: var(--font-body-md-bold-line-height);
+  letter-spacing: var(--font-body-md-bold-tracking);
+  color: var(--color-text-primary);
+}
+
+.bullet-desc {
+  color: var(--color-text-secondary);
+}
+
+.newsletter-col .text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-col .discovery-image-container {
+  margin: 0;
+  width: 100%;
+}
+
+.newsletter-col .discovery-image-card__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.newsletter-full-banner {
+  margin-block: var(--spacing-section-py-md);
+  width: 100%;
+}
+
+.newsletter-full-banner .discovery-image-container {
+  margin: 0;
+}
+
+.newsletter-rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-py-sm);
+  margin-top: var(--spacing-component-py-md);
+}
+
+.newsletter-rules-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.newsletter-rules-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-brand);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Newsletter Mockup Dimensions
+   ========================================================================== */
+
+:root {
+  --size-newsletter-phone-w: 240px;
+  --size-newsletter-phone-h: 522px;
+  --size-newsletter-column-w: 480px;
+  --spacing-newsletter-grid-gap: 5rem; /* 80px */
+  --spacing-newsletter-hero-pt: 5rem;   /* 80px mobile */
+  --spacing-newsletter-hero-pb: 2.5rem; /* 40px mobile */
+  --spacing-newsletter-hero-mb: 2.5rem; /* 40px mobile */
+  --spacing-newsletter-section-py: 2.5rem; /* 40px mobile */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --spacing-newsletter-hero-pt: 8rem;   /* 128px desktop */
+    --spacing-newsletter-hero-pb: var(--spacing-section-py-lg); /* 96px desktop */
+    --spacing-newsletter-hero-mb: var(--spacing-section-py-md); /* 72px desktop */
+    --spacing-newsletter-section-py: var(--spacing-section-py-md); /* 72px desktop */
+  }
+}
+
+.newsletter-phone-mockup {
+  width: var(--size-newsletter-phone-w) !important;
+  max-width: var(--size-newsletter-phone-w) !important;
+  height: var(--size-newsletter-phone-h) !important;
+  aspect-ratio: 240 / 522;
+  margin-inline: auto;
+}
+
+.newsletter-phone-mockup .discovery-image-card,
+.newsletter-phone-mockup .discovery-image-card__img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.newsletter-hero-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Image Container Resets (No borders/backgrounds, scale to width)
+   ========================================================================== */
+
+.case-study--custom-newsletter .discovery-image-card {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  aspect-ratio: auto !important;
+  padding: 0 !important;
+  width: 100%;
+  height: auto !important;
+}
+
+.case-study--custom-newsletter .discovery-image-card__img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+
+.case-study--custom-newsletter .discovery-image-container {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.newsletter-bullets + .text-block__body {
+  margin-top: var(--spacing-component-py-md);
+}
+
+.newsletter-col--bottom {
+  justify-content: flex-end !important;
+}
+
+.newsletter-col--bottom .discovery-image-container {
+  margin-top: auto !important;
+}
+
+.newsletter-section-header {
+  margin-bottom: var(--spacing-section-py-md);
+  text-align: center;
+  width: 100%;
+}
+
+.newsletter-section-subtitle {
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-component-py-xs);
+  margin-bottom: var(--spacing-section-py-md);
+  max-width: var(--size-text-w-md); /* 640px */
+  margin-inline: auto;
+}
+
+.newsletter-subsection-title {
+  font-family: var(--font-body-md-bold-family);
+  font-size: var(--font-body-md-bold-size);
+  font-weight: var(--font-body-md-bold-weight);
+  line-height: var(--font-body-md-bold-line-height);
+  letter-spacing: var(--font-body-md-bold-tracking);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-py-sm);
+}
+
+.newsletter-col--center {
+  justify-content: center !important;
+}
+
+.newsletter-specs-container {
+  max-width: var(--size-text-w-md);
+  margin-inline: auto;
+  margin-top: var(--spacing-section-py-md);
+  margin-bottom: var(--spacing-section-py-lg);
+}
+
+.newsletter-specs-container ul + ul {
+  margin-top: var(--spacing-component-py-md);
+}
+
+/* Page-level divider removal overrides */
+.case-study--custom-newsletter .case-study__header {
+  border-bottom: none !important;
+}
+
+.case-study--custom-newsletter .case-study__navigation {
+  border-top: none !important;
+}
+
+.case-study--custom-newsletter .case-study__discovery {
+  border-top: none !important;
+  border-bottom: none !important;
+  margin-top: 0 !important;
+  padding-block: var(--spacing-newsletter-section-py) !important;
+}
+
+.case-study--custom-newsletter .text-block__body {
+  font-size: var(--font-body-md-size) !important;
+  line-height: var(--font-body-md-line-height) !important;
+}
+
+.case-study--custom-newsletter .text-block__body,
+.case-study--custom-newsletter .bullet-desc,
+.case-study--custom-newsletter .newsletter-section-subtitle,
+.case-study--custom-newsletter .text-block__body-secondary {
+  color: var(--color-text-primary) !important;
 }

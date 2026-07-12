@@ -57,3 +57,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.project-card--clickable {
+  cursor: pointer;
+}
+
+.project-card--clickable:hover .project-card__image {
+  transform: scale(1.03);
+}
+
+.project-card--clickable:hover .project-card__title {
+  color: var(--color-text-brand);
+}

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Home from "./components/Home";
 import About from "./components/About";
 import CaseStudy from "./components/CaseStudy";
+import DailyThing from "./components/DailyThing";
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
 import CustomIcon from "./components/CustomIcon";
 import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
@@ -22,7 +23,11 @@ export default function App() {
       // Remove trailing slash
       const relativePath = path.replace(/\/$/, "");
 
-      if (relativePath.startsWith("/cases/")) {
+      if (relativePath.startsWith("/daily-thing/")) {
+        const caseId = relativePath.replace("/daily-thing/", "");
+        setCurrentPage("daily-thing");
+        setSelectedCaseId(caseId);
+      } else if (relativePath.startsWith("/cases/")) {
         const caseId = relativePath.replace("/cases/", "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
@@ -72,13 +77,15 @@ export default function App() {
     let targetPath = "/";
     if (page === "about") {
       targetPath = "/about";
+    } else if (page === "daily-thing" && params?.caseId) {
+      targetPath = `/daily-thing/${params.caseId}`;
     } else if (page === "case-study" && params?.caseId) {
       targetPath = `/cases/${params.caseId}`;
     }
 
     window.history.pushState(null, "", targetPath);
 
-    if (page === "case-study" && params?.caseId) {
+    if ((page === "case-study" || page === "daily-thing") && params?.caseId) {
       setSelectedCaseId(params.caseId);
     } else {
       setSelectedCaseId(null);
@@ -113,6 +120,10 @@ export default function App() {
     (c) => c.id === selectedCaseId
   ) || portfolioData.caseStudies[0];
 
+  const selectedDailyThing = portfolioData.dailyThings.find(
+    (d) => d.id === selectedCaseId
+  ) || portfolioData.dailyThings[0];
+
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -120,7 +131,7 @@ export default function App() {
   return (
     <div className="portfolio">
       {/* Floating Navigation Pill */}
-      {currentPage !== "case-study" ? (
+      {currentPage !== "case-study" && currentPage !== "daily-thing" ? (
         <nav id="floating-nav" className="floating-nav">
           {activeTab === "home" ? (
             <span
@@ -214,6 +225,22 @@ export default function App() {
             >
               <CaseStudy
                 caseStudy={selectedCase}
+                onBack={() => navigateTo("home")}
+                onNavigate={navigateTo}
+              />
+            </motion.div>
+          )}
+
+          {currentPage === "daily-thing" && (
+            <motion.div
+              key={`daily-${selectedCaseId}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <DailyThing
+                dailyThing={selectedDailyThing}
                 onBack={() => navigateTo("home")}
                 onNavigate={navigateTo}
               />

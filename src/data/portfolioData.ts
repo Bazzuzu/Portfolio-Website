@@ -43,6 +43,20 @@ import otherLlm from "../assets/images/other-projects/other-projects-llm-landing
 import otherDs from "../assets/images/other-projects/other-projects-design-system-tokens.webp";
 import otherAsync from "../assets/images/other-projects/other-projects-async-collaboration.webp";
 import otherToken from "../assets/images/other-projects/other-projects-token-structure.webp";
+// Newsletter Form Case Study (Concepts & Architecture)
+import newsletterHeroCardThumb from "../assets/images/other-projects/newsletter-form/00 Designing My First Newsletter Form After 10 Years In UX.webp";
+import newsletterHeroThumb from "../assets/images/other-projects/newsletter-form/01-newsletter-hero-thumb.webp";
+import newsletterCheckout from "../assets/images/other-projects/newsletter-form/02-fast-checkout-vs-validation.webp";
+import newsletterDesktopForm from "../assets/images/other-projects/newsletter-form/03-desktop-subscription-form.webp";
+import newsletterBanner from "../assets/images/other-projects/newsletter-form/04-newsletter-banner.webp";
+import newsletterKeyboards from "../assets/images/other-projects/newsletter-form/05-mobile-active-keyboards.webp";
+import newsletterConcierge from "../assets/images/other-projects/newsletter-form/06-unpublished-pages-custom-domains.webp";
+import newsletterSteps from "../assets/images/other-projects/newsletter-form/07-progressive-capture-steps.webp";
+import newsletterVerification from "../assets/images/other-projects/newsletter-form/08-progressive-capture-verification.webp";
+import newsletterWizard from "../assets/images/other-projects/newsletter-form/09-customizing-wizard-dashboard.webp";
+import newsletterBannerPreview from "../assets/images/other-projects/newsletter-form/10-newsletter-banner-preview.webp";
+import newsletterCustomOptions from "../assets/images/other-projects/newsletter-form/11-customization-options-preview.webp";
+import newsletterThankYou from "../assets/images/other-projects/newsletter-form/12-form-thank-you-view.webp";
 
 // Thumbnails for home page performance optimization
 import traveltechHeroThumb from "../assets/images/case-studies/luxury-travel-os/01-unified-traveltech-erp-agent-dashboard-thumb.webp";
@@ -91,6 +105,7 @@ export interface CaseStudy {
   href: string;
   ariaLabel: string;
   imgAlt: string;
+  category?: "work" | "concept";
 }
 
 export interface OtherProject {
@@ -98,6 +113,7 @@ export interface OtherProject {
   title: string;
   image: string;
   alt: string;
+  href?: string;
 }
 
 export interface MediumArticle {
@@ -131,6 +147,7 @@ export interface PortfolioData {
   phone: string;
   location: string;
   caseStudies: CaseStudy[];
+  dailyThings: CaseStudy[];
   otherProjects: OtherProject[];
   mediumArticles: MediumArticle[];
 }
@@ -523,7 +540,113 @@ export const portfolioData: PortfolioData = {
       ]
     }
   ],
+  dailyThings: [
+    {
+      id: "designing-my-first-newsletter-form-after-10-years-in-ux",
+      title: "Newsletter Capture Architecture",
+      pageTitle: "Designing My First Newsletter Form After 10 Years In UX",
+      tag: "Concepts / Architecture",
+      tags: ["UX Design", "Interaction Logic", "Form Architecture", "Progressive Capture", "Privacy-First"],
+      headline: "Designing My First Newsletter Form After 10 Years In UX",
+      description: "Design is a trade of tradeoffs. Simple utility cards often invite high bounce rates and automated spam. When dealing with high-ticket conversion funnels, the newsletter form is a critical, high-intent entry point. Simple inputs lead to garbage databases; complex validations irritate genuine users. This case study breaks down how we balanced conversions, privacy and mobile keyboard dynamics.",
+      role: "Lead Product Designer (Interaction Logic, Interface Architecture)",
+      scope: "Desktop & Mobile Form UX Flow",
+      status: "Concept & Spec Drafted",
+      businessImpact: "Clean leads capture, optimal mobile thumb-zone layout, zero database dependency logic, self-sustaining modular setup.",
+      images: [
+        newsletterHeroThumb,
+        newsletterCheckout,
+        newsletterDesktopForm,
+        newsletterBanner,
+        newsletterKeyboards,
+        newsletterConcierge,
+        newsletterSteps,
+        newsletterVerification,
+        newsletterWizard,
+        newsletterBannerPreview,
+        newsletterCustomOptions,
+        newsletterThankYou
+      ],
+      heroThumbnail: newsletterHeroCardThumb,
+      challenge: "Most newsletter signups are treated as trivial utilities. However, when dealing with premium $10,000+ travel packages, the newsletter form is a high-intent B2B entry point. Simple forms lead to heavy spam and low-quality data. Over-complicated forms trigger immediate friction and bounce rates on mobile viewports.",
+      solution: "A 2-step progressive signup experience. Step 1 captures the email address instantly (ensuring lead capture). Step 2 gathers name and user preferences dynamically, avoiding immediate layout shock and maintaining optimal mobile focus.",
+      impact: "We resolved the tension between conversion rates and lead quality by moving to a progressive, keyboard-aware wizard flow. Spiders and bots are blocked via silent honeypot fields, keeping database logs clean.",
+      discoverySections: [
+        {
+          discoveryTitle: "The User: Protecting the inbox-core",
+          discoveryLeftTitle: "Protecting the Inbox",
+          discoveryLeft: "Design is not a zero-sum game. You can protect conversion rates and prevent spam at the same time. We map validations to separate stages of focus to prevent validation fatigue.",
+          discoveryImages: [newsletterCheckout, newsletterDesktopForm],
+          discoveryImageAlts: [
+            "Fast checkout vs input validation screen comparison",
+            "Desktop newsletter subscription form wireframe with hover states"
+          ],
+          discoveryImageCaptions: [
+            "Mobile validation triggers compared: Instant inline alerts vs delayed submit warning.",
+            "Desktop layout with dedicated micro-copy stating strict database security."
+          ]
+        },
+        {
+          discoveryTitle: "The User Behavior: The Capricious Attention",
+          discoveryLeftTitle: "Managing Active Attention",
+          discoveryLeft: "Focus is fragile. By minimizing immediate visual commitments and optimizing thumb-zone layouts, we prevent user distraction.",
+          discoveryImages: [newsletterBanner, newsletterKeyboards],
+          discoveryImageAlts: [
+            "Newsletter banner promotion visual mockup",
+            "Active screen keyboard spacing ergonomics on iOS"
+          ],
+          discoveryImageCaptions: [
+            "Banner promotion with prominent visual accents.",
+            "Keyboard ergonomics optimization keeping input fields completely visible on screen focus."
+          ]
+        },
+        {
+          discoveryTitle: "The Core Solution: 2-Step Progressive Capture",
+          discoveryLeftTitle: "Progressive Step Breakdown",
+          discoveryLeft: "1. Capture email first. 2. Request name and preferences. Users are significantly more likely to complete optional fields once they have made the initial action of inputting their email address.",
+          discoveryImages: [newsletterSteps, newsletterVerification],
+          discoveryImageAlts: [
+            "Step 1 and Step 2 progressive input flows",
+            "Step 3 and Step 4 validation details"
+          ],
+          discoveryImageCaptions: [
+            "First capture phase focusing only on core identification.",
+            "Secondary details collection requesting preferences and verification code."
+          ]
+        },
+        {
+          discoveryTitle: "The Future Roadmap: Customizing Wizard",
+          discoveryLeftTitle: "Self-Sustaining Configuration",
+          discoveryLeft: "To make the system modular and easy to govern, we built a configuration wizard allowing administrators to toggle inputs and visual layouts without engineering help.",
+          discoveryImages: [newsletterWizard, newsletterBannerPreview, newsletterCustomOptions, newsletterThankYou],
+          discoveryImageAlts: [
+            "Admin wizard dashboard wireframe",
+            "Banner design preview variations",
+            "Visual custom theme options",
+            "Subscription success screen"
+          ],
+          discoveryImageCaptions: [
+            "Dashboard panel showing simple layout and toggle settings.",
+            "Preview modules matching different content themes.",
+            "Advanced customize options color palette mapping.",
+            "Polished checkmark success message."
+          ]
+        }
+      ],
+      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux",
+      ariaLabel: "Read how we designed a 2-step progressive newsletter signup form",
+      imgAlt: "Newsletter signup progressive UX wireframe and design architecture",
+      category: "concept"
+    }
+  ],
   otherProjects: [
+    {
+      id: "designing-my-first-newsletter-form-after-10-years-in-ux",
+      title: "Designing My First Newsletter Form After 10 Years In UX",
+      image: newsletterHeroCardThumb,
+      alt: "Newsletter signup progressive UX wireframe and design architecture",
+      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux"
+    },
     {
       id: "other-llm-prototyping",
       title: "ERP Module LLM Prototyping Experience",
@@ -535,12 +658,6 @@ export const portfolioData: PortfolioData = {
       title: "Enterprise Design System Sync",
       image: otherDs,
       alt: "Design system synchronization tool mapping Figma design components directly to React code variables"
-    },
-    {
-      id: "other-async-ops",
-      title: "Asynchronous Operations Dashboard",
-      image: otherAsync,
-      alt: "Asynchronous task orchestration dashboard designed to reduce cognitive load in complex B2B workflows"
     },
     {
       id: "other-token-handshake",

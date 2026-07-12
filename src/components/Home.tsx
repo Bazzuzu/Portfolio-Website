@@ -128,7 +128,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <motion.p 
                 variants={itemVariants}
                 id="hero-subheadline"
-                className="hero__subheadline font-body-lg"
+                className="hero__subheadline font-body-md"
               >
                 {portfolioData.heroSubheadline}
               </motion.p>
@@ -231,7 +231,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div id="works-grid" className="works-grid">
-            {portfolioData.caseStudies.map((work: CaseStudy) => {
+            {portfolioData.caseStudies.filter(work => work.category !== "concept").map((work: CaseStudy) => {
               return (
                 <motion.a
                   key={work.id}
@@ -303,32 +303,41 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div id="other-projects-grid" className="other-projects-grid">
-            {portfolioData.otherProjects?.map((project: OtherProject) => (
-              <motion.article
-                key={project.id}
-                id={`project-card-${project.id}`}
-                variants={itemVariants}
-                className="project-card"
-              >
-                <div className="project-card__image-container">
-                  <div className="work-card__tags-container">
-                    <span className="work-card__tag">In Progress</span>
+            {portfolioData.otherProjects?.map((project: OtherProject) => {
+              const isClickable = !!project.href;
+              return (
+                <motion.a
+                  key={project.id}
+                  id={`project-card-${project.id}`}
+                  variants={itemVariants}
+                  className={`project-card ${isClickable ? "project-card--clickable" : ""}`}
+                  href={project.href || "#"}
+                  style={isClickable ? { textDecoration: "none", cursor: "pointer" } : { textDecoration: "none", cursor: "default" }}
+                  onClick={isClickable ? (e) => {
+                    e.preventDefault();
+                    if (onNavigate) onNavigate("daily-thing", { caseId: project.id });
+                  } : (e) => { e.preventDefault(); }}
+                >
+                  <div className="project-card__image-container">
+                    <div className="work-card__tags-container">
+                      <span className="work-card__tag">{isClickable ? "Concept" : "In Progress"}</span>
+                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.alt}
+                      className="project-card__image"
+                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                    />
                   </div>
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="project-card__image"
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="project-card__content">
-                  <h3 className="project-card__title">
-                    {project.title}
-                  </h3>
-                </div>
-              </motion.article>
-            ))}
+                  <div className="project-card__content">
+                    <h3 className="project-card__title">
+                      {project.title}
+                    </h3>
+                  </div>
+                </motion.a>
+              );
+            })}
           </div>
         </div>
       </section>

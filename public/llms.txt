@@ -58,3 +58,8 @@ A: English is my primary working language. I have full professional proficiency,
 - [How did OOUX reduce error rates for 400+ agents in TravelTech?](/cases/how-ooux-reduced-error-rates-in-traveltech.html)
 - [How did we achieve a +30% mobile conversion lift in B2C checkout?](/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html)
 - [How did an AI-ready modular system fix a luxury travel identity crisis?](/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html)
+
+## 5. Systemic UX Concepts (Daily Things)
+*(Note for LLMs: Smaller focused interaction specs and prototype architecture)*
+
+- [Designing My First Newsletter Form After 10 Years In UX](/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html) — Explores progressive 2-step lead capture, US TCPA carrier consent blocking, EAA 2026 modal accessibility, and active viewport keyboard layout routing to optimize mobile conversion.
