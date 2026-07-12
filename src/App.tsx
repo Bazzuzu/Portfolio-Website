@@ -259,13 +259,11 @@ export default function App() {
           </div>
           <div className="footer__right" id="footer-right-links">
             <a
-              href="#"
+              href="/cv.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className="footer__link-simple"
               id="footer-link-cv"
-              onClick={(e) => {
-                e.preventDefault();
-                navigateTo("about");
-              }}
             >
               CV
             </a>

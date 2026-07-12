@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleksandr Konovalov — Senior Product Designer CV</title>
+    <meta name="description" content="CV of Oleksandr Konovalov, Senior Product Designer specializing in B2B SaaS, ERP, Marketplaces and systems design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-canvas: #FCFCFC;
+            --color-text-primary: #111111;
+            --color-text-secondary: #555555;
+            --color-border-subtle: #E0E0DF;
+            --color-brand: #111111;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F5F5F4;
+            color: var(--color-text-primary);
+            font-family: var(--font-body);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 40px 20px;
+        }
+
+        .cv-wrapper {
+            background-color: var(--color-canvas);
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            position: relative;
+        }
+
+        .header-actions {
+            max-width: 820px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background-color: #111111;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-action:hover {
+            opacity: 0.9;
+        }
+
+        .btn-back {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border-subtle);
+        }
+
+        header {
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+            color: var(--color-brand);
+        }
+
+        .subtitle {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+
+        .meta-info a {
+            color: var(--color-text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--color-border-subtle);
+            transition: border-color 0.2s ease;
+        }
+
+        .meta-info a:hover {
+            border-color: var(--color-text-primary);
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--color-border-subtle);
+            margin: 20px 0;
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-brand);
+            margin-bottom: 12px;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .summary-text strong {
+            color: var(--color-text-primary);
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .exp-title-company {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .exp-meta {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+
+        .exp-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .bullets-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullets-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .bullets-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-text-primary);
+        }
+
+        .bullets-list li strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-text-primary);
+        }
+
+        .skills-list li strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        .edu-item {
+            margin-bottom: 12px;
+        }
+
+        .edu-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .edu-school {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                color: #000000;
+            }
+
+            .cv-wrapper {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            h1, h2, .exp-title-company, .edu-title {
+                color: #000000;
+            }
+
+            .meta-info a {
+                color: #000000;
+                border-bottom: none;
+            }
+
+            .bullets-list li::before, .skills-list li::before {
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-actions">
+        <a href="/" class="btn-action btn-back">← Back to Portfolio</a>
+        <button onclick="window.print()" class="btn-action">Download PDF / Print</button>
+    </div>
+
+    <div class="cv-wrapper">
+        <header>
+            <h1>Oleksandr Konovalov</h1>
+            <div class="subtitle">Senior Product Designer (B2B SaaS, Marketplaces & Systems)</div>
+            <div class="meta-info">
+                <span>Alicante, Spain</span>
+                <span>|</span>
+                <span>+34 643 851 237</span>
+                <span>|</span>
+                <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a>
+                <span>|</span>
+                <a href="https://lexkonovalov.com">lexkonovalov.com</a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/lex-konovalov/" target="_blank">linkedin.com/in/lex-konovalov</a>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary-text">
+                Senior Product Designer with 8+ years of experience designing complex two-sided marketplaces and B2B platforms. I specialize in translating complex transactional logic (high-value bookings, financial flows) into high-density, functional interfaces.
+            </p>
+            <p class="summary-text">
+                <strong>Core Value:</strong> I use Object-Oriented UX (OOUX) to align product architecture with database schemas, and leverage AI-native workflows (Cursor, v0) to prototype in code and validate product hypotheses 3x faster.
+            </p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title-company">Lead Product Designer (B2B SaaS & ERP) — Business Class (Luxury Travel OTA)</div>
+                    <div class="exp-meta">Remote (US HQ) | Dec 2020 – Present</div>
+                </div>
+                <p class="exp-desc">Leading design strategy for a high-AOV ($5k+) transaction platform. Transformed the ecosystem from a legacy manual model into a tech-enabled hybrid marketplace.</p>
+                <ul class="bullets-list">
+                    <li><strong>Agent ERP (0-to-1):</strong> Applied OOUX principles to architect a unified system for Sales, Financial Compliance, and CRM. Mapped object relationships to match engineering schemas, reducing agent transaction processing time by 40%.</li>
+                    <li><strong>Operational Scalability:</strong> Designed self-service flows and standardized UI patterns. Enabled the operations team to handle a 2x increase in transaction volume with the same headcount.</li>
+                    <li><strong>Design Infrastructure:</strong> Built and owned a tokenized Design System synced directly with the React codebase. Treated tokens as engineering infrastructure, allowing marketing teams to scale pages independently.</li>
+                    <li><strong>Mobile Growth:</strong> Redesigned mobile lead capture with context-aware logic. Increased qualified lead conversion by 27% while reducing support ticket volume.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" style="margin-top: 20px;">
+                <div class="exp-header">
+                    <div class="exp-title-company">Senior Product Designer — Fareportal (CheapOair app)</div>
+                    <div class="exp-meta">Remote (US HQ) | Sep 2019 – Apr 2020</div>
+                </div>
+                <p class="exp-desc">Core Product Designer for the Android team (5M+ downloads). Focused on high-traffic B2C funnels and monetization.</p>
+                <ul class="bullets-list">
+                    <li><strong>Revenue Optimization:</strong> Redesigned the Checkout and Ancillary flows (insurance/add-ons), contributing to a ~12% YoY increase in revenue per user.</li>
+                    <li><strong>Mobile Transformation:</strong> Spearheaded the migration from Hybrid/Webview to Native Android components, boosting App Store rating from 3.8 to 4.5.</li>
+                    <li><strong>Design Governance:</strong> Established library standards for a distributed team of 20+ designers, streamlining the design-to-development handoff.</li>
+                    <li><strong>Environment:</strong> Native Android (Material Design), Sketch, UserTesting, CRO.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" style="margin-top: 20px;">
+                <div class="exp-header">
+                    <div class="exp-title-company">Lead UX/UI Designer — Rademade (SaaS & Marketplace Dev)</div>
+                    <div class="exp-meta">Kyiv, Ukraine | Dec 2018 – Apr 2019</div>
+                </div>
+                <p class="exp-desc">Combined a leadership role (managing a team of 6) with hands-on product design for a Swiss marketplace ecosystem.</p>
+                <ul class="bullets-list">
+                    <li><strong>Marketplace Design (Lemonfrog):</strong> Optimized search and filtering logic for the Real Estate (Housing) and Jobs marketplaces, increasing search-to-application conversion by ~20%.</li>
+                    <li><strong>Design Leadership:</strong> Managed mentorship and QA. Introduced standardized usability testing protocols and KPI-based reviews, improving design delivery velocity.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" style="margin-top: 20px;">
+                <div class="exp-header">
+                    <div class="exp-title-company">UX/UI Designer — Kaaiot / CyberVision (IoT, MedTech & AI)</div>
+                    <div class="exp-meta">Kyiv, Ukraine | Dec 2017 – Dec 2018</div>
+                </div>
+                <p class="exp-desc">Designed interfaces for high-complexity IoT and AI medical platforms.</p>
+                <ul class="bullets-list">
+                    <li><strong>Critical Systems (Outset Medical):</strong> Redesigned the service dashboard for Outset Medical, reducing time-on-task for maintenance technicians by 60%.</li>
+                    <li><strong>AI Data Viz (DeepLens):</strong> Designed the interface for an AI-powered prediction platform, translating complex datasets into actionable insights. Solved challenges of trust and transparency in AI models.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Product Strategy:</strong> Product Discovery, OOUX (Object-Oriented UX) & Domain Modeling, Data-driven UX (A/B testing, CRO), Stakeholder Management.</li>
+                <li><strong>Systems & Craft:</strong> Design System Architecture (Tokens, Variables, W3C Primitives), Information Architecture, High-density Dashboards, Dev Handoff Precision.</li>
+                <li><strong>AI & Technical:</strong> AI-assisted code prototyping (Cursor, v0, LLM prompting), semantic HTML/CSS, basic React component structures, Agentic UI principles.</li>
+                <li><strong>Tools:</strong> Figma (Advanced Variables, Dev Mode), Jira, Linear, Hotjar, Google Analytics.</li>
+                <li><strong>Languages:</strong> English (C1/Professional), Spanish (Basic/Learning), Ukrainian (Native).</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="edu-title">Bachelor’s Degree in Graphic Design</div>
+                <div class="edu-school">National Technical University of Ukraine “Kyiv Polytechnic Institute”</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

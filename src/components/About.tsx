@@ -195,27 +195,15 @@ export default function About({ onNavigate }: AboutProps) {
               
               <motion.div variants={itemVariants} className="about-cv-button-container">
                 <a
-                  href="#"
-                  onClick={handleDownloadCV}
+                  href="/cv.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="about-atf-cv-btn"
                   id="btn-about-cv"
                 >
                   <span>My CV</span>
                   <CustomIcon src={downloadSvg} size={16} />
                 </a>
-                <AnimatePresence>
-                  {cvSuccessMessage && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="about-cv-notif"
-                    >
-                      <CustomIcon src={checkCircleSvg} size={14} />
-                      <span>Oleksandr_Konovalov_CV.pdf downloaded!</span>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </motion.div>
             </div>
 
