@@ -195,7 +195,7 @@ export default function About({ onNavigate }: AboutProps) {
               
               <motion.div variants={itemVariants} className="about-cv-button-container">
                 <a
-                  href="/cv.html"
+                  href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="about-atf-cv-btn"
