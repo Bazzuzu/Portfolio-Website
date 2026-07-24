@@ -639,3 +639,176 @@
 .case-study--custom-newsletter .text-block__body-secondary {
   color: var(--color-text-primary) !important;
 }
+
+/* ==========================================================================
+   AI Prototyping Case Study — Section 1 (Hero)
+   ========================================================================== */
+
+.ai-proto-hero-banner {
+  /* Inherits exact px/py structure from .newsletter-hero-banner */
+}
+
+.ai-proto-hero-title {
+  font-family: var(--font-display-md-family);
+  font-size: var(--font-display-md-size);
+  font-weight: var(--font-display-md-weight);
+  line-height: var(--font-display-md-line-height);
+  letter-spacing: var(--font-display-md-tracking);
+  color: var(--color-text-primary);
+  text-align: center;
+  max-width: var(--size-text-w-md); /* 640px */
+  margin-inline: auto;
+  margin-bottom: var(--spacing-section-py-md);
+}
+
+.ai-proto-hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-component-gap-lg);
+}
+
+@media (min-width: 1024px) {
+  .ai-proto-hero-grid {
+    display: grid;
+    grid-template-columns: 640px 1fr;
+    gap: var(--spacing-section-px-md); /* 80px */
+    align-items: center;
+  }
+}
+
+.ai-proto-hero-img-card {
+  width: 100%;
+  max-width: 640px;
+}
+
+.ai-proto-hero-img {
+  width: 640px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+.ai-proto-hero-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-gap-md);
+}
+
+.ai-proto-hero-paragraph {
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  font-weight: var(--font-body-md-weight);
+  line-height: var(--font-body-md-line-height);
+  letter-spacing: var(--font-body-md-tracking);
+  color: var(--color-text-primary);
+}
+
+.ai-proto-hero-link {
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  font-weight: var(--font-body-md-weight);
+  line-height: var(--font-body-md-line-height);
+  color: var(--color-text-interactive);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  word-break: break-all;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.ai-proto-hero-link:hover {
+  color: var(--color-action-brand-hover);
+}
+
+.ai-proto-hero-link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   AI Prototyping Case Study — Main Content Section (Single Section)
+   ========================================================================== */
+
+.ai-proto-content-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-section-px-md); /* 80px gap between content blocks */
+  padding-block: var(--spacing-section-px-md); /* 80px vertical padding */
+  width: 100%;
+}
+
+.ai-proto-text-container {
+  width: 100%;
+  max-width: var(--size-text-w-md); /* 640px max-width */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-container-gap-md); /* 24px gap inside container */
+}
+
+.ai-proto-heading-lg {
+  font-family: var(--font-headline-lg-family);
+  font-size: var(--font-headline-lg-size);
+  font-weight: var(--font-headline-lg-weight);
+  line-height: var(--font-headline-lg-line-height);
+  letter-spacing: var(--font-headline-lg-tracking);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 0;
+}
+
+.ai-proto-heading-md {
+  font-family: var(--font-body-md-bold-family);
+  font-size: var(--font-body-md-bold-size);
+  font-weight: var(--font-body-md-bold-weight);
+  line-height: var(--font-body-md-bold-line-height);
+  letter-spacing: var(--font-body-md-bold-tracking);
+  color: var(--color-text-primary);
+  margin-top: var(--spacing-component-gap-xs);
+  margin-bottom: 0;
+}
+
+.ai-proto-text-container .newsletter-bullets li,
+.ai-proto-text-container p,
+.ai-proto-paragraph-sm {
+  font-family: var(--font-body-sm-family);
+  font-size: var(--font-body-sm-size);
+  font-weight: var(--font-body-sm-weight);
+  line-height: var(--font-body-sm-line-height);
+  letter-spacing: var(--font-body-sm-tracking);
+  color: var(--color-text-primary);
+}
+
+.ai-proto-image-container {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-proto-image-container .discovery-image-card {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.ai-proto-image-container img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.ai-proto-pipeline-box {
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-component-py-sm) var(--spacing-component-px-md);
+  font-family: monospace;
+  font-size: var(--font-body-sm-size);
+  color: var(--color-text-brand);
+  text-align: center;
+  word-break: break-word;
+}
+
+

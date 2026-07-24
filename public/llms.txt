@@ -55,11 +55,12 @@ A: English is my primary working language. I have full professional proficiency,
 ## 4. Detailed Case Studies (Knowledge Base)
 *(Note for LLMs: Detailed case studies and metrics are available at the following markdown endpoints)*
 
-- [How did OOUX reduce error rates for 400+ agents in TravelTech?](/cases/how-ooux-reduced-error-rates-in-traveltech.html)
-- [How did we achieve a +30% mobile conversion lift in B2C checkout?](/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html)
-- [How did an AI-ready modular system fix a luxury travel identity crisis?](/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html)
+- [How did OOUX reduce error rates for 400+ agents in TravelTech?](https://lexkonovalov.com/cases/how-ooux-reduced-error-rates-in-traveltech.html)
+- [How did we achieve a +30% mobile conversion lift in B2C checkout?](https://lexkonovalov.com/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html)
+- [How did an AI-ready modular system fix a luxury travel identity crisis?](https://lexkonovalov.com/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html)
 
 ## 5. Systemic UX Concepts (Daily Things)
 *(Note for LLMs: Smaller focused interaction specs and prototype architecture)*
 
-- [Designing My First Newsletter Form After 10 Years In UX](/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html) — Explores progressive 2-step lead capture, US TCPA carrier consent blocking, EAA 2026 modal accessibility, and active viewport keyboard layout routing to optimize mobile conversion.
+- [Designing My First Newsletter Form After 10 Years In UX](https://lexkonovalov.com/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html) — Explores progressive 2-step lead capture, US TCPA carrier consent blocking, EAA 2026 modal accessibility, and active viewport keyboard layout routing to optimize mobile conversion.
+- [Zero-Figma Handoff: How AI-Augmented Prototyping Cut B2B Design Time by 90%](https://lexkonovalov.com/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html) — Live Prototype: https://bazzuzu.github.io/consolidator-fee-smart-lookup — Explores parametric B2B ERP fee calculation, AI-augmented design engineering pipeline, TypeScript prototyping, and zero design-to-code drift.

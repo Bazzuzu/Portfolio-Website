@@ -45,6 +45,11 @@ import otherAsync from "../assets/images/other-projects/other-projects-async-col
 import otherToken from "../assets/images/other-projects/other-projects-token-structure.webp";
 // Newsletter Form Case Study (Concepts & Architecture)
 import newsletterHeroCardThumb from "../assets/images/other-projects/newsletter-form/00 Designing My First Newsletter Form After 10 Years In UX.webp";
+
+// AI-Augmented Prototyping Case Study
+import aiPrototypingHero from "../assets/images/other-projects/ai-prototyping/00-card-hero.webp";
+import aiPrototypingIde from "../assets/images/other-projects/ai-prototyping/01-ai-studio-ide.webp";
+import aiPrototypingConsolidator from "../assets/images/other-projects/ai-prototyping/02-consolidator-fees-ui.webp";
 import newsletterHeroThumb from "../assets/images/other-projects/newsletter-form/01-newsletter-hero-thumb.webp";
 import newsletterCheckout from "../assets/images/other-projects/newsletter-form/02-fast-checkout-vs-validation.webp";
 import newsletterDesktopForm from "../assets/images/other-projects/newsletter-form/03-desktop-subscription-form.webp";
@@ -114,6 +119,7 @@ export interface OtherProject {
   image: string;
   alt: string;
   href?: string;
+  tag?: string;
 }
 
 export interface MediumArticle {
@@ -166,10 +172,7 @@ export const portfolioData: PortfolioData = {
   cvUrl: "#",
   companies: ["Mews Systems", "Booking.com", "Adyen", "Stripe SaaS"],
   socialLinks: [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/lex-konovalov/" },
-    { name: "Twitter", url: "https://twitter.com" },
-    { name: "Read.cv", url: "https://read.cv" },
-    { name: "Dribbble", url: "https://dribbble.com" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/lex-konovalov/" }
   ],
   experienceList: [
     {
@@ -637,6 +640,71 @@ export const portfolioData: PortfolioData = {
       ariaLabel: "Read how we designed a 2-step progressive newsletter signup form",
       imgAlt: "Newsletter signup progressive UX wireframe and design architecture",
       category: "concept"
+    },
+    {
+      id: "how-ai-augmented-prototyping-cut-b2b-design-time-by-90",
+      title: "How AI-Augmented Prototyping Cut B2B Design Time by 90%",
+      pageTitle: "Zero-Figma Handoff: How AI-Augmented Prototyping Cut B2B Design Time by 90%",
+      tag: "AI Engineering / B2B",
+      tags: ["AI Prototyping", "Zero-Figma Handoff", "B2B SaaS", "Design Engineering", "TypeScript Prototyping"],
+      headline: "Zero-Figma Handoff: How AI-Augmented Prototyping Cut B2B Design Time by 90%",
+      description: "TL;DR: Replaced a 500-row Google Sheet used by 5 departments with a parametric B2B ERP Fee Engine. Delivered a functional TypeScript prototype via an AI-augmented pipeline in <24 hours, cutting task completion time from 5 minutes to <3 seconds.",
+      role: "Lead Product Designer / Design Engineer",
+      scope: "Enterprise B2B SaaS (Travel Tech)",
+      status: "Production-Adjacent Prototype",
+      users: "Sales, Bookkeeping, Support, Ticketing, Expert teams + BE API Integrations",
+      businessImpact: "Lookup time dropped from 3-5 min to <3s. Design delivery cut from 2 weeks to <24h. Dev QA reduced to 1 single pass.",
+      images: [
+        aiPrototypingHero,
+        aiPrototypingIde,
+        aiPrototypingConsolidator
+      ],
+      heroThumbnail: aiPrototypingHero,
+      challenge: "Legacy Bottleneck (Google Sheets): 500+ rows scanned manually across multi-PCC constraints. Zero change tracking with human errors in financial auditing. Failed Matrix Proposal where a flat 30-column table was rejected due to noise.",
+      solution: "New ERP Architecture: Parametric Query (PCC + Passenger Type = Exact Fee in 1 click). Contextual Audit Trail (Full change log & history drawer for Bookkeeping). Nested Grouping (Collapsed data hierarchy with progressive disclosure).",
+      impact: "Hard Metrics & Impact: Task Velocity dropped from 3–5 minutes to <3 seconds. Design Delivery reduced from 2 weeks (Figma) to <24 hours (working code). Engineering Efficiency with zero design-to-code drift and Dev QA reduced to 1 single pass.",
+      discoverySections: [
+        {
+          discoveryTitle: "System Architecture & Specs",
+          discoveryLeftTitle: "Role & Users",
+          discoveryLeft: "• Role & Domain: Lead Product Designer / Design Engineer | Enterprise B2B SaaS (Travel Tech)\n• Users: Sales, Bookkeeping, Support, Ticketing, Expert teams + BE API Integrations",
+          discoveryRightTitle: "Tech Stack & UX Patterns",
+          discoveryRight: "• Tech Stack: TypeScript, Tailwind CSS, Design Tokens, Google AI Studio, Antigravity IDE, GitHub Pages\n• UX Patterns: Nested Grouping, Progressive Disclosure, Keyboard Hotkeys, Audit Trail",
+          discoveryImages: [aiPrototypingHero]
+        },
+        {
+          discoveryTitle: "Problem vs. Solution",
+          discoveryLeftTitle: "Legacy Bottleneck (Google Sheets)",
+          discoveryLeft: "• 500+ rows scanned manually across multi-PCC constraints.\n• Zero change tracking; human errors in financial auditing.\n• Failed Matrix Proposal: Flat 30-column table rejected due to noise.",
+          discoveryRightTitle: "New ERP Architecture",
+          discoveryRight: "• Parametric Query: PCC + Passenger Type = Exact Fee in 1 click.\n• Contextual Audit Trail: Full change log & history drawer for Bookkeeping.\n• Nested Grouping: Collapsed data hierarchy with progressive disclosure.",
+          discoveryImages: []
+        },
+        {
+          discoveryTitle: "Power-User UX Features",
+          discoveryLeftTitle: "Ergonomics & Workflows",
+          discoveryLeft: "• Keyboard-First Navigation: Hotkey bindings for high-frequency operations.\n• Micro-Interactions: 1-click Record ID and fee value copying.\n• Optimized CRUD: Simplified modal flows for creating/updating tariff rules without breaking data integrity.",
+          discoveryImages: []
+        },
+        {
+          discoveryTitle: "AI-Augmented Pipeline & Zero-Figma Handoff",
+          discoveryLeftTitle: "The Pipeline",
+          discoveryLeft: "[Requirements] ➔ [AI Studio: Logic & Edge Cases] ➔ [Antigravity IDE: Tokens & UI] ➔ [GitHub Pages + PROJECT.md]",
+          discoveryRightTitle: "Zero-Figma Handoff",
+          discoveryRight: "Bypassed static Figma mocks to directly model dynamic fee calculations. Delivered a live, production-adjacent TypeScript prototype with auto-documented dev specs (PROJECT.md).",
+          discoveryImages: [aiPrototypingIde]
+        },
+        {
+          discoveryTitle: "Hard Metrics & Impact",
+          discoveryLeftTitle: "Quantified Results",
+          discoveryLeft: "• Task Velocity: Lookup time dropped from 3–5 minutes to <3 seconds.\n• Design Delivery: Delivery time reduced from 2 weeks (Figma) to <24 hours (working code).\n• Engineering Efficiency: Zero design-to-code drift; Dev QA reduced to 1 single pass.",
+          discoveryImages: [aiPrototypingConsolidator]
+        }
+      ],
+      href: "/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html",
+      ariaLabel: "Read how AI-augmented prototyping cut B2B design time by 90%",
+      imgAlt: "Zero-Figma Handoff AI-augmented prototyping B2B ERP Fee Engine UI screenshot",
+      category: "concept"
     }
   ],
   otherProjects: [
@@ -648,10 +716,12 @@ export const portfolioData: PortfolioData = {
       href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html"
     },
     {
-      id: "other-llm-prototyping",
-      title: "ERP Module LLM Prototyping Experience",
-      image: otherLlm,
-      alt: "ERP module interface prototype designed for seamless integration with LLMs and AI agents"
+      id: "how-ai-augmented-prototyping-cut-b2b-design-time-by-90",
+      title: "How AI-Augmented Prototyping Cut B2B Design Time by 90%",
+      tag: "AI Engineering / B2B",
+      image: aiPrototypingHero,
+      alt: "Zero-Figma Handoff AI-augmented prototyping B2B ERP Fee Engine UI screenshot",
+      href: "/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html"
     },
     {
       id: "other-design-system",

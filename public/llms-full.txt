@@ -1,0 +1,297 @@
+# Lex Konovalov - Core Product Designer (Full Knowledge Base)
+
+> System Context: Lex Konovalov is a Lead Product Designer based in the Valencia Region, Spain (EU). He specializes in untangling complex B2B logic using Object-Oriented UX (OOUX) and driving B2C revenue through Conversion Rate Optimization (CRO). He builds AI-adaptive, W3C-valid semantic design systems and operates on an async-first model for global (EU/US) teams.
+> This is the full, expanded version of https://lexkonovalov.com/llms.txt — containing the complete text of all case studies and knowledge articles.
+
+## 1. Core Expertise & Professional DNA
+
+- **Marketing Roots & Systemic Thinking:** Background in marketing for major automotive brands wired a reliance on historical data, potential metrics, and strict processes. Understanding target audiences directly translated into user-centric design, while a need for structural order led to adopting Object-Oriented UX (OOUX) early in 2017.
+- **Untangling Complex B2B Systems:** Designing core internal tools in TravelTech: complex ERPs, B2B platforms, and Salesforce customizations (navigating legacy SLDS constraints). Designing for 400+ internal agents where fractional improvements in Error Rate translate to massive operational ROI.
+- **CRO & Lead Generation:** Treating CRO like detective work. Iterative design and close collaboration with marketing helped scale the CheapOair Android app revenue from $500k to $3M/month. Optimized core funnels at Business Class, yielding a +27% conversion lift on mobile (>70% of traffic) and a +12% global lift.
+- **Live Prototyping & AI Systems:** Combining solid OOUX artifacts with an AI-optimized design system to build detailed, functional prototypes in minutes, drastically accelerating stakeholder alignment.
+
+## 2. Methodology: My Pragmatic Toolkit
+
+Real-world product design is messy. Instead of forcing textbook frameworks, I use a modular toolkit adapted to actual constraints and legacy code:
+
+1. **Ship, Measure, Iterate:** Perfect is the enemy of shipped. I prefer releasing fast, gathering live analytics, and iterating over endless polishing.
+2. **Modular Design Process:** Textbook processes fail in reality. I adapt to the chaos. If deep user interviews are blocked for months, we skip, build, and test live.
+3. **Architecture Before Pixels:** Products start in documentation. OOUX mapping builds a solid foundation, solving complex backend logic before UI design.
+4. **Rapid AI Prototyping:** In 2026, live prototypes are the ultimate communication tool. It's the cheapest, fastest way to align stakeholders or kill a bad idea early.
+5. **Obsessive Data Coverage:** The best time to integrate analytics is day one. Every tracked input directly improves the quality of our CRO and product decisions.
+6. **Cognitive Minimalism:** Like specialty coffee, UI copy is best served black. Amid information overload, I write pragmatic, minimal text to lower cognitive friction.
+7. **Embracing Legacy Systems:** You can't always rewrite the backend. Whether facing SLDS v1 or ancient .NET, I find elegant solutions within strict constraints.
+8. **Semantic Design Systems:** A strong token foundation scales infinitely. I build architectures readable by LLMs and developers, ensuring EU a11y compliance by default.
+9. **The Quantum Physics of Time:** A task takes exactly as much time as you give it. I focus on strict scoping and pragmatic delivery to prevent endless design loops.
+
+## 3. The Pre-Emptive Interview (FAQ)
+
+**Q: How do you handle collaboration across EU and US time zones?**
+A: I operate on an async-first model. Based in Spain, I overlap with US teams for 2-3 hours to handle critical syncs and strategy alignment. The rest is asynchronous: I use Loom walkthroughs, Notion documentation, and hyper-detailed Figma annotations. I treat the time difference as an advantage—while your US team sleeps, I design and prep handoffs, so you wake up to unblocked work.
+
+**Q: Why do you insist on Object-Oriented UX (OOUX) before wireframing?**
+A: Because drawing screens without understanding the database is a recipe for developer rework. OOUX allows me to map the exact logic, entities, and relationships of a system first. It aligns the design with backend realities. It might feel like an extra step on day one, but it saves weeks of architectural fixes before launch.
+
+**Q: You work in both dense B2B systems and B2C conversion. Aren't those conflicting mindsets?**
+A: They actually amplify each other. B2B design taught me how to build scalable, complex architectures and respect legacy constraints. B2C design (CRO) taught me how to measure success in dollars and conversion metrics. I use B2B logic to build a bulletproof foundation, and B2C tactics to optimize the funnel and drive revenue.
+
+**Q: How do you approach designing for legacy systems like Salesforce SLDS?**
+A: I don't fight the backend to create "Dribbble-ready" UI. If we are constrained by legacy frameworks or ancient .NET architectures, I design elegantly within those boundaries. My focus shifts from visual vanity to operational efficiency—optimizing task completeness, reducing error rates, and making the system faster for the end-user.
+
+**Q: What exactly makes your design systems "AI-adaptive"?**
+A: It's about semantic architecture. I don't just hand over a UI kit; I build W3C-valid token layers that are readable by both frontend developers and LLMs. This includes strict accessibility (a11y) compliance, semantic alt-texts, and logical component structures. It ensures the product can scale infinitely and integrate with AI agents without accumulating UI debt.
+
+**Q: What is your approach when a project lacks data or clear requirements?**
+A: I don't guess, and I don't wait months for perfect research. I push for immediate analytics coverage. If we lack direction, I use rapid AI prototyping to spin up a high-fidelity concept, ship it, and let live user data and heatmaps dictate the next iteration. Perfect is the enemy of shipped.
+
+**Q: What is your work authorization and preferred contract setup?**
+A: I am fully authorized to work in the EU (based in Spain). I am flexible with contract setups: I can work as an independent B2B contractor (autónomo) for global clients, or via platforms like Deel/Oyster for full-time engagements. I handle my own compliance and invoicing, making the onboarding process seamless for your HR team.
+
+**Q: What team structures are you most comfortable in?**
+A: I thrive in cross-functional, international environments. For the past 5+ years, I've worked daily with distributed teams across the US, Europe, and Ukraine. I am used to partnering directly with Product Managers to define scope, Engineering Leads to validate technical constraints, and Marketing teams to align on CRO goals.
+
+**Q: What are your working languages?**
+A: English is my primary working language. I have full professional proficiency, meaning 100% of my communication, complex OOUX documentation, and stakeholder presentations are conducted in English. I also speak Ukrainian and Russian natively, and am currently studying Spanish.
+
+---
+
+## 4. Case Study: How Did OOUX Reduce Error Rates for 400+ Agents in TravelTech?
+
+**Source URL:** https://lexkonovalov.com/cases/how-ooux-reduced-error-rates-in-traveltech.html
+**Tags:** B2B Enterprise, Information Architecture, OOUX, Design Systems, High-Density UI
+
+### Executive Summary
+- **Role:** Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops).
+- **Domain:** B2B TravelTech / Enterprise ERP.
+- **Users:** 400+ Internal Agents, Managers, and Accountants across 5 departments.
+- **The Problem:** Fragmented legacy tools (Excel, GDS terminals) caused pricing errors and operational bottlenecks in high-value ($3k–$30k) luxury bookings.
+- **The Solution:** A unified, OOUX-based enterprise ecosystem featuring a High-Density, Keyboard-First UI and granular Role-Based Access Control (RBAC).
+- **Business Impact:** ~40% reduction in processing time, elimination of manual data-bridging errors, and 2+ years of design-free engineering autonomy.
+
+### The Challenge: Escaping "Excel Hell"
+Business Class processes luxury travel bookings at $3,000–$30,000 per transaction. With hundreds of agents working across fragmented email threads and legacy GDS terminals, the operational ceiling was real. Complex bookings were actively avoided by staff, and a 15-minute delay meant losing a high-net-worth client permanently. We had to replace this ecosystem from scratch.
+
+### Information Gain: The Discovery Pivot
+The Failed Assumption: Initially, we thought we could just "digitize" and clean up the existing process.
+The Reality: There was no baseline instrumentation—only behavioral signals. The old process was fundamentally broken.
+The Pivot: I stopped drawing screens. I used Asynchronous Video Analysis (analyzing 30+ recorded sessions) to separate essential "muscle memory" shortcuts from actual usability blockers. We had to fix the underlying logic first.
+
+### The Architecture: Structuring Chaos via OOUX
+Instead of designing pages, I designed objects. I mapped the relationships between Leads, Offers, and Deals to create a scalable Information Architecture.
+- **Object Mapping:** Aligned the design perfectly with database realities, preventing costly engineering reworks.
+- **Security by Design (RBAC):** Defined a granular Role-Based Access Control matrix. Users only see tools relevant to their specific role, drastically reducing cognitive noise.
+- **Automated Routing:** Replaced email threads with a Unified Timeline that automatically assigns tasks across 5 departments based on load and expertise.
+
+### The Interface: High-Density UI & Muscle Memory
+Travel agents are power users operating under high pressure. They don't need "white space"; they need information density and speed.
+- **High-Density Architecture:** Adopted a UI approach similar to Bloomberg or Linear. Used compact rows and monospaced fonts for tabular data to maximize information above the fold.
+- **Keyboard-First Navigation:** To mitigate change aversion, I implemented strict keyboard navigation. Veteran agents leveraged their existing hotkey muscle memory while benefiting from modern error prevention.
+
+### The Scale: Empowering Engineering
+As the sole designer on a massive product, I built a Tokenized UI Kit focused on system logic, not just visuals, to prevent becoming a bottleneck.
+- **Semantic Foundation:** Defined strict, W3C-valid tokens for typography, spacing, and colors.
+- **Dev-Ready Components:** Created smart components (Tables, Inputs, Modals) that developers could assemble like Lego blocks.
+
+### Business Impact & The "Invisible" Designer
+My ultimate goal was to make myself obsolete on this specific product. By investing heavily in the OOUX Discovery Phase and building a rigid Design System, the results were structural:
+- **Engineering Autonomy:** For 2+ years post-launch, the engineering team shipped new modules independently, requiring design intervention only twice.
+- **Architectural Stability:** The core OOUX model proved so stable that no major refactors were needed.
+- **Operational ROI:** Agents stopped avoiding complex bookings, and processing time dropped by ~40%.
+
+This project proved that the best B2B design isn't just an interface; it's an infrastructure that empowers others to build.
+
+---
+
+## 5. Case Study: How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?
+
+**Source URL:** https://lexkonovalov.com/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html
+**Tags:** Mobile Growth, CRO, Lead Generation, A/B Testing, Accessibility (a11y)
+
+- **My Role:** Lead Product Designer (Research, UI/UX, A/B Testing)
+- **Scope:** End-to-End Redesign (Audit → A/B Testing)
+- **Status:** Shipped & Validated (Winner Variant)
+- **Users:** High-Intent Mobile Travelers (70% of traffic)
+
+### The Friction: High Intent, Low Conversion
+
+**The Business Context:** We operate on an Agency Model. Users don't "Buy Now"; they "Request a Quote" for luxury travel. For a $3,000+ transaction, the barrier to entry should be near zero. While 70% of our traffic came from mobile (Kayak/Google) carrying high intent, the legacy page treated mobile users like desktop users, resulting in a stagnant 6% conversion rate.
+
+**The "Leaky Bucket" Audit:** My UX audit revealed that the interface actively fought against the user:
+- Hierarchy Collapse & Rage Clicks: The hottest interaction zones were non-clickable price tags. The actual primary button faded into the background, performing worse than secondary navigation.
+- Trust Deficit: Crucial trust signals were buried in the footer, invisible at the point of decision.
+- Cognitive Strain: Disappearing inline placeholders and tiny touch targets caused constant input errors.
+
+### Information Gain: The Failed Hypothesis
+The Failed Assumption: We initially hypothesized that adding more upfront context (detailed fare rules and urgency banners) would validate the high price tag before the user scrolled.
+The Reality & Pivot: It created severe cognitive overload. Users ignored the text, and the extra scroll depth pushed the primary CTA out of view, lowering conversion. We pivoted from a "Data Collection" mindset to a "Value Exchange" mindset—stripping the noise to introduce an "Always-On" conversion path.
+
+### The Solution: Psychology-Driven Architecture
+
+**Feature A: The "Always-On" Conversion Path**
+Mobile users scroll to explore, often losing the CTA. I shifted the UI from generic browsing to personalized ownership:
+- Sticky Mechanic: Implemented a persistent footer ensuring the conversion path is always within the "Thumb Zone," regardless of scroll depth.
+- High-Contrast UI: Swapped the low-contrast brand button for Solid Black, separating the primary action from decorative elements.
+- Ownership-Driven Copy: Changed the generic "Get Best Price" to "Get My Quote". This psychological shift created a stronger sense of ownership.
+
+**Feature B: Strategic Trust Injection**
+Mobile users are skeptical of high-ticket offers from unknown brands. I shifted trust from a localized distraction to full-page credibility:
+- Anchoring Trust Above the Fold: Placed the Trustpilot badge (10,044 reviews) prominently on the first screen to validate legitimacy the second a user lands.
+- Deprecating Distracting Media: Removed the legacy "actor-based" video. Data proved it was viewed as inauthentic and distracted users from the form.
+- The "Proof Combo": Designed a scannable block combining Real Customer Reviews with Industry Certifications exactly at the Point of Action.
+
+**Feature C: Systemic Consistency & Accessibility (a11y)**
+I audited the interface against WCAG guidelines to eliminate "rage taps" and input errors:
+- Usability Hygiene: Expanded interactive touch targets to 48dp+ and replaced disappearing placeholders with static, top-aligned labels. Users never lose context while typing.
+- Visual Unification: Standardized input styles, spacing, and typography to match the core design system, making the page look professional and secure.
+
+### The Verdict (Results & Validation)
+We ran a controlled experiment to filter out seasonal trends. The results fundamentally shifted our mobile revenue channel:
+- +29.6% Uplift in Successful Request Submissions (Primary Metric).
+- +70.4% Increase in CTA Clicks via the new Sticky Button.
+- 11% Stabilized Key Event Rate (nearly doubling historic performance).
+
+**My Takeaway:** On mobile, clarity is the ultimate persuasion tool. By removing friction and respecting the user's context, we didn't just fix a page – we unlocked a revenue channel.
+
+---
+
+## 6. Case Study: How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?
+
+**Source URL:** https://lexkonovalov.com/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html
+**Tags:** Product Strategy, Design Systems Governance, AI Integration, Stakeholder Management, Core Web Vitals
+
+- **My Role:** Lead Product Designer (Strategy, UI/UX, Logic Architecture)
+- **Team:** CMO, Head of Sales, SEO Lead, Frontend Engineers
+- **Timeline:** 3 Months (Discovery → Release 1.0)
+- **Core Goal:** Realign the desktop experience with the luxury service model & scale SEO operations.
+
+### The Challenge: When a Concierge Wears a Search Engine Mask
+
+**The Business Reality:** Business-Class.com is a premium human-powered service, not an automated algorithm.
+
+**The UX Disconnect:** The legacy homepage mimicked a standard search engine. Users entered dates expecting instant results but were met with a lead form. This "Expectation Mismatch" caused frustration and high bounce rates. Users treated the site like an automated aggregator, entering with a "DIY" mindset.
+
+**The Strategic Pivot:** Instead of fighting the user's mental model ("I want to search"), I adapted the interface to guide them gently toward the service model ("I need an expert"), establishing immediate trust for high-ticket purchases ($5k+).
+
+### Information Gain: The "Recent Searches" Fallacy
+The Failed Hypothesis: I assumed that business class travelers have a non-linear decision journey, so a "Recent Searches" shortcut would be critical for returning users.
+The Reality & Pivot: Post-launch data showed unexpectedly low engagement. Instead of helping, it competed for attention with the "Popular Destinations" list, adding cognitive load. Following the data, we decided to deprecate this module in the next sprint to declutter the interface.
+
+### The Search Widget: Reducing Cognitive Barriers
+To fix the mismatch, I redesigned the Search Widget to act as an Assistant, lowering the Interaction Cost to near zero.
+
+- **Semantic Shift:** Changed the copy from "Search Flights" to "Check Your Price". "Search" implies work (browsing), while "Check Price" implies utility (getting an answer).
+- **Intelligent Assistance (The "Wizard of Oz"):** Introduced a quick-select list of Popular Destinations in the dropdown. Launched with a manually curated list (MVP) to validate engagement before committing to a dynamic algorithm. Implemented IP-based detection to pre-fill "Origin" and "Dates," solving "Empty State Anxiety."
+- **The "Fast Lane":** Carved out a dedicated visual space for a "Call for Exclusive Discount" CTA inside the widget, routing urgent buyers directly to agents.
+
+### Technical Trade-off: The Video Background
+Marketing stakeholders pushed for a video background to enhance the "Luxury Feel." While video often hurts performance, I compromised by optimizing the asset and implementing a static "skeleton" image for instant loading. This balanced the aesthetic goals with strict Core Web Vitals (LCP) requirements.
+
+### Replacing Vague Marketing with Tangible Data
+The legacy "Best Deals" section displayed generic destinations lacking contextual relevance. I renamed it to "Recent Client Savings" and changed the focus from Advertising to Evidence:
+- Data-Driven Relevance: Analyzed sales data to identify the 300 top routes that generate 70% of revenue.
+- Anchor Pricing: Introduced a comparison: "Retail Price" vs "Our Price", highlighting the specific savings amount.
+- Personalization: Deals are now filtered by the user's IP location.
+
+### Balancing Aggressive Sales Goals with User Focus
+The Sales Team pushed for an aggressive, auto-opening chat to maximize lead volume. I demonstrated that interrupting high-intent search behaviors with low-intent chat prompts was diluting lead quality. The solution was a "Smart Trigger" Protocol:
+- Respect Focus: Chat is suppressed while the user types in the Search Widget.
+- Idle Logic: Chat only engages after 10–15s of inactivity (Teaser) or 35s (Full Open).
+- Conflict Resolution: If Chat opens, the Hero Carousel pauses immediately to prevent visual overload.
+
+### Empowering Marketing with AI-Ready Modular Design
+Marketing needed to launch 300+ route-specific SEO pages but was limited by development resources. I architected a modular Design System of 15+ flexible blocks (Hero, Reviews, FAQ, Trust) integrated directly into the CMS.
+
+I designed the modules with strict constraints (baked-in padding, typography rules) to ensure visual integrity remains high, even when Marketing builds pages autonomously. The system now leverages AI to populate SEO-optimized text, reducing page production time by 95%.
+
+### The Verdict: Higher Intent & Faster Operations
+- +27% Increase in Click-through to Booking.
+- Operational Velocity: Massive reduction in Time-to-Market for SEO pages.
+- Accessibility: Achieved WCAG AA compliance by rebalancing contrast and typography.
+
+---
+
+## 7. Daily Thing: Designing My First Newsletter Form After 10 Years In UX
+
+**Source URL:** https://lexkonovalov.com/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html
+**Tags:** Form UX Design, Progressive Capture Flow, US TCPA Compliance, EAA 2026 Accessibility, HubSpot CRM Integration, Mobile Keyboard Interactions
+
+I thought this was a 30-minute junior task. I was dead wrong.
+
+Surprisingly, business-class.com had never had a newsletter subscription form. When our marketing department migrated to HubSpot, they decided to make up for lost time – all at once. Their immediate wishlist was massive: inject a promotional SMS-consent checkbox into our primary lead-capture form, build an aggressive hero subscription section, launch an intrusive modal popup, and wedge a subscription widget into the footer. Here is how I navigated this storm to protect our core funnel.
+
+### The Veto: Protecting the Cash Cow
+Marketing's most critical demand was adding a promotional SMS-consent checkbox directly into our primary Quote Request form – the final, most valuable step of our lead-gen funnel where we generate our actual revenue.
+- **The Risk:** Forcing heavy promotional legal text and consent friction onto high-intent users at the ultimate conversion step would trigger immediate form abandonment, tanking our inbound quote volume.
+- **The Veto:** I blocked the checkbox on this form, backed by checkout drop-off data and strict US TCPA compliance risks ($1,500/SMS fines for forced carrier consent).
+
+### The Compromise: The Capture Matrix
+To satisfy marketing's goals without hurting sales, I designed a decentralized capture matrix outside the core lead-gen funnel:
+- **The Hero:** A high-impact, above-the-fold MVP to capture raw traffic.
+- **The Popup:** Trigger-controlled display rules (removable on mobile if core metrics dropped).
+- **The Footer:** A zero-friction, passive capture widget.
+
+But the real UX challenge was Email vs. Phone. Asking for both at once would kill conversion.
+
+### The Solution: 2-Step Progressive Capture
+We secure the baseline lead first, then offer the speed upgrade.
+
+**Step 1: Email Capture (Secure the Lead):** Sells the value of unpublished drops with social proof (Join 12,500+ insiders). A clear zero-spam footnote protects user trust.
+
+**Step 2: SMS Acceleration (Optional Upgrade):** Creates high urgency based on speed (Is email too slow?). Users can add their phone for instant alerts, or skip. To comply with TCPA rules, the consent checkbox remains strictly opt-in.
+
+### The Future Roadmap: Onboarding Wizard
+To avoid over-engineering in Phase 1, I designed a 3-step personalization wizard for Phase 2. This allowed engineering to pre-structure HubSpot database properties, preventing expensive CRM restructuring later.
+
+- **1/3 Origin:** Where do you fly from? (Pre-populated via Geo-IP).
+- **2/3 Priority:** What is your travel priority? (Max Savings / Best Value / Premium Comfort).
+- **3/3 Purpose:** What kind of trips do you take? (Vacation & Leisure / Business & Commutes / Family & Group).
+
+### System Integrity & Accessibility Specs
+- **Lazy Inline Validation:** Error states trigger strictly on-blur to prevent input interruption.
+- **Double-Submission Shield:** CTA buttons transition to disabled with a spinner upon click to prevent database duplicates.
+- **Soft Reactivation:** Duplicate sign-ups trigger a friendly reactivation email instead of an angry red error state.
+- **EAA 2026 Compliance:** Structured keyboard focus-trapping for modals, semantic label associations, and programmatic aria-invalid bindings.
+- **Design Diplomacy:** Presented Figma layouts in a Dual-Viewport Framework (mobile and desktop side-by-side).
+
+---
+
+## 8. Daily Thing: Zero-Figma Handoff: How AI-Augmented Prototyping Cut B2B Design Time by 90%
+
+**Source URL:** https://lexkonovalov.com/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html
+**Tags:** AI Prototyping, Zero-Figma Handoff, B2B SaaS, Design Engineering, Parametric ERP Engine, TypeScript Prototyping
+
+### Executive Summary
+Replaced a 500-row Google Sheet used by 5 departments with a parametric B2B ERP Fee Engine. Delivered a functional TypeScript prototype via an AI-augmented pipeline in <24 hours, cutting task completion time from 5 minutes to <3 seconds.
+
+### System Architecture & Specs
+- **Role & Domain:** Lead Product Designer / Design Engineer | Enterprise B2B SaaS (Travel Tech)
+- **Users:** Sales, Bookkeeping, Support, Ticketing, Expert teams + BE API Integrations
+- **Tech Stack:** TypeScript, Tailwind CSS, Design Tokens, Google AI Studio, Antigravity IDE, GitHub Pages
+- **UX Patterns:** Nested Grouping, Progressive Disclosure, Keyboard Hotkeys, Audit Trail
+
+### Problem vs. Solution
+
+#### Legacy Bottleneck (Google Sheets)
+- 500+ rows scanned manually across multi-PCC constraints.
+- Zero change tracking; human errors in financial auditing.
+- Failed Matrix Proposal: Flat 30-column table rejected due to noise.
+
+#### New ERP Architecture
+- **Parametric Query:** PCC + Passenger Type = Exact Fee in 1 click.
+- **Contextual Audit Trail:** Full change log & history drawer for Bookkeeping.
+- **Nested Grouping:** Collapsed data hierarchy with progressive disclosure.
+
+### Power-User UX Features
+- **Keyboard-First Navigation:** Hotkey bindings for high-frequency operations.
+- **Micro-Interactions:** 1-click Record ID and fee value copying.
+- **Optimized CRUD:** Simplified modal flows for creating/updating tariff rules without breaking data integrity.
+
+### AI-Augmented Pipeline & Zero-Figma Handoff
+Pipeline: `[Requirements] ➔ [AI Studio: Logic & Edge Cases] ➔ [Antigravity IDE: Tokens & UI] ➔ [GitHub Pages + PROJECT.md]`
+
+Bypassed static Figma mocks to directly model dynamic fee calculations. Delivered a live, production-adjacent TypeScript prototype with auto-documented dev specs (PROJECT.md).
+
+### Hard Metrics & Impact
+- **Task Velocity:** Lookup time dropped from 3–5 minutes to <3 seconds.
+- **Design Delivery:** Delivery time reduced from 2 weeks (Figma) to <24 hours (working code).
+- **Engineering Efficiency:** Zero design-to-code drift; Dev QA reduced to 1 single pass.

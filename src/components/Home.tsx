@@ -320,7 +320,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 >
                   <div className="project-card__image-container">
                     <div className="work-card__tags-container">
-                      <span className="work-card__tag">{isClickable ? "Concept" : "In Progress"}</span>
+                      <span className="work-card__tag">{project.tag || (isClickable ? "Concept" : "In Progress")}</span>
                     </div>
                     <img
                       src={project.image}
