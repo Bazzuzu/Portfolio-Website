@@ -20,15 +20,17 @@ export default function App() {
   useEffect(() => {
     const handleLocationChange = () => {
       const path = window.location.pathname;
-      // Remove trailing slash
-      const relativePath = path.replace(/\/$/, "");
+      // Remove trailing slash except for root /
+      const relativePath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
 
       if (relativePath.startsWith("/daily-thing/")) {
-        const caseId = relativePath.replace("/daily-thing/", "");
+        const rawId = relativePath.replace("/daily-thing/", "");
+        const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("daily-thing");
         setSelectedCaseId(caseId);
       } else if (relativePath.startsWith("/cases/")) {
-        const caseId = relativePath.replace("/cases/", "");
+        const rawId = relativePath.replace("/cases/", "");
+        const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
       } else if (relativePath === "/about") {
@@ -76,17 +78,20 @@ export default function App() {
   const navigateTo = (page: string, params?: { caseId: string }) => {
     let targetPath = "/";
     if (page === "about") {
-      targetPath = "/about";
+      targetPath = "/about/";
     } else if (page === "daily-thing" && params?.caseId) {
-      targetPath = `/daily-thing/${params.caseId}`;
+      const cleanId = params.caseId.replace(/\.html$/, "");
+      targetPath = `/daily-thing/${cleanId}.html`;
     } else if (page === "case-study" && params?.caseId) {
-      targetPath = `/cases/${params.caseId}`;
+      const cleanId = params.caseId.replace(/\.html$/, "");
+      targetPath = `/cases/${cleanId}.html`;
     }
 
     window.history.pushState(null, "", targetPath);
 
     if ((page === "case-study" || page === "daily-thing") && params?.caseId) {
-      setSelectedCaseId(params.caseId);
+      const cleanId = params.caseId.replace(/\.html$/, "");
+      setSelectedCaseId(cleanId);
     } else {
       setSelectedCaseId(null);
     }

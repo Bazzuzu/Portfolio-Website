@@ -200,7 +200,7 @@ export const portfolioData: PortfolioData = {
       tags: ["B2B Enterprise", "Information Architecture", "OOUX", "Design Systems", "High-Density UI"],
       headline: "From «Excel Hell» to a Unified Enterprise Ecosystem",
       description: "Designed a scalable ERP unifying 5 departments. The tokenized OOUX architecture enabled 100% engineering autonomy post-launch.",
-      href: "/cases/how-ooux-reduced-error-rates-in-traveltech",
+      href: "/cases/how-ooux-reduced-error-rates-in-traveltech.html",
       ariaLabel: "Read how OOUX mapping reduced agent error rates for 400+ agents in TravelTech",
       imgAlt: "Unified B2B TravelTech ERP welcome dashboard providing agents quick access to recent activities and core workflows to reduce cognitive load.",
       role: "Lead Product Designer (End-to-End: Architecture, UX/UI, Design Ops)",
@@ -307,7 +307,7 @@ export const portfolioData: PortfolioData = {
       tags: ["Mobile Growth", "CRO", "Lead Generation", "A/B Testing", "Accessibility (a11y)"],
       headline: "How Did a Psychology-Driven Redesign Drive a +29.6% Mobile Lead Lift?",
       description: "Redesigned a critical entry point to capture impulsive mobile traffic. Lowering cognitive load resulted in a 30% increase in request submissions.",
-      href: "/cases/how-to-achieve-30-percent-conversion-lift-in-b2c",
+      href: "/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html",
       ariaLabel: "Read how a psychology-driven redesign achieved a 30% mobile conversion lift in B2C lead generation",
       imgAlt: "Mobile UI for luxury business class ticket request form optimized for high-ticket lead generation.",
       role: "Lead Product Designer (Research, UI/UX, A/B Testing)",
@@ -399,7 +399,7 @@ export const portfolioData: PortfolioData = {
       tags: ["Product Strategy", "Design Systems Governance", "AI Integration", "Stakeholder Management", "Core Web Vitals"],
       headline: "How Did an AI-Ready Modular System Fix a Luxury Travel Identity Crisis?",
       description: "A strategic overhaul to build trust and guide users effectively. Aligning the visual hierarchy with business goals led to a 27% lift in click-throughs to booking.",
-      href: "/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis",
+      href: "/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html",
       ariaLabel: "Read how an AI-ready modular system fixed a luxury travel identity crisis and increased CTR by 27%",
       imgAlt: "Desktop redesign transforming a generic travel aggregator into a high-converting AI-powered concierge platform",
       role: "Lead Product Designer (Strategy, UI/UX, Logic Architecture)",
@@ -633,7 +633,7 @@ export const portfolioData: PortfolioData = {
           ]
         }
       ],
-      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux",
+      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html",
       ariaLabel: "Read how we designed a 2-step progressive newsletter signup form",
       imgAlt: "Newsletter signup progressive UX wireframe and design architecture",
       category: "concept"
@@ -645,7 +645,7 @@ export const portfolioData: PortfolioData = {
       title: "Designing My First Newsletter Form After 10 Years In UX",
       image: newsletterHeroCardThumb,
       alt: "Newsletter signup progressive UX wireframe and design architecture",
-      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux"
+      href: "/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html"
     },
     {
       id: "other-llm-prototyping",
