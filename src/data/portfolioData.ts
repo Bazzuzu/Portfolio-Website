@@ -48,6 +48,7 @@ import newsletterHeroCardThumb from "../assets/images/other-projects/newsletter-
 
 // AI-Augmented Prototyping Case Study
 import aiPrototypingHero from "../assets/images/other-projects/ai-prototyping/00-card-hero.webp";
+import aiPrototypingCardIcon from "../assets/images/other-projects/ai-prototyping/card icon.webp";
 import aiPrototypingIde from "../assets/images/other-projects/ai-prototyping/01-ai-studio-ide.webp";
 import aiPrototypingConsolidator from "../assets/images/other-projects/ai-prototyping/02-consolidator-fees-ui.webp";
 import newsletterHeroThumb from "../assets/images/other-projects/newsletter-form/01-newsletter-hero-thumb.webp";
@@ -719,7 +720,7 @@ export const portfolioData: PortfolioData = {
       id: "how-ai-augmented-prototyping-cut-b2b-design-time-by-90",
       title: "How AI-Augmented Prototyping Cut B2B Design Time by 90%",
       tag: "AI Engineering / B2B",
-      image: aiPrototypingHero,
+      image: aiPrototypingCardIcon,
       alt: "Zero-Figma Handoff AI-augmented prototyping B2B ERP Fee Engine UI screenshot",
       href: "/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html"
     },
