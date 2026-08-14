@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import CaseStudy from "./components/CaseStudy";
 import DailyThing from "./components/DailyThing";
+import JobsApp from "./components/jobs/JobsApp";
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
 import CustomIcon from "./components/CustomIcon";
 import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
@@ -33,6 +34,9 @@ export default function App() {
         const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
+      } else if (relativePath === "/jobs") {
+        setCurrentPage("jobs");
+        setSelectedCaseId(null);
       } else if (relativePath === "/about") {
         setCurrentPage("about");
         setSelectedCaseId(null);
@@ -109,6 +113,8 @@ export default function App() {
     let targetPath = "/";
     if (page === "about") {
       targetPath = "/about/";
+    } else if (page === "jobs") {
+      targetPath = "/jobs/";
     } else if (page === "daily-thing" && params?.caseId) {
       const cleanId = params.caseId.replace(/\.html$/, "");
       targetPath = `/daily-thing/${cleanId}.html`;
@@ -166,7 +172,7 @@ export default function App() {
   return (
     <div className="portfolio">
       {/* Floating Navigation Pill */}
-      {currentPage !== "case-study" && currentPage !== "daily-thing" ? (
+      {currentPage !== "case-study" && currentPage !== "daily-thing" && currentPage !== "jobs" ? (
         <nav id="floating-nav" className="floating-nav">
           {activeTab === "home" ? (
             <span
@@ -212,7 +218,7 @@ export default function App() {
             </a>
           )}
         </nav>
-      ) : (
+      ) : currentPage !== "jobs" ? (
         <button
           id="floating-back-nav"
           className="floating-nav floating-nav--left"
@@ -221,7 +227,7 @@ export default function App() {
           <CustomIcon src={arrowLeftSvg} size={16} />
           <span className="floating-nav__link">Back to Home</span>
         </button>
-      )}
+      ) : null}
 
       {/* Primary Dynamic Content Frame */}
       <main id="main-content-frame" style={{ flexGrow: 1 }}>
@@ -279,6 +285,18 @@ export default function App() {
                 onBack={() => navigateTo("home")}
                 onNavigate={navigateTo}
               />
+            </motion.div>
+          )}
+
+          {currentPage === "jobs" && (
+            <motion.div
+              key="jobs"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <JobsApp onBack={() => navigateTo("home")} />
             </motion.div>
           )}
         </AnimatePresence>
