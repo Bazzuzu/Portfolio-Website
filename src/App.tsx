@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Home from "./components/Home";
-import About from "./components/About";
-import CaseStudy from "./components/CaseStudy";
-import DailyThing from "./components/DailyThing";
-import JobsApp from "./components/jobs/JobsApp";
+const About = lazy(() => import("./components/About"));
+const CaseStudy = lazy(() => import("./components/CaseStudy"));
+const DailyThing = lazy(() => import("./components/DailyThing"));
+const JobsApp = lazy(() => import("./components/jobs/JobsApp"));
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
 import CustomIcon from "./components/CustomIcon";
 import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
@@ -261,18 +261,19 @@ export default function App() {
 
       {/* Primary Dynamic Content Frame */}
       <main id="main-content-frame" style={{ flexGrow: 1 }}>
-        <AnimatePresence mode="wait">
-          {currentPage === "home" && (
-            <motion.div
-              key="home"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
-            >
-              <Home onNavigate={navigateTo} />
-            </motion.div>
-          )}
+        <Suspense fallback={<div style={{ minHeight: "60vh" }} />}>
+          <AnimatePresence mode="wait">
+            {currentPage === "home" && (
+              <motion.div
+                key="home"
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                <Home onNavigate={navigateTo} />
+              </motion.div>
+            )}
 
           {currentPage === "about" && (
             <motion.div
@@ -330,6 +331,7 @@ export default function App() {
             </motion.div>
           )}
         </AnimatePresence>
+        </Suspense>
       </main>
 
       {/* Universal Footer */}

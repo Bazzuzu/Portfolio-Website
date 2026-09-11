@@ -62,24 +62,24 @@ export default function Home({ onNavigate }: HomeProps) {
     }, 300);
   };
 
-  // Анимационные контейнеры для staggered входа
+  // Анимационные контейнеры для staggered входа (оптимизировано под LCP)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.05
+        staggerChildren: 0.04,
+        delayChildren: 0
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 16 },
+    hidden: { opacity: 0, y: 8 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.215, 0.610, 0.355, 1.000] }
+      transition: { duration: 0.28, ease: [0.215, 0.610, 0.355, 1.000] }
     }
   };
 
@@ -265,6 +265,9 @@ export default function Home({ onNavigate }: HomeProps) {
                       className="work-card__image"
                       referrerPolicy="no-referrer"
                       loading="lazy"
+                      width="640"
+                      height="427"
+                      decoding="async"
                     />
                   </div>
                   <div className="work-card__content">
@@ -328,6 +331,9 @@ export default function Home({ onNavigate }: HomeProps) {
                       className="project-card__image"
                       referrerPolicy="no-referrer"
                       loading="lazy"
+                      width="600"
+                      height="400"
+                      decoding="async"
                     />
                   </div>
                   <div className="project-card__content">
