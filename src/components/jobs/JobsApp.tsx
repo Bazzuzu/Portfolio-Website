@@ -283,7 +283,7 @@ export default function JobsApp({ onBack }: { onBack: () => void }) {
   const directSearchUrl = buildGoogleSearchUrl(currentParams);
 
   // Analytics & Stats Calculation
-  const savedList = Object.values(savedJobsMap);
+  const savedList: Job[] = Object.values(savedJobsMap);
   const totalTracked = savedList.length;
   const newCount = savedList.filter(j => j.status === 'new').length;
   const viewedCount = savedList.filter(j => j.status === 'viewed').length;

@@ -137,6 +137,7 @@ export interface Experience {
   period: string;
   description: string;
 }
+export type DailyThing = CaseStudy;
 
 export interface PortfolioData {
   designerName: string;

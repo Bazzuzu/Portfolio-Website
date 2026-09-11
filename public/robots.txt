@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /jobs/
+Disallow: /jobs
 Sitemap: https://lexkonovalov.com/sitemap.xml
 
 # AI Crawlers — explicit allow

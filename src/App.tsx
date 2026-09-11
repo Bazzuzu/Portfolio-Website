@@ -79,26 +79,34 @@ export default function App() {
     }
   }, [currentPage]);
 
-  // Dynamic document.title and meta description for SPA SEO
+  // Dynamic document.title, meta description, canonical, and og:url for SPA SEO
   useEffect(() => {
     let title = "Oleksandr Konovalov — Lead Product Designer";
     let description = "Lead Product Designer. I use Object-Oriented UX to map dense B2B platforms, and data to optimize B2C checkouts. Based in the EU.";
+    let canonicalUrl = "https://lexkonovalov.com/";
 
     if (currentPage === "about") {
       title = "About Lex Konovalov — Lead Product Designer";
       description = "Read about Lead Product Designer Lex Konovalov's professional DNA, pragmatic product design toolkit, and the pre-emptive interview answers regarding time zones, OOUX, and legacy systems.";
+      canonicalUrl = "https://lexkonovalov.com/about/";
     } else if (currentPage === "case-study" && selectedCaseId) {
       const caseData = portfolioData.caseStudies.find(c => c.id === selectedCaseId);
       if (caseData) {
         title = `${caseData.pageTitle} — Lex Konovalov`;
         description = caseData.description;
+        canonicalUrl = `https://lexkonovalov.com/cases/${selectedCaseId}.html`;
       }
     } else if (currentPage === "daily-thing" && selectedCaseId) {
       const dailyData = portfolioData.dailyThings?.find(d => d.id === selectedCaseId);
       if (dailyData) {
         title = `${dailyData.pageTitle} — Lex Konovalov`;
         description = dailyData.description;
+        canonicalUrl = `https://lexkonovalov.com/daily-thing/${selectedCaseId}.html`;
       }
+    } else if (currentPage === "jobs") {
+      title = "ATS Google Dorking Engine — Lex Konovalov";
+      description = "Direct ATS job query builder & boolean Google dorking engine for UX/Product designers.";
+      canonicalUrl = "https://lexkonovalov.com/jobs/";
     }
 
     document.title = title;
@@ -106,6 +114,28 @@ export default function App() {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", description);
+    }
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute("href", canonicalUrl);
+    }
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute("content", canonicalUrl);
+    }
+
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (currentPage === "jobs") {
+      if (!robotsMeta) {
+        robotsMeta = document.createElement("meta");
+        robotsMeta.setAttribute("name", "robots");
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute("content", "noindex, nofollow");
+    } else if (robotsMeta) {
+      robotsMeta.setAttribute("content", "index, follow");
     }
   }, [currentPage, selectedCaseId]);
 
