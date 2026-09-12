@@ -59,10 +59,14 @@ async function optimizeImage(filePath) {
     await pipeline.toFile(tempPath);
       
     const tempStats = fs.statSync(tempPath);
-    if (tempStats.size < stats.size) {
+    const savingsBytes = stats.size - tempStats.size;
+    const savingsPercent = (savingsBytes / stats.size) * 100;
+
+    // Only apply if savings are meaningful (>= 2% and >= 1KB) to prevent infinite re-encoding loops
+    if (savingsBytes >= 1024 && savingsPercent >= 2) {
       fs.renameSync(tempPath, filePath);
       const newSizeKb = (tempStats.size / 1024).toFixed(1);
-      const savings = (100 - (tempStats.size / stats.size) * 100).toFixed(1);
+      const savings = savingsPercent.toFixed(1);
       console.log(`✅ Optimized: ${path.relative(process.cwd(), filePath)}`);
       console.log(`   Dimensions: ${metadata.width}x${metadata.height} ${resized ? '-> resized to 1600px width' : ''}`);
       console.log(`   Size: ${originalSizeKb} KB -> ${newSizeKb} KB (-${savings}%)`);
