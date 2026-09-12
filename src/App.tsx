@@ -81,7 +81,7 @@ export default function App() {
 
   // Dynamic document.title, meta description, canonical, and og:url for SPA SEO
   useEffect(() => {
-    let title = "Oleksandr Konovalov — Lead Product Designer";
+    let title = "Lex Konovalov | Lead Product Designer: ERP, OOUX, AI & CRO";
     let description = "Lead Product Designer. I use Object-Oriented UX to map dense B2B platforms, and data to optimize B2C checkouts. Based in the EU.";
     let canonicalUrl = "https://lexkonovalov.com/";
 
@@ -114,6 +114,16 @@ export default function App() {
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", description);
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute("content", title);
+    }
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute("content", title);
     }
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');
