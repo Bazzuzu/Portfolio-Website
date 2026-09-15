@@ -172,34 +172,34 @@ export default function Home({ onNavigate }: HomeProps) {
               >
                 <ul className="hero-tags-list">
                   <li className="hero-tag-item">
-                    <span className="hero-tag-pill">OOUX Architecture</span>
+                    <span className="hero-tag-pill">OOUX</span>
                     <div className="hero-tag-tooltip">
                       <p className="hero-tag-tooltip-text">
-                        Practicing Object-Oriented UX since 2017 and active in the core community. Currently pioneering the intersection of OOUX and AI—using object mapping as the foundational logic for LLM data structuring.
+                        I’ve been practicing Object-Oriented UX since 2017 and remain active in the OOUX community. I use object mapping to define product structure, relationships, and workflows before moving into screens and UI—and more recently, as a foundation for structuring data for LLMs.
                       </p>
                     </div>
                   </li>
                   <li className="hero-tag-item">
-                    <span className="hero-tag-pill">AI-Integrated Design Systems</span>
+                    <span className="hero-tag-pill">AI</span>
                     <div className="hero-tag-tooltip">
                       <p className="hero-tag-tooltip-text">
-                        Architecting W3C-valid primitives and semantic token layers readable by both engineers and LLMs. I build LLM-adaptive systems requiring strict a11y compliance, semantic alt-text, and voice/keyboard navigation. Contributor to the Design Systems Collective.
+                        I work with AI both as a product capability and as part of the design process. I’ve built an AI landing-page generator from concept to working prototype, while exploring semantic design systems structured for engineers, accessibility tools, and LLMs.
                       </p>
                     </div>
                   </li>
                   <li className="hero-tag-item">
-                    <span className="hero-tag-pill">AI-Driven Product Features</span>
+                    <span className="hero-tag-pill">B2B</span>
                     <div className="hero-tag-tooltip">
                       <p className="hero-tag-tooltip-text">
-                        Engineered an AI landing page generator from concept to working prototype. The system automates end-to-end production: asset curation, thematic content generation with adjustable Tone of Voice (ToV), and underlying content strategy.
+                        Most of my recent product work is in B2B and enterprise software, including TravelTech ERPs, internal tools, and operational platforms. I work on products where the interface is only the visible part of a much larger business logic—and where reducing friction without hiding that logic is the real design challenge.
                       </p>
                     </div>
                   </li>
                   <li className="hero-tag-item">
-                    <span className="hero-tag-pill">B2C Funnel Optimization</span>
+                    <span className="hero-tag-pill">CRO</span>
                     <div className="hero-tag-tooltip">
                       <p className="hero-tag-tooltip-text">
-                        Extensive B2C track record: paywall and listing optimization for Lemonfrog.ch, end-to-end mobile app flow for CheapOair (search to post-sale). Currently driving lead generation and checkout optimization in TravelTech.
+                        I use product design to improve conversion across acquisition, lead generation, and checkout. My B2C work includes paywall and listing optimization for Lemonfrog, the full mobile journey for CheapOair, and ongoing lead-generation and checkout optimization in TravelTech.
                       </p>
                     </div>
                   </li>
