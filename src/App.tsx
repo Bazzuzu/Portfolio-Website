@@ -14,6 +14,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
   const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [bottomOffset, setBottomOffset] = useState<number>(32);
   const [activeTab, setActiveTab] = useState<string>("home");
 
@@ -34,11 +35,11 @@ export default function App() {
         const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
-      } else if (relativePath === "/jobs") {
-        setCurrentPage("jobs");
-        setSelectedCaseId(null);
       } else if (relativePath === "/about") {
         setCurrentPage("about");
+        setSelectedCaseId(null);
+      } else if (relativePath === "/jobs") {
+        setCurrentPage("jobs");
         setSelectedCaseId(null);
       } else {
         setCurrentPage("home");
@@ -52,10 +53,11 @@ export default function App() {
     return () => window.removeEventListener("popstate", handleLocationChange);
   }, []);
 
-  // Следим за прокруткой для кнопки "наверх" 
+  // Следим за прокруткой для кнопки "наверх" и плавающей навигации
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 20);
       setShowScrollTop(scrollY > 400);
 
       const scrollHeight = document.documentElement.scrollHeight;
@@ -213,7 +215,10 @@ export default function App() {
     <div className="portfolio">
       {/* Floating Navigation Pill */}
       {currentPage !== "case-study" && currentPage !== "daily-thing" && currentPage !== "jobs" ? (
-        <nav id="floating-nav" className="floating-nav">
+        <nav
+          id="floating-nav"
+          className={`floating-nav ${isScrolled ? "floating-nav--scrolled" : ""}`}
+        >
           {activeTab === "home" ? (
             <span
               id="float-nav-home"
@@ -261,7 +266,7 @@ export default function App() {
       ) : currentPage !== "jobs" ? (
         <button
           id="floating-back-nav"
-          className="floating-nav floating-nav--left"
+          className={`floating-nav floating-nav--left ${isScrolled ? "floating-nav--scrolled" : ""}`}
           onClick={() => navigateTo("home")}
         >
           <CustomIcon src={arrowLeftSvg} size={16} />

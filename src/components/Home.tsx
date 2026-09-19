@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData, CaseStudy, OtherProject, MediumArticle } from "../data/portfolioData";
 import Logo from "./Logo";
@@ -6,15 +6,56 @@ import CustomIcon from "./CustomIcon";
 import xSvg from "../assets/icons/x.svg?raw";
 import checkSvg from "../assets/icons/check.svg?raw";
 
+const heroTags = [
+  {
+    id: "ooux",
+    label: "OOUX",
+    tooltip:
+      "I’ve been practicing Object-Oriented UX since 2017 and remain active in the OOUX community. I use object mapping to define product structure, relationships, and workflows before moving into screens and UI—and more recently, as a foundation for structuring data for LLMs."
+  },
+  {
+    id: "ai",
+    label: "AI",
+    tooltip:
+      "I work with AI both as a product capability and as part of the design process. I’ve built an AI landing-page generator from concept to working prototype, while exploring semantic design systems structured for engineers, accessibility tools, and LLMs."
+  },
+  {
+    id: "b2b",
+    label: "B2B",
+    tooltip:
+      "Most of my recent product work is in B2B and enterprise software, including TravelTech ERPs, internal tools, and operational platforms. I work on products where the interface is only the visible part of a much larger business logic—and where reducing friction without hiding that logic is the real design challenge."
+  },
+  {
+    id: "cro",
+    label: "CRO",
+    tooltip:
+      "I use product design to improve conversion across acquisition, lead generation, and checkout. My B2C work includes paywall and listing optimization for Lemonfrog, the full mobile journey for CheapOair, and ongoing lead-generation and checkout optimization in TravelTech."
+  }
+];
+
 interface HomeProps {
   onNavigate: (page: string, params?: { caseId: string }) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
+  const [activeMobileTag, setActiveMobileTag] = useState<string | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  const activeTagData = heroTags.find((t) => t.id === activeMobileTag);
+
+  useEffect(() => {
+    if (!activeMobileTag) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveMobileTag(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeMobileTag]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -171,38 +212,26 @@ export default function Home({ onNavigate }: HomeProps) {
                 className="hero-tags-container"
               >
                 <ul className="hero-tags-list">
-                  <li className="hero-tag-item">
-                    <span className="hero-tag-pill">OOUX</span>
-                    <div className="hero-tag-tooltip">
-                      <p className="hero-tag-tooltip-text">
-                        I’ve been practicing Object-Oriented UX since 2017 and remain active in the OOUX community. I use object mapping to define product structure, relationships, and workflows before moving into screens and UI—and more recently, as a foundation for structuring data for LLMs.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="hero-tag-item">
-                    <span className="hero-tag-pill">AI</span>
-                    <div className="hero-tag-tooltip">
-                      <p className="hero-tag-tooltip-text">
-                        I work with AI both as a product capability and as part of the design process. I’ve built an AI landing-page generator from concept to working prototype, while exploring semantic design systems structured for engineers, accessibility tools, and LLMs.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="hero-tag-item">
-                    <span className="hero-tag-pill">B2B</span>
-                    <div className="hero-tag-tooltip">
-                      <p className="hero-tag-tooltip-text">
-                        Most of my recent product work is in B2B and enterprise software, including TravelTech ERPs, internal tools, and operational platforms. I work on products where the interface is only the visible part of a much larger business logic—and where reducing friction without hiding that logic is the real design challenge.
-                      </p>
-                    </div>
-                  </li>
-                  <li className="hero-tag-item">
-                    <span className="hero-tag-pill">CRO</span>
-                    <div className="hero-tag-tooltip">
-                      <p className="hero-tag-tooltip-text">
-                        I use product design to improve conversion across acquisition, lead generation, and checkout. My B2C work includes paywall and listing optimization for Lemonfrog, the full mobile journey for CheapOair, and ongoing lead-generation and checkout optimization in TravelTech.
-                      </p>
-                    </div>
-                  </li>
+                  {heroTags.map((tag) => (
+                    <li key={tag.id} className="hero-tag-item">
+                      <button
+                        type="button"
+                        className={`hero-tag-pill ${activeMobileTag === tag.id ? "hero-tag-pill--active" : ""}`}
+                        onClick={() => {
+                          setActiveMobileTag((prev) => (prev === tag.id ? null : tag.id));
+                        }}
+                        aria-expanded={activeMobileTag === tag.id}
+                        aria-label={`Tag: ${tag.label}`}
+                      >
+                        {tag.label}
+                      </button>
+                      <div className="hero-tag-tooltip">
+                        <p className="hero-tag-tooltip-text">
+                          {tag.tooltip}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -513,6 +542,37 @@ export default function Home({ onNavigate }: HomeProps) {
               )}
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Hero Tag Bottom Sheet with 8% Scrim */}
+      <AnimatePresence>
+        {activeMobileTag && activeTagData && (
+          <>
+            <motion.div
+              key="hero-tag-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="hero-tag-backdrop"
+              onClick={() => setActiveMobileTag(null)}
+              aria-hidden="true"
+            />
+            <motion.div
+              key="hero-tag-sheet"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
+              className="hero-tag-sheet"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${activeTagData.label} description`}
+            >
+              <p className="hero-tag-sheet-text">{activeTagData.tooltip}</p>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.div>

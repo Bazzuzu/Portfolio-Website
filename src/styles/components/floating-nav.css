@@ -4,7 +4,8 @@
 
 .floating-nav {
   position: fixed;
-  top: 1.15rem; /* Optical horizontal alignment with the centered logo (which is centered inside an 80px static header) */
+  top: calc(40px + (var(--size-icon-lg) / 2));
+  transform: translateY(-50%);
   right: var(--spacing-container-px-md);
   z-index: var(--z-index-modal);
   display: inline-flex;
@@ -12,16 +13,23 @@
   background-color: rgba(255, 255, 255, 0.7); /* Lighter semi-translucent background using white surface token base */
   border: 1px solid var(--color-border-subtle); /* Lighter border using subtle border token */
   border-radius: var(--radius-pill);
-  padding: 16px 24px;
-  padding-top: 14px;
+  padding: 14px 24px;
   gap: 24px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: none;
   transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
               border-color var(--motion-duration-fast) var(--motion-easing-standard),
-              right var(--motion-duration-fast) var(--motion-easing-standard);
+              right var(--motion-duration-fast) var(--motion-easing-standard),
+              top var(--motion-duration-normal) var(--motion-easing-standard),
+              transform var(--motion-duration-normal) var(--motion-easing-standard);
   pointer-events: auto;
+}
+
+/* Scrolled state: shift slightly higher to leave exactly 24px to the top */
+.floating-nav--scrolled {
+  top: max(24px, env(safe-area-inset-top, 24px)) !important;
+  transform: translateY(0) !important;
 }
 
 .floating-nav__divider {
@@ -62,6 +70,7 @@
 /* Tablets and medium screens */
 @media (min-width: 768px) {
   .floating-nav {
+    top: calc(50px + (var(--size-icon-lg) / 2));
     right: var(--spacing-container-px-lg);
   }
 }
@@ -69,6 +78,7 @@
 /* Desktops */
 @media (min-width: 1024px) {
   .floating-nav {
+    top: calc(60px + (var(--size-icon-lg) / 2));
     right: var(--spacing-container-px-xl);
   }
 }
@@ -83,8 +93,7 @@
 /* On ultra-mobile devices, adjust sizes */
 @media (max-width: 480px) {
   .floating-nav {
-    top: 1.15rem;
-    padding: 12px 18px;
+    padding: 10px 18px;
     gap: 16px;
   }
   

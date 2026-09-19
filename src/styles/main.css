@@ -360,10 +360,23 @@ button {
   width: 100%;
 }
 
+.hero-grid-cell--tags {
+  order: -1;
+}
+
 @media (min-width: 768px) {
   .hero-grid-cell--headline,
   .hero-grid-cell--subheadline {
     align-self: end;
+  }
+
+  .hero-grid-cell--actions,
+  .hero-grid-cell--tags {
+    align-self: center;
+  }
+
+  .hero-grid-cell--tags {
+    order: 0;
   }
 }
 
@@ -426,7 +439,7 @@ button {
 .hero-tags-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--spacing-component-gap-md);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -441,7 +454,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 14px;
+  padding-inline: var(--spacing-component-px-md);
+  padding-block: var(--spacing-component-py-xs);
   background-color: var(--color-action-secondary-default); /* Matches the soft warm gray background perfectly */
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-pill);
@@ -451,7 +465,9 @@ button {
   line-height: var(--font-label-code-line-height);
   letter-spacing: var(--font-label-code-tracking);
   color: var(--color-text-primary);
-  cursor: help;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
   transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
               border-color var(--motion-duration-fast) var(--motion-easing-standard),
               transform 150ms ease;
@@ -463,7 +479,17 @@ button {
   transform: translateY(-1px);
 }
 
-/* Bulletproof SEO / AI-friendly tooltip */
+.hero-tag-pill:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.hero-tag-pill--active {
+  background-color: var(--color-action-secondary-hover);
+  border-color: var(--color-border-default);
+}
+
+/* Bulletproof SEO / AI-friendly tooltip (Desktop) */
 .hero-tag-tooltip {
   position: absolute;
   bottom: calc(100% + 12px);
@@ -529,12 +555,77 @@ button {
   margin: 0;
 }
 
-/* Interactions */
+/* Desktop Interactions */
 .hero-tag-item:hover .hero-tag-tooltip {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
+}
+
+/* Desktop & Tablet: Display tooltip below the tag */
+@media (min-width: 768px) {
+  .hero-tag-tooltip {
+    top: calc(100% + var(--spacing-component-gap-sm));
+    bottom: auto;
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  .hero-tag-tooltip::before {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent var(--color-border-default) transparent;
+  }
+
+  .hero-tag-tooltip::after {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent var(--color-surface-default) transparent;
+  }
+}
+
+/* Hide hover tooltip on mobile */
+@media (max-width: 767px) {
+  .hero-tag-tooltip {
+    display: none !important;
+  }
+}
+
+/* Mobile Hero Tag Bottom Sheet & Scrim Overlay */
+.hero-tag-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-scrim-subtle);
+  z-index: calc(var(--z-index-modal) + 10);
+}
+
+.hero-tag-sheet {
+  position: fixed;
+  bottom: max(var(--spacing-container-px-sm), env(safe-area-inset-bottom, var(--spacing-container-px-sm)));
+  left: var(--spacing-container-px-sm);
+  right: var(--spacing-container-px-sm);
+  padding: var(--spacing-container-px-md);
+  background-color: var(--color-surface-default);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(18, 18, 18, 0.12);
+  z-index: calc(var(--z-index-modal) + 20);
+}
+
+.hero-tag-sheet-text {
+  font-family: var(--font-label-code-family);
+  font-size: var(--font-label-code-size);
+  font-weight: var(--font-label-code-weight);
+  line-height: var(--font-label-code-line-height);
+  letter-spacing: var(--font-label-code-tracking);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-tag-backdrop,
+  .hero-tag-sheet {
+    display: none !important;
+  }
 }
 
 /* ---------------------------------------------------- */

@@ -67,4 +67,5 @@
   /* Overlay / Modal Scrim */
   --color-overlay-modal: rgba(18, 18, 18, 0.3);
   --color-scrim-default: rgba(18, 18, 18, 0.05);
+  --color-scrim-subtle: rgba(0, 0, 0, 0.08);
 }
