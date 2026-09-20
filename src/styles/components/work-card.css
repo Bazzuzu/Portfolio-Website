@@ -97,7 +97,7 @@
 }
 
 .work-card:hover .work-card__title {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 .work-card__description {
@@ -128,5 +128,5 @@
 }
 
 .work-card:hover .work-card__link {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }

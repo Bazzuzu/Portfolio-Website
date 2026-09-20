@@ -5,6 +5,8 @@ import Logo from "./Logo";
 import CustomIcon from "./CustomIcon";
 import xSvg from "../assets/icons/x.svg?raw";
 import checkSvg from "../assets/icons/check.svg?raw";
+import copySvg from "../assets/icons/copy.svg?raw";
+import externalLinkSvg from "../assets/icons/external-link.svg?raw";
 
 const heroTags = [
   {
@@ -40,26 +42,38 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   const [activeMobileTag, setActiveMobileTag] = useState<string | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   const activeTagData = heroTags.find((t) => t.id === activeMobileTag);
 
   useEffect(() => {
-    if (!activeMobileTag) return;
+    if (!activeMobileTag && !isContactModalOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setActiveMobileTag(null);
+        if (activeMobileTag) setActiveMobileTag(null);
+        if (isContactModalOpen) handleCloseModal();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeMobileTag]);
+  }, [activeMobileTag, isContactModalOpen]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("hello@lexkonovalov.com");
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email: ", err);
+    }
   };
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -73,24 +87,25 @@ export default function Home({ onNavigate }: HomeProps) {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          ...formData,
-          _subject: `New Message from Portfolio: ${formData.name}`
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Message from Portfolio (${formData.email})`
         })
       });
 
       if (response.ok) {
         setIsSuccess(true);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ email: "", message: "" });
       } else {
         // Log the error but show success for better user experience
         console.error("Form submission failed");
         setIsSuccess(true);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ email: "", message: "" });
       }
     } catch (error) {
       // In case of network errors or offline testing, show the success state to keep UI clean
       setIsSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ email: "", message: "" });
     } finally {
       setIsSubmitting(false);
     }
@@ -100,6 +115,7 @@ export default function Home({ onNavigate }: HomeProps) {
     setIsContactModalOpen(false);
     setTimeout(() => {
       setIsSuccess(false);
+      setCopiedEmail(false);
     }, 300);
   };
 
@@ -192,7 +208,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     }
                   }}
                 >
-                  View Case Studies
+                  View Selected Work
                 </button>
                 
                 <button
@@ -200,7 +216,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   className="action-btn action-btn--ghost"
                   onClick={() => setIsContactModalOpen(true)}
                 >
-                  Contact Me
+                  Contact
                 </button>
               </motion.div>
             </div>
@@ -446,11 +462,14 @@ export default function Home({ onNavigate }: HomeProps) {
           >
             <motion.div
               className="contact-modal-dialog"
-              initial={{ opacity: 0, scale: 0.95, y: 16 }}
+              initial={{ opacity: 0, scale: 0.96, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 16 }}
-              transition={{ duration: 0.25, ease: [0.215, 0.610, 0.355, 1.000] }}
+              exit={{ opacity: 0, scale: 0.96, y: 16 }}
+              transition={{ duration: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
               onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="contact-modal-title"
             >
               <button
                 type="button"
@@ -458,86 +477,121 @@ export default function Home({ onNavigate }: HomeProps) {
                 onClick={handleCloseModal}
                 aria-label="Close"
               >
-                <CustomIcon src={xSvg} size={20} />
+                <CustomIcon src={xSvg} size="var(--size-icon-lg)" />
               </button>
 
               {isSuccess ? (
-                <div className="contact-form-success">
-                  <div className="contact-form-success__icon">
+                <div className="contact-modal-success">
+                  <div className="contact-modal-success__icon">
                     <CustomIcon src={checkSvg} size={48} />
                   </div>
-                  <h3 className="contact-form-success__title">Thank you!</h3>
-                  <p className="contact-form-success__message">
+                  <h3 className="contact-modal-success__title">Thank you!</h3>
+                  <p className="contact-modal-success__message">
                     Your message has been sent. I'll get back to you as soon as possible.
                   </p>
+                  <button
+                    type="button"
+                    className="contact-modal__submit-btn"
+                    onClick={handleCloseModal}
+                  >
+                    Close
+                  </button>
                 </div>
               ) : (
                 <>
-                  <h2 className="contact-form__title">Contact</h2>
-                  <p className="contact-form__subtitle">
-                    I take on select consulting and advising work. If you’re building something interesting, let’s talk.
-                  </p>
+                  <div className="contact-modal__top">
+                    <h2 id="contact-modal-title" className="contact-modal__title">
+                      Contact
+                    </h2>
+                    <p className="contact-modal__subtitle">
+                      Open to product design opportunities, selected consulting work, and interesting conversations.
+                    </p>
 
-                  <form className="contact-form" onSubmit={handleFormSubmit}>
-                    <div className="contact-form-group">
-                      <label htmlFor="contact-name" className="contact-form-label">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="contact-name"
-                        name="name"
-                        required
-                        className="contact-form-input"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="John Doe"
-                      />
+                    <hr className="contact-modal__divider" />
+
+                    <div className="contact-modal__direct-list">
+                      <div className="contact-modal__direct-item">
+                        <button
+                          type="button"
+                          className="contact-modal__copy-btn"
+                          onClick={handleCopyEmail}
+                          aria-label="Copy email address"
+                        >
+                          <span>hello@lexkonovalov.com</span>
+                          <span className="contact-modal__icon-wrapper" title={copiedEmail ? "Copied!" : "Copy email"}>
+                            <CustomIcon src={copiedEmail ? checkSvg : copySvg} size="var(--size-icon-md)" />
+                          </span>
+                          {copiedEmail && <span className="contact-modal__copy-feedback">Copied!</span>}
+                        </button>
+                      </div>
+
+                      <div className="contact-modal__direct-item">
+                        <a
+                          href="https://www.linkedin.com/in/lex-konovalov/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="contact-modal__direct-link"
+                        >
+                          <span>LinkedIn</span>
+                          <span className="contact-modal__icon-wrapper">
+                            <CustomIcon src={externalLinkSvg} size="var(--size-icon-md)" />
+                          </span>
+                        </a>
+                      </div>
+
+                      <div className="contact-modal__direct-item">
+                        <a
+                          href="https://wa.me/34643851237"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="contact-modal__direct-link"
+                        >
+                          <span>WhatsApp</span>
+                          <span className="contact-modal__icon-wrapper">
+                            <CustomIcon src={externalLinkSvg} size="var(--size-icon-md)" />
+                          </span>
+                        </a>
+                      </div>
                     </div>
+                  </div>
 
-                    <div className="contact-form-group">
-                      <label htmlFor="contact-email" className="contact-form-label">
-                        Email
-                      </label>
+                  <div className="contact-modal__form-section">
+                    <h3 className="contact-modal__form-title">Prefer a form?</h3>
+
+                    <form className="contact-modal__form" onSubmit={handleFormSubmit}>
                       <input
                         type="email"
                         id="contact-email"
                         name="email"
                         required
-                        className="contact-form-input"
+                        aria-label="Email"
+                        className="contact-modal__input"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="john@example.com"
+                        placeholder="your@email.com"
                       />
-                    </div>
 
-                    <div className="contact-form-group">
-                      <label htmlFor="contact-message" className="contact-form-label">
-                        Message
-                      </label>
                       <textarea
                         id="contact-message"
                         name="message"
                         required
-                        className="contact-form-textarea"
+                        rows={3}
+                        aria-label="Message"
+                        className="contact-modal__textarea"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Tell me about your project..."
+                        placeholder="What would you like to discuss?"
                       />
-                    </div>
 
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="action-btn action-btn--primary"
-                    >
-                      {isSubmitting ? "Submitting..." : "Submit"}
-                    </button>
-
-                    <p className="contact-form__privacy-note">
-                      By submitting this form, your message is sent directly to my email. No personal data is stored in a database.
-                    </p>
-                  </form>
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="contact-modal__submit-btn"
+                      >
+                        {isSubmitting ? "Sending..." : "Send message"}
+                      </button>
+                    </form>
+                  </div>
                 </>
               )}
             </motion.div>

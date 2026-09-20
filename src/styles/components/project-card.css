@@ -67,5 +67,5 @@
 }
 
 .project-card--clickable:hover .project-card__title {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }

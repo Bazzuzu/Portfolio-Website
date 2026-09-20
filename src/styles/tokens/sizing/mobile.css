@@ -1,10 +1,12 @@
 :root {
   /* Icons Sizes */
-  --size-icon-sm: 1rem;   /* 16px */
-  --size-icon-md: 1.5rem; /* 24px */
-  --size-icon-lg: 2rem;   /* 32px */
-  --size-icon-xl: 3rem;   /* 48px */
-  --size-icon-2xl: 4rem;  /* 64px */
+  --size-icon-xs: 0.75rem; /* 12px */
+  --size-icon-sm: 1rem;    /* 16px */
+  --size-icon-md: 1.25rem; /* 20px */
+  --size-icon-lg: 1.5rem;  /* 24px */
+  --size-icon-xl: 2rem;    /* 32px */
+  --size-icon-2xl: 3rem;   /* 48px */
+  --size-icon-3xl: 4rem;   /* 64px */
 
   /* Section heights (min-height boundaries) */
   --size-section-h-sm: 20rem; /* 320px */
@@ -32,6 +34,7 @@
   --size-component-h-lg: 3.5rem;  /* 56px */
   --size-component-h-xl: 4rem;    /* 64px */
   --size-component-h-2xl: 5rem;   /* 80px */
+  --size-component-h-3xl: 6.125rem; /* 98px */
 
   --size-component-w-xs: 4rem;    /* 64px */
   --size-component-w-sm: 8rem;    /* 128px */

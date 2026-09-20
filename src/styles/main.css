@@ -292,7 +292,7 @@ button {
 }
 
 .nav__link:hover {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 .nav__link--disabled {
@@ -717,7 +717,7 @@ button {
 
 .action-btn--ghost:hover {
   background-color: transparent;
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 .action-btn:focus-visible {
@@ -897,7 +897,7 @@ button {
 }
 
 .footer__link-simple:hover {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 @media (min-width: 768px) {
@@ -1245,7 +1245,7 @@ button {
 }
 
 .contacts__value a:hover {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 .social-links {
@@ -1263,7 +1263,7 @@ button {
 }
 
 .social-link:hover {
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
 }
 
 /* ---------------------------------------------------- */

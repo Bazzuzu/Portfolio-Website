@@ -24,16 +24,16 @@
   --spacing-component-gap-2xl: 1.5rem;   /* 24px */
 
   --spacing-container-px-xs: 0.5rem;   /* 8px */
-  --spacing-container-px-sm: 1rem;     /* 16px */
+  --spacing-container-px-sm: 0.75rem;  /* 12px */
   --spacing-container-px-md: 1.5rem;   /* 24px */
   --spacing-container-px-lg: 2.5rem;   /* 40px */
-  --spacing-container-px-xl: 5rem;     /* 80px */
+  --spacing-container-px-xl: 3.5rem;   /* 56px */
 
   --spacing-container-py-xs: 0.5rem;   /* 8px */
-  --spacing-container-py-sm: 1rem;     /* 16px */
+  --spacing-container-py-sm: 0.75rem;  /* 12px */
   --spacing-container-py-md: 1.5rem;   /* 24px */
   --spacing-container-py-lg: 2.5rem;   /* 40px */
-  --spacing-container-py-xl: 5rem;     /* 80px */
+  --spacing-container-py-xl: 3.5rem;   /* 56px */
 
   --spacing-container-gap-xs: 0.75rem; /* 12px */
   --spacing-container-gap-sm: 1rem;    /* 16px */

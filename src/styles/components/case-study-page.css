@@ -717,7 +717,7 @@
 }
 
 .ai-proto-hero-link:hover {
-  color: var(--color-action-brand-hover);
+  color: var(--color-text-link);
 }
 
 .ai-proto-hero-link:focus-visible {
