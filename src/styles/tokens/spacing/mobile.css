@@ -27,23 +27,23 @@
   /* ==================================================== */
   /* Container-level Spacing (Mobile First)               */
   /* ==================================================== */
-  --spacing-container-px-xs: 0.75rem;  /* 12px */
-  --spacing-container-px-sm: 1rem;     /* 16px */
-  --spacing-container-px-md: 1.25rem;  /* 20px */
-  --spacing-container-px-lg: 1.5rem;   /* 24px */
-  --spacing-container-px-xl: 2rem;     /* 32px */
+  --spacing-container-px-xs: 0.5rem;   /* 8px */
+  --spacing-container-px-sm: 0.75rem;  /* 12px */
+  --spacing-container-px-md: 1rem;     /* 16px */
+  --spacing-container-px-lg: 1.25rem;  /* 20px */
+  --spacing-container-px-xl: 1.5rem;   /* 24px */
 
-  --spacing-container-py-xs: 1rem;     /* 16px */
-  --spacing-container-py-sm: 1.5rem;   /* 24px */
-  --spacing-container-py-md: 2rem;     /* 32px */
-  --spacing-container-py-lg: 3rem;     /* 48px */
-  --spacing-container-py-xl: 4rem;     /* 64px */
+  --spacing-container-py-xs: 0.5rem;   /* 8px */
+  --spacing-container-py-sm: 0.75rem;  /* 12px */
+  --spacing-container-py-md: 1rem;     /* 16px */
+  --spacing-container-py-lg: 1.5rem;   /* 24px */
+  --spacing-container-py-xl: 2rem;     /* 32px */
 
-  --spacing-container-gap-xs: 0.75rem;  /* 12px */
-  --spacing-container-gap-sm: 1.25rem; /* 20px */
-  --spacing-container-gap-md: 1.75rem; /* 28px */
-  --spacing-container-gap-lg: 2.5rem;  /* 40px */
-  --spacing-container-gap-xl: 3.5rem;  /* 56px */
+  --spacing-container-gap-xs: 0.5rem;  /* 8px */
+  --spacing-container-gap-sm: 0.75rem; /* 12px */
+  --spacing-container-gap-md: 1rem;    /* 16px */
+  --spacing-container-gap-lg: 1.5rem;  /* 24px */
+  --spacing-container-gap-xl: 2rem;    /* 32px */
 
   /* ==================================================== */
   /* Section-level Spacing (Mobile First)                 */

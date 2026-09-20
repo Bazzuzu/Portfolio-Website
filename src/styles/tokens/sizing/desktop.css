@@ -1,3 +1,4 @@
 :root {
-  /* Готов для будущих адаптивных переопределений размеров для Desktop */
+  /* Desktop sizing overrides */
+  --size-component-h-3xl: 6.125rem; /* 98px */
 }

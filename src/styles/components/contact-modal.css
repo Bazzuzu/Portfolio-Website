@@ -4,11 +4,19 @@
   inset: 0;
   background-color: var(--color-overlay-modal);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   z-index: var(--z-index-modal);
-  padding: var(--spacing-container-px-sm);
+  padding: var(--spacing-container-py-sm) var(--spacing-container-px-sm);
+  padding-bottom: max(var(--spacing-container-py-sm), env(safe-area-inset-bottom, var(--spacing-container-py-sm)));
   backdrop-filter: blur(4px);
+}
+
+@media (min-width: 768px) {
+  .contact-modal-overlay {
+    align-items: center;
+    padding: var(--spacing-container-py-md) var(--spacing-container-px-sm);
+  }
 }
 
 .contact-modal-dialog {
@@ -19,10 +27,23 @@
   position: relative;
   box-shadow: 0 20px 48px -12px rgba(18, 18, 18, 0.25);
   border: 1px solid var(--color-border-subtle);
-  overflow: hidden;
-  max-height: calc(100vh - 2 * var(--spacing-container-px-sm));
+  max-height: calc(100vh - 2 * var(--spacing-container-py-md));
+  max-height: calc(100dvh - 2 * var(--spacing-container-py-md));
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
+}
+
+.contact-modal-dialog::-webkit-scrollbar {
+  width: 4px;
+}
+
+.contact-modal-dialog::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-subtle);
+  border-radius: var(--radius-pill);
 }
 
 .contact-modal-close-btn {
