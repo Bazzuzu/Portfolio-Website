@@ -477,7 +477,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 onClick={handleCloseModal}
                 aria-label="Close"
               >
-                <CustomIcon src={xSvg} size="var(--size-icon-lg)" />
+                <CustomIcon src={xSvg} size="var(--size-icon-md)" />
               </button>
 
               {isSuccess ? (

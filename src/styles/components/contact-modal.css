@@ -20,7 +20,7 @@
 }
 
 .contact-modal-dialog {
-  background-color: var(--color-surface-default);
+  background-color: var(--color-canvas);
   width: 100%;
   max-width: var(--size-container-w-xs);
   border-radius: var(--radius-xl);
@@ -48,25 +48,29 @@
 
 .contact-modal-close-btn {
   position: absolute;
-  top: var(--spacing-container-py-md);
-  right: var(--spacing-container-px-md);
-  background: transparent;
+  top: var(--spacing-container-py-sm);
+  right: var(--spacing-container-px-sm);
+  background-color: var(--color-action-secondary-default);
   border: none;
   cursor: pointer;
-  color: var(--color-icon-secondary);
+  color: var(--color-icon-primary);
   transition: color var(--motion-duration-fast) var(--motion-easing-standard),
     background-color var(--motion-duration-fast) var(--motion-easing-standard);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-component-px-2xs);
+  padding: var(--spacing-component-py-2xs) var(--spacing-component-px-2xs);
   border-radius: var(--radius-pill);
   z-index: var(--z-index-base);
 }
 
 .contact-modal-close-btn:hover {
   color: var(--color-icon-primary);
-  background-color: var(--color-action-ghost-hover);
+  background-color: var(--color-action-secondary-hover);
+}
+
+.contact-modal-close-btn:active {
+  background-color: var(--color-action-secondary-pressed);
 }
 
 .contact-modal-close-btn:focus-visible {
@@ -76,18 +80,19 @@
 /* Top Direct Section */
 .contact-modal__top {
   padding-inline: var(--spacing-container-px-lg);
-  padding-block: var(--spacing-container-py-lg);
+  padding-top: var(--spacing-container-py-lg);
+  padding-bottom: var(--spacing-container-py-md);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-container-gap-md);
 }
 
 .contact-modal__title {
-  font-family: var(--font-display-sm-family);
-  font-size: var(--font-display-sm-size);
-  font-weight: var(--font-display-sm-weight);
-  line-height: var(--font-display-sm-line-height);
-  letter-spacing: var(--font-display-sm-tracking);
+  font-family: var(--font-headline-lg-family);
+  font-size: var(--font-headline-lg-size);
+  font-weight: var(--font-headline-lg-weight);
+  line-height: var(--font-headline-lg-line-height);
+  letter-spacing: var(--font-headline-lg-tracking);
   color: var(--color-text-primary);
   margin: 0;
 }
@@ -104,7 +109,7 @@
 
 .contact-modal__divider {
   border: none;
-  border-top: 1px solid var(--color-border-subtle);
+  border-top: 1px solid var(--color-border-default);
   margin: 0;
   width: 100%;
 }
@@ -135,6 +140,8 @@
   line-height: var(--font-body-sm-line-height);
   letter-spacing: var(--font-body-sm-tracking);
   color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: color var(--motion-duration-fast) var(--motion-easing-standard);
 }
 
@@ -185,7 +192,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-icon-secondary);
+  color: var(--color-icon-primary);
   width: var(--size-icon-md);
   height: var(--size-icon-md);
   transition: color var(--motion-duration-fast) var(--motion-easing-standard);
@@ -195,13 +202,14 @@
   font-family: var(--font-label-sm-family);
   font-size: var(--font-label-sm-size);
   font-weight: var(--font-label-sm-weight);
-  color: var(--color-text-brand);
+  color: var(--color-text-link);
   margin-left: var(--spacing-component-px-xs);
 }
 
 /* Bottom Form Section */
 .contact-modal__form-section {
-  background-color: var(--color-section-subtle);
+  background-color: var(--color-surface-default);
+  border-top: 1px solid var(--color-border-subtle);
   border-top-left-radius: var(--radius-xl);
   border-top-right-radius: var(--radius-xl);
   padding-inline: var(--spacing-container-px-lg);
@@ -243,8 +251,8 @@
 
 .contact-modal__input,
 .contact-modal__textarea {
-  background-color: var(--color-surface-default);
-  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-canvas);
+  border: 1px solid transparent;
   border-radius: var(--radius-sm);
   padding: var(--spacing-component-py-sm) var(--spacing-component-px-md);
   color: var(--color-text-primary);
@@ -253,7 +261,7 @@
   line-height: var(--font-body-sm-line-height);
   letter-spacing: var(--font-body-sm-tracking);
   transition: border-color var(--motion-duration-fast) var(--motion-easing-standard),
-    box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+    background-color var(--motion-duration-fast) var(--motion-easing-standard);
   width: 100%;
 }
 
@@ -267,14 +275,14 @@
 
 .contact-modal__input:hover,
 .contact-modal__textarea:hover {
-  border-color: var(--color-border-default);
+  background-color: var(--color-section-subtle);
 }
 
 .contact-modal__input:focus,
 .contact-modal__textarea:focus {
   outline: none;
+  background-color: var(--color-canvas);
   border-color: var(--color-border-focus);
-  box-shadow: 0 0 0 3px rgba(48, 88, 130, 0.15);
 }
 
 .contact-modal__textarea {
@@ -288,9 +296,11 @@
   border: none;
   border-radius: var(--radius-pill);
   padding: var(--spacing-component-py-sm) var(--spacing-component-px-xl);
-  font-family: var(--font-family-sans);
-  font-size: var(--font-title-md-size);
-  font-weight: 500;
+  font-family: var(--font-label-lg-family);
+  font-size: var(--font-label-lg-size);
+  font-weight: var(--font-label-lg-weight);
+  line-height: var(--font-label-lg-line-height);
+  letter-spacing: var(--font-label-lg-tracking);
   cursor: pointer;
   width: 100%;
   display: flex;
