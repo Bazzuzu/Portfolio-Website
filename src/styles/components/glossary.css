@@ -1,0 +1,822 @@
+/* src/styles/components/glossary.css */
+/* Strictly modular semantic styling for Architectural Product Design Glossary */
+
+/* ==================================================== */
+/* Main Layout & Shell                                 */
+/* ==================================================== */
+.glossary-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+}
+
+.glossary-container {
+  width: 100%;
+  max-width: var(--size-container-w-xl);
+  margin-inline: auto;
+  padding-inline: var(--spacing-container-px-md);
+}
+
+@media (min-width: 768px) {
+  .glossary-container {
+    padding-inline: var(--spacing-container-px-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .glossary-container {
+    padding-inline: var(--spacing-section-px-md);
+  }
+}
+
+/* ==================================================== */
+/* Hero Header Section                                 */
+/* ==================================================== */
+.glossary-hero {
+  width: 100%;
+  background-color: var(--color-section-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-block-start: var(--spacing-section-py-sm);
+  padding-block-end: var(--spacing-section-py-md);
+}
+
+@media (min-width: 768px) {
+  .glossary-hero {
+    padding-block-start: var(--spacing-section-py-md);
+    padding-block-end: var(--spacing-section-py-lg);
+  }
+}
+
+.glossary-hero__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: var(--size-text-w-md);
+  margin-inline: auto;
+}
+
+.glossary-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-component-gap-xs);
+  margin-bottom: var(--spacing-component-gap-md);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-secondary);
+}
+
+.glossary-breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--spacing-component-gap-xs);
+}
+
+.glossary-breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-component-gap-xs);
+}
+
+.glossary-breadcrumbs__link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-breadcrumbs__link:hover {
+  color: var(--color-text-primary);
+}
+
+.glossary-breadcrumbs__link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-2xs);
+}
+
+.glossary-breadcrumbs__separator {
+  color: var(--color-border-default);
+}
+
+.glossary-breadcrumbs__current {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.glossary-hero__title {
+  font-family: var(--font-display-md-family);
+  font-size: var(--font-display-md-size);
+  font-weight: var(--font-display-md-weight);
+  line-height: var(--font-display-md-line-height);
+  letter-spacing: var(--font-display-md-tracking);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-gap-md);
+}
+
+.glossary-hero__description {
+  font-family: var(--font-body-lg-family);
+  font-size: var(--font-body-lg-size);
+  font-weight: var(--font-body-lg-weight);
+  line-height: var(--font-body-lg-line-height);
+  color: var(--color-text-secondary);
+}
+
+.glossary-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-component-gap-sm);
+  margin-top: var(--spacing-component-gap-sm);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-secondary);
+}
+
+.glossary-hero__meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-component-py-2xs) var(--spacing-component-px-sm);
+  background-color: var(--color-section-accent);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-primary);
+  font-size: var(--font-label-sm-size);
+  font-weight: 500;
+}
+
+/* ==================================================== */
+/* Main Content Area                                    */
+/* ==================================================== */
+.glossary-main {
+  flex-grow: 1;
+  padding-block-start: var(--spacing-section-py-sm);
+  padding-block-end: var(--spacing-section-py-lg);
+}
+
+@media (min-width: 768px) {
+  .glossary-main {
+    padding-block-start: var(--spacing-section-py-md);
+  }
+}
+
+/* ==================================================== */
+/* Search Input Bar                                     */
+/* ==================================================== */
+.glossary-search-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--size-component-h-lg);
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-pill);
+  padding-inline-start: var(--spacing-component-px-lg);
+  padding-inline-end: var(--spacing-component-px-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard),
+              box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-search-bar:focus-within {
+  border-color: var(--color-border-active);
+  box-shadow: 0 0 0 3px rgba(62, 112, 162, 0.15);
+}
+
+.glossary-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-icon-secondary);
+  margin-inline-end: var(--spacing-component-gap-sm);
+  flex-shrink: 0;
+}
+
+.glossary-search-input {
+  flex-grow: 1;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.glossary-search-input::placeholder {
+  color: var(--color-text-disabled);
+}
+
+.glossary-search-shortcut {
+  display: none;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: var(--color-section-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-label-sm-family);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .glossary-search-shortcut {
+    display: inline-flex;
+  }
+}
+
+.glossary-search-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-component-h-xs);
+  height: var(--size-component-h-xs);
+  border-radius: var(--radius-pill);
+  color: var(--color-icon-secondary);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+              color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-search-clear:hover {
+  background-color: var(--color-action-ghost-hover);
+  color: var(--color-text-primary);
+}
+
+.glossary-search-clear:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+}
+
+/* ==================================================== */
+/* Domain Category Cards Grid                           */
+/* ==================================================== */
+.glossary-categories {
+  width: 100%;
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-categories__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-container-gap-md);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .glossary-categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .glossary-categories__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-container-gap-lg);
+  }
+}
+
+.glossary-category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 130px;
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-container-px-md) var(--spacing-container-px-lg);
+  text-align: left;
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard),
+              background-color var(--motion-duration-fast) var(--motion-easing-standard),
+              transform var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-category-card:hover {
+  border-color: var(--color-border-default);
+  transform: translateY(-2px);
+}
+
+.glossary-category-card:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.glossary-category-card--active {
+  border-color: var(--color-action-primary-default);
+  background-color: var(--color-surface-sunken);
+  box-shadow: 0 0 0 1px var(--color-action-primary-default);
+}
+
+.glossary-category-card__title {
+  font-family: var(--font-title-lg-family);
+  font-size: var(--font-title-lg-size);
+  font-weight: var(--font-title-lg-weight);
+  line-height: var(--font-title-lg-line-height);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-gap-sm);
+}
+
+.glossary-category-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto;
+  padding-top: var(--spacing-component-gap-sm);
+}
+
+.glossary-category-card__count {
+  font-family: var(--font-body-sm-family);
+  font-size: var(--font-body-sm-size);
+  color: var(--color-text-secondary);
+}
+
+.glossary-category-card__action {
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-interactive);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.glossary-category-card--active .glossary-category-card__action {
+  color: var(--color-action-primary-default);
+  font-weight: 600;
+}
+
+/* ==================================================== */
+/* Horizontal Section Divider                          */
+/* ==================================================== */
+.glossary-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-default);
+  margin-block: var(--spacing-section-py-sm);
+  border: none;
+}
+
+/* ==================================================== */
+/* Browse A-Z Navigation                                */
+/* ==================================================== */
+.glossary-browse {
+  width: 100%;
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-browse__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-component-gap-md);
+}
+
+.glossary-browse__title {
+  font-family: var(--font-headline-lg-family);
+  font-size: var(--font-headline-lg-size);
+  font-weight: var(--font-headline-lg-weight);
+  line-height: var(--font-headline-lg-line-height);
+  color: var(--color-text-primary);
+}
+
+.glossary-browse__filter-status {
+  font-family: var(--font-body-sm-family);
+  font-size: var(--font-body-sm-size);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-component-gap-xs);
+}
+
+.glossary-browse__reset-btn {
+  color: var(--color-action-primary-default);
+  text-decoration: underline;
+  font-size: var(--font-label-sm-size);
+  cursor: pointer;
+}
+
+.glossary-alphabet-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-component-py-xs) var(--spacing-component-px-md);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.glossary-alphabet-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.glossary-alphabet-bar__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 600px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.glossary-alphabet-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 4px;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  border-radius: var(--radius-xs);
+  transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+  text-decoration: none;
+}
+
+.glossary-alphabet-btn:hover:not(.glossary-alphabet-btn--disabled) {
+  background-color: var(--color-action-ghost-hover);
+  color: var(--color-text-brand);
+}
+
+.glossary-alphabet-btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+}
+
+.glossary-alphabet-btn--active {
+  background-color: var(--color-section-brand);
+  color: var(--color-text-on-brand) !important;
+  font-weight: 700;
+}
+
+.glossary-alphabet-btn--disabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.glossary-alphabet-sep {
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+/* ==================================================== */
+/* Terms Directory Multi-Column Layout                  */
+/* ==================================================== */
+.glossary-directory {
+  width: 100%;
+  margin-top: var(--spacing-section-py-sm);
+}
+
+.glossary-directory__columns {
+  column-count: 1;
+  column-gap: var(--spacing-container-gap-lg);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .glossary-directory__columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .glossary-directory__columns {
+    column-count: 3;
+    column-gap: var(--spacing-section-px-lg);
+  }
+}
+
+.glossary-letter-group {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: var(--spacing-section-py-sm);
+  width: 100%;
+}
+
+.glossary-letter-group__header {
+  border-bottom: 1px solid var(--color-border-default);
+  padding-bottom: var(--spacing-component-py-xs);
+  margin-bottom: var(--spacing-component-py-sm);
+}
+
+.glossary-letter-group__letter {
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  font-weight: var(--font-headline-md-weight);
+  line-height: var(--font-headline-md-line-height);
+  color: var(--color-text-primary);
+}
+
+.glossary-letter-group__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.glossary-letter-group__item {
+  width: 100%;
+}
+
+.glossary-letter-group__link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-block: var(--spacing-component-py-xs);
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  line-height: var(--font-body-md-line-height);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: var(--radius-2xs);
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-letter-group__link:hover {
+  color: var(--color-text-brand);
+}
+
+.glossary-letter-group__link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.glossary-letter-group__badge {
+  font-family: var(--font-label-sm-family);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-section-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 1px 6px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* ==================================================== */
+/* Empty State (No search results)                     */
+/* ==================================================== */
+.glossary-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--spacing-section-py-md);
+  max-width: var(--size-text-w-md);
+  margin-inline: auto;
+}
+
+.glossary-empty__title {
+  font-family: var(--font-headline-md-family);
+  font-size: var(--font-headline-md-size);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-gap-sm);
+}
+
+.glossary-empty__text {
+  font-family: var(--font-body-md-family);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-component-gap-md);
+}
+
+.glossary-empty__reset-btn {
+  padding: var(--spacing-component-py-sm) var(--spacing-component-px-lg);
+  background-color: var(--color-action-secondary-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-empty__reset-btn:hover {
+  background-color: var(--color-action-secondary-hover);
+}
+
+.glossary-empty__reset-btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+}
+
+/* ==================================================== */
+/* Single Term Page Styles                              */
+/* ==================================================== */
+.glossary-term-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+}
+
+.glossary-term-article {
+  max-width: var(--size-text-w-md);
+  width: 100%;
+  margin-inline: auto;
+  padding-block: var(--spacing-section-py-md);
+  padding-inline: var(--spacing-container-px-md);
+}
+
+@media (min-width: 768px) {
+  .glossary-term-article {
+    padding-block: var(--spacing-section-py-lg);
+    padding-inline: 0;
+  }
+}
+
+.glossary-term-section {
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-term-section__title {
+  font-family: var(--font-headline-sm-family);
+  font-size: var(--font-headline-sm-size);
+  font-weight: var(--font-headline-sm-weight);
+  line-height: var(--font-headline-sm-line-height);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-gap-sm);
+}
+
+.glossary-term-section__text {
+  font-family: var(--font-body-lg-family);
+  font-size: var(--font-body-lg-size);
+  font-weight: var(--font-body-lg-weight);
+  line-height: var(--font-body-lg-line-height);
+  color: var(--color-text-primary);
+}
+
+.glossary-term-key-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-component-gap-xs);
+  margin-top: var(--spacing-component-gap-xs);
+}
+
+.glossary-term-concept-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-component-py-2xs) var(--spacing-component-px-sm);
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-primary);
+}
+
+.glossary-term-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-gap-xs);
+}
+
+.glossary-term-related-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.glossary-term-related-bullet {
+  color: var(--color-text-interactive);
+}
+
+.glossary-term-related-link {
+  font-family: var(--font-body-lg-family);
+  font-size: var(--font-body-lg-size);
+  color: var(--color-text-interactive);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-term-related-link:hover {
+  color: var(--color-text-brand);
+}
+
+.glossary-term-related-link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-2xs);
+}
+
+.glossary-term-sources-list {
+  list-style: decimal;
+  padding-left: var(--spacing-component-px-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-gap-xs);
+}
+
+.glossary-term-sources-item {
+  font-family: var(--font-body-md-family);
+  font-size: var(--font-body-md-size);
+  color: var(--color-text-secondary);
+  line-height: var(--font-body-md-line-height);
+}
+
+.glossary-term-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-component-gap-md);
+  margin-top: var(--spacing-section-py-md);
+  padding-top: var(--spacing-section-py-sm);
+  border-top: 1px solid var(--color-border-default);
+}
+
+@media (min-width: 768px) {
+  .glossary-term-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.glossary-term-nav__prev-next {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-component-gap-md);
+}
+
+@media (min-width: 768px) {
+  .glossary-term-nav__prev-next {
+    width: auto;
+  }
+}
+
+.glossary-term-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--spacing-component-py-sm) var(--spacing-component-px-md);
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+}
+
+.glossary-term-back-btn:hover {
+  background-color: var(--color-section-subtle);
+  border-color: var(--color-border-strong);
+}
+
+.glossary-term-back-btn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+}
+
+.glossary-term-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  color: var(--color-text-interactive);
+  text-decoration: none;
+}
+
+.glossary-term-nav__link:hover {
+  color: var(--color-text-brand);
+}
+
+.glossary-term-nav__link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}

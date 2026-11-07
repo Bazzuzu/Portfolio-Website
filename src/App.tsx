@@ -5,7 +5,10 @@ const About = lazy(() => import("./components/About"));
 const CaseStudy = lazy(() => import("./components/CaseStudy"));
 const DailyThing = lazy(() => import("./components/DailyThing"));
 const JobsApp = lazy(() => import("./components/jobs/JobsApp"));
+const GlossaryHub = lazy(() => import("./components/GlossaryHub"));
+const GlossaryTerm = lazy(() => import("./components/GlossaryTerm"));
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
+import { getTermBySlug } from "./data/glossaryData";
 import CustomIcon from "./components/CustomIcon";
 import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
 import arrowLeftSvg from "./assets/icons/arrow-left.svg?raw";
@@ -13,6 +16,7 @@ import arrowLeftSvg from "./assets/icons/arrow-left.svg?raw";
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
   const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
+  const [selectedGlossarySlug, setSelectedGlossarySlug] = useState<string | null>(null);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [bottomOffset, setBottomOffset] = useState<number>(32);
@@ -30,20 +34,41 @@ export default function App() {
         const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("daily-thing");
         setSelectedCaseId(caseId);
+        setSelectedGlossarySlug(null);
       } else if (relativePath.startsWith("/cases/")) {
         const rawId = relativePath.replace("/cases/", "");
         const caseId = rawId.replace(/\.html$/, "");
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
+        setSelectedGlossarySlug(null);
+      } else if (relativePath.startsWith("/glossary/")) {
+        const rawSlug = relativePath.replace("/glossary/", "");
+        const slug = rawSlug.replace(/\.html$/, "").trim();
+        if (slug) {
+          setCurrentPage("glossary-term");
+          setSelectedGlossarySlug(slug);
+          setSelectedCaseId(null);
+        } else {
+          setCurrentPage("glossary");
+          setSelectedGlossarySlug(null);
+          setSelectedCaseId(null);
+        }
+      } else if (relativePath === "/glossary") {
+        setCurrentPage("glossary");
+        setSelectedGlossarySlug(null);
+        setSelectedCaseId(null);
       } else if (relativePath === "/about") {
         setCurrentPage("about");
         setSelectedCaseId(null);
+        setSelectedGlossarySlug(null);
       } else if (relativePath === "/jobs") {
         setCurrentPage("jobs");
         setSelectedCaseId(null);
+        setSelectedGlossarySlug(null);
       } else {
         setCurrentPage("home");
         setSelectedCaseId(null);
+        setSelectedGlossarySlug(null);
       }
     };
 
@@ -76,8 +101,10 @@ export default function App() {
   useEffect(() => {
     if (currentPage === "about") {
       setActiveTab("about");
-    } else {
+    } else if (currentPage === "home") {
       setActiveTab("home");
+    } else {
+      setActiveTab(currentPage);
     }
   }, [currentPage]);
 
@@ -91,6 +118,17 @@ export default function App() {
       title = "About Lex Konovalov — Lead Product Designer";
       description = "Read about Lead Product Designer Lex Konovalov's professional DNA, pragmatic product design toolkit, and the pre-emptive interview answers regarding time zones, OOUX, and legacy systems.";
       canonicalUrl = "https://lexkonovalov.com/about/";
+    } else if (currentPage === "glossary") {
+      title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
+      description = "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.";
+      canonicalUrl = "https://lexkonovalov.com/glossary/";
+    } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
+      const termData = getTermBySlug(selectedGlossarySlug);
+      if (termData) {
+        title = `${termData.seoTitle || termData.name} — Lex Konovalov`;
+        description = termData.definition;
+        canonicalUrl = `https://lexkonovalov.com/glossary/${termData.slug}.html`;
+      }
     } else if (currentPage === "case-study" && selectedCaseId) {
       const caseData = portfolioData.caseStudies.find(c => c.id === selectedCaseId);
       if (caseData) {
@@ -149,14 +187,19 @@ export default function App() {
     } else if (robotsMeta) {
       robotsMeta.setAttribute("content", "index, follow");
     }
-  }, [currentPage, selectedCaseId]);
+  }, [currentPage, selectedCaseId, selectedGlossarySlug]);
 
-  const navigateTo = (page: string, params?: { caseId: string }) => {
+  const navigateTo = (page: string, params?: { caseId?: string; slug?: string }) => {
     let targetPath = "/";
     if (page === "about") {
       targetPath = "/about/";
     } else if (page === "jobs") {
       targetPath = "/jobs/";
+    } else if (page === "glossary") {
+      targetPath = "/glossary/";
+    } else if (page === "glossary-term" && params?.slug) {
+      const cleanSlug = params.slug.replace(/\.html$/, "");
+      targetPath = `/glossary/${cleanSlug}.html`;
     } else if (page === "daily-thing" && params?.caseId) {
       const cleanId = params.caseId.replace(/\.html$/, "");
       targetPath = `/daily-thing/${cleanId}.html`;
@@ -167,11 +210,20 @@ export default function App() {
 
     window.history.pushState(null, "", targetPath);
 
-    if ((page === "case-study" || page === "daily-thing") && params?.caseId) {
+    if (page === "glossary-term" && params?.slug) {
+      const cleanSlug = params.slug.replace(/\.html$/, "");
+      setSelectedGlossarySlug(cleanSlug);
+      setSelectedCaseId(null);
+    } else if (page === "glossary") {
+      setSelectedGlossarySlug(null);
+      setSelectedCaseId(null);
+    } else if ((page === "case-study" || page === "daily-thing") && params?.caseId) {
       const cleanId = params.caseId.replace(/\.html$/, "");
       setSelectedCaseId(cleanId);
+      setSelectedGlossarySlug(null);
     } else {
       setSelectedCaseId(null);
+      setSelectedGlossarySlug(null);
     }
     setCurrentPage(page);
 
@@ -345,6 +397,33 @@ export default function App() {
               <JobsApp onBack={() => navigateTo("home")} />
             </motion.div>
           )}
+
+          {currentPage === "glossary" && (
+            <motion.div
+              key="glossary-hub"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <GlossaryHub onNavigate={navigateTo} />
+            </motion.div>
+          )}
+
+          {currentPage === "glossary-term" && selectedGlossarySlug && (
+            <motion.div
+              key={`glossary-term-${selectedGlossarySlug}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <GlossaryTerm
+                termSlug={selectedGlossarySlug}
+                onNavigate={navigateTo}
+              />
+            </motion.div>
+          )}
         </AnimatePresence>
         </Suspense>
       </main>
@@ -384,6 +463,18 @@ export default function App() {
               id="footer-link-linkedin"
             >
               Linkedin
+            </a>
+            <span className="footer__separator">/</span>
+            <a
+              href="/glossary/"
+              className="footer__link-simple"
+              id="footer-link-glossary"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo("glossary");
+              }}
+            >
+              Glossary
             </a>
           </div>
         </div>
