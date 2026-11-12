@@ -329,25 +329,25 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/object-oriented-ux.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures users encounter coherent representations of conceptual objects across every touchpoint before actions or screen layouts are designed.
+- **Definition:** Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.
 - **Purpose:** Prevents fragmented user experiences, disjointed navigation paths, and developer-designer misalignments by establishing shared, entity-based conceptual models prior to visual UI wireframing.
 - **Key Concepts:** Conceptual objects, entity integrity, cognitive mapping, affordance consistency.
 - **How It Works:** Designers identify core domain entities, trace their relationships, define their attributes, and map permissible user operations to eliminate procedural silos.
-- **Related Terms:** ORCA Framework, Object Mapping, Domain Context Modeling, Conceptual Schema, Information Architecture
-- **SEO Title:** What is Object-Oriented UX? OOUX Principles & Architecture
-- **Sources:** Sophia Prater, A Brief History of OOUX, Rewired UX (https://www.ooux.com); Heidi Adkisson, Object Modeling for Designers
+- **Related Terms:** ORCA Framework, Object Mapping, Domain Context Modeling, Conceptual Schema, Information Architecture (IA)
+- **SEO Title:** Object-Oriented UX (OOUX) | Product Design Glossary
+- **Sources:** Object-Oriented UX, Sophia V. Prater, A List Apart (https://alistapart.com/article/object-oriented-ux/); Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
 
 #### 002. ORCA Framework
 - **URL:** https://lexkonovalov.com/glossary/orca-framework.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Proprietary / Framework-Specific
-- **Definition:** The ORCA Framework is an iterative four-phase implementation process for Object-Oriented UX, guiding design teams through the sequential definition of Objects, Relationships, Calls to Action (CTAs), and Attributes across Discovery, Requirements, Prioritization, and Representation rounds.
+- **Definition:** The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.
 - **Purpose:** Deconstructs complex enterprise requirements into unambiguous structural components, ensuring domain models directly inform navigation, relational integrity, and component logic.
 - **Key Concepts:** Discovery round, Requirements matrix, CTA matrices, Object mapping passes.
 - **How It Works:** Teams extract domain nouns, map bidirectional relationships, define state-dependent operations, and enumerate descriptive metadata across iterative passes.
-- **Related Terms:** Object-Oriented UX, Object Mapping, Cardinality (UX Architecture), State Transition Matrix
-- **SEO Title:** The ORCA Framework: A Guide to Object-Oriented UX (OOUX)
-- **Sources:** Sophia Prater, The ORCA Process, OOUX.com; Interaction Design Foundation, Understanding ORCA Framework
+- **Related Terms:** Object-Oriented UX (OOUX), Object Mapping, Cardinality (UX Architecture), State Transition Matrix
+- **SEO Title:** ORCA Framework in UX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e); OOUX Masterclass course outline, OOUX.com (https://ooux.com/selfpacedoouxmasterclass)
 
 #### 003. Object Mapping
 - **URL:** https://lexkonovalov.com/glossary/object-mapping.html

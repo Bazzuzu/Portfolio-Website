@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is Object-Oriented UX? OOUX Principles &amp; Architecture</title>
-  <meta name="description" content="Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions">
+  <title>Object-Oriented UX (OOUX) | Product Design Glossary</title>
+  <meta name="description" content="Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/object-oriented-ux.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="What is Object-Oriented UX? OOUX Principles &amp; Architecture">
-  <meta property="og:description" content="Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures user">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Object-Oriented UX (OOUX) | Product Design Glossary">
+  <meta property="og:description" content="Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/object-oriented-ux.html">
-  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="What is Object-Oriented UX? OOUX Principles &amp; Architecture">
-  <meta name="twitter:description" content="Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures user">
-  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Object-Oriented UX (OOUX) | Product Design Glossary">
+  <meta name="twitter:description" content="Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
   <script>
@@ -35,18 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
+      "name": "Object-Oriented UX (OOUX) | Product Design Glossary",
+      "description": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs"
+      },
+      "citation": [
+        "https://alistapart.com/article/object-oriented-ux/",
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term",
-      "name": "Object-Oriented UX (OOUX)",
+      "name": "Object-Oriented UX",
+      "alternateName": "OOUX",
       "termCode": "object-oriented-ux",
-      "description": "Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures users encounter coherent representations of conceptual objects across every touchpoint before actions or screen layouts are designed.",
+      "description": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
+      "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
-        "url": "https://lexkonovalov.com/glossary/"
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -61,7 +96,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Glossary",
+          "name": "Product Design Glossary",
           "item": "https://lexkonovalov.com/glossary/"
         },
         {
@@ -121,18 +156,99 @@
       font-weight: 500;
       margin-left: 6px;
     }
-    section {
+    section.glossary-term-section {
       margin-bottom: 32px;
     }
-    h2 {
+    h2.glossary-term-section__title {
       font-size: 1.35rem;
       margin-bottom: 8px;
       font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
     }
-    p {
+    p.glossary-term-section__text {
       margin: 0 0 16px;
       font-family: "Noto Serif", Georgia, serif;
       font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
     }
     .concept-tags {
       display: flex;
@@ -145,23 +261,6 @@
       padding: 4px 10px;
       border-radius: 4px;
       font-size: 0.9rem;
-    }
-    ul.related-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.related-list li {
-      margin-bottom: 8px;
-    }
-    ul.related-list a {
-      color: #3E70A2;
-      text-decoration: underline;
-    }
-    ol.sources-list {
-      padding-left: 20px;
-      color: #5e605c;
-      font-size: 0.95rem;
     }
     footer {
       margin-top: 60px;
@@ -183,8 +282,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .back-btn {
+    .back-btn, .nav-link {
       display: inline-flex;
       align-items: center;
       padding: 8px 16px;
@@ -195,14 +296,22 @@
       text-decoration: none;
       font-size: 0.875rem;
     }
+    .back-btn:hover, .nav-link:hover {
+      background: #f4f2ec;
+      color: #D93636;
+    }
+    .prev-next-links {
+      display: flex;
+      gap: 8px;
+    }
   </style>
 </head>
 <body>
   <header>
     <nav class="breadcrumbs">
-      <a href="/">lexkonovalov</a> / <a href="/glossary/">glossary</a>
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Object-Oriented UX</span>
     </nav>
-    <h1>Object-Oriented UX (OOUX)</h1>
+    <h1>Object-Oriented UX</h1>
     <div class="meta-bar">
       <span>UX &amp; Product Architecture</span>
       &bull; <span>Design Systems &amp; Engineering</span>
@@ -211,50 +320,80 @@
   </header>
 
   <article>
-    <section>
-      <h2>Definition</h2>
-      <p>Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures users encounter coherent representations of conceptual objects across every touchpoint before actions or screen layouts are designed.</p>
-    </section>
+    <p class="glossary-term-section__text">Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-ooux-look-like-in-practice">
+<h2 id="section-what-does-ooux-look-like-in-practice" class="glossary-term-section__title">What does OOUX look like in practice?</h2>
+<p class="glossary-term-section__text">Consider a travel operations tool with trips, travelers, and bookings. Modeling the relationship between a trip and its bookings helps the team decide what agents can navigate to from a trip.</p>
+<p class="glossary-term-section__text">The trip page can list its bookings, with each one opening its details and available actions. An authorized agent can select a booking and cancel it. Its status then updates wherever that booking appears, including the trip page and search results. The object model gives the team a shared basis for navigation, content, and actions.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-orca-relate-to-ooux">
+<h2 id="section-how-does-orca-relate-to-ooux" class="glossary-term-section__title">How does ORCA relate to OOUX?</h2>
+<p class="glossary-term-section__text">OOUX provides the design principles. <a href="/glossary/orca-framework.html">ORCA</a> is Sophia Prater’s process for applying them through Objects, Relationships, Calls to action, and Attributes. Teams revisit these four elements as they discover requirements and refine the model. <a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia Prater</a></p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>ORCA element</th>
+<th>Design question</th>
+<th>Travel operations example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objects</td>
+<td>What things do people work with?</td>
+<td>Trip, Traveler, Booking</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>How are those things connected?</td>
+<td>A trip includes travelers and bookings.</td>
+</tr>
+<tr>
+<td>Calls to action</td>
+<td>What can each user role do?</td>
+<td>An authorized agent can cancel a booking.</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>What information describes each object?</td>
+<td>A booking has a confirmation number and status.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">An <a href="/glossary/object-mapping.html">object map</a> records these decisions so the team can use the same model when designing screens, navigation, and flows.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-is-ooux-useful">
+<h2 id="section-when-is-ooux-useful" class="glossary-term-section__title">When is OOUX useful?</h2>
+<p class="glossary-term-section__text">OOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.</p>
+<p class="glossary-term-section__text">Start by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/orca-framework.html">ORCA Framework</a></li>
+<li><a href="/glossary/object-mapping.html">Object Mapping</a></li>
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li>
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater, A List Apart</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
+</ul>
+</section>
 
-    <section>
-      <h2>Purpose</h2>
-      <p>Prevents fragmented user experiences, disjointed navigation paths, and developer-designer misalignments by establishing shared, entity-based conceptual models prior to visual UI wireframing.</p>
-    </section>
-
-    
-    <section>
-      <h2>Key Concepts</h2>
-      <div class="concept-tags">
-        <span class="concept-tag">Conceptual objects</span><span class="concept-tag">entity integrity</span><span class="concept-tag">cognitive mapping</span><span class="concept-tag">affordance consistency.</span>
-      </div>
-    </section>
-    
-
-    <section>
-      <h2>How It Works</h2>
-      <p>Designers identify core domain entities, trace their relationships, define their attributes, and map permissible user operations to eliminate procedural silos.</p>
-    </section>
-
-    
-    <section>
-      <h2>Related Terms</h2>
-      <ul class="related-list">
-        <li>&bull; <a href="/glossary/orca-framework.html">ORCA Framework</a></li><li>&bull; <a href="/glossary/object-mapping.html">Object Mapping</a></li><li>&bull; <a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li>&bull; <a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li><li>&bull; <a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
-      </ul>
-    </section>
-    
-
-    
-    <section>
-      <h2>Sources</h2>
-      <ol class="sources-list">
-        <li>Sophia Prater, A Brief History of OOUX, Rewired UX (https://www.ooux.com)</li><li>Heidi Adkisson, Object Modeling for Designers</li>
-      </ol>
-    </section>
-    
 
     <div class="back-nav">
       <a href="/glossary/" class="back-btn">&larr; Back to Glossary</a>
+      <div class="prev-next-links">
+        
+        <a href="/glossary/orca-framework.html" class="nav-link">ORCA Framework &rarr;</a>
+      </div>
     </div>
   </article>
 

@@ -29,9 +29,17 @@ export interface GlossaryTerm {
   keyConcepts: string[];
   howItWorks: string;
   relatedTerms: string[];
-  seoTitle: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  alternateName?: string | string[];
+  canonicalUrl?: string;
+  contentMarkdown?: string;
+  structuredDataGraph?: any[];
   sources: string[];
 }
+
+export const GLOSSARY_COLLECTION_NAME = "Product Design Glossary";
+export const GLOSSARY_COLLECTION_ID = "https://lexkonovalov.com/glossary/#terms";
 
 export const glossaryCategories: GlossaryCategory[] = [
   {
@@ -75,18 +83,19 @@ export const glossaryCategories: GlossaryCategory[] = [
 export const glossaryTerms: GlossaryTerm[] = [
   {
     "id": "001",
-    "name": "Object-Oriented UX (OOUX)",
+    "name": "Object-Oriented UX",
     "slug": "object-oriented-ux",
+    "alternateName": "OOUX",
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures users encounter coherent representations of conceptual objects across every touchpoint before actions or screen layouts are designed.",
+    "definition": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
     "purpose": "Prevents fragmented user experiences, disjointed navigation paths, and developer-designer misalignments by establishing shared, entity-based conceptual models prior to visual UI wireframing.",
     "keyConcepts": [
       "Conceptual objects",
       "entity integrity",
       "cognitive mapping",
-      "affordance consistency."
+      "affordance consistency"
     ],
     "howItWorks": "Designers identify core domain entities, trace their relationships, define their attributes, and map permissible user operations to eliminate procedural silos.",
     "relatedTerms": [
@@ -94,40 +103,290 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Object Mapping",
       "Domain Context Modeling",
       "Conceptual Schema",
-      "Information Architecture"
+      "Information Architecture (IA)"
     ],
-    "seoTitle": "What is Object-Oriented UX? OOUX Principles & Architecture",
+    "seoTitle": "Object-Oriented UX (OOUX) | Product Design Glossary",
+    "seoDescription": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
     "sources": [
-      "Sophia Prater, A Brief History of OOUX, Rewired UX (https://www.ooux.com)",
-      "Heidi Adkisson, Object Modeling for Designers"
+      "Object-Oriented UX, Sophia V. Prater, A List Apart (https://alistapart.com/article/object-oriented-ux/)",
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)"
+    ],
+    "contentMarkdown": `# Object-Oriented UX (OOUX)
+
+Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.
+
+## What does OOUX look like in practice?
+
+Consider a travel operations tool with trips, travelers, and bookings. Modeling the relationship between a trip and its bookings helps the team decide what agents can navigate to from a trip.
+
+The trip page can list its bookings, with each one opening its details and available actions. An authorized agent can select a booking and cancel it. Its status then updates wherever that booking appears, including the trip page and search results. The object model gives the team a shared basis for navigation, content, and actions.
+
+## How does ORCA relate to OOUX?
+
+OOUX provides the design principles. [ORCA](/glossary/orca-framework.html) is Sophia Prater’s process for applying them through Objects, Relationships, Calls to action, and Attributes. Teams revisit these four elements as they discover requirements and refine the model. [Introducing ORCA, Sophia Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+
+| ORCA element | Design question | Travel operations example |
+|---|---|---|
+| Objects | What things do people work with? | Trip, Traveler, Booking |
+| Relationships | How are those things connected? | A trip includes travelers and bookings. |
+| Calls to action | What can each user role do? | An authorized agent can cancel a booking. |
+| Attributes | What information describes each object? | A booking has a confirmation number and status. |
+
+An [object map](/glossary/object-mapping.html) records these decisions so the team can use the same model when designing screens, navigation, and flows.
+
+## When is OOUX useful?
+
+OOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.
+
+Start by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Domain Context Modeling](/glossary/domain-context-modeling.html)
+- [Conceptual Schema](/glossary/conceptual-schema.html)
+- [Information Architecture (IA)](/glossary/information-architecture.html)
+
+## Sources
+
+- [Object-Oriented UX, Sophia V. Prater, A List Apart](https://alistapart.com/article/object-oriented-ux/)
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
+        "name": "Object-Oriented UX (OOUX) | Product Design Glossary",
+        "description": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://alistapart.com/article/object-oriented-ux/",
+          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term",
+        "name": "Object-Oriented UX",
+        "alternateName": "OOUX",
+        "termCode": "object-oriented-ux",
+        "description": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
+        "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Object-Oriented UX (OOUX)",
+            "item": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "002",
     "name": "ORCA Framework",
     "slug": "orca-framework",
+    "alternateName": [
+      "ORCA Process",
+      "ORCA"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Proprietary / Framework-Specific",
-    "definition": "The ORCA Framework is an iterative four-phase implementation process for Object-Oriented UX, guiding design teams through the sequential definition of Objects, Relationships, Calls to Action (CTAs), and Attributes across Discovery, Requirements, Prioritization, and Representation rounds.",
+    "definition": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
     "purpose": "Deconstructs complex enterprise requirements into unambiguous structural components, ensuring domain models directly inform navigation, relational integrity, and component logic.",
     "keyConcepts": [
       "Discovery round",
       "Requirements matrix",
       "CTA matrices",
-      "Object mapping passes."
+      "Object mapping passes"
     ],
     "howItWorks": "Teams extract domain nouns, map bidirectional relationships, define state-dependent operations, and enumerate descriptive metadata across iterative passes.",
     "relatedTerms": [
-      "Object-Oriented UX",
+      "Object-Oriented UX (OOUX)",
       "Object Mapping",
       "Cardinality (UX Architecture)",
       "State Transition Matrix"
     ],
-    "seoTitle": "The ORCA Framework: A Guide to Object-Oriented UX (OOUX)",
+    "seoTitle": "ORCA Framework in UX | Product Design Glossary",
+    "seoDescription": "ORCA is Sophia Prater’s process for applying Object-Oriented UX (OOUX). Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/orca-framework.html",
     "sources": [
-      "Sophia Prater, The ORCA Process, OOUX.com",
-      "Interaction Design Foundation, Understanding ORCA Framework"
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
+      "OOUX Masterclass course outline, OOUX.com (https://ooux.com/selfpacedoouxmasterclass)"
+    ],
+    "contentMarkdown": `# ORCA Framework
+
+The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.
+
+[Object-Oriented UX](/glossary/object-oriented-ux.html) provides the design principles. ORCA provides activities for defining the model and using it to design and test interfaces.
+
+## What does ORCA stand for?
+
+Consider one illustrative object in a support tool, Ticket #1042 about a missing invoice.
+
+| ORCA element | Ticket example |
+|---|---|
+| **Object** | Ticket is the object type. Ticket #1042 is one instance. |
+| **Relationships** | Linked customer — Acme Studio. Assigned agent — none. |
+| **Calls to action** | A supervisor can reopen the ticket after selecting an agent. |
+| **Attributes** | Subject — Missing invoice. Status — Closed. Priority — Normal. |
+
+Customer and Agent are objects with their own records. The ticket links to those records through relationships. Status and priority describe the ticket as attributes.
+
+## How does the ORCA process work?
+
+Prater’s full ORCA process has 15 steps across four iterative rounds. The four elements are revisited and refined throughout the process.
+
+1. **Discovery.** Identify objects from research. Map their relationships, record actions by object and role in a CTA matrix, and build an initial [object map](/glossary/object-mapping.html). Capture questions for further research.
+2. **Requirements.** Define relationship rules, permissions, and required fields. Document object definitions in an Object Guide and expand the CTA matrix into user stories with conditions for each action.
+3. **Prioritization.** Decide what belongs in the release and which information and actions deserve prominence in the interface.
+4. **Representation.** Turn the model into cards, lists, detail views, and a connected prototype. Test whether users recognize the objects, find their connections, and understand the available actions.
+
+This sequence provides a starting point. The rounds can be adapted to the project. Prater describes moving Prioritization ahead of detailed Requirements when time is limited. [Prioritizing Prioritization for Product Designers, Sophia Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+
+## An ORCA example in practice
+
+For Ticket #1042, the reopening rule connects a user role, the ticket’s status, and its relationship to an agent. These requirements guide who sees the action, when it is available, and what information is needed to complete it.
+
+The team can prototype the ticket view to test whether supervisors can find the action and understand why they need to assign an agent.
+
+## When should you use ORCA?
+
+Use ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.
+
+## Related terms
+
+- [Object-Oriented UX (OOUX)](/glossary/object-oriented-ux.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)
+- [State Transition Matrix](/glossary/state-transition-matrix.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+- [OOUX Masterclass course outline, OOUX.com](https://ooux.com/selfpacedoouxmasterclass)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/orca-framework.html",
+        "name": "ORCA Framework in UX | Product Design Glossary",
+        "description": "ORCA is Sophia Prater’s OOUX process. Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs"
+        },
+        "citation": [
+          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+          "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e",
+          "https://ooux.com/selfpacedoouxmasterclass"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term",
+        "name": "ORCA Framework",
+        "alternateName": [
+          "ORCA Process",
+          "ORCA"
+        ],
+        "termCode": "orca-framework",
+        "description": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
+        "url": "https://lexkonovalov.com/glossary/orca-framework.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ORCA Framework",
+            "item": "https://lexkonovalov.com/glossary/orca-framework.html"
+          }
+        ]
+      }
     ]
   },
   {

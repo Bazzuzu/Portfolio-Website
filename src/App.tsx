@@ -125,9 +125,10 @@ export default function App() {
     } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
       const termData = getTermBySlug(selectedGlossarySlug);
       if (termData) {
-        title = `${termData.seoTitle || termData.name} — Lex Konovalov`;
-        description = termData.definition;
-        canonicalUrl = `https://lexkonovalov.com/glossary/${termData.slug}.html`;
+        // If an explicit custom seoTitle exists, use it verbatim with NO automatic suffix
+        title = termData.seoTitle ? termData.seoTitle : `${termData.name} — Lex Konovalov`;
+        description = termData.seoDescription || termData.definition;
+        canonicalUrl = termData.canonicalUrl || `https://lexkonovalov.com/glossary/${termData.slug}.html`;
       }
     } else if (currentPage === "case-study" && selectedCaseId) {
       const caseData = portfolioData.caseStudies.find(c => c.id === selectedCaseId);
@@ -161,9 +162,29 @@ export default function App() {
       ogTitle.setAttribute("content", title);
     }
 
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute("content", description);
+    }
+
     const twitterTitle = document.querySelector('meta[name="twitter:title"]');
     if (twitterTitle) {
       twitterTitle.setAttribute("content", title);
+    }
+
+    const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDesc) {
+      twitterDesc.setAttribute("content", description);
+    }
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute("content", "https://lexkonovalov.com/og/home.webp?v=2");
+    }
+
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute("content", "https://lexkonovalov.com/og/home.webp?v=2");
     }
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');

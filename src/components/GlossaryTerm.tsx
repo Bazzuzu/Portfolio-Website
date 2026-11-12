@@ -4,6 +4,7 @@ import {
   GlossaryTerm as GlossaryTermType,
   getTermBySlug,
 } from "../data/glossaryData";
+import { renderMarkdownToHtml } from "../utils/markdownRenderer";
 import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
 
@@ -35,49 +36,57 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
   useEffect(() => {
     if (!term) return;
 
-    const termSchema = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "DefinedTerm",
-          "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#term`,
-          "name": term.name,
-          "termCode": term.slug,
-          "description": term.definition,
-          "inDefinedTermSet": {
-            "@type": "DefinedTermSet",
-            "@id": "https://lexkonovalov.com/glossary/#terms",
-            "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
-            "url": "https://lexkonovalov.com/glossary/",
+    let termSchema: any;
+    if (term.structuredDataGraph && term.structuredDataGraph.length > 0) {
+      termSchema = {
+        "@context": "https://schema.org",
+        "@graph": term.structuredDataGraph,
+      };
+    } else {
+      termSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "DefinedTerm",
+            "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#term`,
+            "name": term.name,
+            "termCode": term.slug,
+            "description": term.definition,
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://lexkonovalov.com/glossary/#terms",
+              "name": "Product Design Glossary",
+              "url": "https://lexkonovalov.com/glossary/",
+            },
+            "url": `https://lexkonovalov.com/glossary/${term.slug}.html`,
           },
-          "url": `https://lexkonovalov.com/glossary/${term.slug}.html`,
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#breadcrumbs`,
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://lexkonovalov.com/",
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Glossary",
-              "item": "https://lexkonovalov.com/glossary/",
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": term.name,
-              "item": `https://lexkonovalov.com/glossary/${term.slug}.html`,
-            },
-          ],
-        },
-      ],
-    };
+          {
+            "@type": "BreadcrumbList",
+            "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#breadcrumbs`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://lexkonovalov.com/",
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Product Design Glossary",
+                "item": "https://lexkonovalov.com/glossary/",
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": term.name,
+                "item": `https://lexkonovalov.com/glossary/${term.slug}.html`,
+              },
+            ],
+          },
+        ],
+      };
+    }
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
@@ -99,8 +108,29 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
         t.name.toLowerCase() === cleanName.toLowerCase() ||
         t.name.toLowerCase().startsWith(cleanName.toLowerCase()) ||
         cleanName.toLowerCase().startsWith(t.name.toLowerCase()) ||
+        (Array.isArray(t.alternateName) && t.alternateName.some(a => cleanName.toLowerCase().includes(a.toLowerCase()))) ||
+        (typeof t.alternateName === "string" && cleanName.toLowerCase().includes(t.alternateName.toLowerCase())) ||
         t.slug === cleanName.toLowerCase().replace(/[^a-z0-9]+/g, "-")
     );
+  };
+
+  const handleArticleLinkClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = (e.target as HTMLElement).closest("a");
+    if (!target) return;
+    const href = target.getAttribute("href");
+    if (!href) return;
+
+    if (href.startsWith("/glossary/") && href.endsWith(".html")) {
+      e.preventDefault();
+      const slug = href.replace("/glossary/", "").replace(".html", "");
+      onNavigate?.("glossary-term", { slug });
+    } else if (href === "/glossary/" || href === "/glossary") {
+      e.preventDefault();
+      onNavigate?.("glossary");
+    } else if (href === "/") {
+      e.preventDefault();
+      onNavigate?.("home");
+    }
   };
 
   return (
@@ -125,7 +155,7 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
           </div>
 
           <div className="glossary-hero__content">
-            {/* Breadcrumb Navigation */}
+            {/* Breadcrumb Navigation matching itemListElement */}
             <nav className="glossary-breadcrumbs" aria-label="Breadcrumb">
               <ol>
                 <li className="glossary-breadcrumbs__item">
@@ -137,7 +167,7 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
                       onNavigate?.("home");
                     }}
                   >
-                    lexkonovalov
+                    Home
                   </a>
                 </li>
                 <li className="glossary-breadcrumbs__separator" aria-hidden="true">
@@ -152,8 +182,14 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
                       onNavigate?.("glossary");
                     }}
                   >
-                    glossary
+                    Product Design Glossary
                   </a>
+                </li>
+                <li className="glossary-breadcrumbs__separator" aria-hidden="true">
+                  /
+                </li>
+                <li className="glossary-breadcrumbs__item" aria-current="page">
+                  <span>{term.name}</span>
                 </li>
               </ol>
             </nav>
@@ -181,95 +217,105 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
       {/* Main Term Article */}
       <main id="main-content-frame">
         <article className="glossary-term-article">
-          {/* Definition */}
-          <section className="glossary-term-section" aria-labelledby="section-definition">
-            <h2 id="section-definition" className="glossary-term-section__title">
-              Definition
-            </h2>
-            <p className="glossary-term-section__text">{term.definition}</p>
-          </section>
+          {term.contentMarkdown ? (
+            <div
+              className="glossary-term-custom-content"
+              dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(term.contentMarkdown) }}
+              onClick={handleArticleLinkClick}
+            />
+          ) : (
+            <>
+              {/* Definition */}
+              <section className="glossary-term-section" aria-labelledby="section-definition">
+                <h2 id="section-definition" className="glossary-term-section__title">
+                  Definition
+                </h2>
+                <p className="glossary-term-section__text">{term.definition}</p>
+              </section>
 
-          {/* Purpose */}
-          <section className="glossary-term-section" aria-labelledby="section-purpose">
-            <h2 id="section-purpose" className="glossary-term-section__title">
-              Purpose
-            </h2>
-            <p className="glossary-term-section__text">{term.purpose}</p>
-          </section>
+              {/* Purpose */}
+              <section className="glossary-term-section" aria-labelledby="section-purpose">
+                <h2 id="section-purpose" className="glossary-term-section__title">
+                  Purpose
+                </h2>
+                <p className="glossary-term-section__text">{term.purpose}</p>
+              </section>
 
-          {/* Key Concepts */}
-          {term.keyConcepts && term.keyConcepts.length > 0 && (
-            <section className="glossary-term-section" aria-labelledby="section-key-concepts">
-              <h2 id="section-key-concepts" className="glossary-term-section__title">
-                Key Concepts
-              </h2>
-              <div className="glossary-term-key-concepts">
-                {term.keyConcepts.map((concept, idx) => (
-                  <span key={idx} className="glossary-term-concept-tag">
-                    {concept}
-                  </span>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* How It Works */}
-          <section className="glossary-term-section" aria-labelledby="section-how-it-works">
-            <h2 id="section-how-it-works" className="glossary-term-section__title">
-              How It Works
-            </h2>
-            <p className="glossary-term-section__text">{term.howItWorks}</p>
-          </section>
-
-          {/* Related Terms */}
-          {term.relatedTerms && term.relatedTerms.length > 0 && (
-            <section className="glossary-term-section" aria-labelledby="section-related-terms">
-              <h2 id="section-related-terms" className="glossary-term-section__title">
-                Related Terms
-              </h2>
-              <ul className="glossary-term-related-list">
-                {term.relatedTerms.map((relatedName, idx) => {
-                  const targetTerm = resolveRelatedTerm(relatedName);
-                  return (
-                    <li key={idx} className="glossary-term-related-item">
-                      <span className="glossary-term-related-bullet" aria-hidden="true">
-                        •
+              {/* Key Concepts */}
+              {term.keyConcepts && term.keyConcepts.length > 0 && (
+                <section className="glossary-term-section" aria-labelledby="section-key-concepts">
+                  <h2 id="section-key-concepts" className="glossary-term-section__title">
+                    Key Concepts
+                  </h2>
+                  <div className="glossary-term-key-concepts">
+                    {term.keyConcepts.map((concept, idx) => (
+                      <span key={idx} className="glossary-term-concept-tag">
+                        {concept}
                       </span>
-                      {targetTerm ? (
-                        <a
-                          href={`/glossary/${targetTerm.slug}.html`}
-                          className="glossary-term-related-link"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            onNavigate?.("glossary-term", { slug: targetTerm.slug });
-                          }}
-                        >
-                          {targetTerm.name}
-                        </a>
-                      ) : (
-                        <span className="glossary-term-related-link">{relatedName}</span>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          )}
+                    ))}
+                  </div>
+                </section>
+              )}
 
-          {/* Sources */}
-          {term.sources && term.sources.length > 0 && (
-            <section className="glossary-term-section" aria-labelledby="section-sources">
-              <h2 id="section-sources" className="glossary-term-section__title">
-                Sources
-              </h2>
-              <ol className="glossary-term-sources-list">
-                {term.sources.map((source, idx) => (
-                  <li key={idx} className="glossary-term-sources-item">
-                    {source}
-                  </li>
-                ))}
-              </ol>
-            </section>
+              {/* How It Works */}
+              <section className="glossary-term-section" aria-labelledby="section-how-it-works">
+                <h2 id="section-how-it-works" className="glossary-term-section__title">
+                  How It Works
+                </h2>
+                <p className="glossary-term-section__text">{term.howItWorks}</p>
+              </section>
+
+              {/* Related Terms */}
+              {term.relatedTerms && term.relatedTerms.length > 0 && (
+                <section className="glossary-term-section" aria-labelledby="section-related-terms">
+                  <h2 id="section-related-terms" className="glossary-term-section__title">
+                    Related Terms
+                  </h2>
+                  <ul className="glossary-term-related-list">
+                    {term.relatedTerms.map((relatedName, idx) => {
+                      const targetTerm = resolveRelatedTerm(relatedName);
+                      return (
+                        <li key={idx} className="glossary-term-related-item">
+                          <span className="glossary-term-related-bullet" aria-hidden="true">
+                            •
+                          </span>
+                          {targetTerm ? (
+                            <a
+                              href={`/glossary/${targetTerm.slug}.html`}
+                              className="glossary-term-related-link"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                onNavigate?.("glossary-term", { slug: targetTerm.slug });
+                              }}
+                            >
+                              {targetTerm.name}
+                            </a>
+                          ) : (
+                            <span className="glossary-term-related-link">{relatedName}</span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              )}
+
+              {/* Sources */}
+              {term.sources && term.sources.length > 0 && (
+                <section className="glossary-term-section" aria-labelledby="section-sources">
+                  <h2 id="section-sources" className="glossary-term-section__title">
+                    Sources
+                  </h2>
+                  <ol className="glossary-term-sources-list">
+                    {term.sources.map((source, idx) => (
+                      <li key={idx} className="glossary-term-sources-item">
+                        {source}
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              )}
+            </>
           )}
 
           {/* Pagination & Traversal Navigation */}

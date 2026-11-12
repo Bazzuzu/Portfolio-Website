@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +13,17 @@
   <meta property="og:title" content="Product Design Glossary — Architectural Lexicon & Systems Ontology">
   <meta property="og:description" content="A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/">
-  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Product Design Glossary | Lex Konovalov">
   <meta name="twitter:description" content="100 canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
-  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
   <script>
@@ -37,16 +40,20 @@
     {
       "@type": "DefinedTermSet",
       "@id": "https://lexkonovalov.com/glossary/#terms",
-      "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
+      "name": "Product Design Glossary",
       "description": "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
       "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
       "hasDefinedTerm": [
         {
           "@type": "DefinedTerm",
           "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term",
-          "name": "Object-Oriented UX (OOUX)",
+          "name": "Object-Oriented UX",
           "termCode": "object-oriented-ux",
-          "description": "Object-Oriented UX (OOUX) is an interaction design methodology that models digital systems around real-world objects and entities rather than procedural actions or isolated page flows. It ensures users encounter coherent representations of conceptual objects across every touchpoint before actions or screen layouts are designed.",
+          "description": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
           "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
         },
         {
@@ -54,7 +61,7 @@
           "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term",
           "name": "ORCA Framework",
           "termCode": "orca-framework",
-          "description": "The ORCA Framework is an iterative four-phase implementation process for Object-Oriented UX, guiding design teams through the sequential definition of Objects, Relationships, Calls to Action (CTAs), and Attributes across Discovery, Requirements, Prioritization, and Representation rounds.",
+          "description": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
           "url": "https://lexkonovalov.com/glossary/orca-framework.html"
         },
         {
@@ -856,7 +863,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Glossary",
+          "name": "Product Design Glossary",
           "item": "https://lexkonovalov.com/glossary/"
         }
       ]
@@ -879,6 +886,15 @@
       text-align: center;
       margin-bottom: 48px;
     }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 12px;
+    }
+    nav.breadcrumbs a {
+      color: #5e605c;
+      text-decoration: none;
+    }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 16px;
@@ -900,41 +916,42 @@
       background: #ffffff;
       border: 1px solid #e8e6dc;
       border-radius: 8px;
-      padding: 16px 20px;
+      padding: 16px;
     }
     .cat-card h3 {
       margin: 0 0 8px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      color: #1c1b18;
     }
     .cat-card p {
       margin: 0;
+      font-size: 0.85rem;
       color: #5e605c;
-      font-size: 0.9rem;
     }
     .directory {
-      column-count: 3;
-      column-gap: 32px;
-    }
-    @media (max-width: 768px) {
-      .directory { column-count: 1; }
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 12px;
+      padding: 32px;
     }
     .letter-group {
-      break-inside: avoid;
       margin-bottom: 32px;
     }
     .letter-group h2 {
       font-size: 1.5rem;
-      border-bottom: 1px solid #d0cdc2;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
+      border-bottom: 1px solid #e8e6dc;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      color: #D93636;
+      font-family: "Space Grotesk", sans-serif;
     }
     .terms-list {
       list-style: none;
       padding: 0;
       margin: 0;
-    }
-    .terms-list li {
-      margin-bottom: 8px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
     }
     .terms-list a {
       color: #1c1b18;
@@ -962,7 +979,9 @@
 </head>
 <body>
   <header>
-    <p><a href="/">Lex Konovalov</a> / Glossary</p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <span>Product Design Glossary</span>
+    </nav>
     <h1>Product Design Glossary</h1>
     <p class="lead">A curated collection of 100 concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
   </header>
@@ -1372,7 +1391,7 @@
             </li>
           
             <li>
-              <a href="/glossary/object-oriented-ux.html">Object-Oriented UX (OOUX)</a>
+              <a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a>
             </li>
           
             <li>

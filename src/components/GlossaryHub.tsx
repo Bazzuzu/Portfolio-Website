@@ -88,10 +88,14 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
         {
           "@type": "DefinedTermSet",
           "@id": "https://lexkonovalov.com/glossary/#terms",
-          "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
+          "name": "Product Design Glossary",
           "description":
             "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
           "url": "https://lexkonovalov.com/glossary/",
+          "inLanguage": "en-US",
+          "isPartOf": {
+            "@id": "https://lexkonovalov.com/#website"
+          },
           "hasDefinedTerm": glossaryTerms.map((t) => ({
             "@type": "DefinedTerm",
             "@id": `https://lexkonovalov.com/glossary/${t.slug}.html#term`,
@@ -114,7 +118,7 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Glossary",
+              "name": "Product Design Glossary",
               "item": "https://lexkonovalov.com/glossary/",
             },
           ],

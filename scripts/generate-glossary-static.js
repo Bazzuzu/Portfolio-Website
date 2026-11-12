@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { glossaryCategories, glossaryTerms } from '../src/data/glossaryData.ts';
+import { renderMarkdownToHtml } from '../src/utils/markdownRenderer.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,9 +34,13 @@ const hubJsonLd = {
     {
       "@type": "DefinedTermSet",
       "@id": "https://lexkonovalov.com/glossary/#terms",
-      "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
+      "name": "Product Design Glossary",
       "description": "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
       "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
       "hasDefinedTerm": glossaryTerms.map((t) => ({
         "@type": "DefinedTerm",
         "@id": `https://lexkonovalov.com/glossary/${t.slug}.html#term`,
@@ -58,7 +63,7 @@ const hubJsonLd = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Glossary",
+          "name": "Product Design Glossary",
           "item": "https://lexkonovalov.com/glossary/"
         }
       ]
@@ -82,7 +87,7 @@ Object.keys(termsByLetter).forEach((l) => {
 });
 
 const hubHtml = `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,14 +101,17 @@ const hubHtml = `<!DOCTYPE html>
   <meta property="og:title" content="Product Design Glossary — Architectural Lexicon & Systems Ontology">
   <meta property="og:description" content="A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/">
-  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Product Design Glossary | Lex Konovalov">
   <meta name="twitter:description" content="100 canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
-  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
   <script>
@@ -131,6 +139,15 @@ ${JSON.stringify(hubJsonLd, null, 2)}
       text-align: center;
       margin-bottom: 48px;
     }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 12px;
+    }
+    nav.breadcrumbs a {
+      color: #5e605c;
+      text-decoration: none;
+    }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 16px;
@@ -152,41 +169,42 @@ ${JSON.stringify(hubJsonLd, null, 2)}
       background: #ffffff;
       border: 1px solid #e8e6dc;
       border-radius: 8px;
-      padding: 16px 20px;
+      padding: 16px;
     }
     .cat-card h3 {
       margin: 0 0 8px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      color: #1c1b18;
     }
     .cat-card p {
       margin: 0;
+      font-size: 0.85rem;
       color: #5e605c;
-      font-size: 0.9rem;
     }
     .directory {
-      column-count: 3;
-      column-gap: 32px;
-    }
-    @media (max-width: 768px) {
-      .directory { column-count: 1; }
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 12px;
+      padding: 32px;
     }
     .letter-group {
-      break-inside: avoid;
       margin-bottom: 32px;
     }
     .letter-group h2 {
       font-size: 1.5rem;
-      border-bottom: 1px solid #d0cdc2;
-      padding-bottom: 4px;
-      margin-bottom: 12px;
+      border-bottom: 1px solid #e8e6dc;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      color: #D93636;
+      font-family: "Space Grotesk", sans-serif;
     }
     .terms-list {
       list-style: none;
       padding: 0;
       margin: 0;
-    }
-    .terms-list li {
-      margin-bottom: 8px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
     }
     .terms-list a {
       color: #1c1b18;
@@ -214,7 +232,9 @@ ${JSON.stringify(hubJsonLd, null, 2)}
 </head>
 <body>
   <header>
-    <p><a href="/">Lex Konovalov</a> / Glossary</p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <span>Product Design Glossary</span>
+    </nav>
     <h1>Product Design Glossary</h1>
     <p class="lead">A curated collection of 100 concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
   </header>
@@ -259,74 +279,97 @@ fs.writeFileSync(path.join(glossaryDir, 'index.html'), hubHtml, 'utf-8');
 console.log('Generated public/glossary/index.html');
 
 // 2. Generate 100 term pages in public/glossary/${slug}.html
-glossaryTerms.forEach((term) => {
-  const termJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "DefinedTerm",
-        "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#term`,
-        "name": term.name,
-        "termCode": term.slug,
-        "description": term.definition,
-        "inDefinedTermSet": {
-          "@type": "DefinedTermSet",
-          "@id": "https://lexkonovalov.com/glossary/#terms",
-          "name": "Architectural Product Design Knowledge System: A Canonical Glossary and Structural Ontology",
-          "url": "https://lexkonovalov.com/glossary/"
+glossaryTerms.forEach((term, index) => {
+  const prevTerm = index > 0 ? glossaryTerms[index - 1] : null;
+  const nextTerm = index < glossaryTerms.length - 1 ? glossaryTerms[index + 1] : null;
+
+  // Determine structured data graph
+  let termJsonLd;
+  if (term.structuredDataGraph && term.structuredDataGraph.length > 0) {
+    termJsonLd = {
+      "@context": "https://schema.org",
+      "@graph": term.structuredDataGraph
+    };
+  } else {
+    termJsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "DefinedTerm",
+          "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#term`,
+          "name": term.name,
+          "termCode": term.slug,
+          "description": term.definition,
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://lexkonovalov.com/glossary/#terms",
+            "name": "Product Design Glossary",
+            "url": "https://lexkonovalov.com/glossary/",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://lexkonovalov.com/#website"
+            }
+          },
+          "url": `https://lexkonovalov.com/glossary/${term.slug}.html`
         },
-        "url": `https://lexkonovalov.com/glossary/${term.slug}.html`
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#breadcrumbs`,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": term.name,
-            "item": `https://lexkonovalov.com/glossary/${term.slug}.html`
-          }
-        ]
-      }
-    ]
-  };
+        {
+          "@type": "BreadcrumbList",
+          "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#breadcrumbs`,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://lexkonovalov.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Product Design Glossary",
+              "item": "https://lexkonovalov.com/glossary/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": term.name,
+              "item": `https://lexkonovalov.com/glossary/${term.slug}.html`
+            }
+          ]
+        }
+      ]
+    };
+  }
+
+  const pageTitle = term.seoTitle ? term.seoTitle : `${term.name} | Product Design Glossary — Lex Konovalov`;
+  const pageDescription = term.seoDescription || term.definition;
+  const canonicalUrl = term.canonicalUrl || `https://lexkonovalov.com/glossary/${term.slug}.html`;
 
   const termHtml = `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(term.seoTitle || `${term.name} | Product Design Glossary — Lex Konovalov`)}</title>
-  <meta name="description" content="${escapeHtml(term.definition.slice(0, 160))}">
-  <link rel="canonical" href="https://lexkonovalov.com/glossary/${term.slug}.html" />
+  <title>${escapeHtml(pageTitle)}</title>
+  <meta name="description" content="${escapeHtml(pageDescription)}">
+  <link rel="canonical" href="${canonicalUrl}" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="${escapeHtml(term.seoTitle || term.name)}">
-  <meta property="og:description" content="${escapeHtml(term.definition.slice(0, 200))}">
-  <meta property="og:url" content="https://lexkonovalov.com/glossary/${term.slug}.html">
-  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${escapeHtml(pageTitle)}">
+  <meta property="og:description" content="${escapeHtml(pageDescription)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="${escapeHtml(term.seoTitle || term.name)}">
-  <meta name="twitter:description" content="${escapeHtml(term.definition.slice(0, 200))}">
-  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
+  <meta name="twitter:description" content="${escapeHtml(pageDescription)}">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
   <script>
@@ -385,18 +428,99 @@ ${JSON.stringify(termJsonLd, null, 2)}
       font-weight: 500;
       margin-left: 6px;
     }
-    section {
+    section.glossary-term-section {
       margin-bottom: 32px;
     }
-    h2 {
+    h2.glossary-term-section__title {
       font-size: 1.35rem;
       margin-bottom: 8px;
       font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
     }
-    p {
+    p.glossary-term-section__text {
       margin: 0 0 16px;
       font-family: "Noto Serif", Georgia, serif;
       font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
     }
     .concept-tags {
       display: flex;
@@ -409,23 +533,6 @@ ${JSON.stringify(termJsonLd, null, 2)}
       padding: 4px 10px;
       border-radius: 4px;
       font-size: 0.9rem;
-    }
-    ul.related-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.related-list li {
-      margin-bottom: 8px;
-    }
-    ul.related-list a {
-      color: #3E70A2;
-      text-decoration: underline;
-    }
-    ol.sources-list {
-      padding-left: 20px;
-      color: #5e605c;
-      font-size: 0.95rem;
     }
     footer {
       margin-top: 60px;
@@ -447,8 +554,10 @@ ${JSON.stringify(termJsonLd, null, 2)}
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .back-btn {
+    .back-btn, .nav-link {
       display: inline-flex;
       align-items: center;
       padding: 8px 16px;
@@ -459,12 +568,20 @@ ${JSON.stringify(termJsonLd, null, 2)}
       text-decoration: none;
       font-size: 0.875rem;
     }
+    .back-btn:hover, .nav-link:hover {
+      background: #f4f2ec;
+      color: #D93636;
+    }
+    .prev-next-links {
+      display: flex;
+      gap: 8px;
+    }
   </style>
 </head>
 <body>
   <header>
     <nav class="breadcrumbs">
-      <a href="/">lexkonovalov</a> / <a href="/glossary/">glossary</a>
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>${escapeHtml(term.name)}</span>
     </nav>
     <h1>${escapeHtml(term.name)}</h1>
     <div class="meta-bar">
@@ -475,59 +592,65 @@ ${JSON.stringify(termJsonLd, null, 2)}
   </header>
 
   <article>
-    <section>
-      <h2>Definition</h2>
-      <p>${escapeHtml(term.definition)}</p>
-    </section>
+    ${term.contentMarkdown ? renderMarkdownToHtml(term.contentMarkdown) : `
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">Definition</h2>
+        <p class="glossary-term-section__text">${escapeHtml(term.definition)}</p>
+      </section>
 
-    <section>
-      <h2>Purpose</h2>
-      <p>${escapeHtml(term.purpose)}</p>
-    </section>
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">Purpose</h2>
+        <p class="glossary-term-section__text">${escapeHtml(term.purpose)}</p>
+      </section>
 
-    ${term.keyConcepts && term.keyConcepts.length > 0 ? `
-    <section>
-      <h2>Key Concepts</h2>
-      <div class="concept-tags">
-        ${term.keyConcepts.map(c => `<span class="concept-tag">${escapeHtml(c)}</span>`).join('')}
-      </div>
-    </section>
-    ` : ''}
+      ${term.keyConcepts && term.keyConcepts.length > 0 ? `
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">Key Concepts</h2>
+        <div class="concept-tags">
+          ${term.keyConcepts.map(c => `<span class="concept-tag">${escapeHtml(c)}</span>`).join('')}
+        </div>
+      </section>
+      ` : ''}
 
-    <section>
-      <h2>How It Works</h2>
-      <p>${escapeHtml(term.howItWorks)}</p>
-    </section>
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">How It Works</h2>
+        <p class="glossary-term-section__text">${escapeHtml(term.howItWorks)}</p>
+      </section>
 
-    ${term.relatedTerms && term.relatedTerms.length > 0 ? `
-    <section>
-      <h2>Related Terms</h2>
-      <ul class="related-list">
-        ${term.relatedTerms.map(r => {
-          const matched = glossaryTerms.find(t => 
-            t.name.toLowerCase() === r.toLowerCase() ||
-            t.slug === r.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-          );
-          if (matched) {
-            return `<li>&bull; <a href="/glossary/${matched.slug}.html">${escapeHtml(matched.name)}</a></li>`;
-          }
-          return `<li>&bull; <span>${escapeHtml(r)}</span></li>`;
-        }).join('')}
-      </ul>
-    </section>
-    ` : ''}
+      ${term.relatedTerms && term.relatedTerms.length > 0 ? `
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">Related Terms</h2>
+        <ul class="glossary-term-ul">
+          ${term.relatedTerms.map(r => {
+            const matched = glossaryTerms.find(t => 
+              t.name.toLowerCase() === r.toLowerCase() ||
+              t.slug === r.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+            );
+            if (matched) {
+              return `<li><a href="/glossary/${matched.slug}.html">${escapeHtml(matched.name)}</a></li>`;
+            }
+            return `<li><span>${escapeHtml(r)}</span></li>`;
+          }).join('')}
+        </ul>
+      </section>
+      ` : ''}
 
-    ${term.sources && term.sources.length > 0 ? `
-    <section>
-      <h2>Sources</h2>
-      <ol class="sources-list">
-        ${term.sources.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
-      </ol>
-    </section>
-    ` : ''}
+      ${term.sources && term.sources.length > 0 ? `
+      <section class="glossary-term-section">
+        <h2 class="glossary-term-section__title">Sources</h2>
+        <ul class="glossary-term-ul">
+          ${term.sources.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+        </ul>
+      </section>
+      ` : ''}
+    `}
 
     <div class="back-nav">
       <a href="/glossary/" class="back-btn">&larr; Back to Glossary</a>
+      <div class="prev-next-links">
+        ${prevTerm ? `<a href="/glossary/${prevTerm.slug}.html" class="nav-link">&larr; ${escapeHtml(prevTerm.name)}</a>` : ''}
+        ${nextTerm ? `<a href="/glossary/${nextTerm.slug}.html" class="nav-link">${escapeHtml(nextTerm.name)} &rarr;</a>` : ''}
+      </div>
     </div>
   </article>
 
@@ -548,19 +671,37 @@ ${JSON.stringify(termJsonLd, null, 2)}
 
 console.log(`Generated all ${glossaryTerms.length} static term pages in public/glossary/!`);
 
-// 3. Update public/sitemap.xml
+// 3. Generate clean, deduplicated public/sitemap.xml
 const sitemapPath = path.join(publicDir, 'sitemap.xml');
-let sitemapContent = fs.readFileSync(sitemapPath, 'utf-8');
 
-// Check if glossary already exists in sitemap
-if (!sitemapContent.includes('<loc>https://lexkonovalov.com/glossary/</loc>')) {
-  let glossaryUrlsXml = `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-07</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+// Base non-glossary pages
+const basePages = [
+  { loc: 'https://lexkonovalov.com/', lastmod: '2026-09-11', changefreq: 'monthly', priority: '1.0' },
+  { loc: 'https://lexkonovalov.com/about/', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.8' },
+  { loc: 'https://lexkonovalov.com/cases/how-ooux-reduced-error-rates-in-traveltech.html', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.7' },
+  { loc: 'https://lexkonovalov.com/cases/how-to-achieve-30-percent-conversion-lift-in-b2c.html', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.7' },
+  { loc: 'https://lexkonovalov.com/cases/how-ai-ready-modular-system-fixed-luxury-travel-identity-crisis.html', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.7' },
+  { loc: 'https://lexkonovalov.com/daily-thing/designing-my-first-newsletter-form-after-10-years-in-ux.html', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.6' },
+  { loc: 'https://lexkonovalov.com/daily-thing/how-ai-augmented-prototyping-cut-b2b-design-time-by-90.html', lastmod: '2026-09-11', changefreq: 'monthly', priority: '0.6' }
+];
 
-  glossaryTerms.forEach((term) => {
-    glossaryUrlsXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>2026-11-07</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
-  });
+let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-  sitemapContent = sitemapContent.replace('</urlset>', `${glossaryUrlsXml}</urlset>`);
-  fs.writeFileSync(sitemapPath, sitemapContent, 'utf-8');
-  console.log('Updated public/sitemap.xml with glossary hub and all 100 term URLs!');
+// Add base pages
+for (const p of basePages) {
+  sitemapXml += `  <url>\n    <loc>${p.loc}</loc>\n    <lastmod>${p.lastmod}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>\n`;
 }
+
+// Add glossary hub
+sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+
+// Add 100 glossary terms
+glossaryTerms.forEach((term) => {
+  // Use 2026-11-12 for recently enhanced terms, 2026-11-07 for canonical batch
+  const lastmod = (term.slug === 'orca-framework' || term.slug === 'object-oriented-ux') ? '2026-11-12' : '2026-11-07';
+  sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+});
+
+sitemapXml += '</urlset>\n';
+fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
+console.log('Regenerated public/sitemap.xml with 108 unique URLs!');
