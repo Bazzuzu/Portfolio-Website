@@ -39,13 +39,13 @@
   background-color: var(--color-section-subtle);
   border-bottom: 1px solid var(--color-border-subtle);
   padding-block-start: var(--spacing-section-py-sm);
-  padding-block-end: var(--spacing-section-py-md);
+  padding-block-end: var(--spacing-section-py-sm);
 }
 
 @media (min-width: 768px) {
   .glossary-hero {
-    padding-block-start: var(--spacing-section-py-md);
-    padding-block-end: var(--spacing-section-py-lg);
+    padding-block-start: var(--spacing-section-py-sm);
+    padding-block-end: var(--spacing-section-py-md);
   }
 }
 
@@ -642,19 +642,20 @@
   max-width: var(--size-text-w-md);
   width: 100%;
   margin-inline: auto;
-  padding-block: var(--spacing-section-py-md);
+  padding-block: var(--spacing-section-py-sm);
   padding-inline: var(--spacing-container-px-md);
 }
 
 @media (min-width: 768px) {
   .glossary-term-article {
-    padding-block: var(--spacing-section-py-lg);
+    padding-block: var(--spacing-section-py-md);
     padding-inline: 0;
   }
 }
 
 .glossary-term-section {
-  margin-bottom: var(--spacing-section-py-sm);
+  margin-top: var(--spacing-section-gap-md);
+  margin-bottom: var(--spacing-section-gap-md);
 }
 
 .glossary-term-section__title {
@@ -663,7 +664,7 @@
   font-weight: var(--font-headline-sm-weight);
   line-height: var(--font-headline-sm-line-height);
   color: var(--color-text-primary);
-  margin-bottom: var(--spacing-component-gap-sm);
+  margin-bottom: var(--spacing-component-py-md);
 }
 
 .glossary-term-section__text {
@@ -672,6 +673,11 @@
   font-weight: var(--font-body-lg-weight);
   line-height: var(--font-body-lg-line-height);
   color: var(--color-text-primary);
+  margin-bottom: var(--spacing-component-py-md);
+}
+
+.glossary-term-section__text:last-child {
+  margin-bottom: 0;
 }
 
 .glossary-term-section__text a {
@@ -696,7 +702,7 @@
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-block: var(--spacing-component-gap-md);
+  margin-block: var(--spacing-section-gap-sm);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
   background-color: var(--color-surface-default);
@@ -743,10 +749,10 @@
 .glossary-term-ol {
   list-style: decimal;
   padding-left: var(--spacing-component-px-xl);
-  margin: 0 0 var(--spacing-component-gap-md);
+  margin: 0 0 var(--spacing-section-gap-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-component-gap-sm);
+  gap: var(--spacing-component-py-sm);
 }
 
 .glossary-term-ol li {
@@ -780,16 +786,17 @@
 .glossary-term-ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--spacing-component-gap-md);
+  margin: 0 0 var(--spacing-section-gap-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-component-gap-xs);
+  gap: var(--spacing-component-gap-sm);
 }
 
 .glossary-term-ul li {
   display: flex;
   align-items: baseline;
-  gap: var(--spacing-component-gap-xs);
+  gap: var(--spacing-component-gap-sm);
+  padding-block: var(--spacing-component-py-2xs);
   font-family: var(--font-body-lg-family);
   font-size: var(--font-body-lg-size);
   font-weight: var(--font-body-lg-weight);
@@ -829,13 +836,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-component-gap-xs);
+  gap: var(--spacing-component-gap-sm);
 }
 
 .glossary-term-related-item {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: var(--spacing-component-gap-sm);
+  padding-block: var(--spacing-component-py-2xs);
 }
 
 .glossary-term-related-bullet {
@@ -863,11 +871,11 @@
 
 .glossary-term-sources-list {
   list-style: decimal;
-  padding-left: var(--spacing-component-px-lg);
+  padding-left: var(--spacing-component-px-xl);
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-component-gap-xs);
+  gap: var(--spacing-component-gap-sm);
 }
 
 .glossary-term-sources-item {
@@ -875,14 +883,15 @@
   font-size: var(--font-body-md-size);
   color: var(--color-text-secondary);
   line-height: var(--font-body-md-line-height);
+  padding-block: var(--spacing-component-py-2xs);
 }
 
 .glossary-term-nav {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-component-gap-md);
-  margin-top: var(--spacing-section-py-md);
-  padding-top: var(--spacing-section-py-sm);
+  margin-top: var(--spacing-section-gap-md);
+  padding-top: var(--spacing-section-gap-sm);
   border-top: 1px solid var(--color-border-default);
 }
 
