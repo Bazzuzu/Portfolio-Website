@@ -32,20 +32,24 @@
 }
 
 /* ==================================================== */
-/* Hero Header Section                                 */
+/* Hero Header Section (Hub Page)                       */
 /* ==================================================== */
 .glossary-hero {
   width: 100%;
   background-color: var(--color-section-subtle);
   border-bottom: 1px solid var(--color-border-subtle);
-  padding-block-start: var(--spacing-section-py-sm);
-  padding-block-end: var(--spacing-section-py-sm);
+  padding: 40px 24px var(--spacing-section-py-sm) 24px;
 }
 
 @media (min-width: 768px) {
   .glossary-hero {
-    padding-block-start: var(--spacing-section-py-sm);
-    padding-block-end: var(--spacing-section-py-md);
+    padding: 50px 40px var(--spacing-section-py-md) 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .glossary-hero {
+    padding: 60px 80px var(--spacing-section-py-md) 80px;
   }
 }
 
@@ -53,6 +57,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: var(--size-icon-lg);
   margin-bottom: var(--spacing-section-py-sm);
 }
 
@@ -83,6 +88,7 @@
   padding: 0;
   margin: 0;
   gap: var(--spacing-component-gap-xs);
+  flex-wrap: wrap;
 }
 
 .glossary-breadcrumbs li {
@@ -92,13 +98,15 @@
 }
 
 .glossary-breadcrumbs__link {
-  color: var(--color-text-secondary);
-  text-decoration: none;
+  color: var(--color-text-interactive);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
   transition: color var(--motion-duration-fast) var(--motion-easing-standard);
 }
 
 .glossary-breadcrumbs__link:hover {
-  color: var(--color-text-primary);
+  color: var(--color-text-brand);
 }
 
 .glossary-breadcrumbs__link:focus-visible {
@@ -108,11 +116,14 @@
 }
 
 .glossary-breadcrumbs__separator {
-  color: var(--color-border-default);
+  color: var(--color-text-secondary);
+  user-select: none;
 }
 
-.glossary-breadcrumbs__current {
-  color: var(--color-text-primary);
+.glossary-breadcrumbs__current,
+.glossary-breadcrumbs li[aria-current="page"] span {
+  color: var(--color-text-secondary);
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -638,39 +649,61 @@
   background-color: var(--color-canvas);
 }
 
-/* Term Page Hero: transparent canvas, seamless integration with article body */
-.glossary-term-page .glossary-hero {
-  background-color: transparent;
-  border-bottom: none;
-  padding-block-start: var(--spacing-section-py-sm);
-  padding-block-end: 0;
+/* Top Header Block for Logo (matching Home and About) */
+.glossary-header-top {
+  width: 100%;
+  padding: 40px 24px 0 24px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
-  .glossary-term-page .glossary-hero {
-    padding-block-start: var(--spacing-section-py-sm);
-    padding-block-end: 0;
+  .glossary-header-top {
+    padding: 50px 40px 0 40px;
   }
 }
 
-.glossary-term-page .glossary-hero__header {
-  margin-bottom: var(--spacing-section-py-sm);
+@media (min-width: 1024px) {
+  .glossary-header-top {
+    padding: 60px 80px 0 80px;
+  }
 }
 
-.glossary-term-page .glossary-hero__content {
+.glossary-header-top .logo {
+  height: var(--size-icon-lg);
+  line-height: var(--size-icon-lg);
+}
+
+.glossary-term-article {
+  max-width: var(--size-text-w-md);
+  width: 100%;
+  margin-inline: auto;
+  padding-block-start: var(--spacing-section-py-sm);
+  padding-block-end: var(--spacing-section-py-md);
+  padding-inline: var(--spacing-container-px-md);
+}
+
+@media (min-width: 768px) {
+  .glossary-term-article {
+    padding-inline: 0;
+  }
+}
+
+.glossary-term-hero {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  max-width: var(--size-text-w-md);
-  margin-inline: auto;
   width: 100%;
+  margin-bottom: var(--spacing-container-gap-xl);
 }
 
-.glossary-term-page .glossary-breadcrumbs {
+.glossary-term-hero .glossary-breadcrumbs {
   justify-content: flex-start;
   margin-bottom: var(--spacing-container-gap-md);
 }
 
-.glossary-term-page .glossary-hero__title {
+.glossary-term-hero .glossary-hero__title,
+.glossary-term-hero__title {
   text-align: left;
   font-family: var(--font-display-md-family);
   font-size: var(--font-display-md-size);
@@ -681,29 +714,17 @@
   margin-bottom: var(--spacing-container-gap-sm);
 }
 
-.glossary-term-page .glossary-hero__meta {
+.glossary-term-hero .glossary-hero__meta,
+.glossary-term-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-start;
-  margin-top: 0;
+  gap: var(--spacing-component-gap-xs);
   font-family: var(--font-label-md-family);
   font-size: var(--font-label-md-size);
   font-weight: 500;
   color: var(--color-text-secondary);
-  gap: var(--spacing-component-gap-xs);
-}
-
-.glossary-term-article {
-  max-width: var(--size-text-w-md);
-  width: 100%;
-  margin-inline: auto;
-  padding-block-start: var(--spacing-container-gap-xl);
-  padding-block-end: var(--spacing-section-py-md);
-  padding-inline: var(--spacing-container-px-md);
-}
-
-@media (min-width: 768px) {
-  .glossary-term-article {
-    padding-inline: 0;
-  }
 }
 
 .glossary-term-section {

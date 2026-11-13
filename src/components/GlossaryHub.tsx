@@ -159,7 +159,7 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
     <div className="glossary-page">
       {/* Hero Section */}
       <header className="glossary-hero">
-        <div className="glossary-container">
+        <div className="home-section-container">
           {/* Top Brand Logo */}
           <div className="glossary-hero__header">
             <a
@@ -190,15 +190,15 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
                       onNavigate?.("home");
                     }}
                   >
-                    lexkonovalov
+                    Home
                   </a>
                 </li>
                 <li className="glossary-breadcrumbs__separator" aria-hidden="true">
                   /
                 </li>
-                <li className="glossary-breadcrumbs__item">
-                  <span className="glossary-breadcrumbs__current" aria-current="page">
-                    glossary
+                <li className="glossary-breadcrumbs__item" aria-current="page">
+                  <span className="glossary-breadcrumbs__current">
+                    Product Design Glossary
                   </span>
                 </li>
               </ol>
@@ -214,7 +214,7 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
       </header>
 
       {/* Main Content Area */}
-      <main id="main-content-frame" className="glossary-main">
+      <section className="glossary-main">
         <div className="glossary-container">
           {/* Search Input Bar */}
           <div className="glossary-search-wrapper" role="search">
@@ -417,7 +417,7 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
             )}
           </section>
         </div>
-      </main>
+      </section>
     </div>
   );
 }

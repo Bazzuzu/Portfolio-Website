@@ -135,82 +135,78 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
 
   return (
     <div className="glossary-term-page">
-      {/* Hero Header */}
-      <header className="glossary-hero">
-        <div className="glossary-container">
-          <div className="glossary-hero__header">
-            <a
-              id="brand-logo-term"
-              href="/"
-              className="logo"
-              aria-label={`${portfolioData.designerName} - Home`}
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate?.("home");
-              }}
-            >
-              <Logo />
-              <span>{portfolioData.designerName}</span>
-            </a>
-          </div>
-
-          <div className="glossary-hero__content">
-            {/* Breadcrumb Navigation matching itemListElement */}
-            <nav className="glossary-breadcrumbs" aria-label="Breadcrumb">
-              <ol>
-                <li className="glossary-breadcrumbs__item">
-                  <a
-                    href="/"
-                    className="glossary-breadcrumbs__link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      onNavigate?.("home");
-                    }}
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="glossary-breadcrumbs__separator" aria-hidden="true">
-                  /
-                </li>
-                <li className="glossary-breadcrumbs__item">
-                  <a
-                    href="/glossary/"
-                    className="glossary-breadcrumbs__link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      onNavigate?.("glossary");
-                    }}
-                  >
-                    Product Design Glossary
-                  </a>
-                </li>
-                <li className="glossary-breadcrumbs__separator" aria-hidden="true">
-                  /
-                </li>
-                <li className="glossary-breadcrumbs__item" aria-current="page">
-                  <span>{term.name}</span>
-                </li>
-              </ol>
-            </nav>
-
-            <h1 className="glossary-hero__title">{term.name}</h1>
-            <div className="glossary-hero__meta">
-              <span>{term.category}</span>
-              {term.secondaryCategory && (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <span>{term.secondaryCategory}</span>
-                </>
-              )}
-            </div>
-          </div>
+      {/* Top Header Block for Logo (aligned with Home and About) */}
+      <header className="glossary-header-top">
+        <div className="home-section-container">
+          <a
+            id="brand-logo-term"
+            href="/"
+            className="logo"
+            aria-label={`${portfolioData.designerName} - Home`}
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate?.("home");
+            }}
+          >
+            <Logo />
+            <span>{portfolioData.designerName}</span>
+          </a>
         </div>
       </header>
 
       {/* Main Term Article */}
-      <main id="main-content-frame">
-        <article className="glossary-term-article">
+      <article className="glossary-term-article">
+        <header className="glossary-term-hero">
+          {/* Breadcrumb Navigation matching itemListElement */}
+          <nav className="glossary-breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li className="glossary-breadcrumbs__item">
+                <a
+                  href="/"
+                  className="glossary-breadcrumbs__link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate?.("home");
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li className="glossary-breadcrumbs__separator" aria-hidden="true">
+                /
+              </li>
+              <li className="glossary-breadcrumbs__item">
+                <a
+                  href="/glossary/"
+                  className="glossary-breadcrumbs__link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate?.("glossary");
+                  }}
+                >
+                  Product Design Glossary
+                </a>
+              </li>
+              <li className="glossary-breadcrumbs__separator" aria-hidden="true">
+                /
+              </li>
+              <li className="glossary-breadcrumbs__item" aria-current="page">
+                <span>{term.name}</span>
+              </li>
+            </ol>
+          </nav>
+
+          <h1 className="glossary-hero__title">{term.name}</h1>
+          <div className="glossary-hero__meta">
+            <span>{term.category}</span>
+            {term.secondaryCategory && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>{term.secondaryCategory}</span>
+              </>
+            )}
+          </div>
+        </header>
           {term.contentMarkdown ? (
             <div
               className="glossary-term-custom-content"
@@ -442,7 +438,6 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
             </div>
           </nav>
         </article>
-      </main>
     </div>
   );
 }
