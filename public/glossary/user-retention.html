@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Retention: Definition and Formula | Product Design Glossary</title>
+  <meta name="description" content="Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/user-retention.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="User Retention: Definition and Formula | Product Design Glossary">
+  <meta property="og:description" content="Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/user-retention.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="User Retention: Definition and Formula | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/user-retention.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/user-retention.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/user-retention.html",
+      "name": "User Retention: Definition and Formula | Product Design Glossary",
+      "description": "Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/user-retention.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/user-retention.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build",
+        "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation",
+        "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/user-retention.html#term",
+      "name": "User Retention",
+      "termCode": "user-retention",
+      "description": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
+      "url": "https://lexkonovalov.com/glossary/user-retention.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/user-retention.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/user-retention.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "User Retention",
+          "item": "https://lexkonovalov.com/glossary/user-retention.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>User Retention</span>
+    </nav>
+    <h1>User Retention</h1>
+    <div class="meta-bar">
+      <span>Product Strategy &amp; Growth</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-a-retention-rate">
+<h2 id="section-how-do-you-calculate-a-retention-rate" class="glossary-term-section__title">How do you calculate a retention rate?</h2>
+<p class="glossary-term-section__text"><strong>Retention rate = eligible cohort members who meet the return condition ÷ all eligible members of the starting cohort × 100.</strong></p>
+<p class="glossary-term-section__text">A cohort is a group that shares a starting condition, such as signing up in the same week. Define what counts as returning, then give every cohort member the full observation window. Choose a return event that reflects the product’s job, such as sending an invoice for an invoicing tool.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-account-retention">
+<h2 id="section-example-of-account-retention" class="glossary-term-section__title">Example of account retention</h2>
+<p class="glossary-term-section__text">An invoicing team wants to know whether new accounts keep using the product after initial activation. The cohort includes 120 eligible new accounts that sent their first real invoice within seven days of signup. The return condition is sending another real invoice during days 15–30 after signup.</p>
+<p class="glossary-term-section__text">If 72 of those accounts meet the return condition, the <strong>retention rate for this activated cohort is 60%</strong> (72 ÷ 120 × 100). Count each account once, even if its team sends several invoices. Read the result after all accounts have finished day 30.</p>
+<p class="glossary-term-section__text">To compare later use across activated and non-activated accounts, use a return condition both can meet. Sending any real invoice during days 15–30 works for that question. It answers a different question from repeat use among accounts that already sent an invoice.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-which-time-window-should-you-use">
+<h2 id="section-which-time-window-should-you-use" class="glossary-term-section__title">Which time window should you use?</h2>
+<p class="glossary-term-section__text">Match the window to the natural usage cycle. A daily collaboration tool and a monthly invoicing product can show very different patterns. Day-30 retention counts a return on that day. A days 15–30 window counts any qualifying return in that interval. For “day 30 or later,” state the reporting cutoff and give cohorts comparable follow-up time.</p>
+<p class="glossary-term-section__text">Read retention alongside <a href="/glossary/activation-metric.html">activation</a>. Activation tracks initial progress. Retention tracks a return to meaningful work. A drop in usage retention can prompt investigation into who stopped returning and why. Subscription churn measures a separate outcome, such as cancellation or nonrenewal.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/activation-metric.html">Activation Metric</a></li>
+<li><a href="/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li>
+<li><a href="/glossary/north-star-metric-nsm.html">North Star Metric (NSM)</a></li>
+<li><a href="/glossary/churn-mitigation-architecture.html">Churn Mitigation Architecture</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build" target="_blank" rel="noopener noreferrer">Build a retention analysis, Amplitude Docs</a></li>
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How the Retention Analysis chart calculates retention, Amplitude Docs</a></li>
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time" target="_blank" rel="noopener noreferrer">How time works in a retention analysis, Amplitude Docs</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/junction-object.html" class="glossary-term-nav__item" title="Junction Object">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <span class="glossary-term-nav__item glossary-term-nav__item--disabled" aria-disabled="true">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </span>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

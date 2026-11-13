@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Telemetry &amp; Event Analytics for UX Product Designers</title>
-  <meta name="description" content="Product Telemetry &amp; Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.">
+  <title>Product Telemetry and Analytics | Product Design Glossary</title>
+  <meta name="description" content="Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/product-telemetry-analytics.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Product Telemetry &amp; Event Analytics for UX Product Designers">
-  <meta property="og:description" content="Product Telemetry &amp; Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.">
+  <meta property="og:title" content="Product Telemetry and Analytics | Product Design Glossary">
+  <meta property="og:description" content="Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/product-telemetry-analytics.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Product Telemetry &amp; Event Analytics for UX Product Designers">
-  <meta name="twitter:description" content="Product Telemetry &amp; Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.">
+  <meta name="twitter:title" content="Product Telemetry and Analytics | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html",
+      "name": "Product Telemetry and Analytics | Product Design Glossary",
+      "description": "Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#breadcrumbs"
+      },
+      "citation": [
+        "https://amplitude.com/docs/get-started/plan-your-implementation",
+        "https://www.amplitude.com/docs/data/user-properties-and-events"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#term",
       "name": "Product Telemetry & Analytics",
       "termCode": "product-telemetry-analytics",
-      "description": "Product Telemetry & Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.",
+      "description": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
+      "url": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,70 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Product Telemetry &amp; Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.</p>
-      </section>
+    <p class="glossary-term-section__text">Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-tracking-plan">
+<h2 id="section-what-belongs-in-a-tracking-plan" class="glossary-term-section__title">What belongs in a tracking plan?</h2>
+<p class="glossary-term-section__text">Start with a decision. To learn whether new accounts send their first invoice, identify the events needed to measure that outcome. For each event, document its name, exact trigger, source, required properties, and owner. Choose an identifier and timestamp that let you link related events and count at the right level.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-an-invoice-tracking-plan">
+<h2 id="section-example-of-an-invoice-tracking-plan" class="glossary-term-section__title">Example of an invoice tracking plan</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger and source</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account Created</td>
+<td>The backend successfully creates an account</td>
+<td>When the account enters the signup cohort</td>
+</tr>
+<tr>
+<td>Invoice Preview Opened</td>
+<td>The interface displays the preview</td>
+<td>Whether someone saw the preview</td>
+</tr>
+<tr>
+<td>Invoice Sent</td>
+<td>The sending service records a successful send</td>
+<td>Whether the account reached the activation milestone</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">In this example, the tracking plan uses an account identifier to join signup and sending. The send event includes an invoice ID and a test flag. Use a stable event ID to deduplicate repeated delivery of the same event. In this product, a successful send means the provider accepted the message for delivery. Delivery, payment, and a click on “Send” are separate signals.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-check-the-data-before-using-it">
+<h2 id="section-how-do-you-check-the-data-before-using-it" class="glossary-term-section__title">How do you check the data before using it?</h2>
+<ol class="glossary-term-ol">
+<li><strong>Verify the trigger.</strong> Run a successful send, a failed send, and a test send. Check that only a qualifying real send counts toward activation.</li>
+<li><strong>Check repeated events.</strong> Retry the same operation and check how the event pipeline handles duplicates. For activation, count each eligible account once within the seven-day window.</li>
+<li><strong>Reconcile a sample.</strong> Compare the analytics events with the product records and investigate mismatched counts, missing IDs, and delayed events.</li>
+<li><strong>Limit what you collect.</strong> Use the properties needed for the analysis. Invoice content and recipient details can stay out of this tracking plan.</li>
+</ol>
+<p class="glossary-term-section__text">A sequence of preview and send events can show how often accounts continue after seeing the preview. To find out why, observe users trying to send an invoice or ask about the decision they made at that step.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-telemetry.html">Component Telemetry</a></li>
+<li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
+<li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
+<li><a href="/glossary/activation-metric.html">Activation Metric</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://amplitude.com/docs/get-started/plan-your-implementation" target="_blank" rel="noopener noreferrer">Plan your implementation, Amplitude Docs</a></li>
+<li><a href="https://www.amplitude.com/docs/data/user-properties-and-events" target="_blank" rel="noopener noreferrer">User properties and event properties, Amplitude Docs</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Provides objective, real-time behavioral evidence of how software is utilized in the wild, identifying drop-off friction and validating feature success against business targets.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Event tracking plans</span><span class="concept-tag">cohort analysis</span><span class="concept-tag">conversion funnels</span><span class="concept-tag">retention matrices.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Engineers implement client-side event tracking schemas, piping clickstream payloads to data warehouses for cross-sectional user cohort analysis.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-telemetry.html">Component Telemetry</a></li><li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li><li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Mixpanel Product Analytics Guides</li><li>Amplitude Behavioral Analytics Playbook</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

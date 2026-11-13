@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 108-term taxonomy across four foundational product design domains
+// Canonical 109-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -63,7 +63,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     id: "product-strategy-growth",
     name: "Product Strategy & Growth",
-    count: 25,
+    count: 26,
     description: "Connecting UX decisions with business outcomes, continuous experimentation, and unit economics.",
     primaryFocus: "Experimentation, Unit Economics, Conversion Architecture",
     representativeSpecs: "Continuous Discovery, JTBD, Product-Led Growth, Telemetry",
@@ -4168,7 +4168,7 @@ Agree on the next step based on what is still unknown. Verify the implementation
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.",
+    "definition": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
     "purpose": "Transforms product development from risky, large-batch feature deployments into an agile, hypothesis-driven scientific discovery process.",
     "keyConcepts": [
       "High test velocity",
@@ -4183,9 +4183,118 @@ Agree on the next step based on what is still unknown. Verify the implementation
       "Feature Flag Strategy",
       "Growth Design"
     ],
-    "seoTitle": "Continuous Experimentation: Building High-Velocity Growth Teams",
+    "seoTitle": "Continuous Experimentation | Product Design Glossary",
+    "seoDescription": "Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/continuous-experimentation.html",
     "sources": [
-      "Stefan Thomke, Experimentation Works: The Surprising Power of Business Experiments, Harvard Business Review Press"
+      "Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)",
+      "Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)",
+      "Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/)"
+    ],
+    "contentMarkdown": `# Continuous Experimentation
+
+Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.
+
+## How does the cycle work?
+
+1. **Choose a question.** Use research and behavioral data to identify a problem. Write down what change you expect, for whom, and why.
+2. **Plan the evaluation.** When a randomized test is feasible, define the assignment unit, primary outcome, guardrails, and decision rules. Check that the relevant events work in both versions.
+3. **Review the evidence.** Inspect data quality, estimate the effect, and account for uncertainty and guardrails before making a decision.
+4. **Record and reuse the result.** Save the hypothesis, audience, variants, metric definitions, result, decision, and follow-up question. Bring that record into the next planning discussion.
+
+An [A/B test](/glossary/ab-testing-split-testing.html) estimates the effect of a change. Continuous experimentation describes the team practice that connects tests over time. A feature flag can control exposure. To estimate a causal effect with an A/B test, the team also needs random assignment and reliable measurement.
+
+## Example of using one test to plan the next
+
+An invoicing team tests whether a client preview helps more new accounts send their first real invoice within seven days. The result is inconclusive, so the team records the uncertainty alongside the guardrails and its decision to keep the current version.
+
+In follow-up sessions, some users still hesitate because they cannot tell whether the client will receive an email immediately. The next hypothesis addresses that specific uncertainty. The team can test comprehension with a prototype, then evaluate the product change with a randomized test if traffic supports it.
+
+A shared experiment log is enough for a small team to get started. Keep inconclusive results and rollbacks alongside successful releases. Record the audience and context so the next team can decide whether the result applies to its work.
+
+## Related terms
+
+- [A/B Testing (Split Testing)](/glossary/ab-testing-split-testing.html)
+- [Product Discovery](/glossary/product-discovery.html)
+- [Feature Flag Strategy](/glossary/feature-flag-strategy.html)
+- [Growth Design](/glossary/growth-design.html)
+
+## Sources
+
+- [Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)
+- [Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)
+- [Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/continuous-experimentation.html",
+                "name": "Continuous Experimentation | Product Design Glossary",
+                "description": "Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#term",
+                "name": "Continuous Experimentation",
+                "termCode": "continuous-experimentation",
+                "description": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
+                "url": "https://lexkonovalov.com/glossary/continuous-experimentation.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Continuous Experimentation",
+                            "item": "https://lexkonovalov.com/glossary/continuous-experimentation.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -4723,10 +4832,11 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
     "id": "085",
     "name": "North Star Metric (NSM)",
     "slug": "north-star-metric-nsm",
+    "alternateName": ["North Star Metric","NSM"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "A North Star Metric (NSM) is the single key metric that best captures the core customer value delivered by a product, serving as the unifying focal point for company-wide strategic growth and product development.",
+    "definition": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.",
     "purpose": "Unifies cross-functional teams around a common goal, prevents conflicting departmental priorities, and ensures product decisions tie directly to sustained customer value.",
     "keyConcepts": [
       "Core value capture",
@@ -4738,12 +4848,125 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
     "relatedTerms": [
       "Product Strategy Canvas",
       "Product Telemetry & Analytics",
-      "Activation Metric"
+      "Activation Metric",
+      "User Retention"
     ],
-    "seoTitle": "The North Star Metric Guide: Identifying Your Core Product Driver",
+    "seoTitle": "North Star Metric: Examples and Inputs | Product Design Glossary",
+    "seoDescription": "Learn how to choose a North Star Metric, define its inputs, and check whether it reflects customer value. Includes an invoicing product example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html",
     "sources": [
-      "Sean Ellis, Hacking Growth, Currency",
-      "John Cutler, The North Star Playbook, Amplitude"
+      "About the North Star Framework, Amplitude (https://www.amplitude.com/books/north-star/about-north-star-framework)",
+      "Defining Your North Star, Amplitude (https://amplitude.com/books/north-star/defining-your-North-Star)"
+    ],
+    "contentMarkdown": `# North Star Metric (NSM)
+
+A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.
+
+## What makes a useful North Star Metric?
+
+Start with the outcome people come for and how often they need it. Define the unit, qualifying behavior, and time period. Ask whether the metric could rise without customers getting more value. A count of invoices sent, for example, can rise because a few customers send more invoices. A count of accounts that send an invoice answers how widely the product delivers that outcome.
+
+Check the connection to business outcomes over time. A metric can represent a meaningful activity while still being a weak indicator of renewals or paid adoption. Review results across customer groups and billing cycles before treating it as a dependable signal.
+
+## Example for an invoicing product
+
+Suppose small businesses use an invoicing product on a monthly cycle. The team chooses **monthly invoicing accounts** as its North Star. It counts distinct customer accounts that send at least one real invoice in a calendar month, excluding test invoices. Sending a real invoice represents progress toward billing a client. If the product also promises to help customers collect payment, the team should check whether the metric captures enough of that value.
+
+| Metric role | Example |
+|---|---|
+| North Star | Distinct accounts sending at least one real invoice in a calendar month |
+| Input for acquisition | Number of eligible new accounts created each month |
+| Input for onboarding | Share of eligible new accounts sending a first real invoice within seven days |
+| Input for repeat use | Share of last month’s invoicing accounts that send a real invoice this month |
+| Guardrail | Invoice-related support requests per 100 invoicing accounts |
+
+Inputs help teams locate opportunities. The [activation rate](/glossary/activation-metric.html) can improve while the North Star stays flat if fewer accounts sign up or established accounts stop invoicing. Use the inputs to investigate what changed. The seven-day activation window can cross a calendar month, and returning accounts can include customers who skipped a month.
+
+## Related terms
+
+- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)
+- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)
+- [Activation Metric](/glossary/activation-metric.html)
+- [User Retention](/glossary/user-retention.html)
+
+## Sources
+
+- [About the North Star Framework, Amplitude](https://www.amplitude.com/books/north-star/about-north-star-framework)
+- [Defining Your North Star, Amplitude](https://amplitude.com/books/north-star/defining-your-North-Star)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html",
+                "name": "North Star Metric: Examples and Inputs | Product Design Glossary",
+                "description": "Learn how to choose a North Star Metric, define its inputs, and check whether it reflects customer value. Includes an invoicing product example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.amplitude.com/books/north-star/about-north-star-framework",
+                      "https://amplitude.com/books/north-star/defining-your-North-Star"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#term",
+                "name": "North Star Metric (NSM)",
+                "termCode": "north-star-metric-nsm",
+                "description": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.",
+                "url": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#webpage"
+                },
+                "alternateName": [
+                      "North Star Metric",
+                      "NSM"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "North Star Metric (NSM)",
+                            "item": "https://lexkonovalov.com/glossary/north-star-metric-nsm.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -5023,7 +5246,7 @@ A design system supports consistent implementation, while a roadmap sequences th
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Product Telemetry & Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.",
+    "definition": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
     "purpose": "Provides objective, real-time behavioral evidence of how software is utilized in the wild, identifying drop-off friction and validating feature success against business targets.",
     "keyConcepts": [
       "Event tracking plans",
@@ -5035,12 +5258,124 @@ A design system supports consistent implementation, while a roadmap sequences th
     "relatedTerms": [
       "Component Telemetry",
       "Continuous Experimentation",
-      "A/B Testing (Split Testing)"
+      "A/B Testing (Split Testing)",
+      "Activation Metric"
     ],
-    "seoTitle": "Product Telemetry & Event Analytics for UX Product Designers",
+    "seoTitle": "Product Telemetry and Analytics | Product Design Glossary",
+    "seoDescription": "Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html",
     "sources": [
-      "Mixpanel Product Analytics Guides",
-      "Amplitude Behavioral Analytics Playbook"
+      "Plan your implementation, Amplitude Docs (https://amplitude.com/docs/get-started/plan-your-implementation)",
+      "User properties and event properties, Amplitude Docs (https://www.amplitude.com/docs/data/user-properties-and-events)"
+    ],
+    "contentMarkdown": `# Product Telemetry & Analytics
+
+Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.
+
+## What belongs in a tracking plan?
+
+Start with a decision. To learn whether new accounts send their first invoice, identify the events needed to measure that outcome. For each event, document its name, exact trigger, source, required properties, and owner. Choose an identifier and timestamp that let you link related events and count at the right level.
+
+## Example of an invoice tracking plan
+
+| Event | Trigger and source | What it tells you |
+|---|---|---|
+| Account Created | The backend successfully creates an account | When the account enters the signup cohort |
+| Invoice Preview Opened | The interface displays the preview | Whether someone saw the preview |
+| Invoice Sent | The sending service records a successful send | Whether the account reached the activation milestone |
+
+In this example, the tracking plan uses an account identifier to join signup and sending. The send event includes an invoice ID and a test flag. Use a stable event ID to deduplicate repeated delivery of the same event. In this product, a successful send means the provider accepted the message for delivery. Delivery, payment, and a click on “Send” are separate signals.
+
+## How do you check the data before using it?
+
+1. **Verify the trigger.** Run a successful send, a failed send, and a test send. Check that only a qualifying real send counts toward activation.
+2. **Check repeated events.** Retry the same operation and check how the event pipeline handles duplicates. For activation, count each eligible account once within the seven-day window.
+3. **Reconcile a sample.** Compare the analytics events with the product records and investigate mismatched counts, missing IDs, and delayed events.
+4. **Limit what you collect.** Use the properties needed for the analysis. Invoice content and recipient details can stay out of this tracking plan.
+
+A sequence of preview and send events can show how often accounts continue after seeing the preview. To find out why, observe users trying to send an invoice or ask about the decision they made at that step.
+
+## Related terms
+
+- [Component Telemetry](/glossary/component-telemetry.html)
+- [Continuous Experimentation](/glossary/continuous-experimentation.html)
+- [A/B Testing (Split Testing)](/glossary/ab-testing-split-testing.html)
+- [Activation Metric](/glossary/activation-metric.html)
+
+## Sources
+
+- [Plan your implementation, Amplitude Docs](https://amplitude.com/docs/get-started/plan-your-implementation)
+- [User properties and event properties, Amplitude Docs](https://www.amplitude.com/docs/data/user-properties-and-events)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html",
+                "name": "Product Telemetry and Analytics | Product Design Glossary",
+                "description": "Learn how product telemetry supports analytics. An invoice example shows how to define events, verify their triggers, and count outcomes reliably.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://amplitude.com/docs/get-started/plan-your-implementation",
+                      "https://www.amplitude.com/docs/data/user-properties-and-events"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#term",
+                "name": "Product Telemetry & Analytics",
+                "termCode": "product-telemetry-analytics",
+                "description": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
+                "url": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Product Telemetry & Analytics",
+                            "item": "https://lexkonovalov.com/glossary/product-telemetry-analytics.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -5063,7 +5398,8 @@ A design system supports consistent implementation, while a roadmap sequences th
       "Conversion Rate Optimization (CRO)",
       "Product-Led Growth (PLG)",
       "Continuous Experimentation",
-      "Jobs to Be Done (JTBD)"
+      "Jobs to Be Done (JTBD)",
+      "User Retention"
     ],
     "seoTitle": "Growth Design: Meaning & Example | Product Design Glossary",
     "seoDescription": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
@@ -5075,7 +5411,7 @@ A design system supports consistent implementation, while a roadmap sequences th
     ],
     "contentMarkdown": `# Growth Design
 
-Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
+Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, [user retention](/glossary/user-retention.html), referral, and revenue across the product journey.
 
 Growth designers identify where people struggle to get value, develop hypotheses about why, and evaluate changes with product, engineering, and analytics partners. The work can involve onboarding, core workflows, pricing, or communication around the product.
 
@@ -5450,7 +5786,8 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
       "Time-to-Value (TTV)",
       "Product-Led Growth (PLG)",
       "Conversion Funnel",
-      "Product Telemetry & Analytics"
+      "Product Telemetry & Analytics",
+      "User Retention"
     ],
     "seoTitle": "Activation Metric and Rate | Product Design Glossary",
     "seoDescription": "Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.",
@@ -5480,7 +5817,7 @@ In the invoicing example, count new accounts that send a first real invoice with
 
 Compare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.
 
-An association can help you choose a milestone. It cannot establish that prompting the action will improve retention. Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.
+An association can help you choose a milestone. It cannot establish that prompting the action will improve [user retention](/glossary/user-retention.html). Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.
 
 Read activation rate alongside [time to value](/glossary/time-to-value-ttv.html). One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.
 
@@ -5730,7 +6067,8 @@ Track the outcome after a change. A shorter setup flow can save clicks without c
     "relatedTerms": [
       "Product Telemetry & Analytics",
       "LTV to CAC Ratio",
-      "Activation Metric"
+      "Activation Metric",
+      "User Retention"
     ],
     "seoTitle": "Churn Mitigation Architecture: Retaining SaaS Customers with UX",
     "sources": [
@@ -6944,6 +7282,145 @@ The junction object can be represented by that row and its actions. Give it a de
                             "position": 3,
                             "name": "Junction Object",
                             "item": "https://lexkonovalov.com/glossary/junction-object.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "109",
+    "name": "User Retention",
+    "slug": "user-retention",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
+    "purpose": "Measures sustained product engagement and value delivery over time, distinguishing one-time activation from habitual, long-term adoption.",
+    "keyConcepts": [
+      "Cohort analysis",
+      "Return condition",
+      "Time window",
+      "Account-level retention",
+      "Retention curve"
+    ],
+    "howItWorks": "Tracks a defined cohort of users or accounts from a shared starting milestone, evaluating the percentage that executes a meaningful qualifying return event within designated subsequent time windows.",
+    "relatedTerms": [
+      "Activation Metric",
+      "Time-to-Value (TTV)",
+      "North Star Metric (NSM)",
+      "Churn Mitigation Architecture"
+    ],
+    "seoTitle": "User Retention: Definition and Formula | Product Design Glossary",
+    "seoDescription": "Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/user-retention.html",
+    "sources": [
+      "Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)",
+      "How the Retention Analysis chart calculates retention, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)",
+      "How time works in a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)"
+    ],
+    "contentMarkdown": `# User Retention
+
+User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.
+
+## How do you calculate a retention rate?
+
+**Retention rate = eligible cohort members who meet the return condition ÷ all eligible members of the starting cohort × 100.**
+
+A cohort is a group that shares a starting condition, such as signing up in the same week. Define what counts as returning, then give every cohort member the full observation window. Choose a return event that reflects the product’s job, such as sending an invoice for an invoicing tool.
+
+## Example of account retention
+
+An invoicing team wants to know whether new accounts keep using the product after initial activation. The cohort includes 120 eligible new accounts that sent their first real invoice within seven days of signup. The return condition is sending another real invoice during days 15–30 after signup.
+
+If 72 of those accounts meet the return condition, the **retention rate for this activated cohort is 60%** (72 ÷ 120 × 100). Count each account once, even if its team sends several invoices. Read the result after all accounts have finished day 30.
+
+To compare later use across activated and non-activated accounts, use a return condition both can meet. Sending any real invoice during days 15–30 works for that question. It answers a different question from repeat use among accounts that already sent an invoice.
+
+## Which time window should you use?
+
+Match the window to the natural usage cycle. A daily collaboration tool and a monthly invoicing product can show very different patterns. Day-30 retention counts a return on that day. A days 15–30 window counts any qualifying return in that interval. For “day 30 or later,” state the reporting cutoff and give cohorts comparable follow-up time.
+
+Read retention alongside [activation](/glossary/activation-metric.html). Activation tracks initial progress. Retention tracks a return to meaningful work. A drop in usage retention can prompt investigation into who stopped returning and why. Subscription churn measures a separate outcome, such as cancellation or nonrenewal.
+
+## Related terms
+
+- [Activation Metric](/glossary/activation-metric.html)
+- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)
+- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)
+- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)
+
+## Sources
+
+- [Build a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)
+- [How the Retention Analysis chart calculates retention, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)
+- [How time works in a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/user-retention.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/user-retention.html",
+                "name": "User Retention: Definition and Formula | Product Design Glossary",
+                "description": "Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/user-retention.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/user-retention.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build",
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation",
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/user-retention.html#term",
+                "name": "User Retention",
+                "termCode": "user-retention",
+                "description": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
+                "url": "https://lexkonovalov.com/glossary/user-retention.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/user-retention.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/user-retention.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "User Retention",
+                            "item": "https://lexkonovalov.com/glossary/user-retention.html"
                       }
                 ]
           }

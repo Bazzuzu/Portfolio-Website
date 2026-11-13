@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continuous Experimentation: Building High-Velocity Growth Teams</title>
-  <meta name="description" content="Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.">
+  <title>Continuous Experimentation | Product Design Glossary</title>
+  <meta name="description" content="Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/continuous-experimentation.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Continuous Experimentation: Building High-Velocity Growth Teams">
-  <meta property="og:description" content="Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.">
+  <meta property="og:title" content="Continuous Experimentation | Product Design Glossary">
+  <meta property="og:description" content="Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/continuous-experimentation.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Continuous Experimentation: Building High-Velocity Growth Teams">
-  <meta name="twitter:description" content="Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.">
+  <meta name="twitter:title" content="Continuous Experimentation | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/continuous-experimentation.html",
+      "name": "Continuous Experimentation | Product Design Glossary",
+      "description": "Learn how product teams turn experiments into a repeatable practice, record decisions, and use results to improve the next hypothesis.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#term",
       "name": "Continuous Experimentation",
       "termCode": "continuous-experimentation",
-      "description": "Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.",
+      "description": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
+      "url": "https://lexkonovalov.com/glossary/continuous-experimentation.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/continuous-experimentation.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/continuous-experimentation.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.</p>
-      </section>
+    <p class="glossary-term-section__text">Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-does-the-cycle-work">
+<h2 id="section-how-does-the-cycle-work" class="glossary-term-section__title">How does the cycle work?</h2>
+<ol class="glossary-term-ol">
+<li><strong>Choose a question.</strong> Use research and behavioral data to identify a problem. Write down what change you expect, for whom, and why.</li>
+<li><strong>Plan the evaluation.</strong> When a randomized test is feasible, define the assignment unit, primary outcome, guardrails, and decision rules. Check that the relevant events work in both versions.</li>
+<li><strong>Review the evidence.</strong> Inspect data quality, estimate the effect, and account for uncertainty and guardrails before making a decision.</li>
+<li><strong>Record and reuse the result.</strong> Save the hypothesis, audience, variants, metric definitions, result, decision, and follow-up question. Bring that record into the next planning discussion.</li>
+</ol>
+<p class="glossary-term-section__text">An <a href="/glossary/ab-testing-split-testing.html">A/B test</a> estimates the effect of a change. Continuous experimentation describes the team practice that connects tests over time. A feature flag can control exposure. To estimate a causal effect with an A/B test, the team also needs random assignment and reliable measurement.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-using-one-test-to-plan-the-next">
+<h2 id="section-example-of-using-one-test-to-plan-the-next" class="glossary-term-section__title">Example of using one test to plan the next</h2>
+<p class="glossary-term-section__text">An invoicing team tests whether a client preview helps more new accounts send their first real invoice within seven days. The result is inconclusive, so the team records the uncertainty alongside the guardrails and its decision to keep the current version.</p>
+<p class="glossary-term-section__text">In follow-up sessions, some users still hesitate because they cannot tell whether the client will receive an email immediately. The next hypothesis addresses that specific uncertainty. The team can test comprehension with a prototype, then evaluate the product change with a randomized test if traffic supports it.</p>
+<p class="glossary-term-section__text">A shared experiment log is enough for a small team to get started. Keep inconclusive results and rollbacks alongside successful releases. Record the audience and context so the next team can decide whether the result applies to its work.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
+<li><a href="/glossary/product-discovery.html">Product Discovery</a></li>
+<li><a href="/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li>
+<li><a href="/glossary/growth-design.html">Growth Design</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Transforms product development from risky, large-batch feature deployments into an agile, hypothesis-driven scientific discovery process.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">High test velocity</span><span class="concept-tag">experimentation culture</span><span class="concept-tag">feature flag decoupling</span><span class="concept-tag">institutional learning.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Product teams deploy features behind feature toggles, measuring immediate telemetry to determine whether variations are scaled globally, adjusted, or rolled back.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li><li><a href="/glossary/product-discovery.html">Product Discovery</a></li><li><a href="/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li><li><a href="/glossary/growth-design.html">Growth Design</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Stefan Thomke, Experimentation Works: The Surprising Power of Business Experiments, Harvard Business Review Press</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">
