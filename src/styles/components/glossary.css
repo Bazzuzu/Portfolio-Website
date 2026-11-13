@@ -638,17 +638,70 @@
   background-color: var(--color-canvas);
 }
 
+/* Term Page Hero: transparent canvas, seamless integration with article body */
+.glossary-term-page .glossary-hero {
+  background-color: transparent;
+  border-bottom: none;
+  padding-block-start: var(--spacing-section-py-sm);
+  padding-block-end: 0;
+}
+
+@media (min-width: 768px) {
+  .glossary-term-page .glossary-hero {
+    padding-block-start: var(--spacing-section-py-sm);
+    padding-block-end: 0;
+  }
+}
+
+.glossary-term-page .glossary-hero__header {
+  margin-bottom: var(--spacing-section-py-sm);
+}
+
+.glossary-term-page .glossary-hero__content {
+  align-items: flex-start;
+  text-align: left;
+  max-width: var(--size-text-w-md);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.glossary-term-page .glossary-breadcrumbs {
+  justify-content: flex-start;
+  margin-bottom: var(--spacing-container-gap-md);
+}
+
+.glossary-term-page .glossary-hero__title {
+  text-align: left;
+  font-family: var(--font-display-md-family);
+  font-size: var(--font-display-md-size);
+  font-weight: var(--font-display-md-weight);
+  line-height: var(--font-display-md-line-height);
+  letter-spacing: var(--font-display-md-tracking);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-container-gap-sm);
+}
+
+.glossary-term-page .glossary-hero__meta {
+  justify-content: flex-start;
+  margin-top: 0;
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  gap: var(--spacing-component-gap-xs);
+}
+
 .glossary-term-article {
   max-width: var(--size-text-w-md);
   width: 100%;
   margin-inline: auto;
-  padding-block: var(--spacing-section-py-sm);
+  padding-block-start: var(--spacing-container-gap-xl);
+  padding-block-end: var(--spacing-section-py-md);
   padding-inline: var(--spacing-container-px-md);
 }
 
 @media (min-width: 768px) {
   .glossary-term-article {
-    padding-block: var(--spacing-section-py-md);
     padding-inline: 0;
   }
 }
@@ -933,9 +986,10 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-component-gap-md);
-  margin-top: var(--spacing-section-gap-md);
-  padding-top: var(--spacing-section-gap-sm);
-  border-top: 1px solid var(--color-border-default);
+  margin-top: var(--spacing-container-gap-xl);
+  padding-top: var(--spacing-container-gap-xl);
+  border-top: 1px solid var(--color-border-subtle);
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -946,59 +1000,101 @@
   }
 }
 
-.glossary-term-nav__prev-next {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: var(--spacing-component-gap-md);
-}
-
-@media (min-width: 768px) {
-  .glossary-term-nav__prev-next {
-    width: auto;
-  }
-}
-
-.glossary-term-back-btn {
+.glossary-term-nav__btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: var(--spacing-component-py-sm) var(--spacing-component-px-md);
+  justify-content: center;
+  gap: var(--spacing-component-gap-sm);
+  height: 52px;
+  padding-inline: var(--spacing-container-px-md);
   background-color: var(--color-surface-default);
-  border: 1px solid var(--color-border-default);
+  border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-pill);
   font-family: var(--font-label-md-family);
   font-size: var(--font-label-md-size);
+  font-weight: 500;
   color: var(--color-text-primary);
   text-decoration: none;
   cursor: pointer;
   transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+  user-select: none;
+  box-sizing: border-box;
 }
 
-.glossary-term-back-btn:hover {
-  background-color: var(--color-section-subtle);
-  border-color: var(--color-border-strong);
+.glossary-term-nav__btn:hover {
+  background-color: var(--color-action-ghost-hover);
+  color: var(--color-text-brand);
+  border-color: var(--color-border-default);
 }
 
-.glossary-term-back-btn:focus-visible {
+.glossary-term-nav__btn:focus-visible {
   outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
 }
 
-.glossary-term-nav__link {
+.glossary-term-nav__pill-group {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-family: var(--font-label-md-family);
-  font-size: var(--font-label-md-size);
-  color: var(--color-text-interactive);
-  text-decoration: none;
+  justify-content: space-between;
+  height: 52px;
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  padding-inline: var(--spacing-component-px-xs);
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.glossary-term-nav__link:hover {
+@media (max-width: 767px) {
+  .glossary-term-nav__btn,
+  .glossary-term-nav__pill-group {
+    width: 100%;
+  }
+}
+
+.glossary-term-nav__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-component-gap-sm);
+  height: 100%;
+  padding-inline: var(--spacing-container-px-md);
+  font-family: var(--font-label-md-family);
+  font-size: var(--font-label-md-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  transition: all var(--motion-duration-fast) var(--motion-easing-standard);
+  cursor: pointer;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .glossary-term-nav__item {
+    flex: initial;
+  }
+}
+
+.glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
   color: var(--color-text-brand);
 }
 
-.glossary-term-nav__link:focus-visible {
+.glossary-term-nav__item:focus-visible {
   outline: 2px solid var(--color-border-focus);
   outline-offset: 2px;
+}
+
+.glossary-term-nav__item--disabled {
+  color: var(--color-text-disabled);
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.glossary-term-nav__divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-border-subtle);
+  flex-shrink: 0;
 }
