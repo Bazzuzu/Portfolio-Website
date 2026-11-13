@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is a Conceptual Schema? UX &amp; Data Architecture Guide</title>
-  <meta name="description" content="A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.">
+  <title>Conceptual Schema: Meaning &amp; Example | Product Design Glossary</title>
+  <meta name="description" content="Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/conceptual-schema.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is a Conceptual Schema? UX &amp; Data Architecture Guide">
-  <meta property="og:description" content="A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.">
+  <meta property="og:title" content="Conceptual Schema: Meaning &amp; Example | Product Design Glossary">
+  <meta property="og:description" content="Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/conceptual-schema.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is a Conceptual Schema? UX &amp; Data Architecture Guide">
-  <meta name="twitter:description" content="A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.">
+  <meta name="twitter:title" content="Conceptual Schema: Meaning &amp; Example | Product Design Glossary">
+  <meta name="twitter:description" content="Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
+      "name": "Conceptual Schema: Meaning & Example | Product Design Glossary",
+      "description": "Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html",
+        "https://www.ibm.com/think/topics/data-modeling",
+        "https://www.ibm.com/think/topics/entity-relationship-diagram"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term",
       "name": "Conceptual Schema",
       "termCode": "conceptual-schema",
-      "description": "A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.",
+      "description": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
+      "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/conceptual-schema.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -335,49 +363,109 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.</p>
-      </section>
+    <p class="glossary-term-section__text">A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.</p>
+<p class="glossary-term-section__text">In product design, this helps teams agree on concepts such as Customer, Reservation, or Payment before designing their screens and behavior. The schema describes information structure; individual records are instances of that structure.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-conceptual-schema-contain">
+<h2 id="section-what-does-a-conceptual-schema-contain" class="glossary-term-section__title">What does a conceptual schema contain?</h2>
+<ul class="glossary-term-ul">
+<li><strong>Entities:</strong> Types of things the system represents, such as a Reservation.</li>
+<li><strong>Attributes:</strong> Properties that describe them, such as arrival date and status.</li>
+<li><strong>Relationships:</strong> Connections between entities, such as a Reservation being assigned to a Room.</li>
+<li><strong>Constraints:</strong> Rules about valid information, such as departure occurring after arrival.</li>
+</ul>
+<p class="glossary-term-section__text">An entity-relationship diagram can show the structure. Written definitions and rules supply details that a diagram alone may leave ambiguous.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-a-conceptual-schema-example-hotel-reservations">
+<h2 id="section-a-conceptual-schema-example-hotel-reservations" class="glossary-term-section__title">A conceptual schema example: hotel reservations</h2>
+<p class="glossary-term-section__text">Consider a simplified hotel system that sells one room per reservation. Room assignment may happen after booking. These are example requirements, not universal hotel rules.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Entity</th>
+<th>Meaning</th>
+<th>Example attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guest</td>
+<td>The person making the reservation</td>
+<td>Name, contact details</td>
+</tr>
+<tr>
+<td>Reservation</td>
+<td>A booking for one room over a date range</td>
+<td>Arrival date, departure date, status</td>
+</tr>
+<tr>
+<td>Room</td>
+<td>A physical room in the hotel</td>
+<td>Room number</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The relationships and constraints are explicit:</p>
+<ul class="glossary-term-ul">
+<li>Each Reservation has exactly one booking Guest; a Guest can have zero or many Reservations.</li>
+<li>A Reservation has zero or one assigned Room. A Room can appear in many Reservations over time.</li>
+<li>Two confirmed or checked-in Reservations cannot occupy the same Room for overlapping nights. One stay may begin on another’s departure date.</li>
+</ul>
+<p class="glossary-term-section__text">This model reveals a UI requirement: the reservation view needs an unassigned-room state. Here, Guest means the booker. Tracking everyone who stays would require extending the model to represent occupants separately.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-conceptual-logical-and-physical-models">
+<h2 id="section-conceptual-logical-and-physical-models" class="glossary-term-section__title">Conceptual, logical, and physical models</h2>
+<p class="glossary-term-section__text">In a common data-modeling workflow, the levels differ in detail:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Level</th>
+<th>Typical decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conceptual</td>
+<td>What entities exist, what they mean, and how they relate.</td>
+</tr>
+<tr>
+<td>Logical</td>
+<td>Detailed attributes, identifiers, and relationship rules.</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td>Database-specific tables, column types, indexes, and storage choices.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Terminology varies. In the ANSI/SPARC three-schema architecture, the conceptual schema is the shared logical description of the database, between external user views and internal storage. It is not necessarily a lightweight early-stage diagram.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-this-help-ux-work">
+<h2 id="section-how-does-this-help-ux-work" class="glossary-term-section__title">How does this help UX work?</h2>
+<p class="glossary-term-section__text">Use the schema to discuss labels, record relationships, empty states, and rules with users and domain experts. In the hotel example, ask what happens when a reservation changes rooms or includes multiple rooms; the answers may change the model.</p>
+<p class="glossary-term-section__text"><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a> can bring related domain questions into interface design, alongside users’ tasks and available actions. Validate the shared information model against real workflows, and update it as requirements change.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li>
+<li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
+<li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html" target="_blank" rel="noopener noreferrer">Database architecture: the conceptual schema, University of Cape Town</a></li>
+<li><a href="https://www.ibm.com/think/topics/data-modeling" target="_blank" rel="noopener noreferrer">What Is Data Modeling?, IBM</a></li>
+<li><a href="https://www.ibm.com/think/topics/entity-relationship-diagram" target="_blank" rel="noopener noreferrer">What Is an Entity Relationship Diagram?, IBM</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Ensures structural alignment between backend relational databases, frontend UI components, and user mental representations, eliminating architectural technical debt.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Semantic modeling</span><span class="concept-tag">entity integrity</span><span class="concept-tag">abstraction layers</span><span class="concept-tag">domain primitives.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">System architects and designers model core domain entities and relational constraints, standardizing systemic rules before API and interface definition.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li><li><a href="/glossary/content-modeling.html">Content Modeling</a></li><li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>ISO/IEC 11179 Information Technology — Metadata Registries</li><li>Eric Evans, Domain-Driven Design</li>
-        </ul>
-      </section>
-      
-    
 
     <div class="back-nav">
       <a href="/glossary/" class="back-btn">&larr; Back to Glossary</a>

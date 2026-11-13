@@ -1118,7 +1118,7 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
     "category": "UX & Product Architecture",
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Established",
-    "definition": "A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.",
+    "definition": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
     "purpose": "Ensures structural alignment between backend relational databases, frontend UI components, and user mental representations, eliminating architectural technical debt.",
     "keyConcepts": [
       "Semantic modeling",
@@ -1133,10 +1133,148 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
       "Content Modeling",
       "Knowledge Graphs (AI Context)"
     ],
-    "seoTitle": "What is a Conceptual Schema? UX & Data Architecture Guide",
+    "seoTitle": "Conceptual Schema: Meaning & Example | Product Design Glossary",
+    "seoDescription": "Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/conceptual-schema.html",
     "sources": [
-      "ISO/IEC 11179 Information Technology — Metadata Registries",
-      "Eric Evans, Domain-Driven Design"
+      "Database architecture: the conceptual schema, University of Cape Town (https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html)",
+      "What Is Data Modeling?, IBM (https://www.ibm.com/think/topics/data-modeling)",
+      "What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)"
+    ],
+    "contentMarkdown": `# Conceptual Schema
+
+A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.
+
+In product design, this helps teams agree on concepts such as Customer, Reservation, or Payment before designing their screens and behavior. The schema describes information structure; individual records are instances of that structure.
+
+## What does a conceptual schema contain?
+
+- **Entities:** Types of things the system represents, such as a Reservation.
+- **Attributes:** Properties that describe them, such as arrival date and status.
+- **Relationships:** Connections between entities, such as a Reservation being assigned to a Room.
+- **Constraints:** Rules about valid information, such as departure occurring after arrival.
+
+An entity-relationship diagram can show the structure. Written definitions and rules supply details that a diagram alone may leave ambiguous.
+
+## A conceptual schema example: hotel reservations
+
+Consider a simplified hotel system that sells one room per reservation. Room assignment may happen after booking. These are example requirements, not universal hotel rules.
+
+| Entity | Meaning | Example attributes |
+|---|---|---|
+| Guest | The person making the reservation | Name, contact details |
+| Reservation | A booking for one room over a date range | Arrival date, departure date, status |
+| Room | A physical room in the hotel | Room number |
+
+The relationships and constraints are explicit:
+
+- Each Reservation has exactly one booking Guest; a Guest can have zero or many Reservations.
+- A Reservation has zero or one assigned Room. A Room can appear in many Reservations over time.
+- Two confirmed or checked-in Reservations cannot occupy the same Room for overlapping nights. One stay may begin on another’s departure date.
+
+This model reveals a UI requirement: the reservation view needs an unassigned-room state. Here, Guest means the booker. Tracking everyone who stays would require extending the model to represent occupants separately.
+
+## Conceptual, logical, and physical models
+
+In a common data-modeling workflow, the levels differ in detail:
+
+| Level | Typical decision |
+|---|---|
+| Conceptual | What entities exist, what they mean, and how they relate. |
+| Logical | Detailed attributes, identifiers, and relationship rules. |
+| Physical | Database-specific tables, column types, indexes, and storage choices. |
+
+Terminology varies. In the ANSI/SPARC three-schema architecture, the conceptual schema is the shared logical description of the database, between external user views and internal storage. It is not necessarily a lightweight early-stage diagram.
+
+## How does this help UX work?
+
+Use the schema to discuss labels, record relationships, empty states, and rules with users and domain experts. In the hotel example, ask what happens when a reservation changes rooms or includes multiple rooms; the answers may change the model.
+
+[Object-Oriented UX](/glossary/object-oriented-ux.html) can bring related domain questions into interface design, alongside users’ tasks and available actions. Validate the shared information model against real workflows, and update it as requirements change.
+
+## Related terms
+
+- [Domain Context Modeling](/glossary/domain-context-modeling.html)
+- [Object-Oriented UX](/glossary/object-oriented-ux.html)
+- [Content Modeling](/glossary/content-modeling.html)
+- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)
+
+## Sources
+
+- [Database architecture: the conceptual schema, University of Cape Town](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html)
+- [What Is Data Modeling?, IBM](https://www.ibm.com/think/topics/data-modeling)
+- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
+        "name": "Conceptual Schema: Meaning & Example | Product Design Glossary",
+        "description": "Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html",
+          "https://www.ibm.com/think/topics/data-modeling",
+          "https://www.ibm.com/think/topics/entity-relationship-diagram"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term",
+        "name": "Conceptual Schema",
+        "termCode": "conceptual-schema",
+        "description": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
+        "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conceptual Schema",
+            "item": "https://lexkonovalov.com/glossary/conceptual-schema.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1684,10 +1822,13 @@ Start with decisions that repeat across the interface. Document intended usage a
     "id": "039",
     "name": "Accessibility and WCAG",
     "slug": "accessibility-wcag",
+    "alternateName": [
+      "Web accessibility and WCAG"
+    ],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "The Web Content Accessibility Guidelines (WCAG) are the internationally recognized technical standards developed by the W3C Web Accessibility Initiative (WAI), defining requirements to ensure digital content is Perceivable, Operable, Understandable, and Robust (POUR).",
+    "definition": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
     "purpose": "Eliminates barriers that prevent individuals with visual, auditory, motor, or cognitive disabilities from accessing digital products, while fulfilling legal compliance obligations.",
     "keyConcepts": [
       "POUR principles",
@@ -1700,14 +1841,157 @@ Start with decisions that repeat across the interface. Document intended usage a
     "howItWorks": "Teams implement specific technical criteria (e.g., WCAG 2.2 focus appearance, target sizes, dynamic contrast ratios), validating compliance through manual testing and automated audits.",
     "relatedTerms": [
       "Semantic HTML",
-      "ARIA",
+      "ARIA (Accessible Rich Internet Applications)",
       "Component Architecture",
-      "Design System Governance"
+      "Design System"
     ],
-    "seoTitle": "WCAG Accessibility Guidelines: Complete Compliance Guide",
+    "seoTitle": "Accessibility & WCAG 2.2 | Product Design Glossary",
+    "seoDescription": "Understand WCAG 2.2, the POUR principles, A/AA/AAA levels, and practical checks for contrast, keyboard focus, target size, and accessible forms.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
     "sources": [
-      "W3C Web Accessibility Initiative (WAI), Web Content Accessibility Guidelines (WCAG) 2.2",
-      "ISO/IEC 40500:2012"
+      "Introduction to Web Accessibility, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-intro/)",
+      "Accessibility Principles, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-principles/)",
+      "WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/)",
+      "WCAG 2 Overview, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/)",
+      "User Notification: Forms Tutorial, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/)",
+      "Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)"
+    ],
+    "contentMarkdown": `# Accessibility and WCAG
+
+Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.
+
+Accessibility addresses visual, auditory, motor, cognitive, and other access needs. WCAG provides a technical baseline; usability testing with people with disabilities helps teams understand barriers in real tasks.
+
+## What are the four WCAG principles?
+
+WCAG organizes its requirements under four principles, often abbreviated **POUR**:
+
+| Principle | What it means in practice |
+|---|---|
+| Perceivable | Provide information people can perceive, such as text alternatives for meaningful images and captions for video. |
+| Operable | Make controls usable with different input methods, including a keyboard. |
+| Understandable | Use clear instructions, predictable behavior, and helpful error messages. |
+| Robust | Expose content and controls so browsers and assistive technologies can interpret them. |
+
+## What do A, AA, and AAA mean?
+
+These are cumulative conformance levels. **A** covers Level A criteria; **AA** includes A and AA; **AAA** includes all three levels. A conformance claim records the version, level, scope, date, and technologies relied upon. It applies to full pages and complete processes, such as every step of checkout.
+
+WCAG 2.2 is a W3C Recommendation. WCAG 3 remains a draft. WCAG conformance does not establish compliance with every applicable accessibility law.
+
+## Which WCAG 2.2 checks matter in everyday design?
+
+These examples are a starting point, not a complete audit:
+
+- **Text contrast, 1.4.3 (AA):** Most text needs a contrast ratio of at least 4.5:1 against its background. Large-scale text needs 3:1: at least 18 pt, or 14 pt bold. The criterion includes exceptions, such as logos and inactive controls. [Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
+- **Target size, 2.5.8 (AA):** Pointer targets must be at least 24 × 24 CSS pixels unless an exception applies. These include sufficient spacing and inline links. [Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+- **Focus visibility:** Keyboard focus must be visible under 2.4.7 (AA). Under 2.4.11 (AA), a focused component must not be entirely hidden by author-created content, such as a sticky banner. The separate Focus Appearance criterion, 2.4.13, is AAA. [Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
+
+## An accessible form example
+
+Consider a quote-request form with an email field. A persistent label is programmatically associated with the field. Keyboard users can reach it and see focus. If the address is incomplete, the form displays “Enter an email address in the format name@example.com” and programmatically associates that message with the field.
+
+The error message explains the problem without relying on color alone. Previously entered values remain available, and the submission confirmation is perceivable with assistive technology. Test the full submission flow, including errors and confirmation.
+
+## How should teams test accessibility?
+
+Combine automated checks with manual keyboard, zoom, and screen-reader testing. Include people with disabilities in usability research, and evaluate complete tasks as well as individual components. Automated tools can identify some failures; a clean scan does not prove WCAG conformance.
+
+## Related terms
+
+- [Semantic HTML](/glossary/semantic-html.html)
+- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)
+- [Component Architecture](/glossary/component-architecture.html)
+- [Design System](/glossary/design-system.html)
+
+## Sources
+
+- [Introduction to Web Accessibility, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+- [Accessibility Principles, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-principles/)
+- [WCAG 2.2 Recommendation, W3C](https://www.w3.org/TR/WCAG22/)
+- [WCAG 2 Overview, W3C WAI](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [User Notification: Forms Tutorial, W3C WAI](https://www.w3.org/WAI/tutorials/forms/notifications/)
+- [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
+        "name": "Accessibility & WCAG 2.2 | Product Design Glossary",
+        "description": "Understand WCAG 2.2, the POUR principles, A/AA/AAA levels, and practical checks for contrast, keyboard focus, target size, and accessible forms.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+          "https://www.w3.org/WAI/fundamentals/accessibility-principles/",
+          "https://www.w3.org/TR/WCAG22/",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/",
+          "https://www.w3.org/WAI/tutorials/forms/notifications/",
+          "https://www.w3.org/WAI/test-evaluate/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term",
+        "name": "Accessibility and WCAG",
+        "alternateName": [
+          "Web accessibility and WCAG"
+        ],
+        "termCode": "accessibility-wcag",
+        "description": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
+        "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Accessibility and WCAG",
+            "item": "https://lexkonovalov.com/glossary/accessibility-wcag.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -3218,10 +3502,14 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "id": "084",
     "name": "Product-Led Growth (PLG)",
     "slug": "product-led-growth-plg",
+    "alternateName": [
+      "PLG",
+      "Product-led growth"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Product-Led Growth (PLG) is a business go-to-market strategy that relies on the product experience itself—such as free tiers, self-serve onboarding, and viral expansion loops—as the primary driver of acquisition, retention, and expansion.",
+    "definition": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
     "purpose": "Reduces customer acquisition costs (CAC) and accelerates enterprise expansion by empowering end-users to experience immediate value before sales interactions.",
     "keyConcepts": [
       "Self-serve onboarding",
@@ -3236,10 +3524,143 @@ Use usability testing and analytics to prioritize evident problems, such as brok
       "Growth Design",
       "B2B SaaS Interaction Model"
     ],
-    "seoTitle": "What is Product-Led Growth (PLG)? Principles & Product UX",
+    "seoTitle": "Product-Led Growth (PLG) | Product Design Glossary",
+    "seoDescription": "Learn how product-led growth connects product value to acquisition, activation, retention, and expansion, with a SaaS example and useful PLG metrics.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
     "sources": [
-      "Wes Bush, Product-Led Growth, ProductLed",
-      "OpenView Venture Partners"
+      "Product-Led Growth: Definition and Examples, Wes Bush / ProductLed (https://productled.com/blog/product-led-growth-definition)",
+      "Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed (https://productled.com/blog/sales-led-growth-definition)",
+      "How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls)"
+    ],
+    "contentMarkdown": `# Product-Led Growth (PLG)
+
+Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.
+
+Free trials and freemium plans are common ways to let people try a product. Their effectiveness depends on whether users can solve a meaningful problem and have a reason to return.
+
+## How does product-led growth work?
+
+Teams design a path from discovering the product to experiencing value, building a habit where appropriate, and paying for capabilities they need. This involves onboarding, the core workflow, pricing, and support, with product, design, engineering, marketing, and sales working toward shared outcomes.
+
+Self-service can make that path easier to start. Sales and customer-success teams can still help with evaluation, integration, procurement, or expansion into larger accounts.
+
+## A PLG example: a team planning tool
+
+Imagine a planning tool that lets a team try one shared project. This is an illustrative model, not a case study.
+
+| Stage | Example product experience |
+|---|---|
+| Acquisition | A colleague receives an invitation to join a real project. |
+| Activation | Two teammates coordinate work and complete their first shared task. |
+| Retention | The team returns to plan and complete more work. |
+| Monetization and expansion | The team chooses a paid plan when it needs additional projects or administrative controls. |
+
+The design work includes a useful starting template, clear invitations, understandable permissions, and pricing that explains what an upgrade adds. Prompt invitations when users have work to share and explain what the invited person can access.
+
+## How is PLG different from sales-led growth?
+
+In a sales-led motion, sales interactions lead the evaluation and purchasing process. In PLG, hands-on product use leads much of that process. A hybrid approach can combine self-service adoption with sales assistance when an account needs it.
+
+A free tier is a pricing choice. PLG is the broader strategy connecting product value to growth. Offering a free plan alone does not create that connection or guarantee lower acquisition costs.
+
+## Which PLG metrics are useful?
+
+- **Activation rate:** The proportion of new users or accounts reaching a defined milestone that indicates initial value.
+- **Time to value:** How long it takes that audience to reach the milestone.
+- **Retention:** Whether users or accounts return to perform meaningful work over time.
+- **Paid conversion and expansion:** Whether customers begin paying and increase their use of paid capabilities.
+
+Define the unit, cohort, and time window before comparing these metrics. In the planning example, measure activation at the team level. Check whether the proposed activation milestone is associated with later retention.
+
+A **product-qualified lead (PQL)** is a user qualified through product usage that signals meaningful value and potential readiness to buy or expand. Define the qualifying behavior for your product, using customer fit and intent to decide whether sales assistance is appropriate.
+
+## Related terms
+
+- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)
+- [Activation Metric](/glossary/activation-metric.html)
+- [Growth Design](/glossary/growth-design.html)
+- [B2B SaaS Interaction Model](/glossary/b2b-saas-interaction-model.html)
+
+## Sources
+
+- [Product-Led Growth: Definition and Examples, Wes Bush / ProductLed](https://productled.com/blog/product-led-growth-definition)
+- [Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed](https://productled.com/blog/sales-led-growth-definition)
+- [How to Define PQLs, ProductLed](https://productled.com/blog/how-to-define-pqls)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
+        "name": "Product-Led Growth (PLG) | Product Design Glossary",
+        "description": "Learn how product-led growth connects product value to acquisition, activation, retention, and expansion, with a SaaS example and useful PLG metrics.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs"
+        },
+        "citation": [
+          "https://productled.com/blog/product-led-growth-definition",
+          "https://productled.com/blog/sales-led-growth-definition",
+          "https://productled.com/blog/how-to-define-pqls"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term",
+        "name": "Product-Led Growth (PLG)",
+        "alternateName": [
+          "PLG",
+          "Product-led growth"
+        ],
+        "termCode": "product-led-growth-plg",
+        "description": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
+        "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Product-Led Growth (PLG)",
+            "item": "https://lexkonovalov.com/glossary/product-led-growth-plg.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -3440,7 +3861,7 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Growth Design is an interaction design discipline that applies behavioral psychology, experimentation, and design craft directly to move business metrics across acquisition, activation, retention, referral, and revenue.",
+    "definition": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
     "purpose": "Unifies design quality with aggressive business scalability, proving that UX decisions directly drive quantitative commercial outcomes.",
     "keyConcepts": [
       "Behavioral economics",
@@ -3455,10 +3876,142 @@ Use usability testing and analytics to prioritize evident problems, such as brok
       "Continuous Experimentation",
       "Jobs to Be Done (JTBD)"
     ],
-    "seoTitle": "What is Growth Design? Driving Commercial Impact with UX",
+    "seoTitle": "Growth Design: Meaning & Example | Product Design Glossary",
+    "seoDescription": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/growth-design.html",
     "sources": [
-      "Chetana Deorah, What is Growth Design?",
-      "Lex Roman, Growth Design Principles"
+      "Practicing Growth Design, Lex Roman / Amplitude (https://amplitude.com/blog/practicing-growth-design)",
+      "A Primer on Growth Design, Chetana Deorah and Lex Roman (https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)",
+      "Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)"
+    ],
+    "contentMarkdown": `# Growth Design
+
+Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
+
+Growth designers identify where people struggle to get value, develop hypotheses about why, and evaluate changes with product, engineering, and analytics partners. The work can involve onboarding, core workflows, pricing, or communication around the product.
+
+## How does growth design relate to product design, CRO, and PLG?
+
+| Term | Main focus |
+|---|---|
+| Product design | Shaping a useful, usable product that serves users and the business. |
+| Growth design | Applying design to a specific growth opportunity and measuring the outcome. |
+| Conversion rate optimization (CRO) | Increasing the proportion of people completing a defined action. |
+| Product-led growth (PLG) | A business strategy that makes product experience the primary driver of growth. |
+
+These areas overlap. Growth design uses product design skills, and CRO can be part of its work. Growth design can support PLG, sales-led businesses, or hybrid models. Measurement and business outcomes also belong in broader product design.
+
+## A growth design example: first invoice sent
+
+Imagine an invoicing tool where many new accounts create a draft but never send it. Analytics reveals the drop-off; usability sessions reveal that users cannot tell what their clients will receive.
+
+The team proposes a preview of the invoice as the client will see it, with an explanation of what happens after sending. The hypothesis is that resolving this uncertainty will help users send a correct first invoice. The measurement windows below are examples; choose windows that fit actual usage.
+
+| Measurement | Illustrative definition |
+|---|---|
+| Primary outcome | Percentage of eligible new accounts sending a first invoice within seven days of signup. |
+| Longer-term outcome | Percentage of the same eligible account cohort sending a second invoice within 30 days of signup. |
+| Guardrails | Accidental sends, canceled invoices, and related support requests. |
+
+Clicking “Preview” is a diagnostic event. It does not establish that users completed the task successfully. The team checks sending behavior and downstream outcomes before deciding whether to roll out the change.
+
+## How do you run a growth design cycle?
+
+1. **Choose an outcome.** Define the audience, behavior, measurement window, and guardrails.
+2. **Investigate.** Combine funnel or cohort analysis with research into the user’s task and obstacles.
+3. **Design a hypothesis.** Explain how a proposed change addresses the observed barrier.
+4. **Evaluate.** Test comprehension and usability. When traffic supports it, use a randomized experiment to estimate the change’s effect.
+5. **Learn and follow through.** Review uncertainty and downstream results, then refine, release, or discard the idea.
+
+## What should growth design avoid?
+
+Optimizing a visible metric can hide harm elsewhere. Making cancellation difficult might reduce recorded cancellations while increasing complaints and frustration. Judge improvements against useful outcomes and customer choice, with guardrails that reveal those tradeoffs.
+
+Track what each experiment teaches you and whether the result improves the chosen outcome without violating its guardrails.
+
+## Related terms
+
+- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Continuous Experimentation](/glossary/continuous-experimentation.html)
+- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)
+
+## Sources
+
+- [Practicing Growth Design, Lex Roman / Amplitude](https://amplitude.com/blog/practicing-growth-design)
+- [A Primer on Growth Design, Chetana Deorah and Lex Roman](https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)
+- [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/growth-design.html",
+        "name": "Growth Design: Meaning & Example | Product Design Glossary",
+        "description": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/growth-design.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs"
+        },
+        "citation": [
+          "https://amplitude.com/blog/practicing-growth-design",
+          "https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design",
+          "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/growth-design.html#term",
+        "name": "Growth Design",
+        "termCode": "growth-design",
+        "description": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
+        "url": "https://lexkonovalov.com/glossary/growth-design.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Growth Design",
+            "item": "https://lexkonovalov.com/glossary/growth-design.html"
+          }
+        ]
+      }
     ]
   },
   {

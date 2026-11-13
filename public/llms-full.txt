@@ -605,13 +605,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/conceptual-schema.html
 - **Category:** UX & Product Architecture (Secondary: AI & Agentic Systems)
 - **Maturity:** Established
-- **Definition:** A Conceptual Schema is a high-level, implementation-independent representation of the business domain concepts, their essential properties, and semantic relationships across an entire product ecosystem.
+- **Definition:** A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.
 - **Purpose:** Ensures structural alignment between backend relational databases, frontend UI components, and user mental representations, eliminating architectural technical debt.
 - **Key Concepts:** Semantic modeling, entity integrity, abstraction layers, domain primitives.
 - **How It Works:** System architects and designers model core domain entities and relational constraints, standardizing systemic rules before API and interface definition.
 - **Related Terms:** Domain Context Modeling, Object-Oriented UX, Content Modeling, Knowledge Graphs (AI Context)
-- **SEO Title:** What is a Conceptual Schema? UX & Data Architecture Guide
-- **Sources:** ISO/IEC 11179 Information Technology — Metadata Registries; Eric Evans, Domain-Driven Design
+- **SEO Title:** Conceptual Schema: Meaning & Example | Product Design Glossary
+- **Sources:** Database architecture: the conceptual schema, University of Cape Town (https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html); What Is Data Modeling?, IBM (https://www.ibm.com/think/topics/data-modeling); What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)
 
 #### 025. Interaction Invariant
 - **URL:** https://lexkonovalov.com/glossary/interaction-invariant.html
@@ -785,13 +785,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/accessibility-wcag.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** The Web Content Accessibility Guidelines (WCAG) are the internationally recognized technical standards developed by the W3C Web Accessibility Initiative (WAI), defining requirements to ensure digital content is Perceivable, Operable, Understandable, and Robust (POUR).
+- **Definition:** Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.
 - **Purpose:** Eliminates barriers that prevent individuals with visual, auditory, motor, or cognitive disabilities from accessing digital products, while fulfilling legal compliance obligations.
 - **Key Concepts:** POUR principles, conformance levels (A, AA, AAA), contrast ratios, non-text content.
 - **How It Works:** Teams implement specific technical criteria (e.g., WCAG 2.2 focus appearance, target sizes, dynamic contrast ratios), validating compliance through manual testing and automated audits.
-- **Related Terms:** Semantic HTML, ARIA, Component Architecture, Design System Governance
-- **SEO Title:** WCAG Accessibility Guidelines: Complete Compliance Guide
-- **Sources:** W3C Web Accessibility Initiative (WAI), Web Content Accessibility Guidelines (WCAG) 2.2; ISO/IEC 40500:2012
+- **Related Terms:** Semantic HTML, ARIA (Accessible Rich Internet Applications), Component Architecture, Design System
+- **SEO Title:** Accessibility & WCAG 2.2 | Product Design Glossary
+- **Sources:** Introduction to Web Accessibility, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-intro/); Accessibility Principles, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-principles/); WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/); WCAG 2 Overview, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/); User Notification: Forms Tutorial, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/); Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)
 
 #### 040. ARIA (Accessible Rich Internet Applications)
 - **URL:** https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html
@@ -1325,13 +1325,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/product-led-growth-plg.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Product-Led Growth (PLG) is a business go-to-market strategy that relies on the product experience itself—such as free tiers, self-serve onboarding, and viral expansion loops—as the primary driver of acquisition, retention, and expansion.
+- **Definition:** Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.
 - **Purpose:** Reduces customer acquisition costs (CAC) and accelerates enterprise expansion by empowering end-users to experience immediate value before sales interactions.
 - **Key Concepts:** Self-serve onboarding, freemium mechanics, product viral loops, product qualified leads (PQL).
 - **How It Works:** Removes upfront paywalls and sales gates, engineering rapid time-to-value so that the user realizes organic utility and triggers expansion within their organization.
 - **Related Terms:** Time-to-Value (TTV), Activation Metric, Growth Design, B2B SaaS Interaction Model
-- **SEO Title:** What is Product-Led Growth (PLG)? Principles & Product UX
-- **Sources:** Wes Bush, Product-Led Growth, ProductLed; OpenView Venture Partners
+- **SEO Title:** Product-Led Growth (PLG) | Product Design Glossary
+- **Sources:** Product-Led Growth: Definition and Examples, Wes Bush / ProductLed (https://productled.com/blog/product-led-growth-definition); Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed (https://productled.com/blog/sales-led-growth-definition); How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls)
 
 #### 085. North Star Metric (NSM)
 - **URL:** https://lexkonovalov.com/glossary/north-star-metric-nsm.html
@@ -1421,13 +1421,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/growth-design.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Growth Design is an interaction design discipline that applies behavioral psychology, experimentation, and design craft directly to move business metrics across acquisition, activation, retention, referral, and revenue.
+- **Definition:** Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
 - **Purpose:** Unifies design quality with aggressive business scalability, proving that UX decisions directly drive quantitative commercial outcomes.
 - **Key Concepts:** Behavioral economics, psychological friction removal, experimentation velocity, metric accountability.
 - **How It Works:** Growth designers formulate quantitative hypotheses, build targeted micro-interactions (e.g., onboarding personalization, referral prompts), and iterate via rapid A/B experiments.
 - **Related Terms:** Conversion Rate Optimization (CRO), Product-Led Growth (PLG), Continuous Experimentation, Jobs to Be Done (JTBD)
-- **SEO Title:** What is Growth Design? Driving Commercial Impact with UX
-- **Sources:** Chetana Deorah, What is Growth Design?; Lex Roman, Growth Design Principles
+- **SEO Title:** Growth Design: Meaning & Example | Product Design Glossary
+- **Sources:** Practicing Growth Design, Lex Roman / Amplitude (https://amplitude.com/blog/practicing-growth-design); A Primer on Growth Design, Chetana Deorah and Lex Roman (https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
 #### 093. Design Strategy Alignment
 - **URL:** https://lexkonovalov.com/glossary/design-strategy-alignment.html
