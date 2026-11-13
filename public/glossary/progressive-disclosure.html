@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progressive Disclosure in UX: Managing Complexity &amp; Cognitive Load</title>
-  <meta name="description" content="Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.">
+  <title>Progressive Disclosure in UX | Product Design Glossary</title>
+  <meta name="description" content="What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/progressive-disclosure.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Progressive Disclosure in UX: Managing Complexity &amp; Cognitive Load">
-  <meta property="og:description" content="Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.">
+  <meta property="og:title" content="Progressive Disclosure in UX | Product Design Glossary">
+  <meta property="og:description" content="What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/progressive-disclosure.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Progressive Disclosure in UX: Managing Complexity &amp; Cognitive Load">
-  <meta name="twitter:description" content="Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.">
+  <meta name="twitter:title" content="Progressive Disclosure in UX | Product Design Glossary">
+  <meta name="twitter:description" content="What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
+      "name": "Progressive Disclosure in UX | Product Design Glossary",
+      "description": "What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.nngroup.com/articles/progressive-disclosure/",
+        "https://design-system.service.gov.uk/components/details/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term",
       "name": "Progressive Disclosure",
       "termCode": "progressive-disclosure",
-      "description": "Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.",
+      "description": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
+      "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,72 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.</p>
-      </section>
+    <p class="glossary-term-section__text">Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-does-progressive-disclosure-work">
+<h2 id="section-how-does-progressive-disclosure-work" class="glossary-term-section__title">How does progressive disclosure work?</h2>
+<p class="glossary-term-section__text">Start with the options people need for common tasks. Provide a clearly labeled way to reveal additional settings or information, such as “Export options” or “Technical specifications.”</p>
+<p class="glossary-term-section__text">Use task research and usability testing to decide what to show. Low usage alone does not prove that a feature is unimportant: people may be unable to find it.</p>
+<p class="glossary-term-section__text">An accordion or secondary dialog can support this pattern. Hiding required information does not.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-exporting-a-report">
+<h2 id="section-example-exporting-a-report" class="glossary-term-section__title">Example: exporting a report</h2>
+<p class="glossary-term-section__text">Suppose a reporting tool serves managers who usually export the current report as a PDF, while analysts occasionally need a customized CSV.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Initially visible</th>
+<th>Available through “Export options”</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File format, with PDF selected</td>
+<td>CSV delimiter and encoding</td>
+</tr>
+<tr>
+<td>Current date range and an Export button</td>
+<td>Selection of columns for CSV export</td>
+</tr>
+<tr>
+<td>Summary of any customized settings</td>
+<td>Controls for editing those settings</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">With CSV selected, “Export options” opens the delimiter, encoding, and column controls. If someone changes the selected columns and collapses the panel, a summary such as “CSV · 6 selected columns” remains visible. The export should not silently use forgotten settings.</p>
+<p class="glossary-term-section__text">This example assumes occasional customization. If analysts select columns on every export, keep those controls in their primary workflow. Test whether both groups can export the intended data without missing settings or repeatedly reopening the panel.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-stay-visible">
+<h2 id="section-what-should-stay-visible" class="glossary-term-section__title">What should stay visible?</h2>
+<p class="glossary-term-section__text">Keep information people need to make an informed decision in the main flow: total cost, important restrictions, required inputs, and actionable errors. GOV.UK's guidance for the details component similarly advises against hiding content most users need.</p>
+<p class="glossary-term-section__text">Avoid burying frequent actions behind repeated expansion. Several nested disclosure levels can also make navigation difficult.</p>
+<p class="glossary-term-section__text">For an in-place disclosure, use an accessible control. The W3C disclosure pattern uses a button activated with Enter or Space and an <code>aria-expanded</code> state that reflects whether the content is open. Test the interaction with a keyboard and assistive technology.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-progressive-disclosure-vs-staged-disclosure">
+<h2 id="section-progressive-disclosure-vs-staged-disclosure" class="glossary-term-section__title">Progressive disclosure vs. staged disclosure</h2>
+<p class="glossary-term-section__text">Progressive disclosure reveals optional detail on request. Staged disclosure divides a task into successive steps that users normally complete.</p>
+<p class="glossary-term-section__text">“Export options” is progressive disclosure. A checkout that moves through address, delivery, and payment is staged disclosure. Test whether users need to compare information across steps before separating it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/affordance-layering.html">Affordance Layering</a></li>
+<li><a href="/glossary/semantic-zoom.html">Semantic Zoom</a></li>
+<li><a href="/glossary/task-model.html">Task Model</a></li>
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank" rel="noopener noreferrer">Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group</a></li>
+<li><a href="https://design-system.service.gov.uk/components/details/" target="_blank" rel="noopener noreferrer">Details, GOV.UK Design System</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Disclosure (Show/Hide) Pattern, W3C WAI</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Minimizes upfront cognitive load, avoids intimidating novice users, and streamlines primary task completion without stripping away advanced power features.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Cognitive pacing</span><span class="concept-tag">disclosure toggles</span><span class="concept-tag">layered complexity</span><span class="concept-tag">default states.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The interface surfaces only critical path decisions; secondary options are housed behind explicit disclosures (e.g., &quot;Advanced Settings&quot; or accordions) upon user demand.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/affordance-layering.html">Affordance Layering</a></li><li><a href="/glossary/semantic-zoom.html">Semantic Zoom</a></li><li><a href="/glossary/task-model.html">Task Model</a></li><li><a href="/glossary/operational-ux.html">Operational UX</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Jakob Nielsen, Progressive Disclosure, Nielsen Norman Group</li><li>Alan Cooper et al., About Face: The Essentials of Interaction Design</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

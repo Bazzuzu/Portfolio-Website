@@ -1090,7 +1090,7 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.",
+    "definition": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
     "purpose": "Minimizes upfront cognitive load, avoids intimidating novice users, and streamlines primary task completion without stripping away advanced power features.",
     "keyConcepts": [
       "Cognitive pacing",
@@ -1105,10 +1105,137 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
       "Task Model",
       "Operational UX"
     ],
-    "seoTitle": "Progressive Disclosure in UX: Managing Complexity & Cognitive Load",
+    "seoTitle": "Progressive Disclosure in UX | Product Design Glossary",
+    "seoDescription": "What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
     "sources": [
-      "Jakob Nielsen, Progressive Disclosure, Nielsen Norman Group",
-      "Alan Cooper et al., About Face: The Essentials of Interaction Design"
+      "Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group (https://www.nngroup.com/articles/progressive-disclosure/)",
+      "Details, GOV.UK Design System (https://design-system.service.gov.uk/components/details/)",
+      "Disclosure (Show/Hide) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)"
+    ],
+    "contentMarkdown": `# Progressive Disclosure
+
+Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.
+
+## How does progressive disclosure work?
+
+Start with the options people need for common tasks. Provide a clearly labeled way to reveal additional settings or information, such as “Export options” or “Technical specifications.”
+
+Use task research and usability testing to decide what to show. Low usage alone does not prove that a feature is unimportant: people may be unable to find it.
+
+An accordion or secondary dialog can support this pattern. Hiding required information does not.
+
+## Example: exporting a report
+
+Suppose a reporting tool serves managers who usually export the current report as a PDF, while analysts occasionally need a customized CSV.
+
+| Initially visible | Available through “Export options” |
+|---|---|
+| File format, with PDF selected | CSV delimiter and encoding |
+| Current date range and an Export button | Selection of columns for CSV export |
+| Summary of any customized settings | Controls for editing those settings |
+
+With CSV selected, “Export options” opens the delimiter, encoding, and column controls. If someone changes the selected columns and collapses the panel, a summary such as “CSV · 6 selected columns” remains visible. The export should not silently use forgotten settings.
+
+This example assumes occasional customization. If analysts select columns on every export, keep those controls in their primary workflow. Test whether both groups can export the intended data without missing settings or repeatedly reopening the panel.
+
+## What should stay visible?
+
+Keep information people need to make an informed decision in the main flow: total cost, important restrictions, required inputs, and actionable errors. GOV.UK's guidance for the details component similarly advises against hiding content most users need.
+
+Avoid burying frequent actions behind repeated expansion. Several nested disclosure levels can also make navigation difficult.
+
+For an in-place disclosure, use an accessible control. The W3C disclosure pattern uses a button activated with Enter or Space and an \`aria-expanded\` state that reflects whether the content is open. Test the interaction with a keyboard and assistive technology.
+
+## Progressive disclosure vs. staged disclosure
+
+Progressive disclosure reveals optional detail on request. Staged disclosure divides a task into successive steps that users normally complete.
+
+“Export options” is progressive disclosure. A checkout that moves through address, delivery, and payment is staged disclosure. Test whether users need to compare information across steps before separating it.
+
+## Related terms
+
+- [Affordance Layering](/glossary/affordance-layering.html)
+- [Semantic Zoom](/glossary/semantic-zoom.html)
+- [Task Model](/glossary/task-model.html)
+- [Operational UX](/glossary/operational-ux.html)
+
+## Sources
+
+- [Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group](https://www.nngroup.com/articles/progressive-disclosure/)
+- [Details, GOV.UK Design System](https://design-system.service.gov.uk/components/details/)
+- [Disclosure (Show/Hide) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
+        "name": "Progressive Disclosure in UX | Product Design Glossary",
+        "description": "What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/progressive-disclosure/",
+          "https://design-system.service.gov.uk/components/details/",
+          "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term",
+        "name": "Progressive Disclosure",
+        "termCode": "progressive-disclosure",
+        "description": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
+        "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Progressive Disclosure",
+            "item": "https://lexkonovalov.com/glossary/progressive-disclosure.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -3752,7 +3879,7 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Enterprise UX Strategy is the deliberate architectural alignment of enterprise software design with complex corporate workflows, employee productivity, regulatory governance, and business change management.",
+    "definition": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
     "purpose": "Eliminates the massive hidden costs of corporate training, workplace operational fatigue, and high employee error rates typical of legacy enterprise software.",
     "keyConcepts": [
       "Total cost of ownership (TCO)",
@@ -3766,10 +3893,143 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
       "Enterprise Information Architecture",
       "B2B SaaS Interaction Model"
     ],
-    "seoTitle": "Enterprise UX Strategy: Transforming Complex Enterprise Software",
+    "seoTitle": "Enterprise UX Strategy | Product Design Glossary",
+    "seoDescription": "Learn what enterprise UX strategy includes, how to prioritize complex workflows, and how to measure progress with a practical procurement example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
     "sources": [
-      "Jesse James Garrett, The Elements of User Experience",
-      "Nielsen Norman Group Enterprise UX Reports"
+      "UX Strategy: Definition and Components, Nielsen Norman Group (https://www.nngroup.com/articles/ux-strategy/)",
+      "Complex Application Design: A 5-Layer Framework, Nielsen Norman Group (https://www.nngroup.com/articles/complex-application-design-framework/)"
+    ],
+    "contentMarkdown": `# Enterprise UX Strategy
+
+Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.
+
+Its scope may cover one enterprise product or workflows spanning several systems. The work includes choosing which problems to solve first and which changes to defer.
+
+## What makes enterprise UX strategy different?
+
+Enterprise workflows often involve specialized roles, shared records, permissions, legacy integrations, and handoffs between departments. Improving one screen may do little if people still copy information between systems or wait for an unclear approval.
+
+The people buying, administering, and using the software may have different needs. Research must include the people doing the work, not only stakeholders who authorize a purchase.
+
+Strategy also needs to account for adoption: existing habits, training, migration, and the consequences of changing an established process.
+
+## What should the strategy include?
+
+Nielsen Norman Group describes UX strategy through vision, goals and measures, and a plan. A practical enterprise version should answer:
+
+| Decision | Question to resolve |
+|---|---|
+| Scope and direction | Which users and workflows are we improving, and why? |
+| Evidence and priorities | Where do observations, support issues, and workflow data show the most consequential problems? |
+| Outcomes | What should improve, and what baseline will we compare against? |
+| Constraints and ownership | Who owns decisions across teams, and which permissions, integrations, or controls must be preserved? |
+| Delivery and adoption | What will we pilot first, who needs support, and how will we decide whether to expand? |
+
+A short document and a prioritized roadmap can be enough if they identify the choices, owners, and measures.
+
+## Example: improving purchase approvals
+
+Suppose employees submit purchase requests in one tool, managers approve them by email, and finance re-enters the details in an accounting system.
+
+In this illustrative scenario, research finds that requests stall because nobody can reliably see the current owner or missing information. A strategy could prioritize shared request status and clear responsibility before a broader interface redesign.
+
+| Strategy element | Illustrative choice |
+|---|---|
+| Intended outcome | Help employees and finance resolve incomplete requests with less rework. |
+| First initiative | Pilot shared request status and a named next approver in one department. |
+| Measures | Track submission-to-decision time and the proportion of requests returned for missing information. |
+| Guardrails | Preserve required approvals, access boundaries, and the decision history. |
+| Rollout | Assign a process owner, support users during the pilot, and review results before expanding. |
+
+Measure time spent working separately from time waiting for a handoff. This helps the team identify whether an interface change or a process change is needed.
+
+## How is it different from information architecture?
+
+Enterprise UX strategy sets direction and priorities. [Enterprise information architecture](/glossary/enterprise-information-architecture.html) defines how information is organized, labeled, and connected across the environment.
+
+A design system supports consistent implementation, while a roadmap sequences the work. Each can help execute the strategy; none alone explains which user problems matter most or how success will be judged.
+
+## Related terms
+
+- [Operational UX](/glossary/operational-ux.html)
+- [Enterprise Information Architecture](/glossary/enterprise-information-architecture.html)
+- [B2B SaaS Interaction Model](/glossary/b2b-saas-interaction-model.html)
+
+## Sources
+
+- [UX Strategy: Definition and Components, Nielsen Norman Group](https://www.nngroup.com/articles/ux-strategy/)
+- [Complex Application Design: A 5-Layer Framework, Nielsen Norman Group](https://www.nngroup.com/articles/complex-application-design-framework/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
+        "name": "Enterprise UX Strategy | Product Design Glossary",
+        "description": "Learn what enterprise UX strategy includes, how to prioritize complex workflows, and how to measure progress with a practical procurement example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/ux-strategy/",
+          "https://www.nngroup.com/articles/complex-application-design-framework/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term",
+        "name": "Enterprise UX Strategy",
+        "termCode": "enterprise-ux-strategy",
+        "description": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
+        "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Enterprise UX Strategy",
+            "item": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -4074,9 +4334,12 @@ Track what each experiment teaches you and whether the result improves the chose
     "name": "LTV to CAC Ratio",
     "slug": "ltv-to-cac-ratio",
     "category": "Product Strategy & Growth",
-    "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "The LTV to CAC Ratio is a financial unit economics metric comparing the total lifetime revenue value generated by a customer against the total cost incurred to acquire them.",
+    "alternateName": [
+      "LTV:CAC",
+      "LTV/CAC ratio"
+    ],
+    "definition": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
     "purpose": "Evaluates the long-term commercial sustainability and marketing efficiency of a software product, directly steering product investment decisions.",
     "keyConcepts": [
       "Unit economics",
@@ -4090,9 +4353,155 @@ Track what each experiment teaches you and whether the result improves the chose
       "Product-Led Growth (PLG)",
       "Activation Metric"
     ],
-    "seoTitle": "LTV to CAC Ratio in SaaS: Calculating Product Unit Economics",
+    "seoTitle": "LTV:CAC Ratio: Formula & Example | Product Design Glossary",
+    "seoDescription": "Learn how to calculate LTV:CAC using gross margin, work through a SaaS example, and interpret the 3:1 benchmark alongside churn and CAC payback.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
     "sources": [
-      "David Skok, SaaS Metrics 2.0: A Guide to Measuring and Improving What Matters, For Entrepreneurs"
+      "SaaS Metrics 2.0: Detailed Definitions, David Skok (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)",
+      "SaaS Metrics 2.0, David Skok (https://www.forentrepreneurs.com/saas-metrics-2/)",
+      "What is the CAC payback period?, Stripe (https://stripe.com/resources/more/what-is-the-cac-payback-period)",
+      "CAC in SaaS, Stripe (https://stripe.com/resources/more/cac-in-saas)"
+    ],
+    "contentMarkdown": `# LTV to CAC Ratio
+
+The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.
+
+**LTV:CAC = customer lifetime value ÷ customer acquisition cost.**
+
+A ratio of 4:1 means an estimated $4 in lifetime gross profit for each $1 spent acquiring a customer. It does not mean $4 in net profit: acquisition costs and other operating expenses still matter.
+
+## How do you calculate LTV:CAC?
+
+For a simplified subscription model:
+
+- **LTV ≈ average monthly revenue per account × gross margin ÷ monthly customer churn rate.**
+- **CAC = acquisition-related sales and marketing costs ÷ new paying customers acquired.**
+
+Here, an account is one paying customer. Monthly customer churn is the share of accounts present at the start of the month that cancel during it. Use decimals for percentages: 80% becomes 0.80. Match the revenue and churn periods; do not substitute net revenue churn.
+
+Include relevant salaries, commissions, tools, and campaign costs in CAC. Align costs and acquired customers with the sales cycle; dividing this month's spending by this month's wins can mislead when acquisition takes several months.
+
+## A simple SaaS example
+
+Assume similar customer accounts, stable monthly revenue and churn, and no expansion revenue.
+
+| Input | Illustrative value |
+|---|---:|
+| Average monthly revenue per account | $100 |
+| Gross margin | 80% |
+| Monthly customer churn | 2% |
+| Acquisition spending attributable to 100 new accounts | $100,000 |
+
+- Estimated LTV = $100 × 0.80 ÷ 0.02 = **$4,000**.
+- CAC = $100,000 ÷ 100 = **$1,000**.
+- LTV:CAC = $4,000 ÷ $1,000 = **4:1**.
+
+This is a simplified estimate, not a prediction that every account will generate $4,000.
+
+## What is a good LTV:CAC ratio?
+
+**3:1 is a common SaaS rule of thumb, not a universal threshold.** Check how LTV and CAC were calculated before comparing companies or benchmarks. David Skok's detailed definitions explicitly qualify their guideline with assumptions about gross margin and the LTV formula.
+
+A ratio below 1:1 means estimated lifetime gross profit does not cover acquisition cost under this model. A higher ratio can reflect stronger retention or lower acquisition costs, but also optimistic assumptions or incomplete cost allocation.
+
+Review **CAC payback** alongside the ratio: payback asks how long it takes to recover acquisition costs. A favorable lifetime ratio can still require a long wait for that recovery.
+
+## What can make the estimate misleading?
+
+The simple formula assumes stable churn, revenue, and margin. It breaks down at zero churn and does not model expansion or changing retention. Do not substitute negative net revenue churn into its denominator.
+
+For those cases, model cohorts (customers acquired in the same period) with explicit retention, revenue, margin, and forecast-horizon assumptions. Compare segments and acquisition channels; a blended average can hide weak economics.
+
+For product designers, LTV:CAC provides business context. Test more immediate outcomes, such as activation and retained usage, before attributing a change in lifetime economics to a redesign.
+
+## Related terms
+
+- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Activation Metric](/glossary/activation-metric.html)
+
+## Sources
+
+- [SaaS Metrics 2.0: Detailed Definitions, David Skok](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)
+- [SaaS Metrics 2.0, David Skok](https://www.forentrepreneurs.com/saas-metrics-2/)
+- [What is the CAC payback period?, Stripe](https://stripe.com/resources/more/what-is-the-cac-payback-period)
+- [CAC in SaaS, Stripe](https://stripe.com/resources/more/cac-in-saas)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
+        "name": "LTV:CAC Ratio: Formula & Example | Product Design Glossary",
+        "description": "Learn how to calculate LTV:CAC using gross margin, work through a SaaS example, and interpret the 3:1 benchmark alongside churn and CAC payback.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.forentrepreneurs.com/saas-metrics-2-definitions/",
+          "https://www.forentrepreneurs.com/saas-metrics-2/",
+          "https://stripe.com/resources/more/what-is-the-cac-payback-period",
+          "https://stripe.com/resources/more/cac-in-saas"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term",
+        "name": "LTV to CAC Ratio",
+        "termCode": "ltv-to-cac-ratio",
+        "description": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
+        "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage"
+        },
+        "alternateName": [
+          "LTV:CAC",
+          "LTV/CAC ratio"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LTV to CAC Ratio",
+            "item": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html"
+          }
+        ]
+      }
     ]
   },
   {

@@ -823,7 +823,7 @@ sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <
 // Add 100 glossary terms
 glossaryTerms.forEach((term) => {
   let lastmod = '2026-11-07';
-  if (['conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens', 'enterprise-information-architecture', 'conceptual-schema', 'growth-design', 'product-led-growth-plg', 'accessibility-wcag'].includes(term.slug)) {
+  if (['conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens', 'enterprise-information-architecture', 'conceptual-schema', 'growth-design', 'product-led-growth-plg', 'accessibility-wcag', 'enterprise-ux-strategy', 'ltv-to-cac-ratio', 'progressive-disclosure'].includes(term.slug)) {
     lastmod = '2026-11-13';
   } else if (term.slug === 'orca-framework' || term.slug === 'object-oriented-ux') {
     lastmod = '2026-11-12';
