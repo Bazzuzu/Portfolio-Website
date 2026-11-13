@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Object Mapping in UX: Methods, Diagrams, and Workflows</title>
-  <meta name="description" content="Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.">
+  <title>Object Mapping in UX | Product Design Glossary</title>
+  <meta name="description" content="Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/object-mapping.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Object Mapping in UX: Methods, Diagrams, and Workflows">
-  <meta property="og:description" content="Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.">
+  <meta property="og:title" content="Object Mapping in UX | Product Design Glossary">
+  <meta property="og:description" content="Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/object-mapping.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Object Mapping in UX: Methods, Diagrams, and Workflows">
-  <meta name="twitter:description" content="Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.">
+  <meta name="twitter:title" content="Object Mapping in UX | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/object-mapping.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/object-mapping.html",
+      "name": "Object Mapping in UX | Product Design Glossary",
+      "description": "Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/object-mapping.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/object-mapping.html#breadcrumbs"
+      },
+      "citation": [
+        "https://alistapart.com/article/object-oriented-ux/",
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+        "https://ooux.com/offerings/foundations"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/object-mapping.html#term",
       "name": "Object Mapping",
       "termCode": "object-mapping",
-      "description": "Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.",
+      "description": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
+      "url": "https://lexkonovalov.com/glossary/object-mapping.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/object-mapping.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/object-mapping.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,76 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.</p>
-      </section>
+    <p class="glossary-term-section__text">Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-create-an-object-map">
+<h2 id="section-how-do-you-create-an-object-map" class="glossary-term-section__title">How do you create an object map?</h2>
+<ol class="glossary-term-ol">
+<li><strong>Find candidate objects.</strong> Look for nouns in interviews, workflows, and support requests through <a href="/glossary/noun-foraging.html">Noun Foraging</a>. Check which things users recognize, refer to repeatedly, and need to distinguish from one another in an <a href="/glossary/object-guide.html">Object Guide</a>. Check which things users recognize, refer to repeatedly, and need to distinguish from one another.</li>
+<li><strong>Describe each object.</strong> Capture the information users need to identify it and make decisions about it. For a booking, that might be its confirmation number and status.</li>
+<li><strong>Map relationships and actions.</strong> Ask what each object connects to, what users need to do with it, and which roles can act. Keep uncertain rules visible for follow-up.</li>
+<li><strong>Walk through a real task.</strong> Try a routine case and an exception. Revise the map when either case exposes missing information, a connection, or an action.</li>
+</ol>
+<p class="glossary-term-section__text">An object type describes a class of things, such as Booking. Booking B-52 is one instance. Booking status describes the booking. Traveler is a separate object in this example because agents look up travelers, update their details, and view their other trips.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-object-map-example-for-travel-operations">
+<h2 id="section-object-map-example-for-travel-operations" class="glossary-term-section__title">Object map example for travel operations</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Object type</th>
+<th>Useful attributes</th>
+<th>Relationships</th>
+<th>Example action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trip</td>
+<td>Reference, travel dates</td>
+<td>Bookings and travelers</td>
+<td>Add a booking</td>
+</tr>
+<tr>
+<td>Booking</td>
+<td>Reference, status, supplier confirmation number when available</td>
+<td>One trip</td>
+<td>Request cancellation if eligible</td>
+</tr>
+<tr>
+<td>Traveler</td>
+<td>Name, contact details</td>
+<td>Trips they are associated with</td>
+<td>Update contact details</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">For an agent handling a cancellation, the map suggests a path from Trip to Booking. A booking summary can show the reference and status so the agent can pick the right record. The <a href="/glossary/state-transition-matrix.html">state transition matrix</a> specifies what happens after an eligible agent requests cancellation.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-the-object-map-fit-into-orca">
+<h2 id="section-how-does-the-object-map-fit-into-orca" class="glossary-term-section__title">How does the object map fit into ORCA?</h2>
+<p class="glossary-term-section__text"><a href="/glossary/orca-framework.html">ORCA</a> gives teams several ways to investigate an object model. A <a href="/glossary/nested-object-matrix.html">Nested Object Matrix</a> records relationships between object types. A <a href="/glossary/cta-matrix.html">CTA Matrix</a> records what each role needs to do with each object. Deciding what belongs in the release relies on <a href="/glossary/object-prioritization.html">Object Prioritization</a>, while interface audits watch out for the <a href="/glossary/ooux-ux-fails.html">Four UX Fails in OOUX</a>. The object map organizes attributes by object and builds on the relationships already identified. The example above shows actions alongside those findings for easy reference.</p>
+<p class="glossary-term-section__text">Use the map to decide what belongs in each view. A search result might show the booking reference and status. The detail view can add fare rules and cancellation options while keeping the same reference and status labels.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/orca-framework.html">ORCA Framework</a></li>
+<li><a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li>
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
+<li><a href="https://ooux.com/offerings/foundations" target="_blank" rel="noopener noreferrer">OOUX Foundations, Sophia V. Prater</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Provides a single conceptual source of truth for cross-functional teams, validating information models against real-world user expectations and database schemas.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Entity nodes</span><span class="concept-tag">nested attributes</span><span class="concept-tag">link cardinality</span><span class="concept-tag">state markers.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Core entities are mapped on visual canvases using standardized card notation, displaying primary metadata, associated child objects, and contextual actions.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/orca-framework.html">ORCA Framework</a></li><li><a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li><li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Sophia Prater, Object Mapping Workshop Guide</li><li>Abby Covert, How to Make Sense of Any Mess</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

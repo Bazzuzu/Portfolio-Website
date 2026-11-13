@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardinality in UX Architecture: Designing Object Relationships</title>
-  <meta name="description" content="In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.">
+  <title>Cardinality in UX: Examples | Product Design Glossary</title>
+  <meta name="description" content="Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/cardinality-ux-architecture.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Cardinality in UX Architecture: Designing Object Relationships">
-  <meta property="og:description" content="In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.">
+  <meta property="og:title" content="Cardinality in UX: Examples | Product Design Glossary">
+  <meta property="og:description" content="Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/cardinality-ux-architecture.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cardinality in UX Architecture: Designing Object Relationships">
-  <meta name="twitter:description" content="In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.">
+  <meta name="twitter:title" content="Cardinality in UX: Examples | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html",
+      "name": "Cardinality in UX: Examples | Product Design Glossary",
+      "description": "Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#breadcrumbs"
+      },
+      "citation": [
+        "https://discoverylive.ooux.com/",
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+        "https://www.ibm.com/think/topics/entity-relationship-diagram"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#term",
       "name": "Cardinality (UX Architecture)",
       "termCode": "cardinality-ux-architecture",
-      "description": "In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.",
+      "description": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
+      "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,72 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.</p>
-      </section>
+    <p class="glossary-term-section__text">In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-are-the-types-of-cardinality">
+<h2 id="section-what-are-the-types-of-cardinality" class="glossary-term-section__title">What are the types of cardinality?</h2>
+<p class="glossary-term-section__text">Ask the relationship question in both directions. These examples describe the rules of an illustrative travel operations tool.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Example</th>
+<th>What the interface needs to support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-to-one</td>
+<td>A traveler has at most one preferences profile, and each profile belongs to exactly one traveler.</td>
+<td>Show preferences when a profile exists and offer a way to create one when it is missing.</td>
+</tr>
+<tr>
+<td>One-to-many</td>
+<td>A trip can have zero or more bookings, and each booking belongs to exactly one trip.</td>
+<td>Provide a way to view and manage multiple bookings from the trip.</td>
+</tr>
+<tr>
+<td>Many-to-many</td>
+<td>A trip can include multiple travelers, and each traveler can take multiple trips.</td>
+<td>Let agents associate an existing traveler with another trip and find the traveler’s trips when needed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-why-do-minimum-and-maximum-counts-matter">
+<h2 id="section-why-do-minimum-and-maximum-counts-matter" class="glossary-term-section__title">Why do minimum and maximum counts matter?</h2>
+<p class="glossary-term-section__text">“One-to-many” leaves open whether a trip can exist before its first booking. In the example, the minimum is zero bookings per trip and one trip per booking. A new trip needs a useful empty state, and the booking creation flow needs a trip selection when it starts outside a trip.</p>
+<p class="glossary-term-section__text">Distinguish the maximum the product allows from what people usually see. If most trips have two bookings but group trips can have dozens, test both sizes. Typical volume, tasks, and access rules help determine whether a simple list or a searchable table makes sense.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-cardinality-affect-orca-design-decisions">
+<h2 id="section-how-does-cardinality-affect-orca-design-decisions" class="glossary-term-section__title">How does cardinality affect ORCA design decisions?</h2>
+<p class="glossary-term-section__text">ORCA teams can first record that Trips and Bookings are related using a <a href="/glossary/nested-object-matrix.html">Nested Object Matrix</a>, then use cardinality and <a href="/glossary/orca-relationship-requirements.html">ORCA Relationship Requirements (MCSFD)</a> to clarify the relationship during the Requirements round. Where a many-to-many relationship carries its own attributes, such as reservation status, teams define a <a href="/glossary/junction-object.html">Junction Object</a>. Use the <a href="/glossary/object-mapping.html">object map</a> to find rules that need more detail.</p>
+<ul class="glossary-term-ul">
+<li>Can an agent add the first booking directly from the empty Bookings section?</li>
+<li>Can an agent move a booking to another trip, and what would need to be checked?</li>
+<li>Can an agent link a traveler who already appears on another trip, and how should the interface prevent duplicate records?</li>
+</ul>
+<p class="glossary-term-section__text">A relationship can exist in the model even when one role cannot see it or has no reason to navigate in both directions. Decide what each role needs to see and do before turning the relationship into a link.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-mapping.html">Object Mapping</a></li>
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/orca-framework.html">ORCA Framework</a></li>
+<li><a href="/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://discoverylive.ooux.com/" target="_blank" rel="noopener noreferrer">Discovery Live: Relationship Discovery, OOUX</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
+<li><a href="https://www.ibm.com/think/topics/entity-relationship-diagram" target="_blank" rel="noopener noreferrer">What Is an Entity Relationship Diagram?, IBM</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Dictates interface layout structures, container types, pagination behaviors, and relational navigational paths to prevent dead ends and cognitive mismatch.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">One-to-one (1 : 1)</span><span class="concept-tag">one-to-many (1 : N)</span><span class="concept-tag">many-to-many (N : M)</span><span class="concept-tag">directional traversal</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers evaluate entity links during the relationships phase, choosing appropriate navigation controls such as master-detail splits, inline lists, or relational tags.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/object-mapping.html">Object Mapping</a></li><li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/orca-framework.html">ORCA Framework</a></li><li><a href="/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Sophia Prater, Object-Oriented UX: Relationships and Cardinality</li><li>Heidi Adkisson, Designing Relational Data Displays</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

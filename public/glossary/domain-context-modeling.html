@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domain Context Modeling: Structuring Meaning for UX &amp; AI</title>
-  <meta name="description" content="Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.">
+  <title>Domain Context Modeling in UX | Product Design Glossary</title>
+  <meta name="description" content="Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/domain-context-modeling.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Domain Context Modeling: Structuring Meaning for UX &amp; AI">
-  <meta property="og:description" content="Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.">
+  <meta property="og:title" content="Domain Context Modeling in UX | Product Design Glossary">
+  <meta property="og:description" content="Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/domain-context-modeling.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Domain Context Modeling: Structuring Meaning for UX &amp; AI">
-  <meta name="twitter:description" content="Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.">
+  <meta name="twitter:title" content="Domain Context Modeling in UX | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html",
+      "name": "Domain Context Modeling in UX | Product Design Glossary",
+      "description": "Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+        "https://martinfowler.com/bliki/BoundedContext.html",
+        "https://alistapart.com/article/object-oriented-ux/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#term",
       "name": "Domain Context Modeling",
       "termCode": "domain-context-modeling",
-      "description": "Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.",
+      "description": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
+      "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,73 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.</p>
-      </section>
+    <p class="glossary-term-section__text">Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.</p>
+<p class="glossary-term-section__text">A useful concept from domain-driven design (DDD) is the <strong>bounded context</strong>, the boundary within which a model applies. Within that boundary, the people doing the work and the people building the software can agree on what their terms mean and how the modeled things behave.</p>
+<section class="glossary-term-section" aria-labelledby="section-a-trip-in-sales-and-ticketing">
+<h2 id="section-a-trip-in-sales-and-ticketing" class="glossary-term-section__title">A trip in sales and ticketing</h2>
+<p class="glossary-term-section__text">Suppose a travel operations tool serves a sales team that proposes itineraries and a ticketing team that manages supplier bookings. Both teams refer to the same trip, but an accepted offer and a confirmed booking describe different events.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Question</th>
+<th>Sales</th>
+<th>Ticketing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What does the team work with?</td>
+<td>Trip and Offer, including proposed itineraries and quoted prices</td>
+<td>Booking and its supplier reference, status, and fare rules</td>
+</tr>
+<tr>
+<td>What decision matters?</td>
+<td>Is this the offer the traveler wants to accept?</td>
+<td>Is the supplier booking confirmed, and can it be changed?</td>
+</tr>
+<tr>
+<td>What should the team own?</td>
+<td>The accepted offer and the details agreed with the traveler</td>
+<td>The supplier confirmation and booking status</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">At handoff, ticketing receives the accepted itinerary and trip reference. Ticketing links each booking to that trip. When a supplier confirms a booking, sales can see its confirmation status alongside the accepted offer.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-model-a-domain-context">
+<h2 id="section-how-do-you-model-a-domain-context" class="glossary-term-section__title">How do you model a domain context?</h2>
+<p class="glossary-term-section__text">Look for changes in language, rules, and ownership when you draw a model boundary. The sales and ticketing teams illustrate a possible boundary in this example.</p>
+<ol class="glossary-term-ol">
+<li><strong>Follow a handoff.</strong> Observe what each team calls the work, what it decides, and what it needs from the other team.</li>
+<li><strong>Document the model and its scope.</strong> Record terms, objects, key relationships, and the rules that apply to them in an <a href="/glossary/object-guide.html">Object Guide</a>. Identify where the same word carries different meanings.</li>
+<li><strong>Agree on what crosses the boundary.</strong> Specify identifiers, status mappings, and which team or system updates each shared fact.</li>
+<li><strong>Test an exception.</strong> Walk through a supplier rejection after a traveler accepts an offer. Check that each team can understand the situation and continue its work.</li>
+</ol>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-this-relate-to-ooux">
+<h2 id="section-how-does-this-relate-to-ooux" class="glossary-term-section__title">How does this relate to OOUX?</h2>
+<p class="glossary-term-section__text"><a href="/glossary/object-oriented-ux.html">OOUX</a> helps a team identify the objects people recognize and work with. Domain context modeling helps the team decide where a particular definition or rule holds. An <a href="/glossary/object-mapping.html">object map</a> for ticketing can then show Booking in the context of the people who manage it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li>
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
+<li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf" target="_blank" rel="noopener noreferrer">Domain-Driven Design Reference, Eric Evans</a></li>
+<li><a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank" rel="noopener noreferrer">Bounded Context, Martin Fowler</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Resolves semantic ambiguities across cross-functional products and guarantees that AI reasoning engines and humans share identical contextual boundaries.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Bounded contexts</span><span class="concept-tag">semantic boundaries</span><span class="concept-tag">context packets</span><span class="concept-tag">source of truth rules.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Practitioners delineate domain models into isolated contextual modules, cataloging authoritative terms, data schemas, and agent action boundaries.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li><li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li><li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Eric Evans, Domain-Driven Design, Addison-Wesley</li><li>DomainDrivenUX, Domain Context Modeling Guide (https://www.domaindrivenux.com)</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

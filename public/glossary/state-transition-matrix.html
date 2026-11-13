@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>State Transition Matrices in UX: Documenting Complex Logic</title>
-  <meta name="description" content="A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.">
+  <title>State Transition Matrix in UX | Product Design Glossary</title>
+  <meta name="description" content="See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/state-transition-matrix.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="State Transition Matrices in UX: Documenting Complex Logic">
-  <meta property="og:description" content="A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.">
+  <meta property="og:title" content="State Transition Matrix in UX | Product Design Glossary">
+  <meta property="og:description" content="See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/state-transition-matrix.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="State Transition Matrices in UX: Documenting Complex Logic">
-  <meta name="twitter:description" content="A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.">
+  <meta name="twitter:title" content="State Transition Matrix in UX | Product Design Glossary">
+  <meta name="twitter:description" content="See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html",
+      "name": "State Transition Matrix in UX | Product Design Glossary",
+      "description": "See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.w3.org/TR/scxml/",
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#term",
       "name": "State Transition Matrix",
       "termCode": "state-transition-matrix",
-      "description": "A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.",
+      "description": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
+      "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,96 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.</p>
-      </section>
+    <p class="glossary-term-section__text">A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-read-a-state-transition-matrix">
+<h2 id="section-how-do-you-read-a-state-transition-matrix" class="glossary-term-section__title">How do you read a state transition matrix?</h2>
+<p class="glossary-term-section__text">Rows show current states. Columns show events, which can come from a user or an external system. A cell identifies the next state for that combination. When a transition depends on a rule, record the condition, also called a guard.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-a-booking-state-transition-matrix">
+<h2 id="section-example-of-a-booking-state-transition-matrix" class="glossary-term-section__title">Example of a booking state transition matrix</h2>
+<p class="glossary-term-section__text">In this example, an agent submits a booking and waits for the supplier to confirm it. Cancellation also requires a supplier response. While cancellation is pending, the agent can see the request status and cannot submit a second request.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Current state</th>
+<th>Submit booking</th>
+<th>Confirm booking</th>
+<th>Request cancellation</th>
+<th>Accept cancellation</th>
+<th>Decline cancellation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>Awaiting confirmation</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Awaiting confirmation</td>
+<td>—</td>
+<td>Confirmed</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Confirmed</td>
+<td>—</td>
+<td>—</td>
+<td>Cancellation pending</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cancellation pending</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Canceled</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Canceled</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A dash means the event has no valid transition in this example. Confirming the booking and accepting or declining cancellation are supplier events. The booking moves out of Draft once a complete submission succeeds. An agent can request cancellation only when their role and the fare rules allow it. If the supplier declines cancellation, restore Confirmed status and show the reason if available.</p>
+<p class="glossary-term-section__text">This example covers the confirmation path and two cancellation outcomes. Extend the model for booking rejection, timeouts, and other cases your product supports.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-the-matrix-inform-orca-actions">
+<h2 id="section-how-does-the-matrix-inform-orca-actions" class="glossary-term-section__title">How does the matrix inform ORCA actions?</h2>
+<p class="glossary-term-section__text">The Calls to Action part of <a href="/glossary/orca-framework.html">ORCA</a> identifies actions people need, organized initially in a <a href="/glossary/cta-matrix.html">CTA Matrix</a>. The matrix helps specify how those actions behave at each stage of the object's lifecycle. For example, agents can see “Cancellation pending” in the booking list and open the detail view to check when the request was sent.</p>
+<p class="glossary-term-section__text">Record what users see when an event fails or arrives late. If a booking changed after the agent opened it, refresh its status and explain why the requested action cannot proceed. Use the same rules in list and detail views.</p>
+<p class="glossary-term-section__text">Review the table with design, engineering, and operations. Walk through one routine case, one blocked action, and one delayed response. Add missing transitions or feedback before the workflow is built.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li>
+<li><a href="/glossary/orca-framework.html">ORCA Framework</a></li>
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.w3.org/TR/scxml/" target="_blank" rel="noopener noreferrer">State Chart XML (SCXML), W3C</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Precludes unaccounted application states, prevents invalid user actions, and establishes complete interaction logic for complex multi-role workflows.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Finite state machines</span><span class="concept-tag">state mutation</span><span class="concept-tag">event triggers</span><span class="concept-tag">transition guards.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers construct a two-dimensional grid of current states versus triggering actions, identifying permissible target states and disabling forbidden edge cases.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/object-oriented-ux.html">Object-Oriented UX</a></li><li><a href="/glossary/orca-framework.html">ORCA Framework</a></li><li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>David Harel, Statecharts: A Visual Formalism for Complex Systems</li><li>Sophia Prater, ORCA CTAs and Object States</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

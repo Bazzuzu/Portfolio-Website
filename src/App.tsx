@@ -120,7 +120,7 @@ export default function App() {
       canonicalUrl = "https://lexkonovalov.com/about/";
     } else if (currentPage === "glossary") {
       title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
-      description = "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.";
+      description = "A canonical 108-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.";
       canonicalUrl = "https://lexkonovalov.com/glossary/";
     } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
       const termData = getTermBySlug(selectedGlossarySlug);

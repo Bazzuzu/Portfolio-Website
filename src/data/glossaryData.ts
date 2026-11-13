@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 100-term taxonomy across four foundational product design domains
+// Canonical 108-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -45,7 +45,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     id: "ux-product-architecture",
     name: "UX & Product Architecture",
-    count: 25,
+    count: 33,
     description: "Information Architecture, Domain Modeling, and Conceptual Integrity for complex systems.",
     primaryFocus: "Information Architecture, Domain Modeling, Conceptual Integrity",
     representativeSpecs: "OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling",
@@ -103,7 +103,8 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Object Mapping",
       "Domain Context Modeling",
       "Conceptual Schema",
-      "Information Architecture (IA)"
+      "Information Architecture (IA)",
+      "Four UX Fails in OOUX"
     ],
     "seoTitle": "Object-Oriented UX (OOUX) | Product Design Glossary",
     "seoDescription": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
@@ -139,7 +140,7 @@ An [object map](/glossary/object-mapping.html) records these decisions so the te
 
 OOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.
 
-Start by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it.
+Start by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it. Teams also use OOUX to diagnose and prevent common interface anti-patterns, described as the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html)—masked, shape-shifting, broken, and isolated objects.
 
 ## Related terms
 
@@ -154,86 +155,83 @@ Start by examining the things people name in interviews and existing workflows. 
 - [Object-Oriented UX, Sophia V. Prater, A List Apart](https://alistapart.com/article/object-oriented-ux/)
 - [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
-        "name": "Object-Oriented UX (OOUX) | Product Design Glossary",
-        "description": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs"
-        },
-        "citation": [
-          "https://alistapart.com/article/object-oriented-ux/",
-          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term",
-        "name": "Object-Oriented UX",
-        "alternateName": "OOUX",
-        "termCode": "object-oriented-ux",
-        "description": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
-        "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
+                "name": "Object-Oriented UX (OOUX) | Product Design Glossary",
+                "description": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://alistapart.com/article/object-oriented-ux/",
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term",
+                "name": "Object-Oriented UX",
+                "alternateName": "OOUX",
+                "termCode": "object-oriented-ux",
+                "description": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
+                "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Object-Oriented UX (OOUX)",
-            "item": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Object-Oriented UX (OOUX)",
+                            "item": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
     "id": "002",
     "name": "ORCA Framework",
     "slug": "orca-framework",
-    "alternateName": [
-      "ORCA Process",
-      "ORCA"
-    ],
+    "alternateName": ["ORCA Process","ORCA"],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Proprietary / Framework-Specific",
@@ -250,7 +248,14 @@ Start by examining the things people name in interviews and existing workflows. 
       "Object-Oriented UX (OOUX)",
       "Object Mapping",
       "Cardinality (UX Architecture)",
-      "State Transition Matrix"
+      "State Transition Matrix",
+      "Four UX Fails in OOUX",
+      "Noun Foraging",
+      "Nested Object Matrix",
+      "CTA Matrix",
+      "Object Guide",
+      "Object Prioritization",
+      "ORCA Relationship Requirements (MCSFD)"
     ],
     "seoTitle": "ORCA Framework in UX | Product Design Glossary",
     "seoDescription": "ORCA is Sophia Prater’s process for applying Object-Oriented UX (OOUX). Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
@@ -283,9 +288,9 @@ Customer and Agent are objects with their own records. The ticket links to those
 
 Prater’s full ORCA process has 15 steps across four iterative rounds. The four elements are revisited and refined throughout the process.
 
-1. **Discovery.** Identify objects from research. Map their relationships, record actions by object and role in a CTA matrix, and build an initial [object map](/glossary/object-mapping.html). Capture questions for further research.
-2. **Requirements.** Define relationship rules, permissions, and required fields. Document object definitions in an Object Guide and expand the CTA matrix into user stories with conditions for each action.
-3. **Prioritization.** Decide what belongs in the release and which information and actions deserve prominence in the interface.
+1. **Discovery.** Identify objects from research through [Noun Foraging](/glossary/noun-foraging.html). Map their relationships with a [Nested Object Matrix](/glossary/nested-object-matrix.html), record actions by object and role in a [CTA Matrix](/glossary/cta-matrix.html), and build an initial [object map](/glossary/object-mapping.html). Capture questions for further research.
+2. **Requirements.** Define relationship rules using [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html), permissions, and required fields. Document object definitions in an [Object Guide](/glossary/object-guide.html) and expand the CTA matrix into user stories with conditions for each action.
+3. **Prioritization.** [Object Prioritization](/glossary/object-prioritization.html) decides what belongs in the release and which information and actions deserve prominence in the interface.
 4. **Representation.** Turn the model into cards, lists, detail views, and a connected prototype. Test whether users recognize the objects, find their connections, and understand the available actions.
 
 This sequence provides a starting point. The rounds can be adapted to the project. Prater describes moving Prioritization ahead of detailed Requirements when time is limited. [Prioritizing Prioritization for Product Designers, Sophia Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
@@ -298,7 +303,7 @@ The team can prototype the ticket view to test whether supervisors can find the 
 
 ## When should you use ORCA?
 
-Use ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.
+Use ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. It helps prevent fragmented systems and common pitfalls like the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html). Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.
 
 ## Related terms
 
@@ -313,80 +318,80 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
 - [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
 - [OOUX Masterclass course outline, OOUX.com](https://ooux.com/selfpacedoouxmasterclass)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/orca-framework.html",
-        "name": "ORCA Framework in UX | Product Design Glossary",
-        "description": "ORCA is Sophia Prater’s OOUX process. Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs"
-        },
-        "citation": [
-          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
-          "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e",
-          "https://ooux.com/selfpacedoouxmasterclass"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term",
-        "name": "ORCA Framework",
-        "alternateName": [
-          "ORCA Process",
-          "ORCA"
-        ],
-        "termCode": "orca-framework",
-        "description": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
-        "url": "https://lexkonovalov.com/glossary/orca-framework.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/orca-framework.html",
+                "name": "ORCA Framework in UX | Product Design Glossary",
+                "description": "ORCA is Sophia Prater’s OOUX process. Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e",
+                      "https://ooux.com/selfpacedoouxmasterclass"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term",
+                "name": "ORCA Framework",
+                "alternateName": [
+                      "ORCA Process",
+                      "ORCA"
+                ],
+                "termCode": "orca-framework",
+                "description": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
+                "url": "https://lexkonovalov.com/glossary/orca-framework.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-framework.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "ORCA Framework",
-            "item": "https://lexkonovalov.com/glossary/orca-framework.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/orca-framework.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "ORCA Framework",
+                            "item": "https://lexkonovalov.com/glossary/orca-framework.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -396,7 +401,7 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.",
+    "definition": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
     "purpose": "Provides a single conceptual source of truth for cross-functional teams, validating information models against real-world user expectations and database schemas.",
     "keyConcepts": [
       "Entity nodes",
@@ -411,10 +416,126 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
       "Domain Context Modeling",
       "Content Modeling"
     ],
-    "seoTitle": "Object Mapping in UX: Methods, Diagrams, and Workflows",
+    "seoTitle": "Object Mapping in UX | Product Design Glossary",
+    "seoDescription": "Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-mapping.html",
     "sources": [
-      "Sophia Prater, Object Mapping Workshop Guide",
-      "Abby Covert, How to Make Sense of Any Mess"
+      "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)",
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "OOUX Foundations, Sophia V. Prater (https://ooux.com/offerings/foundations)"
+    ],
+    "contentMarkdown": `# Object Mapping
+
+Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.
+
+## How do you create an object map?
+
+1. **Find candidate objects.** Look for nouns in interviews, workflows, and support requests through [Noun Foraging](/glossary/noun-foraging.html). Check which things users recognize, refer to repeatedly, and need to distinguish from one another in an [Object Guide](/glossary/object-guide.html). Check which things users recognize, refer to repeatedly, and need to distinguish from one another.
+2. **Describe each object.** Capture the information users need to identify it and make decisions about it. For a booking, that might be its confirmation number and status.
+3. **Map relationships and actions.** Ask what each object connects to, what users need to do with it, and which roles can act. Keep uncertain rules visible for follow-up.
+4. **Walk through a real task.** Try a routine case and an exception. Revise the map when either case exposes missing information, a connection, or an action.
+
+An object type describes a class of things, such as Booking. Booking B-52 is one instance. Booking status describes the booking. Traveler is a separate object in this example because agents look up travelers, update their details, and view their other trips.
+
+## Object map example for travel operations
+
+| Object type | Useful attributes | Relationships | Example action |
+|---|---|---|---|
+| Trip | Reference, travel dates | Bookings and travelers | Add a booking |
+| Booking | Reference, status, supplier confirmation number when available | One trip | Request cancellation if eligible |
+| Traveler | Name, contact details | Trips they are associated with | Update contact details |
+
+For an agent handling a cancellation, the map suggests a path from Trip to Booking. A booking summary can show the reference and status so the agent can pick the right record. The [state transition matrix](/glossary/state-transition-matrix.html) specifies what happens after an eligible agent requests cancellation.
+
+## How does the object map fit into ORCA?
+
+[ORCA](/glossary/orca-framework.html) gives teams several ways to investigate an object model. A [Nested Object Matrix](/glossary/nested-object-matrix.html) records relationships between object types. A [CTA Matrix](/glossary/cta-matrix.html) records what each role needs to do with each object. Deciding what belongs in the release relies on [Object Prioritization](/glossary/object-prioritization.html), while interface audits watch out for the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html). The object map organizes attributes by object and builds on the relationships already identified. The example above shows actions alongside those findings for easy reference.
+
+Use the map to decide what belongs in each view. A search result might show the booking reference and status. The detail view can add fare rules and cancellation options while keeping the same reference and status labels.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Conceptual Schema](/glossary/conceptual-schema.html)
+- [Domain Context Modeling](/glossary/domain-context-modeling.html)
+- [Content Modeling](/glossary/content-modeling.html)
+
+## Sources
+
+- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [OOUX Foundations, Sophia V. Prater](https://ooux.com/offerings/foundations)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/object-mapping.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/object-mapping.html",
+                "name": "Object Mapping in UX | Product Design Glossary",
+                "description": "Learn how to create an object map in OOUX, with a travel booking example covering object types, relationships, attributes, and user actions.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/object-mapping.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/object-mapping.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://alistapart.com/article/object-oriented-ux/",
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://ooux.com/offerings/foundations"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/object-mapping.html#term",
+                "name": "Object Mapping",
+                "termCode": "object-mapping",
+                "description": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
+                "url": "https://lexkonovalov.com/glossary/object-mapping.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/object-mapping.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/object-mapping.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Object Mapping",
+                            "item": "https://lexkonovalov.com/glossary/object-mapping.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -424,7 +545,7 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "category": "UX & Product Architecture",
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Emerging",
-    "definition": "Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.",
+    "definition": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
     "purpose": "Resolves semantic ambiguities across cross-functional products and guarantees that AI reasoning engines and humans share identical contextual boundaries.",
     "keyConcepts": [
       "Bounded contexts",
@@ -437,12 +558,131 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
       "Object-Oriented UX",
       "Context Engineering",
       "Knowledge Graphs (AI Context)",
-      "Controlled Vocabulary"
+      "Controlled Vocabulary",
+      "Object Guide"
     ],
-    "seoTitle": "Domain Context Modeling: Structuring Meaning for UX & AI",
+    "seoTitle": "Domain Context Modeling in UX | Product Design Glossary",
+    "seoDescription": "Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/domain-context-modeling.html",
     "sources": [
-      "Eric Evans, Domain-Driven Design, Addison-Wesley",
-      "DomainDrivenUX, Domain Context Modeling Guide (https://www.domaindrivenux.com)"
+      "Domain-Driven Design Reference, Eric Evans (https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)",
+      "Bounded Context, Martin Fowler (https://martinfowler.com/bliki/BoundedContext.html)",
+      "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)"
+    ],
+    "contentMarkdown": `# Domain Context Modeling
+
+Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.
+
+A useful concept from domain-driven design (DDD) is the **bounded context**, the boundary within which a model applies. Within that boundary, the people doing the work and the people building the software can agree on what their terms mean and how the modeled things behave.
+
+## A trip in sales and ticketing
+
+Suppose a travel operations tool serves a sales team that proposes itineraries and a ticketing team that manages supplier bookings. Both teams refer to the same trip, but an accepted offer and a confirmed booking describe different events.
+
+| Question | Sales | Ticketing |
+|---|---|---|
+| What does the team work with? | Trip and Offer, including proposed itineraries and quoted prices | Booking and its supplier reference, status, and fare rules |
+| What decision matters? | Is this the offer the traveler wants to accept? | Is the supplier booking confirmed, and can it be changed? |
+| What should the team own? | The accepted offer and the details agreed with the traveler | The supplier confirmation and booking status |
+
+At handoff, ticketing receives the accepted itinerary and trip reference. Ticketing links each booking to that trip. When a supplier confirms a booking, sales can see its confirmation status alongside the accepted offer.
+
+## How do you model a domain context?
+
+Look for changes in language, rules, and ownership when you draw a model boundary. The sales and ticketing teams illustrate a possible boundary in this example.
+
+1. **Follow a handoff.** Observe what each team calls the work, what it decides, and what it needs from the other team.
+2. **Document the model and its scope.** Record terms, objects, key relationships, and the rules that apply to them in an [Object Guide](/glossary/object-guide.html). Identify where the same word carries different meanings.
+3. **Agree on what crosses the boundary.** Specify identifiers, status mappings, and which team or system updates each shared fact.
+4. **Test an exception.** Walk through a supplier rejection after a traveler accepts an offer. Check that each team can understand the situation and continue its work.
+
+## How does this relate to OOUX?
+
+[OOUX](/glossary/object-oriented-ux.html) helps a team identify the objects people recognize and work with. Domain context modeling helps the team decide where a particular definition or rule holds. An [object map](/glossary/object-mapping.html) for ticketing can then show Booking in the context of the people who manage it.
+
+## Related terms
+
+- [Object-Oriented UX](/glossary/object-oriented-ux.html)
+- [Context Engineering](/glossary/context-engineering.html)
+- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)
+- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)
+
+## Sources
+
+- [Domain-Driven Design Reference, Eric Evans](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)
+- [Bounded Context, Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html)
+- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html",
+                "name": "Domain Context Modeling in UX | Product Design Glossary",
+                "description": "Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf",
+                      "https://martinfowler.com/bliki/BoundedContext.html",
+                      "https://alistapart.com/article/object-oriented-ux/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#term",
+                "name": "Domain Context Modeling",
+                "termCode": "domain-context-modeling",
+                "description": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
+                "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/domain-context-modeling.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Domain Context Modeling",
+                            "item": "https://lexkonovalov.com/glossary/domain-context-modeling.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -452,7 +692,7 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.",
+    "definition": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
     "purpose": "Dictates interface layout structures, container types, pagination behaviors, and relational navigational paths to prevent dead ends and cognitive mismatch.",
     "keyConcepts": [
       "One-to-one (1 : 1)",
@@ -465,12 +705,130 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
       "Object Mapping",
       "Information Architecture",
       "ORCA Framework",
-      "Structural Navigation Model"
+      "Structural Navigation Model",
+      "Information Architecture (IA)"
     ],
-    "seoTitle": "Cardinality in UX Architecture: Designing Object Relationships",
+    "seoTitle": "Cardinality in UX: Examples | Product Design Glossary",
+    "seoDescription": "Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html",
     "sources": [
-      "Sophia Prater, Object-Oriented UX: Relationships and Cardinality",
-      "Heidi Adkisson, Designing Relational Data Displays"
+      "Discovery Live: Relationship Discovery, OOUX (https://discoverylive.ooux.com/)",
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)"
+    ],
+    "contentMarkdown": `# Cardinality (UX Architecture)
+
+In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.
+
+## What are the types of cardinality?
+
+Ask the relationship question in both directions. These examples describe the rules of an illustrative travel operations tool.
+
+| Relationship | Example | What the interface needs to support |
+|---|---|---|
+| One-to-one | A traveler has at most one preferences profile, and each profile belongs to exactly one traveler. | Show preferences when a profile exists and offer a way to create one when it is missing. |
+| One-to-many | A trip can have zero or more bookings, and each booking belongs to exactly one trip. | Provide a way to view and manage multiple bookings from the trip. |
+| Many-to-many | A trip can include multiple travelers, and each traveler can take multiple trips. | Let agents associate an existing traveler with another trip and find the traveler’s trips when needed. |
+
+## Why do minimum and maximum counts matter?
+
+“One-to-many” leaves open whether a trip can exist before its first booking. In the example, the minimum is zero bookings per trip and one trip per booking. A new trip needs a useful empty state, and the booking creation flow needs a trip selection when it starts outside a trip.
+
+Distinguish the maximum the product allows from what people usually see. If most trips have two bookings but group trips can have dozens, test both sizes. Typical volume, tasks, and access rules help determine whether a simple list or a searchable table makes sense.
+
+## How does cardinality affect ORCA design decisions?
+
+ORCA teams can first record that Trips and Bookings are related using a [Nested Object Matrix](/glossary/nested-object-matrix.html), then use cardinality and [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html) to clarify the relationship during the Requirements round. Where a many-to-many relationship carries its own attributes, such as reservation status, teams define a [Junction Object](/glossary/junction-object.html). Use the [object map](/glossary/object-mapping.html) to find rules that need more detail.
+
+- Can an agent add the first booking directly from the empty Bookings section?
+- Can an agent move a booking to another trip, and what would need to be checked?
+- Can an agent link a traveler who already appears on another trip, and how should the interface prevent duplicate records?
+
+A relationship can exist in the model even when one role cannot see it or has no reason to navigate in both directions. Decide what each role needs to see and do before turning the relationship into a link.
+
+## Related terms
+
+- [Object Mapping](/glossary/object-mapping.html)
+- [Information Architecture (IA)](/glossary/information-architecture.html)
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Structural Navigation Model](/glossary/structural-navigation-model.html)
+
+## Sources
+
+- [Discovery Live: Relationship Discovery, OOUX](https://discoverylive.ooux.com/)
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html",
+                "name": "Cardinality in UX: Examples | Product Design Glossary",
+                "description": "Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://discoverylive.ooux.com/",
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://www.ibm.com/think/topics/entity-relationship-diagram"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#term",
+                "name": "Cardinality (UX Architecture)",
+                "termCode": "cardinality-ux-architecture",
+                "description": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
+                "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Cardinality (UX Architecture)",
+                            "item": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -533,10 +891,7 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "id": "008",
     "name": "Enterprise Information Architecture",
     "slug": "enterprise-information-architecture",
-    "alternateName": [
-      "Enterprise IA",
-      "EIA"
-    ],
+    "alternateName": ["Enterprise IA","EIA"],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
@@ -622,80 +977,80 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
 - [Intranet Information Architecture (IA) Trends, Nielsen Norman Group](https://www.nngroup.com/articles/intranet-information-architecture-ia/)
 - [Information architecture consulting, Peter Morville / Semantic Studios](https://semanticstudios.com/consulting/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
-        "name": "Enterprise Information Architecture | Product Design Glossary",
-        "description": "Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs"
-        },
-        "citation": [
-          "https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience",
-          "https://www.nngroup.com/articles/intranet-information-architecture-ia/",
-          "https://semanticstudios.com/consulting/"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term",
-        "name": "Enterprise Information Architecture",
-        "alternateName": [
-          "Enterprise IA",
-          "EIA"
-        ],
-        "termCode": "enterprise-information-architecture",
-        "description": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
-        "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
+                "name": "Enterprise Information Architecture | Product Design Glossary",
+                "description": "Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience",
+                      "https://www.nngroup.com/articles/intranet-information-architecture-ia/",
+                      "https://semanticstudios.com/consulting/"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term",
+                "name": "Enterprise Information Architecture",
+                "alternateName": [
+                      "Enterprise IA",
+                      "EIA"
+                ],
+                "termCode": "enterprise-information-architecture",
+                "description": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
+                "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Enterprise Information Architecture",
-            "item": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Enterprise Information Architecture",
+                            "item": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -815,7 +1170,7 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A Structural Navigation Model is the formal architectural topology—such as hierarchical trees, hub-and-spoke models, nested matrices, or linear sequences—that governs spatial traversal throughout a software system.",
+    "definition": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.",
     "purpose": "Establishes predictable spatial anchors, allowing users to build reliable mental cognitive maps of location, history, and available trajectories within deep applications.",
     "keyConcepts": [
       "Navigational topology",
@@ -828,12 +1183,130 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
       "Information Architecture",
       "Wayfinding System",
       "Breadcrumb Hierarchy",
-      "Polyhierarchy"
+      "Polyhierarchy",
+      "Information Architecture (IA)"
     ],
-    "seoTitle": "Structural Navigation Models in Product Design & Information Architecture",
+    "seoTitle": "Structural Navigation Model | Product Design Glossary",
+    "seoDescription": "Learn how a structural navigation model organizes menus and paths. See how object relationships add contextual links in a travel operations tool.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/structural-navigation-model.html",
     "sources": [
-      "Peter Morville & Louis Rosenfeld, Information Architecture for the World Wide Web, O'Reilly",
-      "James Kalbach, Designing Web Navigation, O'Reilly"
+      "Designing Web Navigation: Types of Navigation Summary, James Kalbach (https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html)",
+      "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)",
+      "Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group (https://www.nngroup.com/articles/tree-testing/)"
+    ],
+    "contentMarkdown": `# Structural Navigation Model
+
+A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.
+
+## How does structural navigation differ from contextual navigation?
+
+Structural navigation follows the product's organization. For example, **Trips → Trip details → Bookings** follows a section down to a local view. Contextual navigation connects related information where a user needs it. A link from a trip's traveler list to a Traveler record is a contextual route that can cross sections.
+
+Keep a record’s name and identifying details consistent across entry points. An agent who arrives from search should recognize the same booking they see on a trip.
+
+## Navigation example for a travel operations tool
+
+| Route | Design decision |
+|---|---|
+| Main menu → Trips → Trip details | Trips gives agents a stable starting point for work organized around trips. |
+| Trip details → Bookings | Local navigation keeps a trip's bookings within reach while the agent reviews that trip. |
+| Trip details → Traveler record | A contextual link lets the agent inspect a related traveler and their other trips. |
+| Search → Booking details | A direct entry should show the booking's identity and link to its trip when the user has access. |
+
+The [object map](/glossary/object-mapping.html) explains which records are related. Use the navigation model to choose which relationships become routes. Use the product's hierarchy to choose the breadcrumb trail. Use a separate return control when agents need to get back to a filtered list.
+
+## How do you design and test the model?
+
+1. **Start with common tasks.** Identify where users begin and which views they need to reach. Use [Object Prioritization](/glossary/object-prioritization.html) to distinguish primary entry points from nested records, and choose main sections and local views that match those tasks.
+2. **Add useful contextual links.** Decide which related records users need nearby. Use [cardinality](/glossary/cardinality-ux-architecture.html) to anticipate how many results a path may expose.
+3. **Plan orientation and return paths.** Check that titles, local navigation, and breadcrumbs make sense on direct entry. For an agent returning from a booking, consider whether the trip's prior list filters should be restored.
+4. **Test the routes separately.** Use tree testing to evaluate labels and hierarchy. Use a prototype to test contextual links and direct entry, where placement and screen context matter.
+
+Test whether an agent can open a booking from search, find its trip, and return to the booking list without losing their place.
+
+## Related terms
+
+- [Information Architecture (IA)](/glossary/information-architecture.html)
+- [Wayfinding System](/glossary/wayfinding-system.html)
+- [Breadcrumb Hierarchy](/glossary/breadcrumb-hierarchy.html)
+- [Polyhierarchy](/glossary/polyhierarchy.html)
+
+## Sources
+
+- [Designing Web Navigation: Types of Navigation Summary, James Kalbach](https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html)
+- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)
+- [Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group](https://www.nngroup.com/articles/tree-testing/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/structural-navigation-model.html",
+                "name": "Structural Navigation Model | Product Design Glossary",
+                "description": "Learn how a structural navigation model organizes menus and paths. See how object relationships add contextual links in a travel operations tool.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html",
+                      "https://alistapart.com/article/object-oriented-ux/",
+                      "https://www.nngroup.com/articles/tree-testing/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#term",
+                "name": "Structural Navigation Model",
+                "termCode": "structural-navigation-model",
+                "description": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.",
+                "url": "https://lexkonovalov.com/glossary/structural-navigation-model.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/structural-navigation-model.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Structural Navigation Model",
+                            "item": "https://lexkonovalov.com/glossary/structural-navigation-model.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -843,7 +1316,7 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.",
+    "definition": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
     "purpose": "Precludes unaccounted application states, prevents invalid user actions, and establishes complete interaction logic for complex multi-role workflows.",
     "keyConcepts": [
       "Finite state machines",
@@ -858,10 +1331,126 @@ A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning
       "Operational UX",
       "Interaction Invariant"
     ],
-    "seoTitle": "State Transition Matrices in UX: Documenting Complex Logic",
+    "seoTitle": "State Transition Matrix in UX | Product Design Glossary",
+    "seoDescription": "See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/state-transition-matrix.html",
     "sources": [
-      "David Harel, Statecharts: A Visual Formalism for Complex Systems",
-      "Sophia Prater, ORCA CTAs and Object States"
+      "State Chart XML (SCXML), W3C (https://www.w3.org/TR/scxml/)",
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)"
+    ],
+    "contentMarkdown": `# State Transition Matrix
+
+A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.
+
+## How do you read a state transition matrix?
+
+Rows show current states. Columns show events, which can come from a user or an external system. A cell identifies the next state for that combination. When a transition depends on a rule, record the condition, also called a guard.
+
+## Example of a booking state transition matrix
+
+In this example, an agent submits a booking and waits for the supplier to confirm it. Cancellation also requires a supplier response. While cancellation is pending, the agent can see the request status and cannot submit a second request.
+
+| Current state | Submit booking | Confirm booking | Request cancellation | Accept cancellation | Decline cancellation |
+|---|---|---|---|---|---|
+| Draft | Awaiting confirmation | — | — | — | — |
+| Awaiting confirmation | — | Confirmed | — | — | — |
+| Confirmed | — | — | Cancellation pending | — | — |
+| Cancellation pending | — | — | — | Canceled | Confirmed |
+| Canceled | — | — | — | — | — |
+
+A dash means the event has no valid transition in this example. Confirming the booking and accepting or declining cancellation are supplier events. The booking moves out of Draft once a complete submission succeeds. An agent can request cancellation only when their role and the fare rules allow it. If the supplier declines cancellation, restore Confirmed status and show the reason if available.
+
+This example covers the confirmation path and two cancellation outcomes. Extend the model for booking rejection, timeouts, and other cases your product supports.
+
+## How does the matrix inform ORCA actions?
+
+The Calls to Action part of [ORCA](/glossary/orca-framework.html) identifies actions people need, organized initially in a [CTA Matrix](/glossary/cta-matrix.html). The matrix helps specify how those actions behave at each stage of the object's lifecycle. For example, agents can see “Cancellation pending” in the booking list and open the detail view to check when the request was sent.
+
+Record what users see when an event fails or arrives late. If a booking changed after the agent opened it, refresh its status and explain why the requested action cannot proceed. Use the same rules in list and detail views.
+
+Review the table with design, engineering, and operations. Walk through one routine case, one blocked action, and one delayed response. Add missing transitions or feedback before the workflow is built.
+
+## Related terms
+
+- [Object-Oriented UX](/glossary/object-oriented-ux.html)
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Operational UX](/glossary/operational-ux.html)
+- [Interaction Invariant](/glossary/interaction-invariant.html)
+
+## Sources
+
+- [State Chart XML (SCXML), W3C](https://www.w3.org/TR/scxml/)
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html",
+                "name": "State Transition Matrix in UX | Product Design Glossary",
+                "description": "See how to build a state transition matrix for UX. A booking example maps current states, events, next states, and the rules that govern user actions.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.w3.org/TR/scxml/",
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#term",
+                "name": "State Transition Matrix",
+                "termCode": "state-transition-matrix",
+                "description": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
+                "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/state-transition-matrix.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "State Transition Matrix",
+                            "item": "https://lexkonovalov.com/glossary/state-transition-matrix.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -1166,76 +1755,76 @@ Progressive disclosure reveals optional detail on request. Staged disclosure div
 - [Details, GOV.UK Design System](https://design-system.service.gov.uk/components/details/)
 - [Disclosure (Show/Hide) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
-        "name": "Progressive Disclosure in UX | Product Design Glossary",
-        "description": "What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.nngroup.com/articles/progressive-disclosure/",
-          "https://design-system.service.gov.uk/components/details/",
-          "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term",
-        "name": "Progressive Disclosure",
-        "termCode": "progressive-disclosure",
-        "description": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
-        "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
+                "name": "Progressive Disclosure in UX | Product Design Glossary",
+                "description": "What is progressive disclosure? See a practical UX example, what to keep visible, and how to make optional controls discoverable and accessible.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.nngroup.com/articles/progressive-disclosure/",
+                      "https://design-system.service.gov.uk/components/details/",
+                      "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#term",
+                "name": "Progressive Disclosure",
+                "termCode": "progressive-disclosure",
+                "description": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
+                "url": "https://lexkonovalov.com/glossary/progressive-disclosure.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Progressive Disclosure",
-            "item": "https://lexkonovalov.com/glossary/progressive-disclosure.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/progressive-disclosure.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Progressive Disclosure",
+                            "item": "https://lexkonovalov.com/glossary/progressive-disclosure.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -1332,76 +1921,76 @@ Use the schema to discuss labels, record relationships, empty states, and rules 
 - [What Is Data Modeling?, IBM](https://www.ibm.com/think/topics/data-modeling)
 - [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
-        "name": "Conceptual Schema: Meaning & Example | Product Design Glossary",
-        "description": "Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html",
-          "https://www.ibm.com/think/topics/data-modeling",
-          "https://www.ibm.com/think/topics/entity-relationship-diagram"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term",
-        "name": "Conceptual Schema",
-        "termCode": "conceptual-schema",
-        "description": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
-        "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
+                "name": "Conceptual Schema: Meaning & Example | Product Design Glossary",
+                "description": "Learn what a conceptual schema defines, with a hotel example showing entities, relationships, and rules, plus conceptual, logical, and physical models.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html",
+                      "https://www.ibm.com/think/topics/data-modeling",
+                      "https://www.ibm.com/think/topics/entity-relationship-diagram"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#term",
+                "name": "Conceptual Schema",
+                "termCode": "conceptual-schema",
+                "description": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
+                "url": "https://lexkonovalov.com/glossary/conceptual-schema.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Conceptual Schema",
-            "item": "https://lexkonovalov.com/glossary/conceptual-schema.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/conceptual-schema.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Conceptual Schema",
+                            "item": "https://lexkonovalov.com/glossary/conceptual-schema.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -1464,9 +2053,7 @@ Use the schema to discuss labels, record relationships, empty states, and rules 
     "id": "027",
     "name": "Design Tokens",
     "slug": "design-tokens",
-    "alternateName": [
-      "Design token"
-    ],
+    "alternateName": ["Design token"],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -1561,79 +2148,79 @@ Start with decisions that repeat across the interface. Document intended usage a
 - [Design Tokens Format Module 2025.10, Design Tokens Community Group](https://www.designtokens.org/tr/2025.10/format/)
 - [Style Dictionary documentation](https://styledictionary.com/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/design-tokens.html",
-        "name": "Design Tokens: Definition & Examples | Product Design Glossary",
-        "description": "Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs"
-        },
-        "citation": [
-          "https://atlassian.design/foundations/tokens/design-tokens/",
-          "https://www.designtokens.org/tr/2025.10/format/",
-          "https://styledictionary.com/"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term",
-        "name": "Design Tokens",
-        "alternateName": [
-          "Design token"
-        ],
-        "termCode": "design-tokens",
-        "description": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
-        "url": "https://lexkonovalov.com/glossary/design-tokens.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-tokens.html",
+                "name": "Design Tokens: Definition & Examples | Product Design Glossary",
+                "description": "Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://atlassian.design/foundations/tokens/design-tokens/",
+                      "https://www.designtokens.org/tr/2025.10/format/",
+                      "https://styledictionary.com/"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term",
+                "name": "Design Tokens",
+                "alternateName": [
+                      "Design token"
+                ],
+                "termCode": "design-tokens",
+                "description": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
+                "url": "https://lexkonovalov.com/glossary/design-tokens.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Design Tokens",
-            "item": "https://lexkonovalov.com/glossary/design-tokens.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design Tokens",
+                            "item": "https://lexkonovalov.com/glossary/design-tokens.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -1949,9 +2536,7 @@ Start with decisions that repeat across the interface. Document intended usage a
     "id": "039",
     "name": "Accessibility and WCAG",
     "slug": "accessibility-wcag",
-    "alternateName": [
-      "Web accessibility and WCAG"
-    ],
+    "alternateName": ["Web accessibility and WCAG"],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
@@ -2040,85 +2625,85 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
 - [User Notification: Forms Tutorial, W3C WAI](https://www.w3.org/WAI/tutorials/forms/notifications/)
 - [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
-        "name": "Accessibility & WCAG 2.2 | Product Design Glossary",
-        "description": "Understand WCAG 2.2, the POUR principles, A/AA/AAA levels, and practical checks for contrast, keyboard focus, target size, and accessible forms.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
-          "https://www.w3.org/WAI/fundamentals/accessibility-principles/",
-          "https://www.w3.org/TR/WCAG22/",
-          "https://www.w3.org/WAI/standards-guidelines/wcag/",
-          "https://www.w3.org/WAI/tutorials/forms/notifications/",
-          "https://www.w3.org/WAI/test-evaluate/",
-          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
-          "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
-          "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term",
-        "name": "Accessibility and WCAG",
-        "alternateName": [
-          "Web accessibility and WCAG"
-        ],
-        "termCode": "accessibility-wcag",
-        "description": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
-        "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
+                "name": "Accessibility & WCAG 2.2 | Product Design Glossary",
+                "description": "Understand WCAG 2.2, the POUR principles, A/AA/AAA levels, and practical checks for contrast, keyboard focus, target size, and accessible forms.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+                      "https://www.w3.org/WAI/fundamentals/accessibility-principles/",
+                      "https://www.w3.org/TR/WCAG22/",
+                      "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                      "https://www.w3.org/WAI/tutorials/forms/notifications/",
+                      "https://www.w3.org/WAI/test-evaluate/",
+                      "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+                      "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+                      "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#term",
+                "name": "Accessibility and WCAG",
+                "alternateName": [
+                      "Web accessibility and WCAG"
+                ],
+                "termCode": "accessibility-wcag",
+                "description": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
+                "url": "https://lexkonovalov.com/glossary/accessibility-wcag.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Accessibility and WCAG",
-            "item": "https://lexkonovalov.com/glossary/accessibility-wcag.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/accessibility-wcag.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Accessibility and WCAG",
+                            "item": "https://lexkonovalov.com/glossary/accessibility-wcag.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -2771,9 +3356,7 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "id": "063",
     "name": "AI-native Design",
     "slug": "ai-native-design",
-    "alternateName": [
-      "AI-native product design"
-    ],
+    "alternateName": ["AI-native product design"],
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Coined / Interpretive",
@@ -2856,80 +3439,80 @@ For the support example, measure time to a correct resolution, incorrect replies
 - [Guidelines for Human-AI Interaction, Microsoft HAX Design Library](https://www.microsoft.com/en-us/haxtoolkit/library/)
 - [Errors + Graceful Failure, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
-        "name": "AI-native Design: Meaning & Example | Product Design Glossary",
-        "description": "Understand AI-native product design with a support-workflow example: define AI’s role, give users control, handle errors, and measure useful outcomes.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs"
-        },
-        "citation": [
-          "https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/",
-          "https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/",
-          "https://www.microsoft.com/en-us/haxtoolkit/library/",
-          "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term",
-        "name": "AI-native Design",
-        "alternateName": [
-          "AI-native product design"
-        ],
-        "termCode": "ai-native-design",
-        "description": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
-        "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
+                "name": "AI-native Design: Meaning & Example | Product Design Glossary",
+                "description": "Understand AI-native product design with a support-workflow example: define AI’s role, give users control, handle errors, and measure useful outcomes.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/",
+                      "https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/",
+                      "https://www.microsoft.com/en-us/haxtoolkit/library/",
+                      "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term",
+                "name": "AI-native Design",
+                "alternateName": [
+                      "AI-native product design"
+                ],
+                "termCode": "ai-native-design",
+                "description": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
+                "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "AI-native Design",
-            "item": "https://lexkonovalov.com/glossary/ai-native-design.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "AI-native Design",
+                            "item": "https://lexkonovalov.com/glossary/ai-native-design.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -3272,10 +3855,7 @@ For the support example, measure time to a correct resolution, incorrect replies
     "id": "076",
     "name": "Conversion Rate Optimization (CRO)",
     "slug": "conversion-rate-optimization-cro",
-    "alternateName": [
-      "CRO",
-      "Conversion Rate Optimization"
-    ],
+    "alternateName": ["CRO","Conversion Rate Optimization"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -3357,80 +3937,80 @@ Use usability testing and analytics to prioritize evident problems, such as brok
 - [Analytics dimensions and metrics, Google Analytics](https://support.google.com/analytics/table/13948007?hl=en)
 - [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
-        "name": "Conversion Rate Optimization (CRO) | Product Design Glossary",
-        "description": "Learn what CRO means, how to calculate conversion rate, and how to test UX improvements with a practical example and metrics that protect lead quality.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.optimizely.com/optimization-glossary/conversion-rate-optimization",
-          "https://support.google.com/analytics/table/13948007?hl=en",
-          "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term",
-        "name": "Conversion Rate Optimization (CRO)",
-        "alternateName": [
-          "CRO",
-          "Conversion Rate Optimization"
-        ],
-        "termCode": "conversion-rate-optimization-cro",
-        "description": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
-        "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
+                "name": "Conversion Rate Optimization (CRO) | Product Design Glossary",
+                "description": "Learn what CRO means, how to calculate conversion rate, and how to test UX improvements with a practical example and metrics that protect lead quality.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.optimizely.com/optimization-glossary/conversion-rate-optimization",
+                      "https://support.google.com/analytics/table/13948007?hl=en",
+                      "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term",
+                "name": "Conversion Rate Optimization (CRO)",
+                "alternateName": [
+                      "CRO",
+                      "Conversion Rate Optimization"
+                ],
+                "termCode": "conversion-rate-optimization-cro",
+                "description": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
+                "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Conversion Rate Optimization (CRO)",
-            "item": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Conversion Rate Optimization (CRO)",
+                            "item": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -3629,10 +4209,7 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "id": "084",
     "name": "Product-Led Growth (PLG)",
     "slug": "product-led-growth-plg",
-    "alternateName": [
-      "PLG",
-      "Product-led growth"
-    ],
+    "alternateName": ["PLG","Product-led growth"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -3714,80 +4291,80 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
 - [Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed](https://productled.com/blog/sales-led-growth-definition)
 - [How to Define PQLs, ProductLed](https://productled.com/blog/how-to-define-pqls)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
-        "name": "Product-Led Growth (PLG) | Product Design Glossary",
-        "description": "Learn how product-led growth connects product value to acquisition, activation, retention, and expansion, with a SaaS example and useful PLG metrics.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs"
-        },
-        "citation": [
-          "https://productled.com/blog/product-led-growth-definition",
-          "https://productled.com/blog/sales-led-growth-definition",
-          "https://productled.com/blog/how-to-define-pqls"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term",
-        "name": "Product-Led Growth (PLG)",
-        "alternateName": [
-          "PLG",
-          "Product-led growth"
-        ],
-        "termCode": "product-led-growth-plg",
-        "description": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
-        "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
+                "name": "Product-Led Growth (PLG) | Product Design Glossary",
+                "description": "Learn how product-led growth connects product value to acquisition, activation, retention, and expansion, with a SaaS example and useful PLG metrics.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://productled.com/blog/product-led-growth-definition",
+                      "https://productled.com/blog/sales-led-growth-definition",
+                      "https://productled.com/blog/how-to-define-pqls"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#term",
+                "name": "Product-Led Growth (PLG)",
+                "alternateName": [
+                      "PLG",
+                      "Product-led growth"
+                ],
+                "termCode": "product-led-growth-plg",
+                "description": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
+                "url": "https://lexkonovalov.com/glossary/product-led-growth-plg.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Product-Led Growth (PLG)",
-            "item": "https://lexkonovalov.com/glossary/product-led-growth-plg.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/product-led-growth-plg.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Product-Led Growth (PLG)",
+                            "item": "https://lexkonovalov.com/glossary/product-led-growth-plg.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -3961,75 +4538,75 @@ A design system supports consistent implementation, while a roadmap sequences th
 - [UX Strategy: Definition and Components, Nielsen Norman Group](https://www.nngroup.com/articles/ux-strategy/)
 - [Complex Application Design: A 5-Layer Framework, Nielsen Norman Group](https://www.nngroup.com/articles/complex-application-design-framework/)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
-        "name": "Enterprise UX Strategy | Product Design Glossary",
-        "description": "Learn what enterprise UX strategy includes, how to prioritize complex workflows, and how to measure progress with a practical procurement example.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.nngroup.com/articles/ux-strategy/",
-          "https://www.nngroup.com/articles/complex-application-design-framework/"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term",
-        "name": "Enterprise UX Strategy",
-        "termCode": "enterprise-ux-strategy",
-        "description": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
-        "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
+                "name": "Enterprise UX Strategy | Product Design Glossary",
+                "description": "Learn what enterprise UX strategy includes, how to prioritize complex workflows, and how to measure progress with a practical procurement example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.nngroup.com/articles/ux-strategy/",
+                      "https://www.nngroup.com/articles/complex-application-design-framework/"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#term",
+                "name": "Enterprise UX Strategy",
+                "termCode": "enterprise-ux-strategy",
+                "description": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
+                "url": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Enterprise UX Strategy",
-            "item": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Enterprise UX Strategy",
+                            "item": "https://lexkonovalov.com/glossary/enterprise-ux-strategy.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -4202,76 +4779,76 @@ Track what each experiment teaches you and whether the result improves the chose
 - [A Primer on Growth Design, Chetana Deorah and Lex Roman](https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)
 - [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/growth-design.html",
-        "name": "Growth Design: Meaning & Example | Product Design Glossary",
-        "description": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/growth-design.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs"
-        },
-        "citation": [
-          "https://amplitude.com/blog/practicing-growth-design",
-          "https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design",
-          "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/growth-design.html#term",
-        "name": "Growth Design",
-        "termCode": "growth-design",
-        "description": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
-        "url": "https://lexkonovalov.com/glossary/growth-design.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage"
-        }
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/growth-design.html",
+                "name": "Growth Design: Meaning & Example | Product Design Glossary",
+                "description": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/growth-design.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://amplitude.com/blog/practicing-growth-design",
+                      "https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design",
+                      "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/growth-design.html#term",
+                "name": "Growth Design",
+                "termCode": "growth-design",
+                "description": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
+                "url": "https://lexkonovalov.com/glossary/growth-design.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage"
+                }
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Growth Design",
-            "item": "https://lexkonovalov.com/glossary/growth-design.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/growth-design.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Growth Design",
+                            "item": "https://lexkonovalov.com/glossary/growth-design.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -4333,12 +4910,9 @@ Track what each experiment teaches you and whether the result improves the chose
     "id": "095",
     "name": "LTV to CAC Ratio",
     "slug": "ltv-to-cac-ratio",
+    "alternateName": ["LTV:CAC","LTV/CAC ratio"],
     "category": "Product Strategy & Growth",
     "maturity": "Established",
-    "alternateName": [
-      "LTV:CAC",
-      "LTV/CAC ratio"
-    ],
     "definition": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
     "purpose": "Evaluates the long-term commercial sustainability and marketing efficiency of a software product, directly steering product investment decisions.",
     "keyConcepts": [
@@ -4427,81 +5001,81 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
 - [What is the CAC payback period?, Stripe](https://stripe.com/resources/more/what-is-the-cac-payback-period)
 - [CAC in SaaS, Stripe](https://stripe.com/resources/more/cac-in-saas)`,
     "structuredDataGraph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage",
-        "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
-        "name": "LTV:CAC Ratio: Formula & Example | Product Design Glossary",
-        "description": "Learn how to calculate LTV:CAC using gross margin, work through a SaaS example, and interpret the 3:1 benchmark alongside churn and CAC payback.",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        },
-        "mainEntity": {
-          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term"
-        },
-        "breadcrumb": {
-          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs"
-        },
-        "citation": [
-          "https://www.forentrepreneurs.com/saas-metrics-2-definitions/",
-          "https://www.forentrepreneurs.com/saas-metrics-2/",
-          "https://stripe.com/resources/more/what-is-the-cac-payback-period",
-          "https://stripe.com/resources/more/cac-in-saas"
-        ]
-      },
-      {
-        "@type": "DefinedTerm",
-        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term",
-        "name": "LTV to CAC Ratio",
-        "termCode": "ltv-to-cac-ratio",
-        "description": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
-        "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
-        "inDefinedTermSet": {
-          "@id": "https://lexkonovalov.com/glossary/#terms"
-        },
-        "mainEntityOfPage": {
-          "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage"
-        },
-        "alternateName": [
-          "LTV:CAC",
-          "LTV/CAC ratio"
-        ]
-      },
-      {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs",
-        "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://lexkonovalov.com/"
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
+                "name": "LTV:CAC Ratio: Formula & Example | Product Design Glossary",
+                "description": "Learn how to calculate LTV:CAC using gross margin, work through a SaaS example, and interpret the 3:1 benchmark alongside churn and CAC payback.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.forentrepreneurs.com/saas-metrics-2-definitions/",
+                      "https://www.forentrepreneurs.com/saas-metrics-2/",
+                      "https://stripe.com/resources/more/what-is-the-cac-payback-period",
+                      "https://stripe.com/resources/more/cac-in-saas"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Product Design Glossary",
-            "item": "https://lexkonovalov.com/glossary/"
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#term",
+                "name": "LTV to CAC Ratio",
+                "termCode": "ltv-to-cac-ratio",
+                "description": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
+                "url": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#webpage"
+                },
+                "alternateName": [
+                      "LTV:CAC",
+                      "LTV/CAC ratio"
+                ]
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "LTV to CAC Ratio",
-            "item": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html"
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "LTV to CAC Ratio",
+                            "item": "https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html"
+                      }
+                ]
           }
-        ]
-      }
     ]
   },
   {
@@ -4641,6 +5215,1160 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
     "sources": [
       "Alexander Osterwalder et al., Value Proposition Design, Wiley",
       "Strategyzer Methodology"
+    ]
+  },
+  {
+    "id": "101",
+    "name": "Noun Foraging",
+    "slug": "noun-foraging",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.",
+    "purpose": "Identifies core mental model entities from user research and domain materials, preventing premature UI wireframing before objects are defined.",
+    "keyConcepts": [
+      "SIP test",
+      "Structure Instances Purpose",
+      "Candidate objects",
+      "Entity discovery"
+    ],
+    "howItWorks": "Extracts nouns from user transcripts, documentation, and existing interfaces, then filters them through the SIP criteria (Structure, Instances, Purpose) to separate true domain objects from attributes or actions.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Object Mapping",
+      "Nested Object Matrix",
+      "Object Guide"
+    ],
+    "seoTitle": "Noun Foraging in OOUX | Product Design Glossary",
+    "seoDescription": "Learn how noun foraging turns UX research into candidate objects. A travel operations example shows how to use structure, instances, and purpose.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/noun-foraging.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
+      "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)"
+    ],
+    "contentMarkdown": `# Noun Foraging
+
+Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.
+
+## How do you do noun foraging?
+
+1. **Start with evidence.** Review interview notes, support conversations, or a walkthrough of an existing process. Record the noun and the sentence it came from.
+2. **Group terms by meaning.** A single concept may have multiple names. Keep similar terms separate until you know they refer to the same thing.
+3. **Look for structure, instances, and purpose.** Sophia Prater uses this check, called SIP, to evaluate possible objects. Ask what information and relationships give the thing structure, what individual examples look like, and why people need to work with it.
+4. **Validate the shortlist.** Ask users or domain experts to walk through a real case. Record open questions before taking the candidates into the relationship model.
+
+Frequency can help you spot a candidate. An infrequently mentioned object may still matter when it controls an important handoff or exception.
+
+## Example from travel operations
+
+Imagine an agent says, “I open the trip, check which traveler it’s for, and look at the booking status before I call the supplier.” That sentence offers several candidates.
+
+| Term in the notes | What to investigate |
+|---|---|
+| Trip | The agent recognizes individual trips and uses each one to gather bookings and travelers. Example instance: Trip T-104. |
+| Traveler | The agent can find a person and view their other trips. Keep Traveler on the shortlist. |
+| Booking | Booking B-52 has its own reference and status. Agents can check or request changes to it. |
+| Status | In this example it describes the booking. Capture it as a candidate attribute. |
+| Supplier | Ask whether agents look up supplier records or only need a supplier name on the booking in this scope. |
+
+Ask an agent to show you a “reservation” and a “booking.” If they point to different records or stages, preserve the distinction in the shortlist.
+
+## What comes next in ORCA?
+
+Noun foraging helps define the Objects in [ORCA](/glossary/orca-framework.html). Take the shortlist into a [nested object matrix](/glossary/nested-object-matrix.html) to investigate relationships. Use an [Object Guide](/glossary/object-guide.html) to capture definitions once the team has tested what the terms mean.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Nested Object Matrix](/glossary/nested-object-matrix.html)
+- [Object Guide](/glossary/object-guide.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/noun-foraging.html",
+                "name": "Noun Foraging in OOUX | Product Design Glossary",
+                "description": "Learn how noun foraging turns UX research into candidate objects. A travel operations example shows how to use structure, instances, and purpose.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/",
+                      "https://alistapart.com/article/object-oriented-ux/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#term",
+                "name": "Noun Foraging",
+                "termCode": "noun-foraging",
+                "description": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.",
+                "url": "https://lexkonovalov.com/glossary/noun-foraging.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/noun-foraging.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Noun Foraging",
+                            "item": "https://lexkonovalov.com/glossary/noun-foraging.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "102",
+    "name": "Nested Object Matrix",
+    "slug": "nested-object-matrix",
+    "alternateName": ["NOM","Nested-Object Matrix"],
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.",
+    "purpose": "Maps bidirectional relationships between domain objects to expose navigational pathways and prevent isolated or dead-end views.",
+    "keyConcepts": [
+      "Host-target grid",
+      "Bidirectional relationships",
+      "Cardinality mapping",
+      "Nested navigation"
+    ],
+    "howItWorks": "Plots object types as columns (hosts) and rows (nested targets), testing each intersection in both directions to establish explicit connection cardinality and user navigation access.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Object Mapping",
+      "Noun Foraging",
+      "Cardinality (UX Architecture)",
+      "ORCA Relationship Requirements (MCSFD)",
+      "Junction Object"
+    ],
+    "seoTitle": "Nested Object Matrix in OOUX | Product Design Glossary",
+    "seoDescription": "Build a Nested Object Matrix in ORCA. Use a travel operations example to map relationships in both directions and identify useful navigation paths.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/nested-object-matrix.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
+      "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)"
+    ],
+    "contentMarkdown": `# Nested Object Matrix
+
+A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.
+
+## How do you read a Nested Object Matrix?
+
+In Sophia Prater’s convention, the top row contains the **host objects**. Read a cell by starting with the column heading and describing how that host relates to the object type on the left. Use verbs and counts where you know them. To check the reverse direction, swap the row and column. Trip → Booking answers which bookings are on a trip. Booking → Trip answers which trip owns the booking.
+
+## A Nested Object Matrix for travel operations
+
+In this example, a trip can exist before it has a booking. Each booking belongs to exactly one trip. Travelers may appear on multiple trips.
+
+| Related object ↓ / Host object → | Trip | Booking | Traveler |
+|---|---|---|---|
+| Trip | — | Belongs to exactly one trip | Can be linked to multiple trips |
+| Booking | Has zero or more bookings | — | — |
+| Traveler | Can include multiple travelers | — | — |
+
+A dash marks a cell with no direct relationship in this example. In a working matrix, mark an untested relationship as “To verify” so the team can distinguish it from an empty cell. For example, a booking can lead to travelers through its trip. If the product needs to identify which travelers are covered by a particular booking, investigate that as a separate relationship.
+
+## How do you build the matrix?
+
+1. **List the same object types on both axes.** Start with the shortlist from [noun foraging](/glossary/noun-foraging.html).
+2. **Describe each relevant relationship in plain language.** Put distinct relationships in the same cell when the same object types connect in several ways.
+3. **Check minimums and maximums in both directions.** “Has bookings” leaves open whether the first booking is required. Write the [cardinality](/glossary/cardinality-ux-architecture.html) explicitly when a rule is known. Teams use [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html) to detail mechanics, sorting, and filtering, and introduce a [Junction Object](/glossary/junction-object.html) when the connection itself carries data.
+4. **Decide what users need to reach.** Test whether an agent who opens a booking from search can find its trip. Check that the trip is visible to that agent before adding the link.
+
+The matrix focuses on relationships. The [object map](/glossary/object-mapping.html) builds on those findings to organize the information that describes each object. A [CTA Matrix](/glossary/cta-matrix.html) records what different roles can do with them.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Noun Foraging](/glossary/noun-foraging.html)
+- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/nested-object-matrix.html",
+                "name": "Nested Object Matrix in OOUX | Product Design Glossary",
+                "description": "Build a Nested Object Matrix in ORCA. Use a travel operations example to map relationships in both directions and identify useful navigation paths.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/",
+                      "https://alistapart.com/article/object-oriented-ux/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#term",
+                "name": "Nested Object Matrix",
+                "termCode": "nested-object-matrix",
+                "description": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.",
+                "url": "https://lexkonovalov.com/glossary/nested-object-matrix.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#webpage"
+                },
+                "alternateName": [
+                      "NOM",
+                      "Nested-Object Matrix"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/nested-object-matrix.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Nested Object Matrix",
+                            "item": "https://lexkonovalov.com/glossary/nested-object-matrix.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "103",
+    "name": "CTA Matrix",
+    "slug": "cta-matrix",
+    "alternateName": ["Call-to-Action Matrix"],
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.",
+    "purpose": "Connects user roles, objects, and actions systematically, defining CRUD and custom intent calls before designing visual buttons or menus.",
+    "keyConcepts": [
+      "Role-object actions",
+      "CRUD operations",
+      "Action prerequisites",
+      "State changes"
+    ],
+    "howItWorks": "Lays out user roles against domain objects to document permitted actions, conditional constraints, and resulting object state transitions.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Object Mapping",
+      "Nested Object Matrix",
+      "State Transition Matrix"
+    ],
+    "seoTitle": "CTA Matrix in OOUX | Product Design Glossary",
+    "seoDescription": "Learn how an ORCA CTA Matrix maps roles to actions on objects. See a booking example with permissions, eligibility rules, and cancellation feedback.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/cta-matrix.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
+      "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)"
+    ],
+    "contentMarkdown": `# CTA Matrix
+
+A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.
+
+## What goes in a CTA Matrix?
+
+Put roles down the rows and object types across the columns. Write actions as verbs in the cells. A role can describe a person’s relationship to the object, such as the agent assigned to a trip, when that relationship affects what they can do.
+
+Start with what each role needs to do. Review access and business rules before treating a proposed action as an approved requirement. A verb such as “Request cancellation” can become a button, menu item, or part of a guided workflow once the team designs the interaction.
+
+## CTA Matrix example for travel operations
+
+Consider a tool where an assigned agent manages the trip and a support reviewer investigates issues without changing records. This example focuses on a few actions from each role.
+
+| Role | Trip | Booking | Traveler |
+|---|---|---|---|
+| Assigned agent | View trip, add booking | View booking, request cancellation if eligible | View traveler, update contact details if permitted |
+| Support reviewer | View trip | View booking | View permitted traveler details |
+
+Turn “Request cancellation” into a user story. An assigned agent needs to request cancellation on an eligible confirmed booking when a traveler changes plans. When the request succeeds, show Cancellation pending so the agent knows the supplier still has to respond. The supplier’s response determines the next state.
+
+## How do you turn matrix entries into requirements?
+
+1. **Clarify who can act.** Check role, assignment, and record access separately where they affect the action.
+2. **Describe when the action is available.** Record the booking state and eligibility rules. Mark unresolved rules for follow-up.
+3. **Specify the result and feedback.** Include what the user sees after success, a blocked attempt, or a delayed response. Use a [state transition matrix](/glossary/state-transition-matrix.html) to track the lifecycle.
+4. **Choose placement in the interface.** Give frequent or time-sensitive actions appropriate prominence. Test whether users can find and understand them where the object appears.
+
+In [ORCA](/glossary/orca-framework.html), teams begin this work during Discovery and expand matrix entries into user stories during Requirements. Use the matrix to agree on who can act. The application enforces those rules when the action is requested.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Nested Object Matrix](/glossary/nested-object-matrix.html)
+- [State Transition Matrix](/glossary/state-transition-matrix.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/cta-matrix.html",
+                "name": "CTA Matrix in OOUX | Product Design Glossary",
+                "description": "Learn how an ORCA CTA Matrix maps roles to actions on objects. See a booking example with permissions, eligibility rules, and cancellation feedback.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/",
+                      "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#term",
+                "name": "CTA Matrix",
+                "termCode": "cta-matrix",
+                "description": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.",
+                "url": "https://lexkonovalov.com/glossary/cta-matrix.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#webpage"
+                },
+                "alternateName": [
+                      "Call-to-Action Matrix"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/cta-matrix.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "CTA Matrix",
+                            "item": "https://lexkonovalov.com/glossary/cta-matrix.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "104",
+    "name": "Object Guide",
+    "slug": "object-guide",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.",
+    "purpose": "Establishes domain semantic clarity and disambiguation, eliminating synonymous confusion and defining identity attributes for each entity.",
+    "keyConcepts": [
+      "Domain glossary",
+      "Disambiguation",
+      "Attribute taxonomy",
+      "Controlled vocabulary"
+    ],
+    "howItWorks": "Documents each object type with canonical definitions, visual and functional identifiers, differentiating examples, and explicit anti-patterns or exclusions.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Object Mapping",
+      "Noun Foraging",
+      "CTA Matrix"
+    ],
+    "seoTitle": "Object Guide in OOUX | Product Design Glossary",
+    "seoDescription": "Learn what an Object Guide documents in ORCA. Use a practical Booking entry to define an object, clarify its boundaries, and capture open questions.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-guide.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
+      "Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)"
+    ],
+    "contentMarkdown": `# Object Guide
+
+An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.
+
+## What should an Object Guide include?
+
+Start with a short definition and a recognizable example. Add the distinctions that affect the work. The fields below are a lightweight starting point for a travel operations product.
+
+| Field | Example entry for Booking |
+|---|---|
+| Preferred name | Booking |
+| Definition | A record used to arrange travel services with a supplier. It tracks the request from draft through the supplier’s response and any later changes. |
+| Instance | Booking B-52 for the outbound flight on Trip T-104. |
+| Why it matters | Agents use the booking to track the supplier response, check fare rules, and request changes when eligible. |
+| Boundary | An Offer contains proposed travel and pricing. A Booking tracks the supplier request. Accepting the offer and confirming the booking are separate events. |
+| Key relationship | Each booking belongs to one trip. A trip may exist before it has any bookings. |
+| Open question | Do agents use “reservation” as a synonym for Booking, or only after a supplier has confirmed it? |
+
+Use the definition to decide which record owns each status. The Offer can show Accepted while the Booking shows Awaiting confirmation. That tells an agent the traveler has agreed to the offer and the supplier’s response is still outstanding.
+
+## How does the guide work with other ORCA artifacts?
+
+Use the guide to agree on what an object represents. The [nested object matrix](/glossary/nested-object-matrix.html) records its relationships across the model. The [CTA Matrix](/glossary/cta-matrix.html) records actions by role, and the [object map](/glossary/object-mapping.html) organizes the information each object needs. Link to those artifacts when an entry needs more detail.
+
+## How do you keep an Object Guide useful?
+
+Ask sales and ticketing to classify two records: an offer the traveler accepted and a booking the supplier has yet to confirm. If they disagree on the names or statuses, record the difference and agree on what appears at the handoff.
+
+Review the entry when a change affects its definition, labels, or rules. Link to the decision or research note so the next person can see why the definition changed.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Noun Foraging](/glossary/noun-foraging.html)
+- [CTA Matrix](/glossary/cta-matrix.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/object-guide.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/object-guide.html",
+                "name": "Object Guide in OOUX | Product Design Glossary",
+                "description": "Learn what an Object Guide documents in ORCA. Use a practical Booking entry to define an object, clarify its boundaries, and capture open questions.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/object-guide.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/object-guide.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/object-guide.html#term",
+                "name": "Object Guide",
+                "termCode": "object-guide",
+                "description": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.",
+                "url": "https://lexkonovalov.com/glossary/object-guide.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/object-guide.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/object-guide.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Object Guide",
+                            "item": "https://lexkonovalov.com/glossary/object-guide.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "105",
+    "name": "Four UX Fails in OOUX",
+    "slug": "ooux-ux-fails",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.",
+    "purpose": "Provides a diagnostic framework to audit interfaces for object clarity, preventing disguised, polymorphic, un-actionable, or disconnected entities.",
+    "keyConcepts": [
+      "Masked objects",
+      "Shape-shifter objects",
+      "Broken objects",
+      "Isolated objects"
+    ],
+    "howItWorks": "Audits product screens against four failure modes to ensure objects look like themselves, maintain consistent representation across views, provide accessible actions, and link bidirectionally.",
+    "relatedTerms": [
+      "Object-Oriented UX (OOUX)",
+      "ORCA Framework",
+      "Object Mapping",
+      "Structural Navigation Model"
+    ],
+    "seoTitle": "Four UX Fails in OOUX | Product Design Glossary",
+    "seoDescription": "Review an interface for four OOUX problems: masked, shape-shifting, broken, and isolated objects. See practical examples and fixes for each.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ooux-ux-fails.html",
+    "sources": [
+      "The Life-changing Magic of OOUX Tidying Up, Sophia V. Prater (https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up)",
+      "Designing With ORCA, OOUX (https://ooux.com/offerings/fourfails)"
+    ],
+    "contentMarkdown": `# Four UX Fails in OOUX
+
+The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.
+
+## How do you spot the four problems?
+
+| Problem | Example in a travel operations tool | What to change |
+|---|---|---|
+| Masked object | A proposed Offer and a supplier Booking both appear as “Trip item,” with no indication of which is which. | Give each type a recognizable label and show the details people use to tell them apart. |
+| Shape-shifting object | Booking B-52 appears in search with its reference and status, then appears in the trip as an unlabeled date with no visible reference. | Keep identifying cues consistent across views. Choose how much detail each view needs. |
+| Broken object | The booking’s status is in one workspace, its fare rules in another, and the cancellation action in a separate admin menu. | Bring the relevant information and actions together around the booking, with access appropriate to the role. |
+| Isolated object | An agent opens a booking from search and must start a new search to find its trip, even though they can view both records. | Add a contextual link from the booking to its trip where the agent needs it. |
+
+If the agent recognizes Booking B-52 but cannot find “Request cancellation,” check for a broken object. If they can act on the booking but cannot reach its trip, check for an isolated object.
+
+## How do you run a review?
+
+Pick one object and follow it through a task. For Booking B-52, open the record from search and from its trip. Ask the agent to identify it, check whether cancellation is available, and find the related trip. Observe where they pause, look elsewhere, or mistake one record for another.
+
+Use the [object map](/glossary/object-mapping.html) to check which identifying fields belong on the record, where its actions should appear, and which relationships warrant a link. Fix the issue that interrupts the task first. A compact search result and a full detail page can look different while preserving the cues that help the agent recognize the booking.
+
+## Related terms
+
+- [Object-Oriented UX (OOUX)](/glossary/object-oriented-ux.html)
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Structural Navigation Model](/glossary/structural-navigation-model.html)
+
+## Sources
+
+- [The Life-changing Magic of OOUX Tidying Up, Sophia V. Prater](https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up)
+- [Designing With ORCA, OOUX](https://ooux.com/offerings/fourfails)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/ooux-ux-fails.html",
+                "name": "Four UX Fails in OOUX | Product Design Glossary",
+                "description": "Review an interface for four OOUX problems: masked, shape-shifting, broken, and isolated objects. See practical examples and fixes for each.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up",
+                      "https://ooux.com/offerings/fourfails"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#term",
+                "name": "Four UX Fails in OOUX",
+                "termCode": "ooux-ux-fails",
+                "description": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.",
+                "url": "https://lexkonovalov.com/glossary/ooux-ux-fails.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/ooux-ux-fails.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Four UX Fails in OOUX",
+                            "item": "https://lexkonovalov.com/glossary/ooux-ux-fails.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "106",
+    "name": "Object Prioritization",
+    "slug": "object-prioritization",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.",
+    "purpose": "Aligns system architecture with MVP scope and navigation hierarchy by ranking core domain entities by frequency and business importance.",
+    "keyConcepts": [
+      "Primary vs secondary objects",
+      "Entry points",
+      "Structural hierarchy",
+      "Scope control"
+    ],
+    "howItWorks": "Ranks objects based on user task frequency, revenue impact, and dependency ordering to establish top-level navigation versus nested views.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Object Mapping",
+      "Object Guide",
+      "Structural Navigation Model"
+    ],
+    "seoTitle": "Object Prioritization in OOUX | Product Design Glossary",
+    "seoDescription": "Learn how ORCA teams choose which objects a release needs and which deserve prominent access. See a worked example for a travel operations tool.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-prioritization.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
+      "Designing With ORCA, OOUX (https://ooux.com/offerings/fourfails)"
+    ],
+    "contentMarkdown": `# Object Prioritization
+
+Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.
+
+## What are you prioritizing?
+
+Release scope and navigation prominence are separate decisions. A Booking may be essential to the first release while agents can reach it through a Trip and search. The team can give Bookings a main navigation entry later if agents regularly need to work across trips.
+
+Consider what people need to complete the release’s main tasks, how often they need to find the object on its own, and what other objects or actions depend on it. Use work observations and examples from the [object map](/glossary/object-mapping.html) to make the decision concrete.
+
+## Example of prioritizing objects for a first release
+
+Suppose a travel operations team starts with one goal: let agents find a trip and manage its bookings.
+
+| Candidate | Release decision | How people reach it |
+|---|---|---|
+| Trip | Include it as the starting point for managing travel. | Main navigation and search. |
+| Booking | Include it so agents can track supplier responses and request cancellation. | Trip details and search by booking reference. |
+| Traveler | Keep it as a shared record so agents can recognize the person across trips. | From a trip’s traveler list. |
+| Supplier | Show the supplier name as booking information. Defer separate supplier profiles until agents need to manage them. | In booking details. |
+
+The supplier decision reduces the release scope to the information agents use to identify a booking. If agents later need to update supplier contacts or see all bookings for a supplier, revisit the model.
+
+## How do you check your decisions?
+
+Walk through a routine task and an exception. In this example, an agent may receive a supplier message with only a booking reference. Check that search gets them to the booking and that the booking links back to the right trip when they have access.
+
+When you combine, defer, or simplify an object, review its relationships, actions, and attributes. Decide which information or behavior the release still needs and where it belongs. Record the evidence that would change your decision, such as agents repeatedly needing a queue of bookings across trips.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Object Mapping](/glossary/object-mapping.html)
+- [Object Guide](/glossary/object-guide.html)
+- [Structural Navigation Model](/glossary/structural-navigation-model.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+- [Designing With ORCA, OOUX](https://ooux.com/offerings/fourfails)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/object-prioritization.html",
+                "name": "Object Prioritization in OOUX | Product Design Glossary",
+                "description": "Learn how ORCA teams choose which objects a release needs and which deserve prominent access. See a worked example for a travel operations tool.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e",
+                      "https://ooux.com/offerings/fourfails"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#term",
+                "name": "Object Prioritization",
+                "termCode": "object-prioritization",
+                "description": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.",
+                "url": "https://lexkonovalov.com/glossary/object-prioritization.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/object-prioritization.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Object Prioritization",
+                            "item": "https://lexkonovalov.com/glossary/object-prioritization.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "107",
+    "name": "ORCA Relationship Requirements",
+    "slug": "orca-relationship-requirements",
+    "alternateName": ["MCSFD"],
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.",
+    "purpose": "Transforms abstract connections between objects into concrete UI behavior and data rules through a structured 5-part checklist.",
+    "keyConcepts": [
+      "Mechanics",
+      "Cardinality",
+      "Sorting",
+      "Filtering",
+      "Dependency (MCSFD)"
+    ],
+    "howItWorks": "Applies the MCSFD checklist across every object relationship to define how associations are created, counted, ordered, filtered, and lifecycle-dependent.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Nested Object Matrix",
+      "Cardinality (UX Architecture)",
+      "Junction Object"
+    ],
+    "seoTitle": "ORCA Relationship Requirements (MCSFD) | Product Design Glossary",
+    "seoDescription": "Use ORCA’s MCSFD checklist to specify how objects connect, how many records relate, how lists work, and what happens when a linked record changes.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html",
+    "sources": [
+      "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Object-Oriented UX with Sophia Prater, InfoQ (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
+      "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)"
+    ],
+    "contentMarkdown": `# ORCA Relationship Requirements
+
+ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.
+
+## What does MCSFD cover?
+
+Take one connection from a [Nested Object Matrix](/glossary/nested-object-matrix.html). In this example, an agent opens Trip T-104 to find Booking B-52 and check whether the supplier has responded.
+
+| Decision | Question | Example rule |
+|---|---|---|
+| Mechanics | How is the connection created or changed? | Adding a booking from a trip assigns that trip automatically. When adding one elsewhere, the agent selects a trip. |
+| Cardinality | How many records can relate in each direction? | A trip can have zero or more bookings. Each booking belongs to exactly one trip. |
+| Sorting | Which order helps people scan the related records? | Show the earliest service date first. Put bookings without a service date after dated bookings. |
+| Filtering | Which subset helps with a task? | Agents can filter by Awaiting confirmation to find bookings the supplier has yet to confirm. |
+| Dependency | What happens to related records when one changes or is removed? | Archiving a trip preserves its linked bookings. Agents with access can still review their history. |
+
+These are product rules for the example. Confirm the equivalent rules with the people who do the work and the team that maintains the system.
+
+## How do these rules affect the design?
+
+A trip with zero bookings needs a clear way for an authorized agent to add the first booking. If a status filter hides all bookings, the empty message can explain that no bookings match and offer to clear the filter. The agent can tell whether they need to create a booking or change the filter.
+
+Apply the checklist in the direction that supports the task. On a Trip, sorting its bookings may matter. On a Booking, there is only one linked Trip, so sorting adds nothing to that view.
+
+Review exceptions before finalizing the rule. Ask what an agent sees when opening a booking from search after its trip was archived. Confirm which records are still visible, which actions remain available, and where the agent can find the trip history.
+
+## Related terms
+
+- [ORCA Framework](/glossary/orca-framework.html)
+- [Nested Object Matrix](/glossary/nested-object-matrix.html)
+- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)
+- [Junction Object](/glossary/junction-object.html)
+
+## Sources
+
+- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
+- [Object-Oriented UX with Sophia Prater, InfoQ](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html",
+                "name": "ORCA Relationship Requirements (MCSFD) | Product Design Glossary",
+                "description": "Use ORCA’s MCSFD checklist to specify how objects connect, how many records relate, how lists work, and what happens when a linked record changes.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/",
+                      "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#term",
+                "name": "ORCA Relationship Requirements",
+                "termCode": "orca-relationship-requirements",
+                "description": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.",
+                "url": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#webpage"
+                },
+                "alternateName": [
+                      "MCSFD"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "ORCA Relationship Requirements",
+                            "item": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html"
+                      }
+                ]
+          }
+    ]
+  },
+  {
+    "id": "108",
+    "name": "Junction Object",
+    "slug": "junction-object",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.",
+    "purpose": "Elevates complex many-to-many associations into first-class objects capable of carrying their own attributes, metadata, and lifecycle states.",
+    "keyConcepts": [
+      "Associative entity",
+      "Many-to-many relationship",
+      "Relationship metadata",
+      "Attribute ownership"
+    ],
+    "howItWorks": "Promotes a relational link into a discrete entity (e.g. Booking between Traveler and Trip) when metadata or actions belong to the relationship rather than either endpoint.",
+    "relatedTerms": [
+      "Object Mapping",
+      "Cardinality (UX Architecture)",
+      "Nested Object Matrix",
+      "ORCA Relationship Requirements"
+    ],
+    "seoTitle": "Junction Objects in OOUX | Product Design Glossary",
+    "seoDescription": "Learn when to model a relationship as a junction object. A travel operations example shows where trip-specific traveler details belong.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/junction-object.html",
+    "sources": [
+      "Object-Oriented UX: The Backbone of the Design Process, Sophia Prater interview (https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/)",
+      "Object-Oriented UX with Sophia Prater, InfoQ (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)"
+    ],
+    "contentMarkdown": `# Junction Object
+
+A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.
+
+## Example of a junction object
+
+A traveler can be linked to several trips, and a trip can include several travelers. Suppose agents also need to know whether each traveler has confirmed they will join a particular trip. One traveler can be Confirmed for Trip T-104 and Invited for another trip at the same time.
+
+| Where the information belongs | Example |
+|---|---|
+| Traveler | Name and contact details |
+| Trip | Reference and travel dates |
+| Trip Participation | One trip, one traveler, participation status, and response date when available |
+
+Trip Participation is the junction object. In this example, the product allows one participation record for each traveler and trip pair. If an agent changes the status for Trip T-104 to Confirmed, any Invited status on a different trip stays as it was.
+
+## When is a junction object useful?
+
+Ask whether the same person or record can have different values depending on what it is linked to. A traveler’s contact details normally describe the person. Their response to a particular trip invitation describes their participation in that trip.
+
+Then check what people do with the relationship. In this example, an invitation creates a participation record, a response updates it, and removal ends that traveler’s association with the trip. Naming the junction object lets the team talk about these actions without confusing a trip-specific change with an edit to the traveler’s profile.
+
+## How does it show up in the interface?
+
+In the trip’s traveler list, show the traveler’s name alongside their participation status. Opening the name can lead to the Traveler record. An action such as “Remove from trip” applies to the participation and leaves the traveler profile intact.
+
+The junction object can be represented by that row and its actions. Give it a detail view if people need to inspect a response history or manage more information than the row can show. Use the [nested object matrix](/glossary/nested-object-matrix.html) to record how Trip Participation connects to Trip and Traveler.
+
+## Related terms
+
+- [Object Mapping](/glossary/object-mapping.html)
+- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)
+- [Nested Object Matrix](/glossary/nested-object-matrix.html)
+- [ORCA Relationship Requirements](/glossary/orca-relationship-requirements.html)
+
+## Sources
+
+- [Object-Oriented UX: The Backbone of the Design Process, Sophia Prater interview](https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/)
+- [Object-Oriented UX with Sophia Prater, InfoQ](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/junction-object.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/junction-object.html",
+                "name": "Junction Objects in OOUX | Product Design Glossary",
+                "description": "Learn when to model a relationship as a junction object. A travel operations example shows where trip-specific traveler details belong.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/junction-object.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/junction-object.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/",
+                      "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/junction-object.html#term",
+                "name": "Junction Object",
+                "termCode": "junction-object",
+                "description": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.",
+                "url": "https://lexkonovalov.com/glossary/junction-object.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/junction-object.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/junction-object.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Junction Object",
+                            "item": "https://lexkonovalov.com/glossary/junction-object.html"
+                      }
+                ]
+          }
     ]
   }
 ];

@@ -35,7 +35,7 @@ const hubJsonLd = {
       "@type": "DefinedTermSet",
       "@id": "https://lexkonovalov.com/glossary/#terms",
       "name": "Product Design Glossary",
-      "description": "A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
+      "description": "A canonical 108-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
       "url": "https://lexkonovalov.com/glossary/",
       "inLanguage": "en-US",
       "isPartOf": {
@@ -92,14 +92,14 @@ const hubHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov</title>
-  <meta name="description" content="A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
+  <meta name="description" content="A canonical 108-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Product Design Glossary — Architectural Lexicon & Systems Ontology">
-  <meta property="og:description" content="A canonical 100-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
+  <meta property="og:description" content="A canonical 108-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -110,7 +110,7 @@ const hubHtml = `<!DOCTYPE html>
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Product Design Glossary | Lex Konovalov">
-  <meta name="twitter:description" content="100 canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
+  <meta name="twitter:description" content="108 canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -240,7 +240,7 @@ ${JSON.stringify(hubJsonLd, null, 2)}
       <a href="/">Home</a> / <span>Product Design Glossary</span>
     </nav>
     <h1>Product Design Glossary</h1>
-    <p class="lead">A curated collection of 100 concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
+    <p class="lead">A curated collection of 108 concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
   </header>
   
   <section class="categories-grid">
@@ -282,7 +282,7 @@ ${JSON.stringify(hubJsonLd, null, 2)}
 fs.writeFileSync(path.join(glossaryDir, 'index.html'), hubHtml, 'utf-8');
 console.log('Generated public/glossary/index.html');
 
-// 2. Generate 100 term pages in public/glossary/${slug}.html
+// 2. Generate 108 term pages in public/glossary/${slug}.html
 glossaryTerms.forEach((term, index) => {
   const prevTerm = index > 0 ? glossaryTerms[index - 1] : null;
   const nextTerm = index < glossaryTerms.length - 1 ? glossaryTerms[index + 1] : null;
@@ -820,17 +820,26 @@ for (const p of basePages) {
 // Add glossary hub
 sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-13</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
 
-// Add 100 glossary terms
+// Add 108 glossary terms
 glossaryTerms.forEach((term) => {
   let lastmod = '2026-11-07';
-  if (['conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens', 'enterprise-information-architecture', 'conceptual-schema', 'growth-design', 'product-led-growth-plg', 'accessibility-wcag', 'enterprise-ux-strategy', 'ltv-to-cac-ratio', 'progressive-disclosure'].includes(term.slug)) {
+  if ([
+    'conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens',
+    'enterprise-information-architecture', 'conceptual-schema', 'growth-design',
+    'product-led-growth-plg', 'accessibility-wcag', 'enterprise-ux-strategy',
+    'ltv-to-cac-ratio', 'progressive-disclosure',
+    // OOUX batch 2 new & updated terms
+    'ooux-ux-fails', 'object-prioritization', 'orca-relationship-requirements',
+    'junction-object', 'object-guide', 'cta-matrix', 'nested-object-matrix',
+    'noun-foraging', 'structural-navigation-model', 'domain-context-modeling',
+    'state-transition-matrix', 'cardinality-ux-architecture', 'object-mapping',
+    'orca-framework', 'object-oriented-ux'
+  ].includes(term.slug)) {
     lastmod = '2026-11-13';
-  } else if (term.slug === 'orca-framework' || term.slug === 'object-oriented-ux') {
-    lastmod = '2026-11-12';
   }
   sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
 });
 
 sitemapXml += '</urlset>\n';
 fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
-console.log('Regenerated public/sitemap.xml with 108 unique URLs!');
+console.log('Regenerated public/sitemap.xml with 116 unique URLs!');
