@@ -879,7 +879,7 @@ A relationship can exist in the model even when one role cannot see it or has no
     "relatedTerms": [
       "Information Architecture",
       "Wayfinding System",
-      "Conversion Funnel Architecture"
+      "Conversion Funnel"
     ],
     "seoTitle": "The Core Model: Inside-Out Information Architecture Guide",
     "sources": [
@@ -3870,7 +3870,7 @@ For the support example, measure time to a correct resolution, incorrect replies
     "howItWorks": "Formulated as Conversion Rate = (Conversions / Total Visitors) * 100. Teams isolate funnel friction, formulate behavioral hypotheses, and validate variations using controlled A/B testing.",
     "relatedTerms": [
       "A/B Testing (Split Testing)",
-      "Conversion Funnel Architecture",
+      "Conversion Funnel",
       "Checkout Flow Optimization",
       "Growth Design"
     ],
@@ -4017,10 +4017,11 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "id": "077",
     "name": "A/B Testing (Split Testing)",
     "slug": "ab-testing-split-testing",
+    "alternateName": ["A/B Testing","Split Testing"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.",
+    "definition": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
     "purpose": "Replaces internal stakeholder opinions with empirical behavioral evidence, mitigating financial and operational risks when deploying new product designs.",
     "keyConcepts": [
       "Control vs. variant",
@@ -4035,10 +4036,129 @@ Use usability testing and analytics to prioritize evident problems, such as brok
       "Feature Flag Strategy",
       "Product Telemetry & Analytics"
     ],
-    "seoTitle": "A/B Testing Guide for Product Designers: Statistical Rigor in UX",
+    "seoTitle": "A/B Testing in UX | Product Design Glossary",
+    "seoDescription": "Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html",
     "sources": [
-      "Ron Kohavi, Diane Tang, & Ya Xu, Trustworthy Online Controlled Experiments, Cambridge University Press",
-      "Optimizely Engineering"
+      "Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)",
+      "Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)",
+      "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research (https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/)"
+    ],
+    "contentMarkdown": `# A/B Testing (Split Testing)
+
+A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.
+
+## How do you plan a UX A/B test?
+
+Suppose new accounts draft an invoice but hesitate to send it because they cannot see what their client will receive. The team tests a preview that shows the invoice as the client would see it.
+
+| Decision | Example |
+|---|---|
+| Hypothesis | A preview helps more new accounts send a first real invoice by showing what the client will receive. |
+| Control and treatment | Group A sees the current experience. Group B gets an option to preview the invoice as the client would see it. |
+| Unit of randomization | Assign each eligible new account at signup so teammates use the same version. |
+| Primary metric | Percentage of assigned accounts that send a first real invoice within seven days. |
+| Guardrails | Accidental sends and invoice-related support requests per assigned account. |
+
+Before launch, agree on the smallest effect worth acting on, the sample and duration needed, and the analysis and stopping rules. Make sure each account has the full outcome window before the final analysis. In this example, the denominator includes all eligible assigned accounts, including accounts that never open the preview.
+
+## What should you check before reading the result?
+
+Verify that assignment and events work in both variants. Compare the observed group sizes with the planned allocation. A statistically significant difference between the observed and planned group proportions is a **sample ratio mismatch**. It can indicate problems with assignment, eligibility, or tracking. Diagnose it before interpreting the treatment effect.
+
+## How do you interpret an inconclusive test?
+
+Review the estimated difference and its uncertainty alongside guardrails. Suppose the estimated change is +2 percentage points, with a 95% confidence interval from −1 to +5 points. The interval spans both a decrease and an improvement. If those outcomes would lead to different decisions, the test has left the decision uncertain.
+
+Agree on the next step based on what is still unknown. Verify the implementation if data quality is in doubt. Revisit the hypothesis if users did not understand the preview. If you need a more precise estimate, plan a follow-up with enough traffic and a suitable analysis rule.
+
+## Related terms
+
+- [Continuous Experimentation](/glossary/continuous-experimentation.html)
+- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)
+- [Feature Flag Strategy](/glossary/feature-flag-strategy.html)
+- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)
+
+## Sources
+
+- [Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)
+- [Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)
+- [Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research](https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html",
+                "name": "A/B Testing in UX | Product Design Glossary",
+                "description": "Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+                      "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#term",
+                "name": "A/B Testing (Split Testing)",
+                "termCode": "ab-testing-split-testing",
+                "description": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
+                "url": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#webpage"
+                },
+                "alternateName": [
+                      "A/B Testing",
+                      "Split Testing"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "A/B Testing (Split Testing)",
+                            "item": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -4070,12 +4190,13 @@ Use usability testing and analytics to prioritize evident problems, such as brok
   },
   {
     "id": "079",
-    "name": "Conversion Funnel Architecture",
+    "name": "Conversion Funnel",
     "slug": "conversion-funnel-architecture",
+    "alternateName": ["Conversion Funnel Architecture"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Conversion Funnel Architecture is the deliberate structural sequencing of user steps—from initial acquisition through consideration, activation, and final transaction—engineered to minimize cognitive drop-off.",
+    "definition": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.",
     "purpose": "Visualizes and quantifies user friction across critical journey steps, highlighting operational bottlenecks that depress customer throughput.",
     "keyConcepts": [
       "Step drop-off rates",
@@ -4089,10 +4210,125 @@ Use usability testing and analytics to prioritize evident problems, such as brok
       "Checkout Flow Optimization",
       "Time-to-Value (TTV)"
     ],
-    "seoTitle": "Conversion Funnel Architecture: Mapping & Optimizing UX Drop-Off",
+    "seoTitle": "Conversion Funnel: Steps and Drop-Off | Product Design Glossary",
+    "seoDescription": "Learn how to build and read a conversion funnel. A travel quote example shows step conversion, overall conversion, and why denominators matter.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html",
     "sources": [
-      "Brian Balfour, Growth Loops and Funnels",
-      "Reforge Growth Series"
+      "Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en)",
+      "How Amplitude computes conversions through funnels, Amplitude Docs (https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions)"
+    ],
+    "contentMarkdown": `# Conversion Funnel
+
+A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.
+
+## How do you define the steps?
+
+Choose milestones you can identify reliably. Define who enters the funnel, what counts as completing each step, and how much time people have to progress. Decide whether participants must enter at the first step. In Google Analytics, a closed funnel starts at the first step, while an open funnel can admit users at later steps.
+
+Keep the unit consistent. For a travel quote funnel, count unique travelers across the steps and use linked records to follow the same request through qualification and booking. Specify what “qualified lead” means in your business before comparing results.
+
+## How do you calculate funnel conversion?
+
+Suppose 1,000 travelers view results. Count each traveler once per step if they complete that step in sequence within 30 days of entry. Qualification and booking must refer to the same quote request.
+
+| Step | Travelers reaching the step | Conversion from previous step |
+|---|---:|---:|
+| View results | 1,000 | — |
+| Submit quote request | 200 | 20% |
+| Have the request qualified | 80 | 40% |
+| Complete the booking | 20 | 25% |
+
+**Step conversion** divides a step’s count by the previous step’s count. Here, qualified lead to booking is 20 ÷ 80 = **25%**. **Overall conversion** divides the final count by the entry count. Here, results to booking is 20 ÷ 1,000 = **2%**. Label the denominator so readers can tell which part of the journey each rate describes.
+
+## What does drop-off tell you?
+
+The funnel shows where fewer people continue. It can reflect a design problem, a deliberate choice, or a business rule. In this example, travelers may choose to browse without requesting a quote, and some requests will fail qualification by design.
+
+Check tracking first, then investigate a promising step with research. For example, observe whether travelers understand what submitting a quote request commits them to. If you change the form, monitor completed bookings and lead quality as well as submissions. The funnel helps locate the question your research or experiment needs to answer.
+
+## Related terms
+
+- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)
+- [Checkout Flow Optimization](/glossary/checkout-flow-optimization.html)
+- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)
+
+## Sources
+
+- [Funnel exploration, Google Analytics Help](https://support.google.com/analytics/answer/9327974?hl=en)
+- [How Amplitude computes conversions through funnels, Amplitude Docs](https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html",
+                "name": "Conversion Funnel: Steps and Drop-Off | Product Design Glossary",
+                "description": "Learn how to build and read a conversion funnel. A travel quote example shows step conversion, overall conversion, and why denominators matter.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://support.google.com/analytics/answer/9327974?hl=en",
+                      "https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#term",
+                "name": "Conversion Funnel",
+                "termCode": "conversion-funnel-architecture",
+                "description": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.",
+                "url": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#webpage"
+                },
+                "alternateName": [
+                      "Conversion Funnel Architecture"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Conversion Funnel",
+                            "item": "https://lexkonovalov.com/glossary/conversion-funnel-architecture.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -4113,7 +4349,7 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "howItWorks": "Surfaces minimal input fields during initial user touchpoints, gathering secondary qualifying attributes dynamically over subsequent user sessions.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
-      "Conversion Funnel Architecture",
+      "Conversion Funnel",
       "Progressive Disclosure"
     ],
     "seoTitle": "Lead Capture Mechanics: Designing High-Converting Forms & UX",
@@ -4129,7 +4365,7 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Checkout Flow Optimization is the specialized UX practice of refining the final transactional, payment, and booking pathways of digital products to eliminate cart abandonment.",
+    "definition": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.",
     "purpose": "Protects bottom-of-the-funnel revenue realization by removing unexpected costs, cognitive distractions, payment friction, and form validation hurdles.",
     "keyConcepts": [
       "Frictionless payments",
@@ -4140,13 +4376,129 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "howItWorks": "Designers implement guest checkouts, native mobile wallet integrations, explicit cost breakdowns, and real-time input error handling.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
-      "Conversion Funnel Architecture",
+      "Conversion Funnel",
       "Operational UX"
     ],
-    "seoTitle": "Checkout Flow Optimization: Eliminating Transactional Cart Friction",
+    "seoTitle": "Checkout Flow Optimization | Product Design Glossary",
+    "seoDescription": "Improve checkout with clear totals, usable forms, and payment recovery. A travel booking example shows what to measure beyond payment attempts.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html",
     "sources": [
-      "Baymard Institute, E-Commerce Checkout Usability Studies",
-      "Stripe Checkout Architecture"
+      "Cart and Checkout Usability Research, Baymard Institute (https://baymard.com/research/checkout-usability)",
+      "How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages)",
+      "Payment UX, Baymard Institute (https://baymard.com/blog/payment-ux)",
+      "How PaymentIntents work, Stripe documentation (https://docs.stripe.com/payments/paymentintents/lifecycle)"
+    ],
+    "contentMarkdown": `# Checkout Flow Optimization
+
+Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.
+
+## What should you improve first?
+
+| Friction | What to check |
+|---|---|
+| Unexpected costs | Show the total, currency, and applicable charges before customers commit. Explain changes to price when they occur. |
+| Form errors | Label required fields and explain errors near the relevant input. Preserve valid details where safe so customers can correct the issue and continue. |
+| Payment failure | Explain the payment status and give a next action, such as trying another method after a confirmed decline. |
+| Unclear confirmation | Tell customers whether the order is confirmed or still processing, and show a reference when available. |
+
+Use checkout events to find where people stop. Observe users attempting that step to understand whether they are confused, blocked, or reconsidering the purchase. Fix the barrier you can verify before changing the number of screens.
+
+## Example of payment recovery in travel checkout
+
+A traveler has reviewed the trip total and entered passenger details. Their payment is declined. Keep the passenger details available, explain the decline in plain language, and let the traveler choose another payment method. If availability or price changed while they were paying, show the new details before asking them to commit again.
+
+A delayed response needs a different design. If the payment outcome is unknown, tell the traveler you are checking it and explain where they can see the result. Confirm the original attempt’s status before offering a retry. Keep payment and booking status distinct when the booking can still be pending after payment succeeds.
+
+## How do you measure checkout improvements?
+
+Define checkout entry and successful completion at the same unit, such as a booking attempt that can contain multiple payment retries. Count confirmed bookings per eligible checkout start within a defined window. Use payment failure and recovery rates to diagnose the outcome, then check duplicate charges, cancellations, and checkout-related support contacts as guardrails.
+
+Use a separate success event for the quote request. Submitting a request records interest. Confirming a booking records a completed purchase in this example.
+
+## Related terms
+
+- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)
+- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)
+- [Operational UX](/glossary/operational-ux.html)
+
+## Sources
+
+- [Cart and Checkout Usability Research, Baymard Institute](https://baymard.com/research/checkout-usability)
+- [How to Improve Validation Errors, Baymard Institute](https://baymard.com/research-articles/adaptive-validation-error-messages)
+- [Payment UX, Baymard Institute](https://baymard.com/blog/payment-ux)
+- [How PaymentIntents work, Stripe documentation](https://docs.stripe.com/payments/paymentintents/lifecycle)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html",
+                "name": "Checkout Flow Optimization | Product Design Glossary",
+                "description": "Improve checkout with clear totals, usable forms, and payment recovery. A travel booking example shows what to measure beyond payment attempts.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://baymard.com/research/checkout-usability",
+                      "https://baymard.com/research-articles/adaptive-validation-error-messages",
+                      "https://baymard.com/blog/payment-ux",
+                      "https://docs.stripe.com/payments/paymentintents/lifecycle"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#term",
+                "name": "Checkout Flow Optimization",
+                "termCode": "checkout-flow-optimization",
+                "description": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.",
+                "url": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Checkout Flow Optimization",
+                            "item": "https://lexkonovalov.com/glossary/checkout-flow-optimization.html"
+                      }
+                ]
+          }
     ]
   },
   {
@@ -4441,7 +4793,7 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
     "relatedTerms": [
       "Service Blueprinting",
       "Mental Model Mapping",
-      "Conversion Funnel Architecture"
+      "Conversion Funnel"
     ],
     "seoTitle": "Customer Journey Mapping: UX Research Methods & Blueprints",
     "sources": [
@@ -4655,7 +5007,7 @@ A design system supports consistent implementation, while a roadmap sequences th
     "howItWorks": "Users perform an action (e.g., posting content); the platform rewards them (e.g., social validation); this investment creates a new external trigger that pulls them back into the loop.",
     "relatedTerms": [
       "Product-Led Growth (PLG)",
-      "Conversion Funnel Architecture",
+      "Conversion Funnel",
       "Growth Design"
     ],
     "seoTitle": "B2C Engagement Loops: Behavioral UX Retention Models",
@@ -5085,7 +5437,7 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (\"Aha! moment\") within a specific timeframe.",
+    "definition": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
     "purpose": "Serves as the primary operational target for product onboarding teams, directly correlating with sustained long-term user retention.",
     "keyConcepts": [
       "\"Aha! moment\"",
@@ -5097,23 +5449,135 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
     "relatedTerms": [
       "Time-to-Value (TTV)",
       "Product-Led Growth (PLG)",
-      "Conversion Funnel Architecture",
+      "Conversion Funnel",
       "Product Telemetry & Analytics"
     ],
-    "seoTitle": "The Activation Metric: Defining the \"Aha! Moment\" in Onboarding",
+    "seoTitle": "Activation Metric and Rate | Product Design Glossary",
+    "seoDescription": "Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/activation-metric.html",
     "sources": [
-      "Chamath Palihapitiya, How We Put Facebook on the Path to 1 Billion Users",
-      "Reforge Retention Series"
+      "Mastering Engagement Playbook, Amplitude (https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf)",
+      "How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)",
+      "Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention)"
+    ],
+    "contentMarkdown": `# Activation Metric
+
+An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.
+
+## How do you choose an activation event?
+
+Start with the outcome people came for. In an invoicing product, account creation and opening a template are setup steps. Sending a first invoice is a stronger candidate when the product’s job is to help businesses bill their clients. If users can send test invoices, distinguish those from real ones in the event definition.
+
+Use research to check whether the action reflects progress users care about. Then use behavioral data to test whether it is associated with later meaningful use. Some products need a milestone made up of several actions. In a shared workspace, for example, value may depend on two people completing a task together.
+
+## How do you calculate activation rate?
+
+**Activation rate = eligible new users or accounts that reach the milestone within the window ÷ all eligible new users or accounts in the cohort × 100.**
+
+In the invoicing example, count new accounts that send a first real invoice within seven days of signup. If 120 of 200 eligible accounts do so, seven-day activation is **60%**. Count each account once, including accounts where several teammates send invoices. Report the cohort after every account has had seven days to activate.
+
+## How do you validate the milestone?
+
+Compare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.
+
+An association can help you choose a milestone. It cannot establish that prompting the action will improve retention. Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.
+
+Read activation rate alongside [time to value](/glossary/time-to-value-ttv.html). One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.
+
+## Related terms
+
+- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)
+- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)
+
+## Sources
+
+- [Mastering Engagement Playbook, Amplitude](https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf)
+- [How Amplitude calculates retention](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)
+- [Time to Value, Amplitude](https://amplitude.com/blog/time-to-value-drives-user-retention)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/activation-metric.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/activation-metric.html",
+                "name": "Activation Metric and Rate | Product Design Glossary",
+                "description": "Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/activation-metric.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/activation-metric.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf",
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation",
+                      "https://amplitude.com/blog/time-to-value-drives-user-retention"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/activation-metric.html#term",
+                "name": "Activation Metric",
+                "termCode": "activation-metric",
+                "description": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
+                "url": "https://lexkonovalov.com/glossary/activation-metric.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/activation-metric.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/activation-metric.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Activation Metric",
+                            "item": "https://lexkonovalov.com/glossary/activation-metric.html"
+                      }
+                ]
+          }
     ]
   },
   {
     "id": "097",
     "name": "Time-to-Value (TTV)",
     "slug": "time-to-value-ttv",
+    "alternateName": ["Time to Value","TTV"],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Time-to-Value (TTV) measures the elapsed duration—in steps, clicks, or minutes—from a user's initial account creation to their first realization of tangible product value.",
+    "definition": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.",
     "purpose": "Reduces early abandonment by eliminating friction, unnecessary setup steps, and cognitive hurdles during onboarding.",
     "keyConcepts": [
       "Friction reduction",
@@ -5127,10 +5591,124 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
       "Product-Led Growth (PLG)",
       "Progressive Disclosure"
     ],
-    "seoTitle": "Time-to-Value (TTV) in UX: Accelerating User Onboarding",
+    "seoTitle": "Time to Value (TTV) | Product Design Glossary",
+    "seoDescription": "Learn how to measure time to value from a defined start to a meaningful outcome, and why to report it alongside the share that reaches value.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/time-to-value-ttv.html",
     "sources": [
-      "Wes Bush, The Product-Led Playbook",
-      "Samuel Hulick, UserOnboard: The Elements of User Onboarding"
+      "Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention)",
+      "How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)"
+    ],
+    "contentMarkdown": `# Time-to-Value (TTV)
+
+Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.
+
+## How do you measure time to value?
+
+Define the unit, start, and end. In an invoicing tool, the unit might be a new account, the start might be signup, and the end might be the first real invoice sent. For an account that signs up at 9 a.m. and sends its first invoice at 3 p.m. that day, TTV is **six hours**.
+
+Choose an endpoint that reflects value for your users. If your product uses the first invoice sent as its [activation event](/glossary/activation-metric.html), time to activation and your operational measure of TTV use the same timestamps. If activation measures an earlier setup milestone, document the difference.
+
+## Why report time alongside activation rate?
+
+Suppose you compare two signup cohorts, each with 200 accounts and seven full days of observation.
+
+| Cohort | Sent a real invoice within seven days | Median time among those accounts |
+|---|---:|---:|
+| Earlier cohort | 120 of 200 (60%) | 24 hours |
+| Later cohort | 100 of 200 (50%) | 12 hours |
+
+In the later cohort, the median was lower among accounts that sent an invoice. Fewer accounts reached the milestone overall. Accounts that never sent an invoice within seven days are excluded from both medians and remain in the activation-rate denominator. Compare both figures using the same eligibility rules and observation window.
+
+## How can design reduce time to value?
+
+Observe where people spend time before the milestone. A delay may come from the interface, missing information, or work that needs to happen outside the product. In the invoicing example, users might pause because they cannot see what a client will receive. A preview can help them check the invoice before sending.
+
+Track the outcome after a change. A shorter setup flow can save clicks without changing elapsed time. Check for accidental sends and track the share of new accounts reaching the milestone.
+
+## Related terms
+
+- [Activation Metric](/glossary/activation-metric.html)
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Progressive Disclosure](/glossary/progressive-disclosure.html)
+
+## Sources
+
+- [Time to Value, Amplitude](https://amplitude.com/blog/time-to-value-drives-user-retention)
+- [How Amplitude calculates retention](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)`,
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/time-to-value-ttv.html",
+                "name": "Time to Value (TTV) | Product Design Glossary",
+                "description": "Learn how to measure time to value from a defined start to a meaningful outcome, and why to report it alongside the share that reaches value.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://amplitude.com/blog/time-to-value-drives-user-retention",
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#term",
+                "name": "Time-to-Value (TTV)",
+                "termCode": "time-to-value-ttv",
+                "description": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.",
+                "url": "https://lexkonovalov.com/glossary/time-to-value-ttv.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#webpage"
+                },
+                "alternateName": [
+                      "Time to Value",
+                      "TTV"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/time-to-value-ttv.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Time-to-Value (TTV)",
+                            "item": "https://lexkonovalov.com/glossary/time-to-value-ttv.html"
+                      }
+                ]
+          }
     ]
   },
   {

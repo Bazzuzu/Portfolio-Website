@@ -833,7 +833,10 @@ glossaryTerms.forEach((term) => {
     'junction-object', 'object-guide', 'cta-matrix', 'nested-object-matrix',
     'noun-foraging', 'structural-navigation-model', 'domain-context-modeling',
     'state-transition-matrix', 'cardinality-ux-architecture', 'object-mapping',
-    'orca-framework', 'object-oriented-ux'
+    'orca-framework', 'object-oriented-ux',
+    // Growth & Strategy batch
+    'activation-metric', 'checkout-flow-optimization', 'conversion-funnel-architecture',
+    'ab-testing-split-testing', 'time-to-value-ttv'
   ].includes(term.slug)) {
     lastmod = '2026-11-13';
   }

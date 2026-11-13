@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A/B Testing Guide for Product Designers: Statistical Rigor in UX</title>
-  <meta name="description" content="A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.">
+  <title>A/B Testing in UX | Product Design Glossary</title>
+  <meta name="description" content="Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/ab-testing-split-testing.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="A/B Testing Guide for Product Designers: Statistical Rigor in UX">
-  <meta property="og:description" content="A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.">
+  <meta property="og:title" content="A/B Testing in UX | Product Design Glossary">
+  <meta property="og:description" content="Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/ab-testing-split-testing.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="A/B Testing Guide for Product Designers: Statistical Rigor in UX">
-  <meta name="twitter:description" content="A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.">
+  <meta name="twitter:title" content="A/B Testing in UX | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,54 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html",
+      "name": "A/B Testing in UX | Product Design Glossary",
+      "description": "Learn how to plan and interpret a UX A/B test. A practical example covers random assignment, success metrics, guardrails, and inconclusive results.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+        "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#term",
       "name": "A/B Testing (Split Testing)",
       "termCode": "ab-testing-split-testing",
-      "description": "A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.",
+      "description": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
+      "url": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/ab-testing-split-testing.html#webpage"
+      },
+      "alternateName": [
+        "A/B Testing",
+        "Split Testing"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +421,71 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.</p>
-      </section>
+    <p class="glossary-term-section__text">A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-plan-a-ux-a-b-test">
+<h2 id="section-how-do-you-plan-a-ux-a-b-test" class="glossary-term-section__title">How do you plan a UX A/B test?</h2>
+<p class="glossary-term-section__text">Suppose new accounts draft an invoice but hesitate to send it because they cannot see what their client will receive. The team tests a preview that shows the invoice as the client would see it.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Decision</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothesis</td>
+<td>A preview helps more new accounts send a first real invoice by showing what the client will receive.</td>
+</tr>
+<tr>
+<td>Control and treatment</td>
+<td>Group A sees the current experience. Group B gets an option to preview the invoice as the client would see it.</td>
+</tr>
+<tr>
+<td>Unit of randomization</td>
+<td>Assign each eligible new account at signup so teammates use the same version.</td>
+</tr>
+<tr>
+<td>Primary metric</td>
+<td>Percentage of assigned accounts that send a first real invoice within seven days.</td>
+</tr>
+<tr>
+<td>Guardrails</td>
+<td>Accidental sends and invoice-related support requests per assigned account.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Before launch, agree on the smallest effect worth acting on, the sample and duration needed, and the analysis and stopping rules. Make sure each account has the full outcome window before the final analysis. In this example, the denominator includes all eligible assigned accounts, including accounts that never open the preview.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-you-check-before-reading-the-result">
+<h2 id="section-what-should-you-check-before-reading-the-result" class="glossary-term-section__title">What should you check before reading the result?</h2>
+<p class="glossary-term-section__text">Verify that assignment and events work in both variants. Compare the observed group sizes with the planned allocation. A statistically significant difference between the observed and planned group proportions is a <strong>sample ratio mismatch</strong>. It can indicate problems with assignment, eligibility, or tracking. Diagnose it before interpreting the treatment effect.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-interpret-an-inconclusive-test">
+<h2 id="section-how-do-you-interpret-an-inconclusive-test" class="glossary-term-section__title">How do you interpret an inconclusive test?</h2>
+<p class="glossary-term-section__text">Review the estimated difference and its uncertainty alongside guardrails. Suppose the estimated change is +2 percentage points, with a 95% confidence interval from −1 to +5 points. The interval spans both a decrease and an improvement. If those outcomes would lead to different decisions, the test has left the decision uncertain.</p>
+<p class="glossary-term-section__text">Agree on the next step based on what is still unknown. Verify the implementation if data quality is in doubt. Revisit the hypothesis if users did not understand the preview. If you need a more precise estimate, plan a follow-up with enough traffic and a suitable analysis rule.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
+<li><a href="/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li>
+<li><a href="/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li>
+<li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/" target="_blank" rel="noopener noreferrer">Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Replaces internal stakeholder opinions with empirical behavioral evidence, mitigating financial and operational risks when deploying new product designs.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Control vs. variant</span><span class="concept-tag">statistical significance (p-value)</span><span class="concept-tag">sample size power</span><span class="concept-tag">minimum detectable effect (MDE)</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Traffic is split randomly by experimentation routing engines; user interactions are tracked, and statistical hypothesis tests evaluate metric differentials.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li><li><a href="/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li><li><a href="/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li><li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry &amp; Analytics</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Ron Kohavi, Diane Tang, &amp; Ya Xu, Trustworthy Online Controlled Experiments, Cambridge University Press</li><li>Optimizely Engineering</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

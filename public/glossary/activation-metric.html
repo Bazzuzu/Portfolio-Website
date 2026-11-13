@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Activation Metric: Defining the &quot;Aha! Moment&quot; in Onboarding</title>
-  <meta name="description" content="An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (&quot;Aha! moment&quot;) within a specific timeframe.">
+  <title>Activation Metric and Rate | Product Design Glossary</title>
+  <meta name="description" content="Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/activation-metric.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Activation Metric: Defining the &quot;Aha! Moment&quot; in Onboarding">
-  <meta property="og:description" content="An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (&quot;Aha! moment&quot;) within a specific timeframe.">
+  <meta property="og:title" content="Activation Metric and Rate | Product Design Glossary">
+  <meta property="og:description" content="Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/activation-metric.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Activation Metric: Defining the &quot;Aha! Moment&quot; in Onboarding">
-  <meta name="twitter:description" content="An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (&quot;Aha! moment&quot;) within a specific timeframe.">
+  <meta name="twitter:title" content="Activation Metric and Rate | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/activation-metric.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/activation-metric.html",
+      "name": "Activation Metric and Rate | Product Design Glossary",
+      "description": "Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/activation-metric.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/activation-metric.html#breadcrumbs"
+      },
+      "citation": [
+        "https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf",
+        "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation",
+        "https://amplitude.com/blog/time-to-value-drives-user-retention"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/activation-metric.html#term",
       "name": "Activation Metric",
       "termCode": "activation-metric",
-      "description": "An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (\"Aha! moment\") within a specific timeframe.",
+      "description": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
+      "url": "https://lexkonovalov.com/glossary/activation-metric.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/activation-metric.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/activation-metric.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product (&quot;Aha! moment&quot;) within a specific timeframe.</p>
-      </section>
+    <p class="glossary-term-section__text">An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-choose-an-activation-event">
+<h2 id="section-how-do-you-choose-an-activation-event" class="glossary-term-section__title">How do you choose an activation event?</h2>
+<p class="glossary-term-section__text">Start with the outcome people came for. In an invoicing product, account creation and opening a template are setup steps. Sending a first invoice is a stronger candidate when the product’s job is to help businesses bill their clients. If users can send test invoices, distinguish those from real ones in the event definition.</p>
+<p class="glossary-term-section__text">Use research to check whether the action reflects progress users care about. Then use behavioral data to test whether it is associated with later meaningful use. Some products need a milestone made up of several actions. In a shared workspace, for example, value may depend on two people completing a task together.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-activation-rate">
+<h2 id="section-how-do-you-calculate-activation-rate" class="glossary-term-section__title">How do you calculate activation rate?</h2>
+<p class="glossary-term-section__text"><strong>Activation rate = eligible new users or accounts that reach the milestone within the window ÷ all eligible new users or accounts in the cohort × 100.</strong></p>
+<p class="glossary-term-section__text">In the invoicing example, count new accounts that send a first real invoice within seven days of signup. If 120 of 200 eligible accounts do so, seven-day activation is <strong>60%</strong>. Count each account once, including accounts where several teammates send invoices. Report the cohort after every account has had seven days to activate.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-validate-the-milestone">
+<h2 id="section-how-do-you-validate-the-milestone" class="glossary-term-section__title">How do you validate the milestone?</h2>
+<p class="glossary-term-section__text">Compare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.</p>
+<p class="glossary-term-section__text">An association can help you choose a milestone. It cannot establish that prompting the action will improve retention. Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.</p>
+<p class="glossary-term-section__text">Read activation rate alongside <a href="/glossary/time-to-value-ttv.html">time to value</a>. One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li>
+<li><a href="/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
+<li><a href="/glossary/conversion-funnel-architecture.html">Conversion Funnel</a></li>
+<li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf" target="_blank" rel="noopener noreferrer">Mastering Engagement Playbook, Amplitude</a></li>
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How Amplitude calculates retention</a></li>
+<li><a href="https://amplitude.com/blog/time-to-value-drives-user-retention" target="_blank" rel="noopener noreferrer">Time to Value, Amplitude</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Serves as the primary operational target for product onboarding teams, directly correlating with sustained long-term user retention.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">&quot;Aha! moment&quot;</span><span class="concept-tag">early behavioral threshold</span><span class="concept-tag">onboarding milestone</span><span class="concept-tag">retention correlation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Data teams correlate early user actions with 90-day retention curves, discovering leading indicators (e.g., Slack&#039;s &quot;2,000 messages sent&quot; or Facebook&#039;s &quot;7 friends in 10 days&quot;).</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li><li><a href="/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li><li><a href="/glossary/conversion-funnel-architecture.html">Conversion Funnel Architecture</a></li><li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry &amp; Analytics</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Chamath Palihapitiya, How We Put Facebook on the Path to 1 Billion Users</li><li>Reforge Retention Series</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">
