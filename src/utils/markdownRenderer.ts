@@ -13,7 +13,27 @@ export function renderMarkdownToHtml(markdown: string): string {
   let olItems: string[] = [];
   let inUl = false;
   let ulItems: string[] = [];
+  let inCodeBlock = false;
+  let codeBlockLang = '';
+  let codeBlockLines: string[] = [];
   let sectionOpen = false;
+
+  const flushCodeBlock = () => {
+    if (!inCodeBlock) return;
+    const escapedCode = codeBlockLines
+      .join('\n')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+    htmlParts.push(
+      `<div class="glossary-code-block-wrapper">\n<pre class="glossary-code-block"><code${
+        codeBlockLang ? ` class="language-${codeBlockLang}"` : ''
+      }>${escapedCode}</code></pre>\n</div>\n`
+    );
+    inCodeBlock = false;
+    codeBlockLang = '';
+    codeBlockLines = [];
+  };
 
   const flushTable = () => {
     if (!inTable) return;
@@ -83,6 +103,24 @@ export function renderMarkdownToHtml(markdown: string): string {
     const rawLine = lines[i];
     const line = rawLine.trim();
 
+    // Check code blocks first so empty lines inside fenced blocks are preserved
+    if (inCodeBlock) {
+      if (line.startsWith('```')) {
+        flushCodeBlock();
+      } else {
+        codeBlockLines.push(rawLine);
+      }
+      continue;
+    }
+
+    if (line.startsWith('```')) {
+      flushListsAndTables();
+      inCodeBlock = true;
+      codeBlockLang = line.slice(3).trim();
+      codeBlockLines = [];
+      continue;
+    }
+
     if (!line) {
       flushListsAndTables();
       continue;
@@ -149,6 +187,7 @@ export function renderMarkdownToHtml(markdown: string): string {
     htmlParts.push(`<p class="glossary-term-section__text">${formatInline(line)}</p>\n`);
   }
 
+  flushCodeBlock();
   flushListsAndTables();
   if (sectionOpen) {
     htmlParts.push('</section>\n');

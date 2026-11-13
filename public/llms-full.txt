@@ -413,13 +413,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/enterprise-information-architecture.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.
+- **Definition:** Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.
 - **Purpose:** Prevents operational silos, fractured data views, and enterprise friction by harmonizing disparate business software suites under coherent navigation and semantic models.
 - **Key Concepts:** Multi-tenancy, unified metadata models, access-level scoping, distributed ontologies.
 - **How It Works:** Integrates corporate domain schemas with role-based access models, deploying centralized taxonomies and modular interaction patterns across business suites.
-- **Related Terms:** Information Architecture, Domain Context Modeling, Controlled Vocabulary, Operational UX
-- **SEO Title:** Enterprise Information Architecture: Scaling Enterprise UX
-- **Sources:** Peter Morville, Interconnected Systems, Semantic Studios; Eric Evans, Domain-Driven Design
+- **Related Terms:** Information Architecture (IA), Domain Context Modeling, Controlled Vocabulary, Operational UX
+- **SEO Title:** Enterprise Information Architecture | Product Design Glossary
+- **Sources:** Introduction to SharePoint information architecture, Microsoft (https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience); Intranet Information Architecture (IA) Trends, Nielsen Norman Group (https://www.nngroup.com/articles/intranet-information-architecture-ia/); Information architecture consulting, Peter Morville / Semantic Studios (https://semanticstudios.com/consulting/)
 
 #### 009. Mental Model Mapping
 - **URL:** https://lexkonovalov.com/glossary/mental-model-mapping.html
@@ -641,13 +641,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/design-tokens.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.
+- **Definition:** Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.
 - **Purpose:** Serves as the single source of truth for design variables, automating synchronization across design tools, Web, iOS, and Android production repositories.
 - **Key Concepts:** Name-value pairs, platform agnosticism, automation pipelines, single source of truth.
 - **How It Works:** Designers update token values in design tools; build engines consume the JSON schema and compile native CSS variables, Swift constants, or Android XML files.
-- **Related Terms:** Design Tokens Format Module (DTCG), Semantic Tokens, Design Primitives, Style Dictionary
-- **SEO Title:** Design Tokens Explained: Architecture, Syncing, and Code Setup
-- **Sources:** Jina Anne, Design Tokens Basics; W3C Design Tokens Community Group, Design Tokens Specification
+- **Related Terms:** Design System, Semantic Tokens, Design Primitives, Style Dictionary, Design Tokens Format Module (DTCG)
+- **SEO Title:** Design Tokens: Definition & Examples | Product Design Glossary
+- **Sources:** Design tokens explained, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Design Tokens Format Module 2025.10, Design Tokens Community Group (https://www.designtokens.org/tr/2025.10/format/); Style Dictionary documentation (https://styledictionary.com/)
 
 #### 028. Design Tokens Format Module (DTCG)
 - **URL:** https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html
@@ -1073,13 +1073,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/ai-native-design.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Coined / Interpretive
-- **Definition:** AI-native Design is the holistic discipline of conceptualizing products around probabilistic machine reasoning and generative capabilities from inception, rather than bolting chat widgets onto legacy software.
+- **Definition:** AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.
 - **Purpose:** Creates novel human-computer interaction paradigms that leverage autonomy, context awareness, and dynamic interfaces to solve previously intractable workflow challenges.
 - **Key Concepts:** Probabilistic interactions, ambient context, variable UI layouts, intent over navigation.
 - **How It Works:** Designers construct experiences where user intent replaces rigid navigational trees, pairing dynamic generative canvases with system constraints and telemetry.
 - **Related Terms:** Generative UI, Agentic UX, Design Harness, Operational UX
-- **SEO Title:** AI-Native Product Design: Interaction Paradigms for Tomorrow
-- **Sources:** Samin, Design Harness, Medium; Chris Noessel, Designing Agentive Technology, Rosenfeld Media
+- **SEO Title:** AI-native Design: Meaning & Example | Product Design Glossary
+- **Sources:** User Needs + Defining Success, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/); Mental Models, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/); Guidelines for Human-AI Interaction, Microsoft HAX Design Library (https://www.microsoft.com/en-us/haxtoolkit/library/); Errors + Graceful Failure, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)
 
 #### 064. Vibe Coding
 - **URL:** https://lexkonovalov.com/glossary/vibe-coding.html
@@ -1229,13 +1229,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Conversion Rate Optimization (CRO) is the systematic, data-informed practice of improving digital product experiences to increase the percentage of users who complete a target business action.
+- **Definition:** Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.
 - **Purpose:** Increases revenue generation efficiency and customer acquisition ROI without requiring additional marketing or acquisition spend.
 - **Key Concepts:** Conversion rate formula, baseline analytics, heuristic evaluation, iterative testing.
 - **How It Works:** Formulated as Conversion Rate = (Conversions / Total Visitors) * 100. Teams isolate funnel friction, formulate behavioral hypotheses, and validate variations using controlled A/B testing.
 - **Related Terms:** A/B Testing (Split Testing), Conversion Funnel Architecture, Checkout Flow Optimization, Growth Design
-- **SEO Title:** Conversion Rate Optimization (CRO) Principles for UX Designers
-- **Sources:** Peep Laja, Conversion Optimization, CXL; Bryan Eisenberg, Always Be Testing
+- **SEO Title:** Conversion Rate Optimization (CRO) | Product Design Glossary
+- **Sources:** Conversion rate optimization, Optimizely (https://www.optimizely.com/optimization-glossary/conversion-rate-optimization); Analytics dimensions and metrics, Google Analytics (https://support.google.com/analytics/table/13948007?hl=en); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
 #### 077. A/B Testing (Split Testing)
 - **URL:** https://lexkonovalov.com/glossary/ab-testing-split-testing.html

@@ -498,6 +498,45 @@ ${JSON.stringify(termJsonLd, null, 2)}
     .glossary-table tr:hover td {
       background: #faf9f6;
     }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
     .glossary-term-ol {
       margin: 0 0 24px;
       padding-left: 24px;
@@ -697,12 +736,16 @@ for (const p of basePages) {
 }
 
 // Add glossary hub
-sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-13</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
 
 // Add 100 glossary terms
 glossaryTerms.forEach((term) => {
-  // Use 2026-11-12 for recently enhanced terms, 2026-11-07 for canonical batch
-  const lastmod = (term.slug === 'orca-framework' || term.slug === 'object-oriented-ux') ? '2026-11-12' : '2026-11-07';
+  let lastmod = '2026-11-07';
+  if (['conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens', 'enterprise-information-architecture'].includes(term.slug)) {
+    lastmod = '2026-11-13';
+  } else if (term.slug === 'orca-framework' || term.slug === 'object-oriented-ux') {
+    lastmod = '2026-11-12';
+  }
   sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
 });
 

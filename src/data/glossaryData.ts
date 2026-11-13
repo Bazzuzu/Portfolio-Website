@@ -533,10 +533,14 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "id": "008",
     "name": "Enterprise Information Architecture",
     "slug": "enterprise-information-architecture",
+    "alternateName": [
+      "Enterprise IA",
+      "EIA"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.",
+    "definition": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
     "purpose": "Prevents operational silos, fractured data views, and enterprise friction by harmonizing disparate business software suites under coherent navigation and semantic models.",
     "keyConcepts": [
       "Multi-tenancy",
@@ -546,15 +550,152 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     ],
     "howItWorks": "Integrates corporate domain schemas with role-based access models, deploying centralized taxonomies and modular interaction patterns across business suites.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Domain Context Modeling",
       "Controlled Vocabulary",
       "Operational UX"
     ],
-    "seoTitle": "Enterprise Information Architecture: Scaling Enterprise UX",
+    "seoTitle": "Enterprise Information Architecture | Product Design Glossary",
+    "seoDescription": "Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
     "sources": [
-      "Peter Morville, Interconnected Systems, Semantic Studios",
-      "Eric Evans, Domain-Driven Design"
+      "Introduction to SharePoint information architecture, Microsoft (https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience)",
+      "Intranet Information Architecture (IA) Trends, Nielsen Norman Group (https://www.nngroup.com/articles/intranet-information-architecture-ia/)",
+      "Information architecture consulting, Peter Morville / Semantic Studios (https://semanticstudios.com/consulting/)"
+    ],
+    "contentMarkdown": `# Enterprise Information Architecture
+
+Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.
+
+In UX practice, this includes intranets, employee portals, and business applications. Teams coordinate definitions across owners and workflows: the same customer, policy, or expense claim may appear in several places.
+
+## What does enterprise information architecture include?
+
+| Area | Question it answers |
+|---|---|
+| Shared vocabulary | Do teams mean the same thing by “customer,” “account,” or “approved”? |
+| Taxonomy and metadata | How is information classified, described, filtered, and retrieved? |
+| Objects and relationships | How do records connect to people, documents, and other records? |
+| Navigation and search | How can users reach information across products and repositories? |
+| Governance | Who owns definitions, resolves conflicts, and maintains the structure? |
+
+Access rules also shape what different users can find and see. Shared definitions can support different role-specific views without requiring every team to use the same navigation.
+
+## An enterprise IA example: expense claims
+
+Consider an illustrative employee portal connected to an expense system. An employee submits Claim #482; a manager reviews it; finance processes reimbursement.
+
+The team defines one claim identifier and distinguishes **Submitted**, **Approved**, and **Paid**. Approval means the manager accepted the claim; payment means reimbursement was completed. That distinction needs to remain clear wherever the claim appears.
+
+| User | Entry point | Information needed |
+|---|---|---|
+| Employee | My expenses | Claim status, receipts, and payment date |
+| Manager | Claims awaiting approval | Amount, policy, and supporting receipts |
+| Finance | Approved claims | Payment details and reimbursement status |
+
+These views refer to the same claim. Links connect it to its receipts and the relevant policy. Metadata such as owner, date, and status supports search and filtering.
+
+An assigned owner maintains the status definitions and checks how changes affect each system.
+
+## How do you start?
+
+Start with one task that crosses a team or system boundary. Interview the people involved, inventory the records and content they use, and note conflicting labels or duplicate sources.
+
+Agree on definitions and ownership with domain experts. Identify the authoritative source for each record or policy. Then prototype navigation, search results, and record relationships. Use card sorting to explore groupings, tree testing to check findability, and usability testing to evaluate the complete task.
+
+Measure whether people find the right information and complete the task accurately. Search failures, wrong destinations, and time spent locating records can reveal structural problems.
+
+## How is enterprise IA different from a sitemap?
+
+A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning, metadata, relationships, and ownership across systems. One deliverable might be a sitemap; others include a vocabulary, taxonomy, content model, or governance plan. The appropriate structure depends on users’ work and the information involved.
+
+## Related terms
+
+- [Information Architecture (IA)](/glossary/information-architecture.html)
+- [Domain Context Modeling](/glossary/domain-context-modeling.html)
+- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)
+- [Operational UX](/glossary/operational-ux.html)
+
+## Sources
+
+- [Introduction to SharePoint information architecture, Microsoft](https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience)
+- [Intranet Information Architecture (IA) Trends, Nielsen Norman Group](https://www.nngroup.com/articles/intranet-information-architecture-ia/)
+- [Information architecture consulting, Peter Morville / Semantic Studios](https://semanticstudios.com/consulting/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
+        "name": "Enterprise Information Architecture | Product Design Glossary",
+        "description": "Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs"
+        },
+        "citation": [
+          "https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience",
+          "https://www.nngroup.com/articles/intranet-information-architecture-ia/",
+          "https://semanticstudios.com/consulting/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term",
+        "name": "Enterprise Information Architecture",
+        "alternateName": [
+          "Enterprise IA",
+          "EIA"
+        ],
+        "termCode": "enterprise-information-architecture",
+        "description": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
+        "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Enterprise Information Architecture",
+            "item": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1058,10 +1199,13 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "id": "027",
     "name": "Design Tokens",
     "slug": "design-tokens",
+    "alternateName": [
+      "Design token"
+    ],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.",
+    "definition": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
     "purpose": "Serves as the single source of truth for design variables, automating synchronization across design tools, Web, iOS, and Android production repositories.",
     "keyConcepts": [
       "Name-value pairs",
@@ -1071,15 +1215,160 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     ],
     "howItWorks": "Designers update token values in design tools; build engines consume the JSON schema and compile native CSS variables, Swift constants, or Android XML files.",
     "relatedTerms": [
-      "Design Tokens Format Module (DTCG)",
+      "Design System",
       "Semantic Tokens",
       "Design Primitives",
-      "Style Dictionary"
+      "Style Dictionary",
+      "Design Tokens Format Module (DTCG)"
     ],
-    "seoTitle": "Design Tokens Explained: Architecture, Syncing, and Code Setup",
+    "seoTitle": "Design Tokens: Definition & Examples | Product Design Glossary",
+    "seoDescription": "Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-tokens.html",
     "sources": [
-      "Jina Anne, Design Tokens Basics",
-      "W3C Design Tokens Community Group, Design Tokens Specification"
+      "Design tokens explained, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/)",
+      "Design Tokens Format Module 2025.10, Design Tokens Community Group (https://www.designtokens.org/tr/2025.10/format/)",
+      "Style Dictionary documentation (https://styledictionary.com/)"
+    ],
+    "contentMarkdown": `# Design Tokens
+
+Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.
+
+For example, a component can use a token named \`color.text.link\` instead of choosing a color independently. The name describes the intended use; its value can change with the theme.
+
+## What are primitive, semantic, and component tokens?
+
+Many design systems organize tokens into these layers. The naming and number of layers vary by system.
+
+| Layer | Illustrative name | Role |
+|---|---|---|
+| Primitive | \`color.blue.600\` | Stores a base palette value. |
+| Semantic | \`color.text.link\` | Assigns a value to a purpose. |
+| Component | \`button.primary.background\` | Applies a decision to a specific component. |
+
+A semantic token can reference a primitive through an alias. For example, \`color.text.link\` might reference \`color.blue.600\` in a light theme and a lighter blue in a dark theme. Components continue to use the semantic name. Check the resulting contrast in each context.
+
+## A simple design token example
+
+This example uses the DTCG 2025.10 format to define a spacing value and a token for card padding:
+
+\`\`\`json
+{
+  "space": {
+    "200": {
+      "$type": "dimension",
+      "$value": { "value": 8, "unit": "px" }
+    }
+  },
+  "card": {
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.200}"
+    }
+  }
+}
+\`\`\`
+
+\`card.padding\` resolves to 8 pixels through its reference to \`space.200\`. To increase only card padding, point \`card.padding\` to a different spacing token. Changing \`space.200\` itself affects every token that references it. The names and values are illustrative.
+
+## How do tokens get from design to code?
+
+A team maintains token definitions in an agreed source, reviews changes, and uses tooling to produce the formats each platform needs. A tool such as Style Dictionary can transform token data into CSS, JavaScript, or native platform resources.
+
+CSS custom properties and Figma variables can represent tokens in their respective environments. A shared naming scheme, compatible tooling, and an explicit release process connect them. Tokens themselves do not automatically synchronize design files and production code.
+
+## Do design tokens have to use JSON?
+
+Tokens are a design-system concept; the DTCG specification defines a JSON format for exchanging them between tools. The stable 2025.10 Format Module specifies types, values, groups, and references. It is a Community Group specification, not a W3C Standard.
+
+Start with decisions that repeat across the interface. Document intended usage and check affected components before releasing changes. Add layers when they solve a concrete reuse or maintenance problem.
+
+## Related terms
+
+- [Design System](/glossary/design-system.html)
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+- [Design Primitives](/glossary/design-primitives.html)
+- [Style Dictionary](/glossary/style-dictionary.html)
+- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)
+
+## Sources
+
+- [Design tokens explained, Atlassian Design System](https://atlassian.design/foundations/tokens/design-tokens/)
+- [Design Tokens Format Module 2025.10, Design Tokens Community Group](https://www.designtokens.org/tr/2025.10/format/)
+- [Style Dictionary documentation](https://styledictionary.com/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-tokens.html",
+        "name": "Design Tokens: Definition & Examples | Product Design Glossary",
+        "description": "Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs"
+        },
+        "citation": [
+          "https://atlassian.design/foundations/tokens/design-tokens/",
+          "https://www.designtokens.org/tr/2025.10/format/",
+          "https://styledictionary.com/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term",
+        "name": "Design Tokens",
+        "alternateName": [
+          "Design token"
+        ],
+        "termCode": "design-tokens",
+        "description": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
+        "url": "https://lexkonovalov.com/glossary/design-tokens.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design Tokens",
+            "item": "https://lexkonovalov.com/glossary/design-tokens.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -2071,10 +2360,13 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "id": "063",
     "name": "AI-native Design",
     "slug": "ai-native-design",
+    "alternateName": [
+      "AI-native product design"
+    ],
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Coined / Interpretive",
-    "definition": "AI-native Design is the holistic discipline of conceptualizing products around probabilistic machine reasoning and generative capabilities from inception, rather than bolting chat widgets onto legacy software.",
+    "definition": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
     "purpose": "Creates novel human-computer interaction paradigms that leverage autonomy, context awareness, and dynamic interfaces to solve previously intractable workflow challenges.",
     "keyConcepts": [
       "Probabilistic interactions",
@@ -2089,10 +2381,144 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
       "Design Harness",
       "Operational UX"
     ],
-    "seoTitle": "AI-Native Product Design: Interaction Paradigms for Tomorrow",
+    "seoTitle": "AI-native Design: Meaning & Example | Product Design Glossary",
+    "seoDescription": "Understand AI-native product design with a support-workflow example: define AI’s role, give users control, handle errors, and measure useful outcomes.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-native-design.html",
     "sources": [
-      "Samin, Design Harness, Medium",
-      "Chris Noessel, Designing Agentive Technology, Rosenfeld Media"
+      "User Needs + Defining Success, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/)",
+      "Mental Models, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/)",
+      "Guidelines for Human-AI Interaction, Microsoft HAX Design Library (https://www.microsoft.com/en-us/haxtoolkit/library/)",
+      "Errors + Graceful Failure, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)"
+    ],
+    "contentMarkdown": `# AI-native Design
+
+AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.
+
+The term is evolving. This glossary uses it as a working definition, not a formal methodology. AI may generate, classify, recommend, or predict; the appropriate interaction depends on the task.
+
+## What makes a product AI-native?
+
+A useful design question is: **How would the core workflow change if the AI capability were removed?** If the product’s main value depends on interpreting information, generating useful output, or adapting assistance, AI is central to the design.
+
+Using AI to create wireframes or write code describes the designer’s process. AI-native describes the product experience. A chatbot, autonomous agent, or dynamically generated interface is one possible interaction pattern, not a requirement.
+
+## An AI-native design example: support triage
+
+Imagine a support workspace whose core workflow turns incoming messages into suggested categories, relevant account context, and draft replies. The following example is illustrative.
+
+For “I paid yesterday, but my account is still locked,” the system proposes a billing category and a reply based on available account records and help content.
+
+| Design decision | Example behavior |
+|---|---|
+| Context | Show which message, account record, and help article informed the suggestion. |
+| Review | Let the agent inspect sources, change the category, and edit the draft. |
+| Control | Require the agent to approve sending the reply; account changes follow separate permissions. |
+| Recovery | If payment status is unavailable, avoid claiming payment is confirmed; show the limitation and offer a manual lookup. |
+
+A polished draft can still contain a mistake. Source links help the agent verify claims; they do not guarantee that the response is correct. The design should make checking and correcting the output practical within the actual workload.
+
+## What should designers define?
+
+1. **The user outcome.** Identify the problem AI is suited to solve and compare the proposed workflow with the current way of doing the task.
+2. **Capabilities and limits.** Explain what the system can do, what information it can access, and where its output needs review.
+3. **Control and consequences.** Specify what AI may suggest or execute, when approval is needed, and what users can correct, dismiss, or undo.
+4. **Failure behavior.** Design for missing context, incorrect output, unavailable services, and a usable manual path.
+5. **Evaluation.** Test representative tasks, including difficult cases, and examine both output quality and the effort needed to review it. Repeat these checks when models, prompts, or source data change.
+
+Google’s People + AI Guidebook and Microsoft’s HAX guidelines provide practical guidance for these interaction decisions.
+
+## How do you know it helps?
+
+For the support example, measure time to a correct resolution, incorrect replies, and the effort agents spend checking drafts. Draft acceptance alone cannot tell you whether the replies are correct. Compare results with the existing workflow and investigate where users need to intervene.
+
+## Related terms
+
+- [Generative UI](/glossary/generative-ui.html)
+- [Agentic UX](/glossary/agentic-ux.html)
+- [Design Harness](/glossary/design-harness.html)
+- [Operational UX](/glossary/operational-ux.html)
+
+## Sources
+
+- [User Needs + Defining Success, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/)
+- [Mental Models, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/)
+- [Guidelines for Human-AI Interaction, Microsoft HAX Design Library](https://www.microsoft.com/en-us/haxtoolkit/library/)
+- [Errors + Graceful Failure, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
+        "name": "AI-native Design: Meaning & Example | Product Design Glossary",
+        "description": "Understand AI-native product design with a support-workflow example: define AI’s role, give users control, handle errors, and measure useful outcomes.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs"
+        },
+        "citation": [
+          "https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/",
+          "https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/",
+          "https://www.microsoft.com/en-us/haxtoolkit/library/",
+          "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#term",
+        "name": "AI-native Design",
+        "alternateName": [
+          "AI-native product design"
+        ],
+        "termCode": "ai-native-design",
+        "description": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
+        "url": "https://lexkonovalov.com/glossary/ai-native-design.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-native-design.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI-native Design",
+            "item": "https://lexkonovalov.com/glossary/ai-native-design.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -2435,10 +2861,14 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
     "id": "076",
     "name": "Conversion Rate Optimization (CRO)",
     "slug": "conversion-rate-optimization-cro",
+    "alternateName": [
+      "CRO",
+      "Conversion Rate Optimization"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Conversion Rate Optimization (CRO) is the systematic, data-informed practice of improving digital product experiences to increase the percentage of users who complete a target business action.",
+    "definition": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
     "purpose": "Increases revenue generation efficiency and customer acquisition ROI without requiring additional marketing or acquisition spend.",
     "keyConcepts": [
       "Conversion rate formula",
@@ -2453,10 +2883,143 @@ Use ORCA when a team needs to agree on connected objects, role permissions, or b
       "Checkout Flow Optimization",
       "Growth Design"
     ],
-    "seoTitle": "Conversion Rate Optimization (CRO) Principles for UX Designers",
+    "seoTitle": "Conversion Rate Optimization (CRO) | Product Design Glossary",
+    "seoDescription": "Learn what CRO means, how to calculate conversion rate, and how to test UX improvements with a practical example and metrics that protect lead quality.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
     "sources": [
-      "Peep Laja, Conversion Optimization, CXL",
-      "Bryan Eisenberg, Always Be Testing"
+      "Conversion rate optimization, Optimizely (https://www.optimizely.com/optimization-glossary/conversion-rate-optimization)",
+      "Analytics dimensions and metrics, Google Analytics (https://support.google.com/analytics/table/13948007?hl=en)",
+      "Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)"
+    ],
+    "contentMarkdown": `# Conversion Rate Optimization (CRO)
+
+Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.
+
+CRO helps teams get more value from existing traffic. Useful improvements make it easier for people to understand an offer, make a decision, and complete their task.
+
+## How do you calculate conversion rate?
+
+For a user-based metric:
+
+**Conversion rate = users who complete the target action ÷ eligible users × 100.**
+
+Count each converting user once within the defined measurement window. Do not substitute total event count: one person can submit more than once. For a session-based metric, divide sessions with a conversion by eligible sessions instead. Keep the action, audience, denominator, and measurement window consistent when comparing results.
+
+For a quote-request page, eligible users could be the users who reach that page. If 200 of 10,000 eligible users request a quote, the conversion rate is **2%**. A rate of 2.5% represents a **0.5 percentage-point increase**, or a **25% relative lift**. These illustrative numbers show the size of a difference, not whether a change caused it or whether it is statistically reliable.
+
+## How does a CRO process work?
+
+1. **Define success.** Choose a primary metric and verify that events fire correctly. Add guardrails such as lead quality, refunds, or support requests.
+2. **Find the barrier.** Use funnel data to locate drop-off. Combine it with usability sessions, interviews, or support feedback to investigate why people struggle.
+3. **Form a hypothesis.** Connect an observed problem, a proposed change, and an expected outcome.
+4. **Test and evaluate.** Where traffic supports it, use a randomized A/B test. Set the evaluation method and stopping criteria in advance; interpret the effect alongside its uncertainty and guardrails.
+5. **Apply what you learn.** Release useful improvements, investigate inconclusive results, and monitor downstream outcomes.
+
+## A CRO example: a quote request form
+
+Suppose usability sessions show that travelers abandon a quote form because they think submitting it commits them to a purchase.
+
+The team tests a clear explanation beside the submit button: “Request a quote. No payment required.” This copy is appropriate only if it accurately describes the service.
+
+| Decision | Example |
+|---|---|
+| Hypothesis | Explaining the commitment will help interested travelers submit the form. |
+| Primary metric | Percentage of eligible users who submit a quote request. |
+| Guardrails | Qualified leads per eligible user and completed bookings per eligible user. |
+
+More submissions can increase workload without producing more qualified leads. Review those downstream results before calling the change a success.
+
+## What if traffic is too low for A/B testing?
+
+Use usability testing and analytics to prioritize evident problems, such as broken validation or unclear requirements. Monitor changes after release, but treat before-and-after comparisons cautiously: traffic mix, campaigns, and seasonality can also affect conversion.
+
+## Related terms
+
+- [A/B Testing (Split Testing)](/glossary/ab-testing-split-testing.html)
+- [Conversion Funnel Architecture](/glossary/conversion-funnel-architecture.html)
+- [Checkout Flow Optimization](/glossary/checkout-flow-optimization.html)
+- [Growth Design](/glossary/growth-design.html)
+
+## Sources
+
+- [Conversion rate optimization, Optimizely](https://www.optimizely.com/optimization-glossary/conversion-rate-optimization)
+- [Analytics dimensions and metrics, Google Analytics](https://support.google.com/analytics/table/13948007?hl=en)
+- [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)`,
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
+        "name": "Conversion Rate Optimization (CRO) | Product Design Glossary",
+        "description": "Learn what CRO means, how to calculate conversion rate, and how to test UX improvements with a practical example and metrics that protect lead quality.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.optimizely.com/optimization-glossary/conversion-rate-optimization",
+          "https://support.google.com/analytics/table/13948007?hl=en",
+          "https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#term",
+        "name": "Conversion Rate Optimization (CRO)",
+        "alternateName": [
+          "CRO",
+          "Conversion Rate Optimization"
+        ],
+        "termCode": "conversion-rate-optimization-cro",
+        "description": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
+        "url": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conversion Rate Optimization (CRO)",
+            "item": "https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html"
+          }
+        ]
+      }
     ]
   },
   {

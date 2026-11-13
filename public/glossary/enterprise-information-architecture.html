@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise Information Architecture: Scaling Enterprise UX</title>
-  <meta name="description" content="Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.">
+  <title>Enterprise Information Architecture | Product Design Glossary</title>
+  <meta name="description" content="Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/enterprise-information-architecture.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Enterprise Information Architecture: Scaling Enterprise UX">
-  <meta property="og:description" content="Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.">
+  <meta property="og:title" content="Enterprise Information Architecture | Product Design Glossary">
+  <meta property="og:description" content="Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/enterprise-information-architecture.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Enterprise Information Architecture: Scaling Enterprise UX">
-  <meta name="twitter:description" content="Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.">
+  <meta name="twitter:title" content="Enterprise Information Architecture | Product Design Glossary">
+  <meta name="twitter:description" content="Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,54 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
+      "name": "Enterprise Information Architecture | Product Design Glossary",
+      "description": "Understand enterprise information architecture through shared vocabulary, metadata, navigation, and governance, with a practical expense-claim example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#breadcrumbs"
+      },
+      "citation": [
+        "https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience",
+        "https://www.nngroup.com/articles/intranet-information-architecture-ia/",
+        "https://semanticstudios.com/consulting/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#term",
       "name": "Enterprise Information Architecture",
+      "alternateName": [
+        "Enterprise IA",
+        "EIA"
+      ],
       "termCode": "enterprise-information-architecture",
-      "description": "Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.",
+      "description": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
+      "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/enterprise-information-architecture.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -198,6 +230,45 @@
     .glossary-table tr:hover td {
       background: #faf9f6;
     }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
     .glossary-term-ol {
       margin: 0 0 24px;
       padding-left: 24px;
@@ -296,49 +367,107 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Enterprise Information Architecture (EIA) is the structural design of multi-tenant, operationally complex software ecosystems, governing shared vocabularies, relational permissions, data topologies, and cross-application workflows across large organizational boundaries.</p>
-      </section>
+    <p class="glossary-term-section__text">Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.</p>
+<p class="glossary-term-section__text">In UX practice, this includes intranets, employee portals, and business applications. Teams coordinate definitions across owners and workflows: the same customer, policy, or expense claim may appear in several places.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-enterprise-information-architecture-include">
+<h2 id="section-what-does-enterprise-information-architecture-include" class="glossary-term-section__title">What does enterprise information architecture include?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Area</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shared vocabulary</td>
+<td>Do teams mean the same thing by “customer,” “account,” or “approved”?</td>
+</tr>
+<tr>
+<td>Taxonomy and metadata</td>
+<td>How is information classified, described, filtered, and retrieved?</td>
+</tr>
+<tr>
+<td>Objects and relationships</td>
+<td>How do records connect to people, documents, and other records?</td>
+</tr>
+<tr>
+<td>Navigation and search</td>
+<td>How can users reach information across products and repositories?</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Who owns definitions, resolves conflicts, and maintains the structure?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Access rules also shape what different users can find and see. Shared definitions can support different role-specific views without requiring every team to use the same navigation.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-an-enterprise-ia-example-expense-claims">
+<h2 id="section-an-enterprise-ia-example-expense-claims" class="glossary-term-section__title">An enterprise IA example: expense claims</h2>
+<p class="glossary-term-section__text">Consider an illustrative employee portal connected to an expense system. An employee submits Claim #482; a manager reviews it; finance processes reimbursement.</p>
+<p class="glossary-term-section__text">The team defines one claim identifier and distinguishes <strong>Submitted</strong>, <strong>Approved</strong>, and <strong>Paid</strong>. Approval means the manager accepted the claim; payment means reimbursement was completed. That distinction needs to remain clear wherever the claim appears.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>User</th>
+<th>Entry point</th>
+<th>Information needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee</td>
+<td>My expenses</td>
+<td>Claim status, receipts, and payment date</td>
+</tr>
+<tr>
+<td>Manager</td>
+<td>Claims awaiting approval</td>
+<td>Amount, policy, and supporting receipts</td>
+</tr>
+<tr>
+<td>Finance</td>
+<td>Approved claims</td>
+<td>Payment details and reimbursement status</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">These views refer to the same claim. Links connect it to its receipts and the relevant policy. Metadata such as owner, date, and status supports search and filtering.</p>
+<p class="glossary-term-section__text">An assigned owner maintains the status definitions and checks how changes affect each system.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-start">
+<h2 id="section-how-do-you-start" class="glossary-term-section__title">How do you start?</h2>
+<p class="glossary-term-section__text">Start with one task that crosses a team or system boundary. Interview the people involved, inventory the records and content they use, and note conflicting labels or duplicate sources.</p>
+<p class="glossary-term-section__text">Agree on definitions and ownership with domain experts. Identify the authoritative source for each record or policy. Then prototype navigation, search results, and record relationships. Use card sorting to explore groupings, tree testing to check findability, and usability testing to evaluate the complete task.</p>
+<p class="glossary-term-section__text">Measure whether people find the right information and complete the task accurately. Search failures, wrong destinations, and time spent locating records can reveal structural problems.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-is-enterprise-ia-different-from-a-sitemap">
+<h2 id="section-how-is-enterprise-ia-different-from-a-sitemap" class="glossary-term-section__title">How is enterprise IA different from a sitemap?</h2>
+<p class="glossary-term-section__text">A sitemap describes a hierarchy of pages. Enterprise IA also coordinates meaning, metadata, relationships, and ownership across systems. One deliverable might be a sitemap; others include a vocabulary, taxonomy, content model, or governance plan. The appropriate structure depends on users’ work and the information involved.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience" target="_blank" rel="noopener noreferrer">Introduction to SharePoint information architecture, Microsoft</a></li>
+<li><a href="https://www.nngroup.com/articles/intranet-information-architecture-ia/" target="_blank" rel="noopener noreferrer">Intranet Information Architecture (IA) Trends, Nielsen Norman Group</a></li>
+<li><a href="https://semanticstudios.com/consulting/" target="_blank" rel="noopener noreferrer">Information architecture consulting, Peter Morville / Semantic Studios</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents operational silos, fractured data views, and enterprise friction by harmonizing disparate business software suites under coherent navigation and semantic models.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Multi-tenancy</span><span class="concept-tag">unified metadata models</span><span class="concept-tag">access-level scoping</span><span class="concept-tag">distributed ontologies.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Integrates corporate domain schemas with role-based access models, deploying centralized taxonomies and modular interaction patterns across business suites.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li><li><a href="/glossary/operational-ux.html">Operational UX</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Peter Morville, Interconnected Systems, Semantic Studios</li><li>Eric Evans, Domain-Driven Design</li>
-        </ul>
-      </section>
-      
-    
 
     <div class="back-nav">
       <a href="/glossary/" class="back-btn">&larr; Back to Glossary</a>

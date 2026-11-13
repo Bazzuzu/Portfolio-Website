@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Tokens Explained: Architecture, Syncing, and Code Setup</title>
-  <meta name="description" content="Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.">
+  <title>Design Tokens: Definition &amp; Examples | Product Design Glossary</title>
+  <meta name="description" content="Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-tokens.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Design Tokens Explained: Architecture, Syncing, and Code Setup">
-  <meta property="og:description" content="Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.">
+  <meta property="og:title" content="Design Tokens: Definition &amp; Examples | Product Design Glossary">
+  <meta property="og:description" content="Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-tokens.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Design Tokens Explained: Architecture, Syncing, and Code Setup">
-  <meta name="twitter:description" content="Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.">
+  <meta name="twitter:title" content="Design Tokens: Definition &amp; Examples | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,53 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-tokens.html",
+      "name": "Design Tokens: Definition & Examples | Product Design Glossary",
+      "description": "Learn how design tokens represent reusable design decisions, with primitive and semantic examples, DTCG JSON, and a practical design-to-code workflow.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#breadcrumbs"
+      },
+      "citation": [
+        "https://atlassian.design/foundations/tokens/design-tokens/",
+        "https://www.designtokens.org/tr/2025.10/format/",
+        "https://styledictionary.com/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-tokens.html#term",
       "name": "Design Tokens",
+      "alternateName": [
+        "Design token"
+      ],
       "termCode": "design-tokens",
-      "description": "Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.",
+      "description": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
+      "url": "https://lexkonovalov.com/glossary/design-tokens.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-tokens.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-tokens.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -198,6 +229,45 @@
     .glossary-table tr:hover td {
       background: #faf9f6;
     }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
     .glossary-term-ol {
       margin: 0 0 24px;
       padding-left: 24px;
@@ -296,49 +366,91 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Design Tokens are platform-agnostic, human-readable name-value pairs that encapsulate fundamental visual design decisions—such as color, typography, spacing, elevation, and motion—expressed in standardized JSON formats.</p>
-      </section>
+    <p class="glossary-term-section__text">Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.</p>
+<p class="glossary-term-section__text">For example, a component can use a token named <code>color.text.link</code> instead of choosing a color independently. The name describes the intended use; its value can change with the theme.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-are-primitive-semantic-and-component-tokens">
+<h2 id="section-what-are-primitive-semantic-and-component-tokens" class="glossary-term-section__title">What are primitive, semantic, and component tokens?</h2>
+<p class="glossary-term-section__text">Many design systems organize tokens into these layers. The naming and number of layers vary by system.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Layer</th>
+<th>Illustrative name</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primitive</td>
+<td><code>color.blue.600</code></td>
+<td>Stores a base palette value.</td>
+</tr>
+<tr>
+<td>Semantic</td>
+<td><code>color.text.link</code></td>
+<td>Assigns a value to a purpose.</td>
+</tr>
+<tr>
+<td>Component</td>
+<td><code>button.primary.background</code></td>
+<td>Applies a decision to a specific component.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A semantic token can reference a primitive through an alias. For example, <code>color.text.link</code> might reference <code>color.blue.600</code> in a light theme and a lighter blue in a dark theme. Components continue to use the semantic name. Check the resulting contrast in each context.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-a-simple-design-token-example">
+<h2 id="section-a-simple-design-token-example" class="glossary-term-section__title">A simple design token example</h2>
+<p class="glossary-term-section__text">This example uses the DTCG 2025.10 format to define a spacing value and a token for card padding:</p>
+<div class="glossary-code-block-wrapper">
+<pre class="glossary-code-block"><code class="language-json">{
+  "space": {
+    "200": {
+      "$type": "dimension",
+      "$value": { "value": 8, "unit": "px" }
+    }
+  },
+  "card": {
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.200}"
+    }
+  }
+}</code></pre>
+</div>
+<p class="glossary-term-section__text"><code>card.padding</code> resolves to 8 pixels through its reference to <code>space.200</code>. To increase only card padding, point <code>card.padding</code> to a different spacing token. Changing <code>space.200</code> itself affects every token that references it. The names and values are illustrative.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-tokens-get-from-design-to-code">
+<h2 id="section-how-do-tokens-get-from-design-to-code" class="glossary-term-section__title">How do tokens get from design to code?</h2>
+<p class="glossary-term-section__text">A team maintains token definitions in an agreed source, reviews changes, and uses tooling to produce the formats each platform needs. A tool such as Style Dictionary can transform token data into CSS, JavaScript, or native platform resources.</p>
+<p class="glossary-term-section__text">CSS custom properties and Figma variables can represent tokens in their respective environments. A shared naming scheme, compatible tooling, and an explicit release process connect them. Tokens themselves do not automatically synchronize design files and production code.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-do-design-tokens-have-to-use-json">
+<h2 id="section-do-design-tokens-have-to-use-json" class="glossary-term-section__title">Do design tokens have to use JSON?</h2>
+<p class="glossary-term-section__text">Tokens are a design-system concept; the DTCG specification defines a JSON format for exchanging them between tools. The stable 2025.10 Format Module specifies types, values, groups, and references. It is a Community Group specification, not a W3C Standard.</p>
+<p class="glossary-term-section__text">Start with decisions that repeat across the interface. Document intended usage and check affected components before releasing changes. Add layers when they solve a concrete reuse or maintenance problem.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
+<li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
+<li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li>
+<li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Design tokens explained, Atlassian Design System</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, Design Tokens Community Group</a></li>
+<li><a href="https://styledictionary.com/" target="_blank" rel="noopener noreferrer">Style Dictionary documentation</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Serves as the single source of truth for design variables, automating synchronization across design tools, Web, iOS, and Android production repositories.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Name-value pairs</span><span class="concept-tag">platform agnosticism</span><span class="concept-tag">automation pipelines</span><span class="concept-tag">single source of truth.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers update token values in design tools; build engines consume the JSON schema and compile native CSS variables, Swift constants, or Android XML files.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li><li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li><li><a href="/glossary/design-primitives.html">Design Primitives</a></li><li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Jina Anne, Design Tokens Basics</li><li>W3C Design Tokens Community Group, Design Tokens Specification</li>
-        </ul>
-      </section>
-      
-    
 
     <div class="back-nav">
       <a href="/glossary/" class="back-btn">&larr; Back to Glossary</a>
