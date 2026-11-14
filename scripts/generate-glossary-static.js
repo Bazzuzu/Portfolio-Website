@@ -35,7 +35,7 @@ const hubJsonLd = {
       "@type": "DefinedTermSet",
       "@id": "https://lexkonovalov.com/glossary/#terms",
       "name": "Product Design Glossary",
-      "description": "A canonical 110-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
+      "description": `A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`,
       "url": "https://lexkonovalov.com/glossary/",
       "inLanguage": "en-US",
       "isPartOf": {
@@ -92,14 +92,14 @@ const hubHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov</title>
-  <meta name="description" content="A canonical 110-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
+  <meta name="description" content="A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Product Design Glossary — Architectural Lexicon & Systems Ontology">
-  <meta property="og:description" content="A canonical 110-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
+  <meta property="og:description" content="A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -110,7 +110,7 @@ const hubHtml = `<!DOCTYPE html>
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Product Design Glossary | Lex Konovalov">
-  <meta name="twitter:description" content="110 canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
+  <meta name="twitter:description" content="${glossaryTerms.length} canonical entries bridging conceptual UX models with programmatic execution and generative engine optimization.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -240,7 +240,7 @@ ${JSON.stringify(hubJsonLd, null, 2)}
       <a href="/">Home</a> / <span>Product Design Glossary</span>
     </nav>
     <h1>Product Design Glossary</h1>
-    <p class="lead">A curated collection of 110 concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
+    <p class="lead">A curated collection of ${glossaryTerms.length} concepts, methods and technologies across UX architecture, design engineering, AI and product strategy.</p>
   </header>
   
   <section class="categories-grid">
@@ -820,19 +820,26 @@ for (const p of basePages) {
 // Add glossary hub
 sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-14</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
 
-// Add 110 glossary terms
+// Add all glossary terms
 glossaryTerms.forEach((term) => {
   let lastmod = '2026-11-07';
   if ([
     'churn-mitigation-architecture', 'feature-flag-strategy', 'b2c-engagement-loops',
     'lead-capture-mechanics', 'product-market-fit-pmf-engine', 'jobs-to-be-done-jtbd',
     'product-discovery', 'product-qualified-lead-pql',
-    // Design Systems & Engineering batch
+    // Design Systems & Engineering batch 6
     'design-system', 'design-tokens-format-module-dtcg', 'semantic-tokens',
     'design-primitives', 'component-libraries', 'figma-variables-modes',
     'style-dictionary', 'token-resolver-engine', 'composite-design-token',
     'component-architecture', 'headless-ui-architecture', 'design-system-governance',
-    'design-system-versioning-semver'
+    'design-system-versioning-semver',
+    // Design-to-Code & Accessibility cluster batch 7
+    'design-to-code-workflow', 'visual-regression-testing', 'component-telemetry',
+    'design-engineering', 'designops', 'semantic-html',
+    'aria-accessible-rich-internet-applications', 'structured-data-for-llms',
+    'european-accessibility-act', 'en-301-549', 'ada-web-accessibility',
+    'section-508', 'web-accessibility-audit', 'accessible-forms',
+    'keyboard-accessibility'
   ].includes(term.slug)) {
     lastmod = '2026-11-14';
   } else if ([
@@ -859,4 +866,4 @@ glossaryTerms.forEach((term) => {
 
 sitemapXml += '</urlset>\n';
 fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
-console.log('Regenerated public/sitemap.xml with 118 unique URLs!');
+console.log(`Regenerated public/sitemap.xml with ${basePages.length + 1 + glossaryTerms.length} unique URLs!`);

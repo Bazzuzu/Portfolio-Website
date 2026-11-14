@@ -8,7 +8,7 @@ const JobsApp = lazy(() => import("./components/jobs/JobsApp"));
 const GlossaryHub = lazy(() => import("./components/GlossaryHub"));
 const GlossaryTerm = lazy(() => import("./components/GlossaryTerm"));
 import { portfolioData, CaseStudy as CaseStudyType } from "./data/portfolioData";
-import { getTermBySlug } from "./data/glossaryData";
+import { getTermBySlug, glossaryTerms } from "./data/glossaryData";
 import CustomIcon from "./components/CustomIcon";
 import arrowUpSvg from "./assets/icons/arrow-up.svg?raw";
 import arrowLeftSvg from "./assets/icons/arrow-left.svg?raw";
@@ -120,7 +120,7 @@ export default function App() {
       canonicalUrl = "https://lexkonovalov.com/about/";
     } else if (currentPage === "glossary") {
       title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
-      description = "A canonical 110-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.";
+      description = `A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`;
       canonicalUrl = "https://lexkonovalov.com/glossary/";
     } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
       const termData = getTermBySlug(selectedGlossarySlug);

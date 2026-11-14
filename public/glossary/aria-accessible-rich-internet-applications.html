@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WAI-ARIA Basics: Roles, States, and Attributes for Web UX</title>
-  <meta name="description" content="WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.">
+  <title>What Is ARIA? Roles, States, and Properties | Product Design Glossary</title>
+  <meta name="description" content="Understand WAI-ARIA roles, states, and properties. See how aria-expanded describes a disclosure for assistive technology and browser agents.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="WAI-ARIA Basics: Roles, States, and Attributes for Web UX">
-  <meta property="og:description" content="WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.">
+  <meta property="og:title" content="What Is ARIA? Roles, States, and Properties | Product Design Glossary">
+  <meta property="og:description" content="Understand WAI-ARIA roles, states, and properties. See how aria-expanded describes a disclosure for assistive technology and browser agents.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WAI-ARIA Basics: Roles, States, and Attributes for Web UX">
-  <meta name="twitter:description" content="WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.">
+  <meta name="twitter:title" content="What Is ARIA? Roles, States, and Properties | Product Design Glossary">
+  <meta name="twitter:description" content="Understand WAI-ARIA roles, states, and properties. See how aria-expanded describes a disclosure for assistive technology and browser agents.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,56 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html",
+      "name": "What Is ARIA? Roles, States, and Properties | Product Design Glossary",
+      "description": "Understand WAI-ARIA roles, states, and properties. See how aria-expanded describes a disclosure for assistive technology and browser agents.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.w3.org/TR/wai-aria-1.2/",
+        "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+        "https://playwright.dev/docs/aria-snapshots",
+        "https://github.com/web-arena-x/webarena/blob/main/resources/README.md"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html#term",
       "name": "ARIA (Accessible Rich Internet Applications)",
       "termCode": "aria-accessible-rich-internet-applications",
-      "description": "WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.",
+      "description": "WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.",
+      "url": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html#webpage"
+      },
+      "alternateName": [
+        "WAI-ARIA",
+        "Accessible Rich Internet Applications"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +423,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.</p>
-      </section>
+    <p class="glossary-term-section__text">WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-do-aria-roles-states-and-properties-do">
+<h2 id="section-what-do-aria-roles-states-and-properties-do" class="glossary-term-section__title">What do ARIA roles, states, and properties do?</h2>
+<p class="glossary-term-section__text">A role identifies what an element is, such as a dialog. A state describes a condition that can change, such as <code>aria-expanded</code>. A property describes an aspect or relationship, such as <code>aria-labelledby</code>, which points to the text that names an element.</p>
+<p class="glossary-term-section__text">Use native HTML when it provides the semantics and behavior you need. Adding <code>role="button"</code> to a <code><div></code> exposes a role. Keyboard focus and activation still need to be implemented.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-fare-rules-disclosure">
+<h2 id="section-example-a-fare-rules-disclosure" class="glossary-term-section__title">Example: A fare-rules disclosure</h2>
+<p class="glossary-term-section__text">A native button labeled “Fare rules” reveals a hidden panel. While the panel is closed, the button has <code>aria-expanded="false"</code>. Activating it shows the panel and sets <code>aria-expanded="true"</code>. Closing it hides the panel and restores the false state. A native button gives you Enter and Space activation. Your code keeps the visible panel and reported state in sync. You can optionally use <code>aria-controls</code> to reference the panel’s ID.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-the-result">
+<h2 id="section-how-do-you-test-the-result" class="glossary-term-section__title">How do you test the result?</h2>
+<p class="glossary-term-section__text">Verify that the button has the right name and state in the accessibility tree. Test it with a keyboard and a screen reader, and confirm that opening and closing the panel updates both the visible content and the exposed state. A Playwright ARIA snapshot can help catch changes in that exposed structure.</p>
+<p class="glossary-term-section__text">An AI browser agent that reads the accessibility tree can use the same role, name, and expanded state to find the button and decide whether to open it. Run the task with the intended agent to check whether it can open the panel and locate a specific rule. Keep that result separate from accessibility testing for people.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_blank" rel="noopener noreferrer">WAI-ARIA 1.2, W3C</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/" target="_blank" rel="noopener noreferrer">Read Me First, W3C ARIA Authoring Practices Guide</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Disclosure Pattern, W3C ARIA Authoring Practices Guide</a></li>
+<li><a href="https://playwright.dev/docs/aria-snapshots" target="_blank" rel="noopener noreferrer">ARIA Snapshots, Playwright</a></li>
+<li><a href="https://github.com/web-arena-x/webarena/blob/main/resources/README.md" target="_blank" rel="noopener noreferrer">WebArena Agent Execution Traces</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Bridges accessibility gaps in complex, dynamic, custom user interface widgets (e.g., tree grids, custom modals, tabs) where native HTML elements do not exist.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Roles</span><span class="concept-tag">states</span><span class="concept-tag">properties</span><span class="concept-tag">live regions</span><span class="concept-tag">accessibility tree binding.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Developers apply ARIA attributes (e.g., role=&quot;dialog&quot;, aria-expanded=&quot;false&quot;) to DOM elements, programmatically mutating their state during runtime user interactions.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/semantic-html.html">Semantic HTML</a></li><li><a href="/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>W3C WAI, Accessible Rich Internet Applications (WAI-ARIA) 1.2 Specification</li><li>MDN Web Docs, ARIA Authoring Practices Guide (APG)</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

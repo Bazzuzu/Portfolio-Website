@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Component Telemetry: Tracking Design System Adoption in Production</title>
-  <meta name="description" content="Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.">
+  <title>Component Telemetry: Design System Usage | Product Design Glossary</title>
+  <meta name="description" content="Understand component telemetry for design systems, from runtime usage and error events to code inventory and planning a component deprecation.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/component-telemetry.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Component Telemetry: Tracking Design System Adoption in Production">
-  <meta property="og:description" content="Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.">
+  <meta property="og:title" content="Component Telemetry: Design System Usage | Product Design Glossary">
+  <meta property="og:description" content="Understand component telemetry for design systems, from runtime usage and error events to code inventory and planning a component deprecation.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/component-telemetry.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Component Telemetry: Tracking Design System Adoption in Production">
-  <meta name="twitter:description" content="Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.">
+  <meta name="twitter:title" content="Component Telemetry: Design System Usage | Product Design Glossary">
+  <meta name="twitter:description" content="Understand component telemetry for design systems, from runtime usage and error events to code inventory and planning a component deprecation.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/component-telemetry.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/component-telemetry.html",
+      "name": "Component Telemetry: Design System Usage | Product Design Glossary",
+      "description": "Understand component telemetry for design systems, from runtime usage and error events to code inventory and planning a component deprecation.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/component-telemetry.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/component-telemetry.html#breadcrumbs"
+      },
+      "citation": [
+        "https://omlet.dev/",
+        "https://opentelemetry.io/docs/specs/semconv/general/events/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/component-telemetry.html#term",
       "name": "Component Telemetry",
       "termCode": "component-telemetry",
-      "description": "Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.",
+      "description": "Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.",
+      "url": "https://lexkonovalov.com/glossary/component-telemetry.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/component-telemetry.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/component-telemetry.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,58 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.</p>
-      </section>
+    <p class="glossary-term-section__text">Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-can-you-measure">
+<h2 id="section-what-can-you-measure" class="glossary-term-section__title">What can you measure?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Signal</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Static code and dependency inventory</td>
+<td>Which repositories reference a component, pass a particular prop, or depend on a package version?</td>
+</tr>
+<tr>
+<td>Runtime usage</td>
+<td>In which instrumented apps did the component open or appear during the measurement period?</td>
+</tr>
+<tr>
+<td>Runtime interaction or error events</td>
+<td>What happened after the component opened, such as a confirmation click or submission failure?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A code reference shows where to investigate. A runtime event shows that the instrumented behavior was observed. An error rate also needs a relevant denominator, such as failed submissions out of all recorded attempts. Define the event and the coverage before comparing products. For example, count apps that recorded at least one dialog open out of apps that report that event, and state the date range.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-removing-a-deprecated-dialog-prop">
+<h2 id="section-example-removing-a-deprecated-dialog-prop" class="glossary-term-section__title">Example: Removing a deprecated Dialog prop</h2>
+<p class="glossary-term-section__text">A design system team wants to remove a legacy Dialog prop. A code scan identifies repositories that still pass it. An event recorded when the dialog opens shows which instrumented products serve that configuration. The team uses both results to contact owners, prioritize migrations, and investigate gaps before scheduling removal.</p>
+<p class="glossary-term-section__text">Keep the payload tied to the decision. For this migration, a component identifier, package version, variant or legacy flag, and product identifier can be enough. Leave booking IDs, form input, and dialog content out of the event. Record what is instrumented so that an absence of events can be interpreted correctly.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+<li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
+<li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+<li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
+<li><a href="/glossary/design-system-versioning-semver.html">Design System Versioning (SemVer)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://omlet.dev/" target="_blank" rel="noopener noreferrer">Component Usage Across Code Repositories, Omlet</a></li>
+<li><a href="https://opentelemetry.io/docs/specs/semconv/general/events/" target="_blank" rel="noopener noreferrer">Semantic Conventions for Events, OpenTelemetry</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Replaces anecdotal design system feedback with hard quantitative data, revealing which components are adopted, misused, or ripe for deprecation across applications.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Runtime logging</span><span class="concept-tag">adoption tracking</span><span class="concept-tag">prop monitoring</span><span class="concept-tag">deprecation indicators.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Lightweight analytics triggers embedded directly in component source files dispatch anonymized telemetry payloads to monitoring dashboards when components mount or error.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/designops.html">DesignOps</a></li><li><a href="/glossary/design-system-governance.html">Design System Governance</a></li><li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry &amp; Analytics</a></li><li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Cristiano Rastelli, Measuring Design System Adoption</li><li>Omlet.dev Component Analytics</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Design-to-Code: Automated Workflows &amp; Toolchains</title>
-  <meta name="description" content="The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.">
+  <title>Design-to-Code Workflow: From Figma to Production | Product Design Glossary</title>
+  <meta name="description" content="Learn how a design-to-code workflow connects Figma components, design tokens, production code, and UI review. See what to automate and what to verify.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-to-code-workflow.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Modern Design-to-Code: Automated Workflows &amp; Toolchains">
-  <meta property="og:description" content="The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.">
+  <meta property="og:title" content="Design-to-Code Workflow: From Figma to Production | Product Design Glossary">
+  <meta property="og:description" content="Learn how a design-to-code workflow connects Figma components, design tokens, production code, and UI review. See what to automate and what to verify.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-to-code-workflow.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Modern Design-to-Code: Automated Workflows &amp; Toolchains">
-  <meta name="twitter:description" content="The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.">
+  <meta name="twitter:title" content="Design-to-Code Workflow: From Figma to Production | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how a design-to-code workflow connects Figma components, design tokens, production code, and UI review. See what to automate and what to verify.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-to-code-workflow.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-to-code-workflow.html",
+      "name": "Design-to-Code Workflow: From Figma to Production | Product Design Glossary",
+      "description": "Learn how a design-to-code workflow connects Figma components, design tokens, production code, and UI review. See what to automate and what to verify.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-to-code-workflow.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-to-code-workflow.html#breadcrumbs"
+      },
+      "citation": [
+        "https://developers.figma.com/docs/code-connect/",
+        "https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/",
+        "https://styledictionary.com/reference/config/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-to-code-workflow.html#term",
       "name": "Design-to-Code Workflow",
       "termCode": "design-to-code-workflow",
-      "description": "The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.",
+      "description": "A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.",
+      "url": "https://lexkonovalov.com/glossary/design-to-code-workflow.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-to-code-workflow.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-to-code-workflow.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,43 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.</p>
-      </section>
+    <p class="glossary-term-section__text">A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-design-to-code-workflow-include">
+<h2 id="section-what-does-a-design-to-code-workflow-include" class="glossary-term-section__title">What does a design-to-code workflow include?</h2>
+<ol class="glossary-term-ol">
+<li><strong>Map designs to existing components.</strong> Identify which production components, variants, and states the design uses. Resolve gaps with the team before building a new component.</li>
+<li><strong>Build platform outputs from shared tokens.</strong> For example, transform a token source into CSS custom properties. Decide which source owns the values and where changes get reviewed.</li>
+<li><strong>Implement the interaction.</strong> Assemble existing components and connect them to product data, validation, loading, and error handling.</li>
+<li><strong>Review a working preview.</strong> Check the layout with realistic content and test keyboard behavior, focus, and state changes. Add automated checks for states that are easy to break.</li>
+</ol>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-booking-change-dialog">
+<h2 id="section-example-a-booking-change-dialog" class="glossary-term-section__title">Example: A booking-change dialog</h2>
+<p class="glossary-term-section__text">A designer uses the shared Dialog and Button in Figma. The developer finds their production counterparts, reuses the spacing and color tokens, and connects the dialog to the booking service. In the preview, the team checks a long fare description on mobile, a failed request, and where keyboard focus goes after the dialog closes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-can-the-team-automate">
+<h2 id="section-what-can-the-team-automate" class="glossary-term-section__title">What can the team automate?</h2>
+<p class="glossary-term-section__text">A token build can produce platform files, and screenshot comparisons can flag visual changes. With the Code Connect CLI, teams can publish usage snippets for mapped production components in Figma Dev Mode. The team still owns decisions about component behavior, real data, and whether the working interface matches the design intent.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li>
+<li><a href="/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/glossary/vibe-coding.html">Vibe Coding</a></li>
+<li><a href="/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma Code Connect, Figma Developer Docs</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/" target="_blank" rel="noopener noreferrer">Use Code Snippets in Dev Mode, Figma</a></li>
+<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Configuration, Style Dictionary</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Eradicates manual, error-prone design handoffs, reducing developer translation time and eliminating visual regressions between canvas and browser.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Token synchronization</span><span class="concept-tag">AST transformations</span><span class="concept-tag">headless rendering</span><span class="concept-tag">automated PR generation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Changes in design tools trigger webhooks that export vector schemas into token parsers and AST generators, pushing automated code updates directly to Git repositories.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li><li><a href="/glossary/design-engineering.html">Design Engineering</a></li><li><a href="/glossary/vibe-coding.html">Vibe Coding</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>W3C DTCG Tools Pipeline</li><li>Penpot Developer Integrations</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

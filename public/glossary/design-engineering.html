@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is Design Engineering? Role, Skills, and Tooling</title>
-  <meta name="description" content="Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.">
+  <title>Design Engineering: What Design Engineers Do | Product Design Glossary</title>
+  <meta name="description" content="Learn what design engineering is and how design engineers use browser prototypes, production components, and design system tooling to shape interfaces.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-engineering.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is Design Engineering? Role, Skills, and Tooling">
-  <meta property="og:description" content="Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.">
+  <meta property="og:title" content="Design Engineering: What Design Engineers Do | Product Design Glossary">
+  <meta property="og:description" content="Learn what design engineering is and how design engineers use browser prototypes, production components, and design system tooling to shape interfaces.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-engineering.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is Design Engineering? Role, Skills, and Tooling">
-  <meta name="twitter:description" content="Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.">
+  <meta name="twitter:title" content="Design Engineering: What Design Engineers Do | Product Design Glossary">
+  <meta name="twitter:description" content="Learn what design engineering is and how design engineers use browser prototypes, production components, and design system tooling to shape interfaces.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-engineering.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-engineering.html",
+      "name": "Design Engineering: What Design Engineers Do | Product Design Glossary",
+      "description": "Learn what design engineering is and how design engineers use browser prototypes, production components, and design system tooling to shape interfaces.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-engineering.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-engineering.html#breadcrumbs"
+      },
+      "citation": [
+        "https://vercel.com/blog/design-engineering-at-vercel",
+        "https://vercel.com/design/engineer"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-engineering.html#term",
       "name": "Design Engineering",
       "termCode": "design-engineering",
-      "description": "Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.",
+      "description": "Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.",
+      "url": "https://lexkonovalov.com/glossary/design-engineering.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-engineering.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-engineering.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,37 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.</p>
-      </section>
+    <p class="glossary-term-section__text">Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-design-engineer-do">
+<h2 id="section-what-does-a-design-engineer-do" class="glossary-term-section__title">What does a design engineer do?</h2>
+<p class="glossary-term-section__text">A design engineer might prototype a complex interaction in the browser, implement a production component, or improve the tools that connect design and code. Typical decisions include how an interaction adapts to smaller screens, what belongs in a shared component, and which states should be tested.</p>
+<p class="glossary-term-section__text">Responsibilities vary by team. Some design engineers work inside product teams and ship features. Others maintain shared components or build tooling that helps multiple teams work with a design system.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-designing-a-booking-change-dialog-in-the-browser">
+<h2 id="section-example-designing-a-booking-change-dialog-in-the-browser" class="glossary-term-section__title">Example: Designing a booking-change dialog in the browser</h2>
+<p class="glossary-term-section__text">The team needs a dialog that can display a short confirmation or a long list of fare rules. A design engineer builds a working version, tests the content at narrow widths, and checks how keyboard focus moves. They find that the long list needs a scrollable content region with reachable actions. They document that behavior and implement it in the shared Dialog so other teams can reuse it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-it-relate-to-a-design-to-code-workflow">
+<h2 id="section-how-does-it-relate-to-a-design-to-code-workflow" class="glossary-term-section__title">How does it relate to a design-to-code workflow?</h2>
+<p class="glossary-term-section__text">Design engineering describes the practice and the skills people bring to it. A design-to-code workflow describes how a team moves a design into a working product, including component mapping, implementation, and review.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://vercel.com/blog/design-engineering-at-vercel" target="_blank" rel="noopener noreferrer">Design Engineering at Vercel, Vercel</a></li>
+<li><a href="https://vercel.com/design/engineer" target="_blank" rel="noopener noreferrer">Design Engineer Principles, Vercel</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Eliminates fidelity loss between design intent and production implementation, accelerating product innovation through rapid, code-level interaction prototyping.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Design-to-code pipelines</span><span class="concept-tag">high-fidelity code prototyping</span><span class="concept-tag">UI performance</span><span class="concept-tag">token toolchains.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Design engineers construct custom plugins, maintain token build processes, build complex animations, and contribute directly to production component architectures.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li><li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/designops.html">DesignOps</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Maggie Appleton, The Ambient Medium: Design Engineering</li><li>Brad Frost, The Design Engineer</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

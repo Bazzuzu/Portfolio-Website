@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Structured Data for LLMs: Optimizing for GEO and AI Crawlers</title>
-  <meta name="description" content="Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.">
+  <title>Structured Data for LLMs and Schema.org | Product Design Glossary</title>
+  <meta name="description" content="Learn what JSON-LD and Schema.org tell machines about a web page, how that differs from HTML semantics, and what Google’s AI features require.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/structured-data-for-llms.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Structured Data for LLMs: Optimizing for GEO and AI Crawlers">
-  <meta property="og:description" content="Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.">
+  <meta property="og:title" content="Structured Data for LLMs and Schema.org | Product Design Glossary">
+  <meta property="og:description" content="Learn what JSON-LD and Schema.org tell machines about a web page, how that differs from HTML semantics, and what Google’s AI features require.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/structured-data-for-llms.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Structured Data for LLMs: Optimizing for GEO and AI Crawlers">
-  <meta name="twitter:description" content="Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.">
+  <meta name="twitter:title" content="Structured Data for LLMs and Schema.org | Product Design Glossary">
+  <meta name="twitter:description" content="Learn what JSON-LD and Schema.org tell machines about a web page, how that differs from HTML semantics, and what Google’s AI features require.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,52 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/structured-data-for-llms.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/structured-data-for-llms.html",
+      "name": "Structured Data for LLMs and Schema.org | Product Design Glossary",
+      "description": "Learn what JSON-LD and Schema.org tell machines about a web page, how that differs from HTML semantics, and what Google’s AI features require.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/structured-data-for-llms.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/structured-data-for-llms.html#breadcrumbs"
+      },
+      "citation": [
+        "https://schema.org/docs/gs.html",
+        "https://schema.org/DefinedTerm",
+        "https://www.w3.org/TR/json-ld11/",
+        "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+        "https://developers.google.com/search/docs/appearance/ai-features"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/structured-data-for-llms.html#term",
       "name": "Structured Data for LLMs",
       "termCode": "structured-data-for-llms",
-      "description": "Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.",
+      "description": "Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.",
+      "url": "https://lexkonovalov.com/glossary/structured-data-for-llms.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/structured-data-for-llms.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/structured-data-for-llms.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +419,40 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.</p>
-      </section>
+    <p class="glossary-term-section__text">Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-can-structured-data-describe">
+<h2 id="section-what-can-structured-data-describe" class="glossary-term-section__title">What can structured data describe?</h2>
+<p class="glossary-term-section__text">Schema.org defines types and properties. JSON-LD is a format for expressing that information. A glossary page, for example, can identify its entry as a <code>DefinedTerm</code>, give it a name and description, and link it to a <code>DefinedTermSet</code>. The description should agree with the visible definition. Whether a particular system reads or uses those fields depends on how that system retrieves and processes pages.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-is-it-different-from-semantic-html">
+<h2 id="section-how-is-it-different-from-semantic-html" class="glossary-term-section__title">How is it different from semantic HTML?</h2>
+<p class="glossary-term-section__text">JSON-LD can describe what a page is about. Semantic HTML describes the structure and controls that appear on the page. For example, the glossary entry’s JSON-LD can identify a term, while a native HTML button gives the browser the semantics for a control that opens a panel. Both can be useful on the same page.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-do-google-s-ai-features-need-special-structured-data">
+<h2 id="section-do-google-s-ai-features-need-special-structured-data" class="glossary-term-section__title">Do Google’s AI features need special structured data?</h2>
+<p class="glossary-term-section__text">Google says its AI Overviews and AI Mode require no special Schema.org markup. A page needs to be indexed and eligible to appear with a snippet to be eligible as a supporting link. Whether a page appears as a source depends on the system and the query. Keep your visible content clear and use structured data to describe it faithfully.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/llms-txt-proposal.html">llms.txt Proposal</a></li>
+<li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
+<li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
+<li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+<li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://schema.org/docs/gs.html" target="_blank" rel="noopener noreferrer">Getting Started with Schema.org, Schema.org</a></li>
+<li><a href="https://schema.org/DefinedTerm" target="_blank" rel="noopener noreferrer">DefinedTerm, Schema.org</a></li>
+<li><a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener noreferrer">JSON-LD 1.1, W3C</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener noreferrer">Introduction to Structured Data, Google Search Central</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">AI Features and Your Website, Google Search Central</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Guarantees accurate entity extraction by search engine crawlers and LLMs, minimizing synthesis distortion and powering Generative Engine Optimization (GEO).</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Semantic markup</span><span class="concept-tag">JSON-LD</span><span class="concept-tag">knowledge graphs</span><span class="concept-tag">schema normalization.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Product architectures serialize complex relational models into validated semantic trees, embedded in HTML &lt;head&gt; tags or exposed via dedicated API endpoints.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/llms-txt-proposal.html">llms.txt Proposal</a></li><li><a href="/glossary/content-modeling.html">Content Modeling</a></li><li><a href="/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li><li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Schema.org Consortium</li><li>W3C RDF / JSON-LD Recommendations</li><li>Google Search Central</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual Regression Testing: Automating UI Design System QA</title>
-  <meta name="description" content="Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.">
+  <title>Visual Regression Testing: UI Baselines | Product Design Glossary</title>
+  <meta name="description" content="Learn how visual regression testing compares UI screenshots with approved baselines to catch unintended changes in layout, styling, and component states.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/visual-regression-testing.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Visual Regression Testing: Automating UI Design System QA">
-  <meta property="og:description" content="Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.">
+  <meta property="og:title" content="Visual Regression Testing: UI Baselines | Product Design Glossary">
+  <meta property="og:description" content="Learn how visual regression testing compares UI screenshots with approved baselines to catch unintended changes in layout, styling, and component states.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/visual-regression-testing.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Visual Regression Testing: Automating UI Design System QA">
-  <meta name="twitter:description" content="Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.">
+  <meta name="twitter:title" content="Visual Regression Testing: UI Baselines | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how visual regression testing compares UI screenshots with approved baselines to catch unintended changes in layout, styling, and component states.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/visual-regression-testing.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/visual-regression-testing.html",
+      "name": "Visual Regression Testing: UI Baselines | Product Design Glossary",
+      "description": "Learn how visual regression testing compares UI screenshots with approved baselines to catch unintended changes in layout, styling, and component states.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/visual-regression-testing.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/visual-regression-testing.html#breadcrumbs"
+      },
+      "citation": [
+        "https://playwright.dev/docs/test-snapshots",
+        "https://storybook.js.org/docs/writing-tests/visual-testing"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/visual-regression-testing.html#term",
       "name": "Visual Regression Testing",
       "termCode": "visual-regression-testing",
-      "description": "Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.",
+      "description": "Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.",
+      "url": "https://lexkonovalov.com/glossary/visual-regression-testing.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/visual-regression-testing.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/visual-regression-testing.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,39 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.</p>
-      </section>
+    <p class="glossary-term-section__text">Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-does-visual-regression-testing-work">
+<h2 id="section-how-does-visual-regression-testing-work" class="glossary-term-section__title">How does visual regression testing work?</h2>
+<ol class="glossary-term-ol">
+<li><strong>Choose a state and approve a baseline.</strong> Capture an intentionally rendered page or component at a specific viewport, with representative content.</li>
+<li><strong>Keep the capture environment stable.</strong> Use consistent browser, operating system, fonts, viewport, and test data. Control animations and other changing content where practical.</li>
+<li><strong>Review the differences.</strong> Inspect the baseline, new screenshot, and diff. Fix unintended changes and update the baseline only after approving the new appearance.</li>
+</ol>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-booking-change-dialog-on-mobile">
+<h2 id="section-example-a-booking-change-dialog-on-mobile" class="glossary-term-section__title">Example: A booking-change dialog on mobile</h2>
+<p class="glossary-term-section__text">Capture the open dialog at a mobile viewport with a long fare description and both action buttons visible. A change to a shared spacing token pushes the confirmation button below the visible area. The diff flags the layout shift. The reviewer opens the preview to check whether the action remains reachable and whether the new layout is acceptable.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-you-test-alongside-screenshots">
+<h2 id="section-what-should-you-test-alongside-screenshots" class="glossary-term-section__title">What should you test alongside screenshots?</h2>
+<p class="glossary-term-section__text">Use interaction tests to check whether the dialog opens, the right button submits, and focus returns to the trigger when it closes. A screenshot can show the dialog at one moment. Keyboard and assistive technology checks cover behavior a screenshot cannot capture.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://playwright.dev/docs/test-snapshots" target="_blank" rel="noopener noreferrer">Visual Comparisons, Playwright</a></li>
+<li><a href="https://storybook.js.org/docs/writing-tests/visual-testing" target="_blank" rel="noopener noreferrer">Visual Tests, Storybook</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents accidental CSS regressions, layout breaks, and cross-browser visual defects before code merges into production design systems.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Pixel diffing</span><span class="concept-tag">baseline snapshots</span><span class="concept-tag">threshold configurations</span><span class="concept-tag">headless browser automation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Automated CI pipelines deploy headless browsers, render components across viewports, take screenshots, and calculate differential image deltas against master baselines.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/design-engineering.html">Design Engineering</a></li><li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Playwright Visual Comparisons (https://playwright.dev)</li><li>Percy.io by BrowserStack</li><li>Chromatic by Storybook</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">
