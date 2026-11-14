@@ -90,7 +90,7 @@ export default function GlossaryHub({ onNavigate }: GlossaryHubProps) {
           "@id": "https://lexkonovalov.com/glossary/#terms",
           "name": "Product Design Glossary",
           "description":
-            "A canonical 109-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
+            "A canonical 110-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.",
           "url": "https://lexkonovalov.com/glossary/",
           "inLanguage": "en-US",
           "isPartOf": {

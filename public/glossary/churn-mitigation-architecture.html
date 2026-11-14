@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Churn Mitigation Architecture: Retaining SaaS Customers with UX</title>
-  <meta name="description" content="Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.">
+  <title>Churn Mitigation in SaaS | Product Design Glossary</title>
+  <meta name="description" content="Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/churn-mitigation-architecture.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Churn Mitigation Architecture: Retaining SaaS Customers with UX">
-  <meta property="og:description" content="Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.">
+  <meta property="og:title" content="Churn Mitigation in SaaS | Product Design Glossary">
+  <meta property="og:description" content="Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/churn-mitigation-architecture.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Churn Mitigation Architecture: Retaining SaaS Customers with UX">
-  <meta name="twitter:description" content="Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.">
+  <meta name="twitter:title" content="Churn Mitigation in SaaS | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,53 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html",
+      "name": "Churn Mitigation in SaaS | Product Design Glossary",
+      "description": "Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#breadcrumbs"
+      },
+      "citation": [
+        "https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it",
+        "https://docs.stripe.com/billing/revenue-recovery/smart-retries"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#term",
-      "name": "Churn Mitigation Architecture",
+      "name": "Churn Mitigation",
       "termCode": "churn-mitigation-architecture",
-      "description": "Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.",
+      "description": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
+      "url": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#webpage"
+      },
+      "alternateName": [
+        "Churn Mitigation Architecture",
+        "Churn Reduction"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -74,7 +105,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Churn Mitigation Architecture",
+          "name": "Churn Mitigation",
           "item": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html"
         }
       ]
@@ -379,9 +410,9 @@
 <body>
   <header>
     <nav class="breadcrumbs">
-      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Churn Mitigation Architecture</span>
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Churn Mitigation</span>
     </nav>
-    <h1>Churn Mitigation Architecture</h1>
+    <h1>Churn Mitigation</h1>
     <div class="meta-bar">
       <span>Product Strategy &amp; Growth</span>
        &bull; <span>UX &amp; Product Architecture</span>
@@ -389,49 +420,61 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.</p>
-      </section>
+    <p class="glossary-term-section__text">Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-causes-customer-churn">
+<h2 id="section-what-causes-customer-churn" class="glossary-term-section__title">What causes customer churn?</h2>
+<p class="glossary-term-section__text"><strong>Voluntary churn</strong> occurs when a customer chooses to end a subscription or lets it expire intentionally. <strong>Involuntary churn</strong> occurs when the subscription ends for reasons such as an unresolved payment failure, even though the customer may want to continue. A failed charge is a billing event. Count churn when the account meets your definition of having left. For example, count it when a subscription ends after an unsuccessful recovery period.</p>
+<p class="glossary-term-section__text">A drop in usage can tell you where to investigate. In a monthly invoicing product, fewer invoice sends may reflect seasonality, a broken workflow, or a customer no longer needing the service. Check the pattern against the customer’s normal usage and look for evidence of the cause.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-the-product-do">
+<h2 id="section-what-should-the-product-do" class="glossary-term-section__title">What should the product do?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Situation</th>
+<th>Product response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The customer cannot complete a recurring task</td>
+<td>Diagnose the barrier with product data and research. Fix it or offer relevant help.</td>
+</tr>
+<tr>
+<td>The subscription no longer fits the customer’s needs</td>
+<td>Explain any suitable downgrade or pause. Keep cancellation easy to find and explain when access ends.</td>
+</tr>
+<tr>
+<td>A renewal payment fails</td>
+<td>Explain what happened, how to update payment details, and what happens next. Use retries where the payment provider and failure reason allow them.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-measure-the-result">
+<h2 id="section-how-do-you-measure-the-result" class="glossary-term-section__title">How do you measure the result?</h2>
+<p class="glossary-term-section__text">For one definition of monthly customer churn, divide the number of paying accounts from the start of the month that are no longer paying at month-end by the number of paying accounts at the start. If 12 of 400 starting accounts leave under this rule, monthly customer churn is <strong>3%</strong>. This month-end measure treats an account that leaves and returns before month-end as still paying. A count of cancellations during the month answers a different question.</p>
+<p class="glossary-term-section__text">Measure each intervention against the problem it addresses. For billing recovery, track the share of accounts with a failed renewal that recover within a stated period. For a downgrade or pause, check whether customers remain subscribed or return to paid use over later billing cycles. Track complaints and support contacts alongside the outcome. If completed cancellations fall, check how many customers remain subscribed over the next billing cycle and whether users can still cancel without assistance.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+<li><a href="/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li>
+<li><a href="/glossary/activation-metric.html">Activation Metric</a></li>
+<li><a href="/glossary/user-retention.html">User Retention</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it" target="_blank" rel="noopener noreferrer">Customer churn, Stripe</a></li>
+<li><a href="https://docs.stripe.com/billing/revenue-recovery/smart-retries" target="_blank" rel="noopener noreferrer">Automate payment retries, Stripe Docs</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Protects recurring subscription revenue by identifying customer disengagement early and resolving dissatisfaction before account cancellation.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Predictive health scores</span><span class="concept-tag">offboarding surveys</span><span class="concept-tag">pause/downgrade options</span><span class="concept-tag">exit feedback loops.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Telemetry algorithms detect drops in user logins or feature usage, triggering contextual re-engagement interventions, self-serve account pauses, or targeted customer success outreach.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/product-telemetry-analytics.html">Product Telemetry &amp; Analytics</a></li><li><a href="/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li><li><a href="/glossary/activation-metric.html">Activation Metric</a></li><li><a href="/glossary/user-retention.html">User Retention</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Lincoln Murphy, Customer Success: How Innovative Companies Are Reducing Churn, Wiley</li><li>Zuora Subscription Index</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

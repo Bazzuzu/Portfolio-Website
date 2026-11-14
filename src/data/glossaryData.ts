@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 109-term taxonomy across four foundational product design domains
+// Canonical 110-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -63,7 +63,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     id: "product-strategy-growth",
     name: "Product Strategy & Growth",
-    count: 26,
+    count: 27,
     description: "Connecting UX decisions with business outcomes, continuous experimentation, and unit economics.",
     primaryFocus: "Experimentation, Unit Economics, Conversion Architecture",
     representativeSpecs: "Continuous Discovery, JTBD, Product-Led Growth, Telemetry",
@@ -231,7 +231,10 @@ Start by examining the things people name in interviews and existing workflows. 
     "id": "002",
     "name": "ORCA Framework",
     "slug": "orca-framework",
-    "alternateName": ["ORCA Process","ORCA"],
+    "alternateName": [
+      "ORCA Process",
+      "ORCA"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Proprietary / Framework-Specific",
@@ -891,7 +894,10 @@ A relationship can exist in the model even when one role cannot see it or has no
     "id": "008",
     "name": "Enterprise Information Architecture",
     "slug": "enterprise-information-architecture",
-    "alternateName": ["Enterprise IA","EIA"],
+    "alternateName": [
+      "Enterprise IA",
+      "EIA"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
@@ -2053,7 +2059,9 @@ Use the schema to discuss labels, record relationships, empty states, and rules 
     "id": "027",
     "name": "Design Tokens",
     "slug": "design-tokens",
-    "alternateName": ["Design token"],
+    "alternateName": [
+      "Design token"
+    ],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -2536,7 +2544,9 @@ Start with decisions that repeat across the interface. Document intended usage a
     "id": "039",
     "name": "Accessibility and WCAG",
     "slug": "accessibility-wcag",
-    "alternateName": ["Web accessibility and WCAG"],
+    "alternateName": [
+      "Web accessibility and WCAG"
+    ],
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
@@ -3356,7 +3366,9 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "id": "063",
     "name": "AI-native Design",
     "slug": "ai-native-design",
-    "alternateName": ["AI-native product design"],
+    "alternateName": [
+      "AI-native product design"
+    ],
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Coined / Interpretive",
@@ -3855,7 +3867,10 @@ For the support example, measure time to a correct resolution, incorrect replies
     "id": "076",
     "name": "Conversion Rate Optimization (CRO)",
     "slug": "conversion-rate-optimization-cro",
-    "alternateName": ["CRO","Conversion Rate Optimization"],
+    "alternateName": [
+      "CRO",
+      "Conversion Rate Optimization"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -4017,7 +4032,10 @@ Use usability testing and analytics to prioritize evident problems, such as brok
     "id": "077",
     "name": "A/B Testing (Split Testing)",
     "slug": "ab-testing-split-testing",
-    "alternateName": ["A/B Testing","Split Testing"],
+    "alternateName": [
+      "A/B Testing",
+      "Split Testing"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
@@ -4301,7 +4319,9 @@ A shared experiment log is enough for a small team to get started. Keep inconclu
     "id": "079",
     "name": "Conversion Funnel",
     "slug": "conversion-funnel-architecture",
-    "alternateName": ["Conversion Funnel Architecture"],
+    "alternateName": [
+      "Conversion Funnel Architecture"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -4442,30 +4462,149 @@ Check tracking first, then investigate a promising step with research. For examp
   },
   {
     "id": "080",
-    "name": "Lead Capture Mechanics",
+    "name": "Lead Capture",
     "slug": "lead-capture-mechanics",
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Lead Capture Mechanics encompass the strategic interaction patterns, forms, value exchanges, and progressive profiling techniques designed to capture prospective customer information.",
-    "purpose": "Maximizes top-of-funnel customer acquisition by offering compelling value propositions in exchange for contact information without introducing excessive form friction.",
+    "definition": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.",
+    "purpose": "Balances user effort and friction against sales readiness, capturing high-intent prospective buyers and qualifying them for suitable follow-up.",
     "keyConcepts": [
-      "Progressive profiling",
-      "value exchange",
-      "form micro-copy",
-      "frictionless authentication."
+      "Offer value exchange",
+      "Request conversion",
+      "Qualified lead rate",
+      "Progressive disclosure in forms",
+      "Error prevention and feedback"
     ],
-    "howItWorks": "Surfaces minimal input fields during initial user touchpoints, gathering secondary qualifying attributes dynamically over subsequent user sessions.",
+    "howItWorks": "Designs progressive, accessible form experiences that preserve user context from upstream interactions, asks only for necessary qualification fields, and delivers immediate confirmation and expectations.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
       "Conversion Funnel",
-      "Progressive Disclosure"
+      "Progressive Disclosure",
+      "Checkout Flow Optimization"
     ],
-    "seoTitle": "Lead Capture Mechanics: Designing High-Converting Forms & UX",
+    "seoTitle": "Lead Capture Forms: Design and Metrics | Product Design Glossary",
     "sources": [
-      "Luke Wroblewski, Web Form Design: Filling in the Blanks, Rosenfeld Media",
-      "CXL Institute"
-    ]
+      "Question pages, GOV.UK Design System (https://design-system.service.gov.uk/patterns/question-pages/)",
+      "Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en)",
+      "How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages)"
+    ],
+    "seoDescription": "Design a lead capture form around a clear offer and useful follow-up. See which fields to ask for and how to measure qualified leads.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html",
+    "alternateName": [
+      "Lead Capture Mechanics"
+    ],
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html",
+                "name": "Lead Capture Forms: Design and Metrics | Product Design Glossary",
+                "description": "Design a lead capture form around a clear offer and useful follow-up. See which fields to ask for and how to measure qualified leads.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://design-system.service.gov.uk/patterns/question-pages/",
+                      "https://support.google.com/analytics/answer/9327974?hl=en",
+                      "https://baymard.com/research-articles/adaptive-validation-error-messages"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#term",
+                "name": "Lead Capture",
+                "termCode": "lead-capture-mechanics",
+                "description": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.",
+                "url": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#webpage"
+                },
+                "alternateName": [
+                      "Lead Capture Mechanics"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Lead Capture",
+                            "item": "https://lexkonovalov.com/glossary/lead-capture-mechanics.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Lead Capture
+
+Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.
+
+## What should a lead capture form ask for?
+
+Ask how each field changes the response or qualification decision. For a quote, collect the details the team needs to prepare and deliver it. Tell people what they will receive and how you will contact them. Clearly label required and optional inputs and give people a way to correct errors.
+
+In a travel quote flow, the traveler has already selected a route and dates on the results page. The form can carry those details forward, show a summary with a way to edit them, and ask for an email address to send the quote. Ask for a phone number only if the service needs it for that request, and explain why. After submission, confirm that the request was received and tell the traveler what to expect.
+
+## How do you measure lead capture?
+
+Count successful requests using a confirmed submission event. A tap on the submit button can include errors or retries. Use a consistent audience and time window, then follow the same requests through qualification and booking.
+
+| Metric | Illustrative definition |
+|---|---|
+| Request conversion | Share of eligible results viewers who submit a quote request within 30 days of entry |
+| Qualified lead rate per viewer | Share of those viewers whose request qualifies within the same window |
+| Qualification rate per submitter | Share of submitters whose request qualifies within the same window |
+
+In an example with 1,000 eligible viewers, 200 submit a request and 80 qualify. Request conversion is **20%**. The qualified lead rate is **8% per eligible viewer**. The qualification rate is **40% per submitter**. Count each traveler once per metric and use a qualification rule the sales team can apply consistently.
+
+Use the [conversion funnel](/glossary/conversion-funnel-architecture.html) to compare form changes with downstream outcomes. If a shorter form gets more submissions, check qualified requests and bookings per eligible viewer. Use those results to decide whether to keep the shorter form or restore a field that materially affects follow-up.
+
+## Related terms
+
+- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)
+- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)
+- [Progressive Disclosure](/glossary/progressive-disclosure.html)
+- [Checkout Flow Optimization](/glossary/checkout-flow-optimization.html)
+
+## Sources
+
+- [Question pages, GOV.UK Design System](https://design-system.service.gov.uk/patterns/question-pages/)
+- [Funnel exploration, Google Analytics Help](https://support.google.com/analytics/answer/9327974?hl=en)
+- [How to Improve Validation Errors, Baymard Institute](https://baymard.com/research-articles/adaptive-validation-error-messages)`
   },
   {
     "id": "081",
@@ -4617,26 +4756,138 @@ Use a separate success event for the quote request. Submitting a request records
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Product Discovery is the continuous, collaborative process of conducting user research, prototyping, and testing to determine what to build, validating value, usability, feasibility, and business viability before engineering commits code.",
-    "purpose": "Prevents engineering teams from building features that users do not need, do not understand, or refuse to pay for, eliminating product waste.",
+    "definition": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.",
+    "purpose": "Mitigates value, usability, feasibility, and business viability risks through continuous customer contact, assumption testing, and rapid prototyping.",
     "keyConcepts": [
-      "Dual-track agile",
-      "continuous interviews",
-      "assumption testing",
-      "prototype validation."
+      "Four product risks (Value, Usability, Feasibility, Viability)",
+      "Continuous discovery habits",
+      "Assumption testing",
+      "Discovery vs delivery",
+      "Generative research"
     ],
-    "howItWorks": "Product triads (Design, Engineering, Product Management) continuously test business and user assumptions using quick experiments running parallel to delivery sprints.",
+    "howItWorks": "Engages cross-functional product trios in weekly customer interviews and rapid prototype evaluations to test critical assumptions before committing engineering resources.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "Continuous Experimentation",
       "Mental Model Mapping",
       "Product Strategy Canvas"
     ],
-    "seoTitle": "Product Discovery Guide: Continuous Discovery Habits for Teams",
+    "seoTitle": "Product Discovery in UX | Product Design Glossary",
     "sources": [
-      "Teresa Torres, Continuous Discovery Habits, Product Talk LLC",
-      "Marty Cagan, Inspired: How to Create Tech Products Customers Love, Wiley"
-    ]
+      "Continuous Discovery Habits, Teresa Torres (https://www.producttalk.org/continuous-discovery-habits/)",
+      "The Four Big Risks, Marty Cagan, Silicon Valley Product Group (https://www.svpg.com/four-big-risks/)"
+    ],
+    "seoDescription": "Learn how product discovery reduces uncertainty before committing to a solution. See an invoicing example covering interviews and assumption tests.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-discovery.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/product-discovery.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/product-discovery.html",
+                "name": "Product Discovery in UX | Product Design Glossary",
+                "description": "Learn how product discovery reduces uncertainty before committing to a solution. See an invoicing example covering interviews and assumption tests.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/product-discovery.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/product-discovery.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.producttalk.org/continuous-discovery-habits/",
+                      "https://www.svpg.com/four-big-risks/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/product-discovery.html#term",
+                "name": "Product Discovery",
+                "termCode": "product-discovery",
+                "description": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.",
+                "url": "https://lexkonovalov.com/glossary/product-discovery.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/product-discovery.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/product-discovery.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Product Discovery",
+                            "item": "https://lexkonovalov.com/glossary/product-discovery.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Product Discovery
+
+Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.
+
+## What do teams learn in discovery?
+
+Start with the outcome you want to improve and the decisions you need to make. Marty Cagan describes four risks: whether customers will value the solution, whether they can use it, whether the team can build it, and whether it works for the business.
+
+Choose evidence that fits the risk. A prototype can show whether users understand an interaction. A technical investigation can establish whether the proposed behavior is feasible. Interview findings can explain why a problem matters and help the team decide which solutions to explore.
+
+## Example: helping accounts send their first invoice
+
+An invoicing team sees that many new accounts create drafts but few send a first real invoice. The team wants more eligible new accounts to send a first real invoice within seven days of signup.
+
+| Discovery question | What the team does |
+|---|---|
+| Why do people hesitate? | Observe people preparing a real invoice and ask about the last time they stopped before sending. |
+| Would a preview help? | Show a prototype that lets users see the client’s view. Ask them to explain what the client would receive and when. |
+| Can the preview reflect the actual invoice? | Check with engineering that the preview and the final invoice use the same data and render consistently. |
+| Is it worth supporting? | Estimate what it will cost to maintain accurate previews across invoice templates. Compare that effort with the value of helping more accounts send correctly. |
+
+If the evidence supports the preview, the team can build it and evaluate whether it changes the share of new accounts sending a real invoice. Use usability sessions to check comprehension, then consider a [randomized test](/glossary/ab-testing-split-testing.html) to estimate the effect on activation if traffic supports one.
+
+## How does discovery fit with delivery?
+
+Keep the next important assumption visible while delivery proceeds. Teresa Torres’s continuous discovery approach advocates at least weekly customer contact by the team building the product and small research activities tied to a desired outcome. A team can start by recording the decision, the evidence that informed it, and what would change its mind.
+
+## Related terms
+
+- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)
+- [Continuous Experimentation](/glossary/continuous-experimentation.html)
+- [Mental Model Mapping](/glossary/mental-model-mapping.html)
+- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)
+
+## Sources
+
+- [Continuous Discovery Habits, Teresa Torres](https://www.producttalk.org/continuous-discovery-habits/)
+- [The Four Big Risks, Marty Cagan, Silicon Valley Product Group](https://www.svpg.com/four-big-risks/)`
   },
   {
     "id": "083",
@@ -4645,32 +4896,157 @@ Use a separate success event for the quote request. Submitting a request records
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Jobs to Be Done (JTBD) is a strategic innovation framework asserting that customers do not buy products; they \"hire\" products to make progress within specific circumstances and accomplish functional, emotional, or social jobs.",
-    "purpose": "Focuses innovation on underlying human motivations and desired progress rather than shallow demographic attributes or surface feature requests.",
+    "definition": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.",
+    "purpose": "Shifts product focus from surface demographics to the underlying progress and context that motivates users to hire or fire solutions.",
     "keyConcepts": [
-      "Core job",
-      "functional/emotional progress",
-      "pushing/pulling forces",
-      "anxiety/habit friction."
+      "Functional dimension",
+      "Emotional dimension",
+      "Social dimension",
+      "Forces of progress (push, pull, inertia, anxiety)",
+      "Hiring and firing alternatives"
     ],
-    "howItWorks": "Researchers interview users to uncover the catalyst events, emotional anxieties, and progress goals that trigger switching from an old solution to a new product.",
+    "howItWorks": "Investigates past customer switching moments through timeline interviews, identifying the specific triggering circumstances, trade-offs, and progress sought.",
     "relatedTerms": [
       "Mental Model Mapping",
       "Product Discovery",
       "Value Proposition Canvas",
       "Product Strategy Canvas"
     ],
-    "seoTitle": "The Jobs to Be Done (JTBD) Framework: A Guide for Product UX",
+    "seoTitle": "Jobs to Be Done (JTBD) in UX | Product Design Glossary",
     "sources": [
-      "Clayton Christensen, Competing Against Time, Harvard Business Review Press",
-      "Bob Moesta, Demand-Side Sales 101"
-    ]
+      "Jobs to Be Done Theory, Christensen Institute (https://www.christenseninstitute.org/theory/jobs-to-be-done/)",
+      "The Jobs to Be Done Shaping Curriculum Decisions, Christensen Institute (https://www.christenseninstitute.org/wp-content/uploads/2021/04/Curriculum-Conundrum-4.20-update.pdf)"
+    ],
+    "seoDescription": "Learn how Jobs to Be Done explains customer choices. A travel example shows how to investigate the situation, alternatives, and progress people seek.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html",
+    "alternateName": [
+      "Jobs to Be Done",
+      "JTBD"
+    ],
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html",
+                "name": "Jobs to Be Done (JTBD) in UX | Product Design Glossary",
+                "description": "Learn how Jobs to Be Done explains customer choices. A travel example shows how to investigate the situation, alternatives, and progress people seek.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.christenseninstitute.org/theory/jobs-to-be-done/",
+                      "https://www.christenseninstitute.org/wp-content/uploads/2021/04/Curriculum-Conundrum-4.20-update.pdf"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#term",
+                "name": "Jobs to Be Done (JTBD)",
+                "termCode": "jobs-to-be-done-jtbd",
+                "description": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.",
+                "url": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#webpage"
+                },
+                "alternateName": [
+                      "Jobs to Be Done",
+                      "JTBD"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Jobs to Be Done (JTBD)",
+                            "item": "https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Jobs to Be Done (JTBD)
+
+Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.
+
+## What does a job look like?
+
+Imagine a traveler planning a work trip with uncertain meeting times. They compare booking online, asking an assistant, and calling a travel agent. A possible job is to arrange a flight they can change with confidence if the meeting moves.
+
+| Dimension | What might matter in this situation |
+|---|---|
+| Functional | Understand which itinerary can change and what the change may cost. |
+| Emotional | Feel comfortable committing before the schedule is final. |
+| Social | Be able to explain the decision and its costs to the person approving the trip. |
+
+The same traveler might choose differently for a fixed-date vacation. The circumstances help explain why flexibility matters in one decision and price may matter more in another.
+
+## How do you research a job?
+
+1. **Ask about a specific decision.** Find someone who recently chose, switched, or stayed with an alternative. Ask them to reconstruct what happened.
+2. **Look for the trigger and the alternatives.** What changed? What did they try first? Include workarounds, asking someone else, and delaying the decision.
+3. **Trace the tradeoffs.** Ask what made the new option attractive and what made the old way hard to give up. Look for evidence in the details of the decision.
+4. **Compare stories.** Look for recurring circumstances and desired progress. Treat the proposed job as a hypothesis. Look for cases where it does and does not explain the choice.
+
+## How does JTBD inform design?
+
+A traveler may ask for a flexible-fare filter. If the underlying problem is uncertainty about changing a specific ticket, show the change conditions and relevant costs where travelers compare offers. Test whether they can explain what would happen if their meeting moved.
+
+Applying a filter is one possible step. The job helps you compare that step with other ways to give the traveler confidence that they can change the trip. Use [product discovery](/glossary/product-discovery.html) to compare ways to support that progress.
+
+## Related terms
+
+- [Mental Model Mapping](/glossary/mental-model-mapping.html)
+- [Product Discovery](/glossary/product-discovery.html)
+- [Value Proposition Canvas](/glossary/value-proposition-canvas.html)
+- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)
+
+## Sources
+
+- [Jobs to Be Done Theory, Christensen Institute](https://www.christenseninstitute.org/theory/jobs-to-be-done/)
+- [The Jobs to Be Done Shaping Curriculum Decisions, Christensen Institute](https://www.christenseninstitute.org/wp-content/uploads/2021/04/Curriculum-Conundrum-4.20-update.pdf)`
   },
   {
     "id": "084",
     "name": "Product-Led Growth (PLG)",
     "slug": "product-led-growth-plg",
-    "alternateName": ["PLG","Product-led growth"],
+    "alternateName": [
+      "PLG",
+      "Product-led growth"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -4737,7 +5113,7 @@ A free tier is a pricing choice. PLG is the broader strategy connecting product 
 
 Define the unit, cohort, and time window before comparing these metrics. In the planning example, measure activation at the team level. Check whether the proposed activation milestone is associated with later retention.
 
-A **product-qualified lead (PQL)** is a user qualified through product usage that signals meaningful value and potential readiness to buy or expand. Define the qualifying behavior for your product, using customer fit and intent to decide whether sales assistance is appropriate.
+A [**product-qualified lead (PQL)**](/glossary/product-qualified-lead-pql.html) is a user qualified through product usage that signals meaningful value and potential readiness to buy or expand. Define the qualifying behavior for your product, using customer fit and intent to decide whether sales assistance is appropriate.
 
 ## Related terms
 
@@ -4832,7 +5208,10 @@ A **product-qualified lead (PQL)** is a user qualified through product usage tha
     "id": "085",
     "name": "North Star Metric (NSM)",
     "slug": "north-star-metric-nsm",
-    "alternateName": ["North Star Metric","NSM"],
+    "alternateName": [
+      "North Star Metric",
+      "NSM"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
@@ -4989,7 +5368,7 @@ Inputs help teams locate opportunities. The [activation rate](/glossary/activati
       "Value Proposition Canvas",
       "North Star Metric (NSM)",
       "Product Discovery",
-      "Product-Market Fit (PMF) Engine"
+      "Product–Market Fit (PMF)"
     ],
     "seoTitle": "Product Strategy Canvas: Modern Strategic Frameworks for Design",
     "sources": [
@@ -5219,25 +5598,141 @@ A design system supports consistent implementation, while a roadmap sequences th
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "B2C Engagement Loops are closed-system behavioral loops where user action generates a reinvestment, which compounds system value and produces a contextual trigger that re-engages the user back into the product.",
-    "purpose": "Drives organic customer retention, viral network effects, and sustained platform usage without relying exclusively on expensive paid push notifications or advertising.",
+    "definition": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.",
+    "purpose": "Drives organic retention and repeat engagement by reinforcing customer progress through intrinsic triggers, useful updates, and compounding utility.",
     "keyConcepts": [
-      "Trigger",
-      "action",
-      "variable investment",
-      "compounding feedback."
+      "Engagement loop vs growth loop",
+      "Trigger and action",
+      "Price watch cycle",
+      "Return condition",
+      "Notification controls"
     ],
-    "howItWorks": "Users perform an action (e.g., posting content); the platform rewards them (e.g., social validation); this investment creates a new external trigger that pulls them back into the loop.",
+    "howItWorks": "Captures initial user intent into a stateful watch or preference, automatically monitoring state changes to trigger contextually relevant, valuable alerts that prompt return visits and progress.",
     "relatedTerms": [
       "Product-Led Growth (PLG)",
       "Conversion Funnel",
-      "Growth Design"
+      "Growth Design",
+      "User Retention"
     ],
-    "seoTitle": "B2C Engagement Loops: Behavioral UX Retention Models",
+    "seoTitle": "B2C Engagement Loops: Example and Metrics | Product Design Glossary",
     "sources": [
-      "Nir Eyal, Hooked: How to Build Habit-Forming Products, Portfolio",
-      "Brian Balfour, Growth Loops"
-    ]
+      "Growth Loops are the New Funnels, Reforge (https://www.reforge.com/blog/growth-loops)",
+      "Hooked Model, Nir Eyal (https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf)"
+    ],
+    "seoDescription": "Learn how an engagement loop creates a useful reason to return. A travel price watch example shows how to map the cycle and measure repeat value.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html",
+                "name": "B2C Engagement Loops: Example and Metrics | Product Design Glossary",
+                "description": "Learn how an engagement loop creates a useful reason to return. A travel price watch example shows how to map the cycle and measure repeat value.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.reforge.com/blog/growth-loops",
+                      "https://www.reforge.com/blog/growth-loops",
+                      "https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#term",
+                "name": "B2C Engagement Loops",
+                "termCode": "b2c-engagement-loops",
+                "description": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.",
+                "url": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "B2C Engagement Loops",
+                            "item": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# B2C Engagement Loops
+
+A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.
+
+## What does an engagement loop look like?
+
+Consider a traveler deciding when to book. They save a price watch for a route and dates. The watch lets them compare the current price against what they saw earlier. A price change that matches the traveler’s alert settings can bring them back. If they adjust the dates or budget, those preferences shape the next update.
+
+| Step | What happens |
+|---|---|
+| Start | The traveler saves a watch for a trip they are considering. |
+| Value | The watch preserves the search criteria and makes price changes easy to compare. |
+| Reason to return | The price changes enough to matter to the traveler. |
+| Next action | The traveler reviews the offer, refines the watch, or books and ends the cycle. |
+
+Give the traveler control over what triggers a notification and how to stop it. If they have already booked, continuing to send alerts for that search can work against the experience.
+
+## How is this different from a growth loop or a funnel?
+
+A [conversion funnel](/glossary/conversion-funnel-architecture.html) measures progress through a defined sequence, such as results view to booking. An engagement loop explains how the output of one interaction can support the next. A growth loop, in Reforge’s framing, reinvests an output into a future cycle that drives growth. A price watch can support repeat use without bringing in a new customer each time.
+
+Nir Eyal’s Hook Model offers another lens for examining recurring use. It describes a trigger, action, variable reward, and investment. Use it when those elements help explain the behavior you observe.
+
+## How do you measure the loop?
+
+For one measure, take active watches that received a qualifying alert during the reporting period. Count each watch once. Measure the share for which the traveler reviewed the updated price within seven days of its first qualifying alert in that period. Allow a full seven days for every included watch before comparing reporting periods. Track opt-outs and alerts per watch alongside the review rate.
+
+Review whether the loop helps travelers make a decision. Booking or turning off a watch can be a successful end to the task, even if it reduces repeat visits.
+
+## Related terms
+
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)
+- [Growth Design](/glossary/growth-design.html)
+- [User Retention](/glossary/user-retention.html)
+
+## Sources
+
+- [Growth Loops are the New Funnels, Reforge](https://www.reforge.com/blog/growth-loops)
+- [Hooked Model, Nir Eyal](https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf)`
   },
   {
     "id": "091",
@@ -5568,37 +6063,159 @@ Track what each experiment teaches you and whether the result improves the chose
   },
   {
     "id": "094",
-    "name": "Product-Market Fit (PMF) Engine",
+    "name": "Product–Market Fit (PMF)",
     "slug": "product-market-fit-pmf-engine",
     "category": "Product Strategy & Growth",
-    "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "The Product-Market Fit (PMF) Engine is a structured operational framework that measures, scores, and refines a product's value proposition against target market segments until organic, exponential retention occurs.",
-    "purpose": "Prevents startups and new enterprise ventures from prematurely burning capital scaling marketing before the core product experience proves sustainable retention.",
+    "definition": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.",
+    "purpose": "Identifies and validates the core segment where exponential organic retention, word-of-mouth adoption, and sustainable commercial willingness-to-pay converge.",
     "keyConcepts": [
-      "The Sean Ellis 40% test",
-      "cohort retention flattening",
-      "Net Promoter validation",
-      "viral coefficients."
+      "Cohort retention flattening",
+      "Sean Ellis 40% benchmark",
+      "Segment-specific fit",
+      "Commercial demand evidence",
+      "Superhuman PMF engine"
     ],
-    "howItWorks": "Surveys users on how disappointed they would be if the product disappeared; if >= 40% answer \"very disappointed,\" the team doubles down on the specific features those users love.",
+    "howItWorks": "Surveys target users on emotional disappointment upon product withdrawal while correlating responses with usage data and recurring renewal patterns across narrow customer profiles.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "North Star Metric (NSM)",
       "Product Discovery",
-      "Churn Mitigation Architecture"
+      "Churn Mitigation"
     ],
-    "seoTitle": "The Product-Market Fit Engine: Measuring and Achieving PMF",
+    "seoTitle": "Product–Market Fit (PMF) | Product Design Glossary",
     "sources": [
-      "Rahul Vohra, How Superhuman Built an Engine to Find Product Market Fit, First Round Review",
-      "Marc Andreessen, The Only Thing That Matters"
-    ]
+      "The Only Thing That Matters, Marc Andreessen (https://web.stanford.edu/class/ee204/ProductMarketFit.html)",
+      "How Superhuman Built an Engine to Find Product Market Fit, Rahul Vohra (https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/)",
+      "Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)"
+    ],
+    "seoDescription": "Learn what product–market fit means, how to assess it in a defined segment, and how to interpret the Superhuman survey and its 40% benchmark.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html",
+    "alternateName": [
+      "Product-Market Fit",
+      "PMF"
+    ],
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html",
+                "name": "Product–Market Fit (PMF) | Product Design Glossary",
+                "description": "Learn what product–market fit means, how to assess it in a defined segment, and how to interpret the Superhuman survey and its 40% benchmark.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://web.stanford.edu/class/ee204/ProductMarketFit.html",
+                      "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/",
+                      "https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#term",
+                "name": "Product–Market Fit (PMF)",
+                "termCode": "product-market-fit-pmf-engine",
+                "description": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.",
+                "url": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#webpage"
+                },
+                "alternateName": [
+                      "Product-Market Fit",
+                      "PMF"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Product–Market Fit (PMF)",
+                            "item": "https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Product–Market Fit (PMF)
+
+Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.
+
+## How do you assess product–market fit?
+
+Start by naming the customer segment and the problem the product solves. For an invoicing tool, solo consultants who bill monthly may behave differently from teams that need approval workflows. Aggregating both can hide where the product fits.
+
+| Evidence | What to examine |
+|---|---|
+| Continued use | Do customers return when the need comes up again? Compare cohorts over a period that matches their billing cycle. |
+| Commercial demand | Are customers willing to pay or renew at the intended price? Check how much adoption depends on discounts or hands-on support. |
+| Customer accounts of value | Which outcome would customers miss? What alternatives would they use if the product disappeared? |
+
+For an invoicing product, signup and the first invoice sent show early progress. Repeated invoicing over several billing cycles and renewals at the intended price provide additional evidence. Compare these signals within the segment you intend to serve.
+
+## What does the 40% PMF survey benchmark mean?
+
+In his Superhuman case study, Rahul Vohra describes using a survey from Sean Ellis that asks how users would feel if they could no longer use the product. The score is the share of respondents who say they would be very disappointed. Vohra used 40% as a benchmark for that survey method and studied which benefits respondents valued and what held others back. Treat the threshold as a heuristic and assess it alongside behavior and commercial demand.
+
+Report the response count and the criteria used to select people. If 20 of 50 respondents choose “very disappointed,” the result is **40% of respondents**. If you survey recent active users, report the score for that group. Check response bias and look separately at people who stopped using the product.
+
+Use survey results to choose where to investigate next. If interviewees value faster invoicing but renewal is weak, check whether customers can complete the entire billing cycle and whether the price still makes sense for that segment.
+
+## Related terms
+
+- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)
+- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)
+- [Product Discovery](/glossary/product-discovery.html)
+- [Churn Mitigation](/glossary/churn-mitigation-architecture.html)
+
+## Sources
+
+- [The Only Thing That Matters, Marc Andreessen](https://web.stanford.edu/class/ee204/ProductMarketFit.html)
+- [How Superhuman Built an Engine to Find Product Market Fit, Rahul Vohra](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/)
+- [Build a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)`
   },
   {
     "id": "095",
     "name": "LTV to CAC Ratio",
     "slug": "ltv-to-cac-ratio",
-    "alternateName": ["LTV:CAC","LTV/CAC ratio"],
+    "alternateName": [
+      "LTV:CAC",
+      "LTV/CAC ratio"
+    ],
     "category": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
@@ -5611,7 +6228,7 @@ Track what each experiment teaches you and whether the result improves the chose
     ],
     "howItWorks": "Calculated as Ratio = Lifetime Value (LTV) / Customer Acquisition Cost (CAC), where LTV = (Average Revenue Per User (ARPU) * Gross Margin) / Churn Rate. A healthy benchmark for SaaS is generally considered 3 : 1 or higher.",
     "relatedTerms": [
-      "Churn Mitigation Architecture",
+      "Churn Mitigation",
       "Product-Led Growth (PLG)",
       "Activation Metric"
     ],
@@ -5678,7 +6295,7 @@ For product designers, LTV:CAC provides business context. Test more immediate ou
 
 ## Related terms
 
-- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)
+- [Churn Mitigation](/glossary/churn-mitigation-architecture.html)
 - [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
 - [Activation Metric](/glossary/activation-metric.html)
 
@@ -5910,7 +6527,10 @@ Read activation rate alongside [time to value](/glossary/time-to-value-ttv.html)
     "id": "097",
     "name": "Time-to-Value (TTV)",
     "slug": "time-to-value-ttv",
-    "alternateName": ["Time to Value","TTV"],
+    "alternateName": [
+      "Time to Value",
+      "TTV"
+    ],
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
@@ -6050,31 +6670,148 @@ Track the outcome after a change. A shorter setup flow can save clicks without c
   },
   {
     "id": "098",
-    "name": "Churn Mitigation Architecture",
+    "name": "Churn Mitigation",
     "slug": "churn-mitigation-architecture",
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.",
-    "purpose": "Protects recurring subscription revenue by identifying customer disengagement early and resolving dissatisfaction before account cancellation.",
+    "definition": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
+    "purpose": "Protects recurring revenue and customer lifetime value by detecting, preventing, and recovering from both voluntary cancellations and involuntary payment failures.",
     "keyConcepts": [
-      "Predictive health scores",
-      "offboarding surveys",
-      "pause/downgrade options",
-      "exit feedback loops."
+      "Voluntary churn",
+      "Involuntary churn",
+      "Smart retries",
+      "Usage drop signal",
+      "Retention recovery window"
     ],
-    "howItWorks": "Telemetry algorithms detect drops in user logins or feature usage, triggering contextual re-engagement interventions, self-serve account pauses, or targeted customer success outreach.",
+    "howItWorks": "Differentiates voluntary from involuntary loss, deploying automated dunning and retries for billing issues, while analyzing behavioral drops to provide targeted retention interventions, pauses, or downgrades.",
     "relatedTerms": [
       "Product Telemetry & Analytics",
       "LTV to CAC Ratio",
       "Activation Metric",
       "User Retention"
     ],
-    "seoTitle": "Churn Mitigation Architecture: Retaining SaaS Customers with UX",
+    "seoTitle": "Churn Mitigation in SaaS | Product Design Glossary",
     "sources": [
-      "Lincoln Murphy, Customer Success: How Innovative Companies Are Reducing Churn, Wiley",
-      "Zuora Subscription Index"
-    ]
+      "Customer churn, Stripe (https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it)",
+      "Automate payment retries, Stripe Docs (https://docs.stripe.com/billing/revenue-recovery/smart-retries)"
+    ],
+    "seoDescription": "Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html",
+    "alternateName": [
+      "Churn Mitigation Architecture",
+      "Churn Reduction"
+    ],
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html",
+                "name": "Churn Mitigation in SaaS | Product Design Glossary",
+                "description": "Learn how to distinguish voluntary and involuntary churn, design a response for each, and measure sustained retention in a subscription product.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it",
+                      "https://docs.stripe.com/billing/revenue-recovery/smart-retries"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#term",
+                "name": "Churn Mitigation",
+                "termCode": "churn-mitigation-architecture",
+                "description": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
+                "url": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#webpage"
+                },
+                "alternateName": [
+                      "Churn Mitigation Architecture",
+                      "Churn Reduction"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Churn Mitigation",
+                            "item": "https://lexkonovalov.com/glossary/churn-mitigation-architecture.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Churn Mitigation
+
+Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.
+
+## What causes customer churn?
+
+**Voluntary churn** occurs when a customer chooses to end a subscription or lets it expire intentionally. **Involuntary churn** occurs when the subscription ends for reasons such as an unresolved payment failure, even though the customer may want to continue. A failed charge is a billing event. Count churn when the account meets your definition of having left. For example, count it when a subscription ends after an unsuccessful recovery period.
+
+A drop in usage can tell you where to investigate. In a monthly invoicing product, fewer invoice sends may reflect seasonality, a broken workflow, or a customer no longer needing the service. Check the pattern against the customer’s normal usage and look for evidence of the cause.
+
+## What should the product do?
+
+| Situation | Product response |
+|---|---|
+| The customer cannot complete a recurring task | Diagnose the barrier with product data and research. Fix it or offer relevant help. |
+| The subscription no longer fits the customer’s needs | Explain any suitable downgrade or pause. Keep cancellation easy to find and explain when access ends. |
+| A renewal payment fails | Explain what happened, how to update payment details, and what happens next. Use retries where the payment provider and failure reason allow them. |
+
+## How do you measure the result?
+
+For one definition of monthly customer churn, divide the number of paying accounts from the start of the month that are no longer paying at month-end by the number of paying accounts at the start. If 12 of 400 starting accounts leave under this rule, monthly customer churn is **3%**. This month-end measure treats an account that leaves and returns before month-end as still paying. A count of cancellations during the month answers a different question.
+
+Measure each intervention against the problem it addresses. For billing recovery, track the share of accounts with a failed renewal that recover within a stated period. For a downgrade or pause, check whether customers remain subscribed or return to paid use over later billing cycles. Track complaints and support contacts alongside the outcome. If completed cancellations fall, check how many customers remain subscribed over the next billing cycle and whether users can still cancel without assistance.
+
+## Related terms
+
+- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)
+- [LTV to CAC Ratio](/glossary/ltv-to-cac-ratio.html)
+- [Activation Metric](/glossary/activation-metric.html)
+- [User Retention](/glossary/user-retention.html)
+
+## Sources
+
+- [Customer churn, Stripe](https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it)
+- [Automate payment retries, Stripe Docs](https://docs.stripe.com/billing/revenue-recovery/smart-retries)`
   },
   {
     "id": "099",
@@ -6083,26 +6820,141 @@ Track the outcome after a change. A shorter setup flow can save clicks without c
     "category": "Product Strategy & Growth",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.",
-    "purpose": "Enables progressive rollouts, dark launches, and targeted user group testing while allowing instant rollbacks of problematic code without redeploying software.",
+    "definition": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
+    "purpose": "Decouples code deployment from feature release, enabling progressive delivery, granular audience segmentation, rapid kill-switches, and trustworthy A/B experimentation.",
     "keyConcepts": [
-      "Dark launching",
-      "progressive rollouts",
-      "kill switches",
-      "targeted canary deployments."
+      "Staged rollout",
+      "A/B test toggles",
+      "Operational kill-switch",
+      "Fallback behavior",
+      "Flag cleanup lifecycle"
     ],
-    "howItWorks": "Code is wrapped in conditional statements querying a centralized flag management engine, dynamically enabling UI changes for specific user percentages or enterprise accounts.",
+    "howItWorks": "Runtime evaluations check user or account attributes against targeted rule configurations, serving experimental or baseline variants while telemetry monitors errors and business metrics before general availability.",
     "relatedTerms": [
       "Continuous Experimentation",
       "A/B Testing (Split Testing)",
       "Design Engineering",
       "DesignOps"
     ],
-    "seoTitle": "Feature Flag Strategy: Progressive Rollouts and Canary Testing",
+    "seoTitle": "Feature Flags: Rollouts and A/B Tests | Product Design Glossary",
     "sources": [
-      "Martin Fowler, Feature Toggles (Feature Flags)",
-      "Pete Hodgson, Exploring Feature Branching and Toggles"
-    ]
+      "Feature Toggles, Pete Hodgson (https://martinfowler.com/articles/feature-toggles.html)",
+      "Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)",
+      "Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)"
+    ],
+    "seoDescription": "Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/feature-flag-strategy.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/feature-flag-strategy.html",
+                "name": "Feature Flags: Rollouts and A/B Tests | Product Design Glossary",
+                "description": "Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://martinfowler.com/articles/feature-toggles.html",
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+                      "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#term",
+                "name": "Feature Flag Strategy",
+                "termCode": "feature-flag-strategy",
+                "description": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
+                "url": "https://lexkonovalov.com/glossary/feature-flag-strategy.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Feature Flag Strategy",
+                            "item": "https://lexkonovalov.com/glossary/feature-flag-strategy.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Feature Flag Strategy
+
+A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.
+
+## How do rollouts and experiments use flags?
+
+| Use | What the flag controls | What the team decides |
+|---|---|---|
+| Staged rollout | Which eligible accounts can use the feature as exposure expands | Whether the feature is ready for more accounts |
+| A/B test | Which experience each assigned account receives | Whether the tested change affects a predefined outcome |
+| Operational switch | Whether a capability stays enabled during a problem | When to use the fallback and how to recover |
+
+A flag can deliver the variants in an [A/B test](/glossary/ab-testing-split-testing.html). Estimating the effect still requires sound assignment, tracking, and analysis. A staged rollout can surface problems, but changes in metrics as exposure expands can also reflect changes in the audience.
+
+## Example of a staged rollout
+
+An invoicing team releases a new preview to internal accounts, then to a small share of eligible customer accounts. Keep exposure consistent within an account so teammates working on the same invoice see the same experience. Before expanding, the team reviews preview failures and the share of eligible exposed accounts that send a first real invoice within seven days of signup. It agrees in advance which problems warrant pausing, such as a loss of draft data.
+
+The team tests what happens if it switches back while an invoice draft is open. Check that the draft remains available in the original experience. Previously sent invoices should still appear in the customer’s history. Plan a separate recovery path for changes that persist after the flag is turned off.
+
+## What should a flag plan include?
+
+- **Purpose and owner.** Record the decision the flag supports and who can change it.
+- **Eligibility and fallback.** Define the audience, assignment rules, and the default when flag configuration is unavailable. Test both experiences.
+- **Monitoring and response.** Specify which signals prompt a pause, an expansion, or a switch back.
+- **Cleanup.** Give temporary flags a review date. After the release decision, remove the flag and unused code path when it is safe to do so.
+
+## Related terms
+
+- [Continuous Experimentation](/glossary/continuous-experimentation.html)
+- [A/B Testing (Split Testing)](/glossary/ab-testing-split-testing.html)
+- [Design Engineering](/glossary/design-engineering.html)
+- [DesignOps](/glossary/designops.html)
+
+## Sources
+
+- [Feature Toggles, Pete Hodgson](https://martinfowler.com/articles/feature-toggles.html)
+- [Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)
+- [Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)`
   },
   {
     "id": "100",
@@ -6125,7 +6977,7 @@ Track the outcome after a change. A shorter setup flow can save clicks without c
       "Jobs to Be Done (JTBD)",
       "Product Discovery",
       "Product Strategy Canvas",
-      "Product-Market Fit (PMF) Engine"
+      "Product–Market Fit (PMF)"
     ],
     "seoTitle": "The Value Proposition Canvas: Designing User-Centered Products",
     "sources": [
@@ -6283,7 +7135,10 @@ Noun foraging helps define the Objects in [ORCA](/glossary/orca-framework.html).
     "id": "102",
     "name": "Nested Object Matrix",
     "slug": "nested-object-matrix",
-    "alternateName": ["NOM","Nested-Object Matrix"],
+    "alternateName": [
+      "NOM",
+      "Nested-Object Matrix"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
@@ -6434,7 +7289,9 @@ The matrix focuses on relationships. The [object map](/glossary/object-mapping.h
     "id": "103",
     "name": "CTA Matrix",
     "slug": "cta-matrix",
-    "alternateName": ["Call-to-Action Matrix"],
+    "alternateName": [
+      "Call-to-Action Matrix"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
@@ -7005,7 +7862,9 @@ When you combine, defer, or simplify an object, review its relationships, action
     "id": "107",
     "name": "ORCA Relationship Requirements",
     "slug": "orca-relationship-requirements",
-    "alternateName": ["MCSFD"],
+    "alternateName": [
+      "MCSFD"
+    ],
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
@@ -7307,7 +8166,7 @@ The junction object can be represented by that row and its actions. Give it a de
       "Activation Metric",
       "Time-to-Value (TTV)",
       "North Star Metric (NSM)",
-      "Churn Mitigation Architecture"
+      "Churn Mitigation"
     ],
     "seoTitle": "User Retention: Definition and Formula | Product Design Glossary",
     "seoDescription": "Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.",
@@ -7346,7 +8205,7 @@ Read retention alongside [activation](/glossary/activation-metric.html). Activat
 - [Activation Metric](/glossary/activation-metric.html)
 - [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)
 - [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)
-- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)
+- [Churn Mitigation](/glossary/churn-mitigation-architecture.html)
 
 ## Sources
 
@@ -7425,6 +8284,156 @@ Read retention alongside [activation](/glossary/activation-metric.html). Activat
                 ]
           }
     ]
+  },
+  {
+    "slug": "product-qualified-lead-pql",
+    "id": "110",
+    "name": "Product-Qualified Lead (PQL)",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.",
+    "purpose": "Bridges self-serve product adoption and sales-assisted expansion by identifying accounts whose organic usage and commercial fit warrant high-touch engagement.",
+    "keyConcepts": [
+      "PQL vs MQL vs Activation",
+      "Usage threshold signal",
+      "Product-qualified account (PQA)",
+      "Intent triggers",
+      "Product-led sales (PLS)"
+    ],
+    "howItWorks": "Evaluates live telemetry against predefined behavioral milestones, combining usage volume with firmographic fit and explicit feature intent to alert go-to-market teams.",
+    "relatedTerms": [
+      "Product-Led Growth (PLG)",
+      "Activation Metric",
+      "Lead Capture",
+      "Product Telemetry & Analytics"
+    ],
+    "seoTitle": "Product-Qualified Lead (PQL) | Product Design Glossary",
+    "seoDescription": "Learn what a product-qualified lead is and how to combine usage, customer fit, and intent. Includes a worked example for a team planning tool.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html",
+    "alternateName": [
+      "Product-Qualified Lead",
+      "PQL"
+    ],
+    "sources": [
+      "How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls)",
+      "Product Qualified Leads in Freemium, OpenView (https://openviewpartners.com/blog/freemium-startup-product-qualified-leads/)",
+      "Product-Led Sales AMA with Kyle Poyar, Pocus (https://www.pocus.com/blog/product-led-sales-pls-ama-kyle-poyar-openview-pls-benchmarks)"
+    ],
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html",
+                "name": "Product-Qualified Lead (PQL) | Product Design Glossary",
+                "description": "Learn what a product-qualified lead is and how to combine usage, customer fit, and intent. Includes a worked example for a team planning tool.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://productled.com/blog/how-to-define-pqls",
+                      "https://openviewpartners.com/blog/freemium-startup-product-qualified-leads/",
+                      "https://www.pocus.com/blog/product-led-sales-pls-ama-kyle-poyar-openview-pls-benchmarks"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#term",
+                "name": "Product-Qualified Lead (PQL)",
+                "termCode": "product-qualified-lead-pql",
+                "description": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.",
+                "url": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#webpage"
+                },
+                "alternateName": [
+                      "Product-Qualified Lead",
+                      "PQL"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Product-Qualified Lead (PQL)",
+                            "item": "https://lexkonovalov.com/glossary/product-qualified-lead-pql.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Product-Qualified Lead (PQL)
+
+A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.
+
+## How is a PQL different from activation or an MQL?
+
+An [activation event](/glossary/activation-metric.html) indicates initial product value. A PQL rule identifies a prospect for a commercial next step. A marketing-qualified lead (MQL) is qualified primarily through marketing engagement and fit. The same person may qualify through more than one route.
+
+## Example for a team planning tool
+
+A planning product offers one shared project for free. A team activates when two teammates complete their first shared task. Several weeks later, an administrator requests help enabling controls available on the paid plan. The workspace shows evidence of account-level fit and usage. The administrator’s request gives the team a specific person to help and a reason to follow up.
+
+| Signal | Example |
+|---|---|
+| Product use | Teammates complete shared tasks and return to do more work. |
+| Fit | The team needs controls the paid plan supports. |
+| Intent | A workspace administrator asks about enabling those controls. |
+| Next step | Answer the question or offer a setup conversation when appropriate. |
+
+In a team product, decide whether the rule qualifies an individual or an account. Account-level qualification is often called a **product-qualified account (PQA)**. The workspace may show the usage signal while a specific administrator is the appropriate contact.
+
+## How do you validate a PQL rule?
+
+Write the events, qualifying conditions, time window, and unit before comparing results. Check whether flagged prospects go on to buy at a higher rate than comparable eligible prospects. Review false positives, such as active users who have no purchasing role or teams that are well served by the free plan.
+
+Evaluate outreach separately from the rule. For example, if there is enough traffic, randomly assign eligible qualified prospects to an offer of help or the usual experience and compare paid conversion. Keep qualification tied to a useful next step and respect the customer’s contact preferences.
+
+## Related terms
+
+- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)
+- [Activation Metric](/glossary/activation-metric.html)
+- [Lead Capture](/glossary/lead-capture-mechanics.html)
+- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)
+
+## Sources
+
+- [How to Define PQLs, ProductLed](https://productled.com/blog/how-to-define-pqls)
+- [Product Qualified Leads in Freemium, OpenView](https://openviewpartners.com/blog/freemium-startup-product-qualified-leads/)
+- [Product-Led Sales AMA with Kyle Poyar, Pocus](https://www.pocus.com/blog/product-led-sales-pls-ama-kyle-poyar-openview-pls-benchmarks)`
   }
 ];
 

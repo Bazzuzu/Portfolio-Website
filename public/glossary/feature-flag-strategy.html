@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feature Flag Strategy: Progressive Rollouts and Canary Testing</title>
-  <meta name="description" content="A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.">
+  <title>Feature Flags: Rollouts and A/B Tests | Product Design Glossary</title>
+  <meta name="description" content="Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/feature-flag-strategy.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Feature Flag Strategy: Progressive Rollouts and Canary Testing">
-  <meta property="og:description" content="A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.">
+  <meta property="og:title" content="Feature Flags: Rollouts and A/B Tests | Product Design Glossary">
+  <meta property="og:description" content="Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/feature-flag-strategy.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Feature Flag Strategy: Progressive Rollouts and Canary Testing">
-  <meta name="twitter:description" content="A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.">
+  <meta name="twitter:title" content="Feature Flags: Rollouts and A/B Tests | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/feature-flag-strategy.html",
+      "name": "Feature Flags: Rollouts and A/B Tests | Product Design Glossary",
+      "description": "Learn how to plan feature flags for staged rollouts and experiments. Set eligibility, monitor outcomes, and define fallback behavior and cleanup.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#breadcrumbs"
+      },
+      "citation": [
+        "https://martinfowler.com/articles/feature-toggles.html",
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+        "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#term",
       "name": "Feature Flag Strategy",
       "termCode": "feature-flag-strategy",
-      "description": "A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.",
+      "description": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
+      "url": "https://lexkonovalov.com/glossary/feature-flag-strategy.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/feature-flag-strategy.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/feature-flag-strategy.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,71 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.</p>
-      </section>
+    <p class="glossary-term-section__text">A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-rollouts-and-experiments-use-flags">
+<h2 id="section-how-do-rollouts-and-experiments-use-flags" class="glossary-term-section__title">How do rollouts and experiments use flags?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Use</th>
+<th>What the flag controls</th>
+<th>What the team decides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Staged rollout</td>
+<td>Which eligible accounts can use the feature as exposure expands</td>
+<td>Whether the feature is ready for more accounts</td>
+</tr>
+<tr>
+<td>A/B test</td>
+<td>Which experience each assigned account receives</td>
+<td>Whether the tested change affects a predefined outcome</td>
+</tr>
+<tr>
+<td>Operational switch</td>
+<td>Whether a capability stays enabled during a problem</td>
+<td>When to use the fallback and how to recover</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A flag can deliver the variants in an <a href="/glossary/ab-testing-split-testing.html">A/B test</a>. Estimating the effect still requires sound assignment, tracking, and analysis. A staged rollout can surface problems, but changes in metrics as exposure expands can also reflect changes in the audience.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-a-staged-rollout">
+<h2 id="section-example-of-a-staged-rollout" class="glossary-term-section__title">Example of a staged rollout</h2>
+<p class="glossary-term-section__text">An invoicing team releases a new preview to internal accounts, then to a small share of eligible customer accounts. Keep exposure consistent within an account so teammates working on the same invoice see the same experience. Before expanding, the team reviews preview failures and the share of eligible exposed accounts that send a first real invoice within seven days of signup. It agrees in advance which problems warrant pausing, such as a loss of draft data.</p>
+<p class="glossary-term-section__text">The team tests what happens if it switches back while an invoice draft is open. Check that the draft remains available in the original experience. Previously sent invoices should still appear in the customer’s history. Plan a separate recovery path for changes that persist after the flag is turned off.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-a-flag-plan-include">
+<h2 id="section-what-should-a-flag-plan-include" class="glossary-term-section__title">What should a flag plan include?</h2>
+<ul class="glossary-term-ul">
+<li><strong>Purpose and owner.</strong> Record the decision the flag supports and who can change it.</li>
+<li><strong>Eligibility and fallback.</strong> Define the audience, assignment rules, and the default when flag configuration is unavailable. Test both experiences.</li>
+<li><strong>Monitoring and response.</strong> Specify which signals prompt a pause, an expansion, or a switch back.</li>
+<li><strong>Cleanup.</strong> Give temporary flags a review date. After the release decision, remove the flag and unused code path when it is safe to do so.</li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
+<li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
+<li><a href="/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://martinfowler.com/articles/feature-toggles.html" target="_blank" rel="noopener noreferrer">Feature Toggles, Pete Hodgson</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables progressive rollouts, dark launches, and targeted user group testing while allowing instant rollbacks of problematic code without redeploying software.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Dark launching</span><span class="concept-tag">progressive rollouts</span><span class="concept-tag">kill switches</span><span class="concept-tag">targeted canary deployments.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Code is wrapped in conditional statements querying a centralized flag management engine, dynamically enabling UI changes for specific user percentages or enterprise accounts.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li><li><a href="/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li><li><a href="/glossary/design-engineering.html">Design Engineering</a></li><li><a href="/glossary/designops.html">DesignOps</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Martin Fowler, Feature Toggles (Feature Flags)</li><li>Pete Hodgson, Exploring Feature Branching and Toggles</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">
@@ -440,7 +490,7 @@
       </a>
       <div class="glossary-term-nav__pill-group">
         
-          <a href="/glossary/churn-mitigation-architecture.html" class="glossary-term-nav__item" title="Churn Mitigation Architecture">
+          <a href="/glossary/churn-mitigation-architecture.html" class="glossary-term-nav__item" title="Churn Mitigation">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             <span>Previous</span>
           </a>
