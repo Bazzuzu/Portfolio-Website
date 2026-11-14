@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UI Component Architecture: Scalable Component Engineering</title>
-  <meta name="description" content="Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.">
+  <title>UI Component Architecture | Product Design Glossary</title>
+  <meta name="description" content="Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/component-architecture.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="UI Component Architecture: Scalable Component Engineering">
-  <meta property="og:description" content="Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.">
+  <meta property="og:title" content="UI Component Architecture | Product Design Glossary">
+  <meta property="og:description" content="Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/component-architecture.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="UI Component Architecture: Scalable Component Engineering">
-  <meta name="twitter:description" content="Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.">
+  <meta name="twitter:title" content="UI Component Architecture | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/component-architecture.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/component-architecture.html",
+      "name": "UI Component Architecture | Product Design Glossary",
+      "description": "Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/component-architecture.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/component-architecture.html#breadcrumbs"
+      },
+      "citation": [
+        "https://react.dev/learn/sharing-state-between-components",
+        "https://www.radix-ui.com/primitives/docs/components/dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/component-architecture.html#term",
       "name": "Component Architecture",
       "termCode": "component-architecture",
-      "description": "Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.",
+      "description": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
+      "url": "https://lexkonovalov.com/glossary/component-architecture.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/component-architecture.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/component-architecture.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,63 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.</p>
-      </section>
+    <p class="glossary-term-section__text">Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-component-s-public-api">
+<h2 id="section-what-belongs-in-a-component-s-public-api" class="glossary-term-section__title">What belongs in a component’s public API?</h2>
+<p class="glossary-term-section__text">The public API is the set of inputs, events, and composition points consumers can rely on. For a dialog, it might include a title, content slots, an open state, and a callback for requests to open or close. Document what each option does and the behavior consumers can expect.</p>
+<p class="glossary-term-section__text">Decide where state lives. An uncontrolled dialog manages whether it is open internally. In a controlled dialog, the application supplies the current state and handles requests to change it. Use controlled state when the workflow needs to coordinate opening or closing. For example, the application can close the dialog after a save succeeds.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-a-shared-dialog">
+<h2 id="section-example-of-a-shared-dialog" class="glossary-term-section__title">Example of a shared dialog</h2>
+<p class="glossary-term-section__text">Suppose checkout and account settings both open a modal to review a change.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Responsibility</th>
+<th>Where it belongs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dialog behavior</td>
+<td>The shared dialog handles modal focus, keyboard dismissal, and how its title is exposed to assistive technology.</td>
+</tr>
+<tr>
+<td>Review content</td>
+<td>Each product supplies the text, details, and actions for its task.</td>
+</tr>
+<tr>
+<td>Business outcome</td>
+<td>Checkout submits the booking change, shows any error, and closes the dialog after a successful save.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">This boundary lets a product change its workflow without creating a new modal implementation. Review both the isolated component and a real screen. For example, after the dialog closes, check that focus returns to the trigger or another logical element if the trigger is gone.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-should-you-add-a-variant-or-a-separate-component">
+<h2 id="section-when-should-you-add-a-variant-or-a-separate-component" class="glossary-term-section__title">When should you add a variant or a separate component?</h2>
+<p class="glossary-term-section__text">Add an option when consumers need a supported variation of the same interaction, such as a wider surface for comparison content. Compose the dialog with other components when the layout changes. Give a recurring workflow its own pattern or wrapper when it adds business rules that the base dialog cannot own. Before adding a shared option, try it in the screens that need it. Document the default and what each consumer can configure.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-libraries.html">Component Libraries</a></li>
+<li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/glossary/web-components.html">Web Components</a></li>
+<li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://react.dev/learn/sharing-state-between-components" target="_blank" rel="noopener noreferrer">Sharing State Between Components, React</a></li>
+<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Dialog, Radix Primitives</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Dialog (Modal) Pattern, W3C WAI</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents brittle code repetition, eliminates leaky UI abstractions, and ensures predictable component composition across complex applications.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Encapsulation</span><span class="concept-tag">compositional props</span><span class="concept-tag">state decoupling</span><span class="concept-tag">API contracts.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Developers isolate component concerns into headless logic hooks, semantic templates, and tokenized styling layers, enforcing strict TypeScript interfaces.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-libraries.html">Component Libraries</a></li><li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li><li><a href="/glossary/web-components.html">Web Components</a></li><li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Dan Abramov, Presentational and Container Components</li><li>Addy Osmani, Learning JavaScript Design Patterns</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

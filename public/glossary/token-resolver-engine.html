@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Token Resolver Engines: Resolving Complex Design Token Trees</title>
-  <meta name="description" content="A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.">
+  <title>Design Token Resolution and Theming | Product Design Glossary</title>
+  <meta name="description" content="See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/token-resolver-engine.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Token Resolver Engines: Resolving Complex Design Token Trees">
-  <meta property="og:description" content="A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.">
+  <meta property="og:title" content="Design Token Resolution and Theming | Product Design Glossary">
+  <meta property="og:description" content="See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/token-resolver-engine.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Token Resolver Engines: Resolving Complex Design Token Trees">
-  <meta name="twitter:description" content="A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.">
+  <meta name="twitter:title" content="Design Token Resolution and Theming | Product Design Glossary">
+  <meta name="twitter:description" content="See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,52 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html",
+      "name": "Design Token Resolution and Theming | Product Design Glossary",
+      "description": "See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.designtokens.org/tr/2025.10/resolver/",
+        "https://www.designtokens.org/tr/2025.10/format/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#term",
       "name": "Token Resolver Engine",
       "termCode": "token-resolver-engine",
-      "description": "A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.",
+      "description": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
+      "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#webpage"
+      },
+      "alternateName": [
+        "Design Token Resolver"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +419,66 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.</p>
-      </section>
+    <p class="glossary-term-section__text">A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-resolver-do">
+<h2 id="section-what-does-a-resolver-do" class="glossary-term-section__title">What does a resolver do?</h2>
+<p class="glossary-term-section__text">The DTCG <a href="/glossary/design-tokens-format-module-dtcg.html">Format Module</a> defines token values and references. The separate Resolver Module defines how to select and combine sources for a context. For example, a resolver document can list a base set and then a theme modifier in <code>resolutionOrder</code>. The input selects a context such as <code>dark</code> for that modifier. Under the Resolver Module’s ordering rules, if selected sources declare the same token more than once, the last declaration wins.</p>
+<p class="glossary-term-section__text">A context choice and an alias answer different questions. The context selects which declaration of <code>color.text.link</code> applies. The alias points to the palette token whose value the link should use.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-resolving-link-text">
+<h2 id="section-example-of-resolving-link-text" class="glossary-term-section__title">Example of resolving link text</h2>
+<p class="glossary-term-section__text">Suppose Base defines both palette colors and a default link role. The theme modifier adds no sources for Light and adds one source, Dark, for Dark mode.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Context</th>
+<th>Sources applied in order</th>
+<th>Winning reference for <code>color.text.link</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>Base</td>
+<td><code>{color.blue.600}</code></td>
+</tr>
+<tr>
+<td>Dark</td>
+<td>Base, then Dark</td>
+<td><code>{color.blue.300}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The palette is present in both results because each context includes Base. After selecting the winning declaration, follow its reference to the corresponding color value. The component still uses the same link role.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-you-test">
+<h2 id="section-what-should-you-test" class="glossary-term-section__title">What should you test?</h2>
+<ul class="glossary-term-ul">
+<li><strong>Source order.</strong> Confirm that Dark selects the override. If the value stays the same, check whether Base was applied after Dark.</li>
+<li><strong>References.</strong> Check that the target exists in the final token set and that aliases do not form a cycle. For a missing target, start by checking which sources were selected.</li>
+<li><strong>Consumer output.</strong> Verify the intended value in both contexts. A build tool can emit a literal or preserve the alias in a platform format that supports it.</li>
+</ul>
+<p class="glossary-term-section__text">Resolution determines what applies. Formatting determines how those decisions are represented, such as CSS custom properties. One tool can handle both jobs, or you can run a separate resolver before the platform build.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
+<li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li>
+<li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.designtokens.org/tr/2025.10/resolver/" target="_blank" rel="noopener noreferrer">Design Tokens Resolver Module 2025.10, DTCG</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Manages multi-tier token hierarchies and complex multi-brand theming layers without cyclic dependency crashes or run-time calculation overhead.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Alias resolution</span><span class="concept-tag">dependency graphing</span><span class="concept-tag">cyclic reference detection</span><span class="concept-tag">AST evaluation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Evaluates token tree nodes sequentially, replacing alias references ({color.brand.primary}) with resolved values from parent collections while throwing errors on circular references.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li><li><a href="/glossary/style-dictionary.html">Style Dictionary</a></li><li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>W3C DTCG Resolver Module Specification</li><li>Styleframe DTCG Engine</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

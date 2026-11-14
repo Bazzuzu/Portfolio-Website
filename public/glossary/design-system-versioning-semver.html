@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semantic Versioning for Design Systems: Managing Breaking Changes</title>
-  <meta name="description" content="Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.">
+  <title>Design System Versioning and SemVer | Product Design Glossary</title>
+  <meta name="description" content="Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-system-versioning-semver.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Semantic Versioning for Design Systems: Managing Breaking Changes">
-  <meta property="og:description" content="Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.">
+  <meta property="og:title" content="Design System Versioning and SemVer | Product Design Glossary">
+  <meta property="og:description" content="Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-system-versioning-semver.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Semantic Versioning for Design Systems: Managing Breaking Changes">
-  <meta name="twitter:description" content="Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.">
+  <meta name="twitter:title" content="Design System Versioning and SemVer | Product Design Glossary">
+  <meta name="twitter:description" content="Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,51 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html",
+      "name": "Design System Versioning and SemVer | Product Design Glossary",
+      "description": "Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#breadcrumbs"
+      },
+      "citation": [
+        "https://semver.org/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#term",
       "name": "Design System Versioning & SemVer",
       "termCode": "design-system-versioning-semver",
-      "description": "Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.",
+      "description": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
+      "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#webpage"
+      },
+      "alternateName": [
+        "Design System Versioning"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +418,65 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.</p>
-      </section>
+    <p class="glossary-term-section__text">Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-counts-as-the-public-api">
+<h2 id="section-what-counts-as-the-public-api" class="glossary-term-section__title">What counts as the public API?</h2>
+<p class="glossary-term-section__text">Document which component exports, props, supported behaviors, and token names consumers can rely on. This is the compatibility contract for the package. Decide whether particular visual behavior is part of that contract and describe other visible changes in the release notes.</p>
+<p class="glossary-term-section__text">Design files and code can have different release schedules. Map a design library update to its matching code release when their changes are meant to be used together, and tell teams where to check compatibility.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-major-minor-and-patch-examples">
+<h2 id="section-major-minor-and-patch-examples" class="glossary-term-section__title">Major, minor, and patch examples</h2>
+<p class="glossary-term-section__text">For a stable package at <code>2.4.1</code>, treat each row as a separate release example.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Change</th>
+<th>Next version</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fix a dialog bug so focus returns to the trigger as documented</td>
+<td><code>2.4.2</code></td>
+<td>Backward-compatible bug fix</td>
+</tr>
+<tr>
+<td>Add an optional wide dialog variant and keep the current default</td>
+<td><code>2.5.0</code></td>
+<td>Backward-compatible addition</td>
+</tr>
+<tr>
+<td>Remove a documented dialog prop</td>
+<td><code>3.0.0</code></td>
+<td>Breaking change to the public API</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A token color update does not automatically determine the version bump. Check the compatibility contract first. A change that breaks a declared guarantee needs a major bump even if it only changes a value. Communicate visible changes in any release. For example, removing a documented token name is different from correcting its value to match the documented design.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-plan-a-breaking-change">
+<h2 id="section-how-do-you-plan-a-breaking-change" class="glossary-term-section__title">How do you plan a breaking change?</h2>
+<p class="glossary-term-section__text">If you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.</p>
+<p class="glossary-term-section__text">Publish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Semantic Versioning 2.0.0</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents breaking changes from corrupting consumer codebases, providing product teams with clear upgrade paths and risk assessments for design system dependencies.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Breaking changes (MAJOR)</span><span class="concept-tag">backward-compatible enhancements (MINOR)</span><span class="concept-tag">bug fixes (PATCH)</span><span class="concept-tag">deprecation windows.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Token or prop removals trigger MAJOR version increments; new components trigger MINOR updates; token color value tweaks trigger PATCH releases.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-system-governance.html">Design System Governance</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/designops.html">DesignOps</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Tom Preston-Werner, Semantic Versioning 2.0.0</li><li>Nathan Curtis, Versioning Design Systems. Category 03 — AI &amp; Agentic Systems The emergence of Large Language Models (LLMs) and autonomous agents has shifted product design from deterministic user interface flows to probabilistic, intent-driven systems. Designers are no longer merely sculpting static visual containers</li><li>they are building Agent Harnesses, curating domain contexts, and architecting real-time generative interfaces. Through standard protocols like the Model Context Protocol (MCP) and agent capabilities like Agent Skills, systems negotiate contextual resources, execute tool calls, and generate dynamic UI components during active user inference</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

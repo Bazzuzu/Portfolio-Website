@@ -253,7 +253,7 @@
           "@id": "https://lexkonovalov.com/glossary/design-system.html#term",
           "name": "Design System",
           "termCode": "design-system",
-          "description": "A Design System is a managed ecosystem of interdependent design foundations, token architectures, production code components, standards, and operational governance models that scale multi-brand digital product development.",
+          "description": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
           "url": "https://lexkonovalov.com/glossary/design-system.html"
         },
         {
@@ -269,7 +269,7 @@
           "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#term",
           "name": "Design Tokens Format Module (DTCG)",
           "termCode": "design-tokens-format-module-dtcg",
-          "description": "The Design Tokens Format Module is the official technical specification produced by the W3C Design Tokens Community Group (DTCG) that defines the standardized JSON schema structure for declaring, typing, and resolving design token data.",
+          "description": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
           "url": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html"
         },
         {
@@ -277,7 +277,7 @@
           "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#term",
           "name": "Semantic Tokens",
           "termCode": "semantic-tokens",
-          "description": "Semantic Tokens (or Alias Tokens) are contextual design tokens whose names communicate intended UI purpose and intent (e.g., surface-danger-subtle) rather than raw literal values (e.g., red-500).",
+          "description": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
           "url": "https://lexkonovalov.com/glossary/semantic-tokens.html"
         },
         {
@@ -285,7 +285,7 @@
           "@id": "https://lexkonovalov.com/glossary/design-primitives.html#term",
           "name": "Design Primitives",
           "termCode": "design-primitives",
-          "description": "Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.",
+          "description": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
           "url": "https://lexkonovalov.com/glossary/design-primitives.html"
         },
         {
@@ -293,7 +293,7 @@
           "@id": "https://lexkonovalov.com/glossary/component-architecture.html#term",
           "name": "Component Architecture",
           "termCode": "component-architecture",
-          "description": "Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.",
+          "description": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
           "url": "https://lexkonovalov.com/glossary/component-architecture.html"
         },
         {
@@ -301,7 +301,7 @@
           "@id": "https://lexkonovalov.com/glossary/component-libraries.html#term",
           "name": "Component Libraries",
           "termCode": "component-libraries",
-          "description": "A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.",
+          "description": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
           "url": "https://lexkonovalov.com/glossary/component-libraries.html"
         },
         {
@@ -309,7 +309,7 @@
           "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#term",
           "name": "Design System Governance",
           "termCode": "design-system-governance",
-          "description": "Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.",
+          "description": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
           "url": "https://lexkonovalov.com/glossary/design-system-governance.html"
         },
         {
@@ -341,7 +341,7 @@
           "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#term",
           "name": "Figma Variables & Modes",
           "termCode": "figma-variables-modes",
-          "description": "Figma Variables & Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.",
+          "description": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
           "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html"
         },
         {
@@ -389,7 +389,7 @@
           "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#term",
           "name": "Style Dictionary",
           "termCode": "style-dictionary",
-          "description": "Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.",
+          "description": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
           "url": "https://lexkonovalov.com/glossary/style-dictionary.html"
         },
         {
@@ -397,7 +397,7 @@
           "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#term",
           "name": "Token Resolver Engine",
           "termCode": "token-resolver-engine",
-          "description": "A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.",
+          "description": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
           "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html"
         },
         {
@@ -405,7 +405,7 @@
           "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#term",
           "name": "Headless UI Architecture",
           "termCode": "headless-ui-architecture",
-          "description": "Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.",
+          "description": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
           "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html"
         },
         {
@@ -413,7 +413,7 @@
           "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#term",
           "name": "Composite Design Token",
           "termCode": "composite-design-token",
-          "description": "A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).",
+          "description": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
           "url": "https://lexkonovalov.com/glossary/composite-design-token.html"
         },
         {
@@ -445,7 +445,7 @@
           "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#term",
           "name": "Design System Versioning & SemVer",
           "termCode": "design-system-versioning-semver",
-          "description": "Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.",
+          "description": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
           "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html"
         },
         {

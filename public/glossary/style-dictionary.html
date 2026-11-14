@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Style Dictionary: Multi-Platform Design Token Compilation</title>
-  <meta name="description" content="Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.">
+  <title>Style Dictionary for Design Tokens | Product Design Glossary</title>
+  <meta name="description" content="Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/style-dictionary.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Style Dictionary: Multi-Platform Design Token Compilation">
-  <meta property="og:description" content="Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.">
+  <meta property="og:title" content="Style Dictionary for Design Tokens | Product Design Glossary">
+  <meta property="og:description" content="Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/style-dictionary.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Style Dictionary: Multi-Platform Design Token Compilation">
-  <meta name="twitter:description" content="Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.">
+  <meta name="twitter:title" content="Style Dictionary for Design Tokens | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,52 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/style-dictionary.html",
+      "name": "Style Dictionary for Design Tokens | Product Design Glossary",
+      "description": "Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#breadcrumbs"
+      },
+      "citation": [
+        "https://styledictionary.com/reference/config/",
+        "https://styledictionary.com/reference/hooks/formats/predefined/",
+        "https://styledictionary.com/info/dtcg/",
+        "https://styledictionary.com/getting-started/using_the_cli/",
+        "https://styledictionary.com/reference/hooks/transforms/predefined/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#term",
       "name": "Style Dictionary",
       "termCode": "style-dictionary",
-      "description": "Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.",
+      "description": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
+      "url": "https://lexkonovalov.com/glossary/style-dictionary.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/style-dictionary.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +419,63 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.</p>
-      </section>
+    <p class="glossary-term-section__text">Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-does-a-style-dictionary-build-work">
+<h2 id="section-how-does-a-style-dictionary-build-work" class="glossary-term-section__title">How does a Style Dictionary build work?</h2>
+<p class="glossary-term-section__text">Choose the source files, configure a platform, then specify how tokens should be transformed and written. A <strong>transform</strong> can change a token’s name or value for the target. A <strong>format</strong> decides how the result appears in a file. A transform group gives a platform a reusable set of transforms.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-building-css-variables">
+<h2 id="section-example-of-building-css-variables" class="glossary-term-section__title">Example of building CSS variables</h2>
+<p class="glossary-term-section__text">Put one DTCG number token in <code>tokens.json</code>:</p>
+<div class="glossary-code-block-wrapper">
+<pre class="glossary-code-block"><code class="language-json">{
+  "opacity": {
+    "muted": { "$type": "number", "$value": 0.6 }
+  }
+}</code></pre>
+</div>
+<p class="glossary-term-section__text">Save the following as <code>config.json</code>. It converts token paths to kebab-case names and uses the built-in CSS variable format.</p>
+<div class="glossary-code-block-wrapper">
+<pre class="glossary-code-block"><code class="language-json">{
+  "source": ["tokens.json"],
+  "platforms": {
+    "css": {
+      "transforms": ["name/kebab"],
+      "buildPath": "dist/",
+      "files": [
+        { "destination": "tokens.css", "format": "css/variables" }
+      ]
+    }
+  }
+}</code></pre>
+</div>
+<p class="glossary-term-section__text">With Style Dictionary installed, run <code>npx style-dictionary build</code> from the directory containing both files. The expected output is <code>--opacity-muted: 0.6;</code> under <code>:root</code> in <code>dist/tokens.css</code>. An application can load that file and use the property where the design calls for that opacity.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-themes-and-aliases-affect-the-build">
+<h2 id="section-how-do-themes-and-aliases-affect-the-build" class="glossary-term-section__title">How do themes and aliases affect the build?</h2>
+<p class="glossary-term-section__text">Decide which token values apply to each theme before generating its output. You might build one file per theme or emit variables under different CSS selectors. With <code>css/variables</code>, the <code>outputReferences</code> option can preserve eligible aliases as CSS variable references. Check that the referenced properties exist in the output the application loads.</p>
+<p class="glossary-term-section__text">Style Dictionary supports DTCG inputs. Its documentation identifies DTCG 2025.10 support as incomplete. Check the version you use against the types, references, and theme behavior your project needs. Run the build on a small fixture, inspect the output, and load it in one consuming component before bringing over the full token set.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
+<li><a href="/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Configuration, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/reference/hooks/formats/predefined/" target="_blank" rel="noopener noreferrer">Built-in formats, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/info/dtcg/" target="_blank" rel="noopener noreferrer">DTCG support, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/getting-started/using_the_cli/" target="_blank" rel="noopener noreferrer">Using the CLI, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/reference/hooks/transforms/predefined/" target="_blank" rel="noopener noreferrer">Built-in transforms, Style Dictionary</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Eliminates manual translation of design values across tech stacks, ensuring cross-platform token synchronization from a single upstream codebase.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Transform groups</span><span class="concept-tag">formatters</span><span class="concept-tag">build actions</span><span class="concept-tag">platform targets.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Configured pipelines ingest raw design token files, execute type-specific transforms (e.g., converting hex colors to Swift UIColor), and output ready-to-consume build artifacts.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li><li><a href="/glossary/design-engineering.html">Design Engineering</a></li><li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Amazon Open Source, Style Dictionary Documentation (https://amzn.github.io/style-dictionary)</li><li>W3C DTCG Tooling Guides</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

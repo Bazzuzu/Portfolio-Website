@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Headless UI Architecture: Logic-First Component Engineering</title>
-  <meta name="description" content="Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.">
+  <title>Headless UI Architecture | Product Design Glossary</title>
+  <meta name="description" content="Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/headless-ui-architecture.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Headless UI Architecture: Logic-First Component Engineering">
-  <meta property="og:description" content="Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.">
+  <meta property="og:title" content="Headless UI Architecture | Product Design Glossary">
+  <meta property="og:description" content="Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/headless-ui-architecture.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Headless UI Architecture: Logic-First Component Engineering">
-  <meta name="twitter:description" content="Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.">
+  <meta name="twitter:title" content="Headless UI Architecture | Product Design Glossary">
+  <meta name="twitter:description" content="Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html",
+      "name": "Headless UI Architecture | Product Design Glossary",
+      "description": "Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.radix-ui.com/primitives/docs/components/dialog",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+        "https://react-aria.adobe.com/Modal"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#term",
       "name": "Headless UI Architecture",
       "termCode": "headless-ui-architecture",
-      "description": "Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.",
+      "description": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
+      "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,66 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.</p>
-      </section>
+    <p class="glossary-term-section__text">Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-headless-component-provide">
+<h2 id="section-what-does-a-headless-component-provide" class="glossary-term-section__title">What does a headless component provide?</h2>
+<p class="glossary-term-section__text">Libraries expose behavior in different ways. An unstyled component can render elements and connect their behavior. A hook can expose state and interaction properties for the elements the application renders. Check what the library renders and which properties you must pass to your own elements.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-a-headless-modal-dialog">
+<h2 id="section-example-of-a-headless-modal-dialog" class="glossary-term-section__title">Example of a headless modal dialog</h2>
+<p class="glossary-term-section__text">A travel team uses a dialog primitive to review a booking change. Radix Dialog, for example, provides modal focus handling, Escape dismissal, and parts for a title and description. The team supplies the title, fare details, buttons, and visible focus treatment. The booking request and error recovery remain part of the product workflow.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Layer</th>
+<th>What to verify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Behavior</td>
+<td>Focus moves inside when the modal opens, Tab and Shift+Tab stay inside, and Escape closes it.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>The dialog has an accessible name, and the text explains what the user is reviewing.</td>
+</tr>
+<tr>
+<td>Presentation</td>
+<td>The contrast and focus indicator work in the actual theme. Longer text and zoom leave the content usable.</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Closing usually returns focus to the trigger. If the trigger is gone, focus moves to a logical next element. A failed booking change gets clear feedback.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A primitive can help implement an accessible pattern. Test the result in context because labels, styling, and the surrounding flow affect whether it works for users.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-should-you-choose-headless-ui">
+<h2 id="section-when-should-you-choose-headless-ui" class="glossary-term-section__title">When should you choose headless UI?</h2>
+<p class="glossary-term-section__text">Use a headless approach when products need to share an interaction but require different visual treatments. It can also help a design system build its own styled wrapper around behavior it trusts. If teams already agree on the appearance and need a ready-to-use control, a styled component library can require less integration work. Compare the effort to implement and test the complete experience in a representative screen.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
+<li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Dialog, Radix Primitives</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Dialog (Modal) Pattern, W3C WAI</a></li>
+<li><a href="https://react-aria.adobe.com/Modal" target="_blank" rel="noopener noreferrer">Modal, React Aria</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Maximizes design freedom and UI reusability by delivering battle-tested accessible behavior without opinionated CSS, preventing styling conflicts in component libraries.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Unstyled components</span><span class="concept-tag">logic hooks</span><span class="concept-tag">state machines</span><span class="concept-tag">full styling decoupling.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Components provide accessibility attributes and event listeners via hooks or headless components, leaving style implementation to modern utility CSS or token engines.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li><li><a href="/glossary/semantic-html.html">Semantic HTML</a></li><li><span>ARIA</span></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Radix UI Documentation</li><li>Floating UI Specifications</li><li>Kent C. Dodds, Inversion of Control</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

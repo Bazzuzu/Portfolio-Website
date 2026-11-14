@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Figma Variables &amp; Modes: Theming Architecture for Systems</title>
-  <meta name="description" content="Figma Variables &amp; Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.">
+  <title>Figma Variables and Modes | Product Design Glossary</title>
+  <meta name="description" content="Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/figma-variables-modes.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Figma Variables &amp; Modes: Theming Architecture for Systems">
-  <meta property="og:description" content="Figma Variables &amp; Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.">
+  <meta property="og:title" content="Figma Variables and Modes | Product Design Glossary">
+  <meta property="og:description" content="Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/figma-variables-modes.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Figma Variables &amp; Modes: Theming Architecture for Systems">
-  <meta name="twitter:description" content="Figma Variables &amp; Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.">
+  <meta name="twitter:title" content="Figma Variables and Modes | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html",
+      "name": "Figma Variables and Modes | Product Design Glossary",
+      "description": "Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#breadcrumbs"
+      },
+      "citation": [
+        "https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes",
+        "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#term",
       "name": "Figma Variables & Modes",
       "termCode": "figma-variables-modes",
-      "description": "Figma Variables & Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.",
+      "description": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
+      "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,63 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Figma Variables &amp; Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.</p>
-      </section>
+    <p class="glossary-term-section__text">Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-variables-collections-and-modes-work">
+<h2 id="section-how-do-variables-collections-and-modes-work" class="glossary-term-section__title">How do variables, collections, and modes work?</h2>
+<p class="glossary-term-section__text">Figma supports color, number, string, and Boolean variables. A variable can store a value directly or reference another variable through an alias. A collection defines which modes its variables share. Each mode supplies one value per variable.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>In Figma</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Palette collection</td>
+<td>Color variables named <code>blue/600</code> and <code>blue/300</code></td>
+</tr>
+<tr>
+<td>Semantic colors collection</td>
+<td>Light and Dark modes</td>
+</tr>
+<tr>
+<td>Semantic variable</td>
+<td><code>color/text/link</code>, referencing <code>blue/600</code> in Light and <code>blue/300</code> in Dark</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Bind the link’s text fill to the semantic variable. In the frame’s Appearance settings, choose Light or Dark for the Semantic colors collection. The same link layer keeps its variable binding as the color changes. Check contrast against the actual background in both themes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-why-is-a-layer-still-showing-the-wrong-mode">
+<h2 id="section-why-is-a-layer-still-showing-the-wrong-mode" class="glossary-term-section__title">Why is a layer still showing the wrong mode?</h2>
+<p class="glossary-term-section__text">For a collection, an object set to Auto looks up its parent hierarchy for an explicit mode. If a nested frame has an explicit override, its children can use that mode even when the outer frame changes. Check the layer’s binding, the collection it comes from, and the nearest mode setting. When no override applies, Figma uses the applicable default.</p>
+<p class="glossary-term-section__text">Use separate collections for choices that need to vary independently. A color theme and a spacing density can have separate modes so you can review Dark with either Compact or Comfortable spacing.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-can-you-use-figma-variables-as-design-tokens">
+<h2 id="section-can-you-use-figma-variables-as-design-tokens" class="glossary-term-section__title">Can you use Figma variables as design tokens?</h2>
+<p class="glossary-term-section__text">Variables can represent token decisions inside Figma. Figma documents DTCG JSON import for supported token types and JSON export of variable modes. For example, its dimension import expects pixels, and its duration import expects seconds. Cross-collection alias import uses Figma-specific extension data.</p>
+<p class="glossary-term-section__text">Try exporting Light and Dark and importing them into a test collection. Check both values and whether the link variable still references its palette variable. If Figma cannot find the target collection, check the mapping before using the files in a <a href="/glossary/design-to-code-workflow.html">design-to-code workflow</a>. Agree on which source owns the values and how a change reaches the application.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+<li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes" target="_blank" rel="noopener noreferrer">Overview of variables, collections, and modes, Figma</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables" target="_blank" rel="noopener noreferrer">Modes for variables, Figma</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Bridges design tool canvas states with production CSS variables and token aliasing structures, reducing artboard bloat across responsive and themed designs.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Variable types</span><span class="concept-tag">variable collections</span><span class="concept-tag">contextual modes</span><span class="concept-tag">token scoping.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers assign variables to layer properties; when frames are switched to different modes, the canvas re-resolves all underlying variable values dynamically.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li><li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li><li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Figma Schema Architecture Guides</li><li>W3C DTCG Figma Plugin Guides</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

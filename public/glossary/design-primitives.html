@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Primitives: Building Foundation Scales for Systems</title>
-  <meta name="description" content="Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.">
+  <title>Design Primitives and Primitive Tokens | Product Design Glossary</title>
+  <meta name="description" content="Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-primitives.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Design Primitives: Building Foundation Scales for Systems">
-  <meta property="og:description" content="Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.">
+  <meta property="og:title" content="Design Primitives and Primitive Tokens | Product Design Glossary">
+  <meta property="og:description" content="Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-primitives.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Design Primitives: Building Foundation Scales for Systems">
-  <meta name="twitter:description" content="Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.">
+  <meta name="twitter:title" content="Design Primitives and Primitive Tokens | Product Design Glossary">
+  <meta name="twitter:description" content="Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-primitives.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-primitives.html",
+      "name": "Design Primitives and Primitive Tokens | Product Design Glossary",
+      "description": "Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-primitives.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-primitives.html#breadcrumbs"
+      },
+      "citation": [
+        "https://atlassian.design/foundations/tokens/design-tokens/",
+        "https://atlassian.design/foundations/spacing/primitives",
+        "https://www.designtokens.org/tr/2025.10/format/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-primitives.html#term",
       "name": "Design Primitives",
       "termCode": "design-primitives",
-      "description": "Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.",
+      "description": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
+      "url": "https://lexkonovalov.com/glossary/design-primitives.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-primitives.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-primitives.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,67 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.</p>
-      </section>
+    <p class="glossary-term-section__text">Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-are-primitive-tokens">
+<h2 id="section-what-are-primitive-tokens" class="glossary-term-section__title">What are primitive tokens?</h2>
+<p class="glossary-term-section__text">A primitive token names a base value such as a palette color or a spacing step. For example, <code>space.200</code> might represent 8 pixels. A token scoped to a component, such as <code>card.padding</code>, can reference it. The base token gives multiple decisions a shared value, while the card token identifies the decision the component is using.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Term</th>
+<th>Example</th>
+<th>What it provides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primitive token</td>
+<td><code>space.200</code></td>
+<td>A named value on a spacing scale</td>
+</tr>
+<tr>
+<td>Semantic token</td>
+<td><code>color.text.link</code></td>
+<td>A value for a named purpose</td>
+</tr>
+<tr>
+<td>Primitive component</td>
+<td>Stack</td>
+<td>A reusable way to arrange elements vertically</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">These layers are conventions. A team may let a layout component expose steps from a spacing scale and use semantic color tokens for interface text. Document the choice so teams can tell which values are intended for direct use.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-primitive-component-do">
+<h2 id="section-what-does-a-primitive-component-do" class="glossary-term-section__title">What does a primitive component do?</h2>
+<p class="glossary-term-section__text">A layout primitive provides a small piece of reusable structure. Atlassian’s primitives include Stack for vertical arrangement and Inline for horizontal arrangement. A team could use a Stack to arrange a field label, input, and hint with a consistent gap. The field component still defines how those parts relate and how errors are communicated.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-should-you-change-a-base-value">
+<h2 id="section-when-should-you-change-a-base-value" class="glossary-term-section__title">When should you change a base value?</h2>
+<p class="glossary-term-section__text">Suppose cards need more padding, while form layouts should stay as they are. Find the token or setting specific to cards and choose the spacing value it should use. If you change the base scale itself, trace its references and check representative screens. The same step may set card padding and the gaps between form fields.</p>
+<p class="glossary-term-section__text">Start with base values and components that solve recurring problems. Add a named layer when it helps people understand a decision or change it at the right scope.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/atomic-design.html">Atomic Design</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Design Tokens, Atlassian Design System</a></li>
+<li><a href="https://atlassian.design/foundations/spacing/primitives" target="_blank" rel="noopener noreferrer">Primitives overview, Atlassian Design System</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Constrains designer choices to mathematically harmonious scales, preventing arbitrary pixel and color choices across products.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Literal scales</span><span class="concept-tag">context-free values</span><span class="concept-tag">global foundation</span><span class="concept-tag">mathematical ramps.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Primitives are defined at the root level of a token tree and referenced strictly by intermediate semantic tokens, never consumed directly by production UI components.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/atomic-design.html">Atomic Design</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Brad Frost, Atomic Design</li><li>Nathan Curtis, Tokens in Design Systems</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

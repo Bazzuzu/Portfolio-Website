@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Building Scalable Component Libraries: Best Practices Guide</title>
-  <meta name="description" content="A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.">
+  <title>UI Component Libraries | Product Design Glossary</title>
+  <meta name="description" content="Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/component-libraries.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Building Scalable Component Libraries: Best Practices Guide">
-  <meta property="og:description" content="A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.">
+  <meta property="og:title" content="UI Component Libraries | Product Design Glossary">
+  <meta property="og:description" content="Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/component-libraries.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Building Scalable Component Libraries: Best Practices Guide">
-  <meta name="twitter:description" content="A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.">
+  <meta name="twitter:title" content="UI Component Libraries | Product Design Glossary">
+  <meta name="twitter:description" content="Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,54 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/component-libraries.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/component-libraries.html",
+      "name": "UI Component Libraries | Product Design Glossary",
+      "description": "Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/component-libraries.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/component-libraries.html#breadcrumbs"
+      },
+      "citation": [
+        "https://design-system.service.gov.uk/components/button/",
+        "https://storybook.js.org/docs/get-started/whats-a-story",
+        "https://design-system.service.gov.uk/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/component-libraries.html#term",
       "name": "Component Libraries",
       "termCode": "component-libraries",
-      "description": "A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.",
+      "description": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
+      "url": "https://lexkonovalov.com/glossary/component-libraries.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/component-libraries.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/component-libraries.html#webpage"
+      },
+      "alternateName": [
+        "Component Library",
+        "UI Component Library"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +421,67 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.</p>
-      </section>
+    <p class="glossary-term-section__text">A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-component-library">
+<h2 id="section-what-belongs-in-a-component-library" class="glossary-term-section__title">What belongs in a component library?</h2>
+<p class="glossary-term-section__text">A useful entry describes the supported options, states, and behavior. For a button, document options such as label and emphasis, plus states such as focus and disabled. Include usage guidance where a choice affects the task, such as using a link for navigation and a button to submit a form.</p>
+<p class="glossary-term-section__text">A library can expose styled components or behavior that teams style themselves. The <a href="/glossary/design-system.html">design system</a> covers the broader decisions about foundations, patterns, and maintenance. Storybook is one way to document and exercise library components. A story shows a rendered example of a component in a specified state.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-documenting-a-shared-button">
+<h2 id="section-example-of-documenting-a-shared-button" class="glossary-term-section__title">Example of documenting a shared button</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>What to document</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>A text label and supported emphasis variants</td>
+</tr>
+<tr>
+<td>Behavior</td>
+<td>Responds to pointer and keyboard activation when enabled</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Default, keyboard focus, a long label, and disabled</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>How a form uses the button and shows feedback during submission</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Use an isolated example to check supported states and a product screen to check the whole interaction. A checkout flow, for example, still needs to explain a pending submission and handle errors. Reusing the same button gives teams a shared control. The flow determines what the action does and what feedback users receive.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-should-a-pattern-become-a-shared-component">
+<h2 id="section-when-should-a-pattern-become-a-shared-component" class="glossary-term-section__title">When should a pattern become a shared component?</h2>
+<p class="glossary-term-section__text">Start with an interaction that repeats across real screens. Compare how teams use it and decide which differences matter. If two teams need the same behavior and differ only in emphasis, a supported variant may be enough. If one needs a different workflow, keep that workflow in the product and reuse the smaller component where it fits.</p>
+<p class="glossary-term-section__text">Document who maintains the component and how consumers adopt fixes. When you change a supported option or state, test a representative screen that uses the component before releasing the change.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Button, GOV.UK Design System</a></li>
+<li><a href="https://storybook.js.org/docs/get-started/whats-a-story" target="_blank" rel="noopener noreferrer">What’s a story?, Storybook documentation</a></li>
+<li><a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GOV.UK Design System</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Accelerates feature engineering velocity while ensuring systemic UI consistency, cross-browser support, and automated accessibility compliance across applications.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Centralized package</span><span class="concept-tag">version control</span><span class="concept-tag">automated test coverage</span><span class="concept-tag">visual documentation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Components are authored as independent packages, documented in interactive sandboxes, and published to private package managers.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/design-system.html">Design System</a></li><li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li><li><a href="/glossary/designops.html">DesignOps</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Storybook.js Documentation</li><li>Brad Frost, Atomic Design</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Composite Design Tokens: Managing Typography, Shadows, and Borders</title>
-  <meta name="description" content="A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).">
+  <title>Composite Design Tokens | Product Design Glossary</title>
+  <meta name="description" content="Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/composite-design-token.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Composite Design Tokens: Managing Typography, Shadows, and Borders">
-  <meta property="og:description" content="A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).">
+  <meta property="og:title" content="Composite Design Tokens | Product Design Glossary">
+  <meta property="og:description" content="Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/composite-design-token.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Composite Design Tokens: Managing Typography, Shadows, and Borders">
-  <meta name="twitter:description" content="A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).">
+  <meta name="twitter:title" content="Composite Design Tokens | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,51 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/composite-design-token.html",
+      "name": "Composite Design Tokens | Product Design Glossary",
+      "description": "Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.designtokens.org/tr/2025.10/format/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#term",
       "name": "Composite Design Token",
       "termCode": "composite-design-token",
-      "description": "A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).",
+      "description": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
+      "url": "https://lexkonovalov.com/glossary/composite-design-token.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/composite-design-token.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#webpage"
+      },
+      "alternateName": [
+        "Composite Token"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +418,52 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).</p>
-      </section>
+    <p class="glossary-term-section__text">A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-is-a-composite-token-different-from-a-group">
+<h2 id="section-how-is-a-composite-token-different-from-a-group" class="glossary-term-section__title">How is a composite token different from a group?</h2>
+<p class="glossary-term-section__text">A group organizes separate tokens. In the DTCG format, a composite token declares one <code>$value</code> that contains the parts of a single decision. In a group named <code>elevation</code>, <code>card</code> and <code>dialog</code> could be two separate shadow tokens. Each of those tokens can carry its own set of shadow properties.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-dtcg-example-of-a-shadow-token">
+<h2 id="section-dtcg-example-of-a-shadow-token" class="glossary-term-section__title">DTCG example of a shadow token</h2>
+<div class="glossary-code-block-wrapper">
+<pre class="glossary-code-block"><code class="language-json">{
+  "elevation": {
+    "card": {
+      "$type": "shadow",
+      "$value": {
+        "color": { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.16 },
+        "offsetX": { "value": 0, "unit": "px" },
+        "offsetY": { "value": 2, "unit": "px" },
+        "blur": { "value": 8, "unit": "px" },
+        "spread": { "value": 0, "unit": "px" }
+      }
+    }
+  }
+}</code></pre>
+</div>
+<p class="glossary-term-section__text">Here <code>elevation</code> is the group and <code>elevation.card</code> is the token path. This shadow uses the five required properties in a single value. The format also allows an optional <code>inset</code> flag. Use the fields supported by the token’s type. The <a href="/glossary/design-tokens-format-module-dtcg.html">DTCG Format Module</a> defines each composite type and which properties may reference other tokens.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-should-you-use-a-composite-token">
+<h2 id="section-when-should-you-use-a-composite-token" class="glossary-term-section__title">When should you use a composite token?</h2>
+<p class="glossary-term-section__text">Use one when the properties belong together in the consuming interface. If several components need the same card shadow, one token gives them a shared way to request that shadow. If an offset also needs to be reused independently, define an offset token and reference it inside the shadow where the format and tools support that reference.</p>
+<p class="glossary-term-section__text">Check what each consumer expects. For the example above, a web build could produce <code>0 2px 8px 0 rgb(0 0 0 / 16%)</code> for CSS <code>box-shadow</code>. Another platform may expect separate parameters. Verify the generated output and judge the rendered result in a real component before adopting the token across the library.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
+<li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li>
+<li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Encapsulates interdependent design decisions into cohesive, reusable design units, preventing designers from applying mismatched font sizes, line heights, or blur radii.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Multi-property values</span><span class="concept-tag">typography bundles</span><span class="concept-tag">elevation matrices</span><span class="concept-tag">structural groupings.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Defined in DTCG JSON schemas as a single node containing required child keys (e.g., fontFamily, fontSize, lineHeight), resolved together during platform transforms.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-tokens.html">Design Tokens</a></li><li><a href="/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li><li><a href="/glossary/semantic-tokens.html">Semantic Tokens</a></li><li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>W3C Design Tokens Community Group Format Specification 2025.1013</li><li>designtokens.org</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

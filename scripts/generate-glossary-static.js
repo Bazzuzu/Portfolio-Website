@@ -826,7 +826,13 @@ glossaryTerms.forEach((term) => {
   if ([
     'churn-mitigation-architecture', 'feature-flag-strategy', 'b2c-engagement-loops',
     'lead-capture-mechanics', 'product-market-fit-pmf-engine', 'jobs-to-be-done-jtbd',
-    'product-discovery', 'product-qualified-lead-pql'
+    'product-discovery', 'product-qualified-lead-pql',
+    // Design Systems & Engineering batch
+    'design-system', 'design-tokens-format-module-dtcg', 'semantic-tokens',
+    'design-primitives', 'component-libraries', 'figma-variables-modes',
+    'style-dictionary', 'token-resolver-engine', 'composite-design-token',
+    'component-architecture', 'headless-ui-architecture', 'design-system-governance',
+    'design-system-versioning-semver'
   ].includes(term.slug)) {
     lastmod = '2026-11-14';
   } else if ([

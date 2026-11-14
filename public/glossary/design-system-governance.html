@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design System Governance: Workflows, RFCs &amp; Contribution Models</title>
-  <meta name="description" content="Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.">
+  <title>Design System Governance | Product Design Glossary</title>
+  <meta name="description" content="Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-system-governance.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Design System Governance: Workflows, RFCs &amp; Contribution Models">
-  <meta property="og:description" content="Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.">
+  <meta property="og:title" content="Design System Governance | Product Design Glossary">
+  <meta property="og:description" content="Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-system-governance.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Design System Governance: Workflows, RFCs &amp; Contribution Models">
-  <meta name="twitter:description" content="Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.">
+  <meta name="twitter:title" content="Design System Governance | Product Design Glossary">
+  <meta name="twitter:description" content="Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-system-governance.html",
+      "name": "Design System Governance | Product Design Glossary",
+      "description": "Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#breadcrumbs"
+      },
+      "citation": [
+        "https://design-system.service.gov.uk/community/propose-a-component-or-pattern/",
+        "https://design-system.service.gov.uk/community/develop-a-component-or-pattern/",
+        "https://design-system.service.gov.uk/community/contribution-criteria/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#term",
       "name": "Design System Governance",
       "termCode": "design-system-governance",
-      "description": "Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.",
+      "description": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
+      "url": "https://lexkonovalov.com/glossary/design-system-governance.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-system-governance.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,66 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.</p>
-      </section>
+    <p class="glossary-term-section__text">Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-decisions-does-governance-cover">
+<h2 id="section-what-decisions-does-governance-cover" class="glossary-term-section__title">What decisions does governance cover?</h2>
+<p class="glossary-term-section__text">Give teams a clear route for asking for a change and a clear owner for deciding what happens. The GOV.UK Design System publishes a proposal process, contribution criteria, and guidance for developing components and patterns. A smaller system can use a shared issue tracker and named maintainers.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Decision</th>
+<th>What to agree on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope</td>
+<td>Which needs are shared across products and which can stay within one product?</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>What examples, user research, or compatibility checks support the proposal?</td>
+</tr>
+<tr>
+<td>Responsibility</td>
+<td>Who proposes, reviews, maintains, and communicates the change?</td>
+</tr>
+<tr>
+<td>Adoption</td>
+<td>Who updates guidance, writes migration steps, and supports consuming teams?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-of-reviewing-a-shared-dialog-change">
+<h2 id="section-example-of-reviewing-a-shared-dialog-change" class="glossary-term-section__title">Example of reviewing a shared dialog change</h2>
+<p class="glossary-term-section__text">A checkout team requests a wider dialog for reviewing a booking change. It shows where the current width makes it hard to compare the original and proposed fares. The system maintainers check whether other products need the same option and whether it affects focus, small screens, or longer content.</p>
+<p class="glossary-term-section__text">If a wider layout serves several teams, the maintainers can approve an optional variant with the existing default unchanged. Assign someone to build, document, and maintain it. A comparison layout that only checkout needs can stay in checkout and use the existing dialog behavior. Record the decision and its reason so another team can revisit it when it has new evidence.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-can-a-small-team-keep-governance-lightweight">
+<h2 id="section-how-can-a-small-team-keep-governance-lightweight" class="glossary-term-section__title">How can a small team keep governance lightweight?</h2>
+<p class="glossary-term-section__text">Ask for a short proposal with the problem, candidate change, and affected consumers. Agree on a review owner and check the change in at least one real screen. If consumers need to change their code or designs, include a <a href="/glossary/design-system-versioning-semver.html">version and migration plan</a>. Close the loop by updating the documentation and telling the teams whose work is affected.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/designops.html">DesignOps</a></li>
+<li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/design-system-versioning-semver.html">Design System Versioning & SemVer</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://design-system.service.gov.uk/community/propose-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Propose a component or pattern, GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/community/develop-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Develop a component or pattern, GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Contribution criteria, GOV.UK Design System</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents design system decay, unvetted component fragmentation, and organizational gridlock by balancing centralized system stability with federated product team contributions.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Contribution models</span><span class="concept-tag">RFC processes</span><span class="concept-tag">deprecation lifecycles</span><span class="concept-tag">version contracts.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Teams establish cross-functional review boards that evaluate component proposals against strict acceptance criteria, including automated test coverage and multi-brand parity.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/designops.html">DesignOps</a></li><li><a href="/glossary/design-system.html">Design System</a></li><li><a href="/glossary/design-system-versioning-semver.html">Design System Versioning &amp; SemVer</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Nathan Curtis, Team Models for Design Systems</li><li>Jina Anne, Governing Enterprise Systems</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

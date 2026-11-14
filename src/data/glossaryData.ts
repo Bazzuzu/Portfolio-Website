@@ -2034,26 +2034,145 @@ Use the schema to discuss labels, record relationships, empty states, and rules 
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "A Design System is a managed ecosystem of interdependent design foundations, token architectures, production code components, standards, and operational governance models that scale multi-brand digital product development.",
-    "purpose": "Eliminates visual and functional divergence, curtails engineering rework, and ensures consistent quality, accessibility, and brand coherence across multi-platform software suites.",
+    "definition": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
+    "purpose": "Establishes a single source of truth for design decisions and UI code, accelerating product development velocity and ensuring cross-platform brand and UX cohesion.",
     "keyConcepts": [
-      "Design tokens",
-      "component contracts",
-      "operational governance",
-      "systematic scalability."
+      "Foundations and tokens",
+      "Component library",
+      "UI kit vs design system",
+      "Patterns and guidance",
+      "System maintenance and contribution"
     ],
-    "howItWorks": "Integrates platform-agnostic token specifications with reusable code libraries and design tool libraries via automated deployment pipelines, governed by formal versioning.",
+    "howItWorks": "Unifies tokens, reusable components, and interaction guidelines under continuous governance, allowing product teams to compose interfaces reliably while sharing bug fixes and improvements.",
     "relatedTerms": [
       "Design Tokens",
       "Component Architecture",
       "DesignOps",
+      "Component Libraries",
       "Design System Governance"
     ],
-    "seoTitle": "What is a Design System? Architecture, Scalability & Setup",
+    "seoTitle": "What Is a Design System? | Product Design Glossary",
     "sources": [
-      "Nathan Curtis, Modular Web Design, New Riders",
-      "Alla Kholmatova, Design Systems, Smashing Media"
-    ]
+      "GOV.UK Design System (https://design-system.service.gov.uk/)",
+      "Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/)",
+      "Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)"
+    ],
+    "seoDescription": "Learn what a design system includes and how it differs from a UI kit or component library. Follow a shared button from design to maintenance.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-system.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-system.html",
+                "name": "What Is a Design System? | Product Design Glossary",
+                "description": "Learn what a design system includes and how it differs from a UI kit or component library. Follow a shared button from design to maintenance.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://design-system.service.gov.uk/",
+                      "https://design-system.service.gov.uk/components/button/",
+                      "https://design-system.service.gov.uk/community/contribution-criteria/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-system.html#term",
+                "name": "Design System",
+                "termCode": "design-system",
+                "description": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
+                "url": "https://lexkonovalov.com/glossary/design-system.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-system.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design System",
+                            "item": "https://lexkonovalov.com/glossary/design-system.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Design System
+
+A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.
+
+## What does a design system include?
+
+| Part | What it helps teams decide |
+|---|---|
+| Foundations and tokens | Which colors, spacing, and other design decisions to reuse |
+| Components | How common controls such as buttons and text inputs look and behave |
+| Patterns and guidance | How to combine components for tasks such as entering an address or recovering from an error |
+| Maintenance | Who reviews changes, how teams contribute, and how products adopt updates |
+
+Start with the parts your teams repeatedly need. The GOV.UK Design System is a public example with styles, components, patterns, and contribution criteria.
+
+## Design system vs. component library vs. UI kit
+
+A **UI kit** typically provides reusable design assets in a design tool. A **component library** provides reusable interface components. A design system connects those assets and implementations to usage guidance and maintenance. A team can use a library from another organization and document the additional decisions its own products need.
+
+## Example of a shared button
+
+Suppose two teams use a primary button in checkout and account settings. They agree on how the button presents a label and keyboard focus, which tokens it uses, and when a secondary action should have less visual emphasis. The [component library](/glossary/component-libraries.html) provides the implementation. The system documents when to use it and how to request a change.
+
+If checkout introduces a pending state, the teams review what happens to the label, feedback, and repeat submissions. They decide which behavior belongs in the shared component and which belongs to checkout. They test the button in both products. Checkout owns the payment request and its outcome, while the system can document how the button presents a pending action.
+
+## How do you start a design system?
+
+Pick one recurring pattern with a clear owner and two real places to try it. Document what should stay consistent and what product teams can configure. Check the result in context and record how consuming teams will get future fixes. Use feedback from the first two implementations to decide what to document or share next.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Component Architecture](/glossary/component-architecture.html)
+- [DesignOps](/glossary/designops.html)
+- [Component Libraries](/glossary/component-libraries.html)
+- [Design System Governance](/glossary/design-system-governance.html)
+
+## Sources
+
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)
+- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)`
   },
   {
     "id": "027",
@@ -2238,26 +2357,158 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "The Design Tokens Format Module is the official technical specification produced by the W3C Design Tokens Community Group (DTCG) that defines the standardized JSON schema structure for declaring, typing, and resolving design token data.",
-    "purpose": "Eliminates proprietary tool lock-in by establishing a universal file format interoperable across Figma, Penpot, Style Dictionary, and production build tooling.",
+    "definition": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
+    "purpose": "Standardizes cross-tool design token exchange syntax, decoupling token definitions from specific platforms, plugins, and proprietary design tool formats.",
     "keyConcepts": [
-      "$value",
-      "$type",
-      "curly bracket alias syntax {group.token}",
-      "composite token types."
+      "DTCG 2025.10 standard",
+      "Token $type and $value",
+      "Token reference syntax ({group.token})",
+      "Format Module vs Resolver Module",
+      "Tool interoperability"
     ],
-    "howItWorks": "The DTCG standard dictates how JSON token trees declare explicit types (e.g., color, dimension, duration) and resolve token aliases via period-separated paths.",
+    "howItWorks": "Defines a standardized JSON schema where design tokens are structured with explicit types, values, and alias references, enabling deterministic translation into multi-platform styling formats.",
     "relatedTerms": [
       "Design Tokens",
       "Style Dictionary",
       "Semantic Tokens",
       "Token Resolver Engine"
     ],
-    "seoTitle": "DTCG Design Tokens Format Module: The Official W3C Spec",
+    "seoTitle": "DTCG Design Tokens Format Module | Product Design Glossary",
     "sources": [
-      "W3C Design Tokens Community Group, Design Tokens Format Module Specification 2025.1013",
-      "DTCG Community (https://www.w.org/community/design-tokens)"
-    ]
+      "Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)",
+      "Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/)",
+      "Technical reports, DTCG (https://www.designtokens.org/technical-reports/)"
+    ],
+    "alternateName": [
+      "DTCG Format Module",
+      "Design Tokens Format Module"
+    ],
+    "seoDescription": "Learn what the DTCG Format Module specifies, with a 2025.10 JSON example of token types, values, and references. Check tool support before adopting it.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html",
+                "name": "DTCG Design Tokens Format Module | Product Design Glossary",
+                "description": "Learn what the DTCG Format Module specifies, with a 2025.10 JSON example of token types, values, and references. Check tool support before adopting it.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.designtokens.org/tr/2025.10/format/",
+                      "https://www.designtokens.org/tr/2025.10/resolver/",
+                      "https://www.designtokens.org/technical-reports/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#term",
+                "name": "Design Tokens Format Module (DTCG)",
+                "termCode": "design-tokens-format-module-dtcg",
+                "description": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
+                "url": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#webpage"
+                },
+                "alternateName": [
+                      "DTCG Format Module",
+                      "Design Tokens Format Module"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design Tokens Format Module (DTCG)",
+                            "item": "https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Design Tokens Format Module (DTCG)
+
+The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.
+
+## What does a DTCG token look like?
+
+The following 2025.10 example groups two duration tokens under \`motion\`. The base duration is 150 milliseconds. The feedback token reuses it by reference.
+
+\`\`\`json
+{
+  "motion": {
+    "$type": "duration",
+    "fast": {
+      "$value": { "value": 150, "unit": "ms" }
+    },
+    "feedback": {
+      "$value": "{motion.fast}"
+    }
+  }
+}
+\`\`\`
+
+The base token \`motion.fast\` inherits its duration type from the group. \`motion.feedback\` gets its type from the token it references. The curly-brace reference points to the token at \`motion.fast\`, so \`motion.feedback\` resolves to the same duration value of 150 milliseconds. The \`motion\` group organizes the tokens. Each child token has its own \`$value\`.
+
+## What does the Format Module cover?
+
+The Format Module defines the exchange structure and the rules for interpreting it. It covers supported types, including composite types that combine related properties into one value. The separate Resolver Module describes how to resolve token values for different contexts, such as a light or dark theme.
+
+Use the format to share the data between tools. Your team still decides how to organize tokens, which names communicate a semantic role, and when to change a token. A platform build can turn the resolved values into the files an application uses.
+
+## How do you check interoperability?
+
+Pick a small set of real tokens and verify what each tool can import, resolve, and export. Include the types you use and a reference across groups. If the workflow supports themes, check the same role in two contexts. Compare the resolved output with the values expected by the application. Test for broken references and circular references.
+
+Record the supported specification version and any extensions your workflow relies on. A valid JSON file still needs to follow the format’s token rules. If a tool drops a reference or exports a literal instead, check whether the next tool still has the information your workflow needs.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Style Dictionary](/glossary/style-dictionary.html)
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+- [Token Resolver Engine](/glossary/token-resolver-engine.html)
+
+## Sources
+
+- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)
+- [Design Tokens Resolver Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/resolver/)
+- [Technical reports, DTCG](https://www.designtokens.org/technical-reports/)`
   },
   {
     "id": "029",
@@ -2266,26 +2517,143 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Semantic Tokens (or Alias Tokens) are contextual design tokens whose names communicate intended UI purpose and intent (e.g., surface-danger-subtle) rather than raw literal values (e.g., red-500).",
-    "purpose": "Decouples component implementation from literal brand values, enabling dynamic multi-theme switching, high-contrast modes, and seamless dark-mode re-theming.",
+    "definition": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
+    "purpose": "Abstracts raw visual values into purposeful UI roles, enabling scalable theming, dark mode mapping, and brand variation without modifying component code.",
     "keyConcepts": [
-      "Intentional naming",
-      "alias references",
-      "contextual abstraction",
-      "theme aliasing."
+      "Role-based token naming",
+      "Theme context mapping (Light vs Dark)",
+      "Semantic token vs token alias",
+      "Scope hierarchy",
+      "Component-scoped tokens"
     ],
-    "howItWorks": "A semantic token maps its  to an underlying global primitive token alias (e.g., \"\": \"{color.palette.red.500}\"), resolving dynamically based on the active theme.",
+    "howItWorks": "Maps functional UI intent to underlying primitive palette values or literal definitions, allowing runtime theme switching to alter appearance globally while preserving design integrity.",
     "relatedTerms": [
       "Design Tokens",
       "Design Primitives",
       "Figma Variables & Modes",
       "Component Architecture"
     ],
-    "seoTitle": "Semantic Tokens: Naming Systems, Dark Mode, and Theming Architecture",
+    "seoTitle": "Semantic Tokens: Naming and Theming | Product Design Glossary",
     "sources": [
-      "Nathan Curtis, Naming Tokens in Design Systems",
-      "W3C DTCG Format Specification"
-    ]
+      "Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/)",
+      "Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)",
+      "Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/)"
+    ],
+    "seoDescription": "Learn how semantic tokens name a UI role and keep that role stable across themes. See how they differ from primitive tokens and aliases.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/semantic-tokens.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/semantic-tokens.html",
+                "name": "Semantic Tokens: Naming and Theming | Product Design Glossary",
+                "description": "Learn how semantic tokens name a UI role and keep that role stable across themes. See how they differ from primitive tokens and aliases.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://atlassian.design/foundations/tokens/design-tokens/",
+                      "https://www.designtokens.org/tr/2025.10/format/",
+                      "https://www.designtokens.org/tr/2025.10/resolver/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#term",
+                "name": "Semantic Tokens",
+                "termCode": "semantic-tokens",
+                "description": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
+                "url": "https://lexkonovalov.com/glossary/semantic-tokens.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/semantic-tokens.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Semantic Tokens",
+                            "item": "https://lexkonovalov.com/glossary/semantic-tokens.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Semantic Tokens
+
+A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.
+
+## How do semantic tokens work across themes?
+
+A checkout link might use \`color.text.link\`. In a light theme, that role might point to \`color.blue.600\`. In a dark theme, it might point to \`color.blue.300\`. The link still asks for the color assigned to link text. The theme supplies the appropriate value.
+
+| Name | What the name tells you |
+|---|---|
+| \`color.blue.600\` | A step in a base palette |
+| \`color.text.link\` | The role the color serves in the interface |
+| \`button.primary.background\` | A decision scoped to a specific component and variant |
+
+These names are illustrative. The palette step number is local to this system. Document how each role should be used and verify each foreground and background pairing in the actual interface.
+
+## Is a semantic token the same as an alias?
+
+“Semantic” describes what the name means. An alias is a reference to another token. A semantic token can use an alias to reuse a palette value, or it can store a value directly. The reference is a mechanism for sharing the value.
+
+## How do you name and introduce semantic tokens?
+
+1. **Start with a repeated purpose.** Inspect where teams use a color or spacing decision. Identify the purpose those uses share.
+2. **Name the role.** Make the name useful when someone chooses a token. For example, link text and a selected background can use different roles even when they happen to share a value.
+3. **Set values per theme and test them.** Check representative components, states, and backgrounds in the contexts where people use them.
+4. **Move consumers to the shared role.** Review each use before replacing the original values. If a component needs its own change policy, document a component token for that decision.
+
+Change the narrowest token that matches the intended scope. To update link text across checkout and settings, change the link text role. To update only one component, inspect whether it already has a dedicated token or setting.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Design Primitives](/glossary/design-primitives.html)
+- [Figma Variables & Modes](/glossary/figma-variables-modes.html)
+- [Component Architecture](/glossary/component-architecture.html)
+
+## Sources
+
+- [Design Tokens, Atlassian Design System](https://atlassian.design/foundations/tokens/design-tokens/)
+- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)
+- [Design Tokens Resolver Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/resolver/)`
   },
   {
     "id": "030",
@@ -2294,26 +2662,140 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.",
-    "purpose": "Constrains designer choices to mathematically harmonious scales, preventing arbitrary pixel and color choices across products.",
+    "definition": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
+    "purpose": "Establishes raw, unopinionated foundational values and low-level structural components upon which semantic decisions and complex patterns are assembled.",
     "keyConcepts": [
-      "Literal scales",
-      "context-free values",
-      "global foundation",
-      "mathematical ramps."
+      "Primitive token vs semantic token",
+      "Named scale steps (e.g. space.200)",
+      "Primitive layout components (Stack, Inline)",
+      "Scope of base value changes",
+      "Foundational scales"
     ],
-    "howItWorks": "Primitives are defined at the root level of a token tree and referenced strictly by intermediate semantic tokens, never consumed directly by production UI components.",
+    "howItWorks": "Provides immutable, math-driven scales of color palettes, typographic steps, and spacing increments alongside atomic structural components to ensure foundational mathematical harmony.",
     "relatedTerms": [
       "Design Tokens",
       "Semantic Tokens",
       "Component Architecture",
       "Atomic Design"
     ],
-    "seoTitle": "Design Primitives: Building Foundation Scales for Systems",
+    "seoTitle": "Design Primitives and Primitive Tokens | Product Design Glossary",
     "sources": [
-      "Brad Frost, Atomic Design",
-      "Nathan Curtis, Tokens in Design Systems"
-    ]
+      "Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/)",
+      "Primitives overview, Atlassian Design System (https://atlassian.design/foundations/spacing/primitives)",
+      "Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)"
+    ],
+    "seoDescription": "Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-primitives.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-primitives.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-primitives.html",
+                "name": "Design Primitives and Primitive Tokens | Product Design Glossary",
+                "description": "Understand design primitives, from base color and spacing tokens to layout components like Stack. Learn where each belongs in a design system.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-primitives.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-primitives.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://atlassian.design/foundations/tokens/design-tokens/",
+                      "https://atlassian.design/foundations/spacing/primitives",
+                      "https://www.designtokens.org/tr/2025.10/format/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-primitives.html#term",
+                "name": "Design Primitives",
+                "termCode": "design-primitives",
+                "description": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
+                "url": "https://lexkonovalov.com/glossary/design-primitives.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-primitives.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-primitives.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design Primitives",
+                            "item": "https://lexkonovalov.com/glossary/design-primitives.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Design Primitives
+
+Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.
+
+## What are primitive tokens?
+
+A primitive token names a base value such as a palette color or a spacing step. For example, \`space.200\` might represent 8 pixels. A token scoped to a component, such as \`card.padding\`, can reference it. The base token gives multiple decisions a shared value, while the card token identifies the decision the component is using.
+
+| Term | Example | What it provides |
+|---|---|---|
+| Primitive token | \`space.200\` | A named value on a spacing scale |
+| Semantic token | \`color.text.link\` | A value for a named purpose |
+| Primitive component | Stack | A reusable way to arrange elements vertically |
+
+These layers are conventions. A team may let a layout component expose steps from a spacing scale and use semantic color tokens for interface text. Document the choice so teams can tell which values are intended for direct use.
+
+## What does a primitive component do?
+
+A layout primitive provides a small piece of reusable structure. Atlassian’s primitives include Stack for vertical arrangement and Inline for horizontal arrangement. A team could use a Stack to arrange a field label, input, and hint with a consistent gap. The field component still defines how those parts relate and how errors are communicated.
+
+## When should you change a base value?
+
+Suppose cards need more padding, while form layouts should stay as they are. Find the token or setting specific to cards and choose the spacing value it should use. If you change the base scale itself, trace its references and check representative screens. The same step may set card padding and the gaps between form fields.
+
+Start with base values and components that solve recurring problems. Add a named layer when it helps people understand a decision or change it at the right scope.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+- [Component Architecture](/glossary/component-architecture.html)
+- [Atomic Design](/glossary/atomic-design.html)
+
+## Sources
+
+- [Design Tokens, Atlassian Design System](https://atlassian.design/foundations/tokens/design-tokens/)
+- [Primitives overview, Atlassian Design System](https://atlassian.design/foundations/spacing/primitives)
+- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)`
   },
   {
     "id": "031",
@@ -2322,26 +2804,140 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.",
-    "purpose": "Prevents brittle code repetition, eliminates leaky UI abstractions, and ensures predictable component composition across complex applications.",
+    "definition": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
+    "purpose": "Establishes modular component boundaries, public APIs, and state management patterns to ensure UI components remain decoupled, testable, and composable.",
     "keyConcepts": [
-      "Encapsulation",
-      "compositional props",
-      "state decoupling",
-      "API contracts."
+      "Public API contract",
+      "Controlled vs uncontrolled state",
+      "Component composition & slots",
+      "Responsibility boundaries",
+      "Variant explosion prevention"
     ],
-    "howItWorks": "Developers isolate component concerns into headless logic hooks, semantic templates, and tokenized styling layers, enforcing strict TypeScript interfaces.",
+    "howItWorks": "Divides interface layouts into hierarchical, single-responsibility components with explicitly typed props, event handlers, and slot projections.",
     "relatedTerms": [
       "Component Libraries",
       "Headless UI Architecture",
       "Web Components",
       "Semantic HTML"
     ],
-    "seoTitle": "UI Component Architecture: Scalable Component Engineering",
+    "seoTitle": "UI Component Architecture | Product Design Glossary",
     "sources": [
-      "Dan Abramov, Presentational and Container Components",
-      "Addy Osmani, Learning JavaScript Design Patterns"
-    ]
+      "Sharing State Between Components, React (https://react.dev/learn/sharing-state-between-components)",
+      "Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog)",
+      "Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)"
+    ],
+    "seoDescription": "Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/component-architecture.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/component-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/component-architecture.html",
+                "name": "UI Component Architecture | Product Design Glossary",
+                "description": "Learn how to define a shared UI component’s public API, state, and composition. A dialog example shows where product behavior belongs.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/component-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/component-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://react.dev/learn/sharing-state-between-components",
+                      "https://www.radix-ui.com/primitives/docs/components/dialog",
+                      "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/component-architecture.html#term",
+                "name": "Component Architecture",
+                "termCode": "component-architecture",
+                "description": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
+                "url": "https://lexkonovalov.com/glossary/component-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/component-architecture.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/component-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Component Architecture",
+                            "item": "https://lexkonovalov.com/glossary/component-architecture.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Component Architecture
+
+Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.
+
+## What belongs in a component’s public API?
+
+The public API is the set of inputs, events, and composition points consumers can rely on. For a dialog, it might include a title, content slots, an open state, and a callback for requests to open or close. Document what each option does and the behavior consumers can expect.
+
+Decide where state lives. An uncontrolled dialog manages whether it is open internally. In a controlled dialog, the application supplies the current state and handles requests to change it. Use controlled state when the workflow needs to coordinate opening or closing. For example, the application can close the dialog after a save succeeds.
+
+## Example of a shared dialog
+
+Suppose checkout and account settings both open a modal to review a change.
+
+| Responsibility | Where it belongs |
+|---|---|
+| Dialog behavior | The shared dialog handles modal focus, keyboard dismissal, and how its title is exposed to assistive technology. |
+| Review content | Each product supplies the text, details, and actions for its task. |
+| Business outcome | Checkout submits the booking change, shows any error, and closes the dialog after a successful save. |
+
+This boundary lets a product change its workflow without creating a new modal implementation. Review both the isolated component and a real screen. For example, after the dialog closes, check that focus returns to the trigger or another logical element if the trigger is gone.
+
+## When should you add a variant or a separate component?
+
+Add an option when consumers need a supported variation of the same interaction, such as a wider surface for comparison content. Compose the dialog with other components when the layout changes. Give a recurring workflow its own pattern or wrapper when it adds business rules that the base dialog cannot own. Before adding a shared option, try it in the screens that need it. Document the default and what each consumer can configure.
+
+## Related terms
+
+- [Component Libraries](/glossary/component-libraries.html)
+- [Headless UI Architecture](/glossary/headless-ui-architecture.html)
+- [Web Components](/glossary/web-components.html)
+- [Semantic HTML](/glossary/semantic-html.html)
+
+## Sources
+
+- [Sharing State Between Components, React](https://react.dev/learn/sharing-state-between-components)
+- [Dialog, Radix Primitives](https://www.radix-ui.com/primitives/docs/components/dialog)
+- [Dialog (Modal) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)`
   },
   {
     "id": "032",
@@ -2350,26 +2946,149 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.",
-    "purpose": "Accelerates feature engineering velocity while ensuring systemic UI consistency, cross-browser support, and automated accessibility compliance across applications.",
+    "definition": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
+    "purpose": "Provides modular, production-ready UI building blocks that reduce code duplication, increase development speed, and enforce visual consistency across applications.",
     "keyConcepts": [
-      "Centralized package",
-      "version control",
-      "automated test coverage",
-      "visual documentation."
+      "Reusable UI components",
+      "Component API & options",
+      "Component states (default, hover, focus, disabled)",
+      "Storybook documentation",
+      "Shared component criteria"
     ],
-    "howItWorks": "Components are authored as independent packages, documented in interactive sandboxes, and published to private package managers.",
+    "howItWorks": "Packages tested, accessible frontend components with clear properties, variants, and documentation for consumption across multiple digital products and microfrontends.",
     "relatedTerms": [
       "Component Architecture",
       "Design System",
       "Headless UI Architecture",
       "DesignOps"
     ],
-    "seoTitle": "Building Scalable Component Libraries: Best Practices Guide",
+    "seoTitle": "UI Component Libraries | Product Design Glossary",
     "sources": [
-      "Storybook.js Documentation",
-      "Brad Frost, Atomic Design"
-    ]
+      "Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/)",
+      "What’s a story?, Storybook documentation (https://storybook.js.org/docs/get-started/whats-a-story)",
+      "GOV.UK Design System (https://design-system.service.gov.uk/)"
+    ],
+    "alternateName": [
+      "Component Library",
+      "UI Component Library"
+    ],
+    "seoDescription": "Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/component-libraries.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/component-libraries.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/component-libraries.html",
+                "name": "UI Component Libraries | Product Design Glossary",
+                "description": "Learn what a component library contains, how it fits within a design system, and what to document and test before sharing a UI component.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/component-libraries.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/component-libraries.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://design-system.service.gov.uk/components/button/",
+                      "https://storybook.js.org/docs/get-started/whats-a-story",
+                      "https://design-system.service.gov.uk/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/component-libraries.html#term",
+                "name": "Component Libraries",
+                "termCode": "component-libraries",
+                "description": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
+                "url": "https://lexkonovalov.com/glossary/component-libraries.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/component-libraries.html#webpage"
+                },
+                "alternateName": [
+                      "Component Library",
+                      "UI Component Library"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/component-libraries.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Component Libraries",
+                            "item": "https://lexkonovalov.com/glossary/component-libraries.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Component Libraries
+
+A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.
+
+## What belongs in a component library?
+
+A useful entry describes the supported options, states, and behavior. For a button, document options such as label and emphasis, plus states such as focus and disabled. Include usage guidance where a choice affects the task, such as using a link for navigation and a button to submit a form.
+
+A library can expose styled components or behavior that teams style themselves. The [design system](/glossary/design-system.html) covers the broader decisions about foundations, patterns, and maintenance. Storybook is one way to document and exercise library components. A story shows a rendered example of a component in a specified state.
+
+## Example of documenting a shared button
+
+| What to document | Example |
+|---|---|
+| Options | A text label and supported emphasis variants |
+| Behavior | Responds to pointer and keyboard activation when enabled |
+| Examples | Default, keyboard focus, a long label, and disabled |
+| Integration | How a form uses the button and shows feedback during submission |
+
+Use an isolated example to check supported states and a product screen to check the whole interaction. A checkout flow, for example, still needs to explain a pending submission and handle errors. Reusing the same button gives teams a shared control. The flow determines what the action does and what feedback users receive.
+
+## When should a pattern become a shared component?
+
+Start with an interaction that repeats across real screens. Compare how teams use it and decide which differences matter. If two teams need the same behavior and differ only in emphasis, a supported variant may be enough. If one needs a different workflow, keep that workflow in the product and reuse the smaller component where it fits.
+
+Document who maintains the component and how consumers adopt fixes. When you change a supported option or state, test a representative screen that uses the component before releasing the change.
+
+## Related terms
+
+- [Component Architecture](/glossary/component-architecture.html)
+- [Design System](/glossary/design-system.html)
+- [Headless UI Architecture](/glossary/headless-ui-architecture.html)
+- [DesignOps](/glossary/designops.html)
+
+## Sources
+
+- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)
+- [What’s a story?, Storybook documentation](https://storybook.js.org/docs/get-started/whats-a-story)
+- [GOV.UK Design System](https://design-system.service.gov.uk/)`
   },
   {
     "id": "033",
@@ -2378,26 +3097,139 @@ Start with decisions that repeat across the interface. Document intended usage a
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.",
-    "purpose": "Prevents design system decay, unvetted component fragmentation, and organizational gridlock by balancing centralized system stability with federated product team contributions.",
+    "definition": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
+    "purpose": "Establishes clear contribution criteria, review workflows, and ownership models so shared systems evolve sustainably without fragmentation or bottlenecks.",
     "keyConcepts": [
-      "Contribution models",
-      "RFC processes",
-      "deprecation lifecycles",
-      "version contracts."
+      "Contribution criteria",
+      "Decision ownership",
+      "Proposal review workflow",
+      "Adoption & migration support",
+      "Lightweight governance"
     ],
-    "howItWorks": "Teams establish cross-functional review boards that evaluate component proposals against strict acceptance criteria, including automated test coverage and multi-brand parity.",
+    "howItWorks": "Routes component proposals through multi-disciplinary review gates, evaluating shared need and accessibility before approving contributions into canonical libraries.",
     "relatedTerms": [
       "DesignOps",
       "Design System",
       "Design System Versioning & SemVer",
       "Component Architecture"
     ],
-    "seoTitle": "Design System Governance: Workflows, RFCs & Contribution Models",
+    "seoTitle": "Design System Governance | Product Design Glossary",
     "sources": [
-      "Nathan Curtis, Team Models for Design Systems",
-      "Jina Anne, Governing Enterprise Systems"
-    ]
+      "Propose a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/propose-a-component-or-pattern/)",
+      "Develop a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/develop-a-component-or-pattern/)",
+      "Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)"
+    ],
+    "seoDescription": "Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-governance.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-system-governance.html",
+                "name": "Design System Governance | Product Design Glossary",
+                "description": "Learn how design system governance assigns ownership, evaluates contributions, and helps teams adopt changes. Includes a shared dialog example.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://design-system.service.gov.uk/community/propose-a-component-or-pattern/",
+                      "https://design-system.service.gov.uk/community/develop-a-component-or-pattern/",
+                      "https://design-system.service.gov.uk/community/contribution-criteria/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#term",
+                "name": "Design System Governance",
+                "termCode": "design-system-governance",
+                "description": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
+                "url": "https://lexkonovalov.com/glossary/design-system-governance.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-system-governance.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design System Governance",
+                            "item": "https://lexkonovalov.com/glossary/design-system-governance.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Design System Governance
+
+Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.
+
+## What decisions does governance cover?
+
+Give teams a clear route for asking for a change and a clear owner for deciding what happens. The GOV.UK Design System publishes a proposal process, contribution criteria, and guidance for developing components and patterns. A smaller system can use a shared issue tracker and named maintainers.
+
+| Decision | What to agree on |
+|---|---|
+| Scope | Which needs are shared across products and which can stay within one product? |
+| Evidence | What examples, user research, or compatibility checks support the proposal? |
+| Responsibility | Who proposes, reviews, maintains, and communicates the change? |
+| Adoption | Who updates guidance, writes migration steps, and supports consuming teams? |
+
+## Example of reviewing a shared dialog change
+
+A checkout team requests a wider dialog for reviewing a booking change. It shows where the current width makes it hard to compare the original and proposed fares. The system maintainers check whether other products need the same option and whether it affects focus, small screens, or longer content.
+
+If a wider layout serves several teams, the maintainers can approve an optional variant with the existing default unchanged. Assign someone to build, document, and maintain it. A comparison layout that only checkout needs can stay in checkout and use the existing dialog behavior. Record the decision and its reason so another team can revisit it when it has new evidence.
+
+## How can a small team keep governance lightweight?
+
+Ask for a short proposal with the problem, candidate change, and affected consumers. Agree on a review owner and check the change in at least one real screen. If consumers need to change their code or designs, include a [version and migration plan](/glossary/design-system-versioning-semver.html). Close the loop by updating the documentation and telling the teams whose work is affected.
+
+## Related terms
+
+- [DesignOps](/glossary/designops.html)
+- [Design System](/glossary/design-system.html)
+- [Design System Versioning & SemVer](/glossary/design-system-versioning-semver.html)
+- [Component Architecture](/glossary/component-architecture.html)
+
+## Sources
+
+- [Propose a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/)
+- [Develop a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/develop-a-component-or-pattern/)
+- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)`
   },
   {
     "id": "034",
@@ -2490,27 +3322,140 @@ Start with decisions that repeat across the interface. Document intended usage a
     "slug": "figma-variables-modes",
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
-    "maturity": "Proprietary / Framework-Specific",
-    "definition": "Figma Variables & Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.",
-    "purpose": "Bridges design tool canvas states with production CSS variables and token aliasing structures, reducing artboard bloat across responsive and themed designs.",
+    "maturity": "Established",
+    "definition": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
+    "purpose": "Enables native design token management, mode switching (light/dark, responsive density, multi-brand theming), and alias resolution directly within Figma design files.",
     "keyConcepts": [
-      "Variable types",
-      "variable collections",
-      "contextual modes",
-      "token scoping."
+      "Variable types (color, number, string, boolean)",
+      "Collections and Modes",
+      "Variable alias binding",
+      "Mode inheritance and overrides",
+      "DTCG JSON token import/export"
     ],
-    "howItWorks": "Designers assign variables to layer properties; when frames are switched to different modes, the canvas re-resolves all underlying variable values dynamically.",
+    "howItWorks": "Binds UI layer fills, strokes, dimensions, and text to variable aliases organized into collections, allowing parent frame mode toggles to cascade across nested child layers.",
     "relatedTerms": [
       "Semantic Tokens",
       "Design Tokens",
       "Design-to-Code Workflow",
       "Design Tokens Format Module (DTCG)"
     ],
-    "seoTitle": "Figma Variables & Modes: Theming Architecture for Systems",
+    "seoTitle": "Figma Variables and Modes | Product Design Glossary",
     "sources": [
-      "Figma Schema Architecture Guides",
-      "W3C DTCG Figma Plugin Guides"
-    ]
+      "Overview of variables, collections, and modes, Figma (https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)",
+      "Modes for variables, Figma (https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)"
+    ],
+    "seoDescription": "Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/figma-variables-modes.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html",
+                "name": "Figma Variables and Modes | Product Design Glossary",
+                "description": "Learn how Figma variables, collections, and modes work. Use light and dark themes to test aliases, frame inheritance, and JSON import limits.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes",
+                      "https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#term",
+                "name": "Figma Variables & Modes",
+                "termCode": "figma-variables-modes",
+                "description": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
+                "url": "https://lexkonovalov.com/glossary/figma-variables-modes.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/figma-variables-modes.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Figma Variables & Modes",
+                            "item": "https://lexkonovalov.com/glossary/figma-variables-modes.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Figma Variables & Modes
+
+Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.
+
+## How do variables, collections, and modes work?
+
+Figma supports color, number, string, and Boolean variables. A variable can store a value directly or reference another variable through an alias. A collection defines which modes its variables share. Each mode supplies one value per variable.
+
+| In Figma | Example |
+|---|---|
+| Palette collection | Color variables named \`blue/600\` and \`blue/300\` |
+| Semantic colors collection | Light and Dark modes |
+| Semantic variable | \`color/text/link\`, referencing \`blue/600\` in Light and \`blue/300\` in Dark |
+
+Bind the link’s text fill to the semantic variable. In the frame’s Appearance settings, choose Light or Dark for the Semantic colors collection. The same link layer keeps its variable binding as the color changes. Check contrast against the actual background in both themes.
+
+## Why is a layer still showing the wrong mode?
+
+For a collection, an object set to Auto looks up its parent hierarchy for an explicit mode. If a nested frame has an explicit override, its children can use that mode even when the outer frame changes. Check the layer’s binding, the collection it comes from, and the nearest mode setting. When no override applies, Figma uses the applicable default.
+
+Use separate collections for choices that need to vary independently. A color theme and a spacing density can have separate modes so you can review Dark with either Compact or Comfortable spacing.
+
+## Can you use Figma variables as design tokens?
+
+Variables can represent token decisions inside Figma. Figma documents DTCG JSON import for supported token types and JSON export of variable modes. For example, its dimension import expects pixels, and its duration import expects seconds. Cross-collection alias import uses Figma-specific extension data.
+
+Try exporting Light and Dark and importing them into a test collection. Check both values and whether the link variable still references its palette variable. If Figma cannot find the target collection, check the mapping before using the files in a [design-to-code workflow](/glossary/design-to-code-workflow.html). Agree on which source owns the values and how a change reaches the application.
+
+## Related terms
+
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+- [Design Tokens](/glossary/design-tokens.html)
+- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)
+- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)
+
+## Sources
+
+- [Overview of variables, collections, and modes, Figma](https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)
+- [Modes for variables, Figma](https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)`
   },
   {
     "id": "038",
@@ -2808,26 +3753,165 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.",
-    "purpose": "Eliminates manual translation of design values across tech stacks, ensuring cross-platform token synchronization from a single upstream codebase.",
+    "definition": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
+    "purpose": "Automates the deterministic translation of platform-agnostic design tokens into native iOS, Android, web, and design tool artifacts from a single source of truth.",
     "keyConcepts": [
-      "Transform groups",
-      "formatters",
-      "build actions",
-      "platform targets."
+      "Token compilation build",
+      "Transforms and transform groups",
+      "Formats (css/variables, json, etc.)",
+      "DTCG input support",
+      "Platform targets (web, ios, android)"
     ],
-    "howItWorks": "Configured pipelines ingest raw design token files, execute type-specific transforms (e.g., converting hex colors to Swift UIColor), and output ready-to-consume build artifacts.",
+    "howItWorks": "Parses hierarchical token definitions, resolves alias references, executes platform-specific transforms, and formats code files for automated downstream consumption.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
       "Design Engineering",
       "Design-to-Code Workflow"
     ],
-    "seoTitle": "Style Dictionary: Multi-Platform Design Token Compilation",
+    "seoTitle": "Style Dictionary for Design Tokens | Product Design Glossary",
     "sources": [
-      "Amazon Open Source, Style Dictionary Documentation (https://amzn.github.io/style-dictionary)",
-      "W3C DTCG Tooling Guides"
-    ]
+      "Configuration, Style Dictionary (https://styledictionary.com/reference/config/)",
+      "Built-in formats, Style Dictionary (https://styledictionary.com/reference/hooks/formats/predefined/)",
+      "DTCG support, Style Dictionary (https://styledictionary.com/info/dtcg/)",
+      "Using the CLI, Style Dictionary (https://styledictionary.com/getting-started/using_the_cli/)",
+      "Built-in transforms, Style Dictionary (https://styledictionary.com/reference/hooks/transforms/predefined/)"
+    ],
+    "seoDescription": "Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/style-dictionary.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/style-dictionary.html",
+                "name": "Style Dictionary for Design Tokens | Product Design Glossary",
+                "description": "Learn how Style Dictionary builds platform files from design tokens. See a small CSS example and what to verify before adopting DTCG inputs.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://styledictionary.com/reference/config/",
+                      "https://styledictionary.com/reference/hooks/formats/predefined/",
+                      "https://styledictionary.com/info/dtcg/",
+                      "https://styledictionary.com/getting-started/using_the_cli/",
+                      "https://styledictionary.com/reference/hooks/transforms/predefined/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#term",
+                "name": "Style Dictionary",
+                "termCode": "style-dictionary",
+                "description": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
+                "url": "https://lexkonovalov.com/glossary/style-dictionary.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/style-dictionary.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Style Dictionary",
+                            "item": "https://lexkonovalov.com/glossary/style-dictionary.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Style Dictionary
+
+Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.
+
+## How does a Style Dictionary build work?
+
+Choose the source files, configure a platform, then specify how tokens should be transformed and written. A **transform** can change a token’s name or value for the target. A **format** decides how the result appears in a file. A transform group gives a platform a reusable set of transforms.
+
+## Example of building CSS variables
+
+Put one DTCG number token in \`tokens.json\`:
+
+\`\`\`json
+{
+  "opacity": {
+    "muted": { "$type": "number", "$value": 0.6 }
+  }
+}
+\`\`\`
+
+Save the following as \`config.json\`. It converts token paths to kebab-case names and uses the built-in CSS variable format.
+
+\`\`\`json
+{
+  "source": ["tokens.json"],
+  "platforms": {
+    "css": {
+      "transforms": ["name/kebab"],
+      "buildPath": "dist/",
+      "files": [
+        { "destination": "tokens.css", "format": "css/variables" }
+      ]
+    }
+  }
+}
+\`\`\`
+
+With Style Dictionary installed, run \`npx style-dictionary build\` from the directory containing both files. The expected output is \`--opacity-muted: 0.6;\` under \`:root\` in \`dist/tokens.css\`. An application can load that file and use the property where the design calls for that opacity.
+
+## How do themes and aliases affect the build?
+
+Decide which token values apply to each theme before generating its output. You might build one file per theme or emit variables under different CSS selectors. With \`css/variables\`, the \`outputReferences\` option can preserve eligible aliases as CSS variable references. Check that the referenced properties exist in the output the application loads.
+
+Style Dictionary supports DTCG inputs. Its documentation identifies DTCG 2025.10 support as incomplete. Check the version you use against the types, references, and theme behavior your project needs. Run the build on a small fixture, inspect the output, and load it in one consuming component before bringing over the full token set.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)
+- [Design Engineering](/glossary/design-engineering.html)
+- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)
+
+## Sources
+
+- [Configuration, Style Dictionary](https://styledictionary.com/reference/config/)
+- [Built-in formats, Style Dictionary](https://styledictionary.com/reference/hooks/formats/predefined/)
+- [DTCG support, Style Dictionary](https://styledictionary.com/info/dtcg/)
+- [Using the CLI, Style Dictionary](https://styledictionary.com/getting-started/using_the_cli/)
+- [Built-in transforms, Style Dictionary](https://styledictionary.com/reference/hooks/transforms/predefined/)`
   },
   {
     "id": "044",
@@ -2835,27 +3919,147 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "slug": "token-resolver-engine",
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
-    "maturity": "Emerging",
-    "definition": "A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.",
-    "purpose": "Manages multi-tier token hierarchies and complex multi-brand theming layers without cyclic dependency crashes or run-time calculation overhead.",
+    "maturity": "Established",
+    "definition": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
+    "purpose": "Resolves nested token alias references, contextual theme overrides, and mode inheritance rules deterministically according to DTCG resolution order specifications.",
     "keyConcepts": [
-      "Alias resolution",
-      "dependency graphing",
-      "cyclic reference detection",
-      "AST evaluation."
+      "Resolution order precedence",
+      "Context modifiers (theme, density, brand)",
+      "Winning reference selection",
+      "Circular reference prevention",
+      "DTCG Resolver Module 2025.10"
     ],
-    "howItWorks": "Evaluates token tree nodes sequentially, replacing alias references ({color.brand.primary}) with resolved values from parent collections while throwing errors on circular references.",
+    "howItWorks": "Applies cascading token sets in a declared sequence where subsequent modifiers override preceding values, traversing reference graphs until concrete primitives are resolved.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
       "Style Dictionary",
       "Semantic Tokens"
     ],
-    "seoTitle": "Token Resolver Engines: Resolving Complex Design Token Trees",
+    "seoTitle": "Design Token Resolution and Theming | Product Design Glossary",
     "sources": [
-      "W3C DTCG Resolver Module Specification",
-      "Styleframe DTCG Engine"
-    ]
+      "Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/)",
+      "Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)"
+    ],
+    "alternateName": [
+      "Design Token Resolver"
+    ],
+    "seoDescription": "See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/token-resolver-engine.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html",
+                "name": "Design Token Resolution and Theming | Product Design Glossary",
+                "description": "See how token resolution selects theme sources, applies precedence, and follows aliases. Includes a light and dark example using DTCG concepts.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.designtokens.org/tr/2025.10/resolver/",
+                      "https://www.designtokens.org/tr/2025.10/format/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#term",
+                "name": "Token Resolver Engine",
+                "termCode": "token-resolver-engine",
+                "description": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
+                "url": "https://lexkonovalov.com/glossary/token-resolver-engine.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#webpage"
+                },
+                "alternateName": [
+                      "Design Token Resolver"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/token-resolver-engine.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Token Resolver Engine",
+                            "item": "https://lexkonovalov.com/glossary/token-resolver-engine.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Token Resolver Engine
+
+A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.
+
+## What does a resolver do?
+
+The DTCG [Format Module](/glossary/design-tokens-format-module-dtcg.html) defines token values and references. The separate Resolver Module defines how to select and combine sources for a context. For example, a resolver document can list a base set and then a theme modifier in \`resolutionOrder\`. The input selects a context such as \`dark\` for that modifier. Under the Resolver Module’s ordering rules, if selected sources declare the same token more than once, the last declaration wins.
+
+A context choice and an alias answer different questions. The context selects which declaration of \`color.text.link\` applies. The alias points to the palette token whose value the link should use.
+
+## Example of resolving link text
+
+Suppose Base defines both palette colors and a default link role. The theme modifier adds no sources for Light and adds one source, Dark, for Dark mode.
+
+| Context | Sources applied in order | Winning reference for \`color.text.link\` |
+|---|---|---|
+| Light | Base | \`{color.blue.600}\` |
+| Dark | Base, then Dark | \`{color.blue.300}\` |
+
+The palette is present in both results because each context includes Base. After selecting the winning declaration, follow its reference to the corresponding color value. The component still uses the same link role.
+
+## What should you test?
+
+- **Source order.** Confirm that Dark selects the override. If the value stays the same, check whether Base was applied after Dark.
+- **References.** Check that the target exists in the final token set and that aliases do not form a cycle. For a missing target, start by checking which sources were selected.
+- **Consumer output.** Verify the intended value in both contexts. A build tool can emit a literal or preserve the alias in a platform format that supports it.
+
+Resolution determines what applies. Formatting determines how those decisions are represented, such as CSS custom properties. One tool can handle both jobs, or you can run a separate resolver before the platform build.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)
+- [Style Dictionary](/glossary/style-dictionary.html)
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+
+## Sources
+
+- [Design Tokens Resolver Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/resolver/)
+- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)`
   },
   {
     "id": "045",
@@ -2864,27 +4068,139 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.",
-    "purpose": "Maximizes design freedom and UI reusability by delivering battle-tested accessible behavior without opinionated CSS, preventing styling conflicts in component libraries.",
+    "definition": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
+    "purpose": "Delivers robust, fully accessible keyboard navigation and WAI-ARIA states without imposing visual opinions or styling lock-in.",
     "keyConcepts": [
-      "Unstyled components",
-      "logic hooks",
-      "state machines",
-      "full styling decoupling."
+      "Unstyled components & hooks",
+      "Accessibility semantics & focus management",
+      "Keyboard choreography (Tab, Shift+Tab, Escape)",
+      "Separation of behavior and presentation",
+      "Integration testing in context"
     ],
-    "howItWorks": "Components provide accessibility attributes and event listeners via hooks or headless components, leaving style implementation to modern utility CSS or token engines.",
+    "howItWorks": "Implements complex state machines, ARIA roles, and keyboard focus traps in headless hooks or unstyled render components, leaving CSS presentation entirely to the consuming application.",
     "relatedTerms": [
       "Component Architecture",
       "Accessibility and WCAG",
       "Semantic HTML",
-      "ARIA"
+      "ARIA (Accessible Rich Internet Applications)"
     ],
-    "seoTitle": "Headless UI Architecture: Logic-First Component Engineering",
+    "seoTitle": "Headless UI Architecture | Product Design Glossary",
     "sources": [
-      "Radix UI Documentation",
-      "Floating UI Specifications",
-      "Kent C. Dodds, Inversion of Control"
-    ]
+      "Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog)",
+      "Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)",
+      "Modal, React Aria (https://react-aria.adobe.com/Modal)"
+    ],
+    "seoDescription": "Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/headless-ui-architecture.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html",
+                "name": "Headless UI Architecture | Product Design Glossary",
+                "description": "Learn what headless UI provides and what your team still owns. A modal dialog example covers focus, labels, styling, and when to choose it.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.radix-ui.com/primitives/docs/components/dialog",
+                      "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+                      "https://react-aria.adobe.com/Modal"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#term",
+                "name": "Headless UI Architecture",
+                "termCode": "headless-ui-architecture",
+                "description": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
+                "url": "https://lexkonovalov.com/glossary/headless-ui-architecture.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#webpage"
+                }
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/headless-ui-architecture.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Headless UI Architecture",
+                            "item": "https://lexkonovalov.com/glossary/headless-ui-architecture.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Headless UI Architecture
+
+Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.
+
+## What does a headless component provide?
+
+Libraries expose behavior in different ways. An unstyled component can render elements and connect their behavior. A hook can expose state and interaction properties for the elements the application renders. Check what the library renders and which properties you must pass to your own elements.
+
+## Example of a headless modal dialog
+
+A travel team uses a dialog primitive to review a booking change. Radix Dialog, for example, provides modal focus handling, Escape dismissal, and parts for a title and description. The team supplies the title, fare details, buttons, and visible focus treatment. The booking request and error recovery remain part of the product workflow.
+
+| Layer | What to verify |
+|---|---|
+| Behavior | Focus moves inside when the modal opens, Tab and Shift+Tab stay inside, and Escape closes it. |
+| Content | The dialog has an accessible name, and the text explains what the user is reviewing. |
+| Presentation | The contrast and focus indicator work in the actual theme. Longer text and zoom leave the content usable. |
+| Integration | Closing usually returns focus to the trigger. If the trigger is gone, focus moves to a logical next element. A failed booking change gets clear feedback. |
+
+A primitive can help implement an accessible pattern. Test the result in context because labels, styling, and the surrounding flow affect whether it works for users.
+
+## When should you choose headless UI?
+
+Use a headless approach when products need to share an interaction but require different visual treatments. It can also help a design system build its own styled wrapper around behavior it trusts. If teams already agree on the appearance and need a ready-to-use control, a styled component library can require less integration work. Compare the effort to implement and test the complete experience in a representative screen.
+
+## Related terms
+
+- [Component Architecture](/glossary/component-architecture.html)
+- [Accessibility and WCAG](/glossary/accessibility-wcag.html)
+- [Semantic HTML](/glossary/semantic-html.html)
+- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)
+
+## Sources
+
+- [Dialog, Radix Primitives](https://www.radix-ui.com/primitives/docs/components/dialog)
+- [Dialog (Modal) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+- [Modal, React Aria](https://react-aria.adobe.com/Modal)`
   },
   {
     "id": "046",
@@ -2893,26 +4209,149 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).",
-    "purpose": "Encapsulates interdependent design decisions into cohesive, reusable design units, preventing designers from applying mismatched font sizes, line heights, or blur radii.",
+    "definition": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
+    "purpose": "Encapsulates multi-property design decisions (such as shadows, typography, and borders) into a single cohesive, type-safe token unit.",
     "keyConcepts": [
-      "Multi-property values",
-      "typography bundles",
-      "elevation matrices",
-      "structural groupings."
+      "Composite token vs token group",
+      "Multi-property $value object",
+      "Shadow composite structure (color, offsets, blur, spread)",
+      "Composite type validation",
+      "Cross-platform output compilation"
     ],
-    "howItWorks": "Defined in DTCG JSON schemas as a single node containing required child keys (e.g., fontFamily, fontSize, lineHeight), resolved together during platform transforms.",
+    "howItWorks": "Groups tightly-coupled properties into a single semantic token object, ensuring dependent values resolve simultaneously when consumed by design components or code.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
       "Semantic Tokens",
       "Design Primitives"
     ],
-    "seoTitle": "Composite Design Tokens: Managing Typography, Shadows, and Borders",
+    "seoTitle": "Composite Design Tokens | Product Design Glossary",
     "sources": [
-      "W3C Design Tokens Community Group Format Specification 2025.1013",
-      "designtokens.org"
-    ]
+      "Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)"
+    ],
+    "alternateName": [
+      "Composite Token"
+    ],
+    "seoDescription": "Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/composite-design-token.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/composite-design-token.html",
+                "name": "Composite Design Tokens | Product Design Glossary",
+                "description": "Learn how a composite design token differs from a group. See a DTCG shadow example and when to keep related properties in one token.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://www.designtokens.org/tr/2025.10/format/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#term",
+                "name": "Composite Design Token",
+                "termCode": "composite-design-token",
+                "description": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
+                "url": "https://lexkonovalov.com/glossary/composite-design-token.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#webpage"
+                },
+                "alternateName": [
+                      "Composite Token"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/composite-design-token.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Composite Design Token",
+                            "item": "https://lexkonovalov.com/glossary/composite-design-token.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Composite Design Token
+
+A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.
+
+## How is a composite token different from a group?
+
+A group organizes separate tokens. In the DTCG format, a composite token declares one \`$value\` that contains the parts of a single decision. In a group named \`elevation\`, \`card\` and \`dialog\` could be two separate shadow tokens. Each of those tokens can carry its own set of shadow properties.
+
+## DTCG example of a shadow token
+
+\`\`\`json
+{
+  "elevation": {
+    "card": {
+      "$type": "shadow",
+      "$value": {
+        "color": { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.16 },
+        "offsetX": { "value": 0, "unit": "px" },
+        "offsetY": { "value": 2, "unit": "px" },
+        "blur": { "value": 8, "unit": "px" },
+        "spread": { "value": 0, "unit": "px" }
+      }
+    }
+  }
+}
+\`\`\`
+
+Here \`elevation\` is the group and \`elevation.card\` is the token path. This shadow uses the five required properties in a single value. The format also allows an optional \`inset\` flag. Use the fields supported by the token’s type. The [DTCG Format Module](/glossary/design-tokens-format-module-dtcg.html) defines each composite type and which properties may reference other tokens.
+
+## When should you use a composite token?
+
+Use one when the properties belong together in the consuming interface. If several components need the same card shadow, one token gives them a shared way to request that shadow. If an offset also needs to be reused independently, define an offset token and reference it inside the shadow where the format and tools support that reference.
+
+Check what each consumer expects. For the example above, a web build could produce \`0 2px 8px 0 rgb(0 0 0 / 16%)\` for CSS \`box-shadow\`. Another platform may expect separate parameters. Verify the generated output and judge the rendered result in a real component before adopting the token across the library.
+
+## Related terms
+
+- [Design Tokens](/glossary/design-tokens.html)
+- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)
+- [Semantic Tokens](/glossary/semantic-tokens.html)
+- [Design Primitives](/glossary/design-primitives.html)
+
+## Sources
+
+- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)`
   },
   {
     "id": "047",
@@ -3004,26 +4443,140 @@ Combine automated checks with manual keyboard, zoom, and screen-reader testing. 
     "category": "Design Systems & Engineering",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.",
-    "purpose": "Prevents breaking changes from corrupting consumer codebases, providing product teams with clear upgrade paths and risk assessments for design system dependencies.",
+    "definition": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
+    "purpose": "Governs package releases and migration paths across consuming codebases, communicating backward-compatible vs breaking structural changes transparently.",
     "keyConcepts": [
-      "Breaking changes (MAJOR)",
-      "backward-compatible enhancements (MINOR)",
-      "bug fixes (PATCH)",
-      "deprecation windows."
+      "Semantic Versioning (MAJOR.MINOR.PATCH)",
+      "Public API compatibility contract",
+      "Breaking change deprecation window",
+      "Design file and code release alignment",
+      "Migration guides & release notes"
     ],
-    "howItWorks": "Token or prop removals trigger MAJOR version increments; new components trigger MINOR updates; token color value tweaks trigger PATCH releases.",
+    "howItWorks": "Increments PATCH for backward-compatible bug fixes, MINOR for new backward-compatible capabilities, and MAJOR for breaking public contract modifications.",
     "relatedTerms": [
       "Design System Governance",
       "Component Architecture",
       "DesignOps"
     ],
-    "seoTitle": "Semantic Versioning for Design Systems: Managing Breaking Changes",
+    "seoTitle": "Design System Versioning and SemVer | Product Design Glossary",
     "sources": [
-      "Tom Preston-Werner, Semantic Versioning 2.0.0",
-      "Nathan Curtis, Versioning Design Systems. Category 03 — AI & Agentic Systems The emergence of Large Language Models (LLMs) and autonomous agents has shifted product design from deterministic user interface flows to probabilistic, intent-driven systems. Designers are no longer merely sculpting static visual containers",
-      "they are building Agent Harnesses, curating domain contexts, and architecting real-time generative interfaces. Through standard protocols like the Model Context Protocol (MCP) and agent capabilities like Agent Skills, systems negotiate contextual resources, execute tool calls, and generate dynamic UI components during active user inference"
-    ]
+      "Semantic Versioning 2.0.0 (https://semver.org/)"
+    ],
+    "alternateName": [
+      "Design System Versioning"
+    ],
+    "seoDescription": "Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html",
+    "structuredDataGraph": [
+          {
+                "@type": "WebPage",
+                "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#webpage",
+                "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html",
+                "name": "Design System Versioning and SemVer | Product Design Glossary",
+                "description": "Apply SemVer to a design system package with a declared public API. See major, minor, and patch dialog changes and how to plan a migration.",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                },
+                "mainEntity": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#term"
+                },
+                "breadcrumb": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#breadcrumbs"
+                },
+                "citation": [
+                      "https://semver.org/"
+                ]
+          },
+          {
+                "@type": "DefinedTerm",
+                "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#term",
+                "name": "Design System Versioning & SemVer",
+                "termCode": "design-system-versioning-semver",
+                "description": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
+                "url": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html",
+                "inDefinedTermSet": {
+                      "@id": "https://lexkonovalov.com/glossary/#terms"
+                },
+                "mainEntityOfPage": {
+                      "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#webpage"
+                },
+                "alternateName": [
+                      "Design System Versioning"
+                ]
+          },
+          {
+                "@type": "DefinedTermSet",
+                "@id": "https://lexkonovalov.com/glossary/#terms",
+                "name": "Product Design Glossary",
+                "url": "https://lexkonovalov.com/glossary/",
+                "inLanguage": "en-US",
+                "isPartOf": {
+                      "@id": "https://lexkonovalov.com/#website"
+                }
+          },
+          {
+                "@type": "BreadcrumbList",
+                "@id": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html#breadcrumbs",
+                "itemListElement": [
+                      {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://lexkonovalov.com/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Product Design Glossary",
+                            "item": "https://lexkonovalov.com/glossary/"
+                      },
+                      {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Design System Versioning & SemVer",
+                            "item": "https://lexkonovalov.com/glossary/design-system-versioning-semver.html"
+                      }
+                ]
+          }
+    ],
+    "contentMarkdown": `# Design System Versioning & SemVer
+
+Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.
+
+## What counts as the public API?
+
+Document which component exports, props, supported behaviors, and token names consumers can rely on. This is the compatibility contract for the package. Decide whether particular visual behavior is part of that contract and describe other visible changes in the release notes.
+
+Design files and code can have different release schedules. Map a design library update to its matching code release when their changes are meant to be used together, and tell teams where to check compatibility.
+
+## Major, minor, and patch examples
+
+For a stable package at \`2.4.1\`, treat each row as a separate release example.
+
+| Change | Next version | Why |
+|---|---|---|
+| Fix a dialog bug so focus returns to the trigger as documented | \`2.4.2\` | Backward-compatible bug fix |
+| Add an optional wide dialog variant and keep the current default | \`2.5.0\` | Backward-compatible addition |
+| Remove a documented dialog prop | \`3.0.0\` | Breaking change to the public API |
+
+A token color update does not automatically determine the version bump. Check the compatibility contract first. A change that breaks a declared guarantee needs a major bump even if it only changes a value. Communicate visible changes in any release. For example, removing a documented token name is different from correcting its value to match the documented design.
+
+## How do you plan a breaking change?
+
+If you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.
+
+Publish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.
+
+## Related terms
+
+- [Design System Governance](/glossary/design-system-governance.html)
+- [Component Architecture](/glossary/component-architecture.html)
+- [DesignOps](/glossary/designops.html)
+
+## Sources
+
+- [Semantic Versioning 2.0.0](https://semver.org/)`
   },
   {
     "id": "051",
