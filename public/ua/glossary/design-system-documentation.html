@@ -384,70 +384,70 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Документація дизайн-системи (Design System Documentation) пояснює, як використовувати, реалізовувати та підтримувати дизайн-систему. Вона пов'язує повторно використовувані компоненти й токени з практичними рішеннями, які команди ухвалюють під час розробки продукту.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-design-system-documentation-include">
-<h2 id="section-what-should-design-system-documentation-include" class="glossary-term-section__title">What should design system documentation include?</h2>
-<p class="glossary-term-section__text">Organize guidance around questions people need to answer while working.</p>
+    <p class="glossary-term-section__text">Документація дизайн-системи пояснює, як використовувати, реалізовувати та підтримувати дизайн-систему. Вона пов'язує повторно використовувані компоненти й токени з практичними рішеннями, які команди ухвалюють під час розробки продукту.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що повинна містити документація дизайн-системи?</h2>
+<p class="glossary-term-section__text">Структуруйте настанови навколо запитань, на які фахівці шукають відповіді під час щоденної роботи.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Question</th>
-<th>Useful documentation</th>
+<th>Запитання</th>
+<th>Корисна документація</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Should I use this component?</td>
-<td>Purpose, suitable scenarios, and alternatives</td>
+<td>Чи варто використовувати цей компонент?</td>
+<td>Призначення, рекомендовані сценарії та можливі альтернативи</td>
 </tr>
 <tr>
-<td>How does it behave?</td>
-<td>States, keyboard interaction, validation, and responsive behavior</td>
+<td>Як він поводиться?</td>
+<td>Стани (states), взаємодія з клавіатури, валідація та адаптивна поведінка</td>
 </tr>
 <tr>
-<td>How do I implement it?</td>
-<td>Supported API, imports, token references, and working examples</td>
+<td>Як його інтегрувати?</td>
+<td>Підтримуваний API, імпорти, посилання на токени та інтерактивні приклади коду</td>
 </tr>
 <tr>
-<td>What can change?</td>
-<td>Ownership, release status, compatibility, and migration guidance</td>
+<td>Що може змінитися?</td>
+<td>Власники (ownership), статус релізу, сумісність та посібники з міграції</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A screenshot shows appearance. A working example can expose behavior. Written guidance explains the conditions and decisions that neither makes obvious.</p>
+<p class="glossary-term-section__text">Скриншот демонструє лише візуальний вигляд. Працюючий приклад може розкрити поведінку. Письмові настанови пояснюють умови та архітектурні рішення, які не є очевидними з перших двох джерел.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-documenting-an-address-field">
-<h2 id="section-example-documenting-an-address-field" class="glossary-term-section__title">Example: documenting an address field</h2>
-<p class="glossary-term-section__text">Suppose a shared address field supports autocomplete and manual entry. Document what happens when no suggestion matches, whether users can edit the returned address, and how validation errors appear.</p>
-<p class="glossary-term-section__text">Provide an example with a long address, an unavailable lookup service, and a keyboard-only interaction. Specify which component version the example uses. The application still owns delivery rules and whether an address is accepted.</p>
-<p class="glossary-term-section__text">This gives a product team enough information to choose and integrate the field without copying a screenshot and inventing the missing behavior.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: документування поля введення адреси</h2>
+<p class="glossary-term-section__text">Припустимо, спільне поле адреси підтримує автодоповнення (autocomplete) та ручне введення. Задокументуйте, що відбувається, коли жодна підказка не підходить, чи можуть користувачі редагувати отриману адресу та як відображаються помилки валідації.</p>
+<p class="glossary-term-section__text">Надайте живий приклад із дуже довгою адресою, недоступним сервісом геопошуку та взаємодією виключно з клавіатури. Вкажіть, яку саме версію компонента демонструє цей приклад. При цьому бізнес-правила доставки та валідація прийнятності адреси залишаються відповідальністю самого продуктового додатку.</p>
+<p class="glossary-term-section__text">Це забезпечує продуктову команду вичерпною інформацією для вибору та інтеграції поля без необхідності сліпо копіювати скриншот і додумувати відсутню логіку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-documentation-vs-a-component-catalog">
-<h2 id="section-documentation-vs-a-component-catalog" class="glossary-term-section__title">Documentation vs. a component catalog</h2>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/component-libraries.html">component library</a> provides reusable implementations. Its catalog shows the available parts. Documentation also explains when those parts are appropriate and how to combine them into a task.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/storybook.html">Storybook</a> can present rendered component states and implementation details. Broader guidance may live beside it or elsewhere, provided the links and ownership stay clear. A generated list of properties does not explain the product decisions behind those properties.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Документація проти каталогу компонентів</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a> надають готові реалізації для повторного використання. Їхній каталог демонструє наявні будівельні блоки. Документація ж пояснює, коли саме ці блоки доречні та як об'єднати їх у цілісний користувацький сценарій.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/storybook.html">Storybook</a> чудово підходить для демонстрації відрендерених станів компонентів та технічних деталей реалізації. Більш широкі настанови можуть розміщуватися поряд або на окремому порталі за умови збереження чітких посилань і зон відповідальності. Автоматично згенерований перелік props не пояснює продуктових рішень, що стоять за цими властивостями.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-keep-documentation-useful">
-<h2 id="section-how-do-you-keep-documentation-useful" class="glossary-term-section__title">How do you keep documentation useful?</h2>
-<p class="glossary-term-section__text">Start with a frequent task and its most consequential mistakes. Link the guidance from the places where people select or implement the component. Ask a teammate to complete the task using only that guidance, and record where they need help.</p>
-<p class="glossary-term-section__text">Update examples when the component changes. Assign an owner who can correct discrepancies between the guidance, design assets, and released code. Archive superseded instructions with a visible route to the current version.</p>
-<p class="glossary-term-section__text">For AI-assisted implementation, expose the same supported APIs and examples in a form the agent can retrieve. Verify its output against the implementation: machine-readable documentation can still be incomplete or outdated.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як підтримувати актуальність і користь документації?</h2>
+<p class="glossary-term-section__text">Почніть із найчастіших завдань та критичних помилок, яких припускаються команди. Додавайте посилання на настанови безпосередньо в місця, де розробники й дизайнери обирають або впроваджують компонент. Попросіть колегу виконати завдання, користуючись лише цією документацією, і зафіксуйте моменти, де знадобилася стороння допомога.</p>
+<p class="glossary-term-section__text">Оновлюйте приклади одночасно зі зміною компонента. Призначте відповідального, який оперативно усуватиме розбіжності між настановами, дизайн-макетами та опублікованим кодом. Архівуйте застарілі інструкції, забезпечуючи помітний і прямий перехід на актуальну версію.</p>
+<p class="glossary-term-section__text">Для розробки з використанням AI надавайте ті самі підтримувані API та приклади у структурованому машинозчитуваному форматі (наприклад, для RAG або контексту LLM). Завжди перевіряйте згенерований штучним інтелектом код на відповідність системі: машинозчитувана документація також може бути неповною або застарілою.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система (Design System)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
 <li><a href="/ua/glossary/storybook.html">Storybook</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Button guidance, GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Настанови щодо кнопок, GOV.UK Design System</a></li>
 <li><a href="https://storybook.js.org/docs/writing-docs/autodocs" target="_blank" rel="noopener noreferrer">Autodocs, Storybook</a></li>
 </ul>
 </section>

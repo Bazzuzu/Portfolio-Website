@@ -386,13 +386,13 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Складений дизайн-токен (composite design token) фіксує комплексне дизайнерське рішення, значення якого формується з кількох взаємопов'язаних властивостей. Наприклад, токен тіні об'єднує колір, координати зміщення, радіус розмиття та розсіювання, дозволяючи компонентам посилатися на іменовану тінь як на єдине неподільне дизайн-рішення.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-is-a-composite-token-different-from-a-group">
-<h2 id="section-how-is-a-composite-token-different-from-a-group" class="glossary-term-section__title">How is a composite token different from a group?</h2>
-<p class="glossary-term-section__text">A group organizes separate tokens. In the DTCG format, a composite token declares one <code>$value</code> that contains the parts of a single decision. In a group named <code>elevation</code>, <code>card</code> and <code>dialog</code> could be two separate shadow tokens. Each of those tokens can carry its own set of shadow properties.</p>
+    <p class="glossary-term-section__text">Складений дизайн-токен (composite design token) фіксує комплексне дизайнерське рішення, значення якого формується з кількох взаємопов'язаних властивостей. Наприклад, токен тіні об'єднує колір, координати зміщення за двома осями, радіус розмиття та розсіювання. Компонент може використовувати таку іменовану тінь як єдине цілісне рішення.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чим складений токен відрізняється від групи?</h2>
+<p class="glossary-term-section__text">Група організовує окремі токени. У форматі DTCG (Design Tokens Community Group) складений токен оголошує одне значення <code>$value</code>, яке містить складові частини одного дизайн-рішення. У групі з назвою <code>elevation</code> елементи <code>card</code> та <code>dialog</code> можуть бути двома окремими токенами тіней. Кожен із цих токенів інкапсулює власний набір властивостей тіні.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-dtcg-example-of-a-shadow-token">
-<h2 id="section-dtcg-example-of-a-shadow-token" class="glossary-term-section__title">DTCG example of a shadow token</h2>
+<section class="glossary-term-section" aria-labelledby="section-dtcg">
+<h2 id="section-dtcg" class="glossary-term-section__title">Приклад токена тіні у форматі DTCG</h2>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-json">{
   "elevation": {
@@ -409,26 +409,26 @@
   }
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">Here <code>elevation</code> is the group and <code>elevation.card</code> is the token path. This shadow uses the five required properties in a single value. The format also allows an optional <code>inset</code> flag. Use the fields supported by the token’s type. The <a href="/ua/glossary/design-tokens-format-module-dtcg.html">DTCG Format Module</a> defines each composite type and which properties may reference other tokens.</p>
+<p class="glossary-term-section__text">Тут <code>elevation</code> виступає групою, а <code>elevation.card</code> — це шлях до токена (token path). Ця тінь використовує п'ять обов'язкових властивостей у межах єдиного значення. Формат також підтримує необов'язковий прапорець <code>inset</code>. Використовуйте поля, передбачені відповідним типом токена. <a href="/ua/glossary/design-tokens-format-module-dtcg.html">Специфікація формату токенів DTCG</a> визначає кожен складений тип і вказує, які властивості можуть посилатися на інші токени.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-use-a-composite-token">
-<h2 id="section-when-should-you-use-a-composite-token" class="glossary-term-section__title">When should you use a composite token?</h2>
-<p class="glossary-term-section__text">Use one when the properties belong together in the consuming interface. If several components need the same card shadow, one token gives them a shared way to request that shadow. If an offset also needs to be reused independently, define an offset token and reference it inside the shadow where the format and tools support that reference.</p>
-<p class="glossary-term-section__text">Check what each consumer expects. For the example above, a web build could produce <code>0 2px 8px 0 rgb(0 0 0 / 16%)</code> for CSS <code>box-shadow</code>. Another platform may expect separate parameters. Verify the generated output and judge the rendered result in a real component before adopting the token across the library.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли варто використовувати складений токен?</h2>
+<p class="glossary-term-section__text">Використовуйте складений токен тоді, коли властивості нерозривно пов'язані в цільовому інтерфейсі споживача. Якщо декільком компонентам потрібна однакова тінь картки, один токен забезпечує їм спільний спосіб застосування цієї тіні. Якщо ж зміщення (offset) потрібно перевикористовувати незалежно, визначте окремий токен зміщення та посилайтеся на нього всередині токена тіні, якщо це підтримується форматом та інструментами збірки.</p>
+<p class="glossary-term-section__text">Зважайте на очікування кожної платформи-споживача. Для наведеного вище прикладу вебзбірка може згенерувати значення <code>0 2px 8px 0 rgb(0 0 0 / 16%)</code> для CSS-властивості <code>box-shadow</code>. Інша платформа може очікувати роздільні параметри. Завжди верифікуйте згенерований вихідний код і оцінюйте відрендерений результат у реальному компоненті, перш ніж впроваджувати токен у бібліотеку в масштабах усієї системи.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/design-primitives.html">Design Primitives</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
+<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Формат дизайн-токенів DTCG</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени (Semantic Tokens)</a></li>
+<li><a href="/ua/glossary/design-primitives.html">Примітиви дизайну (Design Primitives)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Модуль формату дизайн-токенів 2025.10, DTCG</a></li>
 </ul>
 </section>
 

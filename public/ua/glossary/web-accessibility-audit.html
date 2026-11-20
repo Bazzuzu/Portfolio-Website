@@ -391,62 +391,62 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Аудит вебдоступності (Web Accessibility Audit) — це структурована оцінка вебсайту або вебзастосунку на відповідність визначеному стандарту доступності (зокрема WCAG) у межах заданого обсягу. Він документує виявлені бар'єри, фіксує методологію їхнього тестування та надає команді доказову базу для пріоритезації виправлень і подальшої верифікації змін.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-run-a-web-accessibility-audit">
-<h2 id="section-how-do-you-run-a-web-accessibility-audit" class="glossary-term-section__title">How do you run a web accessibility audit?</h2>
+    <p class="glossary-term-section__text">Аудит вебдоступності (Web Accessibility Audit) — це задокументована оцінка вебсайту або вебзастосунку на відповідність визначеному стандарту доступності в межах встановленого обсягу. Він виявляє бар'єри, фіксує методологію їхнього виявлення та надає командам доказову базу для пріоритезації виправлень і подальшої верифікації змін.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як проводити аудит вебдоступності?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Define the scope and target.</strong> Record the site or release, WCAG version and level or other applicable standard, and the browsers and assistive technologies used for testing.</li>
-<li><strong>Sample representative content and complete tasks.</strong> Include common templates, shared components, different states, and critical journeys such as checkout. If a sampled page is part of a process, include the steps needed to complete that process.</li>
-<li><strong>Combine automated and manual tests.</strong> Use scans for issues they can identify. Test keyboard operation, focus order, zoom and reflow, labels, errors, and announcements by hand. Include people with disabilities in usability evaluation to understand how barriers affect real tasks.</li>
-<li><strong>Report and retest.</strong> Record the affected page or state, environment, steps to reproduce, expected behavior, actual result, user impact, and applicable criterion. Retest the fix across other instances of a shared component.</li>
+<li><strong>Визначте обсяг та цільовий стандарт.</strong> Зафіксуйте сайт або реліз продукту, версію та рівень WCAG або інший застосовний стандарт, а також браузери й асистивні технології, що використовуються для тестування.</li>
+<li><strong>Сформуйте вибірку репрезентативного контенту та наскрізних завдань.</strong> Включіть типові шаблони, спільні компоненти, різні стани та критичні користувацькі сценарії, такі як оформлення замовлення (checkout). Якщо відібрана сторінка є частиною процесу, включіть усі кроки, необхідні для його повного завершення.</li>
+<li><strong>Поєднуйте автоматизоване та ручне тестування.</strong> Використовуйте автоматизоване сканування для виявлення дефектів, які воно здатне зафіксувати. Вручну тестуйте керування з клавіатури, порядок фокусування, масштабування й адаптивне перекомпонування (reflow), текстові підписи, реакцію на помилки та голосові сповіщення (announcements). Залучайте людей з інвалідністю до оцінки юзабіліті, щоб зрозуміти, як виявлені бар'єри впливають на реальні завдання.</li>
+<li><strong>Формуйте звіти та проводьте повторне тестування.</strong> Фіксуйте проблемну сторінку чи стан інтерфейсу, середовище тестування, кроки для відтворення, очікувану поведінку, фактичний результат, вплив на користувача та застосовний критерій успіху. Повторно протестуйте виправлення в усіх інших екземплярах спільного компонента.</li>
 </ol>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-keyboard-trap-during-checkout">
-<h2 id="section-example-a-keyboard-trap-during-checkout" class="glossary-term-section__title">Example: A keyboard trap during checkout</h2>
+<section class="glossary-term-section" aria-labelledby="section-checkout">
+<h2 id="section-checkout" class="glossary-term-section__title">Приклад: клавіатурна пастка під час оформлення замовлення (checkout)</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Evidence</th>
-<th>Example finding</th>
+<th>Доказова база (Evidence)</th>
+<th>Приклад виявленої проблеми (Finding)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Location and test</td>
-<td>Checkout, payment-help dialog. Open it by keyboard and try to close it with the available controls.</td>
+<td>Розташування та тест</td>
+<td>Оформлення замовлення (checkout), модальне вікно довідки щодо оплати. Відкрийте його з клавіатури та спробуйте закрити доступними елементами керування.</td>
 </tr>
 <tr>
-<td>Actual result and impact</td>
-<td>Focus stays inside the dialog. The visible close icon only responds to pointer input, so a keyboard user cannot return to payment.</td>
+<td>Фактичний результат і вплив на користувача</td>
+<td>Фокус залишається заблокованим усередині діалогового вікна. Візуальна іконка закриття реагує лише на курсор миші (вказівник), тому користувач клавіатури не може повернутися до кроку оплати.</td>
 </tr>
 <tr>
-<td>Criterion and fix</td>
-<td>WCAG 2.1.2 No Keyboard Trap (Level A). Make the close control keyboard-operable and verify that focus returns to the trigger when the dialog closes.</td>
+<td>Критерій та виправлення</td>
+<td>WCAG 2.1.2 No Keyboard Trap (Рівень A). Зробіть елемент закриття доступним для керування з клавіатури та переконайтеся, що після закриття діалогового вікна фокус повертається на тригерний елемент, який його викликав.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The report should identify what the sample covers and any areas that remain untested. A short check of one page can uncover barriers. A conformance evaluation requires a broader review of the defined scope.</p>
+<p class="glossary-term-section__text">Звіт повинен чітко визначати, що саме охоплює вибірка, а які області залишилися неперевіреними. Коротка перевірка однієї сторінки може виявити окремі бар'єри, проте повноцінна оцінка відповідності (conformance evaluation) вимагає значно ширшого аудиту всього визначеного обсягу продукту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
 <li><a href="/ua/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
-<li><a href="/ua/glossary/en-301-549.html">EN 301 549</a></li>
-<li><a href="/ua/glossary/ada-web-accessibility.html">ADA Web Accessibility</a></li>
+<li><a href="/ua/glossary/en-301-549.html">Стандарт доступності EN 301 549</a></li>
+<li><a href="/ua/glossary/ada-web-accessibility.html">Веб-доступність за ADA</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Evaluating Web Accessibility, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/" target="_blank" rel="noopener noreferrer">WCAG Evaluation Methodology (WCAG-EM), W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/test-evaluate/involving-users/" target="_blank" rel="noopener noreferrer">Involving Users in Evaluating Web Accessibility, W3C WAI</a></li>
-<li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">WCAG 2.2 Recommendation, W3C</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html" target="_blank" rel="noopener noreferrer">Understanding No Keyboard Trap, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Оцінка вебдоступності, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/" target="_blank" rel="noopener noreferrer">Методологія оцінки доступності WCAG (WCAG-EM), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/involving-users/" target="_blank" rel="noopener noreferrer">Залучення користувачів до оцінки вебдоступності, W3C WAI</a></li>
+<li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">Рекомендація WCAG 2.2, W3C</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html" target="_blank" rel="noopener noreferrer">Розуміння критерію No Keyboard Trap (Без клавіатурної пастки), W3C WAI</a></li>
 </ul>
 </section>
 

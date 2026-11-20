@@ -388,51 +388,51 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Розмір області натискання (Touch Target Size) — це ширина та висота області, яка реагує на дотик або клік по елементу керування. Стандарт WCAG 2.2 застосовує критерії розміру інтерактивних цілей до вказівних пристроїв введення, включаючи сенсорні екрани та мишу, враховуючи всю площу елемента разом із внутрішніми відступами (padding), здатними приймати натискання.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-target-size-does-wcag-require">
-<h2 id="section-what-target-size-does-wcag-require" class="glossary-term-section__title">What target size does WCAG require?</h2>
+    <p class="glossary-term-section__text">Розмір області дотику (touch target size) — це ширина та висота інтерактивної зони, яка реагує на натискання пальцем або клік по елементу керування. WCAG 2.2 застосовує критерії розміру цілі до будь-яких вказівних пристроїв введення (pointer inputs), включно з сенсорними екранами та мишею. Вимірюйте фактичну інтерактивну область елемента керування, враховуючи будь-які внутрішні відступи (padding), здатні приймати клік або дотик.</p>
+<section class="glossary-term-section" aria-labelledby="section-wcag">
+<h2 id="section-wcag" class="glossary-term-section__title">Який розмір інтерактивної області вимагає WCAG?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>WCAG criterion</th>
-<th>Minimum target size</th>
+<th>Критерій WCAG</th>
+<th>Мінімальний розмір області дотику</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>2.5.8 Target Size (Minimum), Level AA</strong></td>
-<td><strong>24 × 24 CSS pixels</strong>, unless an exception applies.</td>
+<td><strong>2.5.8 Target Size (Minimum), рівень AA</strong></td>
+<td><strong>24 × 24 CSS-пікселі</strong>, якщо не застосовується виняток.</td>
 </tr>
 <tr>
-<td><strong>2.5.5 Target Size (Enhanced), Level AAA</strong></td>
-<td><strong>44 × 44 CSS pixels</strong>, with its own exceptions.</td>
+<td><strong>2.5.5 Target Size (Enhanced), рівень AAA</strong></td>
+<td><strong>44 × 44 CSS-пікселі</strong>, із власним переліком винятків.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">For the AA spacing exception, place an imaginary circle 24 CSS pixels in diameter at the center of each undersized target’s bounding box. Each circle must avoid overlapping another target or the circle around another undersized target. There are separate exceptions for inline targets, a qualifying equivalent control on the same page, targets sized by the browser without author modification, and essential presentation.</p>
+<p class="glossary-term-section__text">Для винятку щодо відстаней на рівні AA (spacing exception) розмістіть умовне коло діаметром 24 CSS-пікселі в геометричному центрі обмежувальної рамки (bounding box) кожної цілі зменшеного розміру. Кожне таке коло не повинно перетинатися з іншим елементом керування або з колом навколо іншої цілі недостатнього розміру. Окремі винятки діють для інлайнових посилань у тексті, наявності повноцінного еквівалентного елемента керування на тій самій сторінці, розмірів, встановлених браузером за замовчуванням без модифікацій автором, та невіддільного візуального представлення (essential presentation).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-edit-and-delete-buttons-in-a-table">
-<h2 id="section-example-edit-and-delete-buttons-in-a-table" class="glossary-term-section__title">Example: Edit and delete buttons in a table</h2>
-<p class="glossary-term-section__text">A booking table has two 16 × 16 CSS-pixel icon buttons on the same row. Their centers are 20 CSS pixels apart, so their 24-pixel circles overlap. The pair fails the spacing check. Moving their centers to 28 CSS pixels apart clears that overlap for the pair. Check other row actions and nearby targets too.</p>
-<p class="glossary-term-section__text">Another option is to keep each icon at 16 × 16 CSS pixels and add 4 CSS pixels of padding on each side of its button to create a 24 × 24 target. Keep the resulting hit areas separate. In a narrow layout, test the rendered controls with both touch and a mouse so you can tell which action each area triggers.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: кнопки редагування та видалення в таблиці</h2>
+<p class="glossary-term-section__text">У таблиці бронювань в одному рядку розміщено дві кнопки-іконки розміром 16 × 16 CSS-пікселів. Відстань між їхніми центрами становить 20 CSS-пікселів, тому їхні 24-піксельні кола перетинаються. Ця пара елементів не проходить перевірку на відстань (spacing check). Збільшення відстані між їхніми центрами до 28 CSS-пікселів усуває перетин для цієї пари. Обов'язково перевірте також інші дії в рядку та сусідні інтерактивні елементи.</p>
+<p class="glossary-term-section__text">Інший варіант — зберегти візуальний розмір іконок 16 × 16 CSS-пікселів і додати по 4 CSS-пікселі внутрішнього відступу (padding) з кожного боку кнопки, сформувавши цільову зону 24 × 24 пікселі. Забезпечте чітке розмежування отриманих зон кліку (hit areas). На вузьких екранах обов'язково протестуйте відрендерені елементи керування як сенсорним введенням, так і мишею, щоб чітко бачити, яку саме дію активує кожна область.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/keyboard-accessibility.html">Keyboard Accessibility & Focus Management</a></li>
-<li><a href="/ua/glossary/zoom-text-resize-reflow.html">Zoom, Text Resize & Reflow</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/keyboard-accessibility.html">Клавіатурна доступність та керування фокусом</a></li>
+<li><a href="/ua/glossary/zoom-text-resize-reflow.html">Масштабування, зміна розміру тексту та перебудова (Zoom, Text Resize & Reflow)</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система (Design System)</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank" rel="noopener noreferrer">Understanding Target Size (Minimum), W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html" target="_blank" rel="noopener noreferrer">Understanding Target Size (Enhanced), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Target Size (Minimum), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Target Size (Enhanced), W3C WAI</a></li>
 </ul>
 </section>
 

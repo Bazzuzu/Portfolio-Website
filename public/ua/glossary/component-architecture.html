@@ -385,60 +385,60 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Архітектура компонентів визначає декомпозицію користувацького інтерфейсу на окремі складові та способи їхньої взаємодії через передачу даних, стану й поведінки. У дизайн-системі вона регламентує внутрішню відповідальність багаторазового компонента, межі його конфігурації для споживачів та інтеграцію в ширший інтерфейсний контекст.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-component-s-public-api">
-<h2 id="section-what-belongs-in-a-component-s-public-api" class="glossary-term-section__title">What belongs in a component’s public API?</h2>
-<p class="glossary-term-section__text">The public API is the set of inputs, events, and composition points consumers can rely on. For a dialog, it might include a title, content slots, an open state, and a callback for requests to open or close. Document what each option does and the behavior consumers can expect.</p>
-<p class="glossary-term-section__text">Decide where state lives. An uncontrolled dialog manages whether it is open internally. In a controlled dialog, the application supplies the current state and handles requests to change it. Use controlled state when the workflow needs to coordinate opening or closing. For example, the application can close the dialog after a save succeeds.</p>
+    <p class="glossary-term-section__text">Архітектура компонентів визначає декомпозицію користувацького інтерфейсу на окремі складові та способи їхньої взаємодії через передачу даних, стану й поведінки. У дизайн-системі вона регламентує внутрішню зону відповідальності багаторазового компонента, межі його конфігурації для споживачів та інтеграцію в ширший інтерфейсний контекст.</p>
+<section class="glossary-term-section" aria-labelledby="section-api">
+<h2 id="section-api" class="glossary-term-section__title">Що належить до публічного API компонента?</h2>
+<p class="glossary-term-section__text">Публічний API (public API) — це фіксований набір вхідних параметрів (props), подій та точок композиції (slots/children), на які можуть покладатися зовнішні споживачі. Для діалогового вікна це можуть бути заголовок, слоти для контенту, стан відкритості та функція зворотного виклику (callback) для запитів на відкриття чи закриття. Документуйте призначення кожного параметра та поведінку, яку споживачі можуть очікувати за замовчуванням.</p>
+<p class="glossary-term-section__text">Визначте, де саме зберігається стан. Неконтрольоване діалогове вікно (uncontrolled dialog) самостійно керує власною відкритістю всередині свого життєвого циклу. У контрольованому діалоговому вікні (controlled dialog) застосунок передає поточний стан ззовні та самостійно обробляє запити на його зміну. Використовуйте контрольований стан, коли робочий процес вимагає координації відкриття або закриття. Наприклад, застосунок може автоматично закрити діалогове вікно лише після успішного збереження даних на сервері.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-a-shared-dialog">
-<h2 id="section-example-of-a-shared-dialog" class="glossary-term-section__title">Example of a shared dialog</h2>
-<p class="glossary-term-section__text">Suppose checkout and account settings both open a modal to review a change.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад спільного діалогового вікна</h2>
+<p class="glossary-term-section__text">Припустімо, що і в процесі оформлення замовлення (checkout), і в налаштуваннях облікового запису відкривається модальне вікно для підтвердження внесених змін.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Responsibility</th>
-<th>Where it belongs</th>
+<th>Зона відповідальності</th>
+<th>Де вона має бути реалізована</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dialog behavior</td>
-<td>The shared dialog handles modal focus, keyboard dismissal, and how its title is exposed to assistive technology.</td>
+<td>Поведінка діалогового вікна</td>
+<td>Спільне діалогове вікно керує фокусом модального вікна, закриттям клавіатурою та коректним представленням заголовка для асистивних технологій.</td>
 </tr>
 <tr>
-<td>Review content</td>
-<td>Each product supplies the text, details, and actions for its task.</td>
+<td>Контент перегляду</td>
+<td>Кожен продукт самостійно надає текст, деталі та кнопки дій для свого конкретного завдання.</td>
 </tr>
 <tr>
-<td>Business outcome</td>
-<td>Checkout submits the booking change, shows any error, and closes the dialog after a successful save.</td>
+<td>Бізнес-результат</td>
+<td>Сценарій оформлення замовлення надсилає запит на зміну бронювання, відображає можливі помилки та закриває діалогове вікно після успішного збереження.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">This boundary lets a product change its workflow without creating a new modal implementation. Review both the isolated component and a real screen. For example, after the dialog closes, check that focus returns to the trigger or another logical element if the trigger is gone.</p>
+<p class="glossary-term-section__text">Такий розподіл обов'язків дозволяє продукту змінювати свій бізнес-процес без необхідності створювати нову реалізацію модального вікна. Тестуйте як ізольований компонент, так і його поведінку на реальному екрані. Наприклад, після закриття діалогового вікна переконайтеся, що фокус повертається на елемент-тригер, який викликав вікно, або на інший логічний елемент, якщо тригер зник.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-add-a-variant-or-a-separate-component">
-<h2 id="section-when-should-you-add-a-variant-or-a-separate-component" class="glossary-term-section__title">When should you add a variant or a separate component?</h2>
-<p class="glossary-term-section__text">Add an option when consumers need a supported variation of the same interaction, such as a wider surface for comparison content. Compose the dialog with other components when the layout changes. Give a recurring workflow its own pattern or wrapper when it adds business rules that the base dialog cannot own. Before adding a shared option, try it in the screens that need it. Document the default and what each consumer can configure.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли варто додавати варіант, а коли — створювати окремий компонент?</h2>
+<p class="glossary-term-section__text">Додавайте новий параметр або варіант, якщо споживачам потрібна офіційно підтримувана варіація тієї самої взаємодії — наприклад, ширша поверхня для порівняння параметрів. Якщо кардинально змінюється розмітка, поєднуйте діалогове вікно з іншими компонентами за допомогою композиції. Для повторюваного робочого процесу створіть окремий патерн або компонент-обгортку (wrapper), якщо він вносить специфічні бізнес-правила, які не повинні належати базовому діалоговому вікну. Перш ніж додавати спільний параметр, перевірте його життєздатність безпосередньо на екранах, де він потрібен. Задокументуйте значення за замовчуванням і перелік доступних для налаштування параметрів.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-libraries.html">Component Libraries</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-<li><a href="/ua/glossary/web-components.html">Web Components</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI-архітектура</a></li>
+<li><a href="/ua/glossary/web-components.html">Вебкомпоненти</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://react.dev/learn/sharing-state-between-components" target="_blank" rel="noopener noreferrer">Sharing State Between Components, React</a></li>
-<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Dialog, Radix Primitives</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Dialog (Modal) Pattern, W3C WAI</a></li>
+<li><a href="https://react.dev/learn/sharing-state-between-components" target="_blank" rel="noopener noreferrer">Спільне використання стану між компонентами, React</a></li>
+<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Dialog, примітиви Radix</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Патерн діалогового (модального) вікна, W3C WAI</a></li>
 </ul>
 </section>
 

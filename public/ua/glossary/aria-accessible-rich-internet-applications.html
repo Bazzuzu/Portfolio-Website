@@ -391,38 +391,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">WAI-ARIA — це специфікація консорціуму W3C, що визначає ролі, стани та властивості інтерфейсних елементів для передачі їх асистивним технологіям. Вона дозволяє описати семантичну інформацію, яку неможливо виразити стандартними засобами нативного HTML (наприклад, стан розкриття кастомного акордеона чи дропдауна).</p>
-<section class="glossary-term-section" aria-labelledby="section-what-do-aria-roles-states-and-properties-do">
-<h2 id="section-what-do-aria-roles-states-and-properties-do" class="glossary-term-section__title">What do ARIA roles, states, and properties do?</h2>
-<p class="glossary-term-section__text">A role identifies what an element is, such as a dialog. A state describes a condition that can change, such as <code>aria-expanded</code>. A property describes an aspect or relationship, such as <code>aria-labelledby</code>, which points to the text that names an element.</p>
-<p class="glossary-term-section__text">Use native HTML when it provides the semantics and behavior you need. Adding <code>role="button"</code> to a <code><div></code> exposes a role. Keyboard focus and activation still need to be implemented.</p>
+    <p class="glossary-term-section__text">WAI-ARIA — це специфікація консорціуму W3C, що визначає способи передачі ролей, станів та властивостей елементів користувацького інтерфейсу асистивним технологіям. Вона дозволяє описати семантичну інформацію, яку неможливо виразити стандартними засобами нативного HTML — наприклад, чи розкрито наразі кастомний блок інформації (disclosure widget).</p>
+<section class="glossary-term-section" aria-labelledby="section-aria">
+<h2 id="section-aria" class="glossary-term-section__title">Для чого потрібні ролі, стани та властивості ARIA?</h2>
+<p class="glossary-term-section__text"><strong>Роль (role)</strong> визначає, чим саме є елемент (наприклад, <code>dialog</code> або <code>tab</code>). <strong>Стан (state)</strong> описує динамічну умову, яка може змінюватися в процесі взаємодії, наприклад <code>aria-expanded</code>. <strong>Властивість (property)</strong> характеризує постійну рису або зв'язок між елементами, як-от <code>aria-labelledby</code>, що вказує на ідентифікатор елемента, чий текст слугує доступним ім'ям (accessible name).</p>
+<p class="glossary-term-section__text">Завжди віддавайте перевагу нативному HTML, коли він надає необхідну семантику та вбудовану поведінку. Додавання атрибута <code>role="button"</code> до звичайного тегу <code><div></code> оголошує його кнопкою для скрінрідера, проте клавіатурний фокус, навігацію та активацію клавішами Enter і Space вам доведеться реалізовувати вручну за допомогою JavaScript.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-fare-rules-disclosure">
-<h2 id="section-example-a-fare-rules-disclosure" class="glossary-term-section__title">Example: A fare-rules disclosure</h2>
-<p class="glossary-term-section__text">A native button labeled “Fare rules” reveals a hidden panel. While the panel is closed, the button has <code>aria-expanded="false"</code>. Activating it shows the panel and sets <code>aria-expanded="true"</code>. Closing it hides the panel and restores the false state. A native button gives you Enter and Space activation. Your code keeps the visible panel and reported state in sync. You can optionally use <code>aria-controls</code> to reference the panel’s ID.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: Кастомний блок розкриття інформації про правила тарифу</h2>
+<p class="glossary-term-section__text">Нативна кнопка з текстом «Fare rules» (Правила тарифу) керує відображенням прихованої панелі. Коли панель згорнута, кнопка має стан <code>aria-expanded="false"</code>. Її активація показує панель і динамічно перемикає атрибут на <code>aria-expanded="true"</code>. Повторне натискання приховує панель і повертає стан у <code>false</code>. Нативна кнопка автоматично підтримує активацію клавішами Enter та Пробіл. Завдання вашого коду — підтримувати точну синхронізацію між видимістю панелі та трансльованим ARIA-станом. Додатково можна використати атрибут <code>aria-controls</code>, який посилається на ID панелі контенту.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-the-result">
-<h2 id="section-how-do-you-test-the-result" class="glossary-term-section__title">How do you test the result?</h2>
-<p class="glossary-term-section__text">Verify that the button has the right name and state in the accessibility tree. Test it with a keyboard and a screen reader, and confirm that opening and closing the panel updates both the visible content and the exposed state. A Playwright ARIA snapshot can help catch changes in that exposed structure.</p>
-<p class="glossary-term-section__text">An AI browser agent that reads the accessibility tree can use the same role, name, and expanded state to find the button and decide whether to open it. Run the task with the intended agent to check whether it can open the panel and locate a specific rule. Keep that result separate from accessibility testing for people.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як тестувати результат?</h2>
+<p class="glossary-term-section__text">Переконайтеся, що кнопка має коректне доступне ім'я та відповідний стан у дереві доступності (accessibility tree). Протестуйте взаємодію за допомогою клавіатури та програми зчитування з екрана (screen reader), перевіривши, що відкриття та закриття панелі належним чином оновлює як видимий контент, так і переданий асистивним технологіям стан. ARIA-знімки у Playwright (Playwright ARIA snapshots) допомагають автоматизовано відстежувати непередбачувані регресії в структурі дерева доступності.</p>
+<p class="glossary-term-section__text">Автономні ШІ-агенти браузера (AI browser agents), які аналізують дерево доступності, можуть використовувати ту саму роль, ім'я та стан розкриття, щоб знайти потрібну кнопку та вирішити, чи варто її натискати. Запустіть цільове завдання з відповідним агентом, щоб оцінити, чи зможе він розкрити панель і знайти конкретне правило тарифу. Завжди зберігайте результати таких перевірок окремо від тестування доступності для реальних людей.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Архітектура Headless UI</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
 <li><a href="https://www.w3.org/TR/wai-aria-1.2/" target="_blank" rel="noopener noreferrer">WAI-ARIA 1.2, W3C</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/" target="_blank" rel="noopener noreferrer">Read Me First, W3C ARIA Authoring Practices Guide</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Disclosure Pattern, W3C ARIA Authoring Practices Guide</a></li>
-<li><a href="https://playwright.dev/docs/aria-snapshots" target="_blank" rel="noopener noreferrer">ARIA Snapshots, Playwright</a></li>
-<li><a href="https://github.com/web-arena-x/webarena/blob/main/resources/README.md" target="_blank" rel="noopener noreferrer">WebArena Agent Execution Traces</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/" target="_blank" rel="noopener noreferrer">Обов'язково прочитайте перед початком роботи, Посібник із практик авторства W3C ARIA (Read Me First, W3C ARIA APG)</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Шаблон проектування Disclosure, Посібник W3C ARIA APG (Disclosure Pattern)</a></li>
+<li><a href="https://playwright.dev/docs/aria-snapshots" target="_blank" rel="noopener noreferrer">Знімки дерева доступності (ARIA Snapshots), Playwright</a></li>
+<li><a href="https://github.com/web-arena-x/webarena/blob/main/resources/README.md" target="_blank" rel="noopener noreferrer">Трасування виконання агентів WebArena (WebArena Agent Execution Traces)</a></li>
 </ul>
 </section>
 

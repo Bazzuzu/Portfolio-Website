@@ -386,68 +386,68 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Версіонування дизайн-системи забезпечує прозору ідентифікацію релізів і допомагає продуктовим командам розуміти вплив змін під час оновлення спільної системи. Семантичне версіонування (SemVer) слугує стандартизованою схемою маркування версій програмних пакетів на основі характеру змін у задекларованому публічному API.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-counts-as-the-public-api">
-<h2 id="section-what-counts-as-the-public-api" class="glossary-term-section__title">What counts as the public API?</h2>
-<p class="glossary-term-section__text">Document which component exports, props, supported behaviors, and token names consumers can rely on. This is the compatibility contract for the package. Decide whether particular visual behavior is part of that contract and describe other visible changes in the release notes.</p>
-<p class="glossary-term-section__text">Design files and code can have different release schedules. Map a design library update to its matching code release when their changes are meant to be used together, and tell teams where to check compatibility.</p>
+    <p class="glossary-term-section__text">Версіонування дизайн-системи допомагає командам ідентифікувати релізи та чітко розуміти сутність змін під час оновлення спільної системи. Семантичне версіонування (Semantic Versioning, SemVer) — це загальноприйнята схема версіонування пакетів програмного забезпечення, що базується на змінах у задекларованому публічному API.</p>
+<section class="glossary-term-section" aria-labelledby="section-api">
+<h2 id="section-api" class="glossary-term-section__title">Що вважається публічним API?</h2>
+<p class="glossary-term-section__text">Задокументуйте, на які саме експорти компонентів, пропси, підтримувані моделі поведінки та назви токенів можуть розраховувати споживачі бібліотеки. Це формує контракт сумісності для пакета. Визначте, чи є конкретна візуальна поведінка частиною цього контракту, та описуйте інші помітні візуальні зміни в примітках до релізу.</p>
+<p class="glossary-term-section__text">Дизайн-файли та код можуть мати різні графіки випуску. Синхронізуйте оновлення бібліотеки дизайну з відповідним релізом коду, якщо ці зміни призначені для сумісного використання, та повідомте командам, де саме перевіряти сумісність.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-major-minor-and-patch-examples">
-<h2 id="section-major-minor-and-patch-examples" class="glossary-term-section__title">Major, minor, and patch examples</h2>
-<p class="glossary-term-section__text">For a stable package at <code>2.4.1</code>, treat each row as a separate release example.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклади мажорних, мінорних і патч-релізів</h2>
+<p class="glossary-term-section__text">Для стабільного пакета версії <code>2.4.1</code> розгляньте кожен рядок як окремий сценарій оновлення:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Change</th>
-<th>Next version</th>
-<th>Why</th>
+<th>Зміна</th>
+<th>Наступна версія</th>
+<th>Обґрунтування</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Fix a dialog bug so focus returns to the trigger as documented</td>
+<td>Виправлено баг у діалоговому вікні: фокус коректно повертається на тригер згідно з документацією</td>
 <td><code>2.4.2</code></td>
-<td>Backward-compatible bug fix</td>
+<td>Зворотно сумісне виправлення помилки</td>
 </tr>
 <tr>
-<td>Add an optional wide dialog variant and keep the current default</td>
+<td>Додано необов'язковий широкий варіант діалогу зі збереженням поточного значення за замовчуванням</td>
 <td><code>2.5.0</code></td>
-<td>Backward-compatible addition</td>
+<td>Зворотно сумісне додавання нової функціональності</td>
 </tr>
 <tr>
-<td>Remove a documented dialog prop</td>
+<td>Видалено задокументований проп діалогового вікна</td>
 <td><code>3.0.0</code></td>
-<td>Breaking change to the public API</td>
+<td>Несумісна зміна публічного API</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A token color update does not automatically determine the version bump. Check the compatibility contract first. A change that breaks a declared guarantee needs a major bump even if it only changes a value. Communicate visible changes in any release. For example, removing a documented token name is different from correcting its value to match the documented design.</p>
+<p class="glossary-term-section__text">Оновлення кольору токена автоматично не визначає рівень підвищення версії. Спочатку перевірте контракт сумісності. Зміна, що порушує задекларовані гарантії, вимагає мажорного підвищення версії, навіть якщо вона змінює лише значення. Завжди інформуйте про візуальні зміни в будь-якому релізі: наприклад, видалення задокументованого імені токена докорінно відрізняється від коригування його значення відповідно до затвердженого дизайну.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-plan-a-breaking-change">
-<h2 id="section-how-do-you-plan-a-breaking-change" class="glossary-term-section__title">How do you plan a breaking change?</h2>
-<p class="glossary-term-section__text">If you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.</p>
-<p class="glossary-term-section__text">Publish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як планувати критичні зміни?</h2>
+<p class="glossary-term-section__text">Якщо ви перейменовуєте публічний проп, додайте новий варіант, зберігши працездатність старого. Позначте старий проп як застарілий (deprecated) у мінорному релізі та додайте інструкцію з міграції. Узгодьте період підтримки застарілої версії та перевірте репрезентативні продукти перед остаточним видаленням у мажорному релізі.</p>
+<p class="glossary-term-section__text">Публікуйте посібники з міграції, зазначаючи зачеплені продуктові команди, наочні приклади коду «до і після» та перелік ручних перевірок. Для спільного діалогового вікна додайте тест навігації з клавіатури в реальному користувацькому сценарії. У разі перейменування пропа продемонструйте альтернативу та вкажіть, коли саме команди зможуть безпечно видалити старий параметр зі свого коду.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-component-lifecycle-and-release-notes">
-<h2 id="section-component-lifecycle-and-release-notes" class="glossary-term-section__title">Component lifecycle and release notes</h2>
-<p class="glossary-term-section__text">Teams can label components experimental, supported, deprecated, or retired, with explicit meanings for each status. These lifecycle labels describe support expectations; they are not a replacement for the package's compatibility policy.</p>
-<p class="glossary-term-section__text">Release notes should explain the user or consumer effect, the required action, and where to find a <a href="/ua/glossary/design-system-migration.html">migration plan</a>. For example: “The next major release removes the old dialog width prop. Use the size option shown in the migration example, then check narrow layouts and long content.”</p>
-<p class="glossary-term-section__text">Keep planned removal conditions distinct from the date an old component actually disappears. Record who can help consumers resolve a blocker.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Життєвий цикл компонентів і примітки до релізу</h2>
+<p class="glossary-term-section__text">Команди можуть маркувати компоненти статусами: експериментальний (experimental), підтримуваний (supported), застарілий (deprecated) або виведений з експлуатації (retired), з однозначним визначенням кожного статусу. Ці мітки життєвого циклу формують очікування щодо рівня підтримки, але не замінюють формальну політику сумісності пакета.</p>
+<p class="glossary-term-section__text">Примітки до релізу повинні пояснювати наслідки для кінцевих користувачів або команд-споживачів, необхідні дії з їхнього боку, а також містити посилання на <a href="/ua/glossary/design-system-migration.html">план міграції</a>. Наприклад: «У наступному мажорному релізі буде видалено старий проп ширини діалогу. Використовуйте параметр size, наведений у прикладі міграції, після чого перевірте відображення на вузьких екранах і з довгим контентом».</p>
+<p class="glossary-term-section__text">Чітко розмежовуйте заплановані критерії виведення компонента з експлуатації та фактичну дату, коли старий компонент буде фактично видалено. Зафіксуйте контакти фахівців, які можуть допомогти споживачам вирішити можливі труднощі під час міграції.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Semantic Versioning 2.0.0</a></li>
+<li><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Семантичне версіонування 2.0.0 (SemVer)</a></li>
 </ul>
 </section>
 

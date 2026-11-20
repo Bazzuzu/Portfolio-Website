@@ -385,72 +385,70 @@
 
   <article>
     <p class="glossary-term-section__text">MCP-сервер Figma підключає сумісні інструменти ШІ до Figma через протокол контексту моделі (Model Context Protocol, MCP). Він надає інструменти для доступу до контексту дизайну та, у підтримуваних робочих процесах, для створення чи редагування нативного вмісту Figma.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-can-the-figma-mcp-server-provide">
-<h2 id="section-what-can-the-figma-mcp-server-provide" class="glossary-term-section__title">What can the Figma MCP server provide?</h2>
-<p class="glossary-term-section__text">Figma's documented capabilities include retrieving component, variable, and layout context; using design-to-code mappings; and working with supported resources from design files. Some remote-server workflows also support writing to the canvas or bringing a browser interface into editable Figma layers.</p>
-<p class="glossary-term-section__text">Availability depends on the connection, client, permissions, and feature. The official documentation distinguishes remote and desktop servers. Follow its current setup and access guidance rather than assuming the two expose identical capabilities.</p>
+<section class="glossary-term-section" aria-labelledby="section-mcp-figma">
+<h2 id="section-mcp-figma" class="glossary-term-section__title">Що може надавати MCP-сервер Figma?</h2>
+<p class="glossary-term-section__text">Задокументовані можливості Figma охоплюють отримання контексту компонентів, змінних (variables) і макетів (layouts); використання мапінгів перенесення дизайну в код; а також роботу з підтримуваними ресурсами з файлів дизайну. Деякі робочі процеси на базі віддаленого сервера також підтримують запис на полотно (canvas) або перенесення інтерфейсу браузера в редаговані шари Figma.</p>
+<p class="glossary-term-section__text">Доступність функцій залежить від типу підключення, клієнта, прав доступу та конкретної можливості. Офіційна документація розрізняє віддалені (remote) та десктопні (desktop) сервери. Дотримуйтесь актуальних інструкцій із налаштування та доступу, замість того щоб припускати, що обидва варіанти надають однакові можливості.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-implementing-a-reservation-card">
-<h2 id="section-example-implementing-a-reservation-card" class="glossary-term-section__title">Example: implementing a reservation card</h2>
-<p class="glossary-term-section__text">A designer gives an agent the URL of a specific Figma selection and identifies the repository to use. The agent retrieves design context and checks for connected code components.</p>
-<p class="glossary-term-section__text">Before implementation, the task specifies the real data fields, loading state, and behavior for a canceled reservation. Afterward, the team reviews long names, missing values, keyboard interaction, and layout at a narrow width.</p>
-<p class="glossary-term-section__text">The Figma selection helps describe the intended interface. It does not supply every business rule or demonstrate that the generated implementation works.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: реалізація картки бронювання</h2>
+<p class="glossary-term-section__text">Дизайнер передає ШІ-агенту URL-адресу конкретного виділеного фрагмента у Figma (selection) та вказує цільовий репозиторій. Агент отримує контекст дизайну та перевіряє наявність підключених компонентів у коді.</p>
+<p class="glossary-term-section__text">Перед початком імплементації в завданні вказуються реальні поля даних, стан завантаження та логіка поведінки для скасованого бронювання. Після генерації команда перевіряє відображення довгих назв, обробку відсутніх значень, взаємодію з клавіатури та адаптивність макета на малих екранах.</p>
+<p class="glossary-term-section__text">Виділений фрагмент у Figma допомагає описати запланований інтерфейс. Проте він не містить усіх бізнес-правил і не доводить, що згенерована реалізація працює належним чином.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-figma-mcp-vs-code-connect-vs-a-design-system-mcp">
-<h2 id="section-figma-mcp-vs-code-connect-vs-a-design-system-mcp" class="glossary-term-section__title">Figma MCP vs. Code Connect vs. a design system MCP</h2>
+<section class="glossary-term-section" aria-labelledby="section-figma-mcp-code-connect-mcp">
+<h2 id="section-figma-mcp-code-connect-mcp" class="glossary-term-section__title">Порівняння: Figma MCP, Code Connect та MCP дизайн-системи</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Main role</th>
+<th>Термін</th>
+<th>Основна роль</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model Context Protocol</td>
-<td>A protocol through which a client interacts with tools and context</td>
+<td>Протокол, через який клієнт взаємодіє з інструментами та контекстом</td>
 </tr>
 <tr>
-<td>Figma MCP server</td>
-<td>A Figma-specific integration exposing supported tools</td>
+<td>MCP-сервер Figma</td>
+<td>Специфічна для Figma інтеграція, що надає підтримувані інструменти</td>
 </tr>
 <tr>
 <td>Figma Code Connect</td>
-<td>Mappings between design components and code implementations</td>
+<td>Мапінги між компонентами дизайну та їхніми реалізаціями в коді</td>
 </tr>
 <tr>
-<td>Design system MCP</td>
-<td>A descriptive label for an integration that exposes a system's components or guidance</td>
+<td>MCP дизайн-системи</td>
+<td>Описове позначення інтеграції, що надає компоненти або настанови конкретної системи</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">There is no single mandatory “design system MCP” product or content format. A <a href="/ua/glossary/storybook.html">Storybook</a> integration, for example, exposes different implementation context from a Figma integration.</p>
+<p class="glossary-term-section__text">Не існує єдиного обов'язкового продукту або формату контенту «MCP дизайн-системи». Наприклад, інтеграція зі <a href="/ua/glossary/storybook.html">Storybook</a> надає зовсім інший контекст реалізації, ніж інтеграція з Figma.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-context-improves-the-result">
-<h2 id="section-what-context-improves-the-result" class="glossary-term-section__title">What context improves the result?</h2>
-<p class="glossary-term-section__text">Give the agent a specific selection, the intended task, repository conventions, and references to existing components. State what it may change and the checks the result must pass. An instruction to reuse a component is useful only if the agent can find its supported API.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Code Connect</a> can make the mapping to actual code more explicit. Human review and appropriate tests still determine whether the output meets the requirements.</p>
-<p class="glossary-term-section__text">Use the official setup documentation for connection details. Choose the connection supported by your client, then confirm which tools it exposes before planning the workflow.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Який контекст покращує результат?</h2>
+<p class="glossary-term-section__text">Надавайте агенту чітко вибраний елемент (selection), конкретну мету завдання, конвенції репозиторію та посилання на наявні компоненти. Чітко зазначайте, що саме дозволено змінювати, та які перевірки має пройти результат. Вказівка повторно використати компонент корисна лише тоді, коли агент має доступ до його підтримуваного API.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Code Connect</a> робить зіставлення з реальним кодом значно точнішим. Проте саме перевірка людиною та відповідні тести визначають, чи відповідає згенерований результат установленим вимогам.</p>
+<p class="glossary-term-section__text">Використовуйте офіційну документацію з налаштування для отримання деталей підключення. Оберіть тип з'єднання, який підтримується вашим клієнтом, а потім перевірте доступні інструменти перед плануванням робочого процесу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol</a></li>
+<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
 <li><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a></li>
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/code-to-design-workflow.html">Code-to-Design Workflow</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду</a></li>
+<li><a href="/ua/glossary/code-to-design-workflow.html">Робочий процес від коду до дизайну</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener noreferrer">Figma MCP server introduction</a></li>
-<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Code Connect introduction, Figma</a></li>
+<li><a href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener noreferrer">Вступ до Figma MCP-сервера</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Вступ до Code Connect, Figma</a></li>
 </ul>
 </section>
 

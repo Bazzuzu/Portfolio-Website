@@ -384,76 +384,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Метрики дизайн-системи (Design System Metrics) — це показники, що використовуються для оцінки використання, якості, операційних витрат та впливу системи на розробку продукту. Корисна метрика допомагає ухвалювати конкретні рішення, а не просто фіксує кількість створених компонентів.</p>
-<section class="glossary-term-section" aria-labelledby="section-which-design-system-metrics-are-useful">
-<h2 id="section-which-design-system-metrics-are-useful" class="glossary-term-section__title">Which design system metrics are useful?</h2>
-<p class="glossary-term-section__text">Start with a goal, identify observable signals, and define a measure. Google's HEART research describes this goals-to-metrics approach for user experience; the following design system examples are practical applications, not a required HEART scorecard.</p>
+    <p class="glossary-term-section__text">Метрики дизайн-системи — це показники, що використовуються для оцінки використання, якості, операційних витрат та впливу системи на розробку продукту. Корисна метрика допомагає ухвалювати конкретні рішення, а не просто фіксує кількість створених компонентів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які метрики дизайн-системи є дійсно корисними?</h2>
+<p class="glossary-term-section__text">Починайте з мети (goal), визначте спостережувані сигнали (signals) та сформулюйте метрику (metric). Дослідження Google HEART описує саме такий підхід «від цілей до метрик» для користувацького досвіду; наведені нижче приклади дизайн-системи є практичним втіленням цього принципу, а не обов'язковим шаблоном HEART.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Decision</th>
-<th>Possible measure</th>
-<th>Important boundary</th>
+<th>Рішення, яке потрібно ухвалити</th>
+<th>Можлива метрика</th>
+<th>Важливе обмеження</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Where is adoption blocked?</td>
-<td>Eligible products using supported components</td>
-<td>Define eligibility and version</td>
+<td>Де саме блокується впровадження?</td>
+<td>Відсоток цільових продуктів, що використовують підтримувані компоненти</td>
+<td>Чітко визначте критерії відповідності (eligibility) та версію</td>
 </tr>
 <tr>
-<td>Are releases difficult to consume?</td>
-<td>Time to complete a specified migration</td>
-<td>Compare similar changes and team conditions</td>
+<td>Чи складно інтегрувати нові релізи?</td>
+<td>Час, необхідний для завершення конкретної міграції</td>
+<td>Порівнюйте подібні за обсягом зміни та схожі умови в командах</td>
 </tr>
 <tr>
-<td>Is quality improving?</td>
-<td>Verified recurring defects in sampled flows</td>
-<td>Keep inspection scope consistent</td>
+<td>Чи підвищується якість інтерфейсу?</td>
+<td>Кількість підтверджених повторюваних дефектів у вибіркових сценаріях</td>
+<td>Зберігайте межі та методологію перевірки незмінними</td>
 </tr>
 <tr>
-<td>Is support sustainable?</td>
-<td>Resolution time and repeated support requests</td>
-<td>Fewer requests can also mean disengagement</td>
+<td>Чи є підтримка життєздатною?</td>
+<td>Час розв'язання проблем та частка повторюваних запитів до команди системи</td>
+<td>Зменшення кількості запитів може свідчити не про якість, а про відмову від використання</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Use a small set that informs an actual decision. A single overall “system health” score can hide why a result changed.</p>
+<p class="glossary-term-section__text">Використовуйте компактний набір метрик, що безпосередньо впливає на прийняття рішень. Єдиний агрегований бал «здоров'я системи» (system health score) часто приховує реальні причини зміни показників.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-measuring-field-reuse">
-<h2 id="section-example-measuring-field-reuse" class="glossary-term-section__title">Example: measuring field reuse</h2>
-<p class="glossary-term-section__text">Suppose an audit finds that 36 of 60 eligible field instances use the shared component. Coverage in that sample is 60%.</p>
-<p class="glossary-term-section__text">After a migration, repeat the same inspection rules. Report changes in the sample and eligibility rules alongside the result. A package download count cannot substitute for this instance-level measure.</p>
-<p class="glossary-term-section__text">If teams also report faster implementation, define the task and include review and rework time. Comparing an initial complex field with a later simple field would not isolate the system's contribution.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: вимірювання повторного використання полів вводу</h2>
+<p class="glossary-term-section__text">Припустимо, аудит виявив, що 36 із 60 потенційно придатних екземплярів полів вводу використовують спільний компонент дизайн-системи. Покриття (coverage) у цій вибірці становить 60%.</p>
+<p class="glossary-term-section__text">Після завершення міграції повторіть перевірку за тими самими правилами. Звітуйте про зміни у складі вибірки та критеріях відбору разом із фінальним результатом. Простий підрахунок кількості завантажень npm-пакета не може замінити цей детальний аналіз на рівні реальних екземплярів.</p>
+<p class="glossary-term-section__text">Якщо команди заявляють про прискорення розробки, чітко зафіксуйте типову задачу та враховуйте час на рев'ю й доопрацювання (rework). Порівняння складного поля на початковому етапі з простим полем згодом не дозволить виокремити реальний внесок дизайн-системи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-metrics-vs-component-telemetry">
-<h2 id="section-metrics-vs-component-telemetry" class="glossary-term-section__title">Metrics vs. component telemetry</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/component-telemetry.html">Component telemetry</a> is one way to collect usage or behavior data. Metrics define what those observations mean for a decision.</p>
-<p class="glossary-term-section__text">A metric may instead come from a code inventory, a support log, a task study, or a documented survey. Choose the method that fits the question and the privacy constraints.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Метрики проти телеметрії компонентів</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/component-telemetry.html">Телеметрія компонентів</a> — це один із технічних способів збирання даних про фактичне використання та поведінку компонентів. Метрики ж визначають, що саме ці спостереження означають для прийняття управлінських рішень.</p>
+<p class="glossary-term-section__text">Метрика також може базуватися на статичному аналізі коду (code inventory), журналах звернень до саппорту, юзабіліті-тестуванні задач або регулярних опитуваннях команд. Обирайте метод, що відповідає поставленому питанню та вимогам до конфіденційності даних.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-estimate-design-system-roi">
-<h2 id="section-how-do-you-estimate-design-system-roi" class="glossary-term-section__title">How do you estimate design system ROI?</h2>
-<p class="glossary-term-section__text">ROI compares estimated benefits with costs over a stated period. One conventional expression is <code>(benefit − cost) ÷ cost</code>.</p>
-<p class="glossary-term-section__text">Include maintenance, documentation, support, migration, and consumer effort in the relevant cost scope. State how saved time was estimated and whether it actually became available for other work. Avoid converting every reused component into a fixed number of saved hours.</p>
-<p class="glossary-term-section__text">Report measured outcomes separately from modeled financial benefits. If attribution is uncertain, present assumptions and a range instead of a precise-looking promise.</p>
+<section class="glossary-term-section" aria-labelledby="section-roi">
+<h2 id="section-roi" class="glossary-term-section__title">Як оцінити окупність інвестицій (ROI) дизайн-системи?</h2>
+<p class="glossary-term-section__text">ROI зіставляє розрахункову вигоду з витратами за певний період. Класичний математичний вираз виглядає як <code>(вигода − витрати) ÷ витрати</code>.</p>
+<p class="glossary-term-section__text">Враховуйте в загальних витратах підтримку, документування, консультування, міграції та зусилля команд-споживачів. Завжди вказуйте, як саме оцінювався заощаджений час і чи дійсно він вивільнився для іншої продуктової роботи. Уникайте спрощеного перемноження кожного перевикористаного компонента на фіксовану кількість зекономлених годин.</p>
+<p class="glossary-term-section__text">Подавайте виміряні фактичні результати окремо від змодельованих фінансових переваг. Якщо атрибуція вигоди є непевною, презентуйте вихідні припущення та діапазон значень замість оманливо точних обіцянок.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-adoption.html">Design System Adoption</a></li>
-<li><a href="/ua/glossary/component-telemetry.html">Component Telemetry</a></li>
-<li><a href="/ua/glossary/design-system-audit.html">Design System Audit</a></li>
+<li><a href="/ua/glossary/design-system-adoption.html">Впровадження дизайн-системи (Adoption)</a></li>
+<li><a href="/ua/glossary/component-telemetry.html">Телеметрія компонентів</a></li>
+<li><a href="/ua/glossary/design-system-audit.html">Аудит дизайн-системи</a></li>
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/" target="_blank" rel="noopener noreferrer">Measuring the User Experience on a Large Scale, Google Research</a></li>
-<li><a href="https://report.zeroheight.com/2026" target="_blank" rel="noopener noreferrer">Design Systems Report 2026, Zeroheight</a></li>
+<li><a href="https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/" target="_blank" rel="noopener noreferrer">Вимірювання користувацького досвіду у великому масштабі (HEART), Google Research</a></li>
+<li><a href="https://report.zeroheight.com/2026" target="_blank" rel="noopener noreferrer">Звіт про дизайн-системи 2026, Zeroheight</a></li>
 </ul>
 </section>
 

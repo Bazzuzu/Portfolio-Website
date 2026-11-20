@@ -388,55 +388,55 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Масштабування сторінки збільшує весь відображуваний інтерфейс. Зміна розміру тексту дозволяє користувачам збільшувати розмір шрифту. Адаптивна перебудова (Reflow) — це перекомпонування контенту під доступний простір, що дозволяє читати та взаємодіяти без прокручування у двох напрямках.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-the-two-wcag-checks">
-<h2 id="section-what-are-the-two-wcag-checks" class="glossary-term-section__title">What are the two WCAG checks?</h2>
+    <p class="glossary-term-section__text">Масштабування сторінки (page zoom) збільшує відрендерену сторінку пропорційно. Зміна розміру тексту (text resizing) дозволяє користувачам збільшувати виключно шрифт. Перебудова або перекомпонування (reflow) — це спосіб адаптивного перерозподілу контенту під доступний простір, щоб люди могли читати й взаємодіяти без потреби скролінгу у двох напрямках (по горизонталі та вертикалі одночасно).</p>
+<section class="glossary-term-section" aria-labelledby="section-wcag">
+<h2 id="section-wcag" class="glossary-term-section__title">Які дві обов'язкові перевірки вимагає WCAG?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>WCAG criterion</th>
-<th>What to verify</th>
+<th>Критерій WCAG</th>
+<th>Що необхідно перевірити</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1.4.4 Resize Text, Level AA</strong></td>
-<td>Text can be enlarged up to <strong>200%</strong> without loss of content or functionality and without requiring assistive technology. Captions and images of text are exceptions. Browser zoom is one way to provide text resizing.</td>
+<td><strong>1.4.4 Resize Text, рівень AA</strong></td>
+<td>Текст можна збільшувати до <strong>200%</strong> без втрати вмісту чи функціональності та без використання допоміжних асистивних технологій. Субтитри та зображення тексту є винятками. Повносторінкове масштабування браузера є одним із допустимих способів забезпечення зміни розміру тексту.</td>
 </tr>
 <tr>
-<td><strong>1.4.10 Reflow, Level AA</strong></td>
-<td>Vertically scrolling content works at a width equivalent to <strong>320 CSS pixels</strong>, without loss of information or functionality or the need to scroll in two directions. For content designed to scroll horizontally, the corresponding height is <strong>256 CSS pixels</strong>. Parts that require a two-dimensional layout for use or meaning are excepted.</td>
+<td><strong>1.4.10 Reflow, рівень AA</strong></td>
+<td>Контент із вертикальним прокручуванням повноцінно працює за ширини, еквівалентної <strong>320 CSS-пікселям</strong>, без втрати інформації чи функціональності та без необхідності двовимірного прокручування. Для контенту, призначеного для горизонтального прокручування, відповідна висота становить <strong>256 CSS-пікселів</strong>. Частини інтерфейсу, які вимагають двовимірного представлення за змістом або використанням (наприклад, карти чи складні діаграми), є винятком.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-form-with-a-fare-table">
-<h2 id="section-example-a-booking-form-with-a-fare-table" class="glossary-term-section__title">Example: A booking form with a fare table</h2>
-<p class="glossary-term-section__text">At 200% text enlargement, check that field labels and validation errors remain readable and that users can activate the Continue button. At a 320 CSS-pixel width, let the form fields stack and keep the Continue button reachable. If a sticky bar covers errors or makes the remaining viewport too small, let the bar scroll with the form at that layout.</p>
-<p class="glossary-term-section__text">If the fare table needs row and column relationships to make sense, it can scroll within its own region. Keep surrounding content within the page width and let text within individual cells wrap where it can.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: форма бронювання з таблицею тарифів</h2>
+<p class="glossary-term-section__text">При збільшенні розміру тексту на 200% переконайтеся, що підписи полів (labels) та повідомлення про помилки валідації залишаються читабельними, а користувачі можуть безперешкодно активувати кнопку «Продовжити». За ширини 320 CSS-пікселів дозвольте полям форми вибудовуватися в одну колонку (stack) і зберігайте кнопку «Продовжити» доступною в межах видимості. Якщо фіксована плашка (sticky bar) перекриває помилки введення або робить залишковий в'юпорт занадто малим, налаштуйте плашку так, щоб вона прокручувалася разом із формою на такому розмірі екрана.</p>
+<p class="glossary-term-section__text">Якщо таблиця тарифів вимагає збереження зв'язків між рядками та колонками для розуміння сенсу, дозвольте їй горизонтально прокручуватися у власній ізольованій області. При цьому весь навколишній контент повинен залишатися в межах ширини сторінки, а текст усередині окремих комірок таблиці має переноситися за рядками там, де це можливо.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-reflow">
-<h2 id="section-how-do-you-test-reflow" class="glossary-term-section__title">How do you test reflow?</h2>
-<p class="glossary-term-section__text">Start with a desktop browser viewport 1,280 CSS pixels wide and zoom to 400% to reach the equivalent of 320 CSS pixels. Check the actual viewport and complete the task, including error recovery. For the separate resize-text check, verify that text can reach twice its original size. If a responsive breakpoint reduces the base font size at higher zoom, compare the resulting visual size with the original.</p>
+<section class="glossary-term-section" aria-labelledby="section-reflow">
+<h2 id="section-reflow" class="glossary-term-section__title">Як тестувати перекомпонування (reflow)?</h2>
+<p class="glossary-term-section__text">Почніть із ширини вікна десктопного браузера в 1280 CSS-пікселів і збільште масштаб до 400%, щоб отримати еквівалент ширини у 320 CSS-пікселів. Перевірте фактичний стан в'юпорта та пройдіть повний сценарій завдання, включно з виправленням помилок валідації. Для окремої перевірки зміни розміру тексту переконайтеся, що текст можна збільшити вдвічі відносно його початкового розміру. Якщо адаптивний брейкпоїнт зменшує базовий розмір шрифту при великому масштабуванні, порівняйте отриманий фактичний візуальний розмір із вихідним.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/accessible-forms.html">Accessible Forms</a></li>
-<li><a href="/ua/glossary/keyboard-accessibility.html">Keyboard Accessibility & Focus Management</a></li>
-<li><a href="/ua/glossary/touch-target-size.html">Touch Target Size</a></li>
-<li><a href="/ua/glossary/fluid-typography-spacing-system.html">Fluid Typography & Spacing System</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/accessible-forms.html">Доступні форми (Accessible Forms)</a></li>
+<li><a href="/ua/glossary/keyboard-accessibility.html">Клавіатурна доступність та керування фокусом</a></li>
+<li><a href="/ua/glossary/touch-target-size.html">Розмір області дотику (Touch Target Size)</a></li>
+<li><a href="/ua/glossary/fluid-typography-spacing-system.html">Флюїдна типографіка та система відступів (Fluid Typography & Spacing System)</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">Understanding Resize Text, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">Understanding Reflow, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Resize Text, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Reflow, W3C WAI</a></li>
 </ul>
 </section>
 

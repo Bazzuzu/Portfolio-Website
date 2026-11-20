@@ -385,11 +385,11 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Система флюїдної типографіки та відступів плавно масштабує розміри шрифтів і відступи макета у визначених межах відповідно до зміни розмірів області перегляду (viewport) або контейнера. Замість використання розрізнених статичних значень для фіксованих брейкпоінтів система спирається на скоординований набір математичних правил.</p>
-<p class="glossary-term-section__text">Fluid values can coexist with breakpoints. A layout may change its structure at a breakpoint while selected sizes adjust continuously between minimum and maximum values.</p>
-<section class="glossary-term-section" aria-labelledby="section-a-css-example">
-<h2 id="section-a-css-example" class="glossary-term-section__title">A CSS example</h2>
-<p class="glossary-term-section__text">CSS clamp() accepts a minimum, a preferred value, and a maximum:</p>
+    <p class="glossary-term-section__text">Система флюїдної типографіки та відступів плавно масштабує розміри тексту й інтервали макета у визначених межах залежно від зміни доступного розміру в'юпорта або контейнера. Вона спирається на скоординований набір математичних правил замість розрізнених фіксованих значень для кожної ширини екрана.</p>
+<p class="glossary-term-section__text">Флюїдні значення можуть гармонійно співіснувати з брейкпоїнтами. Макет може змінювати свою структуру на точці перелому, тоді як обрані розміри безперервно підлаштовуються між мінімальним і максимальним значеннями.</p>
+<section class="glossary-term-section" aria-labelledby="section-css">
+<h2 id="section-css" class="glossary-term-section__title">Приклад на CSS</h2>
+<p class="glossary-term-section__text">Функція CSS <code>clamp()</code> приймає мінімальне значення, бажане значення (preferred value) та максимальне значення:</p>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-css">:root {
   --text-heading: clamp(2rem, calc(1rem + 3vw), 4rem);
@@ -404,29 +404,29 @@ section {
   padding-block: var(--space-section);
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">Here, the viewport contribution changes with screen width, while the rem values relate to the root font size. These values are an illustration to test in context, not a universal scale.</p>
+<p class="glossary-term-section__text">Тут динамічний внесок в'юпорта змінюється разом із шириною екрана, тоді як значення в <code>rem</code> прив'язані до кореневого розміру шрифту. Ці значення є наочною ілюстрацією для тестування в конкретному контексті, а не універсальною шкалою.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-to-test">
-<h2 id="section-what-to-test" class="glossary-term-section__title">What to test</h2>
-<p class="glossary-term-section__text">Inspect intermediate widths as well as the endpoints. Check long headings, translated labels, narrow controls, and realistic content.</p>
-<p class="glossary-term-section__text">Use relative units thoughtfully and test browser zoom and user font settings. Combining rem with a viewport unit does not automatically ensure accessible text resizing.</p>
-<p class="glossary-term-section__text">WCAG 2.2's Resize Text criterion generally requires text to resize to 200% without loss of content or functionality, subject to its exceptions. Reflow is a separate requirement with defined viewport conditions and exceptions for content needing a two-dimensional layout.</p>
-<p class="glossary-term-section__text">Keep line length, line height, focus indicators, and target sizes usable as the layout changes. Avoid allowing a fluid scale to make essential text or controls too small.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно тестувати?</h2>
+<p class="glossary-term-section__text">Перевіряйте поведінку на проміжних значеннях ширини екрана так само ретельно, як і на крайніх точках. Тестуйте довгі заголовки, перекладені локалізовані написи, компактні елементи керування та реалістичний контент.</p>
+<p class="glossary-term-section__text">Зважено використовуйте відносні одиниці вимірювання та перевіряйте масштаб у браузері й користувацькі налаштування розміру шрифту. Просте комбінування <code>rem</code> з одиницями в'юпорта автоматично не гарантує доступного масштабування тексту.</p>
+<p class="glossary-term-section__text">Критерій доступності WCAG 2.2 «Зміна розміру тексту» (Resize Text) зазвичай вимагає, щоб розмір тексту міг збільшуватися до 200% без втрати контенту чи функціональності (з урахуванням стандартних винятків). Критерій «Перекомпонування» (Reflow) є окремою вимогою з чітко визначеними умовами для в'юпорта та винятками для контенту, що потребує двовимірного розташування.</p>
+<p class="glossary-term-section__text">Слідкуйте за тим, щоб довжина рядка, висота рядка, індикатори фокусу та клікабельні зони залишалися зручними при змінах макета. Не допускайте ситуацій, коли флюїдна шкала робить критично важливий текст або елементи керування занадто дрібними.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-primitives.html">Design Primitives</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/ua/glossary/design-primitives.html">Примітиви дизайну (Design Primitives)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp" target="_blank" rel="noopener noreferrer">MDN: CSS clamp()</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Resize Text</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Reflow</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp" target="_blank" rel="noopener noreferrer">CSS clamp(), Довідник MDN</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Resize Text (Зміна розміру тексту), W3C</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Reflow (Перекомпонування), W3C</a></li>
 </ul>
 </section>
 

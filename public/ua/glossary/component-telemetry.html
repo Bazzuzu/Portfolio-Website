@@ -384,61 +384,57 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Телеметрія компонентів — це діагностичні дані, які збираються під час роботи компонентів дизайн-системи у реальному продукті. Команди використовують її для моніторингу місць виклику компонентів, аналізу використовуваних версій і варіантів, а також відстеження взаємодії користувачів із ними в продакшені.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-can-you-measure">
-<h2 id="section-what-can-you-measure" class="glossary-term-section__title">What can you measure?</h2>
+    <p class="glossary-term-section__text">Телеметрія компонентів — це дані, зібрані під час виконання компонентів дизайн-системи в реальному продукті. Команди використовують її, щоб спостерігати, де саме з'являються компоненти, які версії чи варіанти знаходяться у використанні, а також що відбувається під час взаємодії користувачів із ними.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що можна вимірювати?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Signal</th>
-<th>Question it answers</th>
+<th>Сигнал</th>
+<th>Питання, на яке він відповідає</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Static code and dependency inventory</td>
-<td>Which repositories reference a component, pass a particular prop, or depend on a package version?</td>
+<td>Статичний аналіз коду та інвентаризація залежностей</td>
+<td>Які репозиторії посилаються на компонент, передають певний проп або залежать від конкретної версії пакета?</td>
 </tr>
 <tr>
-<td>Runtime usage</td>
-<td>In which instrumented apps did the component open or appear during the measurement period?</td>
+<td>Використання у рантаймі</td>
+<td>У яких інструментованих застосунках компонент відкривався або відображався протягом періоду вимірювання?</td>
 </tr>
 <tr>
-<td>Runtime interaction or error events</td>
-<td>What happened after the component opened, such as a confirmation click or submission failure?</td>
+<td>Події взаємодії або помилки у рантаймі</td>
+<td>Що відбулося після відкриття компонента, наприклад, клік підтвердження чи збій відправки форми?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A code reference shows where to investigate. A runtime event shows that the instrumented behavior was observed. An error rate also needs a relevant denominator, such as failed submissions out of all recorded attempts. Define the event and the coverage before comparing products. For example, count apps that recorded at least one dialog open out of apps that report that event, and state the date range.</p>
+<p class="glossary-term-section__text">Посилання в коді показує, де саме варто шукати використання. Подія рантайму підтверджує, що інструментована поведінка дійсно була зафіксована. Показник помилок також потребує відповідного знаменника — наприклад, кількість невдалих відправок серед усіх зафіксованих спроб. Чітко визначайте подію та обсяг покриття перед тим, як порівнювати показники між різними продуктами. Наприклад, підраховуйте застосунки, які зафіксували щонайменше одне відкриття діалогового вікна, серед загальної кількості застосунків, що транслюють цю подію, із зазначенням конкретного діапазону дат.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-removing-a-deprecated-dialog-prop">
-<h2 id="section-example-removing-a-deprecated-dialog-prop" class="glossary-term-section__title">Example: Removing a deprecated Dialog prop</h2>
-<p class="glossary-term-section__text">A design system team wants to remove a legacy Dialog prop. A code scan identifies repositories that still pass it. An event recorded when the dialog opens shows which instrumented products serve that configuration. The team uses both results to contact owners, prioritize migrations, and investigate gaps before scheduling removal.</p>
-<p class="glossary-term-section__text">Keep the payload tied to the decision. For this migration, a component identifier, package version, variant or legacy flag, and product identifier can be enough. Leave booking IDs, form input, and dialog content out of the event. Record what is instrumented so that an absence of events can be interpreted correctly.</p>
+<section class="glossary-term-section" aria-labelledby="section-dialog">
+<h2 id="section-dialog" class="glossary-term-section__title">Приклад: видалення застарілого пропа в Dialog</h2>
+<p class="glossary-term-section__text">Команда дизайн-системи планує видалити застарілий проп у компоненті Dialog. Статичне сканування коду визначає репозиторії, які досі передають цей параметр. Подія, зафіксована в момент відкриття діалогового вікна, демонструє, які з інструментованих продуктів реально відтворюють цю конфігурацію в продакшені. Команда використовує обидва джерела даних, щоб зв'язатися з власниками, розставити пріоритети для міграції та з'ясувати можливі прогалини перед остаточним видаленням функціональності.</p>
+<p class="glossary-term-section__text">Формуйте корисне навантаження події суворо під прийняття конкретного рішення. Для описаної міграції достатньо передати ідентифікатор компонента, версію пакета, варіант або застарілий прапорець та ідентифікатор продукту. Не включайте в подію ідентифікатори бронювань, вхідні дані форм або контент діалогового вікна. Чітко фіксуйте, які саме сценарії інструментовано, щоб коректно інтерпретувати відсутність подій.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-<li><a href="/ua/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/design-system-versioning-semver.html">Design System Versioning (SemVer)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-adoption.html">Design System Adoption</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-metrics.html">Design System Metrics</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/product-telemetry-analytics.html">Продуктова телеметрія та аналітика</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування</a></li>
+<li><a href="/ua/glossary/design-system-versioning-semver.html">Версіонування дизайн-систем (SemVer)</a></li>
+<li><a href="/ua/glossary/design-system-adoption.html">Впровадження дизайн-системи (Adoption)</a></li>
+<li><a href="/ua/glossary/design-system-metrics.html">Метрики дизайн-системи</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://omlet.dev/" target="_blank" rel="noopener noreferrer">Component Usage Across Code Repositories, Omlet</a></li>
-<li><a href="https://opentelemetry.io/docs/specs/semconv/general/events/" target="_blank" rel="noopener noreferrer">Semantic Conventions for Events, OpenTelemetry</a></li>
+<li><a href="https://omlet.dev/" target="_blank" rel="noopener noreferrer">Аналіз використання компонентів у репозиторіях коду, Omlet</a></li>
+<li><a href="https://opentelemetry.io/docs/specs/semconv/general/events/" target="_blank" rel="noopener noreferrer">Семантичні конвенції для подій, OpenTelemetry</a></li>
 </ul>
 </section>
 

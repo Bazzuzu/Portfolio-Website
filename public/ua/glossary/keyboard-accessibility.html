@@ -392,71 +392,71 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Клавіатурна доступність та керування фокусом (Keyboard Accessibility & Focus Management) гарантують повноцінну навігацію та взаємодію з інтерфейсом виключно за допомогою клавіатури. Керування фокусом регламентує, який інтерактивний елемент отримує введення в міру того, як користувач переміщується сторінкою, взаємодіє з модальними вікнами або повертається до робочого контексту.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-you-test">
-<h2 id="section-what-should-you-test" class="glossary-term-section__title">What should you test?</h2>
+    <p class="glossary-term-section__text">Клавіатурна доступність дозволяє людям переміщатися інтерфейсом та взаємодіяти з ним виключно за допомогою клавіатури. Керування фокусом визначає, який саме елемент отримує клавіатурне введення під час навігації сторінкою, відкриття діалогового вікна або повернення до поточного завдання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що слід тестувати?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Check</th>
-<th>What to look for</th>
+<th>Перевірка</th>
+<th>На що звернути увагу</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Keyboard operation and exit (2.1.1 and 2.1.2, A)</strong></td>
-<td>Reach and use controls without a mouse. Follow the expected keys for each widget. Make sure users can leave any component they enter.</td>
+<td><strong>Робота з клавіатури та вихід (2.1.1 і 2.1.2, рівень A)</strong></td>
+<td>Досягнення та використання елементів керування без миші. Дотримання очікуваних клавіш для кожного віджета. Впевненість у тому, що користувач може покинути будь-який компонент, у який він увійшов (відсутність пасток фокусу).</td>
 </tr>
 <tr>
-<td><strong>Focus order (2.4.3, A)</strong></td>
-<td>When navigating sequentially, focus follows an order that preserves meaning and operation. Start from a logical document order.</td>
+<td><strong>Порядок фокусу (2.4.3, рівень A)</strong></td>
+<td>Під час послідовної навігації фокус переміщується в порядку, що зберігає логічний зміст і працездатність. Починайте з логічного порядку елементів у DOM-дереві документа.</td>
 </tr>
 <tr>
-<td><strong>Visible focus (2.4.7, AA)</strong></td>
-<td>The user can see which control currently has keyboard focus. Check default and custom focus styles.</td>
+<td><strong>Видимий фокус (2.4.7, рівень AA)</strong></td>
+<td>Користувач чітко бачить, який саме елемент керування наразі має клавіатурний фокус. Перевіряйте як стандартні браузерні, так і кастомні стилі фокусу.</td>
 </tr>
 <tr>
-<td><strong>Focus not obscured</strong></td>
-<td>Under WCAG 2.2 criterion 2.4.11 (AA), content created by the site must leave at least part of the focused component visible. Test sticky headers, bottom bars, and overlays while tabbing.</td>
+<td><strong>Фокус не перекривається</strong></td>
+<td>Відповідно до критерію WCAG 2.2 2.4.11 (рівень AA), контент, створений сайтом, повинен залишати видимою принаймні частину сфокусованого компонента. Тестуйте закріплені шапки (sticky headers), нижні панелі та спливаючі оверлеї під час навігації клавішею Tab.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-change-dialog">
-<h2 id="section-example-a-booking-change-dialog" class="glossary-term-section__title">Example: A booking-change dialog</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: діалогове вікно зміни бронювання</h2>
 <ol class="glossary-term-ol">
-<li>Tab to the <strong>Change booking</strong> button and activate it. Focus moves inside the modal to a sensible starting point, such as the heading for a long dialog or the safer action for a hard-to-reverse change.</li>
-<li>Use <strong>Tab</strong> and <strong>Shift+Tab</strong> to move between controls. Sequential focus stays inside the open modal. Check that the dialog’s sticky footer does not cover focused controls in the scrolling content.</li>
-<li>Press <strong>Escape</strong> or use the visible close control. Focus normally returns to <strong>Change booking</strong>. If the trigger no longer exists or the user’s action leads to a different logical location, move focus to an appropriate element in that flow.</li>
+<li>Перейдіть клавішею Tab до кнопки <strong>Змінити бронювання</strong> та активуйте її. Фокус переміщується всередину модального вікна на логічну початкову точку, таку як заголовок довгого діалогу або безпечніша дія у випадку змін, які важко скасувати.</li>
+<li>Використовуйте <strong>Tab</strong> та <strong>Shift+Tab</strong> для переходу між елементами керування. Послідовний фокус утримується всередині відкритого модального вікна. Переконайтеся, що закріплений футер діалогу не перекриває сфокусовані елементи в прокручуваному контенті.</li>
+<li>Натисніть <strong>Escape</strong> або скористайтеся видимим елементом закриття. Зазвичай фокус повертається на кнопку <strong>Змінити бронювання</strong>. Якщо тригер більше не існує або дія користувача веде до іншої логічної точки, перемістіть фокус на відповідний елемент у цьому новому сценарії.</li>
 </ol>
-<p class="glossary-term-section__text">A modal can keep focus inside while it is open and still provide a keyboard way out. The modal pattern depends on a working exit and sensible focus placement after closing.</p>
+<p class="glossary-term-section__text">Модальне вікно може утримувати фокус усередині, поки воно відкрите, і водночас надавати зрозумілий спосіб виходу за допомогою клавіатури. Патерн модального вікна безпосередньо залежить від дієвого механізму виходу та раціонального розміщення фокусу після закриття.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-where-should-teams-start">
-<h2 id="section-where-should-teams-start" class="glossary-term-section__title">Where should teams start?</h2>
-<p class="glossary-term-section__text">Use native buttons and links for common actions and navigation. For a custom widget, confirm its expected keyboard interaction and test it in context. Check focus return in the product as well as the component preview. In the product, the trigger might disappear when the booking changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">З чого варто почати командам?</h2>
+<p class="glossary-term-section__text">Використовуйте нативні кнопки та посилання для типових дій і навігації. Для кастомного віджета перевірте очікувані патерни взаємодії з клавіатури та протестуйте його в реальному контексті. Перевіряйте повернення фокусу як у готовому продукті, так і під час ізольованого перегляду компонента. У самому продукті тригерний елемент може зникати після зміни деталей бронювання.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/accessible-forms.html">Accessible Forms</a></li>
-<li><a href="/ua/glossary/wcag-color-contrast.html">WCAG Color Contrast</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/accessible-forms.html">Доступні форми (Accessible Forms)</a></li>
+<li><a href="/ua/glossary/wcag-color-contrast.html">Колірний контраст за WCAG</a></li>
 <li><a href="/ua/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Архітектура Headless UI</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html" target="_blank" rel="noopener noreferrer">Understanding Keyboard, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html" target="_blank" rel="noopener noreferrer">Understanding No Keyboard Trap, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html" target="_blank" rel="noopener noreferrer">Understanding Focus Order, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html" target="_blank" rel="noopener noreferrer">Understanding Focus Visible, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html" target="_blank" rel="noopener noreferrer">Understanding Focus Not Obscured (Minimum), W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Modal Dialog Pattern, W3C ARIA Authoring Practices Guide</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html" target="_blank" rel="noopener noreferrer">Розуміння доступності клавіатури (Understanding Keyboard), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html" target="_blank" rel="noopener noreferrer">Розуміння відсутності клавіатурних пасток (Understanding No Keyboard Trap), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html" target="_blank" rel="noopener noreferrer">Розуміння порядку фокусу (Understanding Focus Order), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html" target="_blank" rel="noopener noreferrer">Розуміння видимого фокусу (Understanding Focus Visible), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html" target="_blank" rel="noopener noreferrer">Розуміння неперекритого фокусу (мінімум) (Understanding Focus Not Obscured (Minimum)), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Патерн модального діалогового вікна (Modal Dialog Pattern), W3C ARIA Authoring Practices Guide</a></li>
 </ul>
 </section>
 

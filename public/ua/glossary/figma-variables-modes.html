@@ -384,63 +384,61 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Змінні та режими у Figma (Figma Variables & Modes) дозволяють зберігати багаторазові значення та застосовувати їх до відповідних властивостей макета. Колекції групують змінні, а режими (modes) визначають різні набори значень для цих змінних. Перемикання режиму для фрейму змінює значення прив'язаних властивостей, дозволяючи одному макету динамічно адаптуватися під світлу чи темну тему.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-variables-collections-and-modes-work">
-<h2 id="section-how-do-variables-collections-and-modes-work" class="glossary-term-section__title">How do variables, collections, and modes work?</h2>
-<p class="glossary-term-section__text">Figma supports color, number, string, and Boolean variables. A variable can store a value directly or reference another variable through an alias. A collection defines which modes its variables share. Each mode supplies one value per variable.</p>
+    <p class="glossary-term-section__text">Змінні у Figma (Variables) зберігають повторно використовувані значення, які можна застосовувати до підтримуваних властивостей дизайну. Колекція (collection) об'єднує змінні в логічні групи, а її режими (modes) визначають різні набори значень для цих змінних. Перемикання режиму для фрейму змінює те, як обчислюються прив'язані властивості, завдяки чому один і той самий макет може відображати світлу чи темну тему.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працюють змінні, колекції та режими?</h2>
+<p class="glossary-term-section__text">Figma підтримує змінні таких типів: колір (Color), число (Number), рядок (String) та булеве значення (Boolean). Змінна може зберігати значення безпосередньо або посилатися на іншу змінну через псевдонім (alias). Колекція визначає, які саме режими є спільними для її змінних. Кожен режим надає одне значення для кожної змінної.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>In Figma</th>
-<th>Example</th>
+<th>У Figma</th>
+<th>Приклад</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Palette collection</td>
-<td>Color variables named <code>blue/600</code> and <code>blue/300</code></td>
+<td>Колекція палітри (Palette collection)</td>
+<td>Колірні змінні з назвами <code>blue/600</code> та <code>blue/300</code></td>
 </tr>
 <tr>
-<td>Semantic colors collection</td>
-<td>Light and Dark modes</td>
+<td>Колекція семантичних кольорів (Semantic colors)</td>
+<td>Режими Light (Світлий) та Dark (Темний)</td>
 </tr>
 <tr>
-<td>Semantic variable</td>
-<td><code>color/text/link</code>, referencing <code>blue/600</code> in Light and <code>blue/300</code> in Dark</td>
+<td>Семантична змінна</td>
+<td><code>color/text/link</code>, що посилається на <code>blue/600</code> у режимі Light та на <code>blue/300</code> у режимі Dark</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Bind the link’s text fill to the semantic variable. In the frame’s Appearance settings, choose Light or Dark for the Semantic colors collection. The same link layer keeps its variable binding as the color changes. Check contrast against the actual background in both themes.</p>
+<p class="glossary-term-section__text">Прив'яжіть колір тексту посилання до семантичної змінної. У налаштуваннях Appearance (Зовнішній вигляд) фрейму виберіть Light або Dark для колекції семантичних кольорів. Шар посилання зберігає свою прив'язку до змінної, коли колір автоматично змінюється. Обов'язково перевірте колірний контраст відносно реального тла в обох темах.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-is-a-layer-still-showing-the-wrong-mode">
-<h2 id="section-why-is-a-layer-still-showing-the-wrong-mode" class="glossary-term-section__title">Why is a layer still showing the wrong mode?</h2>
-<p class="glossary-term-section__text">For a collection, an object set to Auto looks up its parent hierarchy for an explicit mode. If a nested frame has an explicit override, its children can use that mode even when the outer frame changes. Check the layer’s binding, the collection it comes from, and the nearest mode setting. When no override applies, Figma uses the applicable default.</p>
-<p class="glossary-term-section__text">Use separate collections for choices that need to vary independently. A color theme and a spacing density can have separate modes so you can review Dark with either Compact or Comfortable spacing.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому шар усе ще відображає неправильний режим?</h2>
+<p class="glossary-term-section__text">Для кожної колекції об'єкт зі значенням Auto шукає явно заданий режим вище за ієрархією батьківських елементів. Якщо вкладений фрейм має явне перевизначення режиму (override), його дочірні елементи використовуватимуть саме цей режим, навіть якщо зовнішній фрейм змінюється. Перевірте прив'язку шару, колекцію, з якої походить змінна, та найближче налаштування режиму в дереві шарів. Якщо явних перевизначень немає, Figma використовує відповідне значення за замовчуванням.</p>
+<p class="glossary-term-section__text">Використовуйте окремі колекції для параметрів, які мають змінюватися незалежно. Наприклад, колірна тема та щільність відступів можуть мати незалежні режими, що дозволить вам переглядати темну тему (Dark) як із компактними (Compact), так і з комфортними (Comfortable) відступами.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-can-you-use-figma-variables-as-design-tokens">
-<h2 id="section-can-you-use-figma-variables-as-design-tokens" class="glossary-term-section__title">Can you use Figma variables as design tokens?</h2>
-<p class="glossary-term-section__text">Variables can represent token decisions inside Figma. Figma documents DTCG JSON import for supported token types and JSON export of variable modes. For example, its dimension import expects pixels, and its duration import expects seconds. Cross-collection alias import uses Figma-specific extension data.</p>
-<p class="glossary-term-section__text">Try exporting Light and Dark and importing them into a test collection. Check both values and whether the link variable still references its palette variable. If Figma cannot find the target collection, check the mapping before using the files in a <a href="/ua/glossary/design-to-code-workflow.html">design-to-code workflow</a>. Agree on which source owns the values and how a change reaches the application.</p>
+<section class="glossary-term-section" aria-labelledby="section-figma">
+<h2 id="section-figma" class="glossary-term-section__title">Чи можна використовувати змінні Figma як дизайн-токени?</h2>
+<p class="glossary-term-section__text">Змінні можуть представляти рішення щодо токенів безпосередньо у Figma. Figma підтримує імпорт файлів у форматі DTCG JSON для сумісних типів токенів та експорт режимів змінних у JSON. Наприклад, під час імпорту розмірів очікуються значення в пікселях, а для тривалості анімацій — у секундах. Імпорт псевдонімів (aliases) між різними колекціями використовує розширені метадані, специфічні для Figma.</p>
+<p class="glossary-term-section__text">Спробуйте експортувати режими Light та Dark та імпортувати їх у тестову колекцію. Перевірте як значення, так і те, чи змінна посилання продовжує коректно посилатися на відповідну змінну з палітри. Якщо Figma не може знайти цільову колекцію, перевірте мапінг назв, перш ніж інтегрувати ці файли в <a href="/ua/glossary/design-to-code-workflow.html">робочий процес «від дизайну до коду» (design-to-code workflow)</a>. Заздалегідь узгодьте в команді, яке саме джерело є первинним джерелом правди (source of truth) для значень токенів і як саме зміни транслюються в робочий застосунок.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-theming.html">Theming</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени (Semantic Tokens)</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес «від дизайну до коду» (Design-to-Code Workflow)</a></li>
+<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Формат дизайн-токенів DTCG</a></li>
+<li><a href="/ua/glossary/design-system-theming.html">Темізація в дизайн-системах (Theming)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes" target="_blank" rel="noopener noreferrer">Overview of variables, collections, and modes, Figma</a></li>
-<li><a href="https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables" target="_blank" rel="noopener noreferrer">Modes for variables, Figma</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes" target="_blank" rel="noopener noreferrer">Огляд змінних, колекцій та режимів, Figma (Overview of variables, collections, and modes)</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables" target="_blank" rel="noopener noreferrer">Режими для змінних, Figma (Modes for variables)</a></li>
 </ul>
 </section>
 

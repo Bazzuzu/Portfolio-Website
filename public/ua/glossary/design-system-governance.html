@@ -385,82 +385,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Управління дизайн-системою (design system governance) — це процеси прийняття рішень щодо наповнення спільної системи, прав на внесення змін та механізмів їх доставки до кінцевих продуктів. Воно закріплює відповідальність за рішеннями, регламентує подання пропозицій контриб'юторами, критерії рев'ю та підтримку впровадження системи продуктовими командами.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-decisions-does-governance-cover">
-<h2 id="section-what-decisions-does-governance-cover" class="glossary-term-section__title">What decisions does governance cover?</h2>
-<p class="glossary-term-section__text">Give teams a clear route for asking for a change and a clear owner for deciding what happens. The GOV.UK Design System publishes a proposal process, contribution criteria, and guidance for developing components and patterns. A smaller system can use a shared issue tracker and named maintainers.</p>
+    <p class="glossary-term-section__text">Управління дизайн-системою (design system governance) — це система процесів, за допомогою яких команди визначають, що саме входить до спільної системи, хто має право вносити зміни та як ці зміни потрапляють у продукти, що її використовують. Воно закріплює відповідальність за прийняття рішень, визначає порядок подання пропозицій контриб'юторами, критерії перевірки для рев'юерів та механізми підтримки впровадження.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які рішення охоплює управління?</h2>
+<p class="glossary-term-section__text">Забезпечте для команд зрозумілий маршрут подання запитів на зміни та чітко визначте відповідальних за прийняття остаточного рішення. Наприклад, Дизайн-система GOV.UK публікує чіткий процес подання пропозицій, критерії для контриб'юції та рекомендації щодо розробки компонентів і патернів. Для невеликої дизайн-системи достатньо спільного трекера завдань (issue tracker) і призначених мейнтейнерів.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Decision</th>
-<th>What to agree on</th>
+<th>Рішення</th>
+<th>Про що необхідно домовитися</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Scope</td>
-<td>Which needs are shared across products and which can stay within one product?</td>
+<td>Обсяг (Scope)</td>
+<td>Які потреби є спільними для кількох продуктів, а які повинні залишатися в межах одного продукту?</td>
 </tr>
 <tr>
-<td>Evidence</td>
-<td>What examples, user research, or compatibility checks support the proposal?</td>
+<td>Обґрунтування (Evidence)</td>
+<td>Які практичні приклади, дослідження користувачів або перевірки сумісності підтверджують пропозицію?</td>
 </tr>
 <tr>
-<td>Responsibility</td>
-<td>Who proposes, reviews, maintains, and communicates the change?</td>
+<td>Відповідальність (Responsibility)</td>
+<td>Хто ініціює, рев'юїть, підтримує та комунікує зміни?</td>
 </tr>
 <tr>
-<td>Adoption</td>
-<td>Who updates guidance, writes migration steps, and supports consuming teams?</td>
+<td>Впровадження (Adoption)</td>
+<td>Хто оновлює гайдлайни, формує інструкції з міграції та підтримує команди-споживачі?</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-reviewing-a-shared-dialog-change">
-<h2 id="section-example-of-reviewing-a-shared-dialog-change" class="glossary-term-section__title">Example of reviewing a shared dialog change</h2>
-<p class="glossary-term-section__text">A checkout team requests a wider dialog for reviewing a booking change. It shows where the current width makes it hard to compare the original and proposed fares. The system maintainers check whether other products need the same option and whether it affects focus, small screens, or longer content.</p>
-<p class="glossary-term-section__text">If a wider layout serves several teams, the maintainers can approve an optional variant with the existing default unchanged. Assign someone to build, document, and maintain it. A comparison layout that only checkout needs can stay in checkout and use the existing dialog behavior. Record the decision and its reason so another team can revisit it when it has new evidence.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад рев'ю зміни спільного діалогового вікна</h2>
+<p class="glossary-term-section__text">Команда оформлення замовлення (checkout) запитує створення ширшого діалогового вікна для перегляду змін у бронюванні. Вона демонструє, що поточна ширина ускладнює порівняння початкових та нових тарифів. Мейнтейнери дизайн-системи перевіряють, чи потрібна така опція іншим продуктам, а також як вона впливає на керування фокусом, відображення на маленьких екранах і поведінку при довгому контенті.</p>
+<p class="glossary-term-section__text">Якщо ширша розмітка корисна для кількох команд, мейнтейнери можуть затвердити додавання нового необов'язкового варіанта, зберігши наявні налаштування за замовчуванням без змін. Призначається відповідальний за розробку, документування та підтримку цього оновлення. Якщо ж специфічне компонування для порівняння потрібне лише команді оформлення замовлення, воно залишається локально в її кодовій базі, повторно використовуючи стандартну поведінку спільного діалогового вікна. Зафіксуйте ухвалене рішення та аргументацію до нього, щоб інша команда могла повернутися до цього питання, коли з'являться нові підтверджені дані.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-a-small-team-keep-governance-lightweight">
-<h2 id="section-how-can-a-small-team-keep-governance-lightweight" class="glossary-term-section__title">How can a small team keep governance lightweight?</h2>
-<p class="glossary-term-section__text">Ask for a short proposal with the problem, candidate change, and affected consumers. Agree on a review owner and check the change in at least one real screen. If consumers need to change their code or designs, include a <a href="/ua/glossary/design-system-versioning-semver.html">version and migration plan</a>. Close the loop by updating the documentation and telling the teams whose work is affected.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як невеликій команді підтримувати легковагове управління?</h2>
+<p class="glossary-term-section__text">Вимагайте коротку пропозицію з описом проблеми, пропонованої зміни та переліком зачеплених споживачів. Узгодьте відповідального за рев'ю та протестуйте зміну принаймні на одному реальному екрані. Якщо споживачам знадобиться змінити свій код чи макети, складіть <a href="/ua/glossary/design-system-versioning-semver.html">план версіонування та міграції</a>. Завершіть цикл оновленням документації та повідомленням команд, на роботу яких впливають ці зміни.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-centralized-and-federated-ownership">
-<h2 id="section-centralized-and-federated-ownership" class="glossary-term-section__title">Centralized and federated ownership</h2>
-<p class="glossary-term-section__text">A centralized model places shared-system decisions with a core team. In a federated model, people from product teams share defined system responsibilities. A hybrid can combine central maintenance with distributed contributions.</p>
-<p class="glossary-term-section__text">State which decisions are shared and who resolves disagreements. Federation without explicit review and maintenance responsibilities can leave a component with several contributors but no accountable owner.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Централізована та федеративна моделі власності</h2>
+<p class="glossary-term-section__text">У централізованій моделі всі рішення щодо спільної системи приймає виділена основна команда (core team). У федеративній моделі представники продуктових команд розділяють між собою чітко визначені обов'язки з розвитку системи. Гібридний підхід поєднує централізовану координацію та підтримку з розподіленим внесенням змін продуктовими командами.</p>
+<p class="glossary-term-section__text">Чітко визначте, які рішення приймаються спільно, і хто має вирішальний голос у разі виникнення розбіжностей. Федеративна модель без чітко розподілених обов'язків щодо рев'ю та підтримки може призвести до ситуації, коли у компонента з'являється багато контриб'юторів, але немає жодного відповідального власника.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-a-design-system-rfc-contain">
-<h2 id="section-what-should-a-design-system-rfc-contain" class="glossary-term-section__title">What should a design system RFC contain?</h2>
-<p class="glossary-term-section__text">A request for comments (RFC) can be a short proposal recording the problem, evidence, affected consumers, proposed change, alternatives, and compatibility implications. Set a review owner and a way to record the outcome.</p>
-<p class="glossary-term-section__text">The contribution model should also explain who implements, documents, supports, and eventually retires the result. Record an approved exception with its reason and review condition; do not make a new shared component merely to close a request.</p>
+<section class="glossary-term-section" aria-labelledby="section-rfc">
+<h2 id="section-rfc" class="glossary-term-section__title">Що має містити RFC для дизайн-системи?</h2>
+<p class="glossary-term-section__text">Запит на коментарі (RFC — Request for Comments) може бути стислою пропозицією, яка фіксує суть проблеми, емпіричні докази, перелік зачеплених споживачів, пропоновані зміни, альтернативні варіанти та вплив на сумісність. Обов'язково призначте відповідального за рев'ю та спосіб фіксації фінального результату.</p>
+<p class="glossary-term-section__text">Модель контриб'юції також має визначати, хто саме реалізує, документує, підтримує і згодом виводить компонент з експлуатації (deprecation). Фіксуйте кожне погоджене виключення разом із причиною та умовами його перегляду; не варто створювати новий спільний компонент лише для того, щоб формально закрити запит.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/design-system-versioning-semver.html">Design System Versioning & SemVer</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-adoption.html">Design System Adoption</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-audit.html">Design System Audit</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-debt.html">Design Debt</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система</a></li>
+<li><a href="/ua/glossary/design-system-versioning-semver.html">Версіонування дизайн-системи та SemVer</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Архітектура компонентів</a></li>
+<li><a href="/ua/glossary/design-system-adoption.html">Впровадження дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-system-audit.html">Аудит дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-debt.html">Дизайн-борг</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://design-system.service.gov.uk/community/propose-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Propose a component or pattern, GOV.UK Design System</a></li>
-<li><a href="https://design-system.service.gov.uk/community/develop-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Develop a component or pattern, GOV.UK Design System</a></li>
-<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Contribution criteria, GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/community/propose-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Запропонувати компонент або патерн, Дизайн-система GOV.UK</a></li>
+<li><a href="https://design-system.service.gov.uk/community/develop-a-component-or-pattern/" target="_blank" rel="noopener noreferrer">Розробка компонента або патерна, Дизайн-система GOV.UK</a></li>
+<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Критерії внесення змін (контриб'юції), Дизайн-система GOV.UK</a></li>
 </ul>
 </section>
 

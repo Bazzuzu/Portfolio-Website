@@ -386,71 +386,71 @@
 
   <article>
     <p class="glossary-term-section__text">Storybook — це фронтенд-інструмент для розробки, документування та тестування UI-компонентів в ізоляції. Окрема «історія» (story) фіксує стан відрендереного компонента, наприклад поле форми з помилкою валідації.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-is-a-story-in-storybook">
-<h2 id="section-what-is-a-story-in-storybook" class="glossary-term-section__title">What is a story in Storybook?</h2>
-<p class="glossary-term-section__text">A story describes a component example with the inputs and context it needs. Teams can inspect that example without navigating through the entire application.</p>
-<p class="glossary-term-section__text">For a reservation card, useful stories might show a confirmed booking, a canceled booking, a long passenger name, and a missing image. Each example makes a state available for discussion and testing.</p>
-<p class="glossary-term-section__text">Isolation has limits. A card can work in Storybook while its surrounding page has an incorrect reading order or retrieves the wrong reservation. Test complete tasks in the application as well.</p>
+<section class="glossary-term-section" aria-labelledby="section-story-storybook">
+<h2 id="section-story-storybook" class="glossary-term-section__title">Що таке «історія» (story) в Storybook?</h2>
+<p class="glossary-term-section__text">Історія описує приклад компонента разом із вхідними параметрами (props/inputs) та контекстом, необхідними для його відображення. Команди можуть інспектувати та тестувати цей приклад без потреби навігації через увесь застосунок.</p>
+<p class="glossary-term-section__text">Для картки бронювання корисні історії можуть демонструвати підтверджене бронювання, скасоване бронювання, довге ім'я пасажира та випадок із відсутнім зображенням. Кожен приклад робить певний стан доступним для командного обговорення та тестування.</p>
+<p class="glossary-term-section__text">Проте ізоляція має свої межі. Картка може бездоганно працювати в Storybook, тоді як на реальній сторінці порушено порядок читання скрінрідером (reading order) або підтягуються некоректні дані бронювання. Тому обов'язково тестуйте повні користувацькі сценарії безпосередньо в застосунку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-storybook-support-a-design-system">
-<h2 id="section-how-does-storybook-support-a-design-system" class="glossary-term-section__title">How does Storybook support a design system?</h2>
+<section class="glossary-term-section" aria-labelledby="section-storybook">
+<h2 id="section-storybook" class="glossary-term-section__title">Як Storybook підтримує дизайн-систему?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Use</th>
-<th>What the team gets</th>
+<th>Сфера застосування</th>
+<th>Що отримує команда</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Component development</td>
-<td>A place to inspect states and adjust inputs</td>
+<td>Розробка компонентів</td>
+<td>Середовище для інспектування станів і налаштування вхідних параметрів</td>
 </tr>
 <tr>
-<td>Documentation</td>
-<td>Rendered examples with API and usage information</td>
+<td>Документація</td>
+<td>Відрендерені живі приклади разом із описом API та настановами щодо використання</td>
 </tr>
 <tr>
-<td>Testing</td>
-<td>Stories that can support interaction, accessibility, and visual checks</td>
+<td>Тестування</td>
+<td>Історії, що підтримують перевірку взаємодії (interaction tests), доступності (a11y) та візуального регресу</td>
 </tr>
 <tr>
-<td>Review</td>
-<td>A shared view of the implemented component</td>
+<td>Рецензування (Review)</td>
+<td>Єдине узгоджене середовище для візуального аудиту реалізованого компонента</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The required testing configuration depends on the project. A story's existence does not establish that its interactions or accessibility have been tested.</p>
-<p class="glossary-term-section__text">Storybook can document a <a href="/ua/glossary/component-libraries.html">component library</a>. A <a href="/ua/glossary/design-system.html">design system</a> also needs shared decisions, usage guidance, ownership, and a way to manage changes.</p>
+<p class="glossary-term-section__text">Необхідна конфігурація тестування залежить від проєкту. Сам факт наявності історії не гарантує, що взаємодія або доступність компонента були фактично перевірені.</p>
+<p class="glossary-term-section__text">Storybook може документувати <a href="/ua/glossary/component-libraries.html">бібліотеку компонентів</a>. Проте повноцінна <a href="/ua/glossary/design-system.html">дизайн-система</a> також потребує спільних архітектурних рішень, правил використання, моделі власності та налагодженого процесу управління змінами.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-are-storybook-mcp-and-component-manifests">
-<h2 id="section-what-are-storybook-mcp-and-component-manifests" class="glossary-term-section__title">What are Storybook MCP and component manifests?</h2>
-<p class="glossary-term-section__text">Storybook's AI features let a connected agent access component documentation and work with stories and tests. Its MCP server is one route for that interaction.</p>
-<p class="glossary-term-section__text">A component manifest provides structured information about documented components, including their APIs and examples. A documentation manifest describes documentation content. These are Storybook features, not a universal design system manifest standard.</p>
-<p class="glossary-term-section__text">The AI capabilities are in preview in the documentation checked in November 2026. Component manifests require configuration, and generation differs by framework. Follow the current official guides rather than assuming every existing Storybook exposes this context.</p>
+<section class="glossary-term-section" aria-labelledby="section-storybook-mcp">
+<h2 id="section-storybook-mcp" class="glossary-term-section__title">Що таке Storybook MCP та маніфести компонентів?</h2>
+<p class="glossary-term-section__text">Можливості Storybook для роботи зі штучним інтелектом дозволяють підключеному ШІ-агенту отримувати доступ до документації компонентів, а також взаємодіяти з історіями та тестами. Його MCP-сервер є одним із каналів такої взаємодії.</p>
+<p class="glossary-term-section__text">Маніфест компонентів (component manifest) надає структуровану інформацію про задокументовані компоненти, включно з їхніми API та прикладами. Маніфест документації описує безпосередньо зміст супровідних матеріалів. Це спеціалізовані можливості Storybook, а не універсальний стандарт маніфестів дизайн-систем.</p>
+<p class="glossary-term-section__text">Функції ШІ перебувають у статусі попереднього перегляду (preview) згідно з документацією станом на листопад 2026 року. Маніфести компонентів потребують додаткового налаштування, а їхня генерація залежить від обраного фреймворку. Дотримуйтесь актуальних офіційних інструкцій замість припущення, що кожен наявний екземпляр Storybook автоматично надає цей контекст.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-an-ai-generated-field">
-<h2 id="section-example-reviewing-an-ai-generated-field" class="glossary-term-section__title">Example: reviewing an AI-generated field</h2>
-<p class="glossary-term-section__text">An agent is asked to add a date field to a booking form. It retrieves the supported component API and examines stories for invalid and unavailable dates. The team reviews the implementation with keyboard input, realistic values, and a failed submission.</p>
-<p class="glossary-term-section__text">The useful outcome is a field that follows the real component contract and works in the task. A convincing preview alone does not establish either result.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перевірка згенерованого штучним інтелектом поля</h2>
+<p class="glossary-term-section__text">ШІ-агенту доручають додати поле вибору дати до форми бронювання. Він звертається до підтримуваного API компонента та аналізує історії для невалідної та недоступної дати. Команда ретельно перевіряє реалізацію за допомогою введення з клавіатури, реалістичних значень і сценарію з невдалим надсиланням форми.</p>
+<p class="glossary-term-section__text">Цінним результатом є поле, яке чітко відповідає контракту реального компонента та бездоганно працює в межах усього завдання. Сама лише переконлива візуальна демонстрація не підтверджує жодного з цих результатів.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-documentation.html">Design System Documentation</a></li>
-<li><a href="/ua/glossary/component-libraries.html">Component Libraries</a></li>
-<li><a href="/ua/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
-<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol</a></li>
+<li><a href="/ua/glossary/design-system-documentation.html">Документація дизайн-системи</a></li>
+<li><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a></li>
+<li><a href="/ua/glossary/visual-regression-testing.html">Тестування візуальної регресії</a></li>
+<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://storybook.js.org/docs/get-started/why-storybook" target="_blank" rel="noopener noreferrer">Why Storybook?, Storybook</a></li>
-<li><a href="https://storybook.js.org/docs/ai" target="_blank" rel="noopener noreferrer">Using Storybook with AI</a></li>
-<li><a href="https://storybook.js.org/docs/ai/manifests" target="_blank" rel="noopener noreferrer">Manifests, Storybook</a></li>
+<li><a href="https://storybook.js.org/docs/get-started/why-storybook" target="_blank" rel="noopener noreferrer">Чому саме Storybook?, Storybook</a></li>
+<li><a href="https://storybook.js.org/docs/ai" target="_blank" rel="noopener noreferrer">Використання Storybook зі штучним інтелектом</a></li>
+<li><a href="https://storybook.js.org/docs/ai/manifests" target="_blank" rel="noopener noreferrer">Маніфести, Storybook</a></li>
 </ul>
 </section>
 

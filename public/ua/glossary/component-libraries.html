@@ -389,70 +389,66 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Бібліотека UI-компонентів — це структурований набір готових елементів інтерфейсу (кнопок, текстових полів, модальних вікон тощо). У розробці ПЗ вона надає реалізації, які команди можуть повторно використовувати на різних екранах і в продуктах, а супровідна документація та інтерактивні приклади допомагають розробникам правильно їх обирати та налаштовувати.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-component-library">
-<h2 id="section-what-belongs-in-a-component-library" class="glossary-term-section__title">What belongs in a component library?</h2>
-<p class="glossary-term-section__text">A useful entry describes the supported options, states, and behavior. For a button, document options such as label and emphasis, plus states such as focus and disabled. Include usage guidance where a choice affects the task, such as using a link for navigation and a button to submit a form.</p>
-<p class="glossary-term-section__text">A library can expose styled components or behavior that teams style themselves. The <a href="/ua/glossary/design-system.html">design system</a> covers the broader decisions about foundations, patterns, and maintenance. <a href="/ua/glossary/storybook.html">Storybook</a> is one way to document and exercise library components. A story shows a rendered example of a component in a specified state.</p>
+    <p class="glossary-term-section__text">Бібліотека UI-компонентів — це структурований набір готових елементів інтерфейсу, таких як кнопки, текстові поля введення та діалогові вікна. У розробці програмного забезпечення вона надає кодові реалізації, які команди можуть повторно використовувати на різних екранах і в продуктах. Супровідні гайдлайни використання та інтерактивні візуальні приклади допомагають споживачам правильно обирати й налаштовувати ці елементи.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має містити бібліотека компонентів?</h2>
+<p class="glossary-term-section__text">Якісний опис компонента детально фіксує підтримувані параметри, стани та очікувану поведінку. Для кнопки документують такі параметри, як текст мітки (label) та візуальний акцент (emphasis), а також стани, зокрема фокус (focus) і неактивний стан (disabled). Додавайте інструкції щодо використання там, де вибір впливає на вирішення користувацького завдання — наприклад, коли використовувати посилання для навігації, а коли кнопку для надсилання форми.</p>
+<p class="glossary-term-section__text">Бібліотека може надавати як повністю стилізовані компоненти, так і суто поведінкову логіку, яку команди стилізують самостійно. <a href="/ua/glossary/design-system.html">Дизайн-система</a> охоплює ширше коло рішень — базові константи (foundations), патерни та процеси підтримки. <a href="/ua/glossary/storybook.html">Storybook</a> — один із популярних інструментів для документування та інтерактивного тестування компонентів бібліотеки. Окремий «story» демонструє відрендерений приклад компонента в конкретно заданому стані.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-documenting-a-shared-button">
-<h2 id="section-example-of-documenting-a-shared-button" class="glossary-term-section__title">Example of documenting a shared button</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад документування спільної кнопки</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>What to document</th>
-<th>Example</th>
+<th>Що документувати</th>
+<th>Приклад</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Options</td>
-<td>A text label and supported emphasis variants</td>
+<td>Параметри (Options)</td>
+<td>Текстова мітка та підтримувані варіанти візуального акценту</td>
 </tr>
 <tr>
-<td>Behavior</td>
-<td>Responds to pointer and keyboard activation when enabled</td>
+<td>Поведінка (Behavior)</td>
+<td>Реагування на клік вказівника та натискання клавіш клавіатури в активному стані</td>
 </tr>
 <tr>
-<td>Examples</td>
-<td>Default, keyboard focus, a long label, and disabled</td>
+<td>Приклади (Examples)</td>
+<td>За замовчуванням, стан фокусу клавіатури, довга мітка тексту та неактивний стан (disabled)</td>
 </tr>
 <tr>
-<td>Integration</td>
-<td>How a form uses the button and shows feedback during submission</td>
+<td>Інтеграція (Integration)</td>
+<td>Як форма використовує кнопку та як відображається зворотний зв'язок під час надсилання даних</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Use an isolated example to check supported states and a product screen to check the whole interaction. A checkout flow, for example, still needs to explain a pending submission and handle errors. Reusing the same button gives teams a shared control. The flow determines what the action does and what feedback users receive.</p>
+<p class="glossary-term-section__text">Використовуйте ізольований приклад для перевірки всіх підтримуваних станів, а реальний екран продукту — для тестування повної взаємодії. Наприклад, сценарій оформлення замовлення повинен інформувати про процес обробки запиту та коректно реагувати на помилки. Повторне використання однієї й тієї самої кнопки надає командам спільний елемент керування, тоді як сам користувацький сценарій визначає логіку дії та тип зворотного зв'язку, який отримує користувач.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-a-pattern-become-a-shared-component">
-<h2 id="section-when-should-a-pattern-become-a-shared-component" class="glossary-term-section__title">When should a pattern become a shared component?</h2>
-<p class="glossary-term-section__text">Start with an interaction that repeats across real screens. Compare how teams use it and decide which differences matter. If two teams need the same behavior and differ only in emphasis, a supported variant may be enough. If one needs a different workflow, keep that workflow in the product and reuse the smaller component where it fits.</p>
-<p class="glossary-term-section__text">Document who maintains the component and how consumers adopt fixes. When you change a supported option or state, test a representative screen that uses the component before releasing the change.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли патерн має стати спільним компонентом?</h2>
+<p class="glossary-term-section__text">Починайте зі сценарію взаємодії, який багаторазово повторюється на реальних екранах. Порівняйте, як різні команди використовують його, і визначте, які відмінності є принциповими. Якщо двом командам потрібна однакова поведінка, яка відрізняється лише візуальним акцентом, зазвичай достатньо створити офіційно підтримуваний варіант. Якщо ж потрібен суттєво інший робочий процес, залиште специфічну логіку всередині продукту, а менший спільний компонент використайте там, де це доречно.</p>
+<p class="glossary-term-section__text">Зафіксуйте, хто саме відповідає за підтримку компонента та як споживачі отримуватимуть виправлення й оновлення. Щоразу, коли ви змінюєте підтримуваний параметр чи стан, обов'язково протестуйте показовий екран продукту, який використовує цей компонент, перед релізом оновлення.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Архітектура компонентів</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI-архітектура</a></li>
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-documentation.html">Design System Documentation</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/pattern-library.html">Pattern Library</a></li>
+<li><a href="/ua/glossary/design-system-documentation.html">Документація дизайн-системи</a></li>
+<li><a href="/ua/glossary/pattern-library.html">Бібліотека патернів</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Button, GOV.UK Design System</a></li>
-<li><a href="https://storybook.js.org/docs/get-started/whats-a-story" target="_blank" rel="noopener noreferrer">What’s a story?, Storybook documentation</a></li>
-<li><a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Кнопка, Дизайн-система GOV.UK</a></li>
+<li><a href="https://storybook.js.org/docs/get-started/whats-a-story" target="_blank" rel="noopener noreferrer">Що таке story?, документація Storybook</a></li>
+<li><a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">Дизайн-система GOV.UK</a></li>
 </ul>
 </section>
 

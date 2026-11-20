@@ -384,78 +384,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Готова до ШІ дизайн-система (AI-ready Design System) робить підтримувані компоненти, системні рішення та правила використання доступними для інструментів ШІ, забезпечуючи можливість верифікації отриманого результату. Термін «AI-ready» описує рівень готовності архітектури, а не конкретний продукт чи формат файлів.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-an-agent-need-from-a-design-system">
-<h2 id="section-what-does-an-agent-need-from-a-design-system" class="glossary-term-section__title">What does an agent need from a design system?</h2>
-<p class="glossary-term-section__text">An agent needs reliable implementation context, not simply a screenshot of the intended style.</p>
+    <p class="glossary-term-section__text">Дизайн-система, готова до ШІ (AI-ready design system), надає інструментам штучного інтелекту доступ до своїх підтримуваних компонентів, дизайн-рішень і правил використання, а також забезпечує засоби для верифікації згенерованого результату. Тут «готовність до ШІ» описує стратегічну мету підготовки системи, а не конкретний продукт чи формат файлів.</p>
+<section class="glossary-term-section" aria-labelledby="section-ai">
+<h2 id="section-ai" class="glossary-term-section__title">Що потрібно AI-агенту від дизайн-системи?</h2>
+<p class="glossary-term-section__text">Агенту потрібен надійний контекст реалізації, а не просто скріншот бажаного стилю.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Need</th>
-<th>Useful system material</th>
+<th>Потреба</th>
+<th>Корисні матеріали системи</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Find an existing component</td>
-<td>Catalog, package location, and import example</td>
+<td>Знайти наявний компонент</td>
+<td>Каталог, розташування пакета та приклад імпорту</td>
 </tr>
 <tr>
-<td>Use it correctly</td>
-<td>Supported API, states, and working examples</td>
+<td>Використати його правильно</td>
+<td>Підтримуваний API, стани та робочі приклади</td>
 </tr>
 <tr>
-<td>Follow visual decisions</td>
-<td>Token roles, themes, and explicit exceptions</td>
+<td>Дотримуватися візуальних рішень</td>
+<td>Ролі токенів, теми та задокументовані винятки</td>
 </tr>
 <tr>
-<td>Build a complete interaction</td>
-<td>Pattern guidance, content rules, and accessibility expectations</td>
+<td>Побудувати повноцінну взаємодію</td>
+<td>Опис патернів, правила для контенту та вимоги до доступності</td>
 </tr>
 <tr>
-<td>Check the result</td>
-<td>Relevant tests, review criteria, and a route for unresolved gaps</td>
+<td>Перевірити результат</td>
+<td>Відповідні тести, критерії рев'ю та алгоритм дій для невирішених прогалин</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Keep these references aligned with the actual component version. Exposing outdated guidance through a tool makes it easier to retrieve, not more accurate.</p>
+<p class="glossary-term-section__text">Синхронізуйте ці матеріали з актуальною версією компонентів. Надання доступу до застарілої документації через інструменти лише спрощує її отримання агентом, але не робить її точнішою.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-generating-a-filter-panel">
-<h2 id="section-example-generating-a-filter-panel" class="glossary-term-section__title">Example: generating a filter panel</h2>
-<p class="glossary-term-section__text">A task asks an agent to build filters for an operations table. The system provides the real select and date-range components, their supported properties, the filter behavior, and examples with long labels.</p>
-<p class="glossary-term-section__text">The acceptance criteria include clearing filters, preserving entered values after an error, and keyboard operation. If the available date component cannot represent the required range, the agent records that gap instead of inventing a property.</p>
-<p class="glossary-term-section__text">Review the panel in the table workflow, not only as an isolated visual.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: генерація панелі фільтрів</h2>
+<p class="glossary-term-section__text">Завдання вимагає від агента створити панель фільтрів для операційної таблиці. Система надає реальні компоненти вибору (<code>select</code>) та діапазону дат (<code>date-range</code>), їхні підтримувані властивості (props), логіку фільтрації та приклади з довгими підписами (labels).</p>
+<p class="glossary-term-section__text">Критерії приймання (acceptance criteria) включають очищення фільтрів, збереження введених значень після виникнення помилки та повноцінне керування з клавіатури. Якщо наявний компонент вибору дат не може відобразити необхідний діапазон, агент фіксує цю прогалину замість того, щоб вигадувати неіснуючу властивість.</p>
+<p class="glossary-term-section__text">Оцінюйте згенеровану панель у загальному сценарії роботи з таблицею, а не лише як ізольований візуальний макет.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-which-tools-can-provide-the-context">
-<h2 id="section-which-tools-can-provide-the-context" class="glossary-term-section__title">Which tools can provide the context?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> can connect design components to code references. <a href="/ua/glossary/storybook.html">Storybook</a> can expose component examples and, through configured AI features, structured component documentation.</p>
-<p class="glossary-term-section__text">An MCP integration is a delivery mechanism. It does not determine whether the underlying content is complete or whether the output meets product requirements.</p>
-<p class="glossary-term-section__text">Choose the smallest useful workflow first. A maintained component guide and examples may be enough to test the approach before adding more integration work.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які інструменти можуть забезпечити цей контекст?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> може пов'язувати дизайн-компоненти з посиланнями на код. <a href="/ua/glossary/storybook.html">Storybook</a> дозволяє надавати приклади компонентів, а завдяки налаштованим AI-функціям — структуровану документацію компонентів.</p>
+<p class="glossary-term-section__text">Інтеграція через Model Context Protocol (MCP) — це механізм доставки контексту. Сама по собі вона не гарантує, що базовий контент є повним або що результат відповідатиме продуктовим вимогам.</p>
+<p class="glossary-term-section__text">Почніть із найпростішого та найкориснішого робочого процесу. Актуального довідника компонентів із робочими прикладами може бути достатньо для тестування підходу перед початком складнішої інтеграційної роботи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-is-this-different-from-a-design-harness">
-<h2 id="section-how-is-this-different-from-a-design-harness" class="glossary-term-section__title">How is this different from a design harness?</h2>
-<p class="glossary-term-section__text">AI readiness describes the condition of the system's context and verification support. A <a href="/ua/glossary/design-harness.html">design harness</a> is the task environment that assembles references, constraints, and checks for implementation.</p>
-<p class="glossary-term-section__text">Evaluate readiness with representative tasks. Inspect component selection, supported API use, behavior, and the amount of correction required. Do not infer success from a visually plausible generated screen.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чим це відрізняється від дизайн-каркаса?</h2>
+<p class="glossary-term-section__text">Готовність до ШІ описує якість контексту системи та підтримку верифікації. <a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a> — це середовище виконання завдання, яке об'єднує контекстні матеріали, обмеження та автоматичні перевірки для реалізації.</p>
+<p class="glossary-term-section__text">Оцінюйте готовність до ШІ на репрезентативних завданнях. Перевіряйте точність вибору компонентів, використання підтримуваних API, коректність поведінки та обсяг необхідних ручних правок. Не робіть висновків про успішність виключно на основі візуально привабливого згенерованого інтерфейсу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/design-system-documentation.html">Design System Documentation</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/design-system-documentation.html">Документація дизайн-системи</a></li>
 <li><a href="/ua/glossary/figma-mcp-server.html">Figma MCP Server</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness</a></li>
-</ul>
-<ul class="glossary-term-ul">
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Каркас оцінювання ШІ (AI Evals)</a></li>
 <li><a href="/ua/glossary/shadcn-ui.html">shadcn/ui</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Code Connect introduction, Figma</a></li>
-<li><a href="https://storybook.js.org/docs/ai/manifests" target="_blank" rel="noopener noreferrer">Manifests, Storybook</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Вступ до Code Connect, Figma (Code Connect introduction, Figma)</a></li>
+<li><a href="https://storybook.js.org/docs/ai/manifests" target="_blank" rel="noopener noreferrer">Маніфести, Storybook (Manifests, Storybook)</a></li>
 </ul>
 </section>
 

@@ -384,45 +384,45 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Дизайн-борг (Design Debt) — це накопичений тягар невирішених проблем та компромісних дизайнерських рішень, що ускладнюють використання, розвиток чи підтримку продукту. Він виникає внаслідок свідомих компромісів, непослідовних реалізацій або гіпотез, які згодом не були переглянуті.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-counts-as-design-debt">
-<h2 id="section-what-counts-as-design-debt" class="glossary-term-section__title">What counts as design debt?</h2>
-<p class="glossary-term-section__text">Examples include inconsistent validation across similar forms, duplicate patterns with unclear ownership, or interaction rules that repeatedly cause confusion.</p>
-<p class="glossary-term-section__text">The debt metaphor is useful when an unresolved issue creates continuing cost or makes future changes more difficult. Not every unbuilt idea or visual preference belongs in a debt backlog.</p>
-<p class="glossary-term-section__text">A design can also become unsuitable as users, tasks, or constraints change. Record what is now failing rather than assuming the original decision was careless.</p>
+    <p class="glossary-term-section__text">Дизайн-борг (design debt) — це накопичений тягар невирішених проєктних рішень і проблем у дизайні, які ускладнюють використання, модифікацію або підтримку продукту. Він може виникати через свідомі компроміси задля швидкості, непослідовні реалізації або гіпотези, які так і не були переглянуті.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що вважається дизайн-боргом?</h2>
+<p class="glossary-term-section__text">Серед типових прикладів — різна логіка валідації в схожих формах, дублювання патернів із незрозумілим розподілом відповідальності або правила взаємодії, що постійно спантеличують користувачів.</p>
+<p class="glossary-term-section__text">Метафора боргу є доречною, коли невирішена проблема спричиняє постійні витрати або ускладнює майбутні зміни. Проте далеко не кожна нереалізована ідея чи суб'єктивне візуальне уподобання має потрапляти до беклогу боргу.</p>
+<p class="glossary-term-section__text">Дизайн також може втратити актуальність із часом, коли змінюються користувачі, завдання чи системні обмеження. Фіксуйте, що саме перестало працювати зараз, замість того, щоб автоматично вважати первинне рішення недбалим.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-debt-vs-technical-debt">
-<h2 id="section-design-debt-vs-technical-debt" class="glossary-term-section__title">Design debt vs. technical debt</h2>
-<p class="glossary-term-section__text">Technical debt concerns implementation choices and their effect on future development. Design debt focuses on interaction, information, content, and shared design decisions.</p>
-<p class="glossary-term-section__text">They can overlap. A duplicated form pattern may create both confusing behavior for users and repeated maintenance work for engineers. Resolving one side does not automatically fix the other.</p>
-<p class="glossary-term-section__text">Martin Fowler's technical-debt discussion distinguishes deliberate and inadvertent choices. That distinction can also help teams discuss the context of a design shortcut without treating every issue as individual failure.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Дизайн-борг проти технічного боргу</h2>
+<p class="glossary-term-section__text">Технічний борг стосується інженерних рішень у реалізації та їхнього впливу на подальшу розробку. Дизайн-борг зосереджується на взаємодії, інформаційній структурі, контенті та спільних дизайн-рішеннях.</p>
+<p class="glossary-term-section__text">Вони можуть перетинатися. Наприклад, продубльований патерн форми створює як суперечливий досвід для користувачів, так і постійну додаткову роботу для інженерів із підтримки коду. Вирішення проблеми лише з одного боку автоматично не виправляє інший.</p>
+<p class="glossary-term-section__text">Мартін Фаулер у своїй концепції технічного боргу виділяє усвідомлені та неусвідомлені рішення. Це розмежування допомагає командам обговорювати контекст дизайнерських компромісів конструктивно, не сприймаючи кожну проблему як особисту помилку окремого фахівця.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-inconsistent-validation">
-<h2 id="section-example-inconsistent-validation" class="glossary-term-section__title">Example: inconsistent validation</h2>
-<p class="glossary-term-section__text">Suppose three quote forms validate phone numbers differently. Users receive conflicting instructions, support answers the same questions repeatedly, and each rule change requires separate work.</p>
-<p class="glossary-term-section__text">The team investigates the actual requirements. It agrees on shared behavior, updates the component and guidance, and migrates the affected forms.</p>
-<p class="glossary-term-section__text">The useful result is consistent, appropriate validation. Making every error message look identical without resolving the underlying rules would leave much of the problem in place.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: неузгоджена валідація</h2>
+<p class="glossary-term-section__text">Припустімо, у трьох формах запиту ціни валідація телефонних номерів працює по-різному. Користувачі отримують суперечливі інструкції, служба підтримки змушена знову й знову відповідати на ті самі запитання, а кожна зміна правил вимагає окремої розробки для кожної форми.</p>
+<p class="glossary-term-section__text">Команда проводить дослідження реальних вимог. Вона узгоджує єдину логіку поведінки, оновлює компонент і супровідну документацію та мігрує всі зачеплені форми на спільне рішення.</p>
+<p class="glossary-term-section__text">Корисний результат тут — це послідовна, коректна валідація. Якби команда лише зробила всі повідомлення про помилки візуально однаковими, не змінивши самі правила обробки даних, більша частина проблеми залишилася б невирішеною.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-prioritize-design-debt">
-<h2 id="section-how-do-you-prioritize-design-debt" class="glossary-term-section__title">How do you prioritize design debt?</h2>
-<p class="glossary-term-section__text">Record the affected task, evidence, recurring cost, scope, owner, and a concrete remedy. Consider user impact, frequency, dependencies, and effort.</p>
-<p class="glossary-term-section__text">Separate a verified problem from a hypothesis that needs research. Prefer solving a shared cause over repeatedly correcting its symptoms when the evidence supports that scope.</p>
-<p class="glossary-term-section__text">Check the result after remediation. Count fewer repeated defects or observe improved task performance using a consistent method. A shrinking issue list alone does not establish that the most consequential problems were resolved.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як пріоритезувати дизайн-борг?</h2>
+<p class="glossary-term-section__text">Фіксуйте завдання, на яке впливає проблема, зібрані докази, регулярні витрати, масштаб, відповідального власника та конкретний план усунення. Оцінюйте вплив на користувачів, частоту виникнення, системні залежності та необхідні зусилля.</p>
+<p class="glossary-term-section__text">Відокремлюйте підтверджені проблеми від гіпотез, які ще потребують досліджень. Віддавайте перевагу усуненню першопричини перед постійним виправленням її симптомів, якщо факти підтверджують таку доцільність.</p>
+<p class="glossary-term-section__text">Перевіряйте результат після рефакторингу. Орієнтуйтеся на зменшення кількості повторних дефектів або на покращення показників виконання завдань, використовуючи стабільну методологію оцінки. Саме лише скорочення списку тікетів у таск-трекері ще не доводить, що вирішено найсуттєвіші проблеми.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-audit.html">Design System Audit</a></li>
-<li><a href="/ua/glossary/design-qa.html">Design QA</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/ua/glossary/design-system-audit.html">Аудит дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-qa.html">Контроль якості дизайну (Design QA)</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html" target="_blank" rel="noopener noreferrer">Technical Debt Quadrant, Martin Fowler</a></li>
-<li><a href="https://www.nngroup.com/articles/ai-ux-debt/" target="_blank" rel="noopener noreferrer">The Custodial Era of UX: Cleaning Up After AI, NN/g</a></li>
+<li><a href="https://martinfowler.com/bliki/TechnicalDebtQuadrant.html" target="_blank" rel="noopener noreferrer">Квадрант технічного боргу, Мартін Фаулер (Technical Debt Quadrant, Martin Fowler)</a></li>
+<li><a href="https://www.nngroup.com/articles/ai-ux-debt/" target="_blank" rel="noopener noreferrer">Епоха догляду за UX: прибирання після ШІ, NN/g (The Custodial Era of UX: Cleaning Up After AI, NN/g)</a></li>
 </ul>
 </section>
 

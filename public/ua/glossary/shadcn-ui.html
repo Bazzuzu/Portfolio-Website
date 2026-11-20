@@ -385,48 +385,48 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">shadcn/ui надає UI-компоненти з відкритим вихідним кодом та інструменти для поширення коду компонентів, які команди можуть копіювати у свої проєкти та кастомізувати. Редаговані реалізації стають безпосередньою частиною кодової бази проєкту.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-the-component-approach-work">
-<h2 id="section-how-does-the-component-approach-work" class="glossary-term-section__title">How does the component approach work?</h2>
-<p class="glossary-term-section__text">The project supplies component source that becomes part of the consuming codebase. Teams can inspect and modify that implementation for their own requirements.</p>
-<p class="glossary-term-section__text">This changes the maintenance responsibility. A local customization needs review when upstream behavior, dependencies, or project requirements change. Adding a component is not the same as delegating all future maintenance to a package publisher.</p>
-<p class="glossary-term-section__text">The component may still depend on other libraries. Inspect the actual dependencies and implementation selected for the project.</p>
+    <p class="glossary-term-section__text">shadcn/ui надає UI-компоненти з відкритим вихідним кодом та інструментарій для дистрибуції коду компонентів, які команди можуть додавати до своїх проєктів і кастомізувати. Редаговані реалізації стають безпосередньою частиною кодової бази проєкту, що їх використовує.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює компонентний підхід?</h2>
+<p class="glossary-term-section__text">Проєкт постачає вихідний код компонентів, який стає повноцінною частиною кодової бази продукту. Команди можуть інспектувати та модифікувати цю реалізацію відповідно до власних вимог.</p>
+<p class="glossary-term-section__text">Це докорінно змінює розподіл відповідальності за підтримку. Локальна кастомізація потребує ревізії у разі зміни поведінки в апстрімі (upstream), оновлення залежностей чи зміни вимог самого проєкту. Додавання компонента в такий спосіб — це не те саме, що делегування всієї майбутньої підтримки автору npm-пакета.</p>
+<p class="glossary-term-section__text">Компонент усе ще може залежати від інших бібліотек. Завжди аналізуйте фактичні залежності та обрану для проєкту реалізацію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-is-a-shadcn-registry">
-<h2 id="section-what-is-a-shadcn-registry" class="glossary-term-section__title">What is a shadcn registry?</h2>
-<p class="glossary-term-section__text">A registry describes distributable items and the files and dependencies they need. It can provide components, larger blocks, and other project material.</p>
-<p class="glossary-term-section__text">An organization can use a registry to distribute its own approved implementations. The registry is a distribution mechanism; it does not establish that every item meets the organization's design, security, or accessibility requirements.</p>
+<section class="glossary-term-section" aria-labelledby="section-shadcn-registry">
+<h2 id="section-shadcn-registry" class="glossary-term-section__title">Що таке реєстр shadcn (registry)?</h2>
+<p class="glossary-term-section__text">Реєстр описує елементи для дистрибуції, а також файли та залежності, необхідні для їхньої роботи. Він може надавати окремі компоненти, більші складені блоки (blocks) та інші проєктні матеріали.</p>
+<p class="glossary-term-section__text">Організація може використовувати власний реєстр для дистрибуції затверджених внутрішніх реалізацій. Проте реєстр є лише механізмом доставки коду: сам факт його наявності не гарантує, що кожен елемент відповідає корпоративним вимогам до дизайну, безпеки чи доступності.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-it-work-with-ai-tools">
-<h2 id="section-how-does-it-work-with-ai-tools" class="glossary-term-section__title">How does it work with AI tools?</h2>
-<p class="glossary-term-section__text">The shadcn MCP server lets a connected assistant browse, search, and install items from configured registries. This can help an agent find an existing implementation instead of inventing a new component.</p>
-<p class="glossary-term-section__text">Specify which registry and project conventions to use. Review the actual files and dependency changes before accepting a generated implementation. Natural-language installation does not remove that responsibility.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як це працює з інструментами штучного інтелекту?</h2>
+<p class="glossary-term-section__text">MCP-сервер shadcn дозволяє підключеному ШІ-асистенту переглядати, шукати та встановлювати елементи з налаштованих реєстрів. Це допомагає автономному агенту знаходити готову перевірену реалізацію замість того, щоб щоразу винаходити новий компонент.</p>
+<p class="glossary-term-section__text">Чітко вказуйте, який саме реєстр і які конвенції проєкту слід використовувати. Обов'язково перевіряйте згенеровані файли та зміни в залежностях перед прийняттям реалізації. Встановлення компонентів за допомогою природної мови не знімає відповідальності за ретельний код-рев'ю.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-building-a-settings-dialog">
-<h2 id="section-example-building-a-settings-dialog" class="glossary-term-section__title">Example: building a settings dialog</h2>
-<p class="glossary-term-section__text">Suppose a team adds a dialog and form fields, then adapts their styling to the product's tokens. It checks labels, focus behavior, validation, saving, and failure recovery in the settings task.</p>
-<p class="glossary-term-section__text">If the team later changes the dialog's behavior locally, it records that decision and reviews future updates against it. Visual similarity to another shadcn-based interface does not establish equivalent behavior.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: створення діалогового вікна налаштувань</h2>
+<p class="glossary-term-section__text">Припустимо, команда додає модальне діалогове вікно та поля форми, а потім адаптує їхні стилі під дизайн-токени власного продукту. Вона перевіряє текстові підписи (labels), логіку керування фокусом, валідацію полів, збереження даних та сценарії відновлення після помилок у межах завдання налаштувань.</p>
+<p class="glossary-term-section__text">Якщо надалі команда локально змінює поведінку діалогового вікна, вона документує це рішення та зіставляє з ним наступні оновлення. Зовнішня візуальна схожість з іншим інтерфейсом на базі shadcn не означає автоматичної еквівалентності їхньої поведінки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-is-shadcn-ui-a-complete-design-system">
-<h2 id="section-is-shadcn-ui-a-complete-design-system" class="glossary-term-section__title">Is shadcn/ui a complete design system?</h2>
-<p class="glossary-term-section__text">It can be a foundation for a team's <a href="/ua/glossary/component-libraries.html">component library</a>. A complete <a href="/ua/glossary/design-system.html">design system</a> also needs product-specific decisions, patterns, content guidance, ownership, and a way to manage changes.</p>
-<p class="glossary-term-section__text">Use the official documentation for installation and the current supported options. Evaluate the components in the actual product context, including any modifications made by people or AI agents.</p>
+<section class="glossary-term-section" aria-labelledby="section-shadcn-ui">
+<h2 id="section-shadcn-ui" class="glossary-term-section__title">Чи є shadcn/ui повноцінною дизайн-системою?</h2>
+<p class="glossary-term-section__text">Він може слугувати надійним фундаментом для створення <a href="/ua/glossary/component-libraries.html">бібліотеки компонентів</a> команди. Проте повноцінна <a href="/ua/glossary/design-system.html">дизайн-система</a> також вимагає специфічних для продукту рішень, патернів взаємодії, настанов щодо створення контенту, чіткої моделі власності (ownership) та налагодженого процесу управління змінами.</p>
+<p class="glossary-term-section__text">Звертайтеся до офіційної документації щодо інсталяції та актуальних підтримуваних параметрів. Оцінюйте компоненти в реальному контексті продукту, враховуючи будь-які модифікації, внесені розробниками чи ШІ-агентами.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-libraries.html">Component Libraries</a></li>
-<li><a href="/ua/glossary/ai-ready-design-system.html">AI-ready Design System</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol</a></li>
+<li><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a></li>
+<li><a href="/ua/glossary/ai-ready-design-system.html">Дизайн-система, готова до ШІ (AI-ready Design System)</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Архітектура Headless UI</a></li>
+<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://ui.shadcn.com/docs" target="_blank" rel="noopener noreferrer">Introduction, shadcn/ui</a></li>
-<li><a href="https://ui.shadcn.com/docs/registry" target="_blank" rel="noopener noreferrer">Registry, shadcn/ui</a></li>
-<li><a href="https://ui.shadcn.com/docs/mcp" target="_blank" rel="noopener noreferrer">MCP server, shadcn/ui</a></li>
+<li><a href="https://ui.shadcn.com/docs" target="_blank" rel="noopener noreferrer">Вступ, shadcn/ui</a></li>
+<li><a href="https://ui.shadcn.com/docs/registry" target="_blank" rel="noopener noreferrer">Реєстр (Registry), shadcn/ui</a></li>
+<li><a href="https://ui.shadcn.com/docs/mcp" target="_blank" rel="noopener noreferrer">MCP-сервер, shadcn/ui</a></li>
 </ul>
 </section>
 

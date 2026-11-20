@@ -389,10 +389,10 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Специфікація Design Tokens Format Module від спільноти Design Tokens Community Group (DTCG) визначає стандарт обміну дизайн-токенами у форматі JSON. Вона стандартизує структуру представлення іменованих токенів, груп, типів, значень та посилань (aliases). Робоча група зазначає версію 2025.10 як стабільну; документ є специфікацією Community Group і публікується поза офіційним процесом стандартизації W3C (Standards Track).</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-dtcg-token-look-like">
-<h2 id="section-what-does-a-dtcg-token-look-like" class="glossary-term-section__title">What does a DTCG token look like?</h2>
-<p class="glossary-term-section__text">The following 2025.10 example groups two duration tokens under <code>motion</code>. The base duration is 150 milliseconds. The feedback token reuses it by reference.</p>
+    <p class="glossary-term-section__text">Модуль формату дизайн-токенів (Design Tokens Format Module) — це специфікація від Design Tokens Community Group (DTCG), призначена для стандартизованого обміну дизайн-токенами у форматі JSON. Вона визначає правила опису іменованих токенів, груп, типів, значень та посилань (references). Робоча група класифікує версію 2025.10 як стабільну (stable). Це специфікація спільноти (Community Group Report), опублікована поза офіційним процесом стандартизації W3C Standards Track.</p>
+<section class="glossary-term-section" aria-labelledby="section-dtcg">
+<h2 id="section-dtcg" class="glossary-term-section__title">Як виглядає токен у форматі DTCG?</h2>
+<p class="glossary-term-section__text">У наведеному нижче прикладі специфікації 2025.10 згруповано два токени тривалості в групі <code>motion</code>. Базова тривалість становить 150 мілісекунд. Токен візуального відгуку повторно використовує її за посиланням.</p>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-json">{
   "motion": {
@@ -406,33 +406,33 @@
   }
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">The base token <code>motion.fast</code> inherits its duration type from the group. <code>motion.feedback</code> gets its type from the token it references. The curly-brace reference points to the token at <code>motion.fast</code>, so <code>motion.feedback</code> resolves to the same duration value of 150 milliseconds. The <code>motion</code> group organizes the tokens. Each child token has its own <code>$value</code>.</p>
+<p class="glossary-term-section__text">Базовий токен <code>motion.fast</code> успадковує тип тривалості (<code>duration</code>) від батьківської групи. Токен <code>motion.feedback</code> отримує тип від токена, на який він посилається. Посилання у фігурних дужках вказує на токен <code>motion.fast</code>, завдяки чому <code>motion.feedback</code> резолвиться в те саме значення тривалості — 150 мілісекунд. Група <code>motion</code> структурує токени, а кожен дочірній токен містить власну властивість <code>$value</code>.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-does-the-format-module-cover">
-<h2 id="section-what-does-the-format-module-cover" class="glossary-term-section__title">What does the Format Module cover?</h2>
-<p class="glossary-term-section__text">The Format Module defines the exchange structure and the rules for interpreting it. It covers supported types, including composite types that combine related properties into one value. The separate Resolver Module describes how to resolve token values for different contexts, such as a light or dark theme.</p>
-<p class="glossary-term-section__text">Use the format to share the data between tools. Your team still decides how to organize tokens, which names communicate a semantic role, and when to change a token. A platform build can turn the resolved values into the files an application uses.</p>
+<section class="glossary-term-section" aria-labelledby="section-format-module">
+<h2 id="section-format-module" class="glossary-term-section__title">Що охоплює модуль формату (Format Module)?</h2>
+<p class="glossary-term-section__text">Модуль формату визначає структуру обміну даними та правила її інтерпретації. Він регламентує підтримувані типи даних, зокрема складені (composite types), які об'єднують пов'язані властивості в єдине значення (наприклад, параметри шрифту чи тіні). Окремий модуль резолвера (Resolver Module) описує алгоритми обчислення значень токенів для різних контекстів, таких як світла чи темна тема.</p>
+<p class="glossary-term-section__text">Використовуйте цей формат для безшовної передачі даних між різними дизайн-інструментами та платформами розробки. При цьому саме ваша команда визначає таксономію токенів, систему семантичного найменування та регламент внесення змін. Пайплайн збірки платформи трансформує обчислені значення у файли, необхідні клієнтським застосункам.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-check-interoperability">
-<h2 id="section-how-do-you-check-interoperability" class="glossary-term-section__title">How do you check interoperability?</h2>
-<p class="glossary-term-section__text">Pick a small set of real tokens and verify what each tool can import, resolve, and export. Include the types you use and a reference across groups. If the workflow supports themes, check the same role in two contexts. Compare the resolved output with the values expected by the application. Test for broken references and circular references.</p>
-<p class="glossary-term-section__text">Record the supported specification version and any extensions your workflow relies on. A valid JSON file still needs to follow the format’s token rules. If a tool drops a reference or exports a literal instead, check whether the next tool still has the information your workflow needs.</p>
+<section class="glossary-term-section" aria-labelledby="section-interoperability">
+<h2 id="section-interoperability" class="glossary-term-section__title">Як перевірити сумісність інструментів (interoperability)?</h2>
+<p class="glossary-term-section__text">Виберіть невеликий репрезентативний набір реальних токенів і перевірте, що кожен інструмент здатен коректно імпортувати, резолвити та експортувати. Включіть різні типи даних, які ви використовуєте, а також перехресні посилання між групами. Якщо робочий процес підтримує теми, перевірте ту саму семантичну роль у двох різних контекстах. Порівняйте фінальні згенеровані значення з тими, що очікуються застосунком. Обов'язково протестуйте стійкість до розірваних (broken) та циклічних (circular) посилань.</p>
+<p class="glossary-term-section__text">Фіксуйте версію специфікації та будь-які специфічні розширення (extensions), від яких залежить ваш пайплайн. Валідний JSON-файл повинен неухильно відповідати правилам формату DTCG. Якщо інструмент втрачає посилання або замінює його жорстко закодованим літералом під час експорту, перевірте, чи отримує наступний інструмент у ланцюжку всю необхідну інформацію.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени</a></li>
 <li><a href="/ua/glossary/style-dictionary.html">Style Dictionary</a></li>
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/token-resolver-engine.html">Token Resolver Engine</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени</a></li>
+<li><a href="/ua/glossary/token-resolver-engine.html">Рушій резолвінгу токенів (Token Resolver Engine)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
-<li><a href="https://www.designtokens.org/tr/2025.10/resolver/" target="_blank" rel="noopener noreferrer">Design Tokens Resolver Module 2025.10, DTCG</a></li>
-<li><a href="https://www.designtokens.org/technical-reports/" target="_blank" rel="noopener noreferrer">Technical reports, DTCG</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Модуль формату дизайн-токенів (Format Module) 2025.10, DTCG</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/resolver/" target="_blank" rel="noopener noreferrer">Модуль резолвера дизайн-токенів (Resolver Module) 2025.10, DTCG</a></li>
+<li><a href="https://www.designtokens.org/technical-reports/" target="_blank" rel="noopener noreferrer">Технічні звіти, DTCG</a></li>
 </ul>
 </section>
 

@@ -384,48 +384,48 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Figma Code Connect пов'язує компоненти в бібліотеці дизайну Figma з їхніми реалізаціями в кодовій базі. Ці зв'язки допомагають розробникам та ШІ-агентам знаходити реальний код, пов'язаний із дизайн-компонентом.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-code-connect-add">
-<h2 id="section-what-does-code-connect-add" class="glossary-term-section__title">What does Code Connect add?</h2>
-<p class="glossary-term-section__text">A design component and a code component can have different names, property values, and composition rules. A connection records how the two relate, rather than asking someone to infer the implementation from appearance.</p>
-<p class="glossary-term-section__text">For example, a Figma button might have a Size value of Large, while the code API accepts <code>size="large"</code>. Mapping that relationship makes the intended implementation easier to retrieve.</p>
-<p class="glossary-term-section__text">A connection is a reference to implementation knowledge. It does not prove that every screen using the component behaves correctly.</p>
+    <p class="glossary-term-section__text">Figma Code Connect пов'язує компоненти в бібліотеці дизайну Figma з їхніми реалізаціями в кодовій базі. Ці зв'язки допомагають розробникам та ШІ-агентам знаходити реальний код, асоційований із дизайн-компонентом.</p>
+<section class="glossary-term-section" aria-labelledby="section-code-connect">
+<h2 id="section-code-connect" class="glossary-term-section__title">Що саме додає Code Connect?</h2>
+<p class="glossary-term-section__text">Дизайн-компонент і компонент у коді можуть мати різні назви, значення властивостей та правила композиції. Зв'язок фіксує, як саме вони співвідносяться між собою, замість того щоб змушувати розробника чи ШІ здогадуватися про реалізацію за візуальним виглядом.</p>
+<p class="glossary-term-section__text">Наприклад, кнопка у Figma може мати властивість Size зі значенням Large, тоді як API коду приймає <code>size="large"</code>. Мапінг цієї відповідності значно полегшує отримання правильної кодової реалізації.</p>
+<p class="glossary-term-section__text">Такий зв'язок є посиланням на знання про реалізацію. Проте він сам по собі не гарантує, що кожен екран, який використовує цей компонент, працюватиме коректно.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-code-connect-ui-vs-cli">
-<h2 id="section-code-connect-ui-vs-cli" class="glossary-term-section__title">Code Connect UI vs. CLI</h2>
-<p class="glossary-term-section__text">Figma provides a UI for connecting design components to repository implementations and a CLI for publishing connections and code examples. The CLI's recommended template approach lets teams control the snippets and property mappings they expose.</p>
-<p class="glossary-term-section__text">The interfaces have different editing and configuration workflows. Check Figma's current comparison and access requirements before choosing one. Avoid assuming that every connection method produces the same Dev Mode snippet experience.</p>
+<section class="glossary-term-section" aria-labelledby="section-code-connect-cli">
+<h2 id="section-code-connect-cli" class="glossary-term-section__title">Інтерфейс Code Connect проти CLI</h2>
+<p class="glossary-term-section__text">Figma надає графічний інтерфейс (UI) для зв'язування компонентів дизайну з реалізаціями в репозиторії, а також інтерфейс командного рядка (CLI) для публікації зв'язків та прикладів коду. Рекомендований шаблонний підхід у CLI дозволяє командам точно контролювати фрагменти коду (snippets) і зіставлення властивостей, які вони надають.</p>
+<p class="glossary-term-section__text">Ці інтерфейси передбачають різні робочі процеси редагування та конфігурації. Ознайомтеся з актуальним порівнянням і вимогами до доступу у Figma перед вибором підходу. Не варто припускати, що будь-який спосіб зв'язування створює абсолютно однаковий досвід роботи з фрагментами коду в режимі розробника (Dev Mode).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-it-relate-to-the-figma-mcp-server">
-<h2 id="section-how-does-it-relate-to-the-figma-mcp-server" class="glossary-term-section__title">How does it relate to the Figma MCP server?</h2>
-<p class="glossary-term-section__text">The <a href="/ua/glossary/figma-mcp-server.html">Figma MCP server</a> supplies design context to a connected agent. Code Connect can enrich that context with references to the actual components in the codebase.</p>
-<p class="glossary-term-section__text">They solve related problems: MCP provides an interface for retrieving and using context; Code Connect establishes particular design-to-code mappings. Neither replaces the component's usage guidance or the application's business rules.</p>
+<section class="glossary-term-section" aria-labelledby="section-figma-mcp">
+<h2 id="section-figma-mcp" class="glossary-term-section__title">Як це співвідноситься із сервером Figma MCP?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/figma-mcp-server.html">MCP-сервер Figma</a> передає контекст дизайну підключеному агенту. Code Connect може збагачувати цей контекст прямими посиланнями на фактичні компоненти в кодовій базі.</p>
+<p class="glossary-term-section__text">Вони вирішують взаємопов'язані завдання: MCP надає інтерфейс для отримання та використання контексту, а Code Connect встановлює конкретні мапінги між дизайном і кодом. При цьому жоден із них не замінює рекомендацій щодо використання компонентів або бізнес-правил самого застосунку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-action-button">
-<h2 id="section-example-a-booking-action-button" class="glossary-term-section__title">Example: a booking action button</h2>
-<p class="glossary-term-section__text">Suppose a team maps its Figma BookingButton to a shared code component. The mapping identifies the import and supported size and emphasis options. A working example shows a pending state.</p>
-<p class="glossary-term-section__text">The implementation task still needs to specify when a booking request starts, how repeat submission is handled, and what happens after a failure. These decisions belong in the product flow and relevant documentation.</p>
-<p class="glossary-term-section__text">Review the generated use of the component against its real API, then test the surrounding interaction.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: кнопка дії бронювання</h2>
+<p class="glossary-term-section__text">Припустимо, команда зіставляє свій компонент BookingButton у Figma зі спільним компонентом у коді. Мапінг визначає шлях імпорту, а також підтримувані параметри розміру та акценту (emphasis). Робочий приклад демонструє стан очікування (pending state).</p>
+<p class="glossary-term-section__text">Проте завдання з імплементації все одно вимагає визначення: коли саме починається запит на бронювання, як обробляється повторне відправлення форми та що відбувається в разі помилки. Ці рішення належать до логіки продуктового процесу та відповідної документації.</p>
+<p class="glossary-term-section__text">Перевіряйте згенероване використання компонента на відповідність його реальному API, а потім обов'язково тестуйте супутню взаємодію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-teams-maintain">
-<h2 id="section-what-should-teams-maintain" class="glossary-term-section__title">What should teams maintain?</h2>
-<p class="glossary-term-section__text">Update mappings when component identities, imports, or supported properties change. Check representative design instances against the current released implementation. Give unresolved mappings a visible owner instead of treating them as successful connections.</p>
-<p class="glossary-term-section__text">Keep version and access details in the project's setup documentation. Treat the mapping as a maintained connection to implementation, and check the resulting behavior in the product.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що повинні підтримувати команди?</h2>
+<p class="glossary-term-section__text">Оновлюйте мапінги у разі зміни ідентифікаторів компонентів, шляхів імпорту або підтримуваних пропсів. Звіряйте показові інстанси з дизайну з актуальною випущеною реалізацією в коді. Призначайте відповідального за невирішені зв'язки замість того, щоб сприймати їх як успішно встановлені.</p>
+<p class="glossary-term-section__text">Зберігайте інформацію про версії та налаштування доступу в документації проєкту. Ставтеся до мапінгу як до регулярного процесу підтримки зв'язку з реалізацією та тестуйте отриману поведінку безпосередньо в продукті.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/figma-mcp-server.html">Figma MCP Server</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-system-documentation.html">Design System Documentation</a></li>
+<li><a href="/ua/glossary/figma-mcp-server.html">MCP-сервер Figma</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
+<li><a href="/ua/glossary/design-system-documentation.html">Документація дизайн-системи</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Code Connect introduction, Figma</a></li>
-<li><a href="https://developers.figma.com/docs/code-connect/quickstart-guide/" target="_blank" rel="noopener noreferrer">Getting started with Code Connect CLI, Figma</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Вступ до Code Connect, Figma</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/quickstart-guide/" target="_blank" rel="noopener noreferrer">Початок роботи з Code Connect CLI, Figma</a></li>
 </ul>
 </section>
 

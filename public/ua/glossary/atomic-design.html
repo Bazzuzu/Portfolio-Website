@@ -385,61 +385,61 @@
 
   <article>
     <p class="glossary-term-section__text">Атомарний дизайн (Atomic Design) — це методологія Бреда Фроста (Brad Frost) для конструювання інтерфейсів через п'ять взаємопов'язаних рівнів: атоми, молекули, організми, шаблони та сторінки. Вона допомагає командам створювати повторно використовувані елементи, постійно контролюючи їхню поведінку в контексті цілісного інтерфейсу.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-do-the-five-stages-mean">
-<h2 id="section-what-do-the-five-stages-mean" class="glossary-term-section__title">What do the five stages mean?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що означають п'ять рівнів?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Stage</th>
-<th>Flight-search example</th>
+<th>Рівень</th>
+<th>Приклад із пошуку авіаквитків</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Atoms</td>
-<td>A label, input, and button.</td>
+<td>Атоми</td>
+<td>Текстова мітка (label), поле введення (input) та кнопка (button).</td>
 </tr>
 <tr>
-<td>Molecules</td>
-<td>A labeled destination field with supporting text.</td>
+<td>Молекули</td>
+<td>Поле пункту призначення з міткою та допоміжним текстом.</td>
 </tr>
 <tr>
-<td>Organisms</td>
-<td>A search form combining route, dates, travelers, and actions.</td>
+<td>Організми</td>
+<td>Форма пошуку, що об'єднує маршрут, дати, кількість пасажирів та дії.</td>
 </tr>
 <tr>
-<td>Templates</td>
-<td>The structural arrangement of search, results, and supporting content.</td>
+<td>Шаблони</td>
+<td>Структурний каркас розміщення пошуку, результатів та супутнього контенту.</td>
 </tr>
 <tr>
-<td>Pages</td>
-<td>That arrangement populated with actual content and states.</td>
+<td>Сторінки</td>
+<td>Цей каркас, наповнений реальним контентом та різними станами.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The stages support thinking across levels of detail. Teams can move between the search form and a populated results page as they learn what the interface requires.</p>
+<p class="glossary-term-section__text">Ці рівні дають змогу перемикатися між різними масштабами деталізації. Команди можуть вільно переходити від окремої форми пошуку до повноцінно заповненої сторінки з результатами, глибше розуміючи реальні вимоги до інтерфейсу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-atomic-design-help-in-practice">
-<h2 id="section-how-does-atomic-design-help-in-practice" class="glossary-term-section__title">How does Atomic Design help in practice?</h2>
-<p class="glossary-term-section__text">A team can reuse a destination field while examining how it fits inside different search forms. The populated page exposes constraints that isolated components may miss, such as long airport names, a missing date, or an empty result set.</p>
-<p class="glossary-term-section__text">Use the method alongside component APIs, accessibility requirements, tokens, and maintenance decisions. Define names and boundaries that your team can understand, and review real product states before deciding that a reusable piece is complete.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як атомарний дизайн допомагає на практиці?</h2>
+<p class="glossary-term-section__text">Команда може повторно використовувати поле вибору пункту призначення, водночас перевіряючи, як воно інтегрується в різні форми пошуку. Заповнена реальним контентом сторінка виявляє обмеження, які легко проґавити під час проєктування ізольованих компонентів — наприклад, довгі назви аеропортів, відсутність дати чи порожній стан видачі (empty state).</p>
+<p class="glossary-term-section__text">Застосовуйте цю методологію разом із проєктуванням API компонентів, вимогами доступності (a11y), дизайн-токенами та правилами підтримки коду. Визначайте зрозумілі для вашої команди назви та межі компонентів, а також обов'язково перевіряйте реальні стани продукту, перш ніж вважати розробку повторно використовуваного елемента завершеною.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-primitives.html">Design Primitives</a></li>
-<li><a href="/ua/glossary/component-libraries.html">Component Libraries</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
+<li><a href="/ua/glossary/design-primitives.html">Примітиви дизайну (Design Primitives)</a></li>
+<li><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система (Design System)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://atomicdesign.bradfrost.com/chapter-2/" target="_blank" rel="noopener noreferrer">Atomic Design Methodology, Brad Frost</a></li>
-<li><a href="https://atomicdesign.bradfrost.com/chapter-3/" target="_blank" rel="noopener noreferrer">Tools of the Trade, Brad Frost</a></li>
+<li><a href="https://atomicdesign.bradfrost.com/chapter-2/" target="_blank" rel="noopener noreferrer">Методологія атомарного дизайну, Бред Фрост (Atomic Design Methodology, Brad Frost)</a></li>
+<li><a href="https://atomicdesign.bradfrost.com/chapter-3/" target="_blank" rel="noopener noreferrer">Інструменти ремесла, Бред Фрост (Tools of the Trade, Brad Frost)</a></li>
 </ul>
 </section>
 

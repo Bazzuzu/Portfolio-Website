@@ -385,81 +385,81 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Аудит дизайн-системи (Design System Audit) — це структурований аналіз ресурсів системи, її реалізації в коді, настанов та фактичного використання в продуктах. Він виявляє розриви й невідповідності, допомагаючи командам визначити, що саме потрібно виправити, уніфікувати, задокументувати чи вивести з експлуатації.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-a-design-system-audit-cover">
-<h2 id="section-what-should-a-design-system-audit-cover" class="glossary-term-section__title">What should a design system audit cover?</h2>
-<p class="glossary-term-section__text">Set the scope before gathering findings. Record the products, libraries, packages, versions, flows, and dates included.</p>
+    <p class="glossary-term-section__text">Аудит дизайн-системи — це структурований аналіз ресурсів системи, її реалізації в коді, супровідної документації та фактичного використання в продуктах. Він виявляє розриви й неузгодженості, дозволяючи командам визначити, що саме потрібно виправити, уніфікувати, задокументувати або вивести з експлуатації.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що повинен охоплювати аудит дизайн-системи?</h2>
+<p class="glossary-term-section__text">Визначте межі аудиту (scope) перед збиранням спостережень. Зафіксуйте перелік продуктів, бібліотек, npm-пакетів, версій, користувацьких сценаріїв (flows) та дати проведення аналізу.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Area</th>
-<th>Questions to investigate</th>
+<th>Область аналізу</th>
+<th>Питання для дослідження</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Design assets</td>
-<td>Are components current, findable, and clearly named?</td>
+<td>Ресурси дизайну (Design assets)</td>
+<td>Чи є компоненти актуальними, зручними для пошуку та зрозуміло названими?</td>
 </tr>
 <tr>
-<td>Code</td>
-<td>Which implementations and versions are actually used?</td>
+<td>Код</td>
+<td>Які реалізації та версії фактично використовуються в продакшені?</td>
 </tr>
 <tr>
-<td>Tokens</td>
-<td>Are roles consistent, and where are values overridden?</td>
+<td>Токени</td>
+<td>Чи узгоджені семантичні ролі та де саме значення перевизначаються (overridden)?</td>
 </tr>
 <tr>
-<td>Documentation</td>
-<td>Do examples match supported APIs and behavior?</td>
+<td>Документація</td>
+<td>Чи відповідають приклади підтримуваним API та реальній поведінці компонентів?</td>
 </tr>
 <tr>
-<td>Product experience</td>
-<td>Do shared parts work together in real tasks?</td>
+<td>Продуктовий досвід</td>
+<td>Чи гармонійно спільні компоненти взаємодіють між собою в реальних сценаріях?</td>
 </tr>
 <tr>
-<td>Ownership</td>
-<td>Can teams resolve a gap or request a change?</td>
+<td>Власність (Ownership)</td>
+<td>Чи розуміють команди, як закрити функціональну прогалину або подати запит на зміну?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A visual inventory is a useful starting point. It cannot establish whether the code API, keyboard behavior, or maintenance process is correct.</p>
+<p class="glossary-term-section__text">Візуальна інвентаризація — корисна відправна точка. Проте вона не здатна визначити, чи є коректними API коду, доступність керування з клавіатури або процеси підтримки системи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-three-implementations-of-a-date-field">
-<h2 id="section-example-three-implementations-of-a-date-field" class="glossary-term-section__title">Example: three implementations of a date field</h2>
-<p class="glossary-term-section__text">Suppose an audit finds three date fields with similar appearance. One uses the current shared component, one uses an old version, and one is a local implementation.</p>
-<p class="glossary-term-section__text">Check why each exists. The local field may support a genuine requirement the shared component lacks. The old version may be blocked by a compatibility issue.</p>
-<p class="glossary-term-section__text">Record the evidence, affected tasks, likely impact, owner, and proposed next step. “Replace everything with the newest field” is premature until the team understands those differences.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: три реалізації поля вибору дати</h2>
+<p class="glossary-term-section__text">Припустимо, аудит виявив три поля вибору дати (date fields) зі схожим зовнішнім виглядом. Одне використовує поточний спільний компонент, друге — застарілу версію бібліотеки, а третє є локальною самописного реалізацією.</p>
+<p class="glossary-term-section__text">З'ясуйте першопричину існування кожного з них. Локальне поле може закривати реальну бізнес-вимогу, яку спільний компонент поки не підтримує. Оновлення старої версії може блокуватися проблемами зворотної сумісності.</p>
+<p class="glossary-term-section__text">Зафіксуйте фактичні докази, зачеплені сценарії, ймовірний вплив на користувачів, відповідального (owner) та запропонований наступний крок. Рішення «замінити все на найновіший компонент» є передчасним, доки команда не зрозуміє суті цих розбіжностей.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-turn-findings-into-action">
-<h2 id="section-how-do-you-turn-findings-into-action" class="glossary-term-section__title">How do you turn findings into action?</h2>
-<p class="glossary-term-section__text">Group findings by cause, such as an unclear API, a missing interaction state, or an outdated migration guide. Separate a correction to one product from a change to the shared system.</p>
-<p class="glossary-term-section__text">Prioritize by user impact, repetition, dependencies, and effort. Assign a concrete outcome: fix a focus problem, document an exception, consolidate a duplicate, or retire an unsupported asset.</p>
-<p class="glossary-term-section__text">Keep a record of what was inspected. An audit covering two flows should not be reported as a complete organization-wide assessment.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перетворити результати аудиту на практичні дії?</h2>
+<p class="glossary-term-section__text">Згрупуйте знайдені проблеми за їхніми причинами: наприклад, незрозумілий API, відсутній стан взаємодії або застарілий посібник із міграції. Чітко відокремлюйте виправлення в межах одного конкретного продукту від змін у спільній дизайн-системі.</p>
+<p class="glossary-term-section__text">Пріоритизуйте завдання за ступенем впливу на користувача, частотою повторення, залежностями та трудовитратами. Сформулюйте конкретний результат: виправити проблему з фокусом (focus management), задокументувати виняток, консолідувати дублікат або вивести з експлуатації непідтримуваний ресурс.</p>
+<p class="glossary-term-section__text">Ведіть точний журнал того, що саме перевірялося. Аудит двох окремих сценаріїв не можна презентувати як повноцінне оцінювання в масштабі всієї організації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-system-audit-vs-accessibility-audit">
-<h2 id="section-design-system-audit-vs-accessibility-audit" class="glossary-term-section__title">Design system audit vs. accessibility audit</h2>
-<p class="glossary-term-section__text">An audit can find accessibility problems, but a design system inventory is not a WCAG conformance evaluation. That requires a defined accessibility scope and appropriate evaluation methods.</p>
-<p class="glossary-term-section__text">Likewise, passing component checks does not establish accessibility for every consuming page. Use a <a href="/ua/glossary/web-accessibility-audit.html">web accessibility audit</a> and task testing where the question concerns complete experiences.</p>
-<p class="glossary-term-section__text">Repeat the relevant checks after remediation. A backlog entry marked complete is not evidence that the original discrepancy has disappeared.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Аудит дизайн-системи проти аудиту доступності</h2>
+<p class="glossary-term-section__text">Аудит може виявити проблеми доступності, проте загальна інвентаризація дизайн-системи не є повноцінною оцінкою відповідності WCAG. Така перевірка потребує чітко визначених меж доступності та спеціалізованих методологій тестування.</p>
+<p class="glossary-term-section__text">Так само успішне проходження перевірок окремим компонентом не гарантує автоматичної доступності кожної сторінки, яка його використовує. Застосовуйте <a href="/ua/glossary/web-accessibility-audit.html">аудит веб-доступності</a> та сценарне тестування там, де оцінюється цілісний користувацький досвід.</p>
+<p class="glossary-term-section__text">Повторюйте релевантні перевірки після внесення виправлень. Задача в беклозі зі статусом «виконано» сама по собі не є доказом того, що початкова розбіжність повністю зникла.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-adoption.html">Design System Adoption</a></li>
-<li><a href="/ua/glossary/design-system-metrics.html">Design System Metrics</a></li>
-<li><a href="/ua/glossary/design-debt.html">Design Debt</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/design-system-adoption.html">Впровадження дизайн-системи (Adoption)</a></li>
+<li><a href="/ua/glossary/design-system-metrics.html">Метрики дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-debt.html">Дизайн-борг (Design Debt)</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Contribution criteria, GOV.UK Design System</a></li>
-<li><a href="https://designsystem.digital.gov/maturity-model/" target="_blank" rel="noopener noreferrer">USWDS maturity model</a></li>
-<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Evaluating Web Accessibility, W3C WAI</a></li>
+<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Критерії внеску, GOV.UK Design System</a></li>
+<li><a href="https://designsystem.digital.gov/maturity-model/" target="_blank" rel="noopener noreferrer">Модель зрілості USWDS</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Оцінювання вебдоступності, W3C WAI</a></li>
 </ul>
 </section>
 

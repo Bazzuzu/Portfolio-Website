@@ -384,72 +384,72 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Тематизація (Theming) — це практика застосування узгодженого набору значень дизайну до спільного інтерфейсу. У дизайн-системі тема змінює кольори, типографіку або інші підтримувані параметри, тоді як компоненти зберігають незмінне функціональне призначення та стабільний API.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-theming-work-with-design-tokens">
-<h2 id="section-how-does-theming-work-with-design-tokens" class="glossary-term-section__title">How does theming work with design tokens?</h2>
-<p class="glossary-term-section__text">A component can request a semantic role such as <code>color.text.primary</code>. A theme supplies the value for that role. The component does not need a separate implementation for each palette.</p>
-<p class="glossary-term-section__text">Illustrative mappings might look like this:</p>
+    <p class="glossary-term-section__text">Темізація — це практика застосування узгодженого набору значень дизайну до спільного інтерфейсу. У дизайн-системі тема змінює кольори, типографіку або інші підтримувані візуальні параметри, тоді як компоненти зберігають незмінне функціональне призначення та стабільний API.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як темізація працює з дизайн-токенами?</h2>
+<p class="glossary-term-section__text">Компонент звертається до семантичної ролі, наприклад, <code>color.text.primary</code>. Тема постачає конкретне значення для цієї ролі. Завдяки цьому компоненту не потрібна окрема реалізація для кожної нової колірної палітри.</p>
+<p class="glossary-term-section__text">Ілюстративне зіставлення ролей може виглядати так:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Role</th>
-<th>Light theme</th>
-<th>Dark theme</th>
+<th>Роль</th>
+<th>Світла тема (Light theme)</th>
+<th>Темна тема (Dark theme)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Primary text</td>
-<td>A dark neutral</td>
-<td>A light neutral</td>
+<td>Основний текст (Primary text)</td>
+<td>Темний нейтральний відтінок</td>
+<td>Світлий нейтральний відтінок</td>
 </tr>
 <tr>
-<td>Page surface</td>
-<td>A light neutral</td>
-<td>A dark neutral</td>
+<td>Поверхня сторінки (Page surface)</td>
+<td>Світлий нейтральний відтінок</td>
+<td>Темний нейтральний відтінок</td>
 </tr>
 <tr>
-<td>Link text</td>
-<td>A darker brand color</td>
-<td>A lighter brand color</td>
+<td>Текст посилання (Link text)</td>
+<td>Темніший фірмовий колір</td>
+<td>Світліший фірмовий колір</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The table describes roles, not tested color combinations. Verify the actual values and states in the product.</p>
+<p class="glossary-term-section__text">Таблиця описує функціональні ролі, а не протестовані колірні комбінації. Завжди перевіряйте реальні значення та контрастність станів у готовому продукті.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-theme-vs-mode-vs-component-variant">
-<h2 id="section-theme-vs-mode-vs-component-variant" class="glossary-term-section__title">Theme vs. mode vs. component variant</h2>
-<p class="glossary-term-section__text">A <strong>theme</strong> groups coordinated values. A design tool's <strong>mode</strong> is one mechanism for selecting values in a variable collection. A <strong>component variant</strong> represents a supported variation, such as primary and secondary button emphasis.</p>
-<p class="glossary-term-section__text">These concepts can work together, but changing a Figma mode does not by itself implement the corresponding runtime theme. Design assets, generated tokens, and application styles need an agreed mapping.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Тема проти режиму та варіанта компонента</h2>
+<p class="glossary-term-section__text"><strong>Тема (Theme)</strong> об'єднує узгоджені значення параметрів. <strong>Режим (Mode)</strong> в інструменті дизайну (як-от у Figma) — це механізм перемикання значень у колекції змінних. <strong>Варіант компонента (Component variant)</strong> позначає підтримувану функціональну варіацію компонента, наприклад, первинну чи вторинну акцентність кнопки.</p>
+<p class="glossary-term-section__text">Ці поняття можуть працювати разом, проте перемикання режиму у Figma саме по собі не створює відповідну тему під час виконання в коді (runtime theme). Ресурси дизайну, згенеровані токени та стилі додатку потребують єдиного узгодженого мапування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-two-brands-with-light-and-dark-appearances">
-<h2 id="section-example-two-brands-with-light-and-dark-appearances" class="glossary-term-section__title">Example: two brands with light and dark appearances</h2>
-<p class="glossary-term-section__text">Suppose two booking products share a component library. Both use the same field behavior and keyboard interactions, but each has its own accent and typography choices. Each brand also supports light and dark appearances.</p>
-<p class="glossary-term-section__text">Keep brand identity and color appearance explicit. Decide which combinations are supported, how a user preference is selected and retained, and what happens when no preference is available.</p>
-<p class="glossary-term-section__text">A component may use a component-specific token that points to a semantic role. Keep that indirection only when it gives the team a useful scope for future changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: два бренди зі світлим і темним оформленням</h2>
+<p class="glossary-term-section__text">Припустимо, два продукти онлайн-бронювання використовують спільну бібліотеку компонентів. Обидва спираються на однакову поведінку полів вводу та керування з клавіатури, проте кожен має власні акцентні кольори та шрифтові пари. Крім того, кожен бренд підтримує як світлий, так і темний режими.</p>
+<p class="glossary-term-section__text">Розділяйте ідентичність бренду та колірний режим. Чітко визначте, які комбінації офіційно підтримуються, як обираються та зберігаються налаштування користувача і що використовується за замовчуванням, якщо вибір відсутній.</p>
+<p class="glossary-term-section__text">Компонент може використовувати специфічний компонентний токен (component token), що посилається на семантичну роль. Зберігайте цей додатковий рівень абстракції лише тоді, коли він дійсно дає команді практичну гнучкість для майбутніх змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-you-test-across-themes">
-<h2 id="section-what-should-you-test-across-themes" class="glossary-term-section__title">What should you test across themes?</h2>
-<p class="glossary-term-section__text">Check readable text, focus indicators, control boundaries, validation states, selected states, and charts. Review images and icons that may disappear or convey the wrong meaning on a different surface.</p>
-<p class="glossary-term-section__text">Test in the application, including nested surfaces and overlays. A token palette cannot establish accessibility for every foreground and background pairing.</p>
-<p class="glossary-term-section__text">For multi-brand systems, document which differences are intentional and which behavior stays shared. A theme should not silently change what an action does.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно тестувати між різними темами?</h2>
+<p class="glossary-term-section__text">Перевіряйте читабельність тексту, індикатори фокуса (focus rings), межі елементів керування, стани валідації, стани вибору (selected states) та графіки. Звертайте увагу на ілюстрації та іконки, які можуть зникати або втрачати сенс на іншій поверхні.</p>
+<p class="glossary-term-section__text">Тестуйте безпосередньо в додатку, враховуючи вкладені поверхні (nested surfaces) та модальні шари (overlays). Палітра токенів сама по собі не гарантує доступність для кожної можливої пари кольорів фону та переднього плану.</p>
+<p class="glossary-term-section__text">Для мультибрендових систем чітко документуйте, які відмінності є запланованими, а яка поведінка повинна залишатися строго спільною. Тема ніколи не повинна приховано змінювати функціональну дію кнопки чи елемента інтерфейсу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/figma-variables-modes.html">Figma Variables and Modes</a></li>
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/wcag-color-contrast.html">WCAG Color Contrast</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени (Semantic Tokens)</a></li>
+<li><a href="/ua/glossary/figma-variables-modes.html">Змінні та режими у Figma (Variables & Modes)</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
+<li><a href="/ua/glossary/wcag-color-contrast.html">Колірний контраст за WCAG</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developer.atlassian.com/platform/forge/design-tokens-and-theming/" target="_blank" rel="noopener noreferrer">Design tokens and theming, Atlassian</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Contrast (Minimum), W3C WAI</a></li>
+<li><a href="https://developer.atlassian.com/platform/forge/design-tokens-and-theming/" target="_blank" rel="noopener noreferrer">Дизайн-токени та темізація, Atlassian</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Контрастність (мінімальна), W3C WAI</a></li>
 </ul>
 </section>
 

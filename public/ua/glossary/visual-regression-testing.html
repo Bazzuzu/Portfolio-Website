@@ -384,39 +384,37 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Тестування візуальної регресії порівнює знімки екрана користувацького інтерфейсу із затвердженими еталонними зображеннями (бейзлайнами) для виявлення неочікуваних змін у зовнішньому вигляді. Цей метод дозволяє своєчасно зафіксувати зсуви у відступах, композиції макета, типографіці та станах компонентів після оновлення коду.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-visual-regression-testing-work">
-<h2 id="section-how-does-visual-regression-testing-work" class="glossary-term-section__title">How does visual regression testing work?</h2>
+    <p class="glossary-term-section__text">Тестування візуальної регресії порівнює знімки екрана інтерфейсу користувача із затвердженими еталонними зображеннями (baselines), щоб виявити неочікувані візуальні зміни. Воно допомагає зафіксувати небажані зрушення у відступах, сітці макета, типографіці та станах компонентів після оновлення коду.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює тестування візуальної регресії?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Choose a state and approve a baseline.</strong> Capture an intentionally rendered page or component at a specific viewport, with representative content.</li>
-<li><strong>Keep the capture environment stable.</strong> Use consistent browser, operating system, fonts, viewport, and test data. Control animations and other changing content where practical.</li>
-<li><strong>Review the differences.</strong> Inspect the baseline, new screenshot, and diff. Fix unintended changes and update the baseline only after approving the new appearance.</li>
+<li><strong>Оберіть стан і затвердьте еталон (baseline).</strong> Зробіть знімок коректно відрендереної сторінки чи компонента з репрезентативним контентом при точно заданому розмірі в'юпорта.</li>
+<li><strong>Забезпечте стабільність середовища знімків.</strong> Використовуйте однакову версію браузера, операційну систему, шрифти, роздільну здатність екрана та тестові дані. За можливості контролюйте або вимикайте анімації та динамічний контент.</li>
+<li><strong>Проаналізуйте відмінності (diff).</strong> Зіставте еталон, новий скриншот і карту розбіжностей. Виправте ненавмисні візуальні дефекти та оновлюйте базовий еталон лише після свідомого погодження нового вигляду.</li>
 </ol>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-change-dialog-on-mobile">
-<h2 id="section-example-a-booking-change-dialog-on-mobile" class="glossary-term-section__title">Example: A booking-change dialog on mobile</h2>
-<p class="glossary-term-section__text">Capture the open dialog at a mobile viewport with a long fare description and both action buttons visible. A change to a shared spacing token pushes the confirmation button below the visible area. The diff flags the layout shift. The reviewer opens the preview to check whether the action remains reachable and whether the new layout is acceptable.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: діалогове вікно зміни бронювання на мобільних пристроях</h2>
+<p class="glossary-term-section__text">Ви фіксуєте відкрите діалогове вікно на мобільному в'юпорті з розлогим описом тарифу та двома видимими кнопками дій. Зміна спільного токена відступів призводить до того, що кнопка підтвердження зміщується за межі видимої області екрана. Порівняння скриншотів фіксує це зміщення макета. Рев'ювер відкриває прев'ю, щоб перевірити, чи залишається дія доступною та чи є таке розташування прийнятним.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-you-test-alongside-screenshots">
-<h2 id="section-what-should-you-test-alongside-screenshots" class="glossary-term-section__title">What should you test alongside screenshots?</h2>
-<p class="glossary-term-section__text">Use interaction tests to check whether the dialog opens, the right button submits, and focus returns to the trigger when it closes. A screenshot can show the dialog at one moment. Keyboard and assistive technology checks cover behavior a screenshot cannot capture.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що варто тестувати разом зі скриншотами?</h2>
+<p class="glossary-term-section__text">Використовуйте тести взаємодії, щоб перевірити, чи відкривається діалогове вікно, чи спрацьовує потрібна кнопка відправки та чи повертається фокус на тригерний елемент після закриття. Скриншот відображає компонент лише в один статичний момент часу. Тести навігації з клавіатури та перевірки для допоміжних технологій покривають поведінку, яку візуальний знімок зафіксувати не здатний.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-engineering.html">Design Engineering</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-qa.html">Design QA</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
+<li><a href="/ua/glossary/design-engineering.html">Дизайн-інженерія (Design Engineering)</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду</a></li>
+<li><a href="/ua/glossary/design-qa.html">Контроль якості дизайну (Design QA)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://playwright.dev/docs/test-snapshots" target="_blank" rel="noopener noreferrer">Visual Comparisons, Playwright</a></li>
-<li><a href="https://storybook.js.org/docs/writing-tests/visual-testing" target="_blank" rel="noopener noreferrer">Visual Tests, Storybook</a></li>
+<li><a href="https://playwright.dev/docs/test-snapshots" target="_blank" rel="noopener noreferrer">Візуальні порівняння знімків, Playwright</a></li>
+<li><a href="https://storybook.js.org/docs/writing-tests/visual-testing" target="_blank" rel="noopener noreferrer">Візуальне тестування компонентів, Storybook</a></li>
 </ul>
 </section>
 

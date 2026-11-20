@@ -384,36 +384,36 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Вебкомпоненти (Web Components) — це набір стандартів вебплатформи для створення модульних кастомних елементів інтерфейсу з інкапсульованою логікою поведінки, а за потреби — із власною внутрішньою розміткою та ізольованими стилями. Вони дозволяють розробникам створювати власні HTML-теги, які функціонують нарівні з вбудованими елементами браузера.</p>
-<p class="glossary-term-section__text">They can support a shared component library across applications. The integration still needs testing with each application's framework, rendering approach, and accessibility requirements.</p>
-<section class="glossary-term-section" aria-labelledby="section-main-building-blocks">
-<h2 id="section-main-building-blocks" class="glossary-term-section__title">Main building blocks</h2>
+    <p class="glossary-term-section__text">Веб-компоненти (Web Components) — це набір стандартів веб-платформи для створення багаторазових кастомних елементів інтерфейсу з інкапсульованою поведінкою та, за потреби, внутрішньою розміткою й ізольованими стилями. Вони дозволяють розробникам створювати власні HTML-елементи, які можна використовувати в розмітці нарівні з вбудованими елементами браузера.</p>
+<p class="glossary-term-section__text">Вони можуть слугувати основою для спільної бібліотеки компонентів у різних застосунках. Проте інтеграція все одно потребує тестування з фреймворком кожного застосунку, його підходом до рендерингу та вимогами до доступності.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Основні будівельні блоки</h2>
 <ul class="glossary-term-ul">
-<li>Custom elements define new HTML elements and their lifecycle behavior.</li>
-<li>Shadow DOM can provide a separate internal DOM tree and style encapsulation.</li>
-<li>HTML templates provide reusable markup, while slots allow content to be inserted into a component's Shadow DOM.</li>
+<li>Користувацькі елементи (Custom Elements) визначають нові HTML-елементи та поведінку їхнього життєвого циклу.</li>
+<li>Shadow DOM може забезпечувати окреме внутрішнє дерево DOM та інкапсуляцію стилів.</li>
+<li>HTML-шаблони (Templates) надають багаторазову розмітку, а слоти (slots) дозволяють вставляти зовнішній контент у Shadow DOM компонента.</li>
 </ul>
-<p class="glossary-term-section__text">A custom element does not have to use every technology in this group. For example, using Shadow DOM is an implementation choice.</p>
+<p class="glossary-term-section__text">Кастомному елементу не обов'язково використовувати кожну технологію з цієї групи. Наприклад, використання Shadow DOM є архітектурним вибором реалізації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-shared-booking-status-element">
-<h2 id="section-example-a-shared-booking-status-element" class="glossary-term-section__title">Example: a shared booking-status element</h2>
-<p class="glossary-term-section__text">A design system could expose a booking-status element that accepts a defined status value and renders the approved label and visual treatment.</p>
-<p class="glossary-term-section__text">Its contract should document accepted values, updates, accessible output, and theming. If the status is unknown, the element should display an appropriate fallback rather than imply that the booking is confirmed.</p>
-<p class="glossary-term-section__text">For interactive components, the contract also needs events, focus behavior, keyboard operation, and disabled states.</p>
+<section class="glossary-term-section" aria-labelledby="section-booking-status">
+<h2 id="section-booking-status" class="glossary-term-section__title">Приклад: спільний елемент booking-status</h2>
+<p class="glossary-term-section__text">Дизайн-система може надавати елемент booking-status, який приймає визначене значення статусу та рендерить затверджену текстову мітку й візуальне оформлення.</p>
+<p class="glossary-term-section__text">Його контракт повинен документувати допустимі значення, правила оновлення, доступний вивід (accessible output) і тематизацію. Якщо статус невідомий, елемент має відображати відповідний резервний стан (fallback), а не створювати хибне враження, що бронювання підтверджено.</p>
+<p class="glossary-term-section__text">Для інтерактивних компонентів контракт також має охоплювати події, поведінку фокуса, керування з клавіатури та неактивні стани (disabled states).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-system-checks">
-<h2 id="section-design-system-checks" class="glossary-term-section__title">Design-system checks</h2>
-<p class="glossary-term-section__text">Verify accessible names, roles, and states in the assembled page. A custom element name does not automatically provide the semantics of a native button or form control.</p>
-<p class="glossary-term-section__text">Test forms, focus movement, styling hooks, and event handling in consuming applications. Prefer native HTML behavior where it meets the requirement, and document additional behavior where custom implementation is necessary.</p>
-<p class="glossary-term-section__text">Encapsulation can help manage component internals, but it does not remove integration or maintenance work.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Перевірки для дизайн-системи</h2>
+<p class="glossary-term-section__text">Перевіряйте доступні імена (accessible names), ролі та стани на зібраній сторінці. Сама лише назва кастомного елемента не надає автоматично семантики нативної кнопки чи елемента керування форми.</p>
+<p class="glossary-term-section__text">Тестуйте форми, переміщення фокуса, точки підключення стилів (styling hooks) та обробку подій у застосунках-споживачах. Надавайте перевагу нативній поведінці HTML там, де вона задовольняє вимоги, і документуйте додаткову поведінку, якщо кастомна реалізація є необхідною.</p>
+<p class="glossary-term-section__text">Інкапсуляція допомагає керувати внутрішньою логікою компонента, але вона не усуває роботи з інтеграції та підтримки.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура (Component Architecture)</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система (Design System)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Архітектура Headless UI (Headless UI Architecture)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">

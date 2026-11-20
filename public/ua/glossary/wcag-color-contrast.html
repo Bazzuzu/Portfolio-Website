@@ -388,56 +388,56 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Колірний контраст за WCAG (WCAG Color Contrast) вимірює різницю відносної яскравості між двома кольорами. WCAG використовує коефіцієнт контрастності для визначення мінімальних порогових значень для тексту та візуальної інформації, необхідної користувачам для розпізнавання елементів керування, станів інтерфейсу та графіки.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-the-wcag-aa-contrast-ratios">
-<h2 id="section-what-are-the-wcag-aa-contrast-ratios" class="glossary-term-section__title">What are the WCAG AA contrast ratios?</h2>
+    <p class="glossary-term-section__text">Колірний контраст за WCAG вимірює різницю у відносній яскравості (relative luminance) між двома кольорами. WCAG використовує коефіцієнти контрастності (contrast ratios) для встановлення мінімальних нормативів для тексту, а також для візуальної інформації, необхідної користувачам для розпізнавання елементів керування, їхніх станів і графіки.</p>
+<section class="glossary-term-section" aria-labelledby="section-wcag-aa">
+<h2 id="section-wcag-aa" class="glossary-term-section__title">Які коефіцієнти контрастності вимагає WCAG рівня AA?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>What you are checking</th>
-<th>Minimum contrast</th>
+<th>Об'єкт перевірки</th>
+<th>Мінімальний коефіцієнт контрастності</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Standard text and images of text</td>
-<td><strong>4.5:1</strong> against the background under criterion 1.4.3.</td>
+<td>Звичайний текст і зображення у вигляді тексту</td>
+<td><strong>4.5:1</strong> відносно фону згідно з критерієм 1.4.3.</td>
 </tr>
 <tr>
-<td>Large text and images of large text</td>
-<td><strong>3:1</strong> under 1.4.3. Large text is at least 18 pt regular or 14 pt bold, approximately 24 CSS px or 18.7 CSS px, respectively.</td>
+<td>Великий текст і зображення великого тексту</td>
+<td><strong>3:1</strong> згідно з критерієм 1.4.3. Великим вважається текст розміром не менше 18 pt для звичайного накреслення або 14 pt для жирного (приблизно 24 CSS-пікселі або 18,7 CSS-пікселя відповідно).</td>
 </tr>
 <tr>
-<td>Visual cues needed to identify a control or state, and parts of graphics needed to understand the content</td>
-<td><strong>3:1</strong> against adjacent colors under criterion 1.4.11, subject to its exceptions.</td>
+<td>Візуальні підказки для ідентифікації елементів керування або їхніх станів, а також значущі частини графіки</td>
+<td><strong>3:1</strong> відносно суміжних кольорів згідно з критерієм 1.4.11 (з урахуванням передбачених винятків).</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Test the rendered foreground against the background it appears on. Placeholder text is subject to the text-contrast requirement. An icon that repeats a visible label may be decorative. For an icon-only button, check the visible icon against its background and give the button an accessible name. Keep a text or shape cue where color alone would convey an error or state.</p>
+<p class="glossary-term-section__text">Тестуйте відрендерений колір переднього плану безпосередньо проти фону, на якому він відображається. Текст плейсхолдера (placeholder) також підпадає під вимоги до контрастності тексту. Іконка, що дублює видимий текстовий підпис, може вважатися декоративною. Проте для кнопки, що містить лише іконку, обов'язково перевірте контрастність іконки відносно її фону та забезпечте доступне ім'я кнопки (accessible name). Завжди додавайте текстовий підказник або форму фігури там, де колір є єдиним засобом передачі помилки чи стану.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-testing-a-semantic-token-in-two-themes">
-<h2 id="section-example-testing-a-semantic-token-in-two-themes" class="glossary-term-section__title">Example: Testing a semantic token in two themes</h2>
-<p class="glossary-term-section__text">A design system uses <code>text.secondary</code> for normal-size text. On a white surface, <code>#596579</code> gives a contrast ratio of about <strong>5.90:1</strong>. The same token value on a dark surface, <code>#171C24</code>, gives about <strong>2.90:1</strong>, below the 4.5:1 minimum for standard text. Using <code>#AAB5C5</code> for <code>text.secondary</code> on that dark surface gives about <strong>8.25:1</strong>.</p>
-<p class="glossary-term-section__text">Document which foreground and surface tokens can be paired in each theme. Test those pairs in the components that use them, including relevant states such as errors, selection, and focus. For transparency or gradients, check the actual backgrounds the content can appear against. Use the unrounded ratio for a pass or fail decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: тестування семантичного токена у двох колірних темах</h2>
+<p class="glossary-term-section__text">Дизайн-система використовує токен <code>text.secondary</code> для тексту стандартного розміру. На білій поверхні колір <code>#596579</code> забезпечує коефіцієнт контрастності близько <strong>5.90:1</strong>. Той самий токен на темній поверхні <code>#171C24</code> дає коефіцієнт близько <strong>2.90:1</strong>, що значно нижче обов'язкового мінімуму 4.5:1 для звичайного тексту. Призначення кольору <code>#AAB5C5</code> для токена <code>text.secondary</code> на цій темній поверхні дає коефіцієнт близько <strong>8.25:1</strong>.</p>
+<p class="glossary-term-section__text">Задокументуйте, які саме токени переднього плану та поверхонь дозволено поєднувати в кожній темі. Протестуйте ці пари в реальних компонентах, які їх споживають, включно з відповідними станами, такими як помилка, вибір (selection) та фокус введення. У разі використання прозорості (transparency) чи градієнтів перевіряйте контрастність проти всіх фактичних фонів, на яких може з'являтися контент. Для прийняття остаточного рішення про проходження перевірки (pass/fail) використовуйте точне неокруглене значення коефіцієнта.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/keyboard-accessibility.html">Keyboard Accessibility & Focus Management</a></li>
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/keyboard-accessibility.html">Клавіатурна доступність та керування фокусом</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени (Semantic Tokens)</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Understanding Contrast (Minimum), W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html" target="_blank" rel="noopener noreferrer">Understanding Non-text Contrast, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank" rel="noopener noreferrer">Understanding Use of Color, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Contrast (Minimum), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Non-text Contrast, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank" rel="noopener noreferrer">Розуміння критерію Use of Color, W3C WAI</a></li>
 </ul>
 </section>
 

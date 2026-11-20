@@ -387,14 +387,14 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Style Dictionary — це інструмент збирання з відкритим вихідним кодом, що перетворює централізовані дизайн-токени на готові файли для використання різними платформами. З єдиного джерела визначень він може генерувати кастомні властивості CSS для вебу, ресурси для iOS, константи для Android та інші формати.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-a-style-dictionary-build-work">
-<h2 id="section-how-does-a-style-dictionary-build-work" class="glossary-term-section__title">How does a Style Dictionary build work?</h2>
-<p class="glossary-term-section__text">Choose the source files, configure a platform, then specify how tokens should be transformed and written. A <strong>transform</strong> can change a token’s name or value for the target. A <strong>format</strong> decides how the result appears in a file. A transform group gives a platform a reusable set of transforms.</p>
+    <p class="glossary-term-section__text">Style Dictionary — це інструмент збірки з відкритим вихідним кодом, який перетворює спільні дизайн-токени у файли для подальшого використання застосунками. Процес збірки може генерувати кастомні властивості CSS (CSS Custom Properties) для вебу та різні вихідні формати для інших платформ із єдиного джерела визначень.</p>
+<section class="glossary-term-section" aria-labelledby="section-style-dictionary">
+<h2 id="section-style-dictionary" class="glossary-term-section__title">Як працює збірка у Style Dictionary?</h2>
+<p class="glossary-term-section__text">Оберіть вихідні файли, налаштуйте платформу, а потім вкажіть, як саме токени мають трансформуватися та записуватися. <strong>Трансформація (transform)</strong> може змінювати назву або значення токена для цільової платформи. <strong>Формат (format)</strong> визначає, як саме результат виводиться у файл. Група трансформацій (transform group) надає платформі багаторазовий набір трансформацій.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-building-css-variables">
-<h2 id="section-example-of-building-css-variables" class="glossary-term-section__title">Example of building CSS variables</h2>
-<p class="glossary-term-section__text">Put one DTCG number token in <code>tokens.json</code>:</p>
+<section class="glossary-term-section" aria-labelledby="section-css">
+<h2 id="section-css" class="glossary-term-section__title">Приклад генерації CSS-змінних</h2>
+<p class="glossary-term-section__text">Додайте один числовий токен стандарту DTCG у файл <code>tokens.json</code>:</p>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-json">{
   "opacity": {
@@ -402,7 +402,7 @@
   }
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">Save the following as <code>config.json</code>. It converts token paths to kebab-case names and uses the built-in CSS variable format.</p>
+<p class="glossary-term-section__text">Збережіть наступну конфігурацію як <code>config.json</code>. Вона конвертує шляхи токенів у назви формату kebab-case та використовує вбудований формат CSS-змінних:</p>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-json">{
   "source": ["tokens.json"],
@@ -417,30 +417,30 @@
   }
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">With Style Dictionary installed, run <code>npx style-dictionary build</code> from the directory containing both files. The expected output is <code>--opacity-muted: 0.6;</code> under <code>:root</code> in <code>dist/tokens.css</code>. An application can load that file and use the property where the design calls for that opacity.</p>
+<p class="glossary-term-section__text">Встановивши Style Dictionary, виконайте команду <code>npx style-dictionary build</code> у директорії, де розташовані обидва файли. Очікуваним результатом буде рядок <code>--opacity-muted: 0.6;</code> всередині правила <code>:root</code> у файлі <code>dist/tokens.css</code>. Застосунок може підключити цей файл і використовувати дану властивість усюди, де дизайн передбачає відповідну прозорість.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-themes-and-aliases-affect-the-build">
-<h2 id="section-how-do-themes-and-aliases-affect-the-build" class="glossary-term-section__title">How do themes and aliases affect the build?</h2>
-<p class="glossary-term-section__text">Decide which token values apply to each theme before generating its output. You might build one file per theme or emit variables under different CSS selectors. With <code>css/variables</code>, the <code>outputReferences</code> option can preserve eligible aliases as CSS variable references. Check that the referenced properties exist in the output the application loads.</p>
-<p class="glossary-term-section__text">Style Dictionary supports DTCG inputs. Its documentation identifies DTCG 2025.10 support as incomplete. Check the version you use against the types, references, and theme behavior your project needs. Run the build on a small fixture, inspect the output, and load it in one consuming component before bringing over the full token set.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як теми та аліаси впливають на збірку?</h2>
+<p class="glossary-term-section__text">Визначте, які значення токенів застосовуються до кожної теми, перед генерацією вихідних файлів. Ви можете збирати один файл для кожної теми або генерувати змінні під різними CSS-селекторами. У форматі <code>css/variables</code> опція <code>outputReferences</code> дозволяє зберігати валідні аліаси як посилання на інші CSS-змінні. Переконайтеся, що властивості, на які посилаються аліаси, дійсно присутні у вихідному файлі, який завантажує застосунок.</p>
+<p class="glossary-term-section__text">Style Dictionary підтримує вхідні дані специфікації DTCG. У документації зазначено, що підтримка DTCG 2025.10 є неповною. Зіставте версію, яку ви використовуєте, із типами даних, посиланнями та поведінкою тем, необхідними вашому проєкту. Протестуйте збірку на невеликому тестовому наборі (fixture), перевірте вихідний код і завантажте його в один компонент-споживач, перш ніж переносити весь масив токенів.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Design Tokens Format Module (DTCG)</a></li>
-<li><a href="/ua/glossary/design-engineering.html">Design Engineering</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени (Design Tokens)</a></li>
+<li><a href="/ua/glossary/design-tokens-format-module-dtcg.html">Формат дизайн-токенів DTCG (Design Tokens Format Module)</a></li>
+<li><a href="/ua/glossary/design-engineering.html">Дизайн-інженерія (Design Engineering)</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду (Design-to-Code Workflow)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Configuration, Style Dictionary</a></li>
-<li><a href="https://styledictionary.com/reference/hooks/formats/predefined/" target="_blank" rel="noopener noreferrer">Built-in formats, Style Dictionary</a></li>
-<li><a href="https://styledictionary.com/info/dtcg/" target="_blank" rel="noopener noreferrer">DTCG support, Style Dictionary</a></li>
-<li><a href="https://styledictionary.com/getting-started/using_the_cli/" target="_blank" rel="noopener noreferrer">Using the CLI, Style Dictionary</a></li>
-<li><a href="https://styledictionary.com/reference/hooks/transforms/predefined/" target="_blank" rel="noopener noreferrer">Built-in transforms, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Конфігурація, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/reference/hooks/formats/predefined/" target="_blank" rel="noopener noreferrer">Вбудовані формати, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/info/dtcg/" target="_blank" rel="noopener noreferrer">Підтримка DTCG, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/getting-started/using_the_cli/" target="_blank" rel="noopener noreferrer">Використання CLI, Style Dictionary</a></li>
+<li><a href="https://styledictionary.com/reference/hooks/transforms/predefined/" target="_blank" rel="noopener noreferrer">Вбудовані трансформації, Style Dictionary</a></li>
 </ul>
 </section>
 

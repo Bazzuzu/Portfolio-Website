@@ -385,77 +385,71 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Дизайн-система — це керований комплекс узгоджених рішень, повторно використовуваних компонентів та стандартів для проєктування й розробки цифрового продукту або лінійки продуктів. Вона формує єдиний підхід команд до створення інтерфейсів та регламентує процеси оновлення спільних елементів.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-design-system-include">
-<h2 id="section-what-does-a-design-system-include" class="glossary-term-section__title">What does a design system include?</h2>
+    <p class="glossary-term-section__text">Дизайн-система — це підтримуваний набір спільних рішень, багаторазових компонентів і рекомендацій для проєктування та розробки продукту або сімейства продуктів. Вона надає командам єдиний підхід до створення інтерфейсів та налагоджений процес удосконалення спільних елементів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що включає дизайн-система?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Part</th>
-<th>What it helps teams decide</th>
+<th>Складова</th>
+<th>Які рішення допомагає приймати командам</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Foundations and tokens</td>
-<td>Which colors, spacing, and other design decisions to reuse</td>
+<td>Фундаментальні основи та токени</td>
+<td>Які кольори, відступи та інші дизайн-рішення використовувати повторно</td>
 </tr>
 <tr>
-<td>Components</td>
-<td>How common controls such as buttons and text inputs look and behave</td>
+<td>Компоненти</td>
+<td>Як виглядають і поводяться базові елементи керування, такі як кнопки та поля введення тексту</td>
 </tr>
 <tr>
-<td><a href="/ua/glossary/pattern-library.html">Patterns</a> and guidance</td>
-<td>How to combine components for tasks such as entering an address or recovering from an error</td>
+<td><a href="/ua/glossary/pattern-library.html">Патерни</a> та настанови</td>
+<td>Як об'єднувати компоненти для виконання сценаріїв, наприклад, введення адреси чи відновлення після помилки</td>
 </tr>
 <tr>
-<td>Maintenance</td>
-<td>Who reviews changes, how teams contribute, and how products adopt updates</td>
+<td>Підтримка та супровід</td>
+<td>Хто рецензує зміни, як команди вносять свій внесок і як продукти впроваджують оновлення</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Start with the parts your teams repeatedly need. The GOV.UK Design System is a public example with styles, components, patterns, and contribution criteria.</p>
+<p class="glossary-term-section__text">Починайте з тих елементів, яких ваші команди потребують постійно. GOV.UK Design System є відкритим еталонним прикладом, що містить стилі, компоненти, патерни та чіткі критерії внесення змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-system-vs-component-library-vs-ui-kit">
-<h2 id="section-design-system-vs-component-library-vs-ui-kit" class="glossary-term-section__title">Design system vs. component library vs. UI kit</h2>
-<p class="glossary-term-section__text">A <strong>UI kit</strong> typically provides reusable design assets in a design tool. A <strong>component library</strong> provides reusable interface components. A design system connects those assets and implementations to usage guidance and maintenance. A team can use a library from another organization and document the additional decisions its own products need.</p>
+<section class="glossary-term-section" aria-labelledby="section-vs-vs-ui-kit">
+<h2 id="section-vs-vs-ui-kit" class="glossary-term-section__title">Дизайн-система vs бібліотека компонентів vs UI kit</h2>
+<p class="glossary-term-section__text"><strong>UI kit</strong> зазвичай надає набір графічних ресурсів для багаторазового використання в інструменті дизайну. <strong>Бібліотека компонентів</strong> надає готові багаторазові інтерфейсні компоненти в коді. Дизайн-система поєднує ці ресурси та програмні реалізації з правилами використання, архітектурними принципами та процесами підтримки. Команда може взяти бібліотеку іншої організації та задокументувати додаткові специфічні рішення, необхідні саме для її продуктів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-a-shared-button">
-<h2 id="section-example-of-a-shared-button" class="glossary-term-section__title">Example of a shared button</h2>
-<p class="glossary-term-section__text">Suppose two teams use a primary button in checkout and account settings. They agree on how the button presents a label and keyboard focus, which tokens it uses, and when a secondary action should have less visual emphasis. The <a href="/ua/glossary/component-libraries.html">component library</a> provides the implementation. The system documents when to use it and how to request a change.</p>
-<p class="glossary-term-section__text">If checkout introduces a pending state, the teams review what happens to the label, feedback, and repeat submissions. They decide which behavior belongs in the shared component and which belongs to checkout. They test the button in both products. Checkout owns the payment request and its outcome, while the system can document how the button presents a pending action.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад спільного використання кнопки</h2>
+<p class="glossary-term-section__text">Припустимо, дві команди використовують основну кнопку (primary button) у процесі оформлення замовлення (checkout) та в налаштуваннях облікового запису. Вони узгоджують, як кнопка відображає текстову мітку та фокус клавіатури, які токени вона використовує, і в яких випадках другорядна дія повинна мати менший візуальний акцент. <a href="/ua/glossary/component-libraries.html">Бібліотека компонентів</a> надає кодову реалізацію. Дизайн-система документує, коли саме її застосовувати та як подати запит на внесення змін.</p>
+<p class="glossary-term-section__text">Якщо в чекауті з'являється стан очікування (pending state), команди спільно аналізують, що відбувається з міткою кнопки, візуальним зворотним зв'язком та запобіганням повторній відправці форми. Вони вирішують, яка поведінка належить до спільного компонента, а яка є специфікою чекауту. Кнопка тестується в обох продуктових контекстах. Команда чекауту відповідає за платіжний запит та його результат, тоді як система документує стандарт того, як кнопка презентує дію в стані очікування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-start-a-design-system">
-<h2 id="section-how-do-you-start-a-design-system" class="glossary-term-section__title">How do you start a design system?</h2>
-<p class="glossary-term-section__text">Pick one recurring pattern with a clear owner and two real places to try it. Document what should stay consistent and what product teams can configure. Check the result in context and record how consuming teams will get future fixes. Use feedback from the first two implementations to decide what to document or share next.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як почати створення дизайн-системи?</h2>
+<p class="glossary-term-section__text">Оберіть один повторюваний патерн із чітким відповідальним власником і два реальних продуктових місця для його апробації. Задокументуйте, що саме має залишатися незмінним, а що продуктові команди можуть конфігурувати. Перевірте результат у реальному контексті та зафіксуйте процес отримання майбутніх виправлень командами-споживачами. Використовуйте зворотний зв'язок від перших двох реалізацій, щоб визначити, що документувати або виносити в спільний доступ наступним кроком.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Архітектура компонентів</a></li>
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
-<li><a href="/ua/glossary/component-libraries.html">Component Libraries</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-documentation.html">Design System Documentation</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-audit.html">Design System Audit</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-ready-design-system.html">AI-ready Design System</a></li>
+<li><a href="/ua/glossary/component-libraries.html">Бібліотеки компонентів</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/design-system-documentation.html">Документація дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-system-audit.html">Аудит дизайн-системи</a></li>
+<li><a href="/ua/glossary/ai-ready-design-system.html">Дизайн-система, готова до ШІ (AI-ready Design System)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
 <li><a href="https://design-system.service.gov.uk/" target="_blank" rel="noopener noreferrer">GOV.UK Design System</a></li>
-<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Button, GOV.UK Design System</a></li>
-<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Contribution criteria, GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Кнопка (Button), GOV.UK Design System</a></li>
+<li><a href="https://design-system.service.gov.uk/community/contribution-criteria/" target="_blank" rel="noopener noreferrer">Критерії участі та внесення змін (Contribution criteria), GOV.UK Design System</a></li>
 </ul>
 </section>
 

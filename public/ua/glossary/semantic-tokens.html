@@ -385,68 +385,66 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Семантичний токен — це дизайн-токен, назва якого відображає функціональне призначення значення (наприклад, колір тексту посилання), а не його візуальний зміст. Команди можуть використовувати одну й ту саму семантичну роль у різних компонентах, прив'язуючи до неї різні значення для світлої та темної тем.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-semantic-tokens-work-across-themes">
-<h2 id="section-how-do-semantic-tokens-work-across-themes" class="glossary-term-section__title">How do semantic tokens work across themes?</h2>
-<p class="glossary-term-section__text">A checkout link might use <code>color.text.link</code>. In a light theme, that role might point to <code>color.blue.600</code>. In a dark theme, it might point to <code>color.blue.300</code>. The link still asks for the color assigned to link text. The theme supplies the appropriate value.</p>
+    <p class="glossary-term-section__text">Семантичний токен — це дизайн-токен, назва якого описує функціональне призначення значення, наприклад колір тексту посилання. Команди можуть повторно використовувати одну й ту саму роль у різних компонентах і призначати їй різні значення для світлої та темної тем.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як семантичні токени працюють між темами?</h2>
+<p class="glossary-term-section__text">Посилання на екрані оформлення замовлення може використовувати токен <code>color.text.link</code>. У світлій темі ця роль може посилатися на <code>color.blue.600</code>. У темній темі вона може вказувати на <code>color.blue.300</code>. При цьому компонент посилання завжди звертається саме за кольором, закріпленим за текстом посилання, а активна тема надає відповідне конкретне значення.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Name</th>
-<th>What the name tells you</th>
+<th>Назва</th>
+<th>Що повідомляє назва токена</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>color.blue.600</code></td>
-<td>A step in a base palette</td>
+<td>Крок у базовій шкалі палітри</td>
 </tr>
 <tr>
 <td><code>color.text.link</code></td>
-<td>The role the color serves in the interface</td>
+<td>Семантична роль, яку колір виконує в інтерфейсі</td>
 </tr>
 <tr>
 <td><code>button.primary.background</code></td>
-<td>A decision scoped to a specific component and variant</td>
+<td>Рішення, обмежене областю видимості конкретного компонента та його варіанта</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These names are illustrative. The palette step number is local to this system. Document how each role should be used and verify each foreground and background pairing in the actual interface.</p>
+<p class="glossary-term-section__text">Ці назви наведені як ілюстрація. Номер кроку палітри є специфічним для кожної системи. Документуйте правила використання кожної семантичної ролі та ретельно перевіряйте контрастність кожної пари переднього плану й фону в реальному інтерфейсі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-is-a-semantic-token-the-same-as-an-alias">
-<h2 id="section-is-a-semantic-token-the-same-as-an-alias" class="glossary-term-section__title">Is a semantic token the same as an alias?</h2>
-<p class="glossary-term-section__text">“Semantic” describes what the name means. An alias is a reference to another token. A semantic token can use an alias to reuse a palette value, or it can store a value directly. The reference is a mechanism for sharing the value.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чи є семантичний токен тим самим, що й аліас?</h2>
+<p class="glossary-term-section__text">Термін «семантичний» описує зміст і призначення імені токена. «Аліас» (alias) — це технічний механізм посилання на інший токен. Семантичний токен може використовувати аліас для звернення до значення базової палітри або зберігати значення безпосередньо. Посилання є лише засобом спільного використання значення між рівнями.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-name-and-introduce-semantic-tokens">
-<h2 id="section-how-do-you-name-and-introduce-semantic-tokens" class="glossary-term-section__title">How do you name and introduce semantic tokens?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як формувати назви та впроваджувати семантичні токени?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Start with a repeated purpose.</strong> Inspect where teams use a color or spacing decision. Identify the purpose those uses share.</li>
-<li><strong>Name the role.</strong> Make the name useful when someone chooses a token. For example, link text and a selected background can use different roles even when they happen to share a value.</li>
-<li><strong>Set values per theme and test them.</strong> Check representative components, states, and backgrounds in the contexts where people use them.</li>
-<li><strong>Move consumers to the shared role.</strong> Review each use before replacing the original values. If a component needs its own change policy, document a component token for that decision.</li>
+<li><strong>Почніть із повторюваного призначення.</strong> Дослідіть, де саме команди застосовують певні кольори або відступи. Визначте спільну функціональну мету цих випадків використання.</li>
+<li><strong>Назвіть семантичну роль.</strong> Сформулюйте назву так, щоб вона була інтуїтивно зрозумілою під час вибору токена в процесі дизайну та розробки. Наприклад, текст посилання та вибраний фон мають мати різні семантичні ролі, навіть якщо вони тимчасово мають однакове значення кольору.</li>
+<li><strong>Визначте значення для кожної теми та протестуйте їх.</strong> Перевірте репрезентативні компоненти, стани взаємодії та фонові підкладки в реальних користувацьких сценаріях.</li>
+<li><strong>Переведіть споживачів на спільну роль.</strong> Проаналізуйте кожне входження перед заміною оригінальних жорстко закодованих значень. Якщо окремий компонент вимагає власних ізольованих правил оновлення, створіть для цього рішення окремий компонентний токен.</li>
 </ol>
-<p class="glossary-term-section__text">Change the narrowest token that matches the intended scope. To update link text across checkout and settings, change the link text role. To update only one component, inspect whether it already has a dedicated token or setting.</p>
+<p class="glossary-term-section__text">Змінюйте токен на найвужчому рівні, який точно відповідає масштабу запланованих змін. Щоб оновити колір посилань одночасно в чекауті та налаштуваннях, змініть значення семантичної ролі тексту посилання. Якщо ж потрібно змінити лише один компонент, перевірте, чи має він виділений компонентний токен або локальний параметр.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/design-primitives.html">Design Primitives</a></li>
-<li><a href="/ua/glossary/figma-variables-modes.html">Figma Variables & Modes</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-theming.html">Theming</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени</a></li>
+<li><a href="/ua/glossary/design-primitives.html">Дизайн-примітиви</a></li>
+<li><a href="/ua/glossary/figma-variables-modes.html">Змінні та режими Figma (Variables & Modes)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Архітектура компонентів</a></li>
+<li><a href="/ua/glossary/design-system-theming.html">Тематизація (Theming)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Design Tokens, Atlassian Design System</a></li>
-<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
-<li><a href="https://www.designtokens.org/tr/2025.10/resolver/" target="_blank" rel="noopener noreferrer">Design Tokens Resolver Module 2025.10, DTCG</a></li>
+<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Дизайн-токени, Atlassian Design System</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Модуль формату дизайн-токенів (Format Module) 2025.10, DTCG</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/resolver/" target="_blank" rel="noopener noreferrer">Модуль резолвера дизайн-токенів (Resolver Module) 2025.10, DTCG</a></li>
 </ul>
 </section>
 

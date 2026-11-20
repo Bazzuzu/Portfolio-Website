@@ -384,44 +384,44 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Робочий процес «код у дизайн» (Code-to-Design Workflow) переносить реалізований інтерфейс у середовище дизайну для інспекції, обговорення чи подальшого дослідження. Він дозволяє імпортувати відрендерені екрани як редаговані шари дизайну або безпосередньо інтегрувати кодові компоненти в дизайн-процес.</p>
-<section class="glossary-term-section" aria-labelledby="section-when-is-code-to-design-useful">
-<h2 id="section-when-is-code-to-design-useful" class="glossary-term-section__title">When is code-to-design useful?</h2>
-<p class="glossary-term-section__text">A product may have changed in code while design files remain behind. Capturing the current interface can help a team compare states, discuss a flow, or explore a revision using the implementation as a reference.</p>
-<p class="glossary-term-section__text">It can also help when an interactive prototype was built directly in code. The team can review its visible states together rather than treating an earlier design file as an exact record of the latest interface.</p>
+    <p class="glossary-term-section__text">Робочий процес «від коду до дизайну» (code-to-design workflow) переносить реалізований інтерфейс у середовище дизайну для інспекції, обговорення чи подальшого дослідження. Він дозволяє захоплювати відрендерені екрани як редаговані шари дизайну або підключати кодові компоненти до процесу проєктування.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли підхід «від коду до дизайну» є корисним?</h2>
+<p class="glossary-term-section__text">Продукт може зазнавати змін у коді в той час, як макети у файлах дизайну застарівають. Захоплення актуального стану інтерфейсу допомагає команді порівнювати стани, обговорювати користувацькі сценарії (flows) або досліджувати зміни, спираючись на реалізацію як на еталон.</p>
+<p class="glossary-term-section__text">Цей підхід також є незамінним, коли інтерактивний прототип створювався безпосередньо в коді. Команда може спільно проаналізувати його видимі стани, замість того щоб вважати старий дизайн-файл точним відображенням найновішого інтерфейсу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-a-quote-request-flow">
-<h2 id="section-example-reviewing-a-quote-request-flow" class="glossary-term-section__title">Example: reviewing a quote-request flow</h2>
-<p class="glossary-term-section__text">Suppose an AI-assisted prototype includes an initial form, validation errors, a loading state, and confirmation. The designer captures each important state and arranges them together for review.</p>
-<p class="glossary-term-section__text">The review identifies an unclear error message and a missing recovery route. The team records the changes, implements them in code, and checks the running flow again.</p>
-<p class="glossary-term-section__text">The captured screens support discussion. They do not replace testing the interaction, data handling, or accessibility of the working page.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: огляд процесу запиту комерційної пропозиції</h2>
+<p class="glossary-term-section__text">Припустимо, прототип, створений за допомогою ШІ, містить початкову форму, помилки валідації, стан завантаження та екран підтвердження. Дизайнер захоплює кожен ключовий стан і розташовує їх поруч на полотні для командного огляду.</p>
+<p class="glossary-term-section__text">Під час перевірки виявляється незрозуміле повідомлення про помилку та відсутність сценарію відновлення після збою. Команда фіксує необхідні зміни, впроваджує їх у коді та знову перевіряє працездатний сценарій.</p>
+<p class="glossary-term-section__text">Захоплені екрани слугують основою для обговорення. Проте вони не замінюють тестування інтерактивності, обробки даних або доступності живої вебсторінки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-does-capture-preserve-the-original-components">
-<h2 id="section-does-capture-preserve-the-original-components" class="glossary-term-section__title">Does capture preserve the original components?</h2>
-<p class="glossary-term-section__text">Not necessarily. A capture can reproduce visible layers without preserving the code's component boundaries, design-library instances, or business logic.</p>
-<p class="glossary-term-section__text">Figma's documented code-to-canvas workflow uses a supported client and the remote MCP server to capture live browser UI into editable Figma layers. The guide distinguishes capture from creating content with existing library components.</p>
-<p class="glossary-term-section__text">Check what a particular method preserves. Editable text or an associated variable does not establish a complete connection to the original component or source code.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чи зберігає захоплення оригінальні компоненти?</h2>
+<p class="glossary-term-section__text">Не обов'язково. Захоплення може відтворити видимі графічні шари без збереження меж компонентів із коду, інстансів бібліотеки дизайну або бізнес-логіки.</p>
+<p class="glossary-term-section__text">Описаний у документації Figma робочий процес «з коду на полотно» (code-to-canvas) використовує підтримуваний клієнт та віддалений MCP-сервер для перетворення живого UI з браузера на редаговані шари Figma. Документація чітко розрізняє звичайне захоплення шарів і створення контенту з використанням наявних компонентів бібліотеки.</p>
+<p class="glossary-term-section__text">Обов'язково перевіряйте, які саме сутності зберігає обраний метод. Редагований текст або пов'язана змінна ще не означають наявності повноцінного зв'язку з оригінальним компонентом або вихідним кодом.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-code-to-design-vs-design-to-code">
-<h2 id="section-code-to-design-vs-design-to-code" class="glossary-term-section__title">Code-to-design vs. design-to-code</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/design-to-code-workflow.html">Design-to-code</a> starts with a design representation and creates or updates implementation. Code-to-design starts with implementation and brings information back into design work.</p>
-<p class="glossary-term-section__text">A round trip may include both. It does not imply continuous, lossless, bidirectional synchronization. Teams still need to identify the authoritative implementation, the reviewed state, and how decisions become changes.</p>
-<p class="glossary-term-section__text">Capture representative states with safe test data, note the implementation version, and keep a route back to the running interface. A static visual reference is useful when its scope and age are clear.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Порівняння: «від коду до дизайну» та «від дизайну до коду»</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес «від дизайну до коду»</a> починається з представлення в дизайні та створює чи оновлює реалізацію. Робочий процес «від коду до дизайну», навпаки, бере за основу реалізацію і повертає інформацію назад у площину дизайну.</p>
+<p class="glossary-term-section__text">Повний цикл (round trip) може поєднувати обидва підходи. Проте це не передбачає безперервної, двосторонньої синхронізації без втрат. Командам усе одно необхідно чітко визначати авторитетне джерело реалізації, узгоджений стан інтерфейсу та механізм перетворення рішень на зміни в коді.</p>
+<p class="glossary-term-section__text">Фіксуйте показові стани з безпечними тестовими даними, позначайте версію реалізації та зберігайте шлях повернення до працюючого інтерфейсу. Статичний візуальний референс є дійсно корисним лише тоді, коли його контекст і актуальність чітко визначені.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-<li><a href="/ua/glossary/figma-mcp-server.html">Figma MCP Server</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду</a></li>
+<li><a href="/ua/glossary/figma-mcp-server.html">MCP-сервер Figma</a></li>
 <li><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a></li>
-<li><a href="/ua/glossary/design-qa.html">Design QA</a></li>
+<li><a href="/ua/glossary/design-qa.html">Контроль якості дизайну (Design QA)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/" target="_blank" rel="noopener noreferrer">Code to canvas, Figma</a></li>
-<li><a href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener noreferrer">Figma MCP server introduction</a></li>
+<li><a href="https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/" target="_blank" rel="noopener noreferrer">Перенесення коду на полотно (Code to canvas), Figma</a></li>
+<li><a href="https://developers.figma.com/docs/figma-mcp-server/" target="_blank" rel="noopener noreferrer">Вступ до Figma MCP-сервера</a></li>
 </ul>
 </section>
 

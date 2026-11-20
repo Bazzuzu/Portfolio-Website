@@ -385,46 +385,46 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Робочий процес перенесення дизайну в код (design-to-code workflow) — це наскрізний процес трансформації дизайн-макетів у працездатний інтерфейс продукту. Він поєднує компоненти з макетів, токени та специфікації взаємодії з виробничим кодом, забезпечуючи верифікацію результату безпосередньо у браузері або додатку.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-design-to-code-workflow-include">
-<h2 id="section-what-does-a-design-to-code-workflow-include" class="glossary-term-section__title">What does a design-to-code workflow include?</h2>
+    <p class="glossary-term-section__text">Робочий процес «дизайн у код» (design-to-code workflow) — це структурований процес перетворення концепції та макетів дизайну на функціональний інтерфейс продукту. Він пов'язує компоненти з дизайн-інструментів, токени та специфікації взаємодії з виробничим кодом, забезпечуючи верифікацію результату безпосередньо у браузері або застосунку.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що охоплює робочий процес «дизайн у код»?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Map designs to existing components.</strong> Identify which production components, variants, and states the design uses. Resolve gaps with the team before building a new component.</li>
-<li><strong>Build platform outputs from shared tokens.</strong> For example, transform a token source into CSS custom properties. Decide which source owns the values and where changes get reviewed.</li>
-<li><strong>Implement the interaction.</strong> Assemble existing components and connect them to product data, validation, loading, and error handling.</li>
-<li><strong>Review a working preview.</strong> Check the layout with realistic content and test keyboard behavior, focus, and state changes. Add automated checks for states that are easy to break.</li>
+<li><strong>Зіставлення дизайну з наявними компонентами (Component mapping).</strong> Визначте, які виробничі компоненти, варіанти та стани використовуються в макеті. Узгодьте всі розбіжності та прогалини в команді до того, як створювати новий компонент.</li>
+<li><strong>Генерація платформозалежних файлів зі спільних токенів.</strong> Наприклад, автоматична трансформація джерела токенів у користувацькі властивості CSS (CSS custom properties). Визначте першоджерело значень (single source of truth) та процес рев'ю змін.</li>
+<li><strong>Реалізація логіки взаємодії.</strong> Зберіть інтерфейс із готових компонентів і підключіть до них реальні продуктовий стан, валідацію форм, індикатори завантаження та обробку помилок.</li>
+<li><strong>Перевірка робочого прев'ю.</strong> Протестуйте верстку на реальному контенті, перевірте реакцію на клавіатурне керування, переходи фокусу та зміну станів. Налаштуйте автоматизовані перевірки для критичних станів інтерфейсу, які легко порушити.</li>
 </ol>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-change-dialog">
-<h2 id="section-example-a-booking-change-dialog" class="glossary-term-section__title">Example: A booking-change dialog</h2>
-<p class="glossary-term-section__text">A designer uses the shared Dialog and Button in Figma. The developer finds their production counterparts, reuses the spacing and color tokens, and connects the dialog to the booking service. In the preview, the team checks a long fare description on mobile, a failed request, and where keyboard focus goes after the dialog closes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: Діалогове вікно зміни бронювання</h2>
+<p class="glossary-term-section__text">Дизайнер використовує спільні компоненти Dialog і Button у Figma. Розробник знаходить їхні відповідники у кодовій базі, повторно використовує системні токени відступів та кольорів і підключає діалогове вікно до сервісу бронювання. У попередньому перегляді (preview) команда перевіряє довгий опис тарифу на мобільному пристрої, обробку помилки запиту та те, куди повертається фокус клавіатури після закриття модального вікна.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-can-the-team-automate">
-<h2 id="section-what-can-the-team-automate" class="glossary-term-section__title">What can the team automate?</h2>
-<p class="glossary-term-section__text">A token build can produce platform files, and screenshot comparisons can flag visual changes. With the Code Connect CLI, teams can publish usage snippets for mapped production components in Figma Dev Mode. The team still owns decisions about component behavior, real data, and whether the working interface matches the design intent.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що команда може автоматизувати?</h2>
+<p class="glossary-term-section__text">Збірка токенів (token build) здатна автоматично генерувати конфігураційні файли для різних платформ, а візуальне регресійне тестування зіставленням скриншотів — вчасно сигналізувати про небажані зміни стилів. За допомогою інтерфейсу командного рядка (CLI) Code Connect команди можуть публікувати готові фрагменти коду для прив'язаних компонентів безпосередньо у Figma Dev Mode. Водночас команда продовжує самостійно відповідати за поведінку компонентів, підключення реальних даних та відповідність працюючого інтерфейсу первинному задуму дизайну.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-where-does-design-handoff-fit">
-<h2 id="section-where-does-design-handoff-fit" class="glossary-term-section__title">Where does design handoff fit?</h2>
-<p class="glossary-term-section__text">Design handoff communicates the decisions needed for implementation: component references, data, states, interactions, and acceptance criteria. It can continue throughout the work rather than ending with a static file.</p>
-<p class="glossary-term-section__text">For an AI-assisted workflow, the <a href="/ua/glossary/figma-mcp-server.html">Figma MCP server</a> can supply design context and <a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> can identify related code. Review the resulting experience through <a href="/ua/glossary/design-qa.html">design QA</a>.</p>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/code-to-design-workflow.html">code-to-design workflow</a> can bring the current implementation back into design review. Neither direction guarantees automatic synchronization.</p>
+<section class="glossary-term-section" aria-labelledby="section-design-handoff">
+<h2 id="section-design-handoff" class="glossary-term-section__title">Яке місце займає передача дизайну в розробку (Design Handoff)?</h2>
+<p class="glossary-term-section__text">Передача дизайну в розробку (design handoff) забезпечує комунікацію рішень, необхідних для реалізації: посилань на компоненти, структури даних, станів, логіки взаємодії та критеріїв приймання (acceptance criteria). Це не одноразовий фінал із передачею статичного файлу, а безперервний процес комунікації впродовж усієї розробки.</p>
+<p class="glossary-term-section__text">Для робочих процесів з підтримкою штучного інтелекту <a href="/ua/glossary/figma-mcp-server.html">Figma MCP сервер</a> може надавати контекст макетів, а <a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> — співставляти його з відповідним кодом. Отриманий результат перевіряється на етапі <a href="/ua/glossary/design-qa.html">дизайн-QA (контролю якості дизайну)</a>.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/code-to-design-workflow.html">Робочий процес «код у дизайн»</a> дозволяє синхронізувати актуальну кодову реалізацію назад у макети для подальшого дизайн-рев'ю. Проте жоден із цих напрямків не гарантує повної автоматичної синхронізації без участі людини.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Токени дизайну</a></li>
 <li><a href="/ua/glossary/style-dictionary.html">Style Dictionary</a></li>
-<li><a href="/ua/glossary/design-engineering.html">Design Engineering</a></li>
-<li><a href="/ua/glossary/vibe-coding.html">Vibe Coding</a></li>
-<li><a href="/ua/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
+<li><a href="/ua/glossary/design-engineering.html">Дизайн-інжиніринг</a></li>
+<li><a href="/ua/glossary/vibe-coding.html">Вайб-кодинг (Vibe Coding)</a></li>
+<li><a href="/ua/glossary/visual-regression-testing.html">Тестування візуальної регресії</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma Code Connect, Figma Developer Docs</a></li>
-<li><a href="https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/" target="_blank" rel="noopener noreferrer">Use Code Snippets in Dev Mode, Figma</a></li>
-<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Configuration, Style Dictionary</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma Code Connect, документація для розробників Figma</a></li>
+<li><a href="https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/" target="_blank" rel="noopener noreferrer">Використання фрагментів коду в Dev Mode, Figma</a></li>
+<li><a href="https://styledictionary.com/reference/config/" target="_blank" rel="noopener noreferrer">Конфігурація, Style Dictionary</a></li>
 </ul>
 </section>
 

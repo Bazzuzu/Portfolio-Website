@@ -384,79 +384,79 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Міграція дизайн-системи (Design System Migration) — це переведення продуктів з одного набору спільних ресурсів дизайну чи реалізацій на інший. Вона може охоплювати версії компонентів, назви токенів, бібліотеки дизайну, API, документацію та робочі процеси, що від них залежать.</p>
-<section class="glossary-term-section" aria-labelledby="section-migration-vs-versioning">
-<h2 id="section-migration-vs-versioning" class="glossary-term-section__title">Migration vs. versioning</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/design-system-versioning-semver.html">Versioning</a> communicates changes under a defined compatibility policy. Migration is the work consuming teams perform to adopt them.</p>
-<p class="glossary-term-section__text">A change described as a visual refresh may still alter layout, interaction, or API expectations. Identify the actual consumer impact rather than assuming the release label describes all necessary work.</p>
+    <p class="glossary-term-section__text">Міграція дизайн-системи — це переведення продуктів з одного набору спільних ресурсів дизайну або кодових реалізацій на інший. Вона може охоплювати версії компонентів, назви токенів, бібліотеки макетів, API, документацію та робочі процеси, що від них залежать.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Міграція проти версіонування</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/design-system-versioning-semver.html">Версіонування</a> комунікує зміни відповідно до чітко визначеної політики сумісності. Міграція — це практична інженерна робота, яку команди-споживачі виконують для їх впровадження.</p>
+<p class="glossary-term-section__text">Зміна, описана як звичайне «візуальне оновлення» (visual refresh), все одно може змінити геометрію верстки (layout), взаємодію або очікування API. Визначайте реальний вплив на споживачів, а не покладайтеся на те, що назва релізу описує весь обсяг необхідних робіт.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-practical-migration-plan">
-<h2 id="section-a-practical-migration-plan" class="glossary-term-section__title">A practical migration plan</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Практичний план міграції</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Step</th>
-<th>What to establish</th>
+<th>Етап</th>
+<th>Що необхідно визначити та зафіксувати</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Inventory</td>
-<td>Affected products, versions, overrides, and owners</td>
+<td>Інвентаризація</td>
+<td>Зачеплені продукти, поточні версії, локальні перевизначення (overrides) та власники</td>
 </tr>
 <tr>
-<td>Map changes</td>
-<td>Replacements, removed options, and intentional behavior differences</td>
+<td>Мапування змін</td>
+<td>Компоненти на заміну, видалені параметри та навмисні зміни в поведінці</td>
 </tr>
 <tr>
-<td>Pilot</td>
-<td>One representative flow with meaningful edge cases</td>
+<td>Пілотний проєкт</td>
+<td>Один репрезентативний користувацький сценарій із критичними граничними випадками</td>
 </tr>
 <tr>
-<td>Validate</td>
-<td>Behavior, accessibility, visual changes, and integration</td>
+<td>Валідація</td>
+<td>Логіка поведінки, доступність, візуальні зміни та інтеграція з оточенням</td>
 </tr>
 <tr>
-<td>Roll out</td>
-<td>Team responsibilities, sequence, support, and retirement conditions</td>
+<td>Розгортання (Roll out)</td>
+<td>Зони відповідальності команд, черговість, канали підтримки та умови виведення з експлуатації</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Record the starting state so the team can distinguish migration effects from other product changes.</p>
+<p class="glossary-term-section__text">Зафіксуйте початковий стан системи, щоб команда могла чітко відокремити наслідки міграції від інших паралельних продуктових змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-replacing-a-date-picker">
-<h2 id="section-example-replacing-a-date-picker" class="glossary-term-section__title">Example: replacing a date picker</h2>
-<p class="glossary-term-section__text">Suppose a new shared date picker changes its value format and error behavior. Updating the import alone would leave the consuming form with the wrong assumptions.</p>
-<p class="glossary-term-section__text">The pilot checks parsing, locale display, keyboard operation, invalid dates, and the submitted value. It also reviews layout with existing error messages and help text.</p>
-<p class="glossary-term-section__text">The team documents the mapping, updates design examples, and identifies which remaining flows need manual attention. A codemod may help with a mechanical replacement; it cannot decide every interaction or business rule.</p>
+<section class="glossary-term-section" aria-labelledby="section-date-picker">
+<h2 id="section-date-picker" class="glossary-term-section__title">Приклад: заміна компонента вибору дати (Date Picker)</h2>
+<p class="glossary-term-section__text">Припустимо, новий спільний вибір дати змінює формат вихідного значення (value format) та логіку обробки помилок. Просте оновлення шляху імпорту залишить форму з некоректними припущеннями щодо даних.</p>
+<p class="glossary-term-section__text">Пілотний запуск перевіряє парсинг, відображення локалі, керування з клавіатури, обробку некоректних дат та фінальне значення, що відправляється. Також тестується поведінка верстки поруч із наявними повідомленнями про помилки та допоміжним текстом (help text).</p>
+<p class="glossary-term-section__text">Команда документує таблицю відповідності (mapping), оновлює приклади в дизайн-системі та визначає, які решта сценаріїв вимагають ручного втручання. Автоматизований скрипт (codemod) може допомогти з механічною заміною коду, проте він не здатний ухвалити рішення щодо кожного нюансу взаємодії чи бізнес-правила.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-manage-a-phased-migration">
-<h2 id="section-how-do-you-manage-a-phased-migration" class="glossary-term-section__title">How do you manage a phased migration?</h2>
-<p class="glossary-term-section__text">Define what can coexist, for how long, and who maintains compatibility during the transition. Make exceptions and blockers visible.</p>
-<p class="glossary-term-section__text">Give consumers a tested example and a way to request support. Publish deprecation and removal conditions with enough practical information to act on them. Carbon's migration documentation is an example of separating design and development guidance for a specific system change.</p>
-<p class="glossary-term-section__text">Plan recovery for a failed rollout. Reverting a UI package does not necessarily reverse related data or configuration changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як керувати поетапною міграцією?</h2>
+<p class="glossary-term-section__text">Чітко визначте, які версії можуть співіснувати, протягом якого часу і хто підтримує сумісність у перехідний період. Робіть винятки та блокери прозорими для всіх.</p>
+<p class="glossary-term-section__text">Надайте командам-споживачам протестовані зразки коду та зручний канал для звернень за підтримкою. Публікуйте умови депрекації (deprecation) та остаточного видалення компонентів із достатнім обсягом практичних інструкцій. Документація міграції Carbon Design System є чудовим прикладом розділення настанов для дизайнерів та розробників для кожної конкретної зміни в системі.</p>
+<p class="glossary-term-section__text">Складіть план відновлення (rollback) на випадок невдалого розгортання. Відкат версії UI-пакета не обов'язково автоматично скасовує пов'язані зміни в структурі даних або конфігураціях.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-is-the-migration-complete">
-<h2 id="section-when-is-the-migration-complete" class="glossary-term-section__title">When is the migration complete?</h2>
-<p class="glossary-term-section__text">Use explicit acceptance criteria, such as verified target versions, resolved exceptions, updated documentation, and the removal of unsupported resources.</p>
-<p class="glossary-term-section__text">Check representative product tasks after rollout. A completed dependency update is evidence of a code change, not by itself evidence that the migrated experience works.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли міграцію можна вважати завершеною?</h2>
+<p class="glossary-term-section__text">Використовуйте чіткі критерії приймання: підтверджені цільові версії в усіх репозиторіях, розв'язані винятки, оновлена документація та повне видалення непідтримуваних ресурсів.</p>
+<p class="glossary-term-section__text">Протестуйте репрезентативні продуктові сценарії після завершення релізу. Успішно оновлена залежність у <code>package.json</code> є свідченням зміни коду, але сама по собі не гарантує, що мігрований інтерфейс працює бездоганно.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-system-versioning-semver.html">Design System Versioning and SemVer</a></li>
-<li><a href="/ua/glossary/design-system-adoption.html">Design System Adoption</a></li>
-<li><a href="/ua/glossary/design-system-audit.html">Design System Audit</a></li>
-<li><a href="/ua/glossary/design-qa.html">Design QA</a></li>
+<li><a href="/ua/glossary/design-system-versioning-semver.html">Версіонування дизайн-систем (SemVer)</a></li>
+<li><a href="/ua/glossary/design-system-adoption.html">Впровадження дизайн-системи (Adoption)</a></li>
+<li><a href="/ua/glossary/design-system-audit.html">Аудит дизайн-системи</a></li>
+<li><a href="/ua/glossary/design-qa.html">Контроль якості дизайну (Design QA)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.carbondesignsystem.com/getting-started/migrating/guide/overview" target="_blank" rel="noopener noreferrer">Migration guide overview, Carbon Design System</a></li>
-<li><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Semantic Versioning 2.0.0</a></li>
+<li><a href="https://www.carbondesignsystem.com/getting-started/migrating/guide/overview" target="_blank" rel="noopener noreferrer">Огляд посібника з міграції, Carbon Design System</a></li>
+<li><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Семантичне версіонування 2.0.0 (Semantic Versioning)</a></li>
 </ul>
 </section>
 

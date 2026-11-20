@@ -391,60 +391,60 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Альтернативний текст (Alt text) — це короткий текстовий еквівалент зображення, який зазвичай вказується через HTML-атрибут <code>alt</code>. Він передає призначення або зміст зображення в контексті, щоб користувачі могли зрозуміти інформацію або скористатися контентом без візуального перегляду.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-alt-text-say">
-<h2 id="section-what-should-alt-text-say" class="glossary-term-section__title">What should alt text say?</h2>
+    <p class="glossary-term-section__text">Альтернативний текст (alt text) — це короткий текстовий еквівалент зображення, який зазвичай передається через HTML-атрибут <code>alt</code>. Він передає призначення або зміст зображення в контексті сторінки, щоб користувачі могли зрозуміти контент або взаємодіяти з ним, не бачачи самого зображення.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має містити альтернативний текст?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Image purpose</th>
-<th>Text alternative</th>
+<th>Призначення зображення</th>
+<th>Текстова альтернатива</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Informative</strong></td>
-<td>Convey the detail the image adds to the page. Describe the information someone would miss if the image were unavailable.</td>
+<td><strong>Інформативне</strong></td>
+<td>Передайте зміст, який зображення додає до сторінки. Опишіть інформацію, яку людина втратить, якщо зображення буде недоступним.</td>
 </tr>
 <tr>
-<td><strong>Decorative or fully repeated in nearby text</strong></td>
-<td>Use an empty attribute, <code>alt=""</code>, for an HTML image that adds no information or action. Screen readers can skip it.</td>
+<td><strong>Декоративне або повністю дубльоване сусіднім текстом</strong></td>
+<td>Використовуйте порожній атрибут, <code>alt=""</code>, для HTML-зображення, яке не несе смислового навантаження чи дії. Програми зчитування з екрана (screen readers) зможуть його пропустити.</td>
 </tr>
 <tr>
-<td><strong>The only content in a link or button</strong></td>
-<td>Name the destination or action. An image that opens a booking should help name the link “View booking.”</td>
+<td><strong>Єдиний вміст посилання або кнопки</strong></td>
+<td>Назвіть пункт призначення або дію. Зображення, що відкриває бронювання, має формувати назву посилання, наприклад «Переглянути бронювання».</td>
 </tr>
 <tr>
-<td><strong>Complex, such as a chart or map</strong></td>
-<td>Identify the image in the short alternative and provide its essential details in nearby text, a linked description, or a data table. Pick the format that preserves the information people need.</td>
+<td><strong>Складне (діаграма, графік або карта)</strong></td>
+<td>Ідентифікуйте зображення в короткій альтернативі, а його ключові деталі надайте в сусідньому тексті, за посиланням на опис або в таблиці даних. Оберіть формат, що збереже всю необхідну інформацію.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-three-images-on-a-hotel-page">
-<h2 id="section-example-three-images-on-a-hotel-page" class="glossary-term-section__title">Example: Three images on a hotel page</h2>
-<p class="glossary-term-section__text">An atmospheric lobby photo beside an overview may be decorative. A photo that documents the accessible entrance could use “Step-free entrance with automatic sliding doors” if that is what the photo shows and the detail is missing from the text. A thumbnail that is the only content of a link to the full gallery could use “View hotel photos.”</p>
-<p class="glossary-term-section__text">Write the alternative for the role the image plays on each page. If an image sits beside visible text within the same link and adds no useful information, use <code>alt=""</code> and let the text name the link. Keep the empty attribute in the HTML. If it is omitted, some screen readers may announce the file name. When reviewing the page, check what a screen reader announces and whether someone can still complete the task with the image unavailable.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: три зображення на сторінці готелю</h2>
+<p class="glossary-term-section__text">Атмосферна фотографія вестибюля поруч із загальним описом може бути суто декоративною. Фотографія, що демонструє доступний вхід для людей з інвалідністю, може мати опис «Безбар'єрний вхід з автоматичними розсувними дверима», якщо саме це зображено на фото і цієї деталі немає в основному тексті. Мініатюра (thumbnail), яка є єдиним вмістом посилання на повну галерею, може використовувати «Переглянути фотографії готелю».</p>
+<p class="glossary-term-section__text">Складайте альтернативний текст відповідно до ролі, яку зображення відіграє на конкретній сторінці. Якщо зображення розташоване поруч із видимим текстом у межах одного посилання і не додає корисної інформації, використовуйте <code>alt=""</code>, дозволяючи тексту слугувати назвою посилання. Обов'язково залишайте порожній атрибут в HTML-коді. Якщо його повністю пропустити, деякі скрінрідери можуть озвучити ім'я файлу зображення. Під час перевірки сторінки обов'язково протестуйте, що саме озвучує зчитувач екрана і чи може користувач успішно виконати завдання без відображення зображення.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">Understanding Non-text Content, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank" rel="noopener noreferrer">An alt Decision Tree, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_blank" rel="noopener noreferrer">Decorative Images, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_blank" rel="noopener noreferrer">Functional Images, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank" rel="noopener noreferrer">Complex Images, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" target="_blank" rel="noopener noreferrer">Розуміння нетекстового контенту, W3C WAI (Understanding Non-text Content, W3C WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank" rel="noopener noreferrer">Дерево прийняття рішень щодо alt, W3C WAI (An alt Decision Tree, W3C WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_blank" rel="noopener noreferrer">Декоративні зображення, W3C WAI (Decorative Images, W3C WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/functional/" target="_blank" rel="noopener noreferrer">Функціональні зображення, W3C WAI (Functional Images, W3C WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/images/complex/" target="_blank" rel="noopener noreferrer">Складні зображення, W3C WAI (Complex Images, W3C WAI)</a></li>
 </ul>
 </section>
 

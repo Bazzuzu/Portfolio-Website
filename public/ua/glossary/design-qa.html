@@ -384,76 +384,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Контроль якості дизайну (Design QA) — це перевірка реалізованого інтерфейсу на відповідність затвердженому дизайну та вимогам до користувацького досвіду. Вона контролює, чи працюючий продукт коректно відображає інформацію та поводиться згідно з очікуваннями в різних станах, із різним контентом, на різних пристроях і способах введення.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-design-qa-cover">
-<h2 id="section-what-does-design-qa-cover" class="glossary-term-section__title">What does design QA cover?</h2>
-<p class="glossary-term-section__text">A useful review considers the task, not only how closely a screenshot resembles a design file.</p>
+    <p class="glossary-term-section__text">Контроль якості дизайну (Design QA) — це перевірка реалізованого інтерфейсу на відповідність проєктному дизайну та вимогам до користувацького досвіду. Вона контролює, чи працюючий продукт належно відображає інформацію та поводиться згідно з очікуваннями в усіх відповідних станах, із різним контентом, на різних пристроях та з різними способами введення.</p>
+<section class="glossary-term-section" aria-labelledby="section-design-qa">
+<h2 id="section-design-qa" class="glossary-term-section__title">Що охоплює Design QA?</h2>
+<p class="glossary-term-section__text">Ефективне рев'ю фокусується на користувацькому завданні, а не лише на тому, наскільки піксель у піксель скріншот відповідає макету у Figma.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Area</th>
-<th>Example check</th>
+<th>Область</th>
+<th>Приклад перевірки</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Information and content</td>
-<td>Correct labels, values, hierarchy, and error instructions</td>
+<td>Інформація та контент</td>
+<td>Правильність підписів (labels), значень, візуальної ієрархії та інструкцій щодо виправлення помилок</td>
 </tr>
 <tr>
-<td>Interaction</td>
-<td>Validation, loading, cancellation, success, and failure</td>
+<td>Взаємодія</td>
+<td>Валідація, стани завантаження (loading), скасування дії, успішне завершення та обробка помилок</td>
 </tr>
 <tr>
-<td>Responsive layout</td>
-<td>Long content, narrow views, zoom, and overflow</td>
+<td>Адаптивність</td>
+<td>Довгий контент, вузькі екрани, масштабування (zoom) та переповнення контейнерів (overflow)</td>
 </tr>
 <tr>
-<td>Accessibility</td>
-<td>Keyboard operation, focus, semantics, and perceivable feedback</td>
+<td>Доступність (Accessibility)</td>
+<td>Керування з клавіатури, видимий фокус, семантика та відчутний зворотний зв'язок</td>
 </tr>
 <tr>
-<td>Shared system use</td>
-<td>Correct components, tokens, variants, and intentional exceptions</td>
+<td>Використання дизайн-системи</td>
+<td>Коректні компоненти, токени, варіанти та задокументовані свідомі винятки</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Define the acceptance criteria before implementation where possible. Resolve unclear requirements rather than treating every difference as a defect.</p>
+<p class="glossary-term-section__text">За можливості визначайте критерії приймання (acceptance criteria) ще до початку розробки. З'ясовуйте неоднозначні вимоги замість того, щоб автоматично класифікувати будь-яку розбіжність як баг.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-a-request-form">
-<h2 id="section-example-reviewing-a-request-form" class="glossary-term-section__title">Example: reviewing a request form</h2>
-<p class="glossary-term-section__text">Suppose the design shows a quote-request form and confirmation. In the working preview, the reviewer enters a long name, submits an invalid email address, and tests a delayed response.</p>
-<p class="glossary-term-section__text">The field labels remain visible, the error identifies the problem, entered values are retained, and the completion message reflects the actual result. The reviewer also checks keyboard access and the mobile layout.</p>
-<p class="glossary-term-section__text">If the button looks correct but submits the request twice, visual approval is insufficient. Record the behavior, reproduction steps, expected result, and affected environment.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перевірка форми запиту</h2>
+<p class="glossary-term-section__text">Припустімо, дизайн містить форму запиту комерційної пропозиції та екран підтвердження. У тестовому середовищі рев'юер вводить надто довге ім'я, вказує невалідну адресу електронної пошти та тестує поведінку інтерфейсу при затримці відповіді сервера.</p>
+<p class="glossary-term-section__text">Підписи полів залишаються видимими, повідомлення про помилку чітко визначає проблему, введені дані не скидаються, а фінальне повідомлення про успіх точно відображає реальний результат. Рев'юер також перевіряє доступність із клавіатури та коректність мобільного лейауту.</p>
+<p class="glossary-term-section__text">Якщо кнопка виглядає ідеально згідно з макетом, але відправляє запит двічі через відсутність debounce, лише візуального схвалення недостатньо. Зафіксуйте фактичну поведінку, кроки для відтворення, очікуваний результат та оточення, у якому виникла помилка.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-qa-vs-software-qa-vs-design-critique">
-<h2 id="section-design-qa-vs-software-qa-vs-design-critique" class="glossary-term-section__title">Design QA vs. software QA vs. design critique</h2>
-<p class="glossary-term-section__text">Software QA covers broader product quality, including areas such as functional correctness and integration. Design QA contributes experience-specific criteria and review.</p>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/design-critique.html">design critique</a> examines a design proposal and its reasoning. Design QA checks what was implemented. Either can reveal that the intended design itself needs revision.</p>
-<p class="glossary-term-section__text">Keep responsibility collaborative. A designer can identify a discrepancy without being the sole owner of every test or fix.</p>
+<section class="glossary-term-section" aria-labelledby="section-design-qa-software-qa">
+<h2 id="section-design-qa-software-qa" class="glossary-term-section__title">Design QA проти Software QA та дизайн-критики</h2>
+<p class="glossary-term-section__text">Тестування програмного забезпечення (Software QA) охоплює якість продукту загалом, включно з функціональною коректністю та інтеграцією систем. Design QA фокусується саме на критеріях та оцінці користувацького досвіду.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/design-critique.html">Дизайн-критика (Design Critique)</a> оцінює концептуальну пропозицію дизайну та її обґрунтування. Design QA перевіряє те, що було фактично реалізовано в коді. Обидва етапи можуть показати, що початковий дизайн потребує перегляду.</p>
+<p class="glossary-term-section__text">Зберігайте відповідальність командною та колегіальною. Дизайнер може виявити розбіжність, не стаючи при цьому єдиним відповідальним за кожне тестування чи виправлення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-which-checks-can-be-automated">
-<h2 id="section-which-checks-can-be-automated" class="glossary-term-section__title">Which checks can be automated?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/visual-regression-testing.html">Visual regression testing</a> can flag appearance changes. Interaction and accessibility tooling can test configured cases. Storybook provides ways to build checks around component stories.</p>
-<p class="glossary-term-section__text">These methods need appropriate coverage and review. Automated accessibility tools cannot establish full accessibility on their own, and component tests do not exercise every product workflow.</p>
-<p class="glossary-term-section__text">Retest the specific issue after a fix and check the surrounding task when it may be affected. Record accepted exceptions so the same intentional decision is not repeatedly reported as a defect.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які перевірки можна автоматизувати?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/visual-regression-testing.html">Тестування візуальної регресії</a> дозволяє автоматично виявляти небажані зміни у зовнішньому вигляді. Інструменти для перевірки взаємодії та доступності допомагають тестувати задані сценарії. <a href="/ua/glossary/storybook.html">Storybook</a> надає можливості для побудови тестів навколо окремих історій компонентів.</p>
+<p class="glossary-term-section__text">Ці методи потребують належного покриття та регулярного людського аналізу. Автоматизовані інструменти аудиту доступності не здатні самостійно гарантувати повну відповідність вимогам доступності, а компонентні тести не покривають усі наскрізні сценарії роботи продукту.</p>
+<p class="glossary-term-section__text">Повторно тестуйте виявлену проблему після внесення виправлень і перевіряйте суміжне користувацьке завдання, на яке це могло вплинути. Документуйте погоджені винятки, щоб одне й те саме свідоме рішення не реєструвалося повторно як дефект.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
+<li><a href="/ua/glossary/visual-regression-testing.html">Тестування візуальної регресії</a></li>
 <li><a href="/ua/glossary/storybook.html">Storybook</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://storybook.js.org/docs/writing-tests" target="_blank" rel="noopener noreferrer">How to test UIs with Storybook</a></li>
-<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Evaluating Web Accessibility, W3C WAI</a></li>
+<li><a href="https://storybook.js.org/docs/writing-tests" target="_blank" rel="noopener noreferrer">Як тестувати інтерфейси за допомогою Storybook (How to test UIs with Storybook)</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Оцінювання доступності веб-інтерфейсів, W3C WAI (Evaluating Web Accessibility, W3C WAI)</a></li>
 </ul>
 </section>
 

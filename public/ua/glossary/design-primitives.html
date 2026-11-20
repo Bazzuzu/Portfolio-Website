@@ -385,64 +385,64 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Дизайн-примітиви — це базові будівельні блоки, які дизайн-система використовує для побудови більш специфічних рішень та інтерфейсів. У системі токенів примітив зазвичай є базовим іменованим значенням (raw value). У бібліотеці компонентів це низькорівневий компонент для вирішення базових завдань, наприклад, сітки чи розміщення елементів (layout).</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-primitive-tokens">
-<h2 id="section-what-are-primitive-tokens" class="glossary-term-section__title">What are primitive tokens?</h2>
-<p class="glossary-term-section__text">A primitive token names a base value such as a palette color or a spacing step. For example, <code>space.200</code> might represent 8 pixels. A token scoped to a component, such as <code>card.padding</code>, can reference it. The base token gives multiple decisions a shared value, while the card token identifies the decision the component is using.</p>
+    <p class="glossary-term-section__text">Дизайн-примітиви — це базові будівельні блоки, які дизайн-система використовує для побудови більш специфічних рішень або інтерфейсів. У моделі дизайн-токенів примітив зазвичай означає іменоване базове значення (raw/base value). У бібліотеці компонентів це може бути простий атомарний компонент багаторазового використання для виконання фундаментальних завдань, таких як побудова лейауту (layout).</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що таке примітивні токени?</h2>
+<p class="glossary-term-section__text">Примітивний токен іменує базове значення, наприклад відтінок палітри або крок шкали відступів. Наприклад, <code>space.200</code> може представляти 8 пікселів. Токен з областю видимості компонента, такий як <code>card.padding</code>, може посилатися на нього. Базовий токен забезпечує спільне значення для багатьох рішень, тоді як токен картки ідентифікує конкретне рішення, яке застосовується в цьому компоненті.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Example</th>
-<th>What it provides</th>
+<th>Термін</th>
+<th>Приклад</th>
+<th>Що він забезпечує</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Primitive token</td>
+<td>Примітивний токен</td>
 <td><code>space.200</code></td>
-<td>A named value on a spacing scale</td>
+<td>Іменоване значення на шкалі відступів</td>
 </tr>
 <tr>
-<td>Semantic token</td>
+<td>Семантичний токен</td>
 <td><code>color.text.link</code></td>
-<td>A value for a named purpose</td>
+<td>Значення для визначеної функціональної мети</td>
 </tr>
 <tr>
-<td>Primitive component</td>
+<td>Примітивний компонент</td>
 <td>Stack</td>
-<td>A reusable way to arrange elements vertically</td>
+<td>Багаторазовий спосіб вертикального розташування елементів</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These layers are conventions. A team may let a layout component expose steps from a spacing scale and use semantic color tokens for interface text. Document the choice so teams can tell which values are intended for direct use.</p>
+<p class="glossary-term-section__text">Ці рівні є загальноприйнятими конвенціями. Команда може дозволити компоненту макета безпосередньо приймати кроки зі шкали відступів, але вимагати використання виключно семантичних токенів для тексту інтерфейсу. Зафіксуйте ці правила в документації, щоб команди чітко розуміли, які значення дозволено використовувати напряму.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-primitive-component-do">
-<h2 id="section-what-does-a-primitive-component-do" class="glossary-term-section__title">What does a primitive component do?</h2>
-<p class="glossary-term-section__text">A layout primitive provides a small piece of reusable structure. Atlassian’s primitives include Stack for vertical arrangement and Inline for horizontal arrangement. A team could use a Stack to arrange a field label, input, and hint with a consistent gap. The field component still defines how those parts relate and how errors are communicated.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що робить примітивний компонент?</h2>
+<p class="glossary-term-section__text">Примітив макета надає базовий фрагмент багаторазової структури. Наприклад, серед примітивів системи Atlassian є Stack для вертикального вирівнювання та Inline для горизонтального розташування. Команда може використати Stack для групування підпису поля (label), поля введення (input) та підказки (hint) з фіксованим проміжком. При цьому сам компонент поля форми визначає семантичний взаємозв'язок цих частин і логіку відображення помилок.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-change-a-base-value">
-<h2 id="section-when-should-you-change-a-base-value" class="glossary-term-section__title">When should you change a base value?</h2>
-<p class="glossary-term-section__text">Suppose cards need more padding, while form layouts should stay as they are. Find the token or setting specific to cards and choose the spacing value it should use. If you change the base scale itself, trace its references and check representative screens. The same step may set card padding and the gaps between form fields.</p>
-<p class="glossary-term-section__text">Start with base values and components that solve recurring problems. Add a named layer when it helps people understand a decision or change it at the right scope.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли слід змінювати базове значення?</h2>
+<p class="glossary-term-section__text">Припустимо, що карткам потрібно більше внутрішнього відступу (padding), тоді як лейаут форм має залишитися без змін. Знайдіть токен або налаштування, специфічне для карток, і оберіть відповідне значення відступу. Якщо змінити саму базову шкалу, необхідно відстежити всі посилання на неї та перевірити ключові екрани. Адже один і той самий крок шкали може задавати і відступ у картках, і проміжки між полями форм.</p>
+<p class="glossary-term-section__text">Починайте з базових значень і компонентів, що розв'язують регулярні завдання. Вводьте додатковий іменований шар абстракції лише тоді, коли це допомагає зрозуміти суть рішення або дає змогу безпечно змінювати його на відповідному рівні ізоляції.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-tokens.html">Design Tokens</a></li>
-<li><a href="/ua/glossary/semantic-tokens.html">Semantic Tokens</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/atomic-design.html">Atomic Design</a></li>
+<li><a href="/ua/glossary/design-tokens.html">Дизайн-токени</a></li>
+<li><a href="/ua/glossary/semantic-tokens.html">Семантичні токени</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Архітектура компонентів</a></li>
+<li><a href="/ua/glossary/atomic-design.html">Атомарний дизайн (Atomic Design)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Design Tokens, Atlassian Design System</a></li>
-<li><a href="https://atlassian.design/foundations/spacing/primitives" target="_blank" rel="noopener noreferrer">Primitives overview, Atlassian Design System</a></li>
-<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Design Tokens Format Module 2025.10, DTCG</a></li>
+<li><a href="https://atlassian.design/foundations/tokens/design-tokens/" target="_blank" rel="noopener noreferrer">Дизайн-токени, Atlassian Design System</a></li>
+<li><a href="https://atlassian.design/foundations/spacing/primitives" target="_blank" rel="noopener noreferrer">Огляд примітивів (Primitives overview), Atlassian Design System</a></li>
+<li><a href="https://www.designtokens.org/tr/2025.10/format/" target="_blank" rel="noopener noreferrer">Модуль формату дизайн-токенів (Format Module) 2025.10, DTCG</a></li>
 </ul>
 </section>
 

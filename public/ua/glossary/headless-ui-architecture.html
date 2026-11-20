@@ -385,66 +385,64 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Архітектура Headless UI відокремлює логіку поведінки інтерфейсу від його візуального оформлення. Headless-компонент інкапсулює керування станом, обробку клавіатурних взаємодій і семантику доступності (ARIA), тоді як команда-споживач самостійно задає стилізацію та інтегрує його у свій робочий процес.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-headless-component-provide">
-<h2 id="section-what-does-a-headless-component-provide" class="glossary-term-section__title">What does a headless component provide?</h2>
-<p class="glossary-term-section__text">Libraries expose behavior in different ways. An unstyled component can render elements and connect their behavior. A hook can expose state and interaction properties for the elements the application renders. Check what the library renders and which properties you must pass to your own elements.</p>
+    <p class="glossary-term-section__text">Архітектура Headless UI відокремлює багаторазову логіку поведінки інтерфейсу від його візуального оформлення, яке робить його гармонійною частиною продукту. Headless-компонент може забезпечувати керування станом, взаємодію з клавіатури та семантику доступності, тоді як команда-споживач самостійно задає стилізацію й інтегрує його в робочий процес.</p>
+<section class="glossary-term-section" aria-labelledby="section-headless">
+<h2 id="section-headless" class="glossary-term-section__title">Що забезпечує headless-компонент?</h2>
+<p class="glossary-term-section__text">Бібліотеки надають доступ до поведінки по-різному. Нестилізований компонент може рендерити елементи та прив'язувати їхню поведінку. Хук (hook) може надавати властивості стану та взаємодії для елементів, які рендерить сам застосунок. Перевіряйте, що саме рендерить бібліотека та які властивості ви повинні передати власним елементам.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-a-headless-modal-dialog">
-<h2 id="section-example-of-a-headless-modal-dialog" class="glossary-term-section__title">Example of a headless modal dialog</h2>
-<p class="glossary-term-section__text">A travel team uses a dialog primitive to review a booking change. Radix Dialog, for example, provides modal focus handling, Escape dismissal, and parts for a title and description. The team supplies the title, fare details, buttons, and visible focus treatment. The booking request and error recovery remain part of the product workflow.</p>
+<section class="glossary-term-section" aria-labelledby="section-headless">
+<h2 id="section-headless" class="glossary-term-section__title">Приклад: headless модальне діалогове вікно</h2>
+<p class="glossary-term-section__text">Команда сервісу подорожей використовує примітив діалогового вікна для перегляду змін у бронюванні. Наприклад, Radix Dialog забезпечує обробку модального фокуса, закриття за Escape, а також складові частини для заголовка й опису. Команда додає заголовок, деталі тарифу, кнопки дій та візуальне оформлення фокуса. Запит на бронювання та обробка помилок залишаються частиною робочого процесу продукту.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Layer</th>
-<th>What to verify</th>
+<th>Рівень</th>
+<th>Що перевіряти</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Behavior</td>
-<td>Focus moves inside when the modal opens, Tab and Shift+Tab stay inside, and Escape closes it.</td>
+<td>Поведінка</td>
+<td>Фокус переміщується всередину під час відкриття модального вікна, Tab і Shift+Tab утримують фокус усередині, а Escape закриває його.</td>
 </tr>
 <tr>
-<td>Content</td>
-<td>The dialog has an accessible name, and the text explains what the user is reviewing.</td>
+<td>Контент</td>
+<td>Діалогове вікно має доступне ім'я (accessible name), а текст пояснює, що саме переглядає користувач.</td>
 </tr>
 <tr>
-<td>Presentation</td>
-<td>The contrast and focus indicator work in the actual theme. Longer text and zoom leave the content usable.</td>
+<td>Візуальне представлення</td>
+<td>Контрастність та індикатор фокуса коректно працюють у поточній темі. Довший текст і масштабування зберігають контент зручним для використання.</td>
 </tr>
 <tr>
-<td>Integration</td>
-<td>Closing usually returns focus to the trigger. If the trigger is gone, focus moves to a logical next element. A failed booking change gets clear feedback.</td>
+<td>Інтеграція</td>
+<td>Закриття зазвичай повертає фокус на елемент-тригер. Якщо тригер зник, фокус переміщується на наступний логічний елемент. У разі невдалої зміни бронювання користувач отримує чітке сповіщення.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A primitive can help implement an accessible pattern. Test the result in context because labels, styling, and the surrounding flow affect whether it works for users.</p>
+<p class="glossary-term-section__text">Примітив може допомогти реалізувати доступний патерн. Тестуйте результат у реальному контексті, оскільки підписи, стилізація та навколишній користувацький сценарій впливають на те, як інтерфейс працює для користувачів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-choose-headless-ui">
-<h2 id="section-when-should-you-choose-headless-ui" class="glossary-term-section__title">When should you choose headless UI?</h2>
-<p class="glossary-term-section__text">Use a headless approach when products need to share an interaction but require different visual treatments. It can also help a design system build its own styled wrapper around behavior it trusts. If teams already agree on the appearance and need a ready-to-use control, a styled component library can require less integration work. Compare the effort to implement and test the complete experience in a representative screen.</p>
+<section class="glossary-term-section" aria-labelledby="section-headless-ui">
+<h2 id="section-headless-ui" class="glossary-term-section__title">Коли варто обирати Headless UI?</h2>
+<p class="glossary-term-section__text">Використовуйте headless-підхід, коли кілька продуктів мають спільну взаємодію, але вимагають різного візуального оформлення. Це також може допомогти дизайн-системі створити власну стилізовану обгортку навколо перевіреної поведінки. Якщо команди вже узгодили зовнішній вигляд і потребують готового до використання елемента керування, бібліотека стилізованих компонентів вимагатиме менше зусиль на інтеграцію. Порівнюйте трудовитрати на реалізацію та тестування повного користувацького досвіду на репрезентативному екрані.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура (Component Architecture)</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
 <li><a href="/ua/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
-</ul>
-<ul class="glossary-term-ul">
 <li><a href="/ua/glossary/shadcn-ui.html">shadcn/ui</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Dialog, Radix Primitives</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Dialog (Modal) Pattern, W3C WAI</a></li>
-<li><a href="https://react-aria.adobe.com/Modal" target="_blank" rel="noopener noreferrer">Modal, React Aria</a></li>
+<li><a href="https://www.radix-ui.com/primitives/docs/components/dialog" target="_blank" rel="noopener noreferrer">Діалогове вікно (Dialog), Radix Primitives</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">Патерн діалогового вікна (Dialog/Modal Pattern), W3C WAI</a></li>
+<li><a href="https://react-aria.adobe.com/Modal" target="_blank" rel="noopener noreferrer">Модальне вікно (Modal), React Aria</a></li>
 </ul>
 </section>
 
