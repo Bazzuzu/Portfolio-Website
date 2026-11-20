@@ -389,73 +389,73 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Матриця вкладених об'єктів (Nested Object Matrix, NOM) — це інструмент фреймворку ORCA у вигляді сітки, де однакові типи об'єктів розміщені по горизонталі та вертикалі. Кожен перетин визначає характер зв'язку між екземплярами різних типів. Команди використовують NOM для дослідження взаємозв'язків і виявлення місць, де користувачам знадобиться перехід до пов'язаних записів.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-read-a-nested-object-matrix">
-<h2 id="section-how-do-you-read-a-nested-object-matrix" class="glossary-term-section__title">How do you read a Nested Object Matrix?</h2>
-<p class="glossary-term-section__text">In Sophia Prater’s convention, the top row contains the <strong>host objects</strong>. Read a cell by starting with the column heading and describing how that host relates to the object type on the left. Use verbs and counts where you know them. To check the reverse direction, swap the row and column. Trip → Booking answers which bookings are on a trip. Booking → Trip answers which trip owns the booking.</p>
+    <p class="glossary-term-section__text">Матриця вкладених об'єктів (Nested Object Matrix, NOM) — це інструмент фреймворку ORCA у вигляді сітки, де однакові типи об'єктів розміщені по горизонталі у стовпцях і по вертикалі в рядках. Кожен перетин описує, як екземпляри одного типу співвідносяться з екземплярами іншого. Команди використовують її для дослідження зв'язків і визначення місць, де користувачам може знадобитися доступ до пов'язаних записів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як читати матрицю вкладених об'єктів?</h2>
+<p class="glossary-term-section__text">За домовленістю Софії Пратер, верхній рядок містить <strong>об'єкти-господарі (host objects)</strong>. Клітинку зчитують, починаючи із заголовка стовпця, описуючи, як цей об'єкт-господар пов'язаний із типом об'єкта ліворуч у рядку. Використовуйте дієслова та кількісні показники, якщо вони відомі. Щоб перевірити зворотний напрямок, поміняйте місцями рядок і стовпець. Поїздка → Бронювання відповідає на запитання, які саме бронювання входять до поїздки. Бронювання → Поїздка дає відповідь, якій поїздці належить це бронювання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-nested-object-matrix-for-travel-operations">
-<h2 id="section-a-nested-object-matrix-for-travel-operations" class="glossary-term-section__title">A Nested Object Matrix for travel operations</h2>
-<p class="glossary-term-section__text">In this example, a trip can exist before it has a booking. Each booking belongs to exactly one trip. Travelers may appear on multiple trips.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад матриці вкладених об'єктів для організації подорожей</h2>
+<p class="glossary-term-section__text">У цьому прикладі поїздка може існувати до того, як для неї створено хоча б одне бронювання. Кожне бронювання належить рівно одній поїздці. Мандрівники можуть фігурувати в кількох поїздках.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Related object ↓ / Host object →</th>
-<th>Trip</th>
-<th>Booking</th>
-<th>Traveler</th>
+<th>Пов'язаний об'єкт ↓ / Об'єкт-господар →</th>
+<th>Поїздка (Trip)</th>
+<th>Бронювання (Booking)</th>
+<th>Мандрівник (Traveler)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip</td>
+<td>Поїздка</td>
 <td>—</td>
-<td>Belongs to exactly one trip</td>
-<td>Can be linked to multiple trips</td>
+<td>Належить рівно одній поїздці</td>
+<td>Може бути пов'язаний із кількома поїздками</td>
 </tr>
 <tr>
-<td>Booking</td>
-<td>Has zero or more bookings</td>
+<td>Бронювання</td>
+<td>Містить нуль або більше бронювань</td>
 <td>—</td>
 <td>—</td>
 </tr>
 <tr>
-<td>Traveler</td>
-<td>Can include multiple travelers</td>
+<td>Мандрівник</td>
+<td>Може включати кількох мандрівників</td>
 <td>—</td>
 <td>—</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A dash marks a cell with no direct relationship in this example. In a working matrix, mark an untested relationship as “To verify” so the team can distinguish it from an empty cell. For example, a booking can lead to travelers through its trip. If the product needs to identify which travelers are covered by a particular booking, investigate that as a separate relationship.</p>
+<p class="glossary-term-section__text">Тире в цьому прикладі позначає клітинку без прямого зв'язку. У робочій матриці позначайте неперевірений зв'язок як «Потребує перевірки» (To verify), щоб команда могла відрізнити його від порожньої клітинки. Наприклад, бронювання може вести до мандрівників через свою поїздку. Якщо в продукті потрібно визначити, які саме мандрівники охоплені конкретним бронюванням, дослідіть це як окремий зв'язок.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-build-the-matrix">
-<h2 id="section-how-do-you-build-the-matrix" class="glossary-term-section__title">How do you build the matrix?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як будувати матрицю?</h2>
 <ol class="glossary-term-ol">
-<li><strong>List the same object types on both axes.</strong> Start with the shortlist from <a href="/ua/glossary/noun-foraging.html">noun foraging</a>.</li>
-<li><strong>Describe each relevant relationship in plain language.</strong> Put distinct relationships in the same cell when the same object types connect in several ways.</li>
-<li><strong>Check minimums and maximums in both directions.</strong> “Has bookings” leaves open whether the first booking is required. Write the <a href="/ua/glossary/cardinality-ux-architecture.html">cardinality</a> explicitly when a rule is known.</li>
-<li><strong>Decide what users need to reach.</strong> Test whether an agent who opens a booking from search can find its trip. Check that the trip is visible to that agent before adding the link.</li>
+<li><strong>Розмістіть однакові типи об'єктів на обох осях.</strong> Почніть зі списку кандидатів, отриманого під час <a href="/ua/glossary/noun-foraging.html">пошуку іменників</a>.</li>
+<li><strong>Опишіть кожен значущий зв'язок простою мовою.</strong> Поміщайте різні зв'язки в одну клітинку, якщо однакові типи об'єктів з'єднуються кількома способами.</li>
+<li><strong>Перевірте мінімуми й максимуми в обох напрямках.</strong> Формулювання «має бронювання» залишає відкритим питання, чи є перше бронювання обов'язковим. Фіксуйте <a href="/ua/glossary/cardinality-ux-architecture.html">кардинальність</a> явно, щойно правило стає відомим.</li>
+<li><strong>Визначте, до чого користувачам потрібен доступ.</strong> Перевірте, чи зможе оператор, який відкрив бронювання з пошуку, знайти відповідну поїздку. Переконайтеся, що поїздка взагалі видима для цього оператора, перш ніж додавати посилання.</li>
 </ol>
-<p class="glossary-term-section__text">The matrix focuses on relationships. The <a href="/ua/glossary/object-mapping.html">object map</a> builds on those findings to organize the information that describes each object. A <a href="/ua/glossary/cta-matrix.html">CTA Matrix</a> records what different roles can do with them.</p>
+<p class="glossary-term-section__text">Матриця зосереджується на взаємозв'язках. <a href="/ua/glossary/object-mapping.html">Карта об'єктів (Object Map)</a> спирається на ці висновки для структурування інформації, що описує кожен об'єкт. <a href="/ua/glossary/cta-matrix.html">Матриця дій (CTA Matrix)</a> фіксує, що різні ролі можуть робити з цими об'єктами.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/noun-foraging.html">Noun Foraging</a></li>
-<li><a href="/ua/glossary/cardinality-ux-architecture.html">Cardinality (UX Architecture)</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA (ORCA Framework)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/noun-foraging.html">Пошук іменників (Noun Foraging)</a></li>
+<li><a href="/ua/glossary/cardinality-ux-architecture.html">Кардинальність в архітектурі UX (Cardinality)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX with Sophia Prater, InfoQ interview</a></li>
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія Пратер (Introducing ORCA, Sophia V. Prater)</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX із Софією Пратер, інтерв'ю InfoQ (Object-Oriented UX with Sophia Prater, InfoQ interview)</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX, Софія Пратер (Object-Oriented UX, Sophia V. Prater)</a></li>
 </ul>
 </section>
 

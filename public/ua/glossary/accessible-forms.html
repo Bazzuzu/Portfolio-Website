@@ -391,45 +391,45 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Доступні форми (Accessible Forms) забезпечують можливість ідентифікувати поля, вводити інформацію, виправляти помилки та успішно надсилати дані за допомогою будь-якого зручного методу введення або асистивних технологій. Вони базуються на чітких мітках (labels), передбачуваній роботі контролів і своєчасному зрозумілому зворотному зв'язку.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-makes-a-form-accessible">
-<h2 id="section-what-makes-a-form-accessible" class="glossary-term-section__title">What makes a form accessible?</h2>
+    <p class="glossary-term-section__text">Доступна форма дозволяє користувачам ідентифікувати поля, вводити інформацію, виправляти помилки та успішно завершувати відправку за допомогою бажаного способу введення або асистивних технологій. Вона спирається на зрозумілі мітки, передбачувані елементи керування та зворотний зв'язок, який користувачі можуть знайти й зрозуміти.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що робить форму доступною?</h2>
 <ul class="glossary-term-ul">
-<li><strong>Give every control a clear name.</strong> Use a visible label and associate it with the field, for example with an HTML <code>label</code> whose <code>for</code> matches the input’s <code>id</code>. Use a <code>fieldset</code> and <code>legend</code> for related controls when the group needs a shared label.</li>
-<li><strong>Give instructions before people need them.</strong> Identify required fields in text and expose the required state programmatically. Put format guidance beside the field and associate it with that field. A placeholder can show an example. Keep the label visible when the user types.</li>
-<li><strong>Make errors easy to find and fix.</strong> Identify the field and describe the error in text. Give a useful correction when you know it. Associate inline errors with their fields, for example with <code>aria-describedby</code>. On a longer form, an error summary with links to invalid fields can help users recover.</li>
-<li><strong>Make the result perceivable.</strong> If a success message appears on the same page without moving focus, expose it as a status message so assistive technology can announce it. If submission opens a confirmation page, give that page a clear heading and title.</li>
+<li><strong>Надавайте кожному елементу керування чітке найменування.</strong> Використовуйте видиму текстову мітку та пов'язуйте її з полем, наприклад, за допомогою HTML-тегу <code>label</code>, чий атрибут <code>for</code> збігається з <code>id</code> поля вводу. Використовуйте <code>fieldset</code> і <code>legend</code> для пов'язаних елементів керування, коли групі потрібна спільна назва.</li>
+<li><strong>Надавайте інструкції до того, як вони знадобляться користувачам.</strong> Позначайте обов'язкові поля в тексті та передавайте стан обов'язковості програмно. Розміщуйте підказки щодо формату поруч із полем і асоціюйте їх із цим полем. Плейсхолдер (placeholder) може показувати приклад. Зберігайте мітку видимою, коли користувач вводить дані.</li>
+<li><strong>Зробіть помилки простими для пошуку та виправлення.</strong> Вкажіть конкретне поле та опишіть помилку людською мовою. Надайте корисну пораду щодо виправлення, якщо вона відома. Пов'язуйте вбудовані повідомлення про помилки з їхніми полями, наприклад, за допомогою <code>aria-describedby</code>. У довгій формі блок зведення помилок (error summary) із посиланнями на невалідні поля допомагає користувачам повернутися до виправлення.</li>
+<li><strong>Зробіть результат сприйнятним.</strong> Якщо повідомлення про успіх з'являється на тій самій сторінці без переміщення фокусу, передайте його як повідомлення про стан (status message), щоб асистивні технології могли його оголосити. Якщо відправка відкриває сторінку підтвердження, надайте цій сторінці чіткий заголовок та тег title.</li>
 </ul>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-an-email-error-in-a-quote-request">
-<h2 id="section-example-an-email-error-in-a-quote-request" class="glossary-term-section__title">Example: An email error in a quote request</h2>
-<p class="glossary-term-section__text">A traveler enters <code>alex@</code> and submits the form. The form keeps the traveler’s other entries and identifies the problem beside the Email address field: “Enter an email address in the format name@example.com.” A keyboard user can reach the field, and a screen reader can access the associated error.</p>
-<p class="glossary-term-section__text">If a later step in the same process needs the email again, prefill it or let the traveler select the email they already provided. WCAG 2.2’s Redundant Entry criterion (3.3.7, Level A) covers information users previously entered or received in the same process. It includes exceptions for essential re-entry, security, and information that is no longer valid.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: помилка в електронній пошті під час запиту цінової пропозиції</h2>
+<p class="glossary-term-section__text">Мандрівник вводить <code>alex@</code> і надсилає форму. Форма зберігає всі інші введені мандрівником дані та виділяє проблему поруч із полем «Адреса електронної пошти»: «Введіть адресу електронної пошти у форматі name@example.com». Користувач клавіатури може дістатися до поля, а програма зчитування з екрана (screen reader) отримує доступ до пов'язаного повідомлення про помилку.</p>
+<p class="glossary-term-section__text">Якщо наступний крок у тому самому процесі знову вимагає електронну пошту, попередньо заповніть її або дозвольте мандрівникові вибрати раніше надану адресу. Критерій WCAG 2.2 щодо надлишкового введення (Redundant Entry, 3.3.7, рівень A) поширюється на інформацію, яку користувачі вже вводили або отримували раніше в межах того самого процесу. Він передбачає винятки для випадків, коли повторне введення є критично необхідним, обумовленим безпекою або коли попередня інформація втратила актуальність.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-an-accessible-form">
-<h2 id="section-how-do-you-test-an-accessible-form" class="glossary-term-section__title">How do you test an accessible form?</h2>
-<p class="glossary-term-section__text">Complete a successful submission and an error-and-recovery scenario with a keyboard and a screen reader. Check that labels are announced, errors can be located, user input is available after validation, and the final outcome is clear. Use the whole flow, including any external payment or verification step that is in scope.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як тестувати доступну форму?</h2>
+<p class="glossary-term-section__text">Пройдіть успішне надсилання форми та сценарій виявлення й виправлення помилок за допомогою клавіатури та програми зчитування з екрана. Переконайтеся, що мітки оголошуються, помилки легко знайти, введені користувачем дані залишаються доступними після валідації, а кінцевий результат є зрозумілим. Використовуйте весь процес, включаючи будь-які зовнішні кроки оплати чи верифікації, що входять до меж проекту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність веб-інтерфейсів (WCAG)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
 <li><a href="/ua/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
-<li><a href="/ua/glossary/keyboard-accessibility.html">Keyboard Accessibility & Focus Management</a></li>
-<li><a href="/ua/glossary/web-accessibility-audit.html">Web Accessibility Audit</a></li>
-<li><a href="/ua/glossary/lead-capture-mechanics.html">Lead Capture Mechanics</a></li>
+<li><a href="/ua/glossary/keyboard-accessibility.html">Клавіатурна доступність та керування фокусом</a></li>
+<li><a href="/ua/glossary/web-accessibility-audit.html">Аудит веб-доступності</a></li>
+<li><a href="/ua/glossary/lead-capture-mechanics.html">Механіки захоплення лідів (Lead Capture)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/" target="_blank" rel="noopener noreferrer">Labeling Controls, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/forms/validation/" target="_blank" rel="noopener noreferrer">Validating Input, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">User Notification, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html" target="_blank" rel="noopener noreferrer">Understanding Error Suggestion, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">Understanding Status Messages, W3C WAI</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html" target="_blank" rel="noopener noreferrer">Understanding Redundant Entry, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/" target="_blank" rel="noopener noreferrer">Маркування елементів керування, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/forms/validation/" target="_blank" rel="noopener noreferrer">Валідація введених даних, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">Сповіщення користувачів, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html" target="_blank" rel="noopener noreferrer">Розуміння критерію щодо пропозицій для виправлення помилок (Error Suggestion), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">Розуміння повідомлень про стан (Status Messages), W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html" target="_blank" rel="noopener noreferrer">Розуміння критерію щодо надлишкового введення (Redundant Entry), W3C WAI</a></li>
 </ul>
 </section>
 

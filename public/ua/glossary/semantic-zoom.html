@@ -385,38 +385,38 @@
 
   <article>
     <p class="glossary-term-section__text">Семантичний зум змінює рівень деталізації або формат представлення інформації залежно від обраного масштабу. Він дозволяє користувачам плавно переходити від загального огляду до поглиблених деталей, зберігаючи контекстний зв'язок із тими самими базовими даними.</p>
-<p class="glossary-term-section__text">For example, a planning view might show monthly totals at one level, daily groups at another, and individual bookings at a detailed level. Optical zoom changes magnification; semantic zoom changes what is represented.</p>
-<p class="glossary-term-section__text">Microsoft's SemanticZoom control is a specific implementation that switches between two related views of grouped content. The broader design concept can involve more than two levels.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-a-hotel-planning-board">
-<h2 id="section-example-a-hotel-planning-board" class="glossary-term-section__title">Example: a hotel planning board</h2>
-<p class="glossary-term-section__text">At the overview level, a manager sees occupancy by week. Selecting a week reveals daily room availability. Opening a day shows the reservations behind its totals.</p>
-<p class="glossary-term-section__text">The transition should preserve the selected date and explain where the user is. Returning to the overview should make it easy to recognize the same period.</p>
-<p class="glossary-term-section__text">Use consistent calculations so a summary can be reconciled with its detail. If filters change the totals, show the active scope.</p>
+<p class="glossary-term-section__text">Наприклад, режим планування може показувати місячні підсумки на одному рівні, щоденні групи — на іншому, а окремі бронювання — на рівні деталізації. Оптичний зум змінює лише візуальне збільшення; натомість семантичний зум змінює суть того, що саме відображається.</p>
+<p class="glossary-term-section__text">Елемент керування SemanticZoom від Microsoft — це конкретна реалізація, яка перемикає інтерфейс між двома пов'язаними представленнями згрупованого вмісту. Загальна концепція проєктування може включати більше двох рівнів масштабування.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: дошка планування готелю</h2>
+<p class="glossary-term-section__text">На рівні загального огляду менеджер бачить завантаженість за тижнями. Вибір конкретного тижня відкриває щоденну доступність номерів. Перехід до конкретного дня показує детальні броні, з яких формуються загальні показники.</p>
+<p class="glossary-term-section__text">Перехід повинен зберігати вибрану дату та чітко пояснювати, де саме перебуває користувач. Повернення до загального огляду має дозволяти легко розпізнати той самий часовий період.</p>
+<p class="glossary-term-section__text">Використовуйте узгоджені формули розрахунків, щоб зведені дані завжди сходилися з окремими деталями. Якщо фільтри змінюють підсумкові показники, показуйте активну зону дії (scope) фільтрації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-it-helps">
-<h2 id="section-when-it-helps" class="glossary-term-section__title">When it helps</h2>
-<p class="glossary-term-section__text">Semantic zoom can help when users need both broad patterns and record-level work. It is less useful when extra levels only add navigation to a short list.</p>
-<p class="glossary-term-section__text">Define the questions each level answers and the information users need to decide where to go next.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли це корисно</h2>
+<p class="glossary-term-section__text">Семантичний зум ефективний у випадках, коли користувачам потрібне як бачення загальних закономірностей, так і можливість роботи на рівні окремих записів. Він менш доцільний, коли додаткові рівні лише ускладнюють навігацію простим коротким списком.</p>
+<p class="glossary-term-section__text">Чітко визначте, на які саме запитання відповідає кожен рівень деталізації, та яку інформацію потребують користувачі, щоб вирішити, куди рухатися далі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-accessibility-checks">
-<h2 id="section-accessibility-checks" class="glossary-term-section__title">Accessibility checks</h2>
-<p class="glossary-term-section__text">Provide an operable way to move between levels without relying on a pinch gesture alone. Preserve logical focus, meaningful labels, and an understandable reading order.</p>
-<p class="glossary-term-section__text">For web products, keep browser text resizing available. Semantic zoom is an application interaction and does not replace the user's need to enlarge text.</p>
+<section class="glossary-term-section" aria-labelledby="section-accessibility">
+<h2 id="section-accessibility" class="glossary-term-section__title">Перевірка доступності (Accessibility)</h2>
+<p class="glossary-term-section__text">Забезпечте доступний спосіб переміщення між рівнями без виключної прив'язки до сенсорного жесту масштабування (pinch). Зберігайте логічний фокус клавіатури, інформативні мітки та зрозумілий порядок читання.</p>
+<p class="glossary-term-section__text">Для вебпродуктів зберігайте можливість масштабування тексту браузером. Семантичний зум — це взаємодія на рівні застосунку, яка в жодному разі не замінює потребу користувача у збільшенні шрифту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
-<li><a href="/ua/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
-<li><a href="/ua/glossary/affordance-layering.html">Affordance Layering</a></li>
-<li><a href="/ua/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
+<li><a href="/ua/glossary/progressive-disclosure.html">Покрокове розкриття інформації (Progressive Disclosure)</a></li>
+<li><a href="/ua/glossary/affordance-layering.html">Шарування афордансів (Affordance Layering)</a></li>
+<li><a href="/ua/glossary/interaction-invariant.html">Інваріант взаємодії (Interaction Invariant)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom" target="_blank" rel="noopener noreferrer">Microsoft: Semantic Zoom</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Keyboard</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom" target="_blank" rel="noopener noreferrer">Семантичний зум, документація Microsoft</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html" target="_blank" rel="noopener noreferrer">Розуміння доступності за допомогою клавіатури, консорціум W3C</a></li>
 </ul>
 </section>
 

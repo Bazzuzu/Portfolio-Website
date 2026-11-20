@@ -385,39 +385,39 @@
 
   <article>
     <p class="glossary-term-section__text">Модель завдань — це структурований опис дій, які люди виконують для досягнення певної мети, включно з підзавданнями, точками прийняття рішень, залежностями та супутніми умовами. Дизайнери використовують її для глибокого розуміння робочих процесів, які має підтримувати інтерфейс.</p>
-<p class="glossary-term-section__text">Task models can range from a simple hierarchy to a formal representation of task relationships. Their value comes from accurately describing the work and its constraints.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-approving-an-invoice">
-<h2 id="section-example-approving-an-invoice" class="glossary-term-section__title">Example: approving an invoice</h2>
-<p class="glossary-term-section__text">The goal is to approve a valid invoice for payment. A simplified model might include:</p>
+<p class="glossary-term-section__text">Моделі завдань можуть варіюватися від простої ієрархії кроків до формалізованого представлення зв'язків між завданнями. Їхня цінність полягає в точному описі суті роботи та її реальних обмежень.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: затвердження рахунка-фактури</h2>
+<p class="glossary-term-section__text">Мета полягає в тому, щоб затвердити дійсний рахунок-фактуру (інвойс) для оплати. Спрощена модель може містити такі кроки:</p>
 <ol class="glossary-term-ol">
-<li>Find invoices awaiting review.</li>
-<li>Check the supplier, amount, and purchase order.</li>
-<li>Resolve missing information or discrepancies.</li>
-<li>Approve within the reviewer's authority, or route to an authorized approver.</li>
-<li>Confirm that the invoice has moved to the correct state.</li>
+<li>Знайти рахунки, які очікують на перевірку.</li>
+<li>Перевірити постачальника, суму та замовлення на купівлю (purchase order).</li>
+<li>З'ясувати відсутню інформацію або усунути розбіжності.</li>
+<li>Затвердити в межах повноважень перевіряльника або перенаправити уповноваженому керівнику.</li>
+<li>Переконатися, що рахунок перейшов у відповідний статус.</li>
 </ol>
-<p class="glossary-term-section__text">The model should include exceptions: the invoice may be a duplicate, the purchase order may be missing, or the reviewer may lack approval authority. Some checks can happen independently; approval depends on the required checks being complete.</p>
-<p class="glossary-term-section__text">These relationships inform interface requirements such as visible status, supporting documents, and a clear handoff.</p>
+<p class="glossary-term-section__text">Модель повинна враховувати винятки: рахунок може бути дублікатом, замовлення на купівлю може бути відсутнім, або перевіряльнику може бракувати повноважень для затвердження. Деякі перевірки можуть виконуватися незалежно одна від одної; проте остаточне затвердження залежить від успішного завершення всіх обов'язкових перевірок.</p>
+<p class="glossary-term-section__text">Ці взаємозв'язки формують вимоги до інтерфейсу: помітний статус документа, доступ до супровідних матеріалів та зрозумілий процес передачі відповідальності (handoff).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-build-one">
-<h2 id="section-how-to-build-one" class="glossary-term-section__title">How to build one</h2>
-<p class="glossary-term-section__text">Observe people doing the work and ask about decisions, workarounds, and failures. Identify the goal before documenting the steps. Validate the model with people who actually perform the task.</p>
-<p class="glossary-term-section__text">A user flow describes a route through an interface. A task model can describe work across screens, tools, or offline activities, including work that the future product will support differently.</p>
-<p class="glossary-term-section__text">Use the model to test whether the design covers the task's conditions and recovery paths. Update it when responsibilities or business rules change.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як побудувати модель завдань</h2>
+<p class="glossary-term-section__text">Спостерігайте за тим, як люди реально виконують роботу, і розпитуйте про ухвалення рішень, обхідні шляхи (workarounds) та збої. Чітко визначте кінцеву мету ще до документування окремих кроків. Валідуйте модель безпосередньо з тими людьми, які фактично виконують це завдання.</p>
+<p class="glossary-term-section__text">Користувацький сценарій (user flow) описує маршрут користувача крізь інтерфейс. Натомість модель завдань може описувати роботу, що охоплює різні екрани, окремі інструменти або навіть офлайн-діяльність, включно з процесами, які майбутній продукт підтримуватиме зовсім по-іншому.</p>
+<p class="glossary-term-section__text">Використовуйте модель, щоб перевірити, чи покриває дизайн усі умови завдання та шляхи відновлення після помилок. Оновлюйте її щоразу, коли змінюються обов'язки чи бізнес-правила.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/jobs-to-be-done-jtbd.html">Jobs to Be Done (JTBD)</a></li>
-<li><a href="/ua/glossary/mental-model-mapping.html">Mental Model Mapping</a></li>
-<li><a href="/ua/glossary/service-blueprinting.html">Service Blueprinting</a></li>
+<li><a href="/ua/glossary/jobs-to-be-done-jtbd.html">Концепція Jobs to Be Done (JTBD)</a></li>
+<li><a href="/ua/glossary/mental-model-mapping.html">Картування ментальних моделей (Mental Model Mapping)</a></li>
+<li><a href="/ua/glossary/service-blueprinting.html">Сервісний блюпринтинг (Service Blueprinting)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/task-analysis/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Task Analysis</a></li>
-<li><a href="https://www.w3.org/TR/task-models/" target="_blank" rel="noopener noreferrer">W3C: Task Models</a></li>
+<li><a href="https://www.nngroup.com/articles/task-analysis/" target="_blank" rel="noopener noreferrer">Аналіз завдань, Nielsen Norman Group</a></li>
+<li><a href="https://www.w3.org/TR/task-models/" target="_blank" rel="noopener noreferrer">Моделі завдань, консорціум W3C</a></li>
 </ul>
 </section>
 

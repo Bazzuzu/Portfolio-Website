@@ -384,81 +384,81 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Пріоритезація атрибутів (Attribute Prioritization) — це процес у фреймворку ORCA з ранжування характеристик об'єкта за їхньою важливістю для поточного релізу та конкретних інтерфейсних представлень. Вона допомагає командам визначити, які атрибути показувати першочергово, які розкривати за запитом у деталізованому виді, а які можна виключити з першої версії.</p>
-<p class="glossary-term-section__text">The priority depends on the user's task and context. Information needed to choose a record in search can differ from information needed to edit it or resolve an exception.</p>
-<section class="glossary-term-section" aria-labelledby="section-two-decisions-to-separate">
-<h2 id="section-two-decisions-to-separate" class="glossary-term-section__title">Two decisions to separate</h2>
-<p class="glossary-term-section__text">First decide which attributes the product needs to support its intended work. Then decide how prominently to present the supported attributes in each view.</p>
-<p class="glossary-term-section__text">A supplier confirmation number might be essential data even when a compact queue usually shows only a booking reference, status, and service date. Removing it from that queue does not mean removing it from the model.</p>
+    <p class="glossary-term-section__text">Пріоритезація атрибутів (Attribute Prioritization) — це активність у фреймворку ORCA, яка полягає у визначенні того, яка інформація про об'єкт є найважливішою для конкретного релізу та для представлень, якими користуються люди. Вона допомагає командам обрати, що слід відображати на першому плані, що розкривати в деталях, а що може зачекати.</p>
+<p class="glossary-term-section__text">Пріоритет залежить від завдання та контексту користувача. Інформація, необхідна для вибору запису в результатах пошуку, може суттєво відрізнятися від інформації, потрібної для його редагування чи розв'язання нештатної ситуації.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Два рішення, які слід розділяти</h2>
+<p class="glossary-term-section__text">Спочатку визначте, які саме атрибути потрібні продукту для виконання запланованої роботи. Потім вирішіть, наскільки помітно слід подавати підтримувані атрибути в кожному поданні.</p>
+<p class="glossary-term-section__text">Номер підтвердження від постачальника може бути критично важливими даними, навіть якщо в компактній черзі зазвичай відображаються лише номер бронювання, статус і дата надання послуги. Вилучення цього атрибута з черги не означає його видалення з моделі даних.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-prioritizing-booking-information">
-<h2 id="section-example-prioritizing-booking-information" class="glossary-term-section__title">Example: prioritizing Booking information</h2>
-<p class="glossary-term-section__text">Suppose an agent scans a queue for bookings awaiting supplier confirmation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: пріоритезація інформації про Бронювання</h2>
+<p class="glossary-term-section__text">Припустимо, що агент переглядає чергу бронювань, які очікують на підтвердження від постачальника.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Attribute</th>
-<th>Queue treatment</th>
-<th>Detail treatment</th>
+<th>Атрибут</th>
+<th>Відображення в черзі</th>
+<th>Відображення в детальному перегляді</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Booking reference</td>
-<td>Always visible for identification</td>
-<td>Same reference in the heading.</td>
+<td>Номер бронювання</td>
+<td>Завжди видимий для ідентифікації</td>
+<td>Той самий номер у заголовку.</td>
 </tr>
 <tr>
-<td>Status</td>
-<td>Visible and filterable</td>
-<td>Include relevant status history.</td>
+<td>Статус</td>
+<td>Видимий із можливістю фільтрації</td>
+<td>Включає відповідну історію зміни статусів.</td>
 </tr>
 <tr>
-<td>Service date</td>
-<td>Visible to assess urgency</td>
-<td>Show complete dates and times as needed.</td>
+<td>Дата надання послуги</td>
+<td>Видима для оцінки терміновості</td>
+<td>Відображення точних дат і часу за потреби.</td>
 </tr>
 <tr>
-<td>Supplier confirmation number</td>
-<td>Show when relevant to the queue's task</td>
-<td>Show when available; explain a meaningful absence.</td>
+<td>Номер підтвердження постачальника</td>
+<td>Показувати, коли це важливо для завдання черги</td>
+<td>Показувати за наявності; пояснювати причину відсутності.</td>
 </tr>
 <tr>
-<td>Internal notes</td>
-<td>Avoid displaying a long note in every row</td>
-<td>Make permitted notes available for investigation.</td>
+<td>Внутрішні примітки</td>
+<td>Уникати показу розлогої примітки в кожному рядку</td>
+<td>Надавати доступ до дозволених приміток для аналізу ситуації.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">This is a task-specific example. A queue for reconciling supplier records could need different fields.</p>
+<p class="glossary-term-section__text">Це приклад під конкретне завдання. Черга для звірки взаєморозрахунків із постачальниками може вимагати зовсім іншого набору полів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-make-the-decision">
-<h2 id="section-how-to-make-the-decision" class="glossary-term-section__title">How to make the decision</h2>
-<p class="glossary-term-section__text">Ask which attributes help users identify the object, compare candidates, choose an action, or recognize an exception. Use observed tasks and actual records when discussing tradeoffs with stakeholders.</p>
-<p class="glossary-term-section__text">Check both routine and unusual cases. A rare field may become the most important information during an urgent exception. Decide how users reach it when needed.</p>
-<p class="glossary-term-section__text">Record the reason for a priority and where it applies. This gives future reviewers a basis for changing the design when the workflow changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як приймати рішення</h2>
+<p class="glossary-term-section__text">Запитайте себе, які атрибути допомагають користувачам ідентифікувати об'єкт, порівнювати варіанти, обирати дію або виявляти відхилення від норми. Спирайтеся на спостережувані завдання та реальні записи під час обговорення компромісів зі стейкхолдерами.</p>
+<p class="glossary-term-section__text">Аналізуйте як стандартні, так і нетипові сценарії. Поле, яке рідко використовується, може стати найважливішим у разі виникнення критичного збою чи винятку. Визначте, як користувачі діставатимуться до нього за потреби.</p>
+<p class="glossary-term-section__text">Фіксуйте обґрунтування пріоритету та контекст, до якого він застосовується. Це дасть змогу майбутнім рев'юерам змінювати дизайн на зрозумілій основі, коли робочий процес зазнає змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-test-the-result">
-<h2 id="section-how-to-test-the-result" class="glossary-term-section__title">How to test the result</h2>
-<p class="glossary-term-section__text">Give users a realistic queue and a task such as finding the booking that needs attention next. Observe what they inspect and whether important information forces repeated navigation.</p>
-<p class="glossary-term-section__text">Check long values, missing data, narrow screens, and keyboard access. Progressive disclosure should keep necessary information discoverable at the moment it matters.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перевірити результат</h2>
+<p class="glossary-term-section__text">Запропонуйте користувачам реалістичну чергу та завдання, наприклад знайти бронювання, яке потребує термінової уваги. Спостерігайте за тим, які поля вони вивчають і чи змушує відсутність важливої інформації здійснювати повторні переходи між екранами.</p>
+<p class="glossary-term-section__text">Перевірте довгі текстові значення, відсутні дані, поведінку на вузьких екранах і доступність із клавіатури. Покрокове розкриття інформації (progressive disclosure) має зберігати необхідні дані легкодоступними саме тоді, коли вони потрібні.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a></li>
-<li><a href="/ua/glossary/object-prioritization.html">Object Prioritization</a></li>
-<li><a href="/ua/glossary/object-representation-ooux.html">Object Representation</a></li>
-<li><a href="/ua/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
+<li><a href="/ua/glossary/object-attributes-ooux.html">Атрибути об'єктів в OOUX (Object Attributes in OOUX)</a></li>
+<li><a href="/ua/glossary/object-prioritization.html">Пріоритезація об'єктів (Object Prioritization)</a></li>
+<li><a href="/ua/glossary/object-representation-ooux.html">Представлення об'єктів в OOUX (Object Representation in OOUX)</a></li>
+<li><a href="/ua/glossary/progressive-disclosure.html">Покрокове розкриття інформації (Progressive Disclosure)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352" target="_blank" rel="noopener noreferrer">The UX Level-Up: Attribute Prioritization with Jake Zukowski</a></li>
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Object-Oriented UX</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352" target="_blank" rel="noopener noreferrer">The UX Level-Up: Пріоритезація атрибутів із Джейком Зуковскі (Jake Zukowski)</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Софія Пратер (Sophia V. Prater): Об'єктно-орієнтований UX (Object-Oriented UX)</a></li>
 </ul>
 </section>
 

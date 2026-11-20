@@ -384,85 +384,83 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Контентне прототипування (Content Prototyping) — це метод тестування запропонованої структури контенту або об'єктної моделі шляхом створення репрезентативних наборів реальних даних та їх використання в реалістичних сценаріях взаємодії. Це дозволяє командам виявити відсутні поля, нелогічні зв'язки та складні правила редагування ще до початку розробки детального інтерфейсу.</p>
-<p class="glossary-term-section__text">In OOUX, a content prototype can make an object map concrete. A spreadsheet, linked database, or simple content-management setup can be sufficient when it supports the questions being tested.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-you-testing">
-<h2 id="section-what-are-you-testing" class="glossary-term-section__title">What are you testing?</h2>
-<p class="glossary-term-section__text">The model describes types, fields, and connections. A content prototype populates that structure with instances and examines whether people can create, maintain, and use them.</p>
-<p class="glossary-term-section__text">It can reveal that an apparently simple “status” field contains several different meanings, or that a shared value has been copied into records that need separate ownership.</p>
+    <p class="glossary-term-section__text">Контентне прототипування тестує запропоновану модель контенту або об'єктну модель шляхом створення репрезентативних записів і їх використання в реалістичних завданнях. Це допомагає командам виявляти відсутні поля, незрозумілі зв'язки та незручні правила створення й редагування контенту ще до того, як інвестувати ресурси в детальний дизайн інтерфейсу.</p>
+<p class="glossary-term-section__text">В OOUX контентний прототип допомагає зробити карту об'єктів (object map) відчутною та конкретною. Електронної таблиці, зв'язаної бази даних чи простої конфігурації в системі керування контентом (CMS) може бути цілком достатньо, якщо вона дає змогу відповісти на поставлені дослідницькі запитання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме ви тестуєте?</h2>
+<p class="glossary-term-section__text">Модель описує типи, поля та зв'язки. Контентний прототип наповнює цю структуру реальними екземплярами та перевіряє, чи можуть люди створювати, підтримувати та використовувати їх.</p>
+<p class="glossary-term-section__text">Він може виявити, що оманливо просте поле «статус» насправді приховує кілька різних значень, або що спільне значення було скопійоване в записи, які вимагають окремого володіння даними.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-populating-a-travel-operations-model">
-<h2 id="section-example-populating-a-travel-operations-model" class="glossary-term-section__title">Example: populating a travel operations model</h2>
-<p class="glossary-term-section__text">An illustrative prototype contains these records:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: наповнення операційної моделі подорожей</h2>
+<p class="glossary-term-section__text">Показовий прототип містить такі записи:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Record</th>
-<th>Representative content</th>
-<th>Question to test</th>
+<th>Запис</th>
+<th>Репрезентативний контент</th>
+<th>Запитання для тестування</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip T-104</td>
-<td>Two travelers and two bookings</td>
-<td>Can staff identify the services and people associated with the trip?</td>
+<td>Поїздка T-104</td>
+<td>Два мандрівники та два бронювання</td>
+<td>Чи може персонал ідентифікувати послуги та людей, пов'язаних із поїздкою?</td>
 </tr>
 <tr>
-<td>Booking B-52</td>
-<td>Confirmed, with a supplier confirmation number</td>
-<td>Can staff find the information needed to investigate it?</td>
+<td>Бронювання B-52</td>
+<td>Підтверджено, з номером підтвердження від постачальника</td>
+<td>Чи може персонал знайти інформацію, необхідну для перевірки та вирішення проблеми?</td>
 </tr>
 <tr>
-<td>Booking B-53</td>
-<td>Awaiting confirmation, with no supplier confirmation number yet</td>
-<td>Do required-field rules permit this valid state?</td>
+<td>Бронювання B-53</td>
+<td>Очікує на підтвердження, без номера підтвердження від постачальника</td>
+<td>Чи дозволяють правила обов'язкових полів цей валідний стан?</td>
 </tr>
 <tr>
-<td>Traveler record</td>
-<td>A name longer than the usual display examples</td>
-<td>Can the same person be recognized across records and views?</td>
+<td>Запис мандрівника</td>
+<td>Ім'я, довше за стандартні приклади для відображення</td>
+<td>Чи можна розпізнати одну й ту саму людину в різних записах та представленнях?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Create more than one record per type where variation matters. Add an empty trip, several related bookings, and a relevant exception.</p>
-<p class="glossary-term-section__text">Use fictional or appropriately redacted content. Preserve the structural characteristics needed for the test.</p>
+<p class="glossary-term-section__text">Створюйте більше одного запису для кожного типу, якщо варіативність має значення. Додайте порожню поїздку, кілька пов'язаних бронювань та показовий винятковий випадок.</p>
+<p class="glossary-term-section__text">Використовуйте вигаданий або належним чином знеособлений контент. Зберігайте всі структурні характеристики, необхідні для проведення тесту.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-lightweight-process">
-<h2 id="section-a-lightweight-process" class="glossary-term-section__title">A lightweight process</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Полегшений процес</h2>
 <ol class="glossary-term-ol">
-<li>Define the questions the prototype must answer.</li>
-<li>Populate fields and references with representative examples.</li>
-<li>Ask domain users to create, find, update, and explain records.</li>
-<li>Record missing information, ambiguous labels, and failed rules.</li>
-<li>Revise the model and repeat the affected task.</li>
+<li>Визначте запитання, на які має відповісти прототип.</li>
+<li>Заповніть поля та посилання репрезентативними прикладами.</li>
+<li>Попросіть користувачів із предметної області створити, знайти, оновити та пояснити записи.</li>
+<li>Зафіксуйте відсутню інформацію, неоднозначні підписи та правила, що дали збій.</li>
+<li>Внесіть зміни до моделі та повторіть відповідне завдання.</li>
 </ol>
-<p class="glossary-term-section__text">Keep unresolved rules visible. A successful demonstration using only ideal records can hide the cases the model most needs to support.</p>
+<p class="glossary-term-section__text">Тримайте невирішені правила на виду. Успішна демонстрація, проведена виключно на ідеальних записах, може приховати саме ті випадки, підтримки яких модель потребує найбільше.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-content-prototype-or-interface-prototype">
-<h2 id="section-content-prototype-or-interface-prototype" class="glossary-term-section__title">Content prototype or interface prototype?</h2>
-<p class="glossary-term-section__text">A content prototype primarily tests structure, content, and authoring. An interactive prototype can test placement, navigation, and behavior. They can be combined as the design develops.</p>
-<p class="glossary-term-section__text">A structurally valid record does not establish that a finished screen is usable. Use <a href="/ua/glossary/ooux-prototyping-and-testing.html">OOUX prototyping and testing</a> to examine how people recognize objects and act on them in the interface.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Контентний прототип чи інтерфейсний прототип?</h2>
+<p class="glossary-term-section__text">Контентний прототип насамперед тестує структуру, контент та процес створення й редагування. Інтерактивний прототип дає змогу протестувати розміщення елементів, навігацію та поведінку. Їх можна об'єднувати в міру розвитку дизайну.</p>
+<p class="glossary-term-section__text">Структурно валідний запис ще не гарантує, що готовий екран буде зручним у використанні. Застосовуйте <a href="/ua/glossary/ooux-prototyping-and-testing.html">прототипування та тестування в OOUX</a>, щоб перевірити, як люди розпізнають об'єкти та взаємодіють із ними в інтерфейсі.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a></li>
-<li><a href="/ua/glossary/ooux-prototyping-and-testing.html">OOUX Prototyping and Testing</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-prototyping.html">AI Prototyping</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/object-attributes-ooux.html">Атрибути об'єктів в OOUX</a></li>
+<li><a href="/ua/glossary/ooux-prototyping-and-testing.html">Прототипування та тестування в OOUX</a></li>
+<li><a href="/ua/glossary/ai-prototyping.html">ШІ-прототипування (AI Prototyping)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">OOUX Masterclass: Content Prototyping</a></li>
-<li><a href="https://www.contentful.com/help/content-models/content-modelling-basics/" target="_blank" rel="noopener noreferrer">Contentful: Content Modeling Basics</a></li>
+<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">Майстер-клас з OOUX: Контентне прототипування, OOUX.com</a></li>
+<li><a href="https://www.contentful.com/help/content-models/content-modelling-basics/" target="_blank" rel="noopener noreferrer">Основи моделювання контенту, Довідка Contentful</a></li>
 </ul>
 </section>
 

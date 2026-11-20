@@ -384,75 +384,75 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Розмовний UX (Conversational UX) — це проектування призначеного для користувача досвіду, в якому взаємодія із системою відбувається природною мовою за допомогою тексту, голосу або мультимодальних форматів. Він регламентує сценарії відкриття діалогу, логіку його розвитку, механізми виправлення непорозумінь і процес доведення користувача до вирішення його завдання.</p>
-<section class="glossary-term-section" aria-labelledby="section-conversational-ux-vs-conversation-design">
-<h2 id="section-conversational-ux-vs-conversation-design" class="glossary-term-section__title">Conversational UX vs. conversation design</h2>
-<p class="glossary-term-section__text">Conversation design focuses on the structure and content of the exchange: prompts, responses, turn-taking, and repair. Conversational UX also includes the surrounding experience, such as discovering capabilities, moving between chat and other controls, and reviewing outcomes.</p>
-<p class="glossary-term-section__text">A conversational interface does not require a generative model. It can use scripted flows, intent recognition, or a combination of techniques.</p>
+    <p class="glossary-term-section__text">Розмовний UX (Conversational UX) — це проєктування користувацького досвіду, в якому люди взаємодіють із системою за допомогою мовного обміну, використовуючи текст, голос або обидва канали. Він охоплює те, як діалог починається, розвивається, опрацьовує непорозуміння та допомагає людині успішно виконати завдання.</p>
+<section class="glossary-term-section" aria-labelledby="section-ux-conversation-design">
+<h2 id="section-ux-conversation-design" class="glossary-term-section__title">Розмовний UX та дизайн діалогу (Conversation Design)</h2>
+<p class="glossary-term-section__text">Дизайн діалогу (conversation design) фокусується на структурі та змісті мовного обміну: репліках-підказках, відповідях, черговості реплік і відновленні діалогу після збоїв. Розмовний UX також охоплює навколишній користувацький досвід: виявлення можливостей системи, перемикання між чатом та іншими елементами керування, а також перегляд і оцінку результатів.</p>
+<p class="glossary-term-section__text">Розмовний інтерфейс не обов'язково вимагає генеративної моделі. Він може використовувати заздалегідь прописані сценарії, розпізнавання намірів або комбінацію різних технік.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-changing-a-travel-date">
-<h2 id="section-example-changing-a-travel-date" class="glossary-term-section__title">Example: changing a travel date</h2>
-<p class="glossary-term-section__text">A traveler asks, “Can I move this to Friday?” The system needs to establish which booking and which date the person means.</p>
-<p class="glossary-term-section__text">A useful response might show the identified booking, ask for the missing date, and present available options in a comparison view. Before applying a change, it shows the selected option and any relevant consequences.</p>
-<p class="glossary-term-section__text">If the traveler corrects the date, the system preserves the rest of the useful context. If no options are available, it provides a clear next step rather than restarting the conversation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: зміна дати поїздки</h2>
+<p class="glossary-term-section__text">Мандрівник запитує: «Чи можу я перенести це на п'ятницю?» Системі необхідно визначити, яке саме бронювання та яку саме дату має на увазі користувач.</p>
+<p class="glossary-term-section__text">Корисна відповідь системи може відобразити ідентифіковане бронювання, уточнити відсутню дату та показати доступні варіанти у вигляді порівняння. Перед застосуванням змін система демонструє вибраний варіант і всі пов'язані з ним наслідки.</p>
+<p class="glossary-term-section__text">Якщо мандрівник коригує дату, система зберігає решту корисного контексту. Якщо доступних варіантів немає, вона пропонує зрозумілий наступний крок замість того, щоб починати розмову спочатку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-designers-specify">
-<h2 id="section-what-should-designers-specify" class="glossary-term-section__title">What should designers specify?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме повинні визначати дизайнери?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Moment</th>
-<th>Design question</th>
+<th>Момент</th>
+<th>Дизайнерське запитання</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Entry</td>
-<td>What can this system help the person do?</td>
+<td>Вхід у діалог</td>
+<td>У чому саме ця система може допомогти людині?</td>
 </tr>
 <tr>
-<td>Clarification</td>
-<td>Which missing detail is necessary now?</td>
+<td>Уточнення</td>
+<td>Яка відсутня деталь є необхідною саме зараз?</td>
 </tr>
 <tr>
-<td>Response</td>
-<td>Does the user need text, a choice, a table, or a form?</td>
+<td>Відповідь</td>
+<td>Що потрібно користувачеві: текст, вибір варіанта, таблиця чи форма?</td>
 </tr>
 <tr>
-<td>Correction</td>
-<td>Can they change one detail without repeating everything?</td>
+<td>Коригування</td>
+<td>Чи може користувач змінити одну деталь, не повторюючи все спочатку?</td>
 </tr>
 <tr>
-<td>Completion</td>
-<td>Can they tell what happened and what remains?</td>
+<td>Завершення</td>
+<td>Чи розуміє користувач, що саме відбулося і що ще залишилося зробити?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Write sample conversations for ordinary and difficult cases. Include ambiguous references, changed intent, interrupted tasks, and failed operations.</p>
-<p class="glossary-term-section__text">Conversation design concerns the exchange's underlying logic, including what happens when the system does not understand a request. Adding a text box or voice input does not define that logic.</p>
+<p class="glossary-term-section__text">Складайте зразки діалогів як для звичайних, так і для складних сценаріїв. Включайте неоднозначні посилання, зміну намірів, перервані завдання та операції, які завершилися невдачею.</p>
+<p class="glossary-term-section__text">Дизайн діалогу стосується внутрішньої логіки взаємодії, включно з тим, що відбувається, коли система не розуміє запит. Просте додавання текстового поля чи голосового введення саме по собі не визначає цієї логіки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-conversational-ux-vs-agentic-ux">
-<h2 id="section-conversational-ux-vs-agentic-ux" class="glossary-term-section__title">Conversational UX vs. agentic UX</h2>
-<p class="glossary-term-section__text">A chat can answer questions without acting on another system. An agent may perform delegated work through chat, a task queue, or another interface.</p>
-<p class="glossary-term-section__text">When conversation leads to action, <a href="/ua/glossary/agentic-ux.html">agentic UX</a> adds questions about authorization, progress, review, interruption, and recovery.</p>
-<p class="glossary-term-section__text">Use direct controls when they make the task clearer. A calendar or comparison table can complement language; users should not have to describe every precise selection in prose.</p>
+<section class="glossary-term-section" aria-labelledby="section-ux-ux-agentic-ux">
+<h2 id="section-ux-ux-agentic-ux" class="glossary-term-section__title">Розмовний UX та агентний UX (Agentic UX)</h2>
+<p class="glossary-term-section__text">Чат може відповідати на запитання без виконання дій в іншій системі. Натомість автономний агент може виконувати делеговану роботу через чат, чергу завдань або інший інтерфейс.</p>
+<p class="glossary-term-section__text">Коли розмова переходить у дію, <a href="/ua/glossary/agentic-ux.html">агентний UX (Agentic UX)</a> додає запитання щодо авторизації, відображення прогресу, верифікації результатів, можливості переривання та відновлення.</p>
+<p class="glossary-term-section__text">Використовуйте прямі елементи керування, коли вони роблять завдання зрозумілішим. Календар або порівняльна таблиця можуть доповнювати мовний інтерфейс; користувачі не повинні описувати кожен точний вибір виключно текстом.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/agentic-ux.html">Agentic UX</a></li>
-<li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
-<li><a href="/ua/glossary/ai-native-design.html">AI-native Design</a></li>
-<li><a href="/ua/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
+<li><a href="/ua/glossary/agentic-ux.html">Агентний UX (Agentic UX)</a></li>
+<li><a href="/ua/glossary/generative-ui.html">Генеративний інтерфейс (Generative UI)</a></li>
+<li><a href="/ua/glossary/ai-native-design.html">ШІ-нативний дизайн (AI-Native Design)</a></li>
+<li><a href="/ua/glossary/progressive-disclosure.html">Покрокове розкриття інформації (Progressive Disclosure)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.google.com/assistant/conversation-design/what-is-conversation-design" target="_blank" rel="noopener noreferrer">What is conversation design?, Google (legacy guide)</a></li>
-<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Feedback and Control, Google PAIR</a></li>
+<li><a href="https://developers.google.com/assistant/conversation-design/what-is-conversation-design" target="_blank" rel="noopener noreferrer">Що таке дизайн розмовного діалогу?, Google (архівний посібник)</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Зворотний зв'язок та контроль, Google PAIR</a></li>
 </ul>
 </section>
 

@@ -385,70 +385,70 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Моделювання контексту предметної області (domain context modeling) — це практика фіксації меж застосування бізнес-термінів, моделей об'єктів або правил, а також переміщення інформації між різними контекстами. Це допомагає продуктовим командам проєктувати робочі процеси, де різні групи користувачів взаємодіють зі спорідненими даними, але потребують відмінних інтерпретацій, правил чи рівнів деталізації.</p>
-<p class="glossary-term-section__text">A useful concept from domain-driven design (DDD) is the <strong>bounded context</strong>, the boundary within which a model applies. Within that boundary, the people doing the work and the people building the software can agree on what their terms mean and how the modeled things behave.</p>
-<section class="glossary-term-section" aria-labelledby="section-a-trip-in-sales-and-ticketing">
-<h2 id="section-a-trip-in-sales-and-ticketing" class="glossary-term-section__title">A trip in sales and ticketing</h2>
-<p class="glossary-term-section__text">Suppose a travel operations tool serves a sales team that proposes itineraries and a ticketing team that manages supplier bookings. Both teams refer to the same trip, but an accepted offer and a confirmed booking describe different events.</p>
+    <p class="glossary-term-section__text">Моделювання контексту предметної області (domain context modeling) — це практика фіксації меж застосування бізнес-термінів, моделей об'єктів або правил, а також шляхів переміщення інформації між різними контекстами. Це допомагає продуктовим командам проєктувати робочі процеси, де різні групи користувачів взаємодіють зі спорідненими даними, але потребують відмінних інтерпретацій, правил чи рівнів деталізації.</p>
+<p class="glossary-term-section__text">Корисним поняттям із предметно-орієнтованого проєктування (DDD) є <strong>обмежений контекст (bounded context)</strong> — межа, всередині якої діє конкретна модель. У межах цієї межі люди, які виконують роботу, та фахівці, які створюють програмне забезпечення, можуть домовитися про точне значення термінів і поведінку змодельованих сутностей.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Поїздка у відділі продажів та квитковому відділі</h2>
+<p class="glossary-term-section__text">Припустимо, що система туристичних операцій обслуговує відділ продажів, який пропонує маршрути, і квитковий відділ (тікетинг), який керує бронюваннями у постачальників. Обидві команди звертаються до однієї й тієї самої поїздки, проте прийнята пропозиція та підтверджене бронювання описують зовсім різні події.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Question</th>
-<th>Sales</th>
-<th>Ticketing</th>
+<th>Питання</th>
+<th>Відділ продажів</th>
+<th>Квитковий відділ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>What does the team work with?</td>
-<td>Trip and Offer, including proposed itineraries and quoted prices</td>
-<td>Booking and its supplier reference, status, and fare rules</td>
+<td>З чим працює команда?</td>
+<td>Поїздка та Пропозиція, включно із запропонованими маршрутами та попередніми цінами</td>
+<td>Бронювання та його код у постачальника, статус і правила тарифу</td>
 </tr>
 <tr>
-<td>What decision matters?</td>
-<td>Is this the offer the traveler wants to accept?</td>
-<td>Is the supplier booking confirmed, and can it be changed?</td>
+<td>Яке рішення має вирішальне значення?</td>
+<td>Чи це саме та пропозиція, яку мандрівник готовий прийняти?</td>
+<td>Чи підтверджено бронювання постачальником і чи можна внести зміни?</td>
 </tr>
 <tr>
-<td>What should the team own?</td>
-<td>The accepted offer and the details agreed with the traveler</td>
-<td>The supplier confirmation and booking status</td>
+<td>Що має перебувати у власності команди?</td>
+<td>Прийнята пропозиція та деталі, узгоджені з мандрівником</td>
+<td>Підтвердження від постачальника та статус бронювання</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">At handoff, ticketing receives the accepted itinerary and trip reference. Ticketing links each booking to that trip. When a supplier confirms a booking, sales can see its confirmation status alongside the accepted offer.</p>
+<p class="glossary-term-section__text">Під час передачі роботи (handoff) квитковий відділ отримує узгоджений маршрут та ідентифікатор поїздки. Квитковий відділ пов'язує кожне бронювання з цією поїздкою. Коли постачальник підтверджує бронювання, відділ продажів бачить статус підтвердження поруч із прийнятою пропозицією.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-model-a-domain-context">
-<h2 id="section-how-do-you-model-a-domain-context" class="glossary-term-section__title">How do you model a domain context?</h2>
-<p class="glossary-term-section__text">Look for changes in language, rules, and ownership when you draw a model boundary. The sales and ticketing teams illustrate a possible boundary in this example.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як моделювати контекст предметної області?</h2>
+<p class="glossary-term-section__text">Звертайте увагу на зміни у формулюваннях, правилах та зонах відповідальності під час визначення меж моделі. Відділи продажів і квиткового оформлення ілюструють одну з таких можливих меж у цьому прикладі.</p>
 <ol class="glossary-term-ol">
-<li><strong>Follow a handoff.</strong> Observe what each team calls the work, what it decides, and what it needs from the other team.</li>
-<li><strong>Document the model and its scope.</strong> Record terms, objects, key relationships, and the rules that apply to them. Identify where the same word carries different meanings.</li>
-<li><strong>Agree on what crosses the boundary.</strong> Specify identifiers, status mappings, and which team or system updates each shared fact.</li>
-<li><strong>Test an exception.</strong> Walk through a supplier rejection after a traveler accepts an offer. Check that each team can understand the situation and continue its work.</li>
+<li><strong>Простежте процес передачі (handoff).</strong> Спостерігайте, як кожна команда називає роботу, що вона вирішує та чого потребує від іншої сторони.</li>
+<li><strong>Задокументуйте модель та межі її застосування.</strong> Зафіксуйте терміни, об'єкти, ключові зв'язки та правила, що до них застосовуються. Виявіть місця, де одне й те саме слово має різне значення.</li>
+<li><strong>Узгодьте об'єкти, що перетинають межу.</strong> Чітко визначте спільні ідентифікатори, зіставлення статусів та те, яка саме команда чи система оновлює кожен спільний факт.</li>
+<li><strong>Протестуйте нештатну ситуацію.</strong> Пройдіть сценарій відхилення бронювання постачальником після того, як мандрівник прийняв пропозицію. Переконайтеся, що кожна команда може зрозуміти ситуацію та продовжувати роботу.</li>
 </ol>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-this-relate-to-ooux">
-<h2 id="section-how-does-this-relate-to-ooux" class="glossary-term-section__title">How does this relate to OOUX?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/object-oriented-ux.html">OOUX</a> helps a team identify the objects people recognize and work with. Domain context modeling helps the team decide where a particular definition or rule holds. An <a href="/ua/glossary/object-mapping.html">object map</a> for ticketing can then show Booking in the context of the people who manage it.</p>
+<section class="glossary-term-section" aria-labelledby="section-ooux">
+<h2 id="section-ooux" class="glossary-term-section__title">Як це пов'язано з OOUX?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ooux/">OOUX</a> допомагає команді виявити об'єкти, які люди впізнають та з якими працюють. Моделювання контексту предметної області допомагає команді вирішити, де саме діє конкретне визначення або правило. <a href="/ua/glossary/object-mapping.html">Карта об'єктів</a> для квиткового відділу може показати «Бронювання» саме в контексті фахівців, які ним керують.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
-<li><a href="/ua/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+<li><a href="/ua/glossary/ooux/">Об'єктно-орієнтований UX</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія</a></li>
+<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Графи знань для ШІ-контексту</a></li>
+<li><a href="/ua/glossary/controlled-vocabulary.html">Контрольований словник</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf" target="_blank" rel="noopener noreferrer">Domain-Driven Design Reference, Eric Evans</a></li>
-<li><a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank" rel="noopener noreferrer">Bounded Context, Martin Fowler</a></li>
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
+<li><a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf" target="_blank" rel="noopener noreferrer">Довідник із предметно-орієнтованого проєктування (DDD Reference), Ерік Еванс</a></li>
+<li><a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank" rel="noopener noreferrer">Обмежений контекст (Bounded Context), Мартін Фаулер</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX, Софія В. Пратер</a></li>
 </ul>
 </section>
 

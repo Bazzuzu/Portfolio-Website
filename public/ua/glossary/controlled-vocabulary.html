@@ -384,57 +384,57 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Контрольований словник — це нормалізований перелік термінів, що використовується для узгодженого опису та організації інформації. Він визначає стандартизовані терміни, їхні значення, а також взаємозв'язки між синонімами та спорідненими поняттями.</p>
-<p class="glossary-term-section__text">In product design, it can support navigation labels, metadata, filters, search, and documentation. W3C's SKOS provides a model for representing concepts, preferred and alternative labels, and relationships between concepts.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-booking-statuses">
-<h2 id="section-example-booking-statuses" class="glossary-term-section__title">Example: booking statuses</h2>
-<p class="glossary-term-section__text">Suppose teams use “confirmed,” “booked,” and “ticketed” inconsistently. A controlled vocabulary could define:</p>
+    <p class="glossary-term-section__text">Контрольований словник — це нормалізований перелік термінів, що використовується для узгодженого опису та організації інформації. Він визначає стандартизовані терміни, їхні значення, а також, де це доцільно, взаємозв'язки між синонімами та спорідненими поняттями.</p>
+<p class="glossary-term-section__text">У продуктовому дизайні він може слугувати основою для навігаційних міток, метаданих, фільтрів, пошуку та документації. Стандарт SKOS від W3C надає модель для представлення концептів, пріоритетних і альтернативних міток, а також зв'язків між поняттями.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: статуси бронювання</h2>
+<p class="glossary-term-section__text">Припустімо, команди неузгоджено використовують терміни «підтверджено» (confirmed), «заброньовано» (booked) та «квиток оформлено» (ticketed). Контрольований словник може визначити наступне:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning in this product</th>
+<th>Термін</th>
+<th>Значення в цьому продукті</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Confirmed</td>
-<td>The supplier has confirmed the reservation.</td>
+<td>Confirmed (Підтверджено)</td>
+<td>Постачальник підтвердив бронювання.</td>
 </tr>
 <tr>
-<td>Ticketed</td>
-<td>A ticket has been issued.</td>
+<td>Ticketed (Квиток оформлено)</td>
+<td>Квиток було виписано (оформлено).</td>
 </tr>
 <tr>
-<td>Canceled</td>
-<td>The reservation has been canceled.</td>
+<td>Canceled (Скасовано)</td>
+<td>Бронювання було скасовано.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The definitions matter because “confirmed” and “ticketed” describe different states in this example. They should not be merged merely because users sometimes treat them as synonyms.</p>
-<p class="glossary-term-section__text">A separate search alias could help users who type “cancelled” find records labeled “Canceled.” Keep display labels separate from stable internal identifiers.</p>
+<p class="glossary-term-section__text">Ці визначення мають принципове значення, оскільки в цьому прикладі «підтверджено» та «квиток оформлено» описують різні стани системи. Їх не слід об'єднувати лише через те, що користувачі іноді вживають їх як синоніми.</p>
+<p class="glossary-term-section__text">Окремий пошуковий псевдонім (alias) може допомогти користувачам, які вводять «cancelled», знаходити записи з міткою «Canceled». Завжди відокремлюйте відображувані в інтерфейсі мітки від стабільних внутрішніх ідентифікаторів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-keep-it-useful">
-<h2 id="section-how-to-keep-it-useful" class="glossary-term-section__title">How to keep it useful</h2>
-<p class="glossary-term-section__text">Start with terms that affect actual tasks. Record each term's definition, scope, accepted alternatives, and owner. Check the language with users and domain experts.</p>
-<p class="glossary-term-section__text">Map the vocabulary to interface labels, content fields, and search behavior. Establish how proposed terms are reviewed and how deprecated terms are redirected or migrated.</p>
-<p class="glossary-term-section__text">A vocabulary can provide consistent labels for AI retrieval and outputs when the application uses it. It does not ensure that a model will interpret every term correctly. Test ambiguous queries and preserve the original meaning when translating or summarizing content.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як підтримувати практичну користь словника</h2>
+<p class="glossary-term-section__text">Почніть із термінів, які безпосередньо впливають на реальні завдання. Фіксуйте визначення кожного терміна, межі його застосування (scope), допустимі альтернативи та відповідального власника. Перевіряйте термінологію разом із користувачами та профільними експертами (domain experts).</p>
+<p class="glossary-term-section__text">Зіставте словник із мітками інтерфейсу, полями контенту та логікою пошуку. Встановіть чіткі правила для рецензування запропонованих термінів, а також для перенаправлення чи міграції застарілих (deprecated) понять.</p>
+<p class="glossary-term-section__text">Контрольований словник забезпечує узгоджені мітки для вибірки даних та генерації відповідей ШІ, коли застосунок спирається на нього. Проте це не гарантує, що мовна модель завжди правильно інтерпретуватиме кожен термін. Тестуйте неоднозначні запити та зберігайте початковий зміст під час перекладу або узагальнення контенту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
-<li><a href="/ua/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
+<li><a href="/ua/glossary/domain-context-modeling.html">Моделювання контексту предметної області (Domain Context Modeling)</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM (Structured Data for LLMs)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: SKOS Primer</a></li>
-<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: SKOS Reference</a></li>
+<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: Вступ до SKOS (SKOS Primer)</a></li>
+<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: Довідник SKOS (SKOS Reference)</a></li>
 </ul>
 </section>
 

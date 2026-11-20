@@ -384,34 +384,34 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Фасетна класифікація організовує об'єкти за кількома незалежними вимірами (фасетами), які користувачі можуть комбінувати під час пошуку інформації. Наприклад, туристичний сервіс може класифікувати авіарейси за авіакомпанією, кількістю пересадок, часом вильоту та класом обслуговування.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-facets-work">
-<h2 id="section-how-do-facets-work" class="glossary-term-section__title">How do facets work?</h2>
-<p class="glossary-term-section__text">Each item has values for the facets relevant to it. Faceted navigation exposes those values as filters. The product must define how selections combine and how counts change as the result set narrows.</p>
+    <p class="glossary-term-section__text">Фасетна класифікація організовує об'єкти за кількома незалежними вимірами (фасетами), які користувачі можуть комбінувати під час пошуку інформації. Наприклад, туристичний продукт може класифікувати авіарейси за авіакомпанією, кількістю пересадок, часом вильоту та класом обслуговування.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працюють фасети?</h2>
+<p class="glossary-term-section__text">Кожен об'єкт має значення для відповідних йому фасетів. Фасетна навігація представляє ці значення у вигляді фільтрів. Продукт повинен чітко визначати, як комбінуються обрані параметри та як змінюються лічильники кількості результатів у міру звуження вибірки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-narrowing-flight-results">
-<h2 id="section-example-narrowing-flight-results" class="glossary-term-section__title">Example: Narrowing flight results</h2>
-<p class="glossary-term-section__text">A traveler selects Nonstop, Morning departure, and either Airline A or Airline B. In this example, the system combines different facets with AND and the two airlines with OR. Results must satisfy all three dimensions while matching either selected airline.</p>
-<p class="glossary-term-section__text">Show selected filters, make them removable, and update counts consistently with the chosen logic. If no flights match, identify the active constraints and provide a way to relax them. The exact combination rules should follow the product’s data and users’ expectations.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: звуження результатів пошуку авіарейсів</h2>
+<p class="glossary-term-section__text">Мандрівник обирає фільтри «Прямий рейс» (Nonstop), «Ранковий виліт» (Morning departure) та авіакомпанію: або «Авіакомпанія A», або «Авіакомпанія B». У цьому прикладі система поєднує різні фасети за допомогою логічного оператора AND (І), а дві обрані авіакомпанії — за допомогою OR (АБО). Результати повинні задовольняти всі три виміри, одночасно відповідаючи одній з обраних авіакомпаній.</p>
+<p class="glossary-term-section__text">Відображайте вибрані фільтри, робіть їх легко видаляними та оновлюйте числові лічильники результатів відповідно до обраної логіки. Якщо жоден рейс не відповідає критеріям, повідомте про активні обмеження та надайте можливість їх послабити. Точні правила комбінування повинні спиратися на структуру даних продукту та очікування користувачів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-teams-model-and-test">
-<h2 id="section-what-should-teams-model-and-test" class="glossary-term-section__title">What should teams model and test?</h2>
-<p class="glossary-term-section__text">Use research to choose dimensions people actually use to decide. Define consistent values and handling for missing data. Avoid presenting two labels for the same cabin category unless the distinction matters.</p>
-<p class="glossary-term-section__text">Test a realistic search from a broad result set to a suitable option. Check whether users understand the labels, selected states, counts, and effect of clearing a filter. Faceted classification depends on maintained metadata as well as a usable filter interface.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що варто моделювати та тестувати продуктовим командам?</h2>
+<p class="glossary-term-section__text">Спирайтеся на дослідження, щоб обрати ті виміри, які люди дійсно використовують для ухвалення рішень. Визначте узгоджені значення та правила обробки відсутніх даних. Уникайте використання двох різних назв для однієї й тієї самої категорії каюти чи салону, якщо ця різниця не є принциповою.</p>
+<p class="glossary-term-section__text">Протестуйте реалістичний сценарій пошуку — від широкого набору результатів до підходящого варіанта. Перевірте, чи розуміють користувачі назви фільтрів, стани вибору, лічильники результатів і наслідки очищення фільтра. Фасетна класифікація однаково залежить як від якісної підтримки метаданих, так і від зручності інтерфейсу фільтрації.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
-<li><a href="/ua/glossary/polyhierarchy.html">Polyhierarchy</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
+<li><a href="/ua/glossary/polyhierarchy.html">Поліієрархія (Polyhierarchy)</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту (Content Modeling)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/filters-vs-facets/" target="_blank" rel="noopener noreferrer">Filters vs. Facets, Nielsen Norman Group</a></li>
-<li><a href="https://www.algolia.com/doc/guides/managing-results/refine-results/faceting" target="_blank" rel="noopener noreferrer">Faceting, Algolia</a></li>
+<li><a href="https://www.nngroup.com/articles/filters-vs-facets/" target="_blank" rel="noopener noreferrer">Фільтри проти фасетів, Nielsen Norman Group</a></li>
+<li><a href="https://www.algolia.com/doc/guides/managing-results/refine-results/faceting" target="_blank" rel="noopener noreferrer">Фасетний пошук, документація Algolia</a></li>
 </ul>
 </section>
 

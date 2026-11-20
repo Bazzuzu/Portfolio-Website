@@ -385,70 +385,70 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Пріоритезація об'єктів (Object Prioritization) — це процес у фреймворку ORCA з визначення об'єктів, необхідних для конкретного релізу, та ступеня їхньої візуальної й навігаційної помітності. Вона допомагає командам сфокусувати обсяг об'єктної моделі та спланувати точки входу для користувача до початку макетування екранів і меню.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-you-prioritizing">
-<h2 id="section-what-are-you-prioritizing" class="glossary-term-section__title">What are you prioritizing?</h2>
-<p class="glossary-term-section__text">Release scope and navigation prominence are separate decisions. A Booking may be essential to the first release while agents can reach it through a Trip and search. The team can give Bookings a main navigation entry later if agents regularly need to work across trips.</p>
-<p class="glossary-term-section__text">Consider what people need to complete the release’s main tasks, how often they need to find the object on its own, and what other objects or actions depend on it. Use work observations and examples from the <a href="/ua/glossary/object-mapping.html">object map</a> to make the decision concrete.</p>
+    <p class="glossary-term-section__text">Пріоритезація об'єктів (Object Prioritization) — це активність у методології ORCA, спрямована на визначення того, які об'єкти необхідні для конкретного релізу та наскільки помітно користувачі мають із ними стикатися. Вона допомагає командам звузити межі (scope) об'єктної моделі та визначити точки входу користувачів до неї ще до проектування меню й екранів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме ви пріоритезуєте?</h2>
+<p class="glossary-term-section__text">Обсяг релізу (release scope) та навігаційна помітність (navigation prominence) — це два окремих рішення. Бронювання (Booking) може бути критично важливим для першого релізу, проте агенти можуть діставатися до нього через Поїздку (Trip) та пошук. Команда може додати Бронювання до головної навігації пізніше, якщо агентам регулярно знадобиться працювати з ними наскрізно між різними поїздками.</p>
+<p class="glossary-term-section__text">Враховуйте, що саме потрібно користувачам для виконання головних завдань релізу, як часто їм потрібно знаходити об'єкт як самостійну одиницю, і які інші об'єкти або дії залежать від нього. Використовуйте спостереження за реальними робочими процесами та приклади з <a href="/ua/glossary/object-mapping.html">карти об'єктів (object map)</a>, щоб зробити ці рішення конкретними й обґрунтованими.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-prioritizing-objects-for-a-first-release">
-<h2 id="section-example-of-prioritizing-objects-for-a-first-release" class="glossary-term-section__title">Example of prioritizing objects for a first release</h2>
-<p class="glossary-term-section__text">Suppose a travel operations team starts with one goal: let agents find a trip and manage its bookings.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад пріоритезації об'єктів для першого релізу</h2>
+<p class="glossary-term-section__text">Припустимо, що операційна команда туристичного сервісу стартує з однієї мети: дозволити агентам знаходити поїздку та керувати її бронюваннями.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Candidate</th>
-<th>Release decision</th>
-<th>How people reach it</th>
+<th>Кандидат</th>
+<th>Рішення щодо релізу</th>
+<th>Як користувачі дістаються до нього</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip</td>
-<td>Include it as the starting point for managing travel.</td>
-<td>Main navigation and search.</td>
+<td>Поїздка (Trip)</td>
+<td>Включити як відправну точку для керування подорожами.</td>
+<td>Головна навігація та пошук.</td>
 </tr>
 <tr>
-<td>Booking</td>
-<td>Include it so agents can track supplier responses and request cancellation.</td>
-<td>Trip details and search by booking reference.</td>
+<td>Бронювання (Booking)</td>
+<td>Включити, щоб агенти могли відстежувати відповіді постачальників і запитувати скасування.</td>
+<td>Деталі поїздки та пошук за номером бронювання.</td>
 </tr>
 <tr>
-<td>Traveler</td>
-<td>Keep it as a shared record so agents can recognize the person across trips.</td>
-<td>From a trip’s traveler list.</td>
+<td>Мандрівник (Traveler)</td>
+<td>Зберегти як спільний запис, щоб агенти могли впізнавати людину між різними поїздками.</td>
+<td>Зі списку мандрівників у поїздці.</td>
 </tr>
 <tr>
-<td>Supplier</td>
-<td>Show the supplier name as booking information. Defer separate supplier profiles until agents need to manage them.</td>
-<td>In booking details.</td>
+<td>Постачальник (Supplier)</td>
+<td>Показувати назву постачальника як інформацію про бронювання. Відкласти окремі профілі постачальників, доки агентам не знадобиться керувати ними.</td>
+<td>У деталях бронювання.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The supplier decision reduces the release scope to the information agents use to identify a booking. If agents later need to update supplier contacts or see all bookings for a supplier, revisit the model.</p>
+<p class="glossary-term-section__text">Рішення щодо постачальника скорочує обсяг релізу до інформації, яку агенти використовують для ідентифікації бронювання. Якщо пізніше агентам знадобиться оновлювати контакти постачальників або переглядати всі бронювання для конкретного постачальника, до моделі слід повернутися знову.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-check-your-decisions">
-<h2 id="section-how-do-you-check-your-decisions" class="glossary-term-section__title">How do you check your decisions?</h2>
-<p class="glossary-term-section__text">Walk through a routine task and an exception. In this example, an agent may receive a supplier message with only a booking reference. Check that search gets them to the booking and that the booking links back to the right trip when they have access.</p>
-<p class="glossary-term-section__text">When you combine, defer, or simplify an object, review its relationships, actions, and attributes. Decide which information or behavior the release still needs and where it belongs. Record the evidence that would change your decision, such as agents repeatedly needing a queue of bookings across trips.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перевірити прийняті рішення?</h2>
+<p class="glossary-term-section__text">Пройдіть типове повсякденне завдання та винятковий сценарій (edge case). У наведеному прикладі агент може отримати повідомлення від постачальника, яке містить лише номер бронювання. Перевірте, чи дозволяє пошук знайти це бронювання, і чи посилається саме бронювання на правильну поїздку за наявності у користувача відповідних прав доступу.</p>
+<p class="glossary-term-section__text">Коли ви об'єднуєте, відкладаєте або спрощуєте об'єкт, перегляньте його зв'язки, дії та атрибути. Визначте, яка інформація чи поведінка все ще потрібна релізу та де саме їй місце. Зафіксуйте фактичні підстави, які змусили б вас переглянути рішення — наприклад, якщо агентам постійно стає потрібна черга бронювань по всіх поїздках.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/object-guide.html">Object Guide</a></li>
-<li><a href="/ua/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/object-guide.html">Картка об'єкта (Object Guide)</a></li>
+<li><a href="/ua/glossary/structural-navigation-model.html">Модель структурної навігації</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia V. Prater</a></li>
-<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">Designing With ORCA, OOUX</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія В. Пратер</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Пріоритезація пріоритезації для продуктових дизайнерів, Софія В. Пратер</a></li>
+<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">Проектування з ORCA, OOUX</a></li>
 </ul>
 </section>
 

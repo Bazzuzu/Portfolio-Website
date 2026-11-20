@@ -389,76 +389,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Фреймворк ORCA — це методологія Софії Пратер для практичного застосування об'єктно-орієнтованого UX (OOUX). Абревіатура ORCA розшифровується як Objects, Relationships, Calls to action (CTAs) та Attributes (об'єкти, зв'язки, заклики до дії та атрибути). Команди використовують його для трансформації результатів досліджень користувачів у цілісну модель об'єктів продукту, їхніх взаємозв'язків, доступних дій та інформаційного наповнення.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX</a> provides the design principles. ORCA provides activities for defining the model and using it to design and test interfaces.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-orca-stand-for">
-<h2 id="section-what-does-orca-stand-for" class="glossary-term-section__title">What does ORCA stand for?</h2>
-<p class="glossary-term-section__text">Consider one illustrative object in a support tool, Ticket #1042 about a missing invoice.</p>
+    <p class="glossary-term-section__text">Фреймворк ORCA — це методологія Софії Пратер для практичного застосування об'єктно-орієнтованого UX (OOUX). Абревіатура ORCA розшифровується як Objects (об'єкти), Relationships (зв'язки), Calls to action (заклики до дії, CTA) та Attributes (атрибути). Команди використовують його для перетворення результатів користувацьких досліджень на структуровану модель об'єктів продукту, їхніх зв'язків, доступних дій та інформаційного наповнення.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ooux/">Об'єктно-орієнтований UX (OOUX)</a> закладає фундаментальні принципи проєктування. ORCA пропонує практичні активності для формування цієї моделі та її подальшого використання під час проєктування й тестування інтерфейсів.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Що означає абревіатура ORCA?</h2>
+<p class="glossary-term-section__text">Розглянемо як ілюстрацію конкретний об'єкт у системі підтримки: тікет №1042 щодо відсутнього інвойсу.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>ORCA element</th>
-<th>Ticket example</th>
+<th>Елемент ORCA</th>
+<th>Приклад для тікета</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Object</strong></td>
-<td>Ticket is the object type. Ticket #1042 is one instance.</td>
+<td><strong>Об'єкт</strong></td>
+<td>Тікет (Ticket) — це тип об'єкта. Тікет №1042 — один із його екземплярів.</td>
 </tr>
 <tr>
-<td><strong>Relationships</strong></td>
-<td>Linked customer — Acme Studio. Assigned agent — none.</td>
+<td><strong>Зв'язки</strong></td>
+<td>Пов'язаний клієнт — Acme Studio. Призначений оператор — відсутній.</td>
 </tr>
 <tr>
-<td><strong>Calls to action</strong></td>
-<td>A supervisor can reopen the ticket after selecting an agent.</td>
+<td><strong>Заклики до дії</strong></td>
+<td>Супервайзер може повторно відкрити тікет після вибору оператора.</td>
 </tr>
 <tr>
-<td><strong>Attributes</strong></td>
-<td>Subject — Missing invoice. Status — Closed. Priority — Normal.</td>
+<td><strong>Атрибути</strong></td>
+<td>Тема — Відсутній інвойс. Статус — Закритий. Пріоритет — Звичайний.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Customer and Agent are objects with their own records. The ticket links to those records through relationships. Status and priority describe the ticket as attributes.</p>
+<p class="glossary-term-section__text">Клієнт (Customer) та Оператор (Agent) є об'єктами з власними записами. Тікет посилається на ці записи через зв'язки. Статус і пріоритет описують тікет як атрибути.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-the-orca-process-work">
-<h2 id="section-how-does-the-orca-process-work" class="glossary-term-section__title">How does the ORCA process work?</h2>
-<p class="glossary-term-section__text">ORCA works through four iterative rounds. Teams revisit and refine Objects, Relationships, Calls to action, and Attributes as the model develops.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Як влаштований процес ORCA?</h2>
+<p class="glossary-term-section__text">Процес ORCA розгортається у чотири ітеративні раунди. Команди послідовно повертаються до об'єктів, зв'язків, закликів до дії та атрибутів, удосконалюючи модель у міру її розвитку.</p>
 <ol class="glossary-term-ol">
-<li><strong>Discovery.</strong> Identify objects from research. Map their relationships, record actions by object and role in a <a href="/ua/glossary/cta-matrix.html">CTA Matrix</a>, and build an initial <a href="/ua/glossary/object-mapping.html">object map</a>. Capture questions for further research.</li>
-<li><strong>Requirements.</strong> Define relationship rules, permissions, and required fields. Document object definitions in an <a href="/ua/glossary/object-guide.html">Object Guide</a> and expand the CTA matrix into <a href="/ua/glossary/object-oriented-user-stories.html">object-oriented user stories</a>. Clarify the rules for the object's <a href="/ua/glossary/object-attributes-ooux.html">attributes</a>.</li>
-<li><strong>Prioritization.</strong> Decide what belongs in the release and which <a href="/ua/glossary/attribute-prioritization.html">information</a> and <a href="/ua/glossary/cta-prioritization.html">actions</a> deserve prominence in the interface.</li>
-<li><strong>Representation.</strong> Turn the model into cards, lists, detail views, and a connected prototype. Use a <a href="/ua/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> to examine intentional variants. Test whether users recognize the objects, find their connections, and understand the available actions.</li>
+<li><strong>Дослідження (Discovery).</strong> Визначення об'єктів на основі досліджень. Складання карти зв'язків, фіксація дій за об'єктами та ролями в <a href="/ua/glossary/cta-matrix.html">матриці CTA (CTA Matrix)</a> та побудова початкової <a href="/ua/glossary/object-mapping.html">карти об'єктів</a>. Фіксація відкритих питань для подальших досліджень.</li>
+<li><strong>Вимоги (Requirements).</strong> Визначення правил зв'язків, прав доступу та обов'язкових полів. Документування визначень об'єктів у <a href="/ua/glossary/object-guide.html">картці об'єкта (Object Guide)</a> і розширення матриці CTA в <a href="/ua/glossary/object-oriented-user-stories.html">об'єктно-орієнтовані історії користувачів</a>. Уточнення правил для <a href="/ua/glossary/object-attributes-ooux.html">атрибутів об'єкта</a>.</li>
+<li><strong>Пріоритезація (Prioritization).</strong> Ухвалення рішень щодо того, що увійде до релізу, та яка <a href="/ua/glossary/attribute-prioritization.html">інформація</a> й <a href="/ua/glossary/cta-prioritization.html">дії</a> заслуговують на найбільшу помітність в інтерфейсі.</li>
+<li><strong>Репрезентація (Representation).</strong> Трансформація моделі в картки, списки, детальні перегляди та інтерактивний пов'язаний прототип. Використання <a href="/ua/glossary/shapeshifter-matrix.html">матриці трансформації станів (Shapeshifter Matrix)</a> для опрацювання цілеспрямованих варіантів відображення. Тестування того, чи впізнають користувачі об'єкти, чи знаходять зв'язки між ними та чи розуміють доступні дії.</li>
 </ol>
-<p class="glossary-term-section__text">This sequence provides a starting point. The rounds can be adapted to the project. Prater describes moving Prioritization ahead of detailed Requirements when time is limited. <a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia Prater</a></p>
+<p class="glossary-term-section__text">Ця послідовність є відправною точкою. Раунди можна адаптувати під потреби проєкту. Пратер описує перенесення раунду пріоритезації перед етапом детальних вимог у разі обмеженого часу. <a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Пріоритезація пріоритезації для продуктових дизайнерів, Софія Пратер</a></p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-an-orca-example-in-practice">
-<h2 id="section-an-orca-example-in-practice" class="glossary-term-section__title">An ORCA example in practice</h2>
-<p class="glossary-term-section__text">For Ticket #1042, the reopening rule connects a user role, the ticket’s status, and its relationship to an agent. These requirements guide who sees the action, when it is available, and what information is needed to complete it.</p>
-<p class="glossary-term-section__text">The team can prototype the ticket view to test whether supervisors can find the action and understand why they need to assign an agent.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Приклад використання ORCA на практиці</h2>
+<p class="glossary-term-section__text">Для тікета №1042 правило повторного відкриття пов'язує роль користувача, статус тікета та його зв'язок із оператором. Ці вимоги визначають, хто бачить дію, коли вона доступна та яка інформація потрібна для її завершення.</p>
+<p class="glossary-term-section__text">Команда може створити прототип екрана тікета, щоб перевірити, чи можуть супервайзери легко знайти цю дію та чи розуміють вони, чому спершу необхідно призначити оператора.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-use-orca">
-<h2 id="section-when-should-you-use-orca" class="glossary-term-section__title">When should you use ORCA?</h2>
-<p class="glossary-term-section__text">Use ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Коли слід використовувати ORCA?</h2>
+<p class="glossary-term-section__text">Використовуйте ORCA, коли команді необхідно узгодити взаємопов'язані об'єкти, права доступу для різних ролей або бізнес-правила ще до початку проєктування екранів. Почніть з одного об'єкта та реального робочого завдання. Перевірте модель разом із користувачами та експертами предметної області й повертайтеся до досліджень щоразу, коли важливі питання залишаються без відповіді.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX (OOUX)</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/cardinality-ux-architecture.html">Cardinality (UX Architecture)</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
+<li><a href="/ua/glossary/ooux/">Об'єктно-орієнтований UX (OOUX)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів</a></li>
+<li><a href="/ua/glossary/cardinality-ux-architecture.html">Кардинальність у UX-архітектурі</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia V. Prater</a></li>
-<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">OOUX Masterclass course outline, OOUX.com</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія В. Пратер</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Пріоритезація пріоритезації для продуктових дизайнерів, Софія В. Пратер</a></li>
+<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">Програма курсу OOUX Masterclass, OOUX.com</a></li>
 </ul>
 </section>
 

@@ -384,81 +384,81 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Пріоритезація зв'язків (Relationship Prioritization) — це практика у фреймворку ORCA, спрямована на вибір тих міжоб'єктних зв'язків, які мають бути обов'язково підтримані в системі та виділені в інтерфейсі. Вона допомагає трансформувати повну модель взаємозв'язків у керований скоуп релізу та сформувати інтуїтивні навігаційні маршрути.</p>
-<p class="glossary-term-section__text">A connection can exist in the data model without needing a visible navigation link in every view. Decide what people need to understand, reach, or manage in each context.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-are-you-prioritizing">
-<h2 id="section-what-are-you-prioritizing" class="glossary-term-section__title">What are you prioritizing?</h2>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a> helps discover possible connections. Relationship requirements describe how a connection works, including its mechanics and cardinality.</p>
-<p class="glossary-term-section__text">Prioritization asks which capabilities and paths matter for the intended release. A navigation design then determines how those chosen paths appear.</p>
+    <p class="glossary-term-section__text">Пріоритезація зв'язків (Relationship Prioritization) — це активність у фреймворку ORCA, спрямована на визначення того, які зв'язки між об'єктами потребують реалізації в продукті та візуального акцентування в його інтерфейсі. Вона допомагає командам трансформувати модель зв'язків у керований обсяг розробки та корисні шляхи переміщення інформацією.</p>
+<p class="glossary-term-section__text">Зв'язок може існувати в моделі даних, не вимагаючи при цьому видимого навігаційного посилання в кожному поданні. Визначте, що саме користувачам необхідно розуміти, знаходити чи чим керувати в кожному конкретному контексті.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме ви пріоритезуєте?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a> допомагає виявити потенційні зв'язки. Вимоги до зв'язків описують, як працює зв'язок, зокрема його механіку та кардинальність (кратність).</p>
+<p class="glossary-term-section__text">Пріоритезація визначає, які можливості та шляхи навігації мають значення для запланованого релізу. Після цього дизайн навігації визначає, як саме ці обрані шляхи відображатимуться в інтерфейсі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-managing-a-travel-booking">
-<h2 id="section-example-managing-a-travel-booking" class="glossary-term-section__title">Example: managing a travel booking</h2>
-<p class="glossary-term-section__text">A first release supports agents working on trips and their bookings.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: управління бронюванням подорожей</h2>
+<p class="glossary-term-section__text">Перший реліз забезпечує роботу агентів із поїздками та відповідними бронюваннями.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Connection</th>
-<th>Example decision</th>
-<th>User need</th>
+<th>Зв'язок</th>
+<th>Приклад рішення</th>
+<th>Потреба користувача</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip to Bookings</td>
-<td>Show related bookings and a way to add one</td>
-<td>Manage the trip's travel services.</td>
+<td>Поїздка до Бронювань</td>
+<td>Показувати пов'язані бронювання та можливість додати нове</td>
+<td>Керувати туристичними послугами поїздки.</td>
 </tr>
 <tr>
-<td>Booking to Trip</td>
-<td>Provide a contextual route back to the trip</td>
-<td>Understand the record after entering through search.</td>
+<td>Бронювання до Поїздки</td>
+<td>Забезпечити контекстний шлях повернення до поїздки</td>
+<td>Зрозуміти контекст запису після переходу через пошук.</td>
 </tr>
 <tr>
-<td>Trip to Travelers</td>
-<td>Show associated travelers</td>
-<td>Verify whom the trip concerns.</td>
+<td>Поїздка до Мандрівників</td>
+<td>Показувати пов'язаних мандрівників</td>
+<td>Перевірити, кого саме стосується поїздка.</td>
 </tr>
 <tr>
-<td>Traveler to all Trips</td>
-<td>Support if cross-trip history is part of the release</td>
-<td>Investigate earlier travel without duplicate searches.</td>
+<td>Мандрівник до всіх Поїздок</td>
+<td>Підтримувати, якщо історія поїздок входить до обсягу релізу</td>
+<td>Досліджувати попередні подорожі без повторного пошуку.</td>
 </tr>
 <tr>
-<td>Booking to Supplier profile</td>
-<td>Defer the profile route if supplier management is out of scope</td>
-<td>Retain the supplier information needed for the booking.</td>
+<td>Бронювання до профілю Постачальника</td>
+<td>Відкласти перехід до профілю, якщо управління постачальниками поза межами релізу</td>
+<td>Зберегти інформацію про постачальника, необхідну для бронювання.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Deferring a supplier profile does not remove the need to identify the supplier. Record where that information comes from and how agents use it.</p>
+<p class="glossary-term-section__text">Відкладення профілю постачальника не скасовує потреби в його ідентифікації. Зафіксуйте, звідки надходить ця інформація та як агенти її використовують.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-choose">
-<h2 id="section-how-to-choose" class="glossary-term-section__title">How to choose</h2>
-<p class="glossary-term-section__text">Start with representative tasks and entry points. Evaluate the need in both directions: a person viewing a Trip may need its Bookings, while someone opening a Booking directly needs its Trip context.</p>
-<p class="glossary-term-section__text">Consider related-record volume, permissions, maintenance cost, and what happens when no related record exists. Document deferred capabilities and the evidence that would make them necessary.</p>
-<p class="glossary-term-section__text">Avoid removing a relationship merely because its interface is inconvenient. A required business connection still needs an appropriate representation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як здійснювати вибір</h2>
+<p class="glossary-term-section__text">Почніть із типових завдань і точок входу. Оцініть потребу в обох напрямках: людині, яка переглядає Поїздку, можуть знадобитися її Бронювання, тоді як тому, хто відкриває Бронювання напряму, необхідний контекст Поїздки.</p>
+<p class="glossary-term-section__text">Враховуйте обсяг пов'язаних записів, права доступу, витрати на підтримку та поведінку системи у випадках, коли пов'язаний запис відсутній. Документуйте відкладені можливості та фактори, які зумовлять необхідність їхньої реалізації.</p>
+<p class="glossary-term-section__text">Уникайте відмови від зв'язку лише через те, що його інтерфейс складно реалізувати. Необхідний для бізнесу зв'язок все одно потребує належного представлення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-test-it">
-<h2 id="section-how-to-test-it" class="glossary-term-section__title">How to test it</h2>
-<p class="glossary-term-section__text">Ask users to complete a routine task and investigate an exception. Start one task from search or a notification.</p>
-<p class="glossary-term-section__text">Observe whether users find the next relevant record, understand where they arrived, and retain enough context to return. Review the result before adding more links.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як це протестувати</h2>
+<p class="glossary-term-section__text">Запропонуйте користувачам виконати рутинне завдання та розібратися з нетиповою ситуацією (винятком). Почніть одне із завдань із пошуку або сповіщення.</p>
+<p class="glossary-term-section__text">Спостерігайте, чи знаходять користувачі наступний релевантний запис, чи розуміють, куди вони потрапили, і чи зберігають достатньо контексту для повернення назад. Проаналізуйте результати перед додаванням нових посилань.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a></li>
-<li><a href="/ua/glossary/orca-relationship-requirements.html">ORCA Relationship Requirements</a></li>
-<li><a href="/ua/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
-<li><a href="/ua/glossary/object-prioritization.html">Object Prioritization</a></li>
+<li><a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a></li>
+<li><a href="/ua/glossary/orca-relationship-requirements.html">Вимоги до зв'язків у фреймворку ORCA (ORCA Relationship Requirements)</a></li>
+<li><a href="/ua/glossary/structural-navigation-model.html">Модель структурної навігації (Structural Navigation Model)</a></li>
+<li><a href="/ua/glossary/object-prioritization.html">Пріоритезація об'єктів (Object Prioritization)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950" target="_blank" rel="noopener noreferrer">The UX Level-Up: Relationship Prioritization with Jake Zukowski</a></li>
-<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">OOUX: Designing With ORCA</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950" target="_blank" rel="noopener noreferrer">The UX Level-Up: Пріоритезація зв'язків із Джейком Зуковскі (Jake Zukowski)</a></li>
+<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">OOUX: Проєктування за допомогою ORCA</a></li>
 </ul>
 </section>
 

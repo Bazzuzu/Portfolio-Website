@@ -385,73 +385,73 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Картування об'єктів (object mapping) — це практика структурування сутностей, з якими взаємодіють користувачі, у спільну модель типів об'єктів, їхніх зв'язків, атрибутів і доступних дій. В об'єктно-орієнтованому UX (OOUX) карта об'єктів допомагає командам визначити, яка інформація та дії логічно пов'язані між собою, ще до початку проєктування інтерфейсних екранів.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-create-an-object-map">
-<h2 id="section-how-do-you-create-an-object-map" class="glossary-term-section__title">How do you create an object map?</h2>
+    <p class="glossary-term-section__text">Картування об'єктів (object mapping) — це практика структурування сутностей, з якими взаємодіють користувачі, у спільну модель типів об'єктів, їхніх зв'язків, атрибутів і доступних дій. В об'єктно-орієнтованому UX (OOUX) карта об'єктів допомагає командам визначити, яка саме інформація та дії логічно пов'язані між собою, ще до початку проєктування екранів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як створюється карта об'єктів?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Find candidate objects.</strong> Look for nouns in interviews, workflows, and support requests. Check which things users recognize, refer to repeatedly, and need to distinguish from one another.</li>
-<li><strong>Describe each object.</strong> Capture the information users need to identify it and make decisions about it. For a booking, that might be its confirmation number and status.</li>
-<li><strong>Map relationships and actions.</strong> Ask what each object connects to, what users need to do with it, and which roles can act. Keep uncertain rules visible for follow-up.</li>
-<li><strong>Walk through a real task.</strong> Try a routine case and an exception. Revise the map when either case exposes missing information, a connection, or an action.</li>
+<li><strong>Знайдіть потенційні об'єкти.</strong> Шукайте іменники в інтерв'ю, робочих процесах та запитах на підтримку. З'ясуйте, які сутності користувачі впізнають, до яких звертаються багаторазово та які з них їм необхідно розрізняти між собою.</li>
+<li><strong>Опишіть кожен об'єкт.</strong> Зафіксуйте інформацію, необхідну людям для ідентифікації об'єкта та прийняття рішень щодо нього. Для бронювання це можуть бути номер підтвердження та статус.</li>
+<li><strong>Складіть карту зв'язків та дій.</strong> Запитайте, з чим з'єднується кожен об'єкт, що саме користувачам потрібно з ним робити та які ролі можуть діяти. Зберігайте нез'ясовані правила видимими для подальшого опрацювання.</li>
+<li><strong>Пройдіть реальне робоче завдання.</strong> Протестуйте типовий сценарій та винятковий випадок. Оновлюйте карту, коли будь-який із цих випадків виявляє відсутність даних, зв'язку чи необхідної дії.</li>
 </ol>
-<p class="glossary-term-section__text">An object type describes a class of things, such as Booking. Booking B-52 is one instance. Booking status describes the booking. Traveler is a separate object in this example because agents look up travelers, update their details, and view their other trips.</p>
+<p class="glossary-term-section__text">Тип об'єкта описує клас сутностей, наприклад «Бронювання». Бронювання B-52 — це один конкретний екземпляр. Статус бронювання описує саме бронювання. «Мандрівник» у цьому прикладі виступає окремим об'єктом, оскільки оператори шукають мандрівників, оновлюють їхні дані та переглядають інші їхні поїздки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-object-map-example-for-travel-operations">
-<h2 id="section-object-map-example-for-travel-operations" class="glossary-term-section__title">Object map example for travel operations</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад карти об'єктів для туристичних операцій</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Object type</th>
-<th>Useful attributes</th>
-<th>Relationships</th>
-<th>Example action</th>
+<th>Тип об'єкта</th>
+<th>Корисні атрибути</th>
+<th>Зв'язки</th>
+<th>Приклад дії</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip</td>
-<td>Reference, travel dates</td>
-<td>Bookings and travelers</td>
-<td>Add a booking</td>
+<td>Поїздка</td>
+<td>Ідентифікатор, дати подорожі</td>
+<td>Бронювання та мандрівники</td>
+<td>Додати бронювання</td>
 </tr>
 <tr>
-<td>Booking</td>
-<td>Reference, status, supplier confirmation number when available</td>
-<td>One trip</td>
-<td>Request cancellation if eligible</td>
+<td>Бронювання</td>
+<td>Номер бронювання, статус, номер підтвердження постачальника (за наявності)</td>
+<td>Одна поїздка</td>
+<td>Надіслати запит на скасування, якщо це дозволено</td>
 </tr>
 <tr>
-<td>Traveler</td>
-<td>Name, contact details</td>
-<td>Trips they are associated with</td>
-<td>Update contact details</td>
+<td>Мандрівник</td>
+<td>Ім'я, контактні дані</td>
+<td>Поїздки, з якими він асоційований</td>
+<td>Оновити контактні дані</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">For an agent handling a cancellation, the map suggests a path from Trip to Booking. A booking summary can show the reference and status so the agent can pick the right record. The <a href="/ua/glossary/state-transition-matrix.html">state transition matrix</a> specifies what happens after an eligible agent requests cancellation.</p>
+<p class="glossary-term-section__text">Для оператора, який опрацьовує скасування, карта підказує шлях переходу від Поїздки до Бронювання. Короткий опис бронювання може містити номер і статус, щоб оператор міг обрати потрібний запис. <a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів</a> визначає, що саме відбувається після того, як уповноважений оператор надсилає запит на скасування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-the-object-map-fit-into-orca">
-<h2 id="section-how-does-the-object-map-fit-into-orca" class="glossary-term-section__title">How does the object map fit into ORCA?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/orca-framework.html">ORCA</a> gives teams several ways to investigate an object model. A nested object matrix records relationships between object types. A call-to-action (CTA) matrix records what each role needs to do with each object. The object map organizes attributes by object and builds on the relationships already identified. The example above shows actions alongside those findings for easy reference.</p>
-<p class="glossary-term-section__text">Use the map to decide what belongs in each view. A search result might show the booking reference and status. The detail view can add fare rules and cancellation options while keeping the same reference and status labels.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Яке місце займає карта об'єктів у фреймворку ORCA?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/orca-framework.html">ORCA</a> пропонує командам кілька способів дослідження моделі об'єктів. Матриця вкладених об'єктів фіксує зв'язки між типами об'єктів. Матриця закликів до дії (CTA) фіксує, що саме кожна роль має робити з кожним об'єктом. Карта об'єктів упорядковує атрибути за об'єктами та спирається на вже виявлені зв'язки. Наведений вище приклад демонструє дії поруч із цими даними для зручності зіставлення.</p>
+<p class="glossary-term-section__text">Використовуйте карту, щоб визначити, що належить кожному поданню інтерфейсу. Результати пошуку можуть показувати номер і статус бронювання. Детальний перегляд може додати правила тарифу та опції скасування, зберігаючи ті самі підписи для номера та статусу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/conceptual-schema.html">Conceptual Schema</a></li>
-<li><a href="/ua/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA</a></li>
+<li><a href="/ua/glossary/conceptual-schema.html">Концептуальна схема</a></li>
+<li><a href="/ua/glossary/domain-context-modeling.html">Моделювання контексту предметної області</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://ooux.com/offerings/foundations" target="_blank" rel="noopener noreferrer">OOUX Foundations, Sophia V. Prater</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX, Софія В. Пратер</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія В. Пратер</a></li>
+<li><a href="https://ooux.com/offerings/foundations" target="_blank" rel="noopener noreferrer">Основи OOUX, Софія В. Пратер</a></li>
 </ul>
 </section>
 

@@ -384,63 +384,63 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Чотири типові UX-помилки в об'єктно-орієнтованому UX (OOUX) — це замасковані (masked), перевертні або мінливі (shape-shifting), зламані (broken) та ізольовані (isolated) об'єкти. Софія Прейтер (Sophia Prater) використовує ці патерни для виявлення причин, чому користувачам складно впізнавати об'єкти, інтерпретувати їх у різних контекстах, знаходити доступні дії або переходити до пов'язаних даних.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-spot-the-four-problems">
-<h2 id="section-how-do-you-spot-the-four-problems" class="glossary-term-section__title">How do you spot the four problems?</h2>
+    <p class="glossary-term-section__text">Чотири типові UX-помилки в об'єктно-орієнтованому UX (OOUX) — це замасковані (masked), перевертні або мінливі (shape-shifting), зламані (broken) та ізольовані (isolated) об'єкти. Софія Пратер (Sophia Prater) використовує ці патерни для виявлення причин, чому користувачам складно впізнавати об'єкти, інтерпретувати їх у різних поданнях, знаходити доступні дії або переходити до пов'язаних записів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як виявити чотири проблеми?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Problem</th>
-<th>Example in a travel operations tool</th>
-<th>What to change</th>
+<th>Проблема</th>
+<th>Приклад в інструменті організації подорожей</th>
+<th>Що змінити</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Masked object</td>
-<td>A proposed Offer and a supplier Booking both appear as “Trip item,” with no indication of which is which.</td>
-<td>Give each type a recognizable label and show the details people use to tell them apart.</td>
+<td>Замаскований об'єкт (Masked object)</td>
+<td>Запропонована Пропозиція (Offer) і Бронювання постачальника (Booking) відображаються як «Пункт поїздки» (Trip item) без жодних ознак того, що є чим.</td>
+<td>Надайте кожному типу зрозумілу мітку та покажіть деталі, за якими користувачі розрізняють ці сутності.</td>
 </tr>
 <tr>
-<td>Shape-shifting object</td>
-<td>Booking B-52 appears in search with its reference and status, then appears in the trip as an unlabeled date with no visible reference.</td>
-<td>Keep identifying cues consistent across views. Choose how much detail each view needs.</td>
+<td>Об'єкт-перевертень (Shape-shifting object)</td>
+<td>Бронювання B-52 відображається в пошуку з номером і статусом, а в поїздці — як дата без підпису та без видимого номера.</td>
+<td>Зберігайте ідентифікаційні ознаки узгодженими в усіх поданнях. Визначте необхідний рівень деталізації для кожного екрана.</td>
 </tr>
 <tr>
-<td>Broken object</td>
-<td>The booking’s status is in one workspace, its fare rules in another, and the cancellation action in a separate admin menu.</td>
-<td>Bring the relevant information and actions together around the booking, with access appropriate to the role.</td>
+<td>Зламаний об'єкт (Broken object)</td>
+<td>Статус бронювання розміщений в одній робочій області, правила тарифу — в іншій, а дія скасування — в окремому меню адміністратора.</td>
+<td>Зберіть відповідну інформацію та дії разом навколо бронювання з правами доступу, що відповідають ролі користувача.</td>
 </tr>
 <tr>
-<td>Isolated object</td>
-<td>An agent opens a booking from search and must start a new search to find its trip, even though they can view both records.</td>
-<td>Add a contextual link from the booking to its trip where the agent needs it.</td>
+<td>Ізольований об'єкт (Isolated object)</td>
+<td>Оператор відкриває бронювання з результатів пошуку і змушений запускати новий пошук, щоб знайти його поїздку, хоча має доступ до обох записів.</td>
+<td>Додайте контекстне посилання з бронювання на його поїздку там, де воно потрібне оператору.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">If the agent recognizes Booking B-52 but cannot find “Request cancellation,” check for a broken object. If they can act on the booking but cannot reach its trip, check for an isolated object.</p>
+<p class="glossary-term-section__text">Якщо оператор упізнає Бронювання B-52, але не може знайти дію «Запросити скасування», перевірте систему на наявність зламаного об'єкта. Якщо він може виконувати дії над бронюванням, але не може перейти до його поїздки, шукайте ізольований об'єкт.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-run-a-review">
-<h2 id="section-how-do-you-run-a-review" class="glossary-term-section__title">How do you run a review?</h2>
-<p class="glossary-term-section__text">Pick one object and follow it through a task. For Booking B-52, open the record from search and from its trip. Ask the agent to identify it, check whether cancellation is available, and find the related trip. Observe where they pause, look elsewhere, or mistake one record for another.</p>
-<p class="glossary-term-section__text">Use the <a href="/ua/glossary/object-mapping.html">object map</a> to check which identifying fields belong on the record, where its actions should appear, and which relationships warrant a link. Fix the issue that interrupts the task first. A compact search result and a full detail page can look different while preserving the cues that help the agent recognize the booking.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як провести аудит?</h2>
+<p class="glossary-term-section__text">Оберіть один об'єкт і простежте за ним під час виконання завдання. Для Бронювання B-52 відкрийте запис із пошуку та з відповідної поїздки. Попросіть оператора ідентифікувати його, перевірити, чи доступне скасування, і знайти пов'язану поїздку. Зверніть увагу, де саме він робить паузу, шукає інформацію в іншому місці або плутає один запис з іншим.</p>
+<p class="glossary-term-section__text">Використовуйте <a href="/ua/glossary/object-mapping.html">карту об'єктів</a>, щоб перевірити, які ідентифікаційні поля мають належати запису, де повинні розміщуватися його дії та які зв'язки потребують посилань. Насамперед виправляйте ту проблему, яка перериває виконання основного сценарію. Компактний результат пошуку та повна сторінка деталей можуть виглядати по-різному, зберігаючи при цьому ключові ознаки, які допомагають оператору легко впізнати бронювання.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX (OOUX)</a></li>
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
+<li><a href="/ua/glossary/object-oriented-ux.html">Об'єктно-орієнтований UX (OOUX)</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA (ORCA Framework)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/structural-navigation-model.html">Модель структурної навігації (Structural Navigation Model)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up" target="_blank" rel="noopener noreferrer">The Life-changing Magic of OOUX Tidying Up, Sophia V. Prater</a></li>
-<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">Designing With ORCA, OOUX</a></li>
+<li><a href="https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up" target="_blank" rel="noopener noreferrer">Магія наведення ладу в OOUX, Софія Пратер (The Life-changing Magic of OOUX Tidying Up, Sophia V. Prater)</a></li>
+<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">Проєктування за допомогою ORCA, OOUX (Designing With ORCA, OOUX)</a></li>
 </ul>
 </section>
 

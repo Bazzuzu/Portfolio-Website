@@ -384,60 +384,60 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Об'єкт зв'язку (Junction Object) — це архітектурна сутність, яка представляє взаємозв'язок між іншими об'єктами як окремий самостійний об'єкт. Він застосовується, коли сам факт зв'язку несе важливу для користувача інформацію (наприклад, роль у проєкті або квиток на рейс). В OOUX це дає змогу виділити для таких даних чітке місце в моделі та визначити сценарії їх перегляду чи редагування.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-of-a-junction-object">
-<h2 id="section-example-of-a-junction-object" class="glossary-term-section__title">Example of a junction object</h2>
-<p class="glossary-term-section__text">A traveler can be linked to several trips, and a trip can include several travelers. Suppose agents also need to know whether each traveler has confirmed they will join a particular trip. One traveler can be Confirmed for Trip T-104 and Invited for another trip at the same time.</p>
+    <p class="glossary-term-section__text">Об'єкт зв'язку (Junction Object) представляє зв'язок між двома сутностями як самостійний повноцінний об'єкт. Він корисний тоді, коли сам зв'язок несе інформацію, важливу для користувачів. В об'єктно-орієнтованому UX (Object-Oriented UX, OOUX) він надає цим даним чітке місце в моделі та допомагає командам визначити, де саме користувачі повинні їх бачити або змінювати.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад об'єкта зв'язку</h2>
+<p class="glossary-term-section__text">Мандрівник може бути пов'язаний із декількома поїздками, а поїздка може включати декількох мандрівників. Припустимо, що агентам також необхідно знати, чи підтвердив кожен мандрівник свою участь у конкретній поїздці. Один і той самий мандрівник може одночасно мати статус «Підтверджено» для Поїздки T-104 та статус «Запрошено» для іншої поїздки.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Where the information belongs</th>
-<th>Example</th>
+<th>Де зберігається інформація</th>
+<th>Приклад</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Traveler</td>
-<td>Name and contact details</td>
+<td>Мандрівник (Traveler)</td>
+<td>Ім'я та контактні дані</td>
 </tr>
 <tr>
-<td>Trip</td>
-<td>Reference and travel dates</td>
+<td>Поїздка (Trip)</td>
+<td>Номер та дати подорожі</td>
 </tr>
 <tr>
-<td>Trip Participation</td>
-<td>One trip, one traveler, participation status, and response date when available</td>
+<td>Участь у поїздці (Trip Participation)</td>
+<td>Одна поїздка, один мандрівник, статус участі та дата відповіді за наявності</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Trip Participation is the junction object. In this example, the product allows one participation record for each traveler and trip pair. If an agent changes the status for Trip T-104 to Confirmed, any Invited status on a different trip stays as it was.</p>
+<p class="glossary-term-section__text">«Участь у поїздці» (Trip Participation) — це і є об'єкт зв'язку. У цьому прикладі продукт дозволяє один запис про участь для кожної пари «мандрівник — поїздка». Якщо агент змінює статус для Поїздки T-104 на «Підтверджено», статус «Запрошено» для будь-якої іншої поїздки залишається без змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-is-a-junction-object-useful">
-<h2 id="section-when-is-a-junction-object-useful" class="glossary-term-section__title">When is a junction object useful?</h2>
-<p class="glossary-term-section__text">Ask whether the same person or record can have different values depending on what it is linked to. A traveler’s contact details normally describe the person. Their response to a particular trip invitation describes their participation in that trip.</p>
-<p class="glossary-term-section__text">Then check what people do with the relationship. In this example, an invitation creates a participation record, a response updates it, and removal ends that traveler’s association with the trip. Naming the junction object lets the team talk about these actions without confusing a trip-specific change with an edit to the traveler’s profile.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли об'єкт зв'язку є корисним?</h2>
+<p class="glossary-term-section__text">Запитайте себе, чи може одна й та сама особа або запис мати різні значення залежно від того, з чим вона пов'язана. Контактні дані мандрівника зазвичай описують саму людину. Натомість її відповідь на запрошення до конкретної поїздки описує її участь саме в цій поїздці.</p>
+<p class="glossary-term-section__text">Потім перевірте, які дії люди виконують із цим зв'язком. У нашому прикладі запрошення створює запис про участь, відповідь оновлює його, а вилучення припиняє зв'язок мандрівника з поїздкою. Окреме найменування об'єкта зв'язку дозволяє команді обговорювати ці дії без плутанини між зміною, специфічною для поїздки, та редагуванням профілю мандрівника.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-it-show-up-in-the-interface">
-<h2 id="section-how-does-it-show-up-in-the-interface" class="glossary-term-section__title">How does it show up in the interface?</h2>
-<p class="glossary-term-section__text">In the trip’s traveler list, show the traveler’s name alongside their participation status. Opening the name can lead to the Traveler record. An action such as “Remove from trip” applies to the participation and leaves the traveler profile intact.</p>
-<p class="glossary-term-section__text">The junction object can be represented by that row and its actions. Give it a detail view if people need to inspect a response history or manage more information than the row can show. Use the <a href="/ua/glossary/nested-object-matrix.html">nested object matrix</a> to record how Trip Participation connects to Trip and Traveler.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як це відображається в інтерфейсі?</h2>
+<p class="glossary-term-section__text">У списку мандрівників поїздки покажіть ім'я мандрівника поруч із його статусом участі. Відкриття імені може вести до запису «Мандрівник». Дія на зразок «Вилучити з поїздки» застосовується саме до запису про участь і залишає профіль мандрівника недоторканим.</p>
+<p class="glossary-term-section__text">Об'єкт зв'язку може бути представлений цим рядком та його діями. Надайте йому детальний вигляд (detail view), якщо користувачам потрібно переглядати історію відповідей або керувати більшим обсягом інформації, ніж може показати рядок. Використовуйте <a href="/ua/glossary/nested-object-matrix.html">матрицю вкладених об'єктів (nested object matrix)</a>, щоб зафіксувати, як «Участь у поїздці» поєднується з «Поїздкою» та «Мандрівником».</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/cardinality-ux-architecture.html">Cardinality (UX Architecture)</a></li>
-<li><a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a></li>
-<li><a href="/ua/glossary/orca-relationship-requirements.html">ORCA Relationship Requirements</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/cardinality-ux-architecture.html">Кардинальність у UX-архітектурі</a></li>
+<li><a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a></li>
+<li><a href="/ua/glossary/orca-relationship-requirements.html">Вимоги до зв'язків у фреймворку ORCA</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/" target="_blank" rel="noopener noreferrer">Object-Oriented UX: The Backbone of the Design Process, Sophia Prater interview</a></li>
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX with Sophia Prater, InfoQ</a></li>
+<li><a href="https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX: основа процесу проектування, інтерв'ю із Софією Пратер</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX із Софією Пратер, InfoQ</a></li>
 </ul>
 </section>
 

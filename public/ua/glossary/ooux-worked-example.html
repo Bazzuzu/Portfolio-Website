@@ -380,113 +380,113 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">This illustrative OOUX example follows a travel operations task from a research note to a testable interface. It uses ORCA's Objects, Relationships, Calls-to-Action, and Attributes to make the modeling and design decisions explicit.</p>
-<p class="glossary-term-section__text">The records and rules are fictional. They show one possible product scope, with assumptions that a real team would need to validate.</p>
-<section class="glossary-term-section" aria-labelledby="section-start-with-a-task-and-evidence">
-<h2 id="section-start-with-a-task-and-evidence" class="glossary-term-section__title">Start with a task and evidence</h2>
-<p class="glossary-term-section__text">Suppose a research walkthrough includes this statement:</p>
-<p class="glossary-term-section__text">> I find the trip, check which booking the traveler means, and ask the supplier to cancel it. I need to know whether the request is still waiting or the cancellation is complete.</p>
-<p class="glossary-term-section__text">The task is to identify the right booking, request an eligible cancellation, and understand the outcome. <a href="/ua/glossary/noun-foraging.html">Noun Foraging</a> suggests Trip, Booking, Traveler, and Supplier as candidates.</p>
-<p class="glossary-term-section__text">For this release, the team investigates Trip, Booking, and Traveler as separate record types. It retains supplier identification on a booking and defers a supplier-management workspace. That scope decision would change if operators need to manage supplier records.</p>
+    <p class="glossary-term-section__text">Цей показовий приклад застосування OOUX демонструє шлях операційного завдання у сфері подорожей від дослідницької нотатки до готового для тестування інтерфейсу. Він використовує елементи ORCA — об'єкти (Objects), зв'язки (Relationships), заклики до дії (Calls-to-Action) та атрибути (Attributes), щоб зробити рішення щодо моделювання та дизайну явними й обґрунтованими.</p>
+<p class="glossary-term-section__text">Усі наведені записи та правила є умовними. Вони демонструють один із можливих масштабів продукту з припущеннями, які реальна команда мала б перевірити на практиці.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Початок із завдання та дослідницьких даних</h2>
+<p class="glossary-term-section__text">Припустімо, дослідницьке інтерв'ю містить таку цитату:</p>
+<p class="glossary-term-section__text">> Я знаходжу поїздку, перевіряю, яке саме бронювання має на увазі мандрівник, і прошу постачальника скасувати його. Мені потрібно знати, чи запит усе ще перебуває в очікуванні, чи скасування вже завершено.</p>
+<p class="glossary-term-section__text">Завдання полягає в тому, щоб ідентифікувати правильне бронювання, надіслати запит на скасування за наявності такого права та зрозуміти отриманий результат. <a href="/ua/glossary/noun-foraging.html">Пошук іменників (Noun Foraging)</a> пропонує як потенційні об'єкти Поїздку (Trip), Бронювання (Booking), Мандрівника (Traveler) та Постачальника (Supplier).</p>
+<p class="glossary-term-section__text">Для цього релізу команда розглядає Поїздку, Бронювання та Мандрівника як окремі типи записів. При цьому ідентифікатор постачальника зберігається в бронюванні, а створення окремого простору для керування постачальниками відкладається. Це рішення щодо меж системи змінилося б, якби операторам було потрібно керувати записами постачальників безпосередньо.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-discovery-build-a-small-model">
-<h2 id="section-discovery-build-a-small-model" class="glossary-term-section__title">Discovery: build a small model</h2>
-<p class="glossary-term-section__text">Trip T-104 has two travelers and two bookings. Booking B-52 is Confirmed; Booking B-53 is Awaiting confirmation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Відкриття: побудова невеликої моделі</h2>
+<p class="glossary-term-section__text">Поїздка T-104 має двох мандрівників і два бронювання. Бронювання B-52 має статус «Підтверджено» (Confirmed); Бронювання B-53 — «Очікує на підтвердження» (Awaiting confirmation).</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Object type</th>
-<th>Representative information</th>
-<th>Connection or action</th>
+<th>Тип об'єкта</th>
+<th>Репрезентативна інформація</th>
+<th>Зв'язок або дія</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trip</td>
-<td>Trip reference and travel dates</td>
-<td>Contains bookings and associated travelers.</td>
+<td>Поїздка</td>
+<td>Номер поїздки та дати подорожі</td>
+<td>Містить бронювання та пов'язаних мандрівників.</td>
 </tr>
 <tr>
-<td>Booking</td>
-<td>Booking reference, status, service date, supplier details</td>
-<td>Belongs to one trip; an eligible agent can request cancellation.</td>
+<td>Бронювання</td>
+<td>Номер бронювання, статус, дата послуги, дані постачальника</td>
+<td>Належить до однієї поїздки; уповноважений агент може надіслати запит на скасування.</td>
 </tr>
 <tr>
-<td>Traveler</td>
-<td>Identity and permitted contact information</td>
-<td>Can be associated with multiple trips.</td>
+<td>Мандрівник</td>
+<td>Особисті дані та дозволена контактна інформація</td>
+<td>Може бути пов'язаний із кількома поїздками.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">This model allows a trip with no bookings and requires every booking to belong to one trip. A <a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a> and <a href="/ua/glossary/cta-matrix.html">CTA Matrix</a> can investigate relationships and actions systematically.</p>
-<p class="glossary-term-section__text">If eligibility depends on which traveler is covered by a service, the team must model that connection explicitly. Association with the same trip alone does not establish passenger coverage.</p>
+<p class="glossary-term-section__text">Ця модель дозволяє існування поїздки без бронювань і водночас вимагає, щоб кожне бронювання належало до однієї поїздки. <a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a> та <a href="/ua/glossary/cta-matrix.html">матриця CTA (CTA Matrix)</a> дають змогу дослідити взаємозв'язки та дії системно.</p>
+<p class="glossary-term-section__text">Якщо право на скасування залежить від того, який саме мандрівник закріплений за послугою, команда зобов'язана змоделювати цей зв'язок явно. Сама лише прив'язка до однієї поїздки не встановлює розподілу пасажирів за послугами.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-requirements-make-the-cancellation-rule-precise">
-<h2 id="section-requirements-make-the-cancellation-rule-precise" class="glossary-term-section__title">Requirements: make the cancellation rule precise</h2>
-<p class="glossary-term-section__text">For the example, the requesting agent must have access, be assigned to the trip, and act on an eligible confirmed booking.</p>
-<p class="glossary-term-section__text">The <a href="/ua/glossary/object-oriented-user-stories.html">object-oriented user story</a> adds the motivation: the traveler has changed plans, and the agent needs to start the supplier's cancellation process.</p>
-<p class="glossary-term-section__text">The expected sequence is:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Вимоги: точне визначення правила скасування</h2>
+<p class="glossary-term-section__text">У цьому прикладі агент, який надсилає запит, повинен мати права доступу, бути призначеним на цю поїздку та виконувати дію над підтвердженим бронюванням, що підлягає скасуванню.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/object-oriented-user-stories.html">Об'єктно-орієнтована історія користувача</a> додає мотивацію: мандрівник змінив плани, і агенту необхідно запустити процес скасування в постачальника.</p>
+<p class="glossary-term-section__text">Очікувана послідовність дій:</p>
 <ol class="glossary-term-ol">
-<li>Show the target booking and relevant conditions for review.</li>
-<li>Submit an authorized cancellation request.</li>
-<li>When the request is accepted for processing, show Cancellation pending and its reference.</li>
-<li>Show Canceled only after the supplier confirms cancellation.</li>
+<li>Відобразити цільове бронювання та відповідні умови для перевірки.</li>
+<li>Надіслати авторизований запит на скасування.</li>
+<li>Коли запит прийнято до обробки, показати стан «Скасування в процесі» та його реєстраційний номер.</li>
+<li>Відображати статус «Скасовано» лише після того, як постачальник підтвердить скасування.</li>
 </ol>
-<p class="glossary-term-section__text">An already-pending request should remain inspectable. A submission timeout requires checking whether the request exists before retrying. If the supplier declines, show the result and current booking state.</p>
-<p class="glossary-term-section__text">Document these outcomes in the <a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a>. The application enforces the rules at execution.</p>
+<p class="glossary-term-section__text">Запит, який уже очікує на обробку, повинен залишатися доступним для перегляду. У разі тайм-ауту під час надсилання запиту необхідно перевірити, чи існує запит у системі, перш ніж повторювати спробу. Якщо постачальник відхиляє запит, відобразіть результат відхилення та поточний стан бронювання.</p>
+<p class="glossary-term-section__text">Задокументуйте ці результати в <a href="/ua/glossary/state-transition-matrix.html">матриці переходів станів (State Transition Matrix)</a>. Програмний застосунок забезпечує виконання цих правил на етапі виконання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-prioritization-decide-what-the-first-release-needs">
-<h2 id="section-prioritization-decide-what-the-first-release-needs" class="glossary-term-section__title">Prioritization: decide what the first release needs</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Пріоритезація: визначення вимог для першого релізу</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Decision area</th>
-<th>Example choice</th>
+<th>Область рішень</th>
+<th>Приклад вибору</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Objects</td>
-<td>Support Trip, Booking, and Traveler; defer supplier profiles.</td>
+<td>Об'єкти</td>
+<td>Підтримувати Поїздку, Бронювання та Мандрівника; відкласти створення профілів постачальників.</td>
 </tr>
 <tr>
-<td>Relationships</td>
-<td>Show a trip's bookings and a contextual route from a booking back to its trip.</td>
+<td>Зв'язки</td>
+<td>Показувати бронювання всередині поїздки та контекстний перехід із бронювання назад до його поїздки.</td>
 </tr>
 <tr>
-<td>Actions</td>
-<td>Make eligible cancellation easy to find and provide access to pending requests.</td>
+<td>Дії</td>
+<td>Зробити дію допустимого скасування помітною та забезпечити доступ до запитів, що очікують на розгляд.</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td>Emphasize booking reference, status, and service date in the work queue.</td>
+<td>Атрибути</td>
+<td>Виділити номер бронювання, статус і дату послуги в робочій черзі.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The supplier confirmation number remains important even if a particular compact queue does not always display it. <a href="/ua/glossary/attribute-prioritization.html">Attribute Prioritization</a> separates required data from prominence in a view.</p>
+<p class="glossary-term-section__text">Номер підтвердження від постачальника залишається важливим, навіть якщо певна компактна черга не завжди відображає його. <a href="/ua/glossary/attribute-prioritization.html">Пріоритезація атрибутів (Attribute Prioritization)</a> відокремлює обов'язковість наявності даних від їхньої візуальної помітності в поданні.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-representation-preserve-identity-across-views">
-<h2 id="section-representation-preserve-identity-across-views" class="glossary-term-section__title">Representation: preserve identity across views</h2>
-<p class="glossary-term-section__text">A search result and a trip's booking list both identify B-52 with the same reference and status meaning. The detailed record adds relevant conditions, history, and permitted actions.</p>
-<p class="glossary-term-section__text">The cancellation review repeats the booking identity and proposed operation. Its completion message distinguishes a submitted request from a completed cancellation.</p>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> records why views differ. The goal is for users to recognize the booking while receiving the detail appropriate to the task.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Представлення: збереження ідентичності між різними представленнями</h2>
+<p class="glossary-term-section__text">Результат пошуку та список бронювань у поїздці однаково ідентифікують бронювання B-52 за тим самим номером і з тим самим значенням статусу. Детальний запис додає відповідні умови, історію подій та дозволені дії.</p>
+<p class="glossary-term-section__text">Екран перевірки перед скасуванням повторює ідентифікаційні дані бронювання та заплановану операцію. Повідомлення про завершення чітко розмежовує надісланий запит і вже завершене скасування.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/shapeshifter-matrix.html">Матриця трансформації станів (Shapeshifter Matrix)</a> фіксує причини, чому подання відрізняються. Мета полягає в тому, щоб користувачі легко розпізнавали бронювання, отримуючи рівень деталізації, що точно відповідає поточному завданню.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-test-the-model-and-interface">
-<h2 id="section-test-the-model-and-interface" class="glossary-term-section__title">Test the model and interface</h2>
-<p class="glossary-term-section__text">Populate a <a href="/ua/glossary/content-prototyping.html">content prototype</a> with the two bookings, an empty trip, and a record with missing conditional data.</p>
-<p class="glossary-term-section__text">Then ask representative users to find B-52 from a supplier message, identify its trip, respond to a cancellation need, and explain the state after submission. Include direct entry through search.</p>
-<p class="glossary-term-section__text">Observe mistaken identities, wrong routes, missed conditions, and misunderstandings about pending outcomes. These are proposed checks, not reported research findings.</p>
-<p class="glossary-term-section__text">Revise the relevant object definition, relationship, action rule, or representation. The <a href="/ua/glossary/ooux/">OOUX and ORCA reading path</a> links the methods behind each decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Тестування моделі та інтерфейсу</h2>
+<p class="glossary-term-section__text">Наповніть <a href="/ua/glossary/content-prototyping.html">контентний прототип</a> двома бронюваннями, порожньою поїздкою та записом із відсутніми умовними даними.</p>
+<p class="glossary-term-section__text">Потім попросіть репрезентативних користувачів знайти B-52 за повідомленням від постачальника, визначити відповідну поїздку, відреагувати на потребу в скасуванні та пояснити стан системи після надсилання запиту. Включіть прямий вхід через пошук.</p>
+<p class="glossary-term-section__text">Спостерігайте за випадками помилкової ідентифікації об'єктів, неправильними шляхами навігації, пропущеними умовами та хибними уявленнями щодо статусів очікування. Це запропоновані перевірки, а не готові результати досліджень.</p>
+<p class="glossary-term-section__text">Внесіть необхідні зміни у визначення відповідного об'єкта, зв'язок, правило дії або представлення. <a href="/ua/glossary/ooux/">Навчальний маршрут з OOUX та ORCA</a> пов'язує методи, що стоять за кожним із цих рішень.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Introducing ORCA</a></li>
-<li><a href="https://www.nngroup.com/articles/usability-testing-101/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Usability Testing 101</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Софія Пратер: Знайомство з ORCA, Design Bootcamp</a></li>
+<li><a href="https://www.nngroup.com/articles/usability-testing-101/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Основи юзабіліті-тестування (Usability Testing 101)</a></li>
 </ul>
 </section>
 

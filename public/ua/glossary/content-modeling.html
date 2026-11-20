@@ -389,65 +389,65 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Моделювання контенту визначає типи вмісту, необхідні продукту, описові поля для них та взаємозв'язки між ними. Модель контенту також фіксує правила, які допомагають редакторам створювати узгоджені записи, та забезпечує повторне використання контенту на різних сторінках і в каналах дистрибуції.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-content-model-include">
-<h2 id="section-what-does-a-content-model-include" class="glossary-term-section__title">What does a content model include?</h2>
+    <p class="glossary-term-section__text">Моделювання контенту (Content Modeling) визначає типи контенту, необхідні продукту, поля, що їх описують, і зв'язки між ними. Модель контенту також фіксує правила, які допомагають редакторам створювати узгоджені записи, та дає продуктам змогу повторно використовувати цей контент на різних сторінках і в різних каналах розповсюдження.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що містить модель контенту?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Part</th>
-<th>Example decision</th>
+<th>Складова</th>
+<th>Приклад рішення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Content type</td>
-<td>Represent a hotel’s Room Type as a reusable type of content.</td>
+<td>Тип контенту</td>
+<td>Представити «Тип номера» (Room Type) готелю як повторно використовуваний тип контенту.</td>
 </tr>
 <tr>
-<td>Fields</td>
-<td>Store the room type’s name, capacity, description, and photos.</td>
+<td>Поля</td>
+<td>Зберігати назву типу номера, місткість, текстовий опис та фотографії.</td>
 </tr>
 <tr>
-<td>References</td>
-<td>Link the room type to Hotel and Amenity entries.</td>
+<td>Посилання (References)</td>
+<td>Пов'язати тип номера із записами «Готель» (Hotel) та «Зручності» (Amenity).</td>
 </tr>
 <tr>
-<td>Validation</td>
-<td>Require a name and capacity, and restrict an Amenity reference to the appropriate content type.</td>
+<td>Валідація</td>
+<td>Вимагати обов'язкової наявності назви й місткості та обмежити посилання на «Зручності» відповідним типом контенту.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The model describes the structure. An entry contains the actual content, such as the description and photos for a Family Room.</p>
+<p class="glossary-term-section__text">Модель описує структуру. Запис (entry) містить фактичний контент, наприклад опис та фотографії для «Сімейного номера».</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reusing-room-content-on-a-hotel-site">
-<h2 id="section-example-reusing-room-content-on-a-hotel-site" class="glossary-term-section__title">Example: Reusing room content on a hotel site</h2>
-<p class="glossary-term-section__text">A hotel uses the same Family Room content in a results card and a room detail page. The card shows the name, capacity, and lead photo. The detail page uses those fields plus the description, gallery, and amenity references.</p>
-<p class="glossary-term-section__text">Both views read the same room entry. Updating a shared Amenity entry gives consuming views a consistent source for its wording. Publishing and delivery determine when that update appears. The implementation controls which fields are displayed and how.</p>
-<p class="glossary-term-section__text">Treat the current price and availability as booking data with their own update requirements. The content model can identify the room type that the booking system uses when it returns those values.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: повторне використання контенту номера на сайті готелю</h2>
+<p class="glossary-term-section__text">Готель використовує однаковий контент «Сімейного номера» в картці пошукової видачі та на сторінці деталей номера. Картка показує назву, місткість та головне фото. Сторінка деталей використовує ці ж поля, а також повний опис, галерею зображень і посилання на зручності.</p>
+<p class="glossary-term-section__text">Обидва подання зчитують один і той самий запис номера. Оновлення спільного запису «Зручності» забезпечує всім інтерфейсам споживання узгоджене першоджерело формулювань. Процеси публікації та доставки даних (delivery) визначають, коли саме це оновлення з'явиться. Водночас технічна реалізація інтерфейсу контролює, які саме поля відображаються та в який спосіб.</p>
+<p class="glossary-term-section__text">Поточну ціну та наявність місць слід розглядати як дані системи бронювання з власними вимогами до частоти оновлення. Модель контенту може визначати тип номера, який система бронювання використовує під час повернення цих динамічних значень.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-develop-a-content-model">
-<h2 id="section-how-do-you-develop-a-content-model" class="glossary-term-section__title">How do you develop a content model?</h2>
-<p class="glossary-term-section__text">Inventory representative content and discuss publishing needs with editors, designers, and developers. Define the types and references, then test them with realistic entries. Include a room with a long name, missing optional content, and localized text if the product supports it.</p>
-<p class="glossary-term-section__text">Have an editor create and update an entry, then review it in each consuming view. Check whether the model supports the intended content without duplicating information or forcing editors to use a field for an unrelated purpose.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як розробляти модель контенту?</h2>
+<p class="glossary-term-section__text">Проведіть інвентаризацію показового контенту та обговоріть потреби в публікації з редакторами, дизайнерами та розробниками. Визначте типи та зв'язки-посилання, а потім протестуйте їх на реалістичних записах. Додайте номер із дуже довгою назвою, запис із відсутнім необов'язковим контентом і локалізований текст, якщо продукт підтримує багатомовність.</p>
+<p class="glossary-term-section__text">Попросіть редактора створити та оновити запис, а потім перевірте результат у кожному цільовому поданні. Переконайтеся, що модель підтримує запланований контент без дублювання інформації та не змушує редакторів використовувати поля не за призначенням.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
-<li><a href="/ua/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM</a></li>
+<li><a href="/ua/glossary/headless-ui-architecture.html">Архітектура Headless UI</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.contentful.com/help/content-models/content-modelling-basics/" target="_blank" rel="noopener noreferrer">Content Modeling Basics, Contentful</a></li>
-<li><a href="https://www.contentful.com/help/references/" target="_blank" rel="noopener noreferrer">References, Contentful</a></li>
-<li><a href="https://www.contentful.com/help/fields/available-validations/" target="_blank" rel="noopener noreferrer">Available Validations, Contentful</a></li>
+<li><a href="https://www.contentful.com/help/content-models/content-modelling-basics/" target="_blank" rel="noopener noreferrer">Основи моделювання контенту, Contentful</a></li>
+<li><a href="https://www.contentful.com/help/references/" target="_blank" rel="noopener noreferrer">Посилання (References) у моделях контенту, Contentful</a></li>
+<li><a href="https://www.contentful.com/help/fields/available-validations/" target="_blank" rel="noopener noreferrer">Доступні правила валідації, Contentful</a></li>
 </ul>
 </section>
 

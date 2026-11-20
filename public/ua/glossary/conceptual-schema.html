@@ -385,106 +385,106 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Концептуальна схема описує інформаційну модель системи: її сутності, їхні властивості, зв'язки та обмеження незалежно від фізичного способу зберігання даних. Вона забезпечує командам спільне розуміння семантики даних і бізнес-правил, яким вони мають відповідати.</p>
-<p class="glossary-term-section__text">In product design, this helps teams agree on concepts such as Customer, Reservation, or Payment before designing their screens and behavior. For example, the schema can define that every Reservation has one booking Guest. Reservation #1042 and its booker are individual records that must satisfy that rule.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-conceptual-schema-contain">
-<h2 id="section-what-does-a-conceptual-schema-contain" class="glossary-term-section__title">What does a conceptual schema contain?</h2>
+    <p class="glossary-term-section__text">Концептуальна схема описує інформацію, яку представляє система: її сутності, їхні властивості, зв'язки та обмеження, незалежно від фізичного сховища. Вона дає командам спільне визначення того, що означають дані та яким бізнес-правилам вони повинні відповідати.</p>
+<p class="glossary-term-section__text">У дизайні продукту це допомагає командам узгодити такі концепції, як Клієнт, Бронювання або Платіж, ще до проєктування їхніх екранів та поведінки. Наприклад, схема може визначати, що кожне Бронювання має одного Гостя, який оформив бронювання. Бронювання №1042 та його замовник — це окремі записи, які повинні відповідати цьому правилу.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що містить концептуальна схема?</h2>
 <ul class="glossary-term-ul">
-<li><strong>Entities:</strong> Types of things the system represents, such as a Reservation.</li>
-<li><strong>Attributes:</strong> Properties that describe them, such as arrival date and status.</li>
-<li><strong>Relationships:</strong> Connections between entities, such as a Reservation being assigned to a Room.</li>
-<li><strong>Constraints:</strong> Rules about valid information, such as departure occurring after arrival.</li>
+<li><strong>Сутності:</strong> типи об'єктів, які представляє система, наприклад, Бронювання.</li>
+<li><strong>Атрибути:</strong> властивості, що їх описують, такі як дата прибуття та статус.</li>
+<li><strong>Зв'язки:</strong> зв'язки між сутностями, наприклад, призначення Бронювання Номеру.</li>
+<li><strong>Обмеження:</strong> правила щодо коректності інформації, такі як виїзд, що відбувається після прибуття.</li>
 </ul>
-<p class="glossary-term-section__text">An entity-relationship diagram can show the structure. Written definitions and rules supply details that a diagram alone may leave ambiguous.</p>
+<p class="glossary-term-section__text">Діаграма «сутність — зв'язок» може показати структуру. Письмові визначення та правила додають деталі, які діаграма сама по собі може залишити неоднозначними.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-conceptual-schema-example-hotel-reservations">
-<h2 id="section-a-conceptual-schema-example-hotel-reservations" class="glossary-term-section__title">A conceptual schema example: hotel reservations</h2>
-<p class="glossary-term-section__text">Consider a simplified hotel system that sells one room per reservation. Room assignment may happen after booking. These are example requirements, not universal hotel rules.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад концептуальної схеми: бронювання готелю</h2>
+<p class="glossary-term-section__text">Розглянемо спрощену готельну систему, яка продає один номер на одне бронювання. Призначення номера може відбуватися після бронювання. Це приклади вимог, а не універсальні готельні правила.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Entity</th>
-<th>Meaning</th>
-<th>Example attributes</th>
+<th>Сутність</th>
+<th>Значення</th>
+<th>Приклади атрибутів</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Guest</td>
-<td>The person making the reservation</td>
-<td>Name, contact details</td>
+<td>Гість</td>
+<td>Людина, яка здійснює бронювання</td>
+<td>Ім'я, контактні дані</td>
 </tr>
 <tr>
-<td>Reservation</td>
-<td>A booking for one room over a date range</td>
-<td>Arrival date, departure date, status</td>
+<td>Бронювання</td>
+<td>Бронювання одного номера на певний проміжок дат</td>
+<td>Дата прибуття, дата виїзду, статус</td>
 </tr>
 <tr>
-<td>Room</td>
-<td>A physical room in the hotel</td>
-<td>Room number</td>
+<td>Номер</td>
+<td>Фізичний номер у готелі</td>
+<td>Номер кімнати</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The relationships and constraints are explicit:</p>
+<p class="glossary-term-section__text">Зв'язки та обмеження сформульовані чітко:</p>
 <ul class="glossary-term-ul">
-<li>Each Reservation has exactly one booking Guest; a Guest can have zero or many Reservations.</li>
-<li>A Reservation has zero or one assigned Room. A Room can appear in many Reservations over time.</li>
-<li>Two confirmed or checked-in Reservations cannot occupy the same Room for overlapping nights. One stay may begin on another’s departure date.</li>
+<li>Кожне Бронювання має рівно одного Гостя, який оформив бронювання; Гість може мати нуль або багато Бронювань.</li>
+<li>Бронювання має нуль або один призначений Номер. Номер може з'являтися в багатьох Бронюваннях протягом часу.</li>
+<li>Два підтверджених або заселених Бронювання не можуть займати один і той самий Номер протягом дат, що перетинаються. Одне перебування може розпочинатися в день виїзду іншого.</li>
 </ul>
-<p class="glossary-term-section__text">This model reveals a UI requirement: the reservation view needs an unassigned-room state. Here, Guest means the booker. Tracking everyone who stays would require extending the model to represent occupants separately.</p>
+<p class="glossary-term-section__text">Ця модель виявляє вимогу до інтерфейсу: перегляд бронювання потребує стану «номер не призначено». Тут Гість означає замовника. Відстеження всіх, хто фактично проживає, вимагало б розширення моделі для окремого представлення мешканців.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-conceptual-logical-and-physical-models">
-<h2 id="section-conceptual-logical-and-physical-models" class="glossary-term-section__title">Conceptual, logical, and physical models</h2>
-<p class="glossary-term-section__text">In a common data-modeling workflow, the levels differ in detail:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Концептуальна, логічна та фізична моделі</h2>
+<p class="glossary-term-section__text">У типовому процесі моделювання даних рівні відрізняються за деталізацією:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Level</th>
-<th>Typical decision</th>
+<th>Рівень</th>
+<th>Типове рішення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Conceptual</td>
-<td>What entities exist, what they mean, and how they relate.</td>
+<td>Концептуальний</td>
+<td>Які сутності існують, що вони означають і як пов'язані між собою.</td>
 </tr>
 <tr>
-<td>Logical</td>
-<td>Detailed attributes, identifiers, and relationship rules.</td>
+<td>Логічний</td>
+<td>Детальні атрибути, ідентифікатори та правила зв'язків.</td>
 </tr>
 <tr>
-<td>Physical</td>
-<td>Database-specific tables, column types, indexes, and storage choices.</td>
+<td>Фізичний</td>
+<td>Специфічні для бази даних таблиці, типи стовпців, індекси та вибір сховища.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Terminology varies. In the ANSI/SPARC three-schema architecture, the conceptual schema is the shared logical description of the database, between external user views and internal storage. It is not necessarily a lightweight early-stage diagram.</p>
+<p class="glossary-term-section__text">Термінологія різниться. У трисхемній архітектурі ANSI/SPARC концептуальна схема є спільним логічним описом бази даних між зовнішніми користувацькими представленнями та внутрішнім сховищем. Вона не обов'язково є лише спрощеною діаграмою раннього етапу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-this-help-ux-work">
-<h2 id="section-how-does-this-help-ux-work" class="glossary-term-section__title">How does this help UX work?</h2>
-<p class="glossary-term-section__text">Use the schema to discuss labels, record relationships, empty states, and rules with users and domain experts. In the hotel example, ask what happens when a reservation changes rooms or includes multiple rooms; the answers may change the model.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX</a> can bring related domain questions into interface design, alongside users’ tasks and available actions. Validate the shared information model against real workflows, and update it as requirements change.</p>
+<section class="glossary-term-section" aria-labelledby="section-ux">
+<h2 id="section-ux" class="glossary-term-section__title">Як це допомагає в роботі над UX?</h2>
+<p class="glossary-term-section__text">Використовуйте схему для обговорення міток, зв'язків записів, порожніх станів і правил із користувачами та експертами предметної області. У готельному прикладі запитайте, що відбувається, коли в бронюванні змінюють номер або коли воно включає кілька номерів; відповіді можуть змінити модель.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/object-oriented-ux.html">Об'єктно-орієнтований UX (OOUX)</a> може перенести пов'язані питання предметної області в дизайн інтерфейсу поруч із завданнями користувачів та доступними діями. Перевіряйте спільну інформаційну модель на реальних робочих процесах та оновлюйте її в міру зміни вимог.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
-<li><a href="/ua/glossary/object-oriented-ux.html">Object-Oriented UX</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
-<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
+<li><a href="/ua/glossary/domain-context-modeling.html">Моделювання контексту предметної області</a></li>
+<li><a href="/ua/glossary/object-oriented-ux.html">Об'єктно-орієнтований UX (OOUX)</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
+<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Графи знань для ШІ-контексту</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html" target="_blank" rel="noopener noreferrer">Database architecture: the conceptual schema, University of Cape Town</a></li>
-<li><a href="https://www.ibm.com/think/topics/data-modeling" target="_blank" rel="noopener noreferrer">What Is Data Modeling?, IBM</a></li>
-<li><a href="https://www.ibm.com/think/topics/entity-relationship-diagram" target="_blank" rel="noopener noreferrer">What Is an Entity Relationship Diagram?, IBM</a></li>
+<li><a href="https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html" target="_blank" rel="noopener noreferrer">Архітектура баз даних: концептуальна схема, University of Cape Town</a></li>
+<li><a href="https://www.ibm.com/think/topics/data-modeling" target="_blank" rel="noopener noreferrer">Що таке моделювання даних?, IBM</a></li>
+<li><a href="https://www.ibm.com/think/topics/entity-relationship-diagram" target="_blank" rel="noopener noreferrer">Що таке діаграма «сутність — зв'язок»?, IBM</a></li>
 </ul>
 </section>
 

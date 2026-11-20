@@ -387,77 +387,77 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Атрибути об'єктів в OOUX (Object Attributes) — це контентні елементи та метадані, які описують сутність і допомагають користувачам розпізнавати, інтерпретувати та опрацьовувати її конкретні екземпляри. Прикладами є номер бронювання, поточний статус, дата надання послуги та текстовий опис.</p>
-<p class="glossary-term-section__text">Sophia Prater's object-mapping approach distinguishes core content, such as descriptive text and images, from metadata used to organize information through activities such as sorting and filtering. The distinction concerns how information is used; it does not mean metadata is less important.</p>
-<section class="glossary-term-section" aria-labelledby="section-attribute-or-related-object">
-<h2 id="section-attribute-or-related-object" class="glossary-term-section__title">Attribute or related object?</h2>
-<p class="glossary-term-section__text">Ask whether the concept needs its own identity, information, relationships, or actions.</p>
-<p class="glossary-term-section__text">A booking's status can be an attribute. A Traveler may need a separate record because agents find the same person across trips and update their contact information. The booking can reference that record.</p>
-<p class="glossary-term-section__text">A supplier name alone does not settle whether Supplier needs to be an object in this product. Investigate whether people need to manage suppliers or only recognize a label.</p>
+    <p class="glossary-term-section__text">Атрибути об'єктів в об'єктно-орієнтованому UX (Object-Oriented UX, OOUX) — це контент і дані, що описують об'єкт і допомагають людям ідентифікувати, розуміти або працювати з його екземплярами. Прикладами є номер бронювання, статус, дата надання послуги та опис.</p>
+<p class="glossary-term-section__text">Підхід Софії Пратер (Sophia Prater) до картування об'єктів розрізняє основний контент (core content), такий як описовий текст і зображення, та метадані (metadata), що використовуються для організації інформації через такі активності, як сортування та фільтрація. Ця відмінність стосується того, як саме інформація використовується; вона не означає, що метадані є менш важливими.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Атрибут чи пов'язаний об'єкт?</h2>
+<p class="glossary-term-section__text">Запитайте себе, чи потребує ця концепція власної ідентичності, інформації, зв'язків або дій.</p>
+<p class="glossary-term-section__text">Статус бронювання цілком може бути атрибутом. Мандрівник (Traveler) може вимагати окремого запису, оскільки агенти знаходять одну й ту саму людину між різними поїздками та оновлюють її контактні дані. Бронювання у такому разі може посилатися на цей запис.</p>
+<p class="glossary-term-section__text">Сама лише назва постачальника ще не вирішує, чи має Постачальник (Supplier) бути повноцінним об'єктом у цьому продукті. Дослідіть, чи потрібно людям безпосередньо керувати постачальниками, чи достатньо лише бачити текстову мітку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-defining-booking-attributes">
-<h2 id="section-example-defining-booking-attributes" class="glossary-term-section__title">Example: defining Booking attributes</h2>
-<p class="glossary-term-section__text">The following rules describe an illustrative travel operations product.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: визначення атрибутів Бронювання</h2>
+<p class="glossary-term-section__text">Наведені нижче правила описують показовий продукт для управління туристичними операціями.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Attribute</th>
-<th>Purpose</th>
-<th>Rule to clarify</th>
+<th>Атрибут</th>
+<th>Призначення</th>
+<th>Правило для уточнення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Booking reference</td>
-<td>Identify the record across views</td>
-<td>Assigned when the booking is created; remains stable.</td>
+<td>Номер бронювання (Booking reference)</td>
+<td>Ідентифікація запису на різних екранах</td>
+<td>Присвоюється під час створення бронювання; залишається стабільним.</td>
 </tr>
 <tr>
-<td>Status</td>
-<td>Understand the current stage and filter a queue</td>
-<td>Updated by defined workflow events.</td>
+<td>Статус (Status)</td>
+<td>Розуміння поточного етапу та фільтрація черги</td>
+<td>Оновлюється визначеними подіями робочого процесу (workflow).</td>
 </tr>
 <tr>
-<td>Supplier confirmation number</td>
-<td>Look up the supplier's confirmed reservation</td>
-<td>Required for this product's Confirmed state; absent while awaiting confirmation.</td>
+<td>Номер підтвердження від постачальника (Supplier confirmation number)</td>
+<td>Пошук підтвердженого бронювання постачальника</td>
+<td>Обов'язковий для стану «Підтверджено» в цьому продукті; відсутній на етапі очікування підтвердження.</td>
 </tr>
 <tr>
-<td>Service date</td>
-<td>Compare and order upcoming work</td>
-<td>Define the relevant local date and time zone where time matters.</td>
+<td>Дата послуги (Service date)</td>
+<td>Порівняння та впорядкування майбутньої роботи</td>
+<td>Визначте відповідну локальну дату та часовий пояс, де час має значення.</td>
 </tr>
 <tr>
-<td>Internal note</td>
-<td>Record operational context</td>
-<td>Visible only to permitted staff.</td>
+<td>Внутрішня примітка (Internal note)</td>
+<td>Фіксація операційного контексту</td>
+<td>Видима лише для співробітників із відповідними правами доступу.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A required field can depend on state. Requiring a supplier confirmation number when someone first creates a draft would contradict this example's workflow.</p>
+<p class="glossary-term-section__text">Обов'язковість поля може залежати від стану об'єкта. Вимога надати номер підтвердження постачальника ще під час первинного створення чернетки суперечила б робочому процесу в цьому прикладі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-attribute-requirements-record">
-<h2 id="section-what-should-attribute-requirements-record" class="glossary-term-section__title">What should attribute requirements record?</h2>
-<p class="glossary-term-section__text">Document the meaning, source, accepted values, required conditions, edit permissions, and handling of missing information. Identify who owns a value when several systems display it.</p>
-<p class="glossary-term-section__text">Use realistic records to test the rules: a draft, a confirmed booking, a long reference, and a record with unavailable data. Make sure “unknown” and “not applicable” are distinguishable when they lead to different decisions.</p>
-<p class="glossary-term-section__text">Keep the object map readable and link to detailed requirements as needed. <a href="/ua/glossary/attribute-prioritization.html">Attribute prioritization</a> then determines which information deserves prominence in each view.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що мають фіксувати вимоги до атрибутів?</h2>
+<p class="glossary-term-section__text">Документуйте значення, джерело, допустимі величини, умови обов'язковості, права на редагування та способи обробки відсутніх даних. Визначте, хто володіє значенням, коли його відображають одразу кілька систем.</p>
+<p class="glossary-term-section__text">Використовуйте реалістичні записи для перевірки правил: чернетку, підтверджене бронювання, довгий номер посилання та запис із недоступними даними. Переконайтеся, що стани «невідомо» та «не застосовується» чітко розрізняються, якщо вони ведуть до різних рішень.</p>
+<p class="glossary-term-section__text">Підтримуйте карту об'єктів легкою для читання та за потреби посилайтеся на детальні вимоги. <a href="/ua/glossary/attribute-prioritization.html">Пріоритезація атрибутів (Attribute Prioritization)</a> згодом визначить, яка інформація заслуговує на найбільшу помітність на кожному окремому екрані.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/object-guide.html">Object Guide</a></li>
-<li><a href="/ua/glossary/attribute-prioritization.html">Attribute Prioritization</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/object-guide.html">Картка об'єкта (Object Guide)</a></li>
+<li><a href="/ua/glossary/attribute-prioritization.html">Пріоритезація атрибутів (Attribute Prioritization)</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Object-Oriented UX</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Prioritizing Prioritization for Product Designers</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Софія В. Пратер: Об'єктно-орієнтований UX (Object-Oriented UX)</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Софія В. Пратер: Пріоритезація пріоритезації для продуктових дизайнерів</a></li>
 </ul>
 </section>
 

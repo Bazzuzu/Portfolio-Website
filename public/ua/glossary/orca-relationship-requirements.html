@@ -388,71 +388,71 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Вимоги до зв'язків у фреймворку ORCA (ORCA Relationship Requirements) визначають, як саме працює взаємозв'язок між об'єктами в системі. За моделлю Софії Прейтер використовується чекліст MCSFD, який охоплює п'ять параметрів: механіку (mechanics), кардинальність (cardinality), сортування (sorting), фільтрацію (filtering) та залежність (dependency). Це дозволяє трансформувати виявлений зв'язок у конкретні правила для проектування та тестування.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-mcsfd-cover">
-<h2 id="section-what-does-mcsfd-cover" class="glossary-term-section__title">What does MCSFD cover?</h2>
-<p class="glossary-term-section__text">Take one connection from a <a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a>. In this example, an agent opens Trip T-104 to find Booking B-52 and check whether the supplier has responded.</p>
+    <p class="glossary-term-section__text">Вимоги до зв'язків у фреймворку ORCA (ORCA Relationship Requirements) описують, як саме працює взаємозв'язок між об'єктами в продукті. Софія Пратер (Sophia Prater) використовує акронім MCSFD як чекліст для п'яти ключових рішень: механіка (mechanics), кардинальність (cardinality), сортування (sorting), фільтрація (filtering) та залежність (dependency). Команди використовують його для перетворення виявленого зв'язку на чіткі правила, які можна спроектувати та протестувати.</p>
+<section class="glossary-term-section" aria-labelledby="section-mcsfd">
+<h2 id="section-mcsfd" class="glossary-term-section__title">Що охоплює чекліст MCSFD?</h2>
+<p class="glossary-term-section__text">Розглянемо один зв'язок із <a href="/ua/glossary/nested-object-matrix.html">матриці вкладених об'єктів (Nested Object Matrix)</a>. У цьому прикладі агент відкриває Поїздку T-104, щоб знайти Бронювання B-52 і перевірити, чи відповів постачальник.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Decision</th>
-<th>Question</th>
-<th>Example rule</th>
+<th>Рішення</th>
+<th>Запитання</th>
+<th>Приклад правила</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Mechanics</td>
-<td>How is the connection created or changed?</td>
-<td>Adding a booking from a trip assigns that trip automatically. When adding one elsewhere, the agent selects a trip.</td>
+<td>Механіка (Mechanics)</td>
+<td>Як зв'язок створюється або змінюється?</td>
+<td>Додавання бронювання безпосередньо з поїздки призначає цю поїздку автоматично. При додаванні в іншому місці агент вибирає поїздку вручну.</td>
 </tr>
 <tr>
-<td>Cardinality</td>
-<td>How many records can relate in each direction?</td>
-<td>A trip can have zero or more bookings. Each booking belongs to exactly one trip.</td>
+<td>Кардинальність (Cardinality)</td>
+<td>Скільки записів можуть бути пов'язані в кожному напрямку?</td>
+<td>Поїздка може мати нуль або більше бронювань. Кожне бронювання належить рівно одній поїздці.</td>
 </tr>
 <tr>
-<td>Sorting</td>
-<td>Which order helps people scan the related records?</td>
-<td>Show the earliest service date first. Put bookings without a service date after dated bookings.</td>
+<td>Сортування (Sorting)</td>
+<td>Який порядок допомагає користувачам сканувати пов'язані записи?</td>
+<td>Показувати спочатку найближчу дату надання послуги. Розміщувати бронювання без дати після бронювань із визначеною датою.</td>
 </tr>
 <tr>
-<td>Filtering</td>
-<td>Which subset helps with a task?</td>
-<td>Agents can filter by Awaiting confirmation to find bookings the supplier has yet to confirm.</td>
+<td>Фільтрація (Filtering)</td>
+<td>Яка вибірка допомагає у виконанні поточного завдання?</td>
+<td>Агенти можуть фільтрувати за статусом «Очікує підтвердження», щоб знайти бронювання, які постачальник ще має підтвердити.</td>
 </tr>
 <tr>
-<td>Dependency</td>
-<td>What happens to related records when one changes or is removed?</td>
-<td>Archiving a trip preserves its linked bookings. Agents with access can still review their history.</td>
+<td>Залежність (Dependency)</td>
+<td>Що відбувається з пов'язаними записами, коли один із них змінюється або видаляється?</td>
+<td>Архівування поїздки зберігає пов'язані з нею бронювання. Агенти з відповідним доступом все ще можуть переглядати їхню історію.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These are product rules for the example. Confirm the equivalent rules with the people who do the work and the team that maintains the system.</p>
+<p class="glossary-term-section__text">Це приклади продуктових правил. Обов'язково узгодьте аналогічні правила з людьми, які безпосередньо виконують роботу, та з командою інженерів, яка підтримує систему.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-these-rules-affect-the-design">
-<h2 id="section-how-do-these-rules-affect-the-design" class="glossary-term-section__title">How do these rules affect the design?</h2>
-<p class="glossary-term-section__text">A trip with zero bookings needs a clear way for an authorized agent to add the first booking. If a status filter hides all bookings, the empty message can explain that no bookings match and offer to clear the filter. The agent can tell whether they need to create a booking or change the filter.</p>
-<p class="glossary-term-section__text">Apply the checklist in the direction that supports the task. On a Trip, sorting its bookings may matter. On a Booking, there is only one linked Trip, so sorting adds nothing to that view.</p>
-<p class="glossary-term-section__text">Review exceptions before finalizing the rule. Ask what an agent sees when opening a booking from search after its trip was archived. Confirm which records are still visible, which actions remain available, and where the agent can find the trip history.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як ці правила впливають на дизайн?</h2>
+<p class="glossary-term-section__text">Поїздка з нульовою кількістю бронювань потребує зрозумілого способу для авторизованого агента додати перше бронювання. Якщо фільтр за статусом приховує всі бронювання, повідомлення про порожній стан може пояснити, що жодне бронювання не відповідає критеріям, і запропонувати скинути фільтр. Агент повинен чітко розуміти: чи йому потрібно створити нове бронювання, чи просто змінити налаштування фільтра.</p>
+<p class="glossary-term-section__text">Застосовуйте чекліст у тому напрямку, який підтримує виконання завдання. У контексті Поїздки сортування її бронювань може мати значення. У контексті Бронювання є лише одна пов'язана Поїздка, тому сортування на цьому екрані нічого не додає.</p>
+<p class="glossary-term-section__text">Проаналізуйте винятки перед остаточним затвердженням правила. Подумайте, що саме бачить агент, коли відкриває бронювання через пошук після того, як його поїздку було заархівовано. Переконайтеся, які записи залишаються видимими, які дії залишаються доступними, і де саме агент може переглянути історію поїздки.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a></li>
-<li><a href="/ua/glossary/cardinality-ux-architecture.html">Cardinality (UX Architecture)</a></li>
-<li><a href="/ua/glossary/junction-object.html">Junction Object</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA</a></li>
+<li><a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a></li>
+<li><a href="/ua/glossary/cardinality-ux-architecture.html">Кардинальність у UX-архітектурі</a></li>
+<li><a href="/ua/glossary/junction-object.html">Об'єкт зв'язку (Junction Object)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX with Sophia Prater, InfoQ</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia V. Prater</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія В. Пратер</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX із Софією Пратер, InfoQ</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Пріоритезація пріоритезації для продуктових дизайнерів, Софія В. Пратер</a></li>
 </ul>
 </section>
 

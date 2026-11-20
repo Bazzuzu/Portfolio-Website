@@ -385,76 +385,76 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Довідник об'єктів (Object Guide) — це структурований глосарій об'єктів в об'єктно-орієнтованій моделі UX (OOUX). Він фіксує визначення кожного об'єкта, ознаки його розпізнавання користувачами та термінологічні відмінності, яких команда має дотримуватися в інтерфейсі й специфікаціях. У фреймворку ORCA команди формують цей довідник під час етапу вимог (Requirements).</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-an-object-guide-include">
-<h2 id="section-what-should-an-object-guide-include" class="glossary-term-section__title">What should an Object Guide include?</h2>
-<p class="glossary-term-section__text">Start with a short definition and a recognizable example. Add the distinctions that affect the work. The fields below are a lightweight starting point for a travel operations product.</p>
+    <p class="glossary-term-section__text">Довідник об'єктів (Object Guide) — це структурований глосарій об'єктів в об'єктно-орієнтованій моделі UX (OOUX). Він фіксує значення кожного об'єкта, ознаки його розпізнавання користувачами та смислові відмінності, яких команда має дотримуватися в мові продукту й вимогах. У фреймворку ORCA команди розробляють цей довідник під час етапу формування вимог (Requirements).</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має містити довідник об'єктів?</h2>
+<p class="glossary-term-section__text">Почніть із короткого визначення та впізнаваного прикладу. Додайте смислові розмежування, які впливають на робочі процеси. Наведені нижче поля є компактною відправною точкою для продукту зі сфери організації подорожей.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Field</th>
-<th>Example entry for Booking</th>
+<th>Поле</th>
+<th>Приклад запису для «Бронювання» (Booking)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Preferred name</td>
-<td>Booking</td>
+<td>Бажана назва (Preferred name)</td>
+<td>Бронювання (Booking)</td>
 </tr>
 <tr>
-<td>Definition</td>
-<td>A record used to arrange travel services with a supplier. It tracks the request from draft through the supplier’s response and any later changes.</td>
+<td>Визначення (Definition)</td>
+<td>Запис, який використовується для організації туристичних послуг із постачальником. Він відстежує запит від чернетки через відповідь постачальника до будь-яких подальших змін.</td>
 </tr>
 <tr>
-<td>Instance</td>
-<td>Booking B-52 for the outbound flight on Trip T-104.</td>
+<td>Екземпляр (Instance)</td>
+<td>Бронювання B-52 для вильоту в межах Поїздки T-104.</td>
 </tr>
 <tr>
-<td>Why it matters</td>
-<td>Agents use the booking to track the supplier response, check fare rules, and request changes when eligible.</td>
+<td>Чому це важливо (Why it matters)</td>
+<td>Оператори використовують бронювання для відстеження відповіді постачальника, перевірки правил застосування тарифу та запиту змін за наявності такого права.</td>
 </tr>
 <tr>
-<td>Boundary</td>
-<td>An Offer contains proposed travel and pricing. A Booking tracks the supplier request. Accepting the offer and confirming the booking are separate events.</td>
+<td>Межі сутності (Boundary)</td>
+<td>Пропозиція (Offer) містить запропонований варіант поїздки та ціну. Бронювання (Booking) відстежує запит до постачальника. Прийняття пропозиції та підтвердження бронювання є окремими подіями.</td>
 </tr>
 <tr>
-<td>Key relationship</td>
-<td>Each booking belongs to one trip. A trip may exist before it has any bookings.</td>
+<td>Ключовий зв'язок (Key relationship)</td>
+<td>Кожне бронювання належить одній поїздці. Поїздка може існувати до того, як у неї з'являться будь-які бронювання.</td>
 </tr>
 <tr>
-<td>Open question</td>
-<td>Do agents use “reservation” as a synonym for Booking, or only after a supplier has confirmed it?</td>
+<td>Відкрите запитання (Open question)</td>
+<td>Чи використовують оператори слово «резервація» як синонім до Бронювання, чи лише після того, як постачальник його підтвердив?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Use the definition to decide which record owns each status. The Offer can show Accepted while the Booking shows Awaiting confirmation. That tells an agent the traveler has agreed to the offer and the supplier’s response is still outstanding.</p>
+<p class="glossary-term-section__text">Використовуйте визначення, щоб визначити, якому саме запису належить кожен статус. Пропозиція (Offer) може мати стан «Прийнято» (Accepted), тоді як Бронювання (Booking) перебуває в стані «Очікує підтвердження» (Awaiting confirmation). Це сигналізує оператору, що мандрівник погодився на пропозицію, але відповідь від постачальника все ще очікується.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-the-guide-work-with-other-orca-artifacts">
-<h2 id="section-how-does-the-guide-work-with-other-orca-artifacts" class="glossary-term-section__title">How does the guide work with other ORCA artifacts?</h2>
-<p class="glossary-term-section__text">Use the guide to agree on what an object represents. The <a href="/ua/glossary/nested-object-matrix.html">nested object matrix</a> records its relationships across the model. The <a href="/ua/glossary/cta-matrix.html">CTA Matrix</a> records actions by role, and the <a href="/ua/glossary/object-mapping.html">object map</a> organizes the information each object needs. Link to those artifacts when an entry needs more detail.</p>
+<section class="glossary-term-section" aria-labelledby="section-orca">
+<h2 id="section-orca" class="glossary-term-section__title">Як довідник взаємодіє з іншими артефактами ORCA?</h2>
+<p class="glossary-term-section__text">Використовуйте довідник для досягнення згоди щодо сутності кожного об'єкта. <a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів</a> фіксує його зв'язки в усій системній моделі. <a href="/ua/glossary/cta-matrix.html">Матриця дій (CTA Matrix)</a> закріплює дії за ролями, а <a href="/ua/glossary/object-mapping.html">карта об'єктів (Object Map)</a> структурує інформацію, необхідну кожному об'єкту. Додавайте посилання на ці артефакти, коли опис конкретного запису потребує більшої деталізації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-keep-an-object-guide-useful">
-<h2 id="section-how-do-you-keep-an-object-guide-useful" class="glossary-term-section__title">How do you keep an Object Guide useful?</h2>
-<p class="glossary-term-section__text">Ask sales and ticketing to classify two records: an offer the traveler accepted and a booking the supplier has yet to confirm. If they disagree on the names or statuses, record the difference and agree on what appears at the handoff.</p>
-<p class="glossary-term-section__text">Review the entry when a change affects its definition, labels, or rules. Link to the decision or research note so the next person can see why the definition changed.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як підтримувати актуальність і користь довідника об'єктів?</h2>
+<p class="glossary-term-section__text">Попросіть відділ продажів і відділ квиткових операцій класифікувати два записи: пропозицію, яку прийняв мандрівник, і бронювання, яке постачальник ще має підтвердити. Якщо їхні назви або статуси розходяться, зафіксуйте цю різницю та узгодьте, що саме відображатиметься в момент передавання справи (handoff).</p>
+<p class="glossary-term-section__text">Переглядайте запис довідника щоразу, коли зміни зачіпають його визначення, текстові мітки або правила. Додавайте посилання на прийняте рішення чи нотатку дослідження, щоб інші учасники команди бачили, чому визначення було змінено.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/noun-foraging.html">Noun Foraging</a></li>
-<li><a href="/ua/glossary/cta-matrix.html">CTA Matrix</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA (ORCA Framework)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/noun-foraging.html">Пошук іменників (Noun Foraging)</a></li>
+<li><a href="/ua/glossary/cta-matrix.html">Матриця закликів до дії (CTA Matrix)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia V. Prater</a></li>
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX with Sophia Prater, InfoQ interview</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія Пратер (Introducing ORCA, Sophia V. Prater)</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Визначення пріоритетів для продуктових дизайнерів, Софія Пратер (Prioritizing Prioritization for Product Designers, Sophia V. Prater)</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX із Софією Пратер, інтерв'ю InfoQ (Object-Oriented UX with Sophia Prater, InfoQ interview)</a></li>
 </ul>
 </section>
 

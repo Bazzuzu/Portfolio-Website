@@ -385,69 +385,69 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Модель структурної навігації описує основні та локальні шляхи переміщення користувачів інформаційною архітектурою продукту. Вона демонструє організацію розділів та представлень, перелік доступних з кожного рівня об'єктів, а також способи повернення на вищі ієрархічні рівні.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-structural-navigation-differ-from-contextual-navigation">
-<h2 id="section-how-does-structural-navigation-differ-from-contextual-navigation" class="glossary-term-section__title">How does structural navigation differ from contextual navigation?</h2>
-<p class="glossary-term-section__text">Structural navigation follows the product's organization. For example, <strong>Trips → Trip details → Bookings</strong> follows a section down to a local view. Contextual navigation connects related information where a user needs it. A link from a trip's traveler list to a Traveler record is a contextual route that can cross sections.</p>
-<p class="glossary-term-section__text">Keep a record’s name and identifying details consistent across entry points. An agent who arrives from search should recognize the same booking they see on a trip.</p>
+    <p class="glossary-term-section__text">Модель структурної навігації (Structural Navigation Model) описує основні та локальні шляхи, які люди використовують для переміщення інформаційною архітектурою продукту. Вона показує, як організовані розділи та представлення (views), до чого користувачі мають доступ із кожного рівня та як вони можуть повернутися до ширшого перегляду.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чим структурна навігація відрізняється від контекстної?</h2>
+<p class="glossary-term-section__text">Структурна навігація повторює ієрархічну організацію продукту. Наприклад, шлях <strong>Поїздки → Деталі поїздки → Бронювання</strong> веде від основного розділу до локального представлення. Контекстна навігація пов'язує споріднену інформацію там, де вона потрібна користувачеві. Посилання зі списку мандрівників у поїздці на картку мандрівника (Traveler record) — це контекстний маршрут, який може перетинати різні розділи.</p>
+<p class="glossary-term-section__text">Зберігайте узгодженість назви запису та його ідентифікаційних деталей у всіх точках входу. Агент, який переходить із пошуку, повинен одразу впізнати те саме бронювання, яке він бачить у розділі поїздки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-navigation-example-for-a-travel-operations-tool">
-<h2 id="section-navigation-example-for-a-travel-operations-tool" class="glossary-term-section__title">Navigation example for a travel operations tool</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад навігації для операційного інструменту подорожей</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Route</th>
-<th>Design decision</th>
+<th>Маршрут</th>
+<th>Дизайн-рішення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Main menu → Trips → Trip details</td>
-<td>Trips gives agents a stable starting point for work organized around trips.</td>
+<td>Головне меню → Поїздки → Деталі поїздки</td>
+<td>Розділ «Поїздки» забезпечує агентам стабільну відправну точку для роботи, структурованої навколо поїздок.</td>
 </tr>
 <tr>
-<td>Trip details → Bookings</td>
-<td>Local navigation keeps a trip's bookings within reach while the agent reviews that trip.</td>
+<td>Деталі поїздки → Бронювання</td>
+<td>Локальна навігація тримає бронювання поїздки під рукою, поки агент переглядає цю поїздку.</td>
 </tr>
 <tr>
-<td>Trip details → Traveler record</td>
-<td>A contextual link lets the agent inspect a related traveler and their other trips.</td>
+<td>Деталі поїздки → Картка мандрівника</td>
+<td>Контекстне посилання дозволяє агенту переглянути дані відповідного мандрівника та його інші поїздки.</td>
 </tr>
 <tr>
-<td>Search → Booking details</td>
-<td>A direct entry should show the booking's identity and link to its trip when the user has access.</td>
+<td>Пошук → Деталі бронювання</td>
+<td>Прямий перехід повинен відображати ідентифікатори бронювання та посилання на відповідну поїздку (за наявності прав доступу).</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The <a href="/ua/glossary/object-mapping.html">object map</a> explains which records are related. Use the navigation model to choose which relationships become routes. Use the product's hierarchy to choose the breadcrumb trail. Use a separate return control when agents need to get back to a filtered list.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/object-mapping.html">Карта об'єктів</a> пояснює, які записи пов'язані між собою. Використовуйте навігаційну модель, щоб визначити, які зв'язки перетворяться на маршрути. Спирайтеся на ієрархію продукту для побудови ланцюжка хлібних крихт. Застосовуйте окремий елемент повернення, коли агентам потрібно повернутися до відфільтрованого списку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-design-and-test-the-model">
-<h2 id="section-how-do-you-design-and-test-the-model" class="glossary-term-section__title">How do you design and test the model?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як проєктувати та тестувати модель?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Start with common tasks.</strong> Identify where users begin and which views they need to reach. Choose main sections and local views that match those tasks.</li>
-<li><strong>Add useful contextual links.</strong> Decide which related records users need nearby. Use <a href="/ua/glossary/cardinality-ux-architecture.html">cardinality</a> to anticipate how many results a path may expose.</li>
-<li><strong>Plan orientation and return paths.</strong> Check that titles, local navigation, and breadcrumbs make sense on direct entry. For an agent returning from a booking, consider whether the trip's prior list filters should be restored.</li>
-<li><strong>Test the routes separately.</strong> Use tree testing to evaluate labels and hierarchy. Use a prototype to test contextual links and direct entry, where placement and screen context matter.</li>
+<li><strong>Почніть із типових завдань.</strong> Визначте, звідки користувачі починають роботу і яких представлень їм потрібно дістатися. Оберіть основні розділи та локальні представлення, які відповідають цим завданням.</li>
+<li><strong>Додайте доречні контекстні посилання.</strong> Визначте, які пов'язані записи потрібні користувачам поруч. Використовуйте <a href="/ua/glossary/cardinality-ux-architecture.html">кардинальність</a>, щоб передбачити, скільки результатів може відкривати той чи інший шлях.</li>
+<li><strong>Сплануйте орієнтацію та шляхи повернення.</strong> Переконайтеся, що заголовки, локальна навігація та хлібні крихти залишаються зрозумілими при прямому переході. Для агента, який повертається з картки бронювання, передбачте збереження попередніх фільтрів списку поїздки.</li>
+<li><strong>Тестуйте маршрути окремо.</strong> Застосовуйте tree testing (тестування дерева навігації) для оцінки назв і структури ієрархії. Використовуйте інтерактивний прототип для тестування контекстних посилань і прямих переходів, де розташування елементів і екранний контекст мають вирішальне значення.</li>
 </ol>
-<p class="glossary-term-section__text">Test whether an agent can open a booking from search, find its trip, and return to the booking list without losing their place.</p>
+<p class="glossary-term-section__text">Перевірте, чи може агент відкрити бронювання з пошуку, знайти відповідну поїздку та повернутися до списку бронювань, не втративши своє місце в інтерфейсі.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
-<li><a href="/ua/glossary/wayfinding-system.html">Wayfinding System</a></li>
-<li><a href="/ua/glossary/breadcrumb-hierarchy.html">Breadcrumb Hierarchy</a></li>
-<li><a href="/ua/glossary/polyhierarchy.html">Polyhierarchy</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
+<li><a href="/ua/glossary/wayfinding-system.html">Система орієнтування в інтерфейсі (Wayfinding)</a></li>
+<li><a href="/ua/glossary/breadcrumb-hierarchy.html">Ієрархія хлібних крихт</a></li>
+<li><a href="/ua/glossary/polyhierarchy.html">Поліієрархія (Polyhierarchy)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html" target="_blank" rel="noopener noreferrer">Designing Web Navigation: Types of Navigation Summary, James Kalbach</a></li>
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater</a></li>
-<li><a href="https://www.nngroup.com/articles/tree-testing/" target="_blank" rel="noopener noreferrer">Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group</a></li>
+<li><a href="https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html" target="_blank" rel="noopener noreferrer">Проєктування вебнавігації: огляд типів навігації, Джеймс Калбах</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX, Софія В. Пратер</a></li>
+<li><a href="https://www.nngroup.com/articles/tree-testing/" target="_blank" rel="noopener noreferrer">Tree Testing: оцінка назв меню та категорій, Nielsen Norman Group</a></li>
 </ul>
 </section>
 

@@ -384,39 +384,39 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Поліієрархія — це ієрархічна структура класифікації, в якій поняття може мати більше ніж одне безпосереднє батьківське (ширше) поняття. Це дозволяє користувачам знаходити один і той самий об'єкт через різні валідні категорійні шляхи.</p>
-<p class="glossary-term-section__text">For example, “Design tokens” could appear under both “Design systems” and “Design engineering.” Both paths lead to the same glossary entry. The entry does not need to be copied to support multiple placements.</p>
-<p class="glossary-term-section__text">SKOS permits multiple broader relationships, making it one way to represent this structure.</p>
-<section class="glossary-term-section" aria-labelledby="section-polyhierarchy-and-faceted-classification">
-<h2 id="section-polyhierarchy-and-faceted-classification" class="glossary-term-section__title">Polyhierarchy and faceted classification</h2>
-<p class="glossary-term-section__text">Polyhierarchy organizes broader and narrower concepts. Faceted classification describes items through separate dimensions.</p>
-<p class="glossary-term-section__text">In a resource library, a guide might be placed under both “Accessibility” and “Design systems.” Its facets might separately describe format, reading level, and publication date.</p>
-<p class="glossary-term-section__text">These approaches can work together. The distinction helps teams decide whether an additional placement expresses a category relationship or whether the attribute belongs in a filter.</p>
+    <p class="glossary-term-section__text">Поліієрархія (Polyhierarchy) — це ієрархічна структура класифікації, в якій поняття може мати більше ніж одне безпосереднє ширше (батьківське) поняття. Вона дозволяє людям знаходити одне й те саме поняття через різні валідні категорійні шляхи.</p>
+<p class="glossary-term-section__text">Наприклад, «Дизайн-токени» можуть знаходитися як у розділі «Дизайн-системи», так і в «Дизайн-інжиніринг». Обидва шляхи ведуть до однієї й тієї самої статті глосарія. Запис не потрібно дублювати для підтримки розміщення в кількох місцях.</p>
+<p class="glossary-term-section__text">Стандарт SKOS підтримує множинні відношення ширших понять (broader relationships), завдяки чому є одним із поширених способів опису цієї структури.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Поліієрархія та фасетна класифікація</h2>
+<p class="glossary-term-section__text">Поліієрархія організовує ширші та вужчі поняття. Фасетна класифікація описує об'єкти за окремими незалежними вимірами.</p>
+<p class="glossary-term-section__text">У бібліотеці ресурсів посібник може перебувати одночасно в розділах «Доступність» та «Дизайн-системи». Його фасети можуть окремо описувати формат, рівень складності та дату публікації.</p>
+<p class="glossary-term-section__text">Ці підходи можуть працювати узгоджено. Розуміння різниці між ними допомагає командам вирішити, чи виражає додаткове розміщення категорійний зв'язок, чи атрибут має належати до системи фільтрів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-two-routes-to-one-resource">
-<h2 id="section-example-two-routes-to-one-resource" class="glossary-term-section__title">Example: two routes to one resource</h2>
-<p class="glossary-term-section__text">A component documentation page could be reachable through “Components → Form controls → Date picker” and “Patterns → Booking → Date picker.”</p>
-<p class="glossary-term-section__text">In this example, the product keeps a single documentation record and stable URL. It can show a breadcrumb appropriate to the selected navigation context, with a clear route back to the relevant section.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: два маршрути до одного ресурсу</h2>
+<p class="glossary-term-section__text">Сторінка документації компонента може бути доступною як за шляхом «Компоненти → Елементи форм → Вибір дати (Date picker)», так і за шляхом «Паттерни → Бронювання → Вибір дати (Date picker)».</p>
+<p class="glossary-term-section__text">У цьому прикладі продукт зберігає єдиний запис документації та стабільну URL-адресу. Він може відображати ланцюжок хлібних крихт, відповідний до обраного навігаційного контексту, забезпечуючи зрозумілий маршрут повернення до відповідного розділу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-to-check">
-<h2 id="section-what-to-check" class="glossary-term-section__title">What to check</h2>
-<p class="glossary-term-section__text">Use labels people understand, document the reason for each placement, and test whether users can find the resource through expected paths.</p>
-<p class="glossary-term-section__text">Avoid cycles that make a concept its own ancestor. If category paths generate different URLs for the same content, handle canonicalization deliberately. Multiple navigation placements do not require multiple indexable copies of a page.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що перевіряти</h2>
+<p class="glossary-term-section__text">Використовуйте зрозумілі користувачам назви, документуйте причину кожного розміщення та перевіряйте на практиці, чи можуть користувачі знайти ресурс очікуваними шляхами.</p>
+<p class="glossary-term-section__text">Уникайте циклів, через які поняття стає власним предком. Якщо категорійні шляхи генерують різні URL-адреси для однакового контенту, виважено налаштуйте канонізацію (canonical tags). Розміщення в кількох місцях навігації не вимагає створення декількох індексованих копій сторінки.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
-<li><a href="/ua/glossary/faceted-classification.html">Faceted Classification</a></li>
-<li><a href="/ua/glossary/core-model.html">Core Model</a></li>
-<li><a href="/ua/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
+<li><a href="/ua/glossary/faceted-classification.html">Фасетна класифікація</a></li>
+<li><a href="/ua/glossary/core-model.html">Модель ядра (Core Model)</a></li>
+<li><a href="/ua/glossary/controlled-vocabulary.html">Контрольований словник</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: SKOS Primer — Semantic Relationships</a></li>
-<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: SKOS Reference — Semantic Relations</a></li>
+<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: Вступ до SKOS — Семантичні зв'язки</a></li>
+<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: Довідник зі SKOS — Семантичні відношення</a></li>
 </ul>
 </section>
 

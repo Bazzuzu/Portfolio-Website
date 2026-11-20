@@ -386,69 +386,69 @@
 
   <article>
     <p class="glossary-term-section__text">Об'єктно-орієнтований UX (OOUX) — це підхід до проєктування, що структурує цифрові продукти навколо об'єктів ментальної моделі користувачів — сутностей, які вони впізнають та з якими очікують взаємодіяти (наприклад, поїздки, мандрівники та бронювання). Команди визначають ці об'єкти, їхні взаємозв'язки, атрибути й доступні дії ще до проєктування окремих екранів та користувацьких сценаріїв.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-ooux-look-like-in-practice">
-<h2 id="section-what-does-ooux-look-like-in-practice" class="glossary-term-section__title">What does OOUX look like in practice?</h2>
-<p class="glossary-term-section__text">Consider a travel operations tool with trips, travelers, and bookings. Modeling the relationship between a trip and its bookings helps the team decide what agents can navigate to from a trip.</p>
-<p class="glossary-term-section__text">The trip page can list its bookings, with each one opening its details and available actions. An authorized agent can select a booking and cancel it. Its status then updates wherever that booking appears, including the trip page and search results. The object model gives the team a shared basis for navigation, content, and actions.</p>
+<section class="glossary-term-section" aria-labelledby="section-ooux">
+<h2 id="section-ooux" class="glossary-term-section__title">Як OOUX виглядає на практиці?</h2>
+<p class="glossary-term-section__text">Розглянемо інструмент для туристичних операцій із такими сутностями, як поїздки, мандрівники та бронювання. Моделювання зв'язку між поїздкою та її бронюваннями допомагає команді визначити, куди саме оператори можуть переходити зі сторінки поїздки.</p>
+<p class="glossary-term-section__text">Сторінка поїздки може відображати список пов'язаних із нею бронювань, кожне з яких відкриває детальний перегляд та перелік доступних дій. Авторизований оператор може вибрати бронювання та скасувати його. Після цього його статус оновлюється скрізь, де згадується це бронювання, включно зі сторінкою поїздки та результатами пошуку. Модель об'єктів надає команді спільну основу для проєктування навігації, контенту та дій.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-orca-relate-to-ooux">
-<h2 id="section-how-does-orca-relate-to-ooux" class="glossary-term-section__title">How does ORCA relate to OOUX?</h2>
-<p class="glossary-term-section__text">OOUX provides the design principles. <a href="/ua/glossary/orca-framework.html">ORCA</a> is Sophia Prater’s process for applying them through Objects, Relationships, Calls to action, and Attributes. Teams revisit these four elements as they discover requirements and refine the model. <a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia Prater</a></p>
+<section class="glossary-term-section" aria-labelledby="section-orca-ooux">
+<h2 id="section-orca-ooux" class="glossary-term-section__title">Як фреймворк ORCA пов'язаний з OOUX?</h2>
+<p class="glossary-term-section__text">OOUX закладає принципи проєктування. <a href="/ua/glossary/orca-framework.html">ORCA</a> — це методологія Софії Пратер для їх практичного застосування через об'єкти (Objects), зв'язки (Relationships), заклики до дії (Calls to action) та атрибути (Attributes). Команди послідовно повертаються до цих чотирьох елементів у процесі виявлення вимог та вдосконалення моделі. <a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія Пратер</a></p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>ORCA element</th>
-<th>Design question</th>
-<th>Travel operations example</th>
+<th>Елемент ORCA</th>
+<th>Питання проєктування</th>
+<th>Приклад із туристичних операцій</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Objects</td>
-<td>What things do people work with?</td>
-<td>Trip, Traveler, Booking</td>
+<td>Об'єкти</td>
+<td>З якими сутностями взаємодіють люди?</td>
+<td>Поїздка, Мандрівник, Бронювання</td>
 </tr>
 <tr>
-<td>Relationships</td>
-<td>How are those things connected?</td>
-<td>A trip includes travelers and bookings.</td>
+<td>Зв'язки</td>
+<td>Як ці сутності пов'язані між собою?</td>
+<td>Поїздка містить мандрівників та бронювання.</td>
 </tr>
 <tr>
-<td>Calls to action</td>
-<td>What can each user role do?</td>
-<td>An authorized agent can cancel a booking.</td>
+<td>Заклики до дії</td>
+<td>Що може робити кожна роль користувача?</td>
+<td>Авторизований оператор може скасувати бронювання.</td>
 </tr>
 <tr>
-<td>Attributes</td>
-<td>What information describes each object?</td>
-<td>A booking has a confirmation number and status.</td>
+<td>Атрибути</td>
+<td>Яка інформація описує кожен об'єкт?</td>
+<td>Бронювання має номер підтвердження та статус.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">An <a href="/ua/glossary/object-mapping.html">object map</a> records these decisions so the team can use the same model when designing screens, navigation, and flows.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/object-mapping.html">Карта об'єктів</a> фіксує ці рішення, дозволяючи команді спиратися на єдину модель під час проєктування екранів, навігації та користувацьких сценаріїв.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-is-ooux-useful">
-<h2 id="section-when-is-ooux-useful" class="glossary-term-section__title">When is OOUX useful?</h2>
-<p class="glossary-term-section__text">OOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.</p>
-<p class="glossary-term-section__text">Start by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it.</p>
+<section class="glossary-term-section" aria-labelledby="section-ooux">
+<h2 id="section-ooux" class="glossary-term-section__title">Коли OOUX є найбільш корисним?</h2>
+<p class="glossary-term-section__text">OOUX особливо корисний, коли одні й ті самі об'єкти задіяні в кількох робочих процесах або коли різні ролі потребують виконання відмінних дій над одним і тим самим об'єктом. Наприклад, туристичний агент і бухгалтер можуть працювати з одним і тим самим бронюванням, але потребувати різної інформації та прав доступу.</p>
+<p class="glossary-term-section__text">Почніть з аналізу сутностей, які люди називають в інтерв'ю та в наявних робочих процесах. Використовуйте їхню мову для виявлення потенційних об'єктів. Потім пройдіть крок за кроком реальне завдання, наприклад «знайти та скасувати бронювання». Перевірте, чи визначає модель бронювання, його зв'язок із поїздкою, його статус і те, які ролі мають право його скасувати.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
-<li><a href="/ua/glossary/conceptual-schema.html">Conceptual Schema</a></li>
-<li><a href="/ua/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів</a></li>
+<li><a href="/ua/glossary/domain-context-modeling.html">Моделювання контексту предметної області</a></li>
+<li><a href="/ua/glossary/conceptual-schema.html">Концептуальна схема</a></li>
+<li><a href="/ua/glossary/information-architecture.html">Інформаційна архітектура (IA)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Object-Oriented UX, Sophia V. Prater, A List Apart</a></li>
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX, Софія В. Пратер, A List Apart</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія В. Пратер</a></li>
 </ul>
 </section>
 

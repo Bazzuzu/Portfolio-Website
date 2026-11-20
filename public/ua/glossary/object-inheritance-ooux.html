@@ -383,77 +383,77 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Успадкування об'єктів в OOUX (Object Inheritance) описує спільну структуру й можливості загального базового типу об'єкта та його спеціалізованих підтипів. Це допомагає команді аналізувати спільні характеристики пов'язаних сутностей та фіксувати важливі для користувача функціональні й візуальні відмінності підтипів.</p>
-<p class="glossary-term-section__text">This is a conceptual design decision. It does not require a particular programming language, class hierarchy, or database layout.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-different-kinds-of-booking">
-<h2 id="section-example-different-kinds-of-booking" class="glossary-term-section__title">Example: different kinds of Booking</h2>
-<p class="glossary-term-section__text">An illustrative travel product treats Flight Booking and Hotel Booking as kinds of Booking.</p>
+    <p class="glossary-term-section__text">Успадкування об'єктів в OOUX моделює спільну структуру або можливості в загальному типі об'єкта та більш специфічних підтипах. Це допомагає командам аналізувати, що спільного мають пов'язані типи і які відмінності користувачам важливо бачити збереженими в продукті.</p>
+<p class="glossary-term-section__text">Це концептуальне дизайнерське рішення. Воно не вимагає певної мови програмування, ієрархії класів чи структури бази даних.</p>
+<section class="glossary-term-section" aria-labelledby="section-booking">
+<h2 id="section-booking" class="glossary-term-section__title">Приклад: різні типи бронювання (Booking)</h2>
+<p class="glossary-term-section__text">Показовий приклад: туристичний продукт розглядає бронювання перельоту (Flight Booking) та бронювання готелю (Hotel Booking) як різновиди загального бронювання (Booking).</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Shared information</th>
-<th>Flight Booking detail</th>
-<th>Hotel Booking detail</th>
+<th>Спільна інформація</th>
+<th>Деталі бронювання перельоту</th>
+<th>Деталі бронювання готелю</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Booking reference</td>
-<td>Airline booking locator</td>
-<td>Property confirmation number.</td>
+<td>Номер бронювання (Booking reference)</td>
+<td>Код бронювання авіакомпанії (Airline booking locator)</td>
+<td>Номер підтвердження помешкання.</td>
 </tr>
 <tr>
-<td>Current status</td>
-<td>References to booked flight segments</td>
-<td>Check-in and check-out dates.</td>
+<td>Поточний статус</td>
+<td>Посилання на заброньовані сегменти перельоту</td>
+<td>Дати заїзду та виїзду.</td>
 </tr>
 <tr>
-<td>Linked trip</td>
-<td>Flight-specific fare conditions</td>
-<td>Accommodation-specific cancellation conditions.</td>
+<td>Пов'язана поїздка (Linked trip)</td>
+<td>Специфічні для рейсу тарифні умови</td>
+<td>Специфічні для помешкання умови скасування.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The general type gives the team a place to discuss common identity and behavior. The specialized types capture meaningful differences in information and work.</p>
-<p class="glossary-term-section__text">The table is a proposed product model. Confirm it against actual tasks and supplier behavior. Similar labels do not guarantee that two types follow the same confirmation or cancellation process.</p>
+<p class="glossary-term-section__text">Загальний тип дає команді основу для обговорення спільної ідентичності та поведінки. Спеціалізовані типи фіксують суттєві відмінності в інформації та робочих процесах.</p>
+<p class="glossary-term-section__text">Ця таблиця є запропонованою моделлю продукту. Перевірте її на реальних завданнях та поведінці постачальників послуг. Схожі назви не гарантують, що обидва типи слідують однаковому процесу підтвердження або скасування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-subtype-state-attribute-or-relationship">
-<h2 id="section-subtype-state-attribute-or-relationship" class="glossary-term-section__title">Subtype, state, attribute, or relationship?</h2>
-<p class="glossary-term-section__text">These distinctions answer different questions:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Підтип, стан, атрибут чи зв'язок?</h2>
+<p class="glossary-term-section__text">Ці розмежування відповідають на різні запитання:</p>
 <ul class="glossary-term-ul">
-<li>A subtype expresses a more specific kind of thing.</li>
-<li>A state describes a stage in an object's lifecycle.</li>
-<li>An attribute describes a property of the object.</li>
-<li>A relationship connects it to another object.</li>
+<li>Підтип (subtype) виражає більш конкретний різновид сутності.</li>
+<li>Стан (state) описує етап у життєвому циклі об'єкта.</li>
+<li>Атрибут (attribute) описує властивість об'єкта.</li>
+<li>Зв'язок (relationship) поєднує його з іншим об'єктом.</li>
 </ul>
-<p class="glossary-term-section__text">Confirmed and Canceled can be states of the same Booking rather than separate subtypes. Refundable may be an attribute or a rule derived from fare conditions. Traveler is a related object with its own identity.</p>
-<p class="glossary-term-section__text">A <a href="/ua/glossary/tree-systems-ooux.html">Tree System</a> connects forms that become more specific in context. Do not assume every parent-child relationship in that pattern is subtype inheritance.</p>
+<p class="glossary-term-section__text">«Підтверджено» (Confirmed) та «Скасовано» (Canceled) можуть бути станами одного й того самого бронювання, а не окремими підтипами. «З можливістю повернення коштів» (Refundable) може бути атрибутом або правилом, сформованим на основі умов тарифу. Мандрівник (Traveler) — це пов'язаний об'єкт із власною ідентичністю.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/tree-systems-ooux.html">Деревоподібна система в OOUX</a> поєднує форми, які стають більш специфічними в контексті. Не вважайте кожне відношення «батьківський-дочірній» у цьому патерні успадкуванням підтипів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-is-a-subtype-useful">
-<h2 id="section-when-is-a-subtype-useful" class="glossary-term-section__title">When is a subtype useful?</h2>
-<p class="glossary-term-section__text">Investigate whether people recognize a stable distinction and whether it changes the object's structure, actions, or rules. Compare representative records and tasks before committing to the split.</p>
-<p class="glossary-term-section__text">If the difference is a single changeable value, an attribute may describe it adequately. If responsibilities differ but the object remains the same, role-based permissions may be sufficient.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли підтип є корисним?</h2>
+<p class="glossary-term-section__text">Дослідіть, чи розпізнають користувачі стабільну різницю і чи змінює вона структуру, дії або правила об'єкта. Порівняйте показові записи та завдання, перш ніж ухвалювати рішення про поділ.</p>
+<p class="glossary-term-section__text">Якщо різниця полягає лише в одному значенні, що змінюється, атрибут може описати її належним чином. Якщо обов'язки різняться, але об'єкт залишається тим самим, достатньо може бути дозволів на основі ролей.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-validate-the-model">
-<h2 id="section-how-to-validate-the-model" class="glossary-term-section__title">How to validate the model</h2>
-<p class="glossary-term-section__text">Ask users to identify each record and perform equivalent tasks across types. Review shared labels and specialized fields with domain experts.</p>
-<p class="glossary-term-section__text">Check that shared components accommodate the differences without concealing essential information or making one type behave incorrectly.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як валідувати модель</h2>
+<p class="glossary-term-section__text">Попросіть користувачів ідентифікувати кожен запис і виконати еквівалентні завдання для різних типів. Перегляньте спільні мітки та спеціалізовані поля разом із галузевими експертами.</p>
+<p class="glossary-term-section__text">Переконайтеся, що спільні компоненти враховують відмінності, не приховуючи важливу інформацію і не змушуючи один із типів поводитися некоректно.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-guide.html">Object Guide</a></li>
-<li><a href="/ua/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a></li>
-<li><a href="/ua/glossary/tree-systems-ooux.html">Tree Systems in OOUX</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
+<li><a href="/ua/glossary/object-guide.html">Картка об'єкта (Object Guide)</a></li>
+<li><a href="/ua/glossary/object-attributes-ooux.html">Атрибути об'єктів в OOUX (Object Attributes in OOUX)</a></li>
+<li><a href="/ua/glossary/tree-systems-ooux.html">Деревоподібні системи в OOUX (Tree Systems in OOUX)</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів (State Transition Matrix)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">OOUX Masterclass: Inheritance</a></li>
+<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">Майстер-клас OOUX: Успадкування (OOUX Masterclass: Inheritance)</a></li>
 </ul>
 </section>
 

@@ -384,71 +384,71 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Представлення об'єкта в OOUX (Object Representation) — це спосіб, у який інтерфейс робить сутність упізнаваною та функціональною через відображення її даних, візуальне оформлення, системні зв'язки та доступні дії. Прикладами виступають рядок у таблиці бронювань, компактна картка мандрівника або деталізований екран перегляду поїздки.</p>
-<p class="glossary-term-section__text">The object model describes what the object is and how it relates to other things. Representation turns those decisions into something a person can identify and use in a particular context.</p>
-<section class="glossary-term-section" aria-labelledby="section-start-with-the-user-s-question">
-<h2 id="section-start-with-the-user-s-question" class="glossary-term-section__title">Start with the user's question</h2>
-<p class="glossary-term-section__text">Before choosing a layout, identify what someone needs to recognize, compare, inspect, or change. Use prioritized attributes and actions to decide what the representation should support.</p>
-<p class="glossary-term-section__text">A compact row can be appropriate for scanning many bookings. A detailed view can support investigating one booking. Both need enough identifying information for a person to understand which record they are using.</p>
+    <p class="glossary-term-section__text">Репрезентація об'єктів в OOUX — це спосіб, за допомогою якого інтерфейс робить об'єкт упізнаваним і придатним для використання через його інформацію, візуальне оформлення, зв'язки та дії. Прикладами є рядок бронювання, картка мандрівника та детальний перегляд поїздки.</p>
+<p class="glossary-term-section__text">Модель об'єктів описує, чим є об'єкт і як він пов'язаний з іншими сутностями. Репрезентація перетворює ці рішення на те, що людина може ідентифікувати та використовувати в конкретному контексті.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Починайте із запитання користувача</h2>
+<p class="glossary-term-section__text">Перш ніж обирати макет, визначте, що користувачеві потрібно розпізнати, порівняти, перевірити чи змінити. Використовуйте пріоритезовані атрибути та дії, щоб вирішити, що саме має підтримувати репрезентація.</p>
+<p class="glossary-term-section__text">Компактний рядок може бути доречним для швидкого сканування багатьох бронювань. Детальний вигляд може підтримувати детальне вивчення одного бронювання. Обидва варіанти потребують достатньої кількості ідентифікаційної інформації, щоб людина розуміла, з яким саме записом вона працює.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-representing-booking-b-52">
-<h2 id="section-example-representing-booking-b-52" class="glossary-term-section__title">Example: representing Booking B-52</h2>
-<p class="glossary-term-section__text">Suppose Booking B-52 is Confirmed and belongs to Trip T-104.</p>
+<section class="glossary-term-section" aria-labelledby="section-b-52">
+<h2 id="section-b-52" class="glossary-term-section__title">Приклад: репрезентація бронювання B-52</h2>
+<p class="glossary-term-section__text">Припустімо, що бронювання B-52 має статус «Підтверджено» (Confirmed) і належить до поїздки T-104.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Context</th>
-<th>Representation decision</th>
+<th>Контекст</th>
+<th>Рішення щодо репрезентації</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Search result</td>
-<td>Show the booking reference, service date, status, and enough supplier information to choose the match.</td>
+<td>Результат пошуку</td>
+<td>Показати номер бронювання, дату послуги, статус і достатньо інформації про постачальника, щоб обрати потрібний збіг.</td>
 </tr>
 <tr>
-<td>Trip booking list</td>
-<td>Preserve the same identifying cues while making the trip relationship clear.</td>
+<td>Список бронювань поїздки</td>
+<td>Зберегти ті самі ідентифікаційні маркери, чітко показуючи зв'язок із поїздкою.</td>
 </tr>
 <tr>
-<td>Booking detail</td>
-<td>Add relevant conditions, history, permitted actions, and a route to the trip.</td>
+<td>Деталі бронювання</td>
+<td>Додати відповідні умови, історію, дозволені дії та шлях переходу до поїздки.</td>
 </tr>
 <tr>
-<td>Cancellation review</td>
-<td>Repeat the booking identity and summarize the proposed action and its consequences.</td>
+<td>Перевірка скасування</td>
+<td>Повторити ідентифікаційні дані бронювання та підсумувати запропоновану дію та її наслідки.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The cancellation review should make clear that submitting the request begins a process. In this example, an accepted request first becomes Cancellation pending.</p>
+<p class="glossary-term-section__text">Екран перевірки скасування має чітко пояснювати, що відправлення запиту запускає процес. У цьому прикладі прийнятий запит спочатку набуває стану «Очікує скасування» (Cancellation pending).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-keep-meaningful-differences-visible">
-<h2 id="section-keep-meaningful-differences-visible" class="glossary-term-section__title">Keep meaningful differences visible</h2>
-<p class="glossary-term-section__text">Distinct object types need recognizable labels. An Offer and a Booking should not become indistinguishable simply because they use the same card component.</p>
-<p class="glossary-term-section__text">Variants of the same object can share a component while showing different detail. Use a <a href="/ua/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> to document those differences and their reasons.</p>
-<p class="glossary-term-section__text">Define empty, loading, unavailable, and error states. The absence of data must not accidentally communicate a confirmed result.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Зберігайте суттєві відмінності видимими</h2>
+<p class="glossary-term-section__text">Різні типи об'єктів потребують упізнаваних підписів. Пропозиція (Offer) і Бронювання (Booking) не повинні ставати нерозрізненними лише тому, що для них використовується однаковий компонент картки.</p>
+<p class="glossary-term-section__text">Варіанти одного й того самого об'єкта можуть використовувати спільний компонент, відображаючи різні деталі. Використовуйте <a href="/ua/glossary/shapeshifter-matrix.html">матрицю трансформації станів (Shapeshifter Matrix)</a>, щоб задокументувати ці відмінності та причини їхньої появи.</p>
+<p class="glossary-term-section__text">Визначайте порожні стани, стани завантаження, недоступності та помилок. Відсутність даних не повинна випадково сприйматися як підтверджений результат.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-check-behavior-and-accessibility">
-<h2 id="section-check-behavior-and-accessibility" class="glossary-term-section__title">Check behavior and accessibility</h2>
-<p class="glossary-term-section__text">Use headings, relationships, control labels, and accessible names that communicate the intended meaning. WCAG's Consistent Identification criterion addresses consistent identification of recurring components with the same functionality; it does not require every object view to have an identical layout.</p>
-<p class="glossary-term-section__text">Test recognition across entry points, including search and direct links. Ask users to identify the record, reach a related object, and find an available action. Review both what the representation communicates and what the interaction actually does.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Перевіряйте поведінку та доступність</h2>
+<p class="glossary-term-section__text">Використовуйте заголовки, зв'язки, мітки елементів керування та доступні імена (accessible names), які передають заплановане значення. Критерій WCAG «Узгоджена ідентифікація» (Consistent Identification) вимагає узгодженої ідентифікації повторюваних компонентів з однаковою функціональністю; він не вимагає, щоб кожен вигляд об'єкта мав ідентичний макет.</p>
+<p class="glossary-term-section__text">Тестуйте впізнаваність на різних точках входу, включно з пошуком і прямими посиланнями. Попросіть користувачів ідентифікувати запис, перейти до пов'язаного об'єкта та знайти доступну дію. Аналізуйте як те, що повідомляє репрезентація, так і те, що насправді робить взаємодія.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a></li>
-<li><a href="/ua/glossary/attribute-prioritization.html">Attribute Prioritization</a></li>
-<li><a href="/ua/glossary/cta-prioritization.html">CTA Prioritization</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/shapeshifter-matrix.html">Матриця трансформації станів (Shapeshifter Matrix)</a></li>
+<li><a href="/ua/glossary/attribute-prioritization.html">Пріоритезація атрибутів (Attribute Prioritization)</a></li>
+<li><a href="/ua/glossary/cta-prioritization.html">Пріоритезація CTA (CTA Prioritization)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">OOUX: Designing With ORCA</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Consistent Identification</a></li>
+<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">OOUX: Проєктування за допомогою ORCA (OOUX: Designing With ORCA)</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">W3C: Розуміння критерію «Узгоджена ідентифікація» (Understanding Consistent Identification)</a></li>
 </ul>
 </section>
 

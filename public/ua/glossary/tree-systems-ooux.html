@@ -387,72 +387,72 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Деревоподібні системи в OOUX (Tree Systems) — це патерн пов'язаних типів об'єктів, які переходять від абстрактного базового поняття до вузькоспеціалізованих контекстних форм. Структура включає кореневий об'єкт (root), кінцевий конкретизований об'єкт-«плід» (fruit) та за необхідності проміжні сполучні об'єкти-«гілки» (branches).</p>
-<p class="glossary-term-section__text">The term comes from the OOUX community. It describes a modeling pattern, with roots and fruit used as explanatory metaphors.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-a-course-and-its-scheduled-sessions">
-<h2 id="section-example-a-course-and-its-scheduled-sessions" class="glossary-term-section__title">Example: a course and its scheduled sessions</h2>
-<p class="glossary-term-section__text">Consider an illustrative training product:</p>
+    <p class="glossary-term-section__text">Деревоподібна система (Tree System) в OOUX — це патерн пов'язаних типів об'єктів, які розвиваються від загальної концепції до більш конкретних, контекстуальних форм. Вона включає кореневий об'єкт («корінь» / root), більш конкретний цільовий об'єкт («плід» / fruit) та іноді проміжні об'єкти («гілки» / branches).</p>
+<p class="glossary-term-section__text">Цей термін походить зі спільноти OOUX. Він описує патерн моделювання, де «корені» та «плоди» слугують пояснювальними метафорами.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: навчальний курс і заплановані заняття</h2>
+<p class="glossary-term-section__text">Розгляньмо навчальний продукт як ілюстрацію:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Object type</th>
-<th>Example instance</th>
-<th>Information owned at this level</th>
+<th>Тип об'єкта</th>
+<th>Приклад екземпляра</th>
+<th>Інформація, закріплена за цим рівнем</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Course</td>
-<td>First Aid Basics</td>
-<td>Shared learning objectives and standard description.</td>
+<td>Курс (Course)</td>
+<td>Основи домедичної допомоги</td>
+<td>Загальні навчальні цілі та стандартний опис.</td>
 </tr>
 <tr>
-<td>Course Offering</td>
-<td>First Aid Basics at East Center</td>
-<td>Local delivery details and contact information.</td>
+<td>Пропозиція курсу (Course Offering)</td>
+<td>Основи домедичної допомоги у Східному центрі</td>
+<td>Локальні деталі проведення та контактна інформація.</td>
 </tr>
 <tr>
-<td>Scheduled Session</td>
-<td>That offering on June 12 at 10 a.m.</td>
-<td>Start time, capacity, and remaining places.</td>
+<td>Заплановане заняття (Scheduled Session)</td>
+<td>Заняття цієї пропозиції 12 червня о 10:00</td>
+<td>Час початку, місткість групи та залишок вільних місць.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A learner can read the course description before choosing a location and session. Registering requires a specific Scheduled Session.</p>
-<p class="glossary-term-section__text">Each row describes a different object type with its own instances. A scheduled session is not simply another Course instance. Its structure and available actions differ.</p>
+<p class="glossary-term-section__text">Слухач може ознайомитися з описом курсу перед тим, як обрати локацію та конкретне заняття. Водночас для реєстрації обов'язково потрібне конкретне Заплановане заняття.</p>
+<p class="glossary-term-section__text">Кожен рядок описує окремий тип об'єкта зі своїми власними екземплярами. Заплановане заняття — це не просто ще один екземпляр Курсу. Його структура та доступні дії принципово відрізняються.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-where-should-information-belong">
-<h2 id="section-where-should-information-belong" class="glossary-term-section__title">Where should information belong?</h2>
-<p class="glossary-term-section__text">Store shared learning objectives on Course and reference them where needed. Store session capacity on Scheduled Session because it applies to that occurrence.</p>
-<p class="glossary-term-section__text">For this product, the team might let central staff edit the standard description and local staff manage session capacity. Those permissions are example decisions to validate.</p>
-<p class="glossary-term-section__text">When shared information changes, decide how it should appear in existing offerings and historical sessions. Some records may need a snapshot rather than the latest description.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Де саме має зберігатися інформація?</h2>
+<p class="glossary-term-section__text">Зберігайте загальні навчальні цілі на рівні Курсу та посилайтеся на них там, де необхідно. Місткість заняття зберігайте на рівні Запланованого заняття, оскільки цей параметр стосується виключно конкретної події.</p>
+<p class="glossary-term-section__text">Для такого продукту команда може дозволити співробітникам головного офісу редагувати стандартний опис, а локальним координаторам — керувати місткістю занять. Ці права доступу є прикладом архітектурних рішень, що потребують валідації.</p>
+<p class="glossary-term-section__text">Коли спільна інформація змінюється, вирішіть, як ці зміни мають відображатися в наявних пропозиціях та минулих сесіях. Деяким записам може знадобитися фіксований знімок даних (snapshot) на момент події, а не актуальний оновлений опис.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-tree-systems-hierarchy-and-inheritance">
-<h2 id="section-tree-systems-hierarchy-and-inheritance" class="glossary-term-section__title">Tree Systems, hierarchy, and inheritance</h2>
-<p class="glossary-term-section__text">A hierarchy alone does not establish a Tree System. A category containing articles, each with comments, does not automatically express increasing specificity of one concept.</p>
-<p class="glossary-term-section__text">Inheritance concerns types sharing a common structure or behavior. A Tree System connects contextual forms that can have different information and actions. A <a href="/ua/glossary/junction-object.html">junction object</a> may participate in the pattern when a connection needs its own attributes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Деревоподібні системи, ієрархія та успадкування</h2>
+<p class="glossary-term-section__text">Сама лише наявність ієрархії ще не утворює деревоподібну систему (Tree System). Категорія, що містить статті, кожна з яких має коментарі, автоматично не виражає зростання конкретизації єдиної сутності.</p>
+<p class="glossary-term-section__text">Успадкування стосується типів, які мають спільну базову структуру або поведінку. Деревоподібна система зв'язує контекстуальні форми, які можуть мати абсолютно різний набір даних і дій. <a href="/ua/glossary/junction-object.html">Об'єкт зв'язку (Junction Object)</a> може брати участь у такому патерні, коли сам зв'язок повинен володіти власними атрибутами.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-check-the-model">
-<h2 id="section-how-to-check-the-model" class="glossary-term-section__title">How to check the model</h2>
-<p class="glossary-term-section__text">Ask users which thing they are viewing, selecting, editing, and registering for. Test two locations and several sessions for the same course.</p>
-<p class="glossary-term-section__text">Check that an edit to one session's capacity affects the intended record, while shared course information remains consistent wherever the product is meant to reuse it.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перевірити модель</h2>
+<p class="glossary-term-section__text">Запитайте користувачів, із якою саме сутністю вони взаємодіють: яку переглядають, обирають, редагують чи на яку реєструються. Протестуйте сценарій із двома різними локаціями та кількома заняттями для одного й того ж курсу.</p>
+<p class="glossary-term-section__text">Переконайтеся, що зміна місткості одного заняття впливає лише на відповідний цільовий запис, тоді як спільна інформація про курс залишається узгодженою всюди, де продукт передбачає її повторне використання.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/junction-object.html">Junction Object</a></li>
-<li><a href="/ua/glossary/object-inheritance-ooux.html">Object Inheritance in OOUX</a></li>
-<li><a href="/ua/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a></li>
-<li><a href="/ua/glossary/conceptual-schema.html">Conceptual Schema</a></li>
+<li><a href="/ua/glossary/junction-object.html">Об'єкт зв'язку (Junction Object)</a></li>
+<li><a href="/ua/glossary/object-inheritance-ooux.html">Успадкування об'єктів в OOUX (Object Inheritance in OOUX)</a></li>
+<li><a href="/ua/glossary/object-attributes-ooux.html">Атрибути об'єктів в OOUX (Object Attributes in OOUX)</a></li>
+<li><a href="/ua/glossary/conceptual-schema.html">Концептуальна схема (Conceptual Schema)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Wrangling UX Complexity with Tree Systems</a></li>
-<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">OOUX Masterclass: Tree Systems</a></li>
+<li><a href="https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9" target="_blank" rel="noopener noreferrer">Софія Пратер (Sophia V. Prater): Подолання UX-складності за допомогою деревоподібних систем</a></li>
+<li><a href="https://ooux.com/selfpacedoouxmasterclass" target="_blank" rel="noopener noreferrer">Майстер-клас OOUX: Деревоподібні системи (Tree Systems)</a></li>
 </ul>
 </section>
 

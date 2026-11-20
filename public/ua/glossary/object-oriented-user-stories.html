@@ -384,77 +384,77 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Об'єктно-орієнтовані історії користувачів (Object-Oriented User Stories) описують, яку саме дію певна роль (актор) повинна виконати над конкретним об'єктом, яку цінність має ця дія та за яких умов вона є доречною. У методології ORCA такі історії формуються на основі даних матриці CTA Matrix під час раунду збору вимог (Requirements).</p>
-<p class="glossary-term-section__text">The matrix supplies an initial actor, action, and object. The story adds motivation and conditions so the team can design the behavior and assess whether it works. This is a way to develop requirements, without prescribing one mandatory sentence format.</p>
-<section class="glossary-term-section" aria-labelledby="section-a-practical-story-structure">
-<h2 id="section-a-practical-story-structure" class="glossary-term-section__title">A practical story structure</h2>
-<p class="glossary-term-section__text">Record the actor, action, target object, purpose, and conditions. Then describe the result and relevant exceptions.</p>
-<p class="glossary-term-section__text">A short “As a … I want … so that …” sentence can introduce the need. Supporting requirements capture details that would make that sentence difficult to read.</p>
+    <p class="glossary-term-section__text">Об'єктно-орієнтовані користувацькі історії описують, що саме конкретний суб'єкт взаємодії (actor) повинен зробити з об'єктом, чому ця дія важлива та коли вона є доречною. В ORCA команди формують їх на основі записів у матриці CTA під час раунду визначення вимог (Requirements round).</p>
+<p class="glossary-term-section__text">Матриця надає початкового суб'єкта, дію та об'єкт. Історія додає мотивацію та умови, щоб команда могла спроєктувати поведінку та перевірити, чи вона працює. Це спосіб розробки вимог без нав'язування одного обов'язкового шаблону речення.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Практична структура історії</h2>
+<p class="glossary-term-section__text">Зафіксуйте суб'єкта взаємодії, дію, цільовий об'єкт, мету та умови. Потім опишіть результат і відповідні винятки.</p>
+<p class="glossary-term-section__text">Коротке речення «Як … я хочу … для того, щоб …» може сформулювати потребу. Супутні вимоги фіксують деталі, які б ускладнили сприйняття цього речення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-requesting-a-booking-cancellation">
-<h2 id="section-example-requesting-a-booking-cancellation" class="glossary-term-section__title">Example: requesting a booking cancellation</h2>
-<p class="glossary-term-section__text">An illustrative CTA Matrix gives an assigned agent the action Request cancellation on a Booking.</p>
-<p class="glossary-term-section__text">The story could read:</p>
-<p class="glossary-term-section__text">> As the agent assigned to a trip, I need to request cancellation of an eligible confirmed booking when the traveler changes plans, so I can start the supplier's cancellation process and track its response.</p>
-<p class="glossary-term-section__text">The team agrees these example conditions and outcomes:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: запит на скасування бронювання</h2>
+<p class="glossary-term-section__text">Показовий приклад: матриця CTA призначає закріпленому агенту дію «Запросити скасування» (Request cancellation) для об'єкта «Бронювання» (Booking).</p>
+<p class="glossary-term-section__text">Історія може виглядати так:</p>
+<p class="glossary-term-section__text">> Як агент, закріплений за поїздкою, я повинен мати змогу надіслати запит на скасування відповідного підтвердженого бронювання, якщо мандрівник змінює плани, щоб я міг розпочати процес скасування в постачальника та відстежувати його відповідь.</p>
+<p class="glossary-term-section__text">Команда узгоджує такі приклади умов та результатів:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Case</th>
-<th>Expected behavior</th>
+<th>Випадок</th>
+<th>Очікувана поведінка</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Agent has access; booking is Confirmed and eligible</td>
-<td>Review the target booking and submit the cancellation request.</td>
+<td>Агент має доступ; бронювання має статус «Підтверджено» і підлягає скасуванню</td>
+<td>Переглянути цільове бронювання та надіслати запит на скасування.</td>
 </tr>
 <tr>
-<td>Supplier accepts the request for processing</td>
-<td>Show Cancellation pending and a request reference.</td>
+<td>Постачальник приймає запит до обробки</td>
+<td>Показати статус «Очікує скасування» (Cancellation pending) та номер запиту.</td>
 </tr>
 <tr>
-<td>Supplier later confirms cancellation</td>
-<td>Update the booking to Canceled.</td>
+<td>Постачальник пізніше підтверджує скасування</td>
+<td>Оновити статус бронювання на «Скасовано» (Canceled).</td>
 </tr>
 <tr>
-<td>Booking is no longer eligible</td>
-<td>Explain the current restriction and offer the appropriate next step.</td>
+<td>Бронювання більше не підлягає скасуванню</td>
+<td>Пояснити поточне обмеження та запропонувати відповідний наступний крок.</td>
 </tr>
 <tr>
-<td>Cancellation is already pending</td>
-<td>Show the existing request instead of creating a duplicate.</td>
+<td>Скасування вже очікує на розгляд</td>
+<td>Показати наявний запит замість створення дубліката.</td>
 </tr>
 <tr>
-<td>Submission times out</td>
-<td>Check whether the request exists before offering a retry.</td>
+<td>Час очікування відповіді вичерпано (timeout)</td>
+<td>Перевірити, чи існує запит, перш ніж пропонувати повторити спробу.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Cancellation pending is an intermediate state. The interface must not describe the booking as canceled before the supplier confirms that outcome.</p>
+<p class="glossary-term-section__text">«Очікує скасування» — це проміжний стан. Інтерфейс не повинен описувати бронювання як скасоване до того, як постачальник підтвердить цей результат.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-review-the-story-across-entry-points">
-<h2 id="section-review-the-story-across-entry-points" class="glossary-term-section__title">Review the story across entry points</h2>
-<p class="glossary-term-section__text">Try the action from a booking opened through its trip and through search. Check that both routes identify the same record and apply the same rules.</p>
-<p class="glossary-term-section__text">Use a <a href="/ua/glossary/state-transition-matrix.html">state transition matrix</a> when the lifecycle needs more detail. Confirm permissions with the implementation team: the service must enforce them when the request runs.</p>
-<p class="glossary-term-section__text">Review stories with the people doing the work. A complete template can still describe an unnecessary action or misunderstand the reason someone needs it.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Аналізуйте історію на різних точках входу</h2>
+<p class="glossary-term-section__text">Спробуйте виконати дію з бронювання, відкритого через його поїздку та через пошук. Переконайтеся, що обидва шляхи ідентифікують один і той самий запис та застосовують однакові правила.</p>
+<p class="glossary-term-section__text">Використовуйте <a href="/ua/glossary/state-transition-matrix.html">матрицю переходів станів</a>, якщо життєвий цикл потребує більшої деталізації. Узгодьте права доступу з командою розробки: сервіс повинен забезпечувати їхнє дотримання під час виконання запиту.</p>
+<p class="glossary-term-section__text">Переглядайте історії разом із людьми, які безпосередньо виконують цю роботу. Навіть бездоганно заповнений шаблон може описувати непотрібну дію або хибно тлумачити причину, чому вона комусь потрібна.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/cta-matrix.html">CTA Matrix</a></li>
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
-<li><a href="/ua/glossary/cta-prioritization.html">CTA Prioritization</a></li>
+<li><a href="/ua/glossary/cta-matrix.html">Матриця закликів до дії (CTA Matrix)</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA (ORCA Framework)</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів (State Transition Matrix)</a></li>
+<li><a href="/ua/glossary/cta-prioritization.html">Пріоритезація CTA (CTA Prioritization)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Sophia Prater: Object-Oriented UX — InfoQ interview</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Prioritizing Prioritization for Product Designers</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Софія Пратер: Об'єктно-орієнтований UX — інтерв'ю для InfoQ (Sophia Prater: Object-Oriented UX — InfoQ interview)</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Софія В. Пратер: Пріоритезація пріоритетів для продуктових дизайнерів (Sophia V. Prater: Prioritizing Prioritization for Product Designers)</a></li>
 </ul>
 </section>
 

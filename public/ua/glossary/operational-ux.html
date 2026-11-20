@@ -384,35 +384,35 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Операційний UX охоплює проєктування інтерфейсів і робочих процесів, які співробітники використовують для виконання регулярних бізнес-операцій. Він зосереджений на безпомилковому виконанні завдань, прозорості їхнього поточного статусу та ефективній обробці позаштатних ситуацій між різними ролями та системами.</p>
-<p class="glossary-term-section__text">The term is used descriptively rather than as a single standardized method. Relevant products include reservation tools, support queues, inventory systems, and enterprise administration interfaces.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-processing-a-booking-queue">
-<h2 id="section-example-processing-a-booking-queue" class="glossary-term-section__title">Example: processing a booking queue</h2>
-<p class="glossary-term-section__text">A travel operations team needs to identify bookings awaiting ticket issuance. A useful workspace could show the booking reference, departure date, owner, current status, and the reason a booking is blocked.</p>
-<p class="glossary-term-section__text">Opening a booking should preserve enough queue context for the operator to return to the right place. A handoff should identify the next owner and any unresolved work. If ticket issuance fails, the interface should distinguish a confirmed failure from an unknown outcome that needs checking before retrying.</p>
-<p class="glossary-term-section__text">These details affect the quality of the operation as much as the speed of an individual click.</p>
+    <p class="glossary-term-section__text">Операційний UX (Operational UX) описує проєктування інтерфейсів і робочих процесів, які люди використовують для виконання регулярних бізнес-операцій. Він зосереджений на безпомилковому виконанні завдань, розумінні їхнього поточного статусу та ефективній обробці позаштатних ситуацій між різними ролями та системами.</p>
+<p class="glossary-term-section__text">Цей термін використовується радше описово, ніж як єдиний стандартизований метод. Відповідні продукти включають інструменти бронювання, черги звернень у службі підтримки, складські системи обліку та корпоративні інтерфейси адміністрування.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: обробка черги бронювань</h2>
+<p class="glossary-term-section__text">Операційній команді туристичного сервісу необхідно виявляти бронювання, які очікують на виписку квитків. Ефективний робочий простір може відображати номер бронювання (booking reference), дату вильоту, відповідального (owner), поточний статус і причину блокування бронювання.</p>
+<p class="glossary-term-section__text">Відкриття картки бронювання має зберігати достатньо контексту черги, щоб оператор міг повернутися на потрібне місце. Передача завдання (handoff) повинна фіксувати наступного відповідального та будь-яку невиконану роботу. Якщо виписка квитка зазнає збою, інтерфейс має чітко розрізняти підтверджену помилку та невизначений стан, який вимагає перевірки перед повторною спробою.</p>
+<p class="glossary-term-section__text">Такі деталі впливають на якість усієї операційної діяльності так само відчутно, як і швидкість окремого кліку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-to-evaluate">
-<h2 id="section-what-to-evaluate" class="glossary-term-section__title">What to evaluate</h2>
-<p class="glossary-term-section__text">Choose measures that reflect the actual workflow, such as successfully completed cases, handling time, rework, and handoff delays. Review them together: faster handling can conceal more downstream corrections.</p>
-<p class="glossary-term-section__text">Test common tasks alongside exceptions, interruptions, and permission changes. Pay particular attention to selection scope in bulk actions, unsaved work, and stale data.</p>
-<p class="glossary-term-section__text">Support keyboard operation and readable information density. When implementing an interactive data grid, provide its required focus management and keyboard behavior. A visual table does not automatically need the ARIA grid role.</p>
-<p class="glossary-term-section__text">Evaluate the complete task with operators, including the tools and information they use outside the product.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що оцінювати</h2>
+<p class="glossary-term-section__text">Обирайте метрики, які відображають реальний робочий процес, як-от успішно завершені кейси, час обробки (handling time), кількість доопрацювань і затримки під час передачі завдань. Аналізуйте їх комплексно: швидша первинна обробка може приховувати більше виправлень помилок на подальших етапах.</p>
+<p class="glossary-term-section__text">Тестуйте типові завдання паралельно з винятковими ситуаціями, перериваннями процесів і змінами прав доступу. Звертайте особливу увагу на область вибору в масових діях (bulk actions), незбережені зміни та застарілі дані (stale data).</p>
+<p class="glossary-term-section__text">Забезпечуйте повноцінне керування з клавіатури та зручну для читання щільність інформації. Впроваджуючи інтерактивну таблицю даних (data grid), реалізуйте належне керування фокусом і поведінку клавіш навігації. Звичайна візуальна таблиця не обов'язково потребує ролі ARIA grid.</p>
+<p class="glossary-term-section__text">Оцінюйте виконання завдання операторами в повному обсязі, включно з інструментами та інформацією, які вони використовують за межами продукту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/enterprise-information-architecture.html">Enterprise Information Architecture</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
-<li><a href="/ua/glossary/semantic-zoom.html">Semantic Zoom</a></li>
-<li><a href="/ua/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+<li><a href="/ua/glossary/enterprise-information-architecture.html">Корпоративна інформаційна архітектура</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів</a></li>
+<li><a href="/ua/glossary/semantic-zoom.html">Семантичне масштабування (Semantic Zoom)</a></li>
+<li><a href="/ua/glossary/interaction-invariant.html">Інваріант взаємодії (Interaction Invariant)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/complex-application-design/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Design Guidelines for Complex Applications</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/grid/" target="_blank" rel="noopener noreferrer">W3C: Grid Pattern</a></li>
+<li><a href="https://www.nngroup.com/articles/complex-application-design/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Рекомендації з дизайну для складних застосунків</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/grid/" target="_blank" rel="noopener noreferrer">W3C: Паттерн Grid</a></li>
 </ul>
 </section>
 

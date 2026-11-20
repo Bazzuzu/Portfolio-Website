@@ -388,68 +388,68 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Матриця закликів до дії (CTA Matrix) — це матриця фреймворку ORCA, яка зіставляє ролі користувачів із типами об'єктів та фіксує перелік дій, які кожна роль має право виконувати над конкретним об'єктом. Вона слугує відправною точкою для визначення прав доступу, станів і логіки взаємодії перед тим, як розміщувати елементи керування в інтерфейсі.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-goes-in-a-cta-matrix">
-<h2 id="section-what-goes-in-a-cta-matrix" class="glossary-term-section__title">What goes in a CTA Matrix?</h2>
-<p class="glossary-term-section__text">Put roles down the rows and object types across the columns. Write actions as verbs in the cells. A role can describe a person’s relationship to the object, such as the agent assigned to a trip, when that relationship affects what they can do.</p>
-<p class="glossary-term-section__text">Start with what each role needs to do. Review access and business rules before treating a proposed action as an approved requirement. A verb such as “Request cancellation” can become a button, menu item, or part of a guided workflow once the team designs the interaction.</p>
+    <p class="glossary-term-section__text">Матриця закликів до дії (CTA Matrix), або матриця дій, — це інструмент фреймворку ORCA у вигляді сітки, яка зіставляє ролі користувачів із типами об'єктів і фіксує дії, які кожна роль має виконувати над кожним об'єктом. Вона слугує для команд відправною точкою для визначення прав доступу, умов і вимог до взаємодії перед розміщенням елементів керування на екранах.</p>
+<section class="glossary-term-section" aria-labelledby="section-cta">
+<h2 id="section-cta" class="glossary-term-section__title">Що містить матриця CTA?</h2>
+<p class="glossary-term-section__text">Розмістіть ролі у рядках, а типи об'єктів — у стовпцях. Записуйте дії у вигляді дієслів у клітинках. Роль може описувати взаємовідносини людини з об'єктом — наприклад, оператор, призначений відповідальним за поїздку, якщо цей статус впливає на його можливості.</p>
+<p class="glossary-term-section__text">Почніть із того, що саме потрібно робити кожній ролі. Перевірте правила доступу та бізнес-правила, перш ніж вважати запропоновану дію затвердженою вимогою. Дієслово, таке як «Запросити скасування», може перетворитися на кнопку, пункт меню або крок покрокового сценарію (guided workflow), коли команда проєктуватиме взаємодію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-cta-matrix-example-for-travel-operations">
-<h2 id="section-cta-matrix-example-for-travel-operations" class="glossary-term-section__title">CTA Matrix example for travel operations</h2>
-<p class="glossary-term-section__text">Consider a tool where an assigned agent manages the trip and a support reviewer investigates issues without changing records. This example focuses on a few actions from each role.</p>
+<section class="glossary-term-section" aria-labelledby="section-cta">
+<h2 id="section-cta" class="glossary-term-section__title">Приклад матриці CTA для організації подорожей</h2>
+<p class="glossary-term-section__text">Розглянемо інструмент, де призначений оператор керує поїздкою, а спеціаліст служби підтримки розслідує інциденти без внесення змін до записів. Цей приклад зосереджений на кількох діях для кожної ролі.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Role</th>
-<th>Trip</th>
-<th>Booking</th>
-<th>Traveler</th>
+<th>Роль</th>
+<th>Поїздка (Trip)</th>
+<th>Бронювання (Booking)</th>
+<th>Мандрівник (Traveler)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Assigned agent</td>
-<td>View trip, add booking</td>
-<td>View booking, request cancellation if eligible</td>
-<td>View traveler, update contact details if permitted</td>
+<td>Призначений оператор</td>
+<td>Перегляд поїздки, додавання бронювання</td>
+<td>Перегляд бронювання, запит на скасування за наявності права</td>
+<td>Перегляд мандрівника, оновлення контактних даних за наявності дозволу</td>
 </tr>
 <tr>
-<td>Support reviewer</td>
-<td>View trip</td>
-<td>View booking</td>
-<td>View permitted traveler details</td>
+<td>Спеціаліст підтримки</td>
+<td>Перегляд поїздки</td>
+<td>Перегляд бронювання</td>
+<td>Перегляд дозволених даних мандрівника</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Turn “Request cancellation” into a user story. An assigned agent needs to request cancellation on an eligible confirmed booking when a traveler changes plans. When the request succeeds, show Cancellation pending so the agent knows the supplier still has to respond. The supplier’s response determines the next state.</p>
+<p class="glossary-term-section__text">Перетворіть дію «Запросити скасування» на користувацьку історію (user story). Призначеному оператору потрібно запросити скасування для відповідного підтвердженого бронювання, коли мандрівник змінює плани. Якщо запит успішний, відобразіть стан «Очікує на скасування» (Cancellation pending), щоб оператор розумів, що постачальник ще має надати відповідь. Відповідь постачальника визначає наступний стан системи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-turn-matrix-entries-into-requirements">
-<h2 id="section-how-do-you-turn-matrix-entries-into-requirements" class="glossary-term-section__title">How do you turn matrix entries into requirements?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перетворити записи матриці на вимоги?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Clarify who can act.</strong> Check role, assignment, and record access separately where they affect the action.</li>
-<li><strong>Describe when the action is available.</strong> Record the booking state and eligibility rules. Mark unresolved rules for follow-up.</li>
-<li><strong>Specify the result and feedback.</strong> Include what the user sees after success, a blocked attempt, or a delayed response. Use a <a href="/ua/glossary/state-transition-matrix.html">state transition matrix</a> to track the lifecycle.</li>
-<li><strong>Choose placement in the interface.</strong> Give frequent or time-sensitive actions appropriate prominence. Test whether users can find and understand them where the object appears.</li>
+<li><strong>Уточніть, хто саме може діяти.</strong> Окремо перевірте роль, призначення на конкретний об'єкт і права доступу до запису в тих випадках, коли вони впливають на дію.</li>
+<li><strong>Опишіть, коли дія доступна.</strong> Зафіксуйте стан бронювання та правила відповідності критеріям (eligibility rules). Позначте нез'ясовані правила для подальшого опрацювання.</li>
+<li><strong>Визначте результат і зворотний зв'язок.</strong> Опишіть, що саме бачить користувач після успішного виконання, заблокованої спроби або у разі затримки відповіді. Використовуйте <a href="/ua/glossary/state-transition-matrix.html">матрицю переходів станів</a> для відстеження життєвого циклу.</li>
+<li><strong>Оберіть розташування в інтерфейсі.</strong> Надайте частим або терміновим діям належну візуальну виразність. Протестуйте, чи можуть користувачі легко знайти та зрозуміти їх там, де відображається об'єкт.</li>
 </ol>
-<p class="glossary-term-section__text">In <a href="/ua/glossary/orca-framework.html">ORCA</a>, teams begin this work during Discovery and expand matrix entries into user stories during Requirements. Use the matrix to agree on who can act. The application enforces those rules when the action is requested.</p>
+<p class="glossary-term-section__text">В <a href="/ua/glossary/orca-framework.html">ORCA</a> команди розпочинають цю роботу на етапі відкриття (Discovery) та розгортають записи матриці у повноцінні користувацькі історії на етапі вимог (Requirements). Використовуйте матрицю для узгодження того, хто саме може виконувати дії. Застосунок примусово забезпечує виконання цих правил у момент запиту дії.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/orca-framework.html">ORCA Framework</a></li>
-<li><a href="/ua/glossary/object-mapping.html">Object Mapping</a></li>
-<li><a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
+<li><a href="/ua/glossary/orca-framework.html">Фреймворк ORCA (ORCA Framework)</a></li>
+<li><a href="/ua/glossary/object-mapping.html">Картування об'єктів (Object Mapping)</a></li>
+<li><a href="/ua/glossary/nested-object-matrix.html">Матриця вкладених об'єктів (Nested Object Matrix)</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів (State Transition Matrix)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Introducing ORCA, Sophia V. Prater</a></li>
-<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Object-Oriented UX with Sophia Prater, InfoQ interview</a></li>
-<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Prioritizing Prioritization for Product Designers, Sophia V. Prater</a></li>
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Знайомство з ORCA, Софія Пратер (Introducing ORCA, Sophia V. Prater)</a></li>
+<li><a href="https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/" target="_blank" rel="noopener noreferrer">Об'єктно-орієнтований UX із Софією Пратер, інтерв'ю InfoQ (Object-Oriented UX with Sophia Prater, InfoQ interview)</a></li>
+<li><a href="https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e" target="_blank" rel="noopener noreferrer">Визначення пріоритетів для продуктових дизайнерів, Софія Пратер (Prioritizing Prioritization for Product Designers, Sophia V. Prater)</a></li>
 </ul>
 </section>
 

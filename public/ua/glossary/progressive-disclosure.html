@@ -385,69 +385,69 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Покрокове розкриття інформації (progressive disclosure) — це техніка проєктування взаємодії, яка спершу демонструє лише базову інформацію та ключові елементи керування, розкриваючи менш уживані опції за запитом користувача. Це допомагає сфокусуватися на поточному завданні, зберігаючи легкий доступ до розширеного функціоналу.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-progressive-disclosure-work">
-<h2 id="section-how-does-progressive-disclosure-work" class="glossary-term-section__title">How does progressive disclosure work?</h2>
-<p class="glossary-term-section__text">Start with the options people need for common tasks. Provide a clearly labeled way to reveal additional settings or information, such as “Export options” or “Technical specifications.”</p>
-<p class="glossary-term-section__text">Use task research and usability testing to decide what to show. Low usage alone does not prove that a feature is unimportant: people may be unable to find it.</p>
-<p class="glossary-term-section__text">An accordion or secondary dialog can support this pattern. Hiding required information does not.</p>
+    <p class="glossary-term-section__text">Покрокове розкриття інформації (progressive disclosure) — це техніка проєктування взаємодії, яка спочатку показує найважливішу інформацію та елементи керування, а менш затребувані параметри розкриває тоді, коли користувачі запитують їх. Це допомагає людям зосередитися на поточному завданні, зберігаючи доступ до додаткових можливостей.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює покрокове розкриття інформації?</h2>
+<p class="glossary-term-section__text">Починайте з параметрів, необхідних користувачам для виконання типових завдань. Забезпечте чітко підписаний спосіб відкриття додаткових налаштувань або інформації, наприклад, «Параметри експорту» або «Технічні характеристики».</p>
+<p class="glossary-term-section__text">Використовуйте дослідження завдань та тестування зручності використання, щоб вирішити, що саме показувати. Сама по собі низька частота використання ще не доводить, що функція неважлива: люди можуть просто бути не в змозі її знайти.</p>
+<p class="glossary-term-section__text">Акордеон або вторинне діалогове вікно можуть підтримувати цей патерн. Приховування обов'язкової інформації суперечить йому.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-exporting-a-report">
-<h2 id="section-example-exporting-a-report" class="glossary-term-section__title">Example: exporting a report</h2>
-<p class="glossary-term-section__text">Suppose a reporting tool serves managers who usually export the current report as a PDF, while analysts occasionally need a customized CSV.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: експорт звіту</h2>
+<p class="glossary-term-section__text">Припустимо, аналітичний інструмент обслуговує менеджерів, які зазвичай експортують поточний звіт у форматі PDF, та аналітиків, яким час від часу потрібен налаштований CSV.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Initially visible</th>
-<th>Available through “Export options”</th>
+<th>Видимо від самого початку</th>
+<th>Доступно через «Параметри експорту»</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>File format, with PDF selected</td>
-<td>CSV delimiter and encoding</td>
+<td>Формат файлу, вибрано PDF</td>
+<td>Роздільник та кодування CSV</td>
 </tr>
 <tr>
-<td>Current date range and an Export button</td>
-<td>Selection of columns for CSV export</td>
+<td>Поточний діапазон дат і кнопка «Експортувати»</td>
+<td>Вибір стовпців для експорту в CSV</td>
 </tr>
 <tr>
-<td>Summary of any customized settings</td>
-<td>Controls for editing those settings</td>
+<td>Короткий підсумок будь-яких налаштованих параметрів</td>
+<td>Елементи керування для редагування цих параметрів</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">With CSV selected, “Export options” opens the delimiter, encoding, and column controls. If someone changes the selected columns and collapses the panel, a summary such as “CSV · 6 selected columns” remains visible. The export should not silently use forgotten settings.</p>
-<p class="glossary-term-section__text">This example assumes occasional customization. If analysts select columns on every export, keep those controls in their primary workflow. Test whether both groups can export the intended data without missing settings or repeatedly reopening the panel.</p>
+<p class="glossary-term-section__text">Коли вибрано CSV, розділ «Параметри експорту» відкриває налаштування роздільника, кодування та вибору стовпців. Якщо хтось змінює вибрані стовпці та згортає панель, підсумок на кшталт «CSV · вибрано 6 стовпців» залишається видимим. Процес експорту не повинен непомітно застосовувати забуті налаштування.</p>
+<p class="glossary-term-section__text">Цей приклад передбачає періодичне налаштування. Якщо аналітики вибирають стовпці під час кожного експорту, тримайте ці елементи керування в їхньому основному робочому процесі. Перевіряйте, чи можуть обидві групи експортувати потрібні дані, не пропускаючи налаштувань і не відкриваючи панель знову і знову.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-stay-visible">
-<h2 id="section-what-should-stay-visible" class="glossary-term-section__title">What should stay visible?</h2>
-<p class="glossary-term-section__text">Keep information people need to make an informed decision in the main flow: total cost, important restrictions, required inputs, and actionable errors. GOV.UK's guidance for the details component similarly advises against hiding content most users need.</p>
-<p class="glossary-term-section__text">Avoid burying frequent actions behind repeated expansion. Several nested disclosure levels can also make navigation difficult.</p>
-<p class="glossary-term-section__text">For an in-place disclosure, use an accessible control. The W3C disclosure pattern uses a button activated with Enter or Space and an <code>aria-expanded</code> state that reflects whether the content is open. Test the interaction with a keyboard and assistive technology.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має залишатися видимим?</h2>
+<p class="glossary-term-section__text">Зберігайте інформацію, необхідну людям для прийняття зваженого рішення, в основному процесі: загальну вартість, важливі обмеження, обов'язкові поля введення та повідомлення про помилки, які спонукають до дій. Рекомендації GOV.UK щодо компонента деталей аналогічно радять не приховувати контент, потрібний більшості користувачів.</p>
+<p class="glossary-term-section__text">Уникайте приховування частих дій за багаторазовим розгортанням. Кілька вкладених рівнів розкриття також можуть ускладнити навігацію.</p>
+<p class="glossary-term-section__text">Для розкриття на місці використовуйте доступний елемент керування. Патерн розкриття W3C використовує кнопку, яка активується клавішами Enter або Space, та стан <code>aria-expanded</code>, що відображає, чи відкритий контент. Тестуйте взаємодію за допомогою клавіатури та асистивних технологій.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-progressive-disclosure-vs-staged-disclosure">
-<h2 id="section-progressive-disclosure-vs-staged-disclosure" class="glossary-term-section__title">Progressive disclosure vs. staged disclosure</h2>
-<p class="glossary-term-section__text">Progressive disclosure reveals optional detail on request. Staged disclosure divides a task into successive steps that users normally complete.</p>
-<p class="glossary-term-section__text">“Export options” is progressive disclosure. A checkout that moves through address, delivery, and payment is staged disclosure. Test whether users need to compare information across steps before separating it.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Покрокове розкриття проти поетапного розкриття</h2>
+<p class="glossary-term-section__text">Покрокове розкриття розкриває необов'язкові деталі за запитом. Поетапне розкриття (staged disclosure) ділить завдання на послідовні кроки, які користувачі зазвичай виконують поспіль.</p>
+<p class="glossary-term-section__text">«Параметри експорту» — це покрокове розкриття. Процес оформлення замовлення, що послідовно веде через введення адреси, доставку та оплату, — це поетапне розкриття. Перевіряйте, чи потрібно користувачам порівнювати інформацію між кроками, перш ніж розділяти її.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/affordance-layering.html">Affordance Layering</a></li>
-<li><a href="/ua/glossary/semantic-zoom.html">Semantic Zoom</a></li>
-<li><a href="/ua/glossary/task-model.html">Task Model</a></li>
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/ua/glossary/affordance-layering.html">Шарування афордансів (Affordance Layering)</a></li>
+<li><a href="/ua/glossary/semantic-zoom.html">Семантичне масштабування (Semantic Zoom)</a></li>
+<li><a href="/ua/glossary/task-model.html">Модель завдань (Task Model)</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank" rel="noopener noreferrer">Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group</a></li>
-<li><a href="https://design-system.service.gov.uk/components/details/" target="_blank" rel="noopener noreferrer">Details, GOV.UK Design System</a></li>
-<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Disclosure (Show/Hide) Pattern, W3C WAI</a></li>
+<li><a href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank" rel="noopener noreferrer">Покрокове розкриття інформації, Якоб Нільсен, Nielsen Norman Group</a></li>
+<li><a href="https://design-system.service.gov.uk/components/details/" target="_blank" rel="noopener noreferrer">Компонент Details, GOV.UK Design System</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">Патерн розкриття (Show/Hide), W3C WAI</a></li>
 </ul>
 </section>
 

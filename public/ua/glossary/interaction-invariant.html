@@ -384,35 +384,35 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Інваріант взаємодії — це правило поведінки інтерфейсу, яке команда свідомо зберігає незмінним у визначеному наборі станів або контекстів. Він дозволяє формалізувати консистентність і чітко окреслює межі, в яких користувач може безумовно покладатися на цю логіку.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-selection-survives-sorting">
-<h2 id="section-example-selection-survives-sorting" class="glossary-term-section__title">Example: Selection survives sorting</h2>
-<p class="glossary-term-section__text">An operations table lets users select bookings and then sort the list. The team defines a rule that selected booking IDs stay selected when their rows move. The bulk-action count and affected records must reflect that same selection.</p>
-<p class="glossary-term-section__text">This rule needs decisions at its boundaries. The team should specify what happens when filtering hides a selected record, the user changes pages, or permissions change. Those cases may use different behavior, but the interface must make the resulting scope understandable.</p>
+    <p class="glossary-term-section__text">Інваріант взаємодії — це правило поведінки інтерфейсу, яке команда свідомо підтримує стабільним у визначеному наборі станів або контекстів. Він надає спосіб зробити послідовність явною, включно з межами, в яких користувачі можуть покладатися на це правило.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: збереження вибору при сортуванні</h2>
+<p class="glossary-term-section__text">Операційна таблиця дозволяє користувачам вибирати бронювання, а потім сортувати список. Команда визначає правило: вибрані ідентифікатори бронювань залишаються вибраними, коли їхні рядки переміщуються. Лічильник масових дій та змінені записи повинні відображати той самий вибір.</p>
+<p class="glossary-term-section__text">Це правило потребує рішень на своїх межах. Команді слід визначити, що відбувається, коли фільтрація приховує вибраний запис, користувач переходить між сторінками або змінюються права доступу. Ці випадки можуть мати іншу поведінку, але інтерфейс повинен зробити отриману область дії зрозумілою.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-document-the-rule">
-<h2 id="section-how-do-you-document-the-rule" class="glossary-term-section__title">How do you document the rule?</h2>
-<p class="glossary-term-section__text">State the user expectation, the contexts it covers, and the observable result. For example, record that sorting preserves selected booking IDs and that a bulk action previews the selected records it will affect.</p>
-<p class="glossary-term-section__text">Connect the rule to component specifications and product requirements. Labels should identify recurring actions consistently, and state indicators should agree with the action’s actual effect.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як документувати це правило?</h2>
+<p class="glossary-term-section__text">Сформулюйте очікування користувача, контексти, які воно охоплює, та спостережуваний результат. Наприклад, зафіксуйте, що сортування зберігає вибрані ідентифікатори бронювань, а масова дія надає попередній перегляд вибраних записів, на які вона вплине.</p>
+<p class="glossary-term-section__text">Пов'язуйте правило зі специфікаціями компонентів та вимогами до продукту. Мітки повинні послідовно ідентифікувати повторювані дії, а індикатори стану мають відповідати фактичному результату дії.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-it">
-<h2 id="section-how-do-you-test-it" class="glossary-term-section__title">How do you test it?</h2>
-<p class="glossary-term-section__text">Start with a small known set of records. Select two, change the sort order, and inspect both the visible count and the records supplied to the action. Then test the defined boundary cases. A stable visual position alone cannot establish which records the operation targets.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як це тестувати?</h2>
+<p class="glossary-term-section__text">Почніть із невеликого відомого набору записів. Виберіть два, змініть порядок сортування та перевірте як видимий лічильник, так і записи, що передаються в дію. Потім протестуйте визначені граничні випадки. Лише стабільна візуальна позиція не може підтвердити, на які саме записи спрямована операція.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
-<li><a href="/ua/glossary/mental-model-mapping.html">Mental Model Mapping</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-<li><a href="/ua/glossary/design-primitives.html">Design Primitives</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
+<li><a href="/ua/glossary/mental-model-mapping.html">Картування ментальних моделей</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/design-primitives.html">Примітиви дизайну (Design Primitives)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/consistency-and-standards/" target="_blank" rel="noopener noreferrer">Consistency and Standards, Nielsen Norman Group</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">Consistent Identification, W3C WAI</a></li>
+<li><a href="https://www.nngroup.com/articles/consistency-and-standards/" target="_blank" rel="noopener noreferrer">Узгодженість і стандарти, Nielsen Norman Group</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">Послідовна ідентифікація, W3C WAI</a></li>
 </ul>
 </section>
 
