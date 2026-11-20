@@ -229,13 +229,15 @@ const TERM_NAMES_UK: Record<string, { name: string; alt?: string | string[] }> =
   "usage-based-pricing": { name: "Ціноутворення на основі споживання", alt: ["Usage-Based Pricing"] }
 };
 
-// Helper to rewrite markdown internal links to /uk/glossary/
-function rewriteMarkdownLinksToUk(md: string): string {
+// Helper to rewrite markdown internal links to /ua/glossary/
+function rewriteMarkdownLinksToUa(md: string): string {
   if (!md) return '';
   return md
-    .replace(/https:\/\/lexkonovalov\.com\/glossary\//g, 'https://lexkonovalov.com/uk/glossary/')
-    .replace(/(?<!\/uk)\/glossary\//g, '/uk/glossary/')
-    .replace(/\/uk\/uk\//g, '/uk/');
+    .replace(/https:\/\/lexkonovalov\.com\/(uk|ua)\/glossary\//g, 'https://lexkonovalov.com/ua/glossary/')
+    .replace(/https:\/\/lexkonovalov\.com\/glossary\//g, 'https://lexkonovalov.com/ua/glossary/')
+    .replace(/(?<!\/(uk|ua))\/glossary\//g, '/ua/glossary/')
+    .replace(/\/(uk|ua)\/(uk|ua)\//g, '/ua/')
+    .replace(/\/uk\/glossary\//g, '/ua/glossary/');
 }
 
 // Translate common article headings
@@ -254,17 +256,17 @@ function translateMarkdownHeadings(md: string): string {
 // Generate localized structuredDataGraph
 function localizeStructuredDataGraph(graph: any[], termNameUk: string, slug: string, descUk: string): any[] {
   if (!graph || graph.length === 0) return [];
-  const canonicalUk = slug === 'ooux' 
-    ? 'https://lexkonovalov.com/uk/glossary/ooux/'
-    : (slug === 'ooux-worked-example' ? 'https://lexkonovalov.com/uk/glossary/ooux-worked-example.html' : `https://lexkonovalov.com/uk/glossary/${slug}.html`);
+  const canonicalUa = slug === 'ooux' 
+    ? 'https://lexkonovalov.com/ua/glossary/ooux/'
+    : (slug === 'ooux-worked-example' ? 'https://lexkonovalov.com/ua/glossary/ooux-worked-example.html' : `https://lexkonovalov.com/ua/glossary/${slug}.html`);
 
   return graph.map(node => {
     const copy = { ...node };
     if (copy.url) {
-      copy.url = copy.url.replace('https://lexkonovalov.com/glossary/', 'https://lexkonovalov.com/uk/glossary/');
+      copy.url = copy.url.replace(/https:\/\/lexkonovalov\.com\/(uk|ua)?\/?glossary\//, 'https://lexkonovalov.com/ua/glossary/');
     }
     if (copy['@id']) {
-      copy['@id'] = copy['@id'].replace('https://lexkonovalov.com/glossary/', 'https://lexkonovalov.com/uk/glossary/');
+      copy['@id'] = copy['@id'].replace(/https:\/\/lexkonovalov\.com\/(uk|ua)?\/?glossary\//, 'https://lexkonovalov.com/ua/glossary/');
     }
     if (copy['@type'] === 'DefinedTerm') {
       copy.name = termNameUk;
@@ -273,9 +275,9 @@ function localizeStructuredDataGraph(graph: any[], termNameUk: string, slug: str
       if (copy.inDefinedTermSet) {
         copy.inDefinedTermSet = {
           "@type": "DefinedTermSet",
-          "@id": "https://lexkonovalov.com/uk/glossary/#terms",
+          "@id": "https://lexkonovalov.com/ua/glossary/#terms",
           "name": "Словник продуктового дизайну",
-          "url": "https://lexkonovalov.com/uk/glossary/",
+          "url": "https://lexkonovalov.com/ua/glossary/",
           "inLanguage": "uk-UA"
         };
       }
@@ -291,10 +293,10 @@ function localizeStructuredDataGraph(graph: any[], termNameUk: string, slug: str
           return { ...item, name: "Головна" };
         }
         if (item.position === 2) {
-          return { ...item, name: "Словник продуктового дизайну", item: "https://lexkonovalov.com/uk/glossary/" };
+          return { ...item, name: "Словник продуктового дизайну", item: "https://lexkonovalov.com/ua/glossary/" };
         }
         if (item.position === 3) {
-          return { ...item, name: termNameUk, item: canonicalUk };
+          return { ...item, name: termNameUk, item: canonicalUa };
         }
         return item;
       });
@@ -323,11 +325,11 @@ const localizedTerms: GlossaryTerm[] = glossaryTerms.map(term => {
   const naming = TERM_NAMES_UK[term.slug] || { name: term.name, alt: term.alternateName };
   const catUk = CATEGORY_MAP[term.category] || term.category;
   const secCatUk = term.secondaryCategory ? (CATEGORY_MAP[term.secondaryCategory] || term.secondaryCategory) : undefined;
-  const canonicalUk = `https://lexkonovalov.com/uk/glossary/${term.slug}.html`;
+  const canonicalUa = `https://lexkonovalov.com/ua/glossary/${term.slug}.html`;
 
   const defUk = definitionsUk[term.slug] || term.definition;
 
-  let contentMd = term.contentMarkdown ? rewriteMarkdownLinksToUk(term.contentMarkdown) : '';
+  let contentMd = term.contentMarkdown ? rewriteMarkdownLinksToUa(term.contentMarkdown) : '';
   contentMd = translateMarkdownHeadings(contentMd);
 
   // Replace H1 and intro definition paragraph in Markdown
@@ -350,7 +352,7 @@ const localizedTerms: GlossaryTerm[] = glossaryTerms.map(term => {
     secondaryCategory: secCatUk,
     definition: defUk,
     purpose: defUk,
-    canonicalUrl: canonicalUk,
+    canonicalUrl: canonicalUa,
     seoTitle: seoTitleUk,
     seoDescription: seoDescUk,
     contentMarkdown: contentMd,
@@ -363,7 +365,9 @@ const localizedSupporting: SupportingPage[] = supportingPages.map(page => {
   let nameUk = page.name;
   let titleUk = page.title;
   let descUk = page.description;
-  let canonicalUk = page.canonicalUrl.replace('https://lexkonovalov.com/glossary/', 'https://lexkonovalov.com/uk/glossary/');
+  let canonicalUa = page.canonicalUrl
+    .replace('https://lexkonovalov.com/glossary/', 'https://lexkonovalov.com/ua/glossary/')
+    .replace('https://lexkonovalov.com/uk/glossary/', 'https://lexkonovalov.com/ua/glossary/');
 
   if (page.slug === 'ooux') {
     nameUk = "Об'єктно-орієнтований UX (OOUX)";
@@ -375,7 +379,7 @@ const localizedSupporting: SupportingPage[] = supportingPages.map(page => {
     descUk = "Наскрізний практичний приклад застосування 4 раундів фреймворку ORCA до робочого процесу бронювання подорожей.";
   }
 
-  let contentMd = page.contentMarkdown ? rewriteMarkdownLinksToUk(page.contentMarkdown) : '';
+  let contentMd = page.contentMarkdown ? rewriteMarkdownLinksToUa(page.contentMarkdown) : '';
   contentMd = translateMarkdownHeadings(contentMd);
   contentMd = contentMd.replace(/^#\s+.+$/m, `# ${nameUk}`);
 
@@ -388,7 +392,7 @@ const localizedSupporting: SupportingPage[] = supportingPages.map(page => {
     name: nameUk,
     title: titleUk,
     description: descUk,
-    canonicalUrl: canonicalUk,
+    canonicalUrl: canonicalUa,
     category: catUk,
     secondaryCategory: secCatUk,
     contentMarkdown: contentMd,

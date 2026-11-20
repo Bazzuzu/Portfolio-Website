@@ -10,15 +10,15 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const publicDir = path.resolve(rootDir, 'public');
 const enGlossaryDir = path.resolve(publicDir, 'glossary');
-const ukGlossaryDir = path.resolve(publicDir, 'uk', 'glossary');
+const uaGlossaryDir = path.resolve(publicDir, 'ua', 'glossary');
 
-for (const dir of [enGlossaryDir, ukGlossaryDir]) {
+for (const dir of [enGlossaryDir, uaGlossaryDir]) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 }
 
-console.log(`Generating multilingual static glossary files for ${glossaryTerms.length} terms (EN & UK)...`);
+console.log(`Generating multilingual static glossary files for ${glossaryTerms.length} terms (EN & UA)...`);
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -282,16 +282,16 @@ const COMMON_CSS = `
 
 // Helper to generate the Hub Page
 function generateHubHtml(lang) {
-  const isUk = lang === 'uk';
-  const prefix = isUk ? '/uk/glossary' : '/glossary';
-  const canonicalUrl = isUk ? 'https://lexkonovalov.com/uk/glossary/' : 'https://lexkonovalov.com/glossary/';
-  const categories = isUk ? glossaryCategoriesUk : glossaryCategories;
-  const terms = isUk ? glossaryTermsUk : glossaryTerms;
+  const isUa = lang === 'ua' || lang === 'uk';
+  const prefix = isUa ? '/ua/glossary' : '/glossary';
+  const canonicalUrl = isUa ? 'https://lexkonovalov.com/ua/glossary/' : 'https://lexkonovalov.com/glossary/';
+  const categories = isUa ? glossaryCategoriesUk : glossaryCategories;
+  const terms = isUa ? glossaryTermsUk : glossaryTerms;
 
-  const title = isUk
+  const title = isUa
     ? 'Словник продуктового дизайну — Архітектурний лексикон та системна онтологія | Lex Konovalov'
     : `Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov`;
-  const description = isUk
+  const description = isUa
     ? `Канонічна таксономія зі ${terms.length} термінів, що охоплює UX та архітектуру продукту, дизайн-системи та інженерію, ШІ та агентні системи, а також продуктову стратегію та зростання.`
     : `A canonical ${terms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`;
 
@@ -301,20 +301,20 @@ function generateHubHtml(lang) {
       {
         "@type": "DefinedTermSet",
         "@id": `${canonicalUrl}#terms`,
-        "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+        "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
         "description": description,
         "url": canonicalUrl,
-        "inLanguage": isUk ? "uk-UA" : "en-US",
+        "inLanguage": isUa ? "uk-UA" : "en-US",
         "isPartOf": {
           "@id": "https://lexkonovalov.com/#website"
         },
         "hasDefinedTerm": terms.map((t) => ({
           "@type": "DefinedTerm",
-          "@id": `${isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html#term`,
+          "@id": `${isUa ? "https://lexkonovalov.com/ua/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html#term`,
           "name": t.name,
           "termCode": t.slug,
           "description": t.definition,
-          "url": `${isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html`
+          "url": `${isUa ? "https://lexkonovalov.com/ua/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html`
         }))
       },
       {
@@ -324,13 +324,13 @@ function generateHubHtml(lang) {
           {
             "@type": "ListItem",
             "position": 1,
-            "name": isUk ? "Головна" : "Home",
+            "name": isUa ? "Головна" : "Home",
             "item": "https://lexkonovalov.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+            "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
             "item": canonicalUrl
           }
         ]
@@ -347,11 +347,11 @@ function generateHubHtml(lang) {
   });
 
   Object.keys(termsByLetter).forEach((l) => {
-    termsByLetter[l].sort((a, b) => a.name.localeCompare(b.name, isUk ? 'uk' : 'en'));
+    termsByLetter[l].sort((a, b) => a.name.localeCompare(b.name, isUa ? 'uk' : 'en'));
   });
 
   return `<!DOCTYPE html>
-<html lang="${isUk ? 'uk-UA' : 'en-US'}">
+<html lang="${isUa ? 'uk-UA' : 'en-US'}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -359,7 +359,7 @@ function generateHubHtml(lang) {
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonicalUrl}" />
   <link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/" />
-  <link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/" />
+  <link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/ua/glossary/" />
   <link rel="alternate" hreflang="x-default" href="https://lexkonovalov.com/glossary/" />
   <meta name="author" content="Oleksandr Konovalov">
   
@@ -369,7 +369,7 @@ function generateHubHtml(lang) {
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
-  <meta property="og:locale" content="${isUk ? 'uk_UA' : 'en_US'}">
+  <meta property="og:locale" content="${isUa ? 'uk_UA' : 'en_US'}">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
@@ -395,31 +395,31 @@ ${COMMON_CSS}
   <header>
     <div class="header-top">
       <a href="${prefix}/" class="logo">Lex Konovalov</a>
-      <div class="lang-switcher" role="group" aria-label="${isUk ? 'Перемикач мови' : 'Language switcher'}">
-        ${isUk 
+      <div class="lang-switcher" role="group" aria-label="${isUa ? 'Перемикач мови' : 'Language switcher'}">
+        ${isUa 
           ? `<a href="/glossary/" class="lang-btn">EN</a><span>|</span><span class="lang-btn active">UA</span>`
-          : `<span class="lang-btn active">EN</span><span>|</span><a href="/uk/glossary/" class="lang-btn">UA</a>`
+          : `<span class="lang-btn active">EN</span><span>|</span><a href="/ua/glossary/" class="lang-btn">UA</a>`
         }
       </div>
     </div>
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">${isUk ? 'Головна' : 'Home'}</a> / <span>${isUk ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</span>
+      <a href="/">${isUa ? 'Головна' : 'Home'}</a> / <span>${isUa ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</span>
     </nav>
-    <h1>${isUk ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</h1>
+    <h1>${isUa ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</h1>
     <p class="lead">${escapeHtml(description)}</p>
   </header>
   
-  <section class="categories-grid" aria-label="${isUk ? 'Категорії' : 'Categories'}">
+  <section class="categories-grid" aria-label="${isUa ? 'Категорії' : 'Categories'}">
     ${categories.map((c) => `
       <div class="cat-card">
         <h3>${escapeHtml(c.name)}</h3>
-        <p>${c.count} ${isUk ? 'термінів' : 'terms'} &bull; ${escapeHtml(c.primaryFocus)}</p>
+        <p>${c.count} ${isUa ? 'термінів' : 'terms'} &bull; ${escapeHtml(c.primaryFocus)}</p>
       </div>
     `).join('')}
   </section>
   
   <main class="directory">
-    ${Object.keys(termsByLetter).sort((a, b) => a.localeCompare(b, isUk ? 'uk' : 'en')).map((l) => `
+    ${Object.keys(termsByLetter).sort((a, b) => a.localeCompare(b, isUa ? 'uk' : 'en')).map((l) => `
       <section class="letter-group" id="letter-${l}">
         <h2>${l}</h2>
         <ul class="terms-list">
@@ -439,7 +439,7 @@ ${COMMON_CSS}
       <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
       <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
       <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
-      <a href="${prefix}/">${isUk ? 'Словник' : 'Glossary'}</a>
+      <a href="${prefix}/">${isUa ? 'Словник' : 'Glossary'}</a>
     </div>
   </footer>
 </body>
@@ -449,22 +449,22 @@ ${COMMON_CSS}
 // Write Hub Pages
 fs.writeFileSync(path.join(enGlossaryDir, 'index.html'), generateHubHtml('en'), 'utf-8');
 console.log('Generated public/glossary/index.html (EN)');
-fs.writeFileSync(path.join(ukGlossaryDir, 'index.html'), generateHubHtml('uk'), 'utf-8');
-console.log('Generated public/uk/glossary/index.html (UK)');
+fs.writeFileSync(path.join(uaGlossaryDir, 'index.html'), generateHubHtml('ua'), 'utf-8');
+console.log('Generated public/ua/glossary/index.html (UA)');
 
 // Helper to generate individual term page
 function generateTermHtml(term, index, terms, lang) {
-  const isUk = lang === 'uk';
-  const prefix = isUk ? '/uk/glossary' : '/glossary';
+  const isUa = lang === 'ua' || lang === 'uk';
+  const prefix = isUa ? '/ua/glossary' : '/glossary';
   const prevTerm = index > 0 ? terms[index - 1] : null;
   const nextTerm = index < terms.length - 1 ? terms[index + 1] : null;
 
-  const pageTitle = term.seoTitle ? term.seoTitle : `${term.name} | ${isUk ? 'Словник продуктового дизайну' : 'Product Design Glossary'} — Lex Konovalov`;
+  const pageTitle = term.seoTitle ? term.seoTitle : `${term.name} | ${isUa ? 'Словник продуктового дизайну' : 'Product Design Glossary'} — Lex Konovalov`;
   const pageDescription = term.seoDescription || term.definition;
   const canonicalUrl = term.canonicalUrl || `https://lexkonovalov.com${prefix}/${term.slug}.html`;
 
   const enUrl = `https://lexkonovalov.com/glossary/${term.slug}.html`;
-  const ukUrl = `https://lexkonovalov.com/uk/glossary/${term.slug}.html`;
+  const uaUrl = `https://lexkonovalov.com/ua/glossary/${term.slug}.html`;
 
   let termJsonLd;
   if (term.structuredDataGraph && term.structuredDataGraph.length > 0) {
@@ -485,9 +485,9 @@ function generateTermHtml(term, index, terms, lang) {
           "inDefinedTermSet": {
             "@type": "DefinedTermSet",
             "@id": `https://lexkonovalov.com${prefix}/#terms`,
-            "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+            "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
             "url": `https://lexkonovalov.com${prefix}/`,
-            "inLanguage": isUk ? "uk-UA" : "en-US",
+            "inLanguage": isUa ? "uk-UA" : "en-US",
             "isPartOf": {
               "@id": "https://lexkonovalov.com/#website"
             }
@@ -501,13 +501,13 @@ function generateTermHtml(term, index, terms, lang) {
             {
               "@type": "ListItem",
               "position": 1,
-              "name": isUk ? "Головна" : "Home",
+              "name": isUa ? "Головна" : "Home",
               "item": "https://lexkonovalov.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+              "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
               "item": `https://lexkonovalov.com${prefix}/`
             },
             {
@@ -523,7 +523,7 @@ function generateTermHtml(term, index, terms, lang) {
   }
 
   return `<!DOCTYPE html>
-<html lang="${isUk ? 'uk-UA' : 'en-US'}">
+<html lang="${isUa ? 'uk-UA' : 'en-US'}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -531,7 +531,7 @@ function generateTermHtml(term, index, terms, lang) {
   <meta name="description" content="${escapeHtml(pageDescription)}">
   <link rel="canonical" href="${canonicalUrl}" />
   <link rel="alternate" hreflang="en" href="${enUrl}" />
-  <link rel="alternate" hreflang="uk" href="${ukUrl}" />
+  <link rel="alternate" hreflang="uk" href="${uaUrl}" />
   <link rel="alternate" hreflang="x-default" href="${enUrl}" />
   <meta name="author" content="Oleksandr Konovalov">
   
@@ -541,7 +541,7 @@ function generateTermHtml(term, index, terms, lang) {
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
-  <meta property="og:locale" content="${isUk ? 'uk_UA' : 'en_US'}">
+  <meta property="og:locale" content="${isUa ? 'uk_UA' : 'en_US'}">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
@@ -567,15 +567,15 @@ ${COMMON_CSS}
   <header>
     <div class="header-top">
       <a href="${prefix}/" class="logo">Lex Konovalov</a>
-      <div class="lang-switcher" role="group" aria-label="${isUk ? 'Перемикач мови' : 'Language switcher'}">
-        ${isUk 
+      <div class="lang-switcher" role="group" aria-label="${isUa ? 'Перемикач мови' : 'Language switcher'}">
+        ${isUa 
           ? `<a href="/glossary/${term.slug}.html" class="lang-btn">EN</a><span>|</span><span class="lang-btn active">UA</span>`
-          : `<span class="lang-btn active">EN</span><span>|</span><a href="/uk/glossary/${term.slug}.html" class="lang-btn">UA</a>`
+          : `<span class="lang-btn active">EN</span><span>|</span><a href="/ua/glossary/${term.slug}.html" class="lang-btn">UA</a>`
         }
       </div>
     </div>
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">${isUk ? 'Головна' : 'Home'}</a> / <a href="${prefix}/">${isUk ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</a> / <span>${escapeHtml(term.name)}</span>
+      <a href="/">${isUa ? 'Головна' : 'Home'}</a> / <a href="${prefix}/">${isUa ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</a> / <span>${escapeHtml(term.name)}</span>
     </nav>
     <h1>${escapeHtml(term.name)}</h1>
     <div class="meta-bar">
@@ -587,35 +587,35 @@ ${COMMON_CSS}
   <article>
     ${term.contentMarkdown ? renderMarkdownToHtml(term.contentMarkdown) : `
       <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">${isUk ? 'Визначення' : 'Definition'}</h2>
+        <h2 class="glossary-term-section__title">${isUa ? 'Визначення' : 'Definition'}</h2>
         <p class="glossary-term-section__text">${escapeHtml(term.definition)}</p>
       </section>
       <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">${isUk ? 'Призначення' : 'Purpose'}</h2>
+        <h2 class="glossary-term-section__title">${isUa ? 'Призначення' : 'Purpose'}</h2>
         <p class="glossary-term-section__text">${escapeHtml(term.purpose)}</p>
       </section>
     `}
 
-    <nav class="glossary-term-nav" aria-label="${isUk ? 'Навігація між термінами' : 'Glossary term navigation'}">
+    <nav class="glossary-term-nav" aria-label="${isUa ? 'Навігація між термінами' : 'Glossary term navigation'}">
       <a href="${prefix}/" class="glossary-term-nav__btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        <span>${isUk ? 'До словника' : 'Back to Glossary'}</span>
+        <span>${isUa ? 'До словника' : 'Back to Glossary'}</span>
       </a>
       <div class="glossary-term-nav__pill-group">
         ${prevTerm ? `
           <a href="${prefix}/${prevTerm.slug}.html" class="glossary-term-nav__item" title="${escapeHtml(prevTerm.name)}">
-            &larr; ${isUk ? 'Попередній' : 'Previous'}
+            &larr; ${isUa ? 'Попередній' : 'Previous'}
           </a>
         ` : `
-          <span class="glossary-term-nav__item glossary-term-nav__item--disabled">&larr; ${isUk ? 'Попередній' : 'Previous'}</span>
+          <span class="glossary-term-nav__item glossary-term-nav__item--disabled">&larr; ${isUa ? 'Попередній' : 'Previous'}</span>
         `}
         <span>&bull;</span>
         ${nextTerm ? `
           <a href="${prefix}/${nextTerm.slug}.html" class="glossary-term-nav__item" title="${escapeHtml(nextTerm.name)}">
-            ${isUk ? 'Наступний' : 'Next'} &rarr;
+            ${isUa ? 'Наступний' : 'Next'} &rarr;
           </a>
         ` : `
-          <span class="glossary-term-nav__item glossary-term-nav__item--disabled">${isUk ? 'Наступний' : 'Next'} &rarr;</span>
+          <span class="glossary-term-nav__item glossary-term-nav__item--disabled">${isUa ? 'Наступний' : 'Next'} &rarr;</span>
         `}
       </div>
     </nav>
@@ -627,33 +627,33 @@ ${COMMON_CSS}
       <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
       <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
       <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
-      <a href="${prefix}/">${isUk ? 'Словник' : 'Glossary'}</a>
+      <a href="${prefix}/">${isUa ? 'Словник' : 'Glossary'}</a>
     </div>
   </footer>
 </body>
 </html>`;
 }
 
-// Generate all 176 English and 176 Ukrainian term pages
+// Generate all English and Ukrainian term pages
 glossaryTerms.forEach((term, idx) => {
   const html = generateTermHtml(term, idx, glossaryTerms, 'en');
   fs.writeFileSync(path.join(enGlossaryDir, `${term.slug}.html`), html, 'utf-8');
 });
-console.log(`Generated 176 static English term pages in public/glossary/`);
+console.log(`Generated ${glossaryTerms.length} static English term pages in public/glossary/`);
 
 glossaryTermsUk.forEach((term, idx) => {
-  const html = generateTermHtml(term, idx, glossaryTermsUk, 'uk');
-  fs.writeFileSync(path.join(ukGlossaryDir, `${term.slug}.html`), html, 'utf-8');
+  const html = generateTermHtml(term, idx, glossaryTermsUk, 'ua');
+  fs.writeFileSync(path.join(uaGlossaryDir, `${term.slug}.html`), html, 'utf-8');
 });
-console.log(`Generated 176 static Ukrainian term pages in public/uk/glossary/`);
+console.log(`Generated ${glossaryTermsUk.length} static Ukrainian term pages in public/ua/glossary/`);
 
 // Helper to generate supporting pages
 function generateSupportingPageHtml(page, lang) {
-  const isUk = lang === 'uk';
-  const prefix = isUk ? '/uk/glossary' : '/glossary';
+  const isUa = lang === 'ua' || lang === 'uk';
+  const prefix = isUa ? '/ua/glossary' : '/glossary';
   const enUrl = page.slug === 'ooux' ? 'https://lexkonovalov.com/glossary/ooux/' : `https://lexkonovalov.com/glossary/${page.slug}.html`;
-  const ukUrl = page.slug === 'ooux' ? 'https://lexkonovalov.com/uk/glossary/ooux/' : `https://lexkonovalov.com/uk/glossary/${page.slug}.html`;
-  const canonicalUrl = isUk ? ukUrl : enUrl;
+  const uaUrl = page.slug === 'ooux' ? 'https://lexkonovalov.com/ua/glossary/ooux/' : `https://lexkonovalov.com/ua/glossary/${page.slug}.html`;
+  const canonicalUrl = isUa ? uaUrl : enUrl;
 
   const pageTitle = page.title || `${page.name} | Lex Konovalov`;
   const pageDescription = page.description;
@@ -666,7 +666,7 @@ function generateSupportingPageHtml(page, lang) {
   };
 
   return `<!DOCTYPE html>
-<html lang="${isUk ? 'uk-UA' : 'en-US'}">
+<html lang="${isUa ? 'uk-UA' : 'en-US'}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -674,7 +674,7 @@ function generateSupportingPageHtml(page, lang) {
   <meta name="description" content="${escapeHtml(pageDescription)}">
   <link rel="canonical" href="${canonicalUrl}" />
   <link rel="alternate" hreflang="en" href="${enUrl}" />
-  <link rel="alternate" hreflang="uk" href="${ukUrl}" />
+  <link rel="alternate" hreflang="uk" href="${uaUrl}" />
   <link rel="alternate" hreflang="x-default" href="${enUrl}" />
   <meta name="author" content="Oleksandr Konovalov">
   
@@ -684,7 +684,7 @@ function generateSupportingPageHtml(page, lang) {
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:site_name" content="Lex Konovalov — Portfolio">
-  <meta property="og:locale" content="${isUk ? 'uk_UA' : 'en_US'}">
+  <meta property="og:locale" content="${isUa ? 'uk_UA' : 'en_US'}">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
@@ -710,19 +710,19 @@ ${COMMON_CSS}
   <header>
     <div class="header-top">
       <a href="${prefix}/" class="logo">Lex Konovalov</a>
-      <div class="lang-switcher" role="group" aria-label="${isUk ? 'Перемикач мови' : 'Language switcher'}">
-        ${isUk 
+      <div class="lang-switcher" role="group" aria-label="${isUa ? 'Перемикач мови' : 'Language switcher'}">
+        ${isUa 
           ? `<a href="${enUrl.replace('https://lexkonovalov.com', '')}" class="lang-btn">EN</a><span>|</span><span class="lang-btn active">UA</span>`
-          : `<span class="lang-btn active">EN</span><span>|</span><a href="${ukUrl.replace('https://lexkonovalov.com', '')}" class="lang-btn">UA</a>`
+          : `<span class="lang-btn active">EN</span><span>|</span><a href="${uaUrl.replace('https://lexkonovalov.com', '')}" class="lang-btn">UA</a>`
         }
       </div>
     </div>
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">${isUk ? 'Головна' : 'Home'}</a> / <a href="${prefix}/">${isUk ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</a> ${page.slug === 'ooux-worked-example' ? `/ <a href="${prefix}/ooux/">Object-Oriented UX (OOUX)</a> ` : ''}/ <span>${escapeHtml(page.name)}</span>
+      <a href="/">${isUa ? 'Головна' : 'Home'}</a> / <a href="${prefix}/">${isUa ? 'Словник продуктового дизайну' : 'Product Design Glossary'}</a> ${page.slug === 'ooux-worked-example' ? `/ <a href="${prefix}/ooux/">Object-Oriented UX (OOUX)</a> ` : ''}/ <span>${escapeHtml(page.name)}</span>
     </nav>
     <h1>${escapeHtml(page.name)}</h1>
     <div class="meta-bar">
-      <span>${escapeHtml(page.category || (isUk ? 'UX та архітектура продукту' : 'UX & Product Architecture'))}</span>
+      <span>${escapeHtml(page.category || (isUa ? 'UX та архітектура продукту' : 'UX & Product Architecture'))}</span>
       ${page.secondaryCategory ? ` &bull; <span>${escapeHtml(page.secondaryCategory)}</span>` : ''}
     </div>
   </header>
@@ -730,15 +730,15 @@ ${COMMON_CSS}
   <article>
     ${renderMarkdownToHtml(page.contentMarkdown)}
 
-    <nav class="glossary-term-nav" aria-label="${isUk ? 'Навігація' : 'Glossary Navigation'}">
+    <nav class="glossary-term-nav" aria-label="${isUa ? 'Навігація' : 'Glossary Navigation'}">
       <a href="${prefix}/" class="glossary-term-nav__btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        <span>${isUk ? 'До словника' : 'Back to Glossary'}</span>
+        <span>${isUa ? 'До словника' : 'Back to Glossary'}</span>
       </a>
       ${page.slug === 'ooux-worked-example' ? `
       <div class="glossary-term-nav__pill-group">
         <a href="${prefix}/ooux/" class="glossary-term-nav__item" title="Object-Oriented UX (OOUX) Hub">
-          &larr; ${isUk ? 'До OOUX Hub' : 'Back to OOUX Hub'}
+          &larr; ${isUa ? 'До OOUX Hub' : 'Back to OOUX Hub'}
         </a>
       </div>
       ` : ''}
@@ -751,7 +751,7 @@ ${COMMON_CSS}
       <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
       <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
       <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
-      <a href="${prefix}/">${isUk ? 'Словник' : 'Glossary'}</a>
+      <a href="${prefix}/">${isUa ? 'Словник' : 'Glossary'}</a>
     </div>
   </footer>
 </body>
@@ -773,16 +773,16 @@ console.log('Generated English supporting pages in public/glossary/');
 
 // Generate Ukrainian supporting pages
 supportingPagesUk.forEach((page) => {
-  let outDir = ukGlossaryDir;
+  let outDir = uaGlossaryDir;
   let outFilename = `${page.slug}.html`;
   if (page.slug === 'ooux') {
-    outDir = path.join(ukGlossaryDir, 'ooux');
+    outDir = path.join(uaGlossaryDir, 'ooux');
     outFilename = 'index.html';
   }
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, outFilename), generateSupportingPageHtml(page, 'uk'), 'utf-8');
+  fs.writeFileSync(path.join(outDir, outFilename), generateSupportingPageHtml(page, 'ua'), 'utf-8');
 });
-console.log('Generated Ukrainian supporting pages in public/uk/glossary/');
+console.log('Generated Ukrainian supporting pages in public/ua/glossary/');
 
 // 3. Generate clean, deduplicated public/sitemap.xml
 const sitemapPath = path.join(publicDir, 'sitemap.xml');
@@ -811,22 +811,22 @@ sitemapXml += `  <url>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/ua/glossary/" />
   </url>\n`;
 
 sitemapXml += `  <url>
-    <loc>https://lexkonovalov.com/uk/glossary/</loc>
+    <loc>https://lexkonovalov.com/ua/glossary/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/" />
-    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/ua/glossary/" />
   </url>\n`;
 
 // Supporting pages
 supportingPages.forEach((page) => {
   const enLoc = page.slug === 'ooux' ? 'https://lexkonovalov.com/glossary/ooux/' : `https://lexkonovalov.com/glossary/${page.slug}.html`;
-  const ukLoc = page.slug === 'ooux' ? 'https://lexkonovalov.com/uk/glossary/ooux/' : `https://lexkonovalov.com/uk/glossary/${page.slug}.html`;
+  const uaLoc = page.slug === 'ooux' ? 'https://lexkonovalov.com/ua/glossary/ooux/' : `https://lexkonovalov.com/ua/glossary/${page.slug}.html`;
   const priority = page.slug === 'ooux' ? '0.9' : '0.8';
   const changefreq = page.slug === 'ooux' ? 'weekly' : 'monthly';
 
@@ -837,24 +837,24 @@ supportingPages.forEach((page) => {
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enLoc}" />
-    <xhtml:link rel="alternate" hreflang="uk" href="${ukLoc}" />
+    <xhtml:link rel="alternate" hreflang="uk" href="${uaLoc}" />
   </url>\n`;
 
-  // UK
+  // UA
   sitemapXml += `  <url>
-    <loc>${ukLoc}</loc>
+    <loc>${uaLoc}</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enLoc}" />
-    <xhtml:link rel="alternate" hreflang="uk" href="${ukLoc}" />
+    <xhtml:link rel="alternate" hreflang="uk" href="${uaLoc}" />
   </url>\n`;
 });
 
-// All 176 terms (EN & UK)
+// All 176 terms (EN & UA)
 glossaryTerms.forEach((term) => {
   const enLoc = `https://lexkonovalov.com/glossary/${term.slug}.html`;
-  const ukLoc = `https://lexkonovalov.com/uk/glossary/${term.slug}.html`;
+  const uaLoc = `https://lexkonovalov.com/ua/glossary/${term.slug}.html`;
 
   // EN
   sitemapXml += `  <url>
@@ -863,17 +863,17 @@ glossaryTerms.forEach((term) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enLoc}" />
-    <xhtml:link rel="alternate" hreflang="uk" href="${ukLoc}" />
+    <xhtml:link rel="alternate" hreflang="uk" href="${uaLoc}" />
   </url>\n`;
 
-  // UK
+  // UA
   sitemapXml += `  <url>
-    <loc>${ukLoc}</loc>
+    <loc>${uaLoc}</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${enLoc}" />
-    <xhtml:link rel="alternate" hreflang="uk" href="${ukLoc}" />
+    <xhtml:link rel="alternate" hreflang="uk" href="${uaLoc}" />
   </url>\n`;
 });
 

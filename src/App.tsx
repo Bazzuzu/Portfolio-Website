@@ -17,7 +17,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
   const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
   const [selectedGlossarySlug, setSelectedGlossarySlug] = useState<string | null>(null);
-  const [glossaryLang, setGlossaryLang] = useState<"en" | "uk">("en");
+  const [glossaryLang, setGlossaryLang] = useState<"en" | "ua">("en");
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [bottomOffset, setBottomOffset] = useState<number>(32);
@@ -42,8 +42,10 @@ export default function App() {
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
         setSelectedGlossarySlug(null);
-      } else if (relativePath.startsWith("/uk/glossary/")) {
-        const rawSlug = relativePath.replace("/uk/glossary/", "");
+      } else if (relativePath.startsWith("/ua/glossary/") || relativePath.startsWith("/uk/glossary/")) {
+        const rawSlug = relativePath.startsWith("/ua/glossary/")
+          ? relativePath.replace("/ua/glossary/", "")
+          : relativePath.replace("/uk/glossary/", "");
         const slug = rawSlug.replace(/\/$/, "").replace(/\.html$/, "").trim();
         if (slug) {
           setCurrentPage("glossary-term");
@@ -54,12 +56,12 @@ export default function App() {
           setSelectedGlossarySlug(null);
           setSelectedCaseId(null);
         }
-        setGlossaryLang("uk");
-      } else if (relativePath === "/uk/glossary") {
+        setGlossaryLang("ua");
+      } else if (relativePath === "/ua/glossary" || relativePath === "/uk/glossary") {
         setCurrentPage("glossary");
         setSelectedGlossarySlug(null);
         setSelectedCaseId(null);
-        setGlossaryLang("uk");
+        setGlossaryLang("ua");
       } else if (relativePath.startsWith("/glossary/")) {
         const rawSlug = relativePath.replace("/glossary/", "");
         const slug = rawSlug.replace(/\/$/, "").replace(/\.html$/, "").trim();
@@ -136,7 +138,7 @@ export default function App() {
     let canonicalUrl = "https://lexkonovalov.com/";
 
     const isGlossaryPage = currentPage === "glossary" || currentPage === "glossary-term";
-    if (isGlossaryPage && glossaryLang === "uk") {
+    if (isGlossaryPage && glossaryLang === "ua") {
       document.documentElement.setAttribute("lang", "uk-UA");
     } else {
       document.documentElement.setAttribute("lang", "en-US");
@@ -147,10 +149,10 @@ export default function App() {
       description = "Read about Lead Product Designer Lex Konovalov's professional DNA, pragmatic product design toolkit, and the pre-emptive interview answers regarding time zones, OOUX, and legacy systems.";
       canonicalUrl = "https://lexkonovalov.com/about/";
     } else if (currentPage === "glossary") {
-      if (glossaryLang === "uk") {
+      if (glossaryLang === "ua") {
         title = "Словник продуктового дизайну — Архітектурний лексикон та системна онтологія | Lex Konovalov";
         description = "Канонічна таксономія зі 176 термінів, що охоплює UX та архітектуру продукту, дизайн-системи та інженерію, ШІ та агентні системи, а також продуктову стратегію та зростання.";
-        canonicalUrl = "https://lexkonovalov.com/uk/glossary/";
+        canonicalUrl = "https://lexkonovalov.com/ua/glossary/";
       } else {
         title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
         description = `A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`;
@@ -163,7 +165,7 @@ export default function App() {
         const td = termData as any;
         title = td.seoTitle ? td.seoTitle : (td.title || `${td.name} — Lex Konovalov`);
         description = td.seoDescription || td.description || td.definition;
-        const prefix = glossaryLang === "uk" ? "/uk/glossary" : "/glossary";
+        const prefix = glossaryLang === "ua" ? "/ua/glossary" : "/glossary";
         const cleanSlug = td.slug.replace(/\.html$/, "");
         canonicalUrl = td.canonicalUrl || (cleanSlug === "ooux" ? `https://lexkonovalov.com${prefix}/ooux/` : `https://lexkonovalov.com${prefix}/${cleanSlug}.html`);
       }
@@ -246,7 +248,7 @@ export default function App() {
         slugPart = clean === "ooux" ? "ooux/" : `${clean}.html`;
       }
       const enUrl = `https://lexkonovalov.com/glossary/${slugPart}`;
-      const ukUrl = `https://lexkonovalov.com/uk/glossary/${slugPart}`;
+      const uaUrl = `https://lexkonovalov.com/ua/glossary/${slugPart}`;
 
       if (!hreflangEn) {
         hreflangEn = document.createElement("link");
@@ -262,7 +264,7 @@ export default function App() {
         hreflangUk.setAttribute("hreflang", "uk");
         document.head.appendChild(hreflangUk);
       }
-      hreflangUk.setAttribute("href", ukUrl);
+      hreflangUk.setAttribute("href", uaUrl);
 
       if (!hreflangDefault) {
         hreflangDefault = document.createElement("link");
@@ -290,10 +292,10 @@ export default function App() {
     }
   }, [currentPage, selectedCaseId, selectedGlossarySlug, glossaryLang]);
 
-  const switchGlossaryLanguage = (newLang: "en" | "uk") => {
+  const switchGlossaryLanguage = (newLang: "en" | "ua") => {
     if (newLang === glossaryLang) return;
     setGlossaryLang(newLang);
-    const prefix = newLang === "uk" ? "/uk/glossary" : "/glossary";
+    const prefix = newLang === "ua" ? "/ua/glossary" : "/glossary";
 
     if (currentPage === "glossary") {
       const targetPath = `${prefix}/`;
@@ -315,10 +317,10 @@ export default function App() {
     } else if (page === "jobs") {
       targetPath = "/jobs/";
     } else if (page === "glossary") {
-      targetPath = glossaryLang === "uk" ? "/uk/glossary/" : "/glossary/";
+      targetPath = glossaryLang === "ua" ? "/ua/glossary/" : "/glossary/";
     } else if (page === "glossary-term" && params?.slug) {
       const cleanSlug = params.slug.replace(/\.html$/, "").replace(/^\/|\/$/g, "");
-      const prefix = glossaryLang === "uk" ? "/uk/glossary" : "/glossary";
+      const prefix = glossaryLang === "ua" ? "/ua/glossary" : "/glossary";
       if (cleanSlug === "ooux") {
         targetPath = `${prefix}/ooux/`;
       } else {

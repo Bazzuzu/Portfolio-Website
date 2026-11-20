@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практичний приклад застосування OOUX: Робочий процес бронювання | Lex Konovalov</title>
+  <meta name="description" content="Наскрізний практичний приклад застосування 4 раундів фреймворку ORCA до робочого процесу бронювання подорожей.">
+  <link rel="canonical" href="https://lexkonovalov.com/ua/glossary/ooux-worked-example.html" />
+  <link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-worked-example.html" />
+  <link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/ua/glossary/ooux-worked-example.html" />
+  <link rel="alternate" hreflang="x-default" href="https://lexkonovalov.com/glossary/ooux-worked-example.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Практичний приклад застосування OOUX: Робочий процес бронювання | Lex Konovalov">
+  <meta property="og:description" content="Наскрізний практичний приклад застосування 4 раундів фреймворку ORCA до робочого процесу бронювання подорожей.">
+  <meta property="og:url" content="https://lexkonovalov.com/ua/glossary/ooux-worked-example.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="uk_UA">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Практичний приклад застосування OOUX: Робочий процес бронювання | Lex Konovalov">
+  <meta name="twitter:description" content="Наскрізний практичний приклад застосування 4 раундів фреймворку ORCA до робочого процесу бронювання подорожей.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/ua/glossary/ooux-worked-example.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html#webpage",
+      "url": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html",
+      "name": "Практичний приклад застосування OOUX | Словник продуктового дизайну",
+      "description": "Наскрізний практичний приклад застосування 4 раундів фреймворку ORCA до робочого процесу бронювання подорожей.",
+      "inLanguage": "uk-UA",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#breadcrumbs"
+      },
+      "citation": [
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+        "https://www.nngroup.com/articles/usability-testing-101/"
+      ],
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html#article",
+      "url": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html",
+      "headline": "OOUX Worked Example: From Research to a Booking Interface",
+      "description": "Follow an OOUX and ORCA example from a research note through objects, relationships, actions, attributes, interface decisions, and practical usability tasks.",
+      "inLanguage": "en-US",
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#webpage"
+      },
+      "about": [
+        {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+        },
+        {
+          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Головна",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Словник продуктового дизайну",
+          "item": "https://lexkonovalov.com/ua/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Практичний приклад застосування OOUX",
+          "item": "https://lexkonovalov.com/ua/glossary/ooux-worked-example.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "OOUX Worked Example: A Booking Workflow",
+          "item": "https://lexkonovalov.com/glossary/ooux-worked-example.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1c1b18;
+    max-width: 840px;
+    margin: 40px auto;
+    padding: 0 24px;
+    background-color: #faf9f6;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1c1b18;
+    text-decoration: none;
+  }
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f4f2ec;
+    border: 1px solid #e8e6dc;
+    border-radius: 9999px;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .lang-btn {
+    color: #5e605c;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 9999px;
+  }
+  .lang-btn.active {
+    background: #ffffff;
+    color: #1c1b18;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  nav.breadcrumbs {
+    font-size: 0.875rem;
+    color: #5e605c;
+    margin-bottom: 12px;
+  }
+  nav.breadcrumbs a {
+    color: #3E70A2;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  nav.breadcrumbs a:hover {
+    color: #D93636;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.2;
+  }
+  .meta-bar {
+    font-size: 0.875rem;
+    color: #5e605c;
+    margin-bottom: 32px;
+  }
+  .lead {
+    font-size: 1.15rem;
+    color: #5e605c;
+    margin-bottom: 24px;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .cat-card {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .cat-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    color: #1c1b18;
+  }
+  .cat-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5e605c;
+  }
+  .directory {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 12px;
+    padding: 32px;
+  }
+  .letter-group {
+    margin-bottom: 32px;
+  }
+  .letter-group h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e8e6dc;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  .terms-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .terms-list li a {
+    color: #3E70A2;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .terms-list li a:hover {
+    color: #D93636;
+    text-decoration: underline;
+  }
+  article {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 12px;
+    padding: 40px;
+  }
+  .glossary-term-section {
+    margin-bottom: 32px;
+  }
+  .glossary-term-section__title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #1c1b18;
+  }
+  .glossary-term-section__text {
+    font-family: "Noto Serif", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1c1b18;
+  }
+  .glossary-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+  }
+  .glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .glossary-table th, .glossary-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e8e6dc;
+  }
+  .glossary-table th {
+    background: #f4f2ec;
+    font-weight: 600;
+  }
+  .glossary-code-block-wrapper {
+    margin: 24px 0;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+    background: #f4f2ec;
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+  .glossary-code-block {
+    margin: 0;
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.9rem;
+    white-space: pre;
+  }
+  .glossary-term-nav {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #e8e6dc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .glossary-term-nav__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 20px;
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 9999px;
+    color: #1c1b18;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .glossary-term-nav__btn:hover {
+    background: #f4f2ec;
+    color: #D93636;
+  }
+  .glossary-term-nav__pill-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .glossary-term-nav__item {
+    color: #3E70A2;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .glossary-term-nav__item:hover {
+    color: #D93636;
+    text-decoration: underline;
+  }
+  .glossary-term-nav__item--disabled {
+    color: #a09e97;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #d0cdc2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #5e605c;
+  }
+  footer a {
+    color: #5e605c;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #D93636;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <a href="/ua/glossary/" class="logo">Lex Konovalov</a>
+      <div class="lang-switcher" role="group" aria-label="Перемикач мови">
+        <a href="/glossary/ooux-worked-example.html" class="lang-btn">EN</a><span>|</span><span class="lang-btn active">UA</span>
+      </div>
+    </div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Головна</a> / <a href="/ua/glossary/">Словник продуктового дизайну</a> / <a href="/ua/glossary/ooux/">Object-Oriented UX (OOUX)</a> / <span>Практичний приклад застосування OOUX</span>
+    </nav>
+    <h1>Практичний приклад застосування OOUX</h1>
+    <div class="meta-bar">
+      <span>UX та архітектура продукту</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">This illustrative OOUX example follows a travel operations task from a research note to a testable interface. It uses ORCA's Objects, Relationships, Calls-to-Action, and Attributes to make the modeling and design decisions explicit.</p>
+<p class="glossary-term-section__text">The records and rules are fictional. They show one possible product scope, with assumptions that a real team would need to validate.</p>
+<section class="glossary-term-section" aria-labelledby="section-start-with-a-task-and-evidence">
+<h2 id="section-start-with-a-task-and-evidence" class="glossary-term-section__title">Start with a task and evidence</h2>
+<p class="glossary-term-section__text">Suppose a research walkthrough includes this statement:</p>
+<p class="glossary-term-section__text">> I find the trip, check which booking the traveler means, and ask the supplier to cancel it. I need to know whether the request is still waiting or the cancellation is complete.</p>
+<p class="glossary-term-section__text">The task is to identify the right booking, request an eligible cancellation, and understand the outcome. <a href="/ua/glossary/noun-foraging.html">Noun Foraging</a> suggests Trip, Booking, Traveler, and Supplier as candidates.</p>
+<p class="glossary-term-section__text">For this release, the team investigates Trip, Booking, and Traveler as separate record types. It retains supplier identification on a booking and defers a supplier-management workspace. That scope decision would change if operators need to manage supplier records.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-discovery-build-a-small-model">
+<h2 id="section-discovery-build-a-small-model" class="glossary-term-section__title">Discovery: build a small model</h2>
+<p class="glossary-term-section__text">Trip T-104 has two travelers and two bookings. Booking B-52 is Confirmed; Booking B-53 is Awaiting confirmation.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Object type</th>
+<th>Representative information</th>
+<th>Connection or action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trip</td>
+<td>Trip reference and travel dates</td>
+<td>Contains bookings and associated travelers.</td>
+</tr>
+<tr>
+<td>Booking</td>
+<td>Booking reference, status, service date, supplier details</td>
+<td>Belongs to one trip; an eligible agent can request cancellation.</td>
+</tr>
+<tr>
+<td>Traveler</td>
+<td>Identity and permitted contact information</td>
+<td>Can be associated with multiple trips.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">This model allows a trip with no bookings and requires every booking to belong to one trip. A <a href="/ua/glossary/nested-object-matrix.html">Nested Object Matrix</a> and <a href="/ua/glossary/cta-matrix.html">CTA Matrix</a> can investigate relationships and actions systematically.</p>
+<p class="glossary-term-section__text">If eligibility depends on which traveler is covered by a service, the team must model that connection explicitly. Association with the same trip alone does not establish passenger coverage.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-requirements-make-the-cancellation-rule-precise">
+<h2 id="section-requirements-make-the-cancellation-rule-precise" class="glossary-term-section__title">Requirements: make the cancellation rule precise</h2>
+<p class="glossary-term-section__text">For the example, the requesting agent must have access, be assigned to the trip, and act on an eligible confirmed booking.</p>
+<p class="glossary-term-section__text">The <a href="/ua/glossary/object-oriented-user-stories.html">object-oriented user story</a> adds the motivation: the traveler has changed plans, and the agent needs to start the supplier's cancellation process.</p>
+<p class="glossary-term-section__text">The expected sequence is:</p>
+<ol class="glossary-term-ol">
+<li>Show the target booking and relevant conditions for review.</li>
+<li>Submit an authorized cancellation request.</li>
+<li>When the request is accepted for processing, show Cancellation pending and its reference.</li>
+<li>Show Canceled only after the supplier confirms cancellation.</li>
+</ol>
+<p class="glossary-term-section__text">An already-pending request should remain inspectable. A submission timeout requires checking whether the request exists before retrying. If the supplier declines, show the result and current booking state.</p>
+<p class="glossary-term-section__text">Document these outcomes in the <a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a>. The application enforces the rules at execution.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-prioritization-decide-what-the-first-release-needs">
+<h2 id="section-prioritization-decide-what-the-first-release-needs" class="glossary-term-section__title">Prioritization: decide what the first release needs</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Decision area</th>
+<th>Example choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objects</td>
+<td>Support Trip, Booking, and Traveler; defer supplier profiles.</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>Show a trip's bookings and a contextual route from a booking back to its trip.</td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>Make eligible cancellation easy to find and provide access to pending requests.</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>Emphasize booking reference, status, and service date in the work queue.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The supplier confirmation number remains important even if a particular compact queue does not always display it. <a href="/ua/glossary/attribute-prioritization.html">Attribute Prioritization</a> separates required data from prominence in a view.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-representation-preserve-identity-across-views">
+<h2 id="section-representation-preserve-identity-across-views" class="glossary-term-section__title">Representation: preserve identity across views</h2>
+<p class="glossary-term-section__text">A search result and a trip's booking list both identify B-52 with the same reference and status meaning. The detailed record adds relevant conditions, history, and permitted actions.</p>
+<p class="glossary-term-section__text">The cancellation review repeats the booking identity and proposed operation. Its completion message distinguishes a submitted request from a completed cancellation.</p>
+<p class="glossary-term-section__text">A <a href="/ua/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> records why views differ. The goal is for users to recognize the booking while receiving the detail appropriate to the task.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-test-the-model-and-interface">
+<h2 id="section-test-the-model-and-interface" class="glossary-term-section__title">Test the model and interface</h2>
+<p class="glossary-term-section__text">Populate a <a href="/ua/glossary/content-prototyping.html">content prototype</a> with the two bookings, an empty trip, and a record with missing conditional data.</p>
+<p class="glossary-term-section__text">Then ask representative users to find B-52 from a supplier message, identify its trip, respond to a cancellation need, and explain the state after submission. Include direct entry through search.</p>
+<p class="glossary-term-section__text">Observe mistaken identities, wrong routes, missed conditions, and misunderstandings about pending outcomes. These are proposed checks, not reported research findings.</p>
+<p class="glossary-term-section__text">Revise the relevant object definition, relationship, action rule, or representation. The <a href="/ua/glossary/ooux/">OOUX and ORCA reading path</a> links the methods behind each decision.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Джерела</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Introducing ORCA</a></li>
+<li><a href="https://www.nngroup.com/articles/usability-testing-101/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Usability Testing 101</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Навігація">
+      <a href="/ua/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>До словника</span>
+      </a>
+      
+      <div class="glossary-term-nav__pill-group">
+        <a href="/ua/glossary/ooux/" class="glossary-term-nav__item" title="Object-Oriented UX (OOUX) Hub">
+          &larr; До OOUX Hub
+        </a>
+      </div>
+      
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/ua/glossary/">Словник</a>
+    </div>
+  </footer>
+</body>
+</html>

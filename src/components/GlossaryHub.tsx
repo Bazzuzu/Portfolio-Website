@@ -8,26 +8,26 @@ import { portfolioData } from "../data/portfolioData";
 import Logo from "./Logo";
 
 interface GlossaryHubProps {
-  lang?: "en" | "uk";
-  onLanguageChange?: (lang: "en" | "uk") => void;
+  lang?: "en" | "ua";
+  onLanguageChange?: (lang: "en" | "ua") => void;
   onNavigate?: (page: string, params?: { slug?: string; caseId?: string }) => void;
 }
 
 const ALPHABET_EN = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const ALPHABET_UK = [
+const ALPHABET_UA = [
   "А","Б","В","Г","Ґ","Д","Е","Є","Ж","З","И","І","Ї","Й","К","Л","М","Н","О","П","Р","С","Т","У","Ф","Х","Ц","Ч","Ш","Щ","Ю","Я",
   "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
 ];
 
 export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate }: GlossaryHubProps) {
-  const isUk = lang === "uk";
+  const isUa = lang === "ua";
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   const categories = useMemo(() => getGlossaryCategories(lang), [lang]);
   const allTerms = useMemo(() => getGlossaryTerms(lang), [lang]);
-  const alphabet = isUk ? ALPHABET_UK : ALPHABET_EN;
+  const alphabet = isUa ? ALPHABET_UA : ALPHABET_EN;
 
   // Global keyboard shortcut: Cmd+K / Ctrl+K to focus search, Esc to clear
   useEffect(() => {
@@ -68,8 +68,8 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
       );
     }
 
-    return [...result].sort((a, b) => a.name.localeCompare(b.name, isUk ? "uk" : "en"));
-  }, [allTerms, searchQuery, selectedCategory, isUk]);
+    return [...result].sort((a, b) => a.name.localeCompare(b.name, isUa ? "uk" : "en"));
+  }, [allTerms, searchQuery, selectedCategory, isUa]);
 
   // Group filtered terms by first letter
   const groupedTerms = useMemo(() => {
@@ -92,29 +92,29 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
 
   // Schema.org Structured Data for DefinedTermSet
   useEffect(() => {
-    const canonicalHubUrl = isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/";
+    const canonicalHubUrl = isUa ? "https://lexkonovalov.com/ua/glossary/" : "https://lexkonovalov.com/glossary/";
     const termSetSchema = {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "DefinedTermSet",
           "@id": `${canonicalHubUrl}#terms`,
-          "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
-          "description": isUk
+          "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
+          "description": isUa
             ? `Канонічна таксономія зі ${allTerms.length} термінів, що охоплює UX та архітектуру продукту, дизайн-системи та інженерію, ШІ та агентні системи, а також продуктову стратегію та зростання.`
             : `A canonical ${allTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`,
           "url": canonicalHubUrl,
-          "inLanguage": isUk ? "uk-UA" : "en-US",
+          "inLanguage": isUa ? "uk-UA" : "en-US",
           "isPartOf": {
             "@id": "https://lexkonovalov.com/#website"
           },
           "hasDefinedTerm": allTerms.map((t) => ({
             "@type": "DefinedTerm",
-            "@id": `${isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html#term`,
+            "@id": `${isUa ? "https://lexkonovalov.com/ua/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html#term`,
             "name": t.name,
             "termCode": t.slug,
             "description": t.definition,
-            "url": `${isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html`,
+            "url": `${isUa ? "https://lexkonovalov.com/ua/glossary/" : "https://lexkonovalov.com/glossary/"}${t.slug}.html`,
           })),
         },
         {
@@ -124,13 +124,13 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
             {
               "@type": "ListItem",
               "position": 1,
-              "name": isUk ? "Головна" : "Home",
+              "name": isUa ? "Головна" : "Home",
               "item": "https://lexkonovalov.com/",
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+              "name": isUa ? "Словник продуктового дизайну" : "Product Design Glossary",
               "item": canonicalHubUrl,
             },
           ],
@@ -148,7 +148,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
       const el = document.getElementById("glossary-hub-jsonld");
       if (el) el.remove();
     };
-  }, [allTerms, isUk]);
+  }, [allTerms, isUa]);
 
   const handleLetterClick = (e: React.MouseEvent, letter: string) => {
     e.preventDefault();
@@ -176,9 +176,9 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
           <div className="glossary-hero__header">
             <a
               id="brand-logo-glossary"
-              href={isUk ? "/uk/glossary/" : "/glossary/"}
+              href={isUa ? "/ua/glossary/" : "/glossary/"}
               className="logo"
-              aria-label={`${portfolioData.designerName} - ${isUk ? "Головна" : "Home"}`}
+              aria-label={`${portfolioData.designerName} - ${isUa ? "Головна" : "Home"}`}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("home");
@@ -188,12 +188,12 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
               <span>{portfolioData.designerName}</span>
             </a>
 
-            <div className="glossary-lang-switcher" role="group" aria-label={isUk ? "Перемикач мови" : "Language switcher"}>
+            <div className="glossary-lang-switcher" role="group" aria-label={isUa ? "Перемикач мови" : "Language switcher"}>
               <button
                 type="button"
-                className={`glossary-lang-btn ${!isUk ? "glossary-lang-btn--active" : ""}`}
+                className={`glossary-lang-btn ${!isUa ? "glossary-lang-btn--active" : ""}`}
                 onClick={() => onLanguageChange?.("en")}
-                aria-pressed={!isUk}
+                aria-pressed={!isUa}
                 aria-label="English language"
               >
                 EN
@@ -201,9 +201,9 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
               <span className="glossary-lang-divider" aria-hidden="true">|</span>
               <button
                 type="button"
-                className={`glossary-lang-btn ${isUk ? "glossary-lang-btn--active" : ""}`}
-                onClick={() => onLanguageChange?.("uk")}
-                aria-pressed={isUk}
+                className={`glossary-lang-btn ${isUa ? "glossary-lang-btn--active" : ""}`}
+                onClick={() => onLanguageChange?.("ua")}
+                aria-pressed={isUa}
                 aria-label="Українська мова"
               >
                 UA
@@ -224,7 +224,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                       onNavigate?.("home");
                     }}
                   >
-                    {isUk ? "Головна" : "Home"}
+                    {isUa ? "Головна" : "Home"}
                   </a>
                 </li>
                 <li className="glossary-breadcrumbs__separator" aria-hidden="true">
@@ -232,17 +232,17 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                 </li>
                 <li className="glossary-breadcrumbs__item" aria-current="page">
                   <span className="glossary-breadcrumbs__current">
-                    {isUk ? "Словник продуктового дизайну" : "Product Design Glossary"}
+                    {isUa ? "Словник продуктового дизайну" : "Product Design Glossary"}
                   </span>
                 </li>
               </ol>
             </nav>
 
             <h1 className="glossary-hero__title">
-              {isUk ? "Словник продуктового дизайну" : "Product Design Glossary"}
+              {isUa ? "Словник продуктового дизайну" : "Product Design Glossary"}
             </h1>
             <p className="glossary-hero__description">
-              {isUk
+              {isUa
                 ? "Канонічна таксономія зі 176 термінів, що охоплює UX та архітектуру продукту, дизайн-системи та інженерію, ШІ та агентні системи, а також продуктову стратегію та зростання."
                 : "A curated collection of concepts, methods and technologies across UX architecture, design engineering, AI and product strategy."}
             </p>
@@ -275,10 +275,10 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                 ref={searchInputRef}
                 type="search"
                 className="glossary-search-input"
-                placeholder={isUk ? "Пошук термінів, концепцій та акронімів... (⌘K)" : "Search terms, concepts and acronyms... (⌘K)"}
+                placeholder={isUa ? "Пошук термінів, концепцій та акронімів... (⌘K)" : "Search terms, concepts and acronyms... (⌘K)"}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                aria-label={isUk ? "Пошук по словнику" : "Search glossary terms"}
+                aria-label={isUa ? "Пошук по словнику" : "Search glossary terms"}
                 autoComplete="off"
                 spellCheck="false"
               />
@@ -287,7 +287,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                   type="button"
                   className="glossary-search-clear"
                   onClick={() => setSearchQuery("")}
-                  aria-label={isUk ? "Очистити запит" : "Clear search query"}
+                  aria-label={isUa ? "Очистити запит" : "Clear search query"}
                 >
                   <svg
                     width="14"
@@ -312,7 +312,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
           </div>
 
           {/* 4 Category Cards */}
-          <section className="glossary-categories" aria-label={isUk ? "Категорії продуктового дизайну" : "Product Design Domains"}>
+          <section className="glossary-categories" aria-label={isUa ? "Категорії продуктового дизайну" : "Product Design Domains"}>
             <div className="glossary-categories__grid">
               {categories.map((cat) => {
                 const isActive = selectedCategory === cat.name;
@@ -329,10 +329,10 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                     <h2 className="glossary-category-card__title">{cat.name}</h2>
                     <div className="glossary-category-card__meta">
                       <span className="glossary-category-card__count">
-                        {isUk ? `${cat.count} термінів` : `${cat.count} terms`}
+                        {isUa ? `${cat.count} термінів` : `${cat.count} terms`}
                       </span>
                       <span className="glossary-category-card__action">
-                        {isUk
+                        {isUa
                           ? (isActive ? "Відфільтровано ✓" : "Докладніше ↗")
                           : (isActive ? "Filtered ✓" : "Explore ↗")}
                       </span>
@@ -346,15 +346,15 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
           <hr className="glossary-divider" aria-hidden="true" />
 
           {/* Browse A-Z Section */}
-          <section className="glossary-browse" aria-label={isUk ? "За алфавітом" : "Browse A-Z"}>
+          <section className="glossary-browse" aria-label={isUa ? "За алфавітом" : "Browse A-Z"}>
             <div className="glossary-browse__header">
               <h2 className="glossary-browse__title">
-                {isUk ? "За алфавітом" : "Browse A–Z"}
+                {isUa ? "За алфавітом" : "Browse A–Z"}
               </h2>
               {(selectedCategory || searchQuery) && (
                 <div className="glossary-browse__filter-status">
                   <span>
-                    {isUk
+                    {isUa
                       ? `Показано ${filteredTerms.length} з ${allTerms.length} термінів`
                       : `Showing ${filteredTerms.length} of ${allTerms.length} terms`}
                   </span>
@@ -363,14 +363,14 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                     className="glossary-browse__reset-btn"
                     onClick={handleResetFilters}
                   >
-                    {isUk ? "Скинути фільтри" : "Reset filters"}
+                    {isUa ? "Скинути фільтри" : "Reset filters"}
                   </button>
                 </div>
               )}
             </div>
 
             {/* Alphabet Navigation Bar */}
-            <nav className="glossary-alphabet-bar" aria-label={isUk ? "Алфавітна навігація" : "Alphabetical navigation"}>
+            <nav className="glossary-alphabet-bar" aria-label={isUa ? "Алфавітна навігація" : "Alphabetical navigation"}>
               <ul className="glossary-alphabet-bar__list">
                 {alphabet.map((letter, idx) => {
                   const hasTerms = availableLetters.has(letter);
@@ -382,7 +382,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                             href={`#letter-${letter}`}
                             className="glossary-alphabet-btn"
                             onClick={(e) => handleLetterClick(e, letter)}
-                            aria-label={`${isUk ? "Перейти до літери" : "Jump to letter"} ${letter}`}
+                            aria-label={`${isUa ? "Перейти до літери" : "Jump to letter"} ${letter}`}
                           >
                             {letter}
                           </a>
@@ -406,14 +406,14 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
           </section>
 
           {/* Terms Directory Columns */}
-          <section className="glossary-directory" aria-label={isUk ? "Каталог термінів" : "Glossary Terms Directory"}>
+          <section className="glossary-directory" aria-label={isUa ? "Каталог термінів" : "Glossary Terms Directory"}>
             {filteredTerms.length === 0 ? (
               <div className="glossary-empty">
                 <h3 className="glossary-empty__title">
-                  {isUk ? "Термінів не знайдено" : "No terms found"}
+                  {isUa ? "Термінів не знайдено" : "No terms found"}
                 </h3>
                 <p className="glossary-empty__text">
-                  {isUk
+                  {isUa
                     ? `Жоден термін не відповідає "${searchQuery}"${selectedCategory ? ` у категорії ${selectedCategory}` : ""}.`
                     : `No concepts matched "${searchQuery}"${selectedCategory ? ` in ${selectedCategory}` : ""}.`}
                 </p>
@@ -422,13 +422,13 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                   className="glossary-empty__reset-btn"
                   onClick={handleResetFilters}
                 >
-                  {isUk ? "Очистити пошук та фільтри" : "Clear search and filters"}
+                  {isUa ? "Очистити пошук та фільтри" : "Clear search and filters"}
                 </button>
               </div>
             ) : (
               <div className="glossary-directory__columns">
                 {Object.keys(groupedTerms)
-                  .sort((a, b) => a.localeCompare(b, isUk ? "uk" : "en"))
+                  .sort((a, b) => a.localeCompare(b, isUa ? "uk" : "en"))
                   .map((letter) => (
                     <div
                       key={letter}
@@ -442,7 +442,7 @@ export default function GlossaryHub({ lang = "en", onLanguageChange, onNavigate 
                         {groupedTerms[letter].map((term) => (
                           <li key={term.slug} className="glossary-letter-group__item">
                             <a
-                              href={isUk ? `/uk/glossary/${term.slug}.html` : `/glossary/${term.slug}.html`}
+                              href={isUa ? `/ua/glossary/${term.slug}.html` : `/glossary/${term.slug}.html`}
                               className="glossary-letter-group__link"
                               onClick={(e) => {
                                 e.preventDefault();
