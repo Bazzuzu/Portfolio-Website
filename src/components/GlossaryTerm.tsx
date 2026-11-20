@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from "react";
 import {
-  glossaryTerms,
-  GlossaryTerm as GlossaryTermType,
+  getGlossaryTerms,
   getTermBySlug,
+  GlossaryTerm as GlossaryTermType,
 } from "../data/glossaryData";
 import { renderMarkdownToHtml } from "../utils/markdownRenderer";
 import { portfolioData } from "../data/portfolioData";
@@ -10,27 +10,32 @@ import Logo from "./Logo";
 
 interface GlossaryTermProps {
   termSlug: string;
+  lang?: "en" | "uk";
+  onLanguageChange?: (lang: "en" | "uk") => void;
   onNavigate?: (page: string, params?: { slug?: string; caseId?: string }) => void;
 }
 
-export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps) {
+export default function GlossaryTerm({ termSlug, lang = "en", onLanguageChange, onNavigate }: GlossaryTermProps) {
+  const isUk = lang === "uk";
+  const allTerms = useMemo(() => getGlossaryTerms(lang), [lang]);
+
   const term = useMemo(() => {
-    return getTermBySlug(termSlug) || glossaryTerms[0];
-  }, [termSlug]);
+    return getTermBySlug(termSlug, lang) || allTerms[0];
+  }, [termSlug, lang, allTerms]);
 
   const currentIndex = useMemo(() => {
-    return glossaryTerms.findIndex((t) => t.slug === term.slug);
-  }, [term]);
+    return allTerms.findIndex((t) => t.slug === term.slug);
+  }, [term, allTerms]);
 
   const prevTerm = useMemo(() => {
     if (currentIndex <= 0) return null;
-    return glossaryTerms[currentIndex - 1];
-  }, [currentIndex]);
+    return allTerms[currentIndex - 1];
+  }, [currentIndex, allTerms]);
 
   const nextTerm = useMemo(() => {
-    if (currentIndex < 0 || currentIndex >= glossaryTerms.length - 1) return null;
-    return glossaryTerms[currentIndex + 1];
-  }, [currentIndex]);
+    if (currentIndex < 0 || currentIndex >= allTerms.length - 1) return null;
+    return allTerms[currentIndex + 1];
+  }, [currentIndex, allTerms]);
 
   // Schema.org DefinedTerm & BreadcrumbList JSON-LD
   useEffect(() => {
@@ -43,44 +48,48 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
         "@graph": term.structuredDataGraph,
       };
     } else {
+      const canonicalBase = isUk ? "https://lexkonovalov.com/uk/glossary/" : "https://lexkonovalov.com/glossary/";
+      const canonicalTermUrl = `${canonicalBase}${term.slug}.html`;
       termSchema = {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "DefinedTerm",
-            "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#term`,
+            "@id": `${canonicalTermUrl}#term`,
             "name": term.name,
             "termCode": term.slug,
-            "description": term.definition,
+            "description": (term as any).definition,
             "inDefinedTermSet": {
               "@type": "DefinedTermSet",
-              "@id": "https://lexkonovalov.com/glossary/#terms",
-              "name": "Product Design Glossary",
-              "url": "https://lexkonovalov.com/glossary/",
+              "@id": `${canonicalBase}#terms`,
+              "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+              "url": canonicalBase,
+              "inLanguage": isUk ? "uk-UA" : "en-US",
             },
-            "url": `https://lexkonovalov.com/glossary/${term.slug}.html`,
+            "url": canonicalTermUrl,
+            "inLanguage": isUk ? "uk-UA" : "en-US",
           },
           {
             "@type": "BreadcrumbList",
-            "@id": `https://lexkonovalov.com/glossary/${term.slug}.html#breadcrumbs`,
+            "@id": `${canonicalTermUrl}#breadcrumbs`,
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
+                "name": isUk ? "Головна" : "Home",
                 "item": "https://lexkonovalov.com/",
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Product Design Glossary",
-                "item": "https://lexkonovalov.com/glossary/",
+                "name": isUk ? "Словник продуктового дизайну" : "Product Design Glossary",
+                "item": canonicalBase,
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": term.name,
-                "item": `https://lexkonovalov.com/glossary/${term.slug}.html`,
+                "item": canonicalTermUrl,
               },
             ],
           },
@@ -98,12 +107,12 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
       const el = document.getElementById("glossary-term-jsonld");
       if (el) el.remove();
     };
-  }, [term]);
+  }, [term, isUk]);
 
   // Match related term strings with terms in our canonical database
   const resolveRelatedTerm = (relatedName: string) => {
     const cleanName = relatedName.trim();
-    return glossaryTerms.find(
+    return allTerms.find(
       (t) =>
         t.name.toLowerCase() === cleanName.toLowerCase() ||
         t.name.toLowerCase().startsWith(cleanName.toLowerCase()) ||
@@ -120,14 +129,18 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
     const href = target.getAttribute("href");
     if (!href) return;
 
-    if (href.startsWith("/glossary/") && href.endsWith(".html")) {
+    if (href.startsWith("/uk/glossary/") && href.endsWith(".html")) {
+      e.preventDefault();
+      const slug = href.replace("/uk/glossary/", "").replace(".html", "");
+      onNavigate?.("glossary-term", { slug });
+    } else if (href.startsWith("/glossary/") && href.endsWith(".html")) {
       e.preventDefault();
       const slug = href.replace("/glossary/", "").replace(".html", "");
       onNavigate?.("glossary-term", { slug });
-    } else if (href.startsWith("/glossary/ooux/") || href === "/glossary/ooux") {
+    } else if (href.startsWith("/uk/glossary/ooux/") || href === "/uk/glossary/ooux" || href.startsWith("/glossary/ooux/") || href === "/glossary/ooux") {
       e.preventDefault();
       onNavigate?.("glossary-term", { slug: "ooux" });
-    } else if (href === "/glossary/" || href === "/glossary") {
+    } else if (href === "/uk/glossary/" || href === "/uk/glossary" || href === "/glossary/" || href === "/glossary") {
       e.preventDefault();
       onNavigate?.("glossary");
     } else if (href === "/") {
@@ -138,22 +151,46 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
 
   return (
     <div className="glossary-term-page">
-      {/* Top Header Block for Logo (aligned with Home and About) */}
+      {/* Top Header Block for Logo & Language Switcher */}
       <header className="glossary-header-top">
         <div className="home-section-container">
-          <a
-            id="brand-logo-term"
-            href="/"
-            className="logo"
-            aria-label={`${portfolioData.designerName} - Home`}
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate?.("home");
-            }}
-          >
-            <Logo />
-            <span>{portfolioData.designerName}</span>
-          </a>
+          <div className="glossary-header-top__inner">
+            <a
+              id="brand-logo-term"
+              href={isUk ? "/uk/glossary/" : "/glossary/"}
+              className="logo"
+              aria-label={`${portfolioData.designerName} - ${isUk ? "Головна" : "Home"}`}
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate?.("home");
+              }}
+            >
+              <Logo />
+              <span>{portfolioData.designerName}</span>
+            </a>
+
+            <div className="glossary-lang-switcher" role="group" aria-label={isUk ? "Перемикач мови" : "Language switcher"}>
+              <button
+                type="button"
+                className={`glossary-lang-btn ${!isUk ? "glossary-lang-btn--active" : ""}`}
+                onClick={() => onLanguageChange?.("en")}
+                aria-pressed={!isUk}
+                aria-label="English language"
+              >
+                EN
+              </button>
+              <span className="glossary-lang-divider" aria-hidden="true">|</span>
+              <button
+                type="button"
+                className={`glossary-lang-btn ${isUk ? "glossary-lang-btn--active" : ""}`}
+                onClick={() => onLanguageChange?.("uk")}
+                aria-pressed={isUk}
+                aria-label="Українська мова"
+              >
+                UA
+              </button>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -172,7 +209,7 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
                     onNavigate?.("home");
                   }}
                 >
-                  Home
+                  {isUk ? "Головна" : "Home"}
                 </a>
               </li>
               <li className="glossary-breadcrumbs__separator" aria-hidden="true">
@@ -180,14 +217,14 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
               </li>
               <li className="glossary-breadcrumbs__item">
                 <a
-                  href="/glossary/"
+                  href={isUk ? "/uk/glossary/" : "/glossary/"}
                   className="glossary-breadcrumbs__link"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate?.("glossary");
                   }}
                 >
-                  Product Design Glossary
+                  {isUk ? "Словник продуктового дизайну" : "Product Design Glossary"}
                 </a>
               </li>
               <li className="glossary-breadcrumbs__separator" aria-hidden="true">
@@ -210,120 +247,125 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
             )}
           </div>
         </header>
-          {term.contentMarkdown ? (
-            <div
-              className="glossary-term-custom-content"
-              dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(term.contentMarkdown) }}
-              onClick={handleArticleLinkClick}
-            />
-          ) : (
-            <>
-              {/* Definition */}
-              <section className="glossary-term-section" aria-labelledby="section-definition">
-                <h2 id="section-definition" className="glossary-term-section__title">
-                  Definition
+
+        {term.contentMarkdown ? (
+          <div
+            className="glossary-term-custom-content"
+            dangerouslySetInnerHTML={{ __html: renderMarkdownToHtml(term.contentMarkdown) }}
+            onClick={handleArticleLinkClick}
+          />
+        ) : (
+          <>
+            {/* Definition */}
+            <section className="glossary-term-section" aria-labelledby="section-definition">
+              <h2 id="section-definition" className="glossary-term-section__title">
+                {isUk ? "Визначення" : "Definition"}
+              </h2>
+              <p className="glossary-term-section__text">{(term as any).definition}</p>
+            </section>
+
+            {/* Purpose */}
+            <section className="glossary-term-section" aria-labelledby="section-purpose">
+              <h2 id="section-purpose" className="glossary-term-section__title">
+                {isUk ? "Призначення" : "Purpose"}
+              </h2>
+              <p className="glossary-term-section__text">{(term as any).purpose}</p>
+            </section>
+
+            {/* Key Concepts */}
+            {(term as any).keyConcepts && (term as any).keyConcepts.length > 0 && (
+              <section className="glossary-term-section" aria-labelledby="section-key-concepts">
+                <h2 id="section-key-concepts" className="glossary-term-section__title">
+                  {isUk ? "Ключові концепції" : "Key Concepts"}
                 </h2>
-                <p className="glossary-term-section__text">{term.definition}</p>
+                <div className="glossary-term-key-concepts">
+                  {(term as any).keyConcepts.map((concept: string, idx: number) => (
+                    <span key={idx} className="glossary-term-concept-tag">
+                      {concept}
+                    </span>
+                  ))}
+                </div>
               </section>
+            )}
 
-              {/* Purpose */}
-              <section className="glossary-term-section" aria-labelledby="section-purpose">
-                <h2 id="section-purpose" className="glossary-term-section__title">
-                  Purpose
+            {/* How It Works */}
+            <section className="glossary-term-section" aria-labelledby="section-how-it-works">
+              <h2 id="section-how-it-works" className="glossary-term-section__title">
+                {isUk ? "Як це працює" : "How It Works"}
+              </h2>
+              <p className="glossary-term-section__text">{(term as any).howItWorks}</p>
+            </section>
+
+            {/* Related Terms */}
+            {(term as any).relatedTerms && (term as any).relatedTerms.length > 0 && (
+              <section className="glossary-term-section" aria-labelledby="section-related-terms">
+                <h2 id="section-related-terms" className="glossary-term-section__title">
+                  {isUk ? "Пов'язані терміни" : "Related Terms"}
                 </h2>
-                <p className="glossary-term-section__text">{term.purpose}</p>
-              </section>
-
-              {/* Key Concepts */}
-              {term.keyConcepts && term.keyConcepts.length > 0 && (
-                <section className="glossary-term-section" aria-labelledby="section-key-concepts">
-                  <h2 id="section-key-concepts" className="glossary-term-section__title">
-                    Key Concepts
-                  </h2>
-                  <div className="glossary-term-key-concepts">
-                    {term.keyConcepts.map((concept, idx) => (
-                      <span key={idx} className="glossary-term-concept-tag">
-                        {concept}
-                      </span>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* How It Works */}
-              <section className="glossary-term-section" aria-labelledby="section-how-it-works">
-                <h2 id="section-how-it-works" className="glossary-term-section__title">
-                  How It Works
-                </h2>
-                <p className="glossary-term-section__text">{term.howItWorks}</p>
-              </section>
-
-              {/* Related Terms */}
-              {term.relatedTerms && term.relatedTerms.length > 0 && (
-                <section className="glossary-term-section" aria-labelledby="section-related-terms">
-                  <h2 id="section-related-terms" className="glossary-term-section__title">
-                    Related Terms
-                  </h2>
-                  <ul className="glossary-term-related-list">
-                    {term.relatedTerms.map((relatedName, idx) => {
-                      const targetTerm = resolveRelatedTerm(relatedName);
-                      return (
-                        <li key={idx} className="glossary-term-related-item">
-                          <span className="glossary-term-related-bullet" aria-hidden="true">
-                            •
-                          </span>
-                          {targetTerm ? (
-                            <a
-                              href={`/glossary/${targetTerm.slug}.html`}
-                              className="glossary-term-related-link"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                onNavigate?.("glossary-term", { slug: targetTerm.slug });
-                              }}
-                            >
-                              {targetTerm.name}
-                            </a>
-                          ) : (
-                            <span className="glossary-term-related-link">{relatedName}</span>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </section>
-              )}
-
-              {/* Sources */}
-              {term.sources && term.sources.length > 0 && (
-                <section className="glossary-term-section" aria-labelledby="section-sources">
-                  <h2 id="section-sources" className="glossary-term-section__title">
-                    Sources
-                  </h2>
-                  <ol className="glossary-term-sources-list">
-                    {term.sources.map((source, idx) => (
-                      <li key={idx} className="glossary-term-sources-item">
-                        {source}
+                <ul className="glossary-term-related-list">
+                  {(term as any).relatedTerms.map((relatedName: string, idx: number) => {
+                    const targetTerm = resolveRelatedTerm(relatedName);
+                    return (
+                      <li key={idx} className="glossary-term-related-item">
+                        <span className="glossary-term-related-bullet" aria-hidden="true">
+                          •
+                        </span>
+                        {targetTerm ? (
+                          <a
+                            href={isUk ? `/uk/glossary/${targetTerm.slug}.html` : `/glossary/${targetTerm.slug}.html`}
+                            className="glossary-term-related-link"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              onNavigate?.("glossary-term", { slug: targetTerm.slug });
+                            }}
+                          >
+                            {targetTerm.name}
+                          </a>
+                        ) : (
+                          <span className="glossary-term-related-link">{relatedName}</span>
+                        )}
                       </li>
-                    ))}
-                  </ol>
-                </section>
-              )}
-            </>
-          )}
+                    );
+                  })}
+                </ul>
+              </section>
+            )}
 
-          {/* Pagination & Traversal Navigation */}
-          <nav className="glossary-term-nav" aria-label="Glossary Navigation">
+            {/* Sources */}
+            {(term as any).sources && (term as any).sources.length > 0 && (
+              <section className="glossary-term-section" aria-labelledby="section-sources">
+                <h2 id="section-sources" className="glossary-term-section__title">
+                  {isUk ? "Джерела" : "Sources"}
+                </h2>
+                <ul className="glossary-term-sources-list">
+                  {(term as any).sources.map((source: string, idx: number) => (
+                    <li key={idx} className="glossary-term-source-item">
+                      {source}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </>
+        )}
+
+        {/* Bottom Pagination & Navigation */}
+        <nav
+          className="glossary-term-nav"
+          aria-label={isUk ? "Навігація між термінами словника" : "Glossary term navigation"}
+        >
+          <div className="glossary-term-nav__group">
             <a
-              href="/glossary/"
-              className="glossary-term-nav__btn"
+              href={isUk ? "/uk/glossary/" : "/glossary/"}
+              className="glossary-term-nav__back"
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("glossary");
               }}
             >
               <svg
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -335,112 +377,113 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
                 <line x1="19" y1="12" x2="5" y2="12" />
                 <polyline points="12 19 5 12 12 5" />
               </svg>
-              <span>Back to Glossary</span>
+              <span>{isUk ? "До словника" : "Back to Glossary"}</span>
             </a>
+          </div>
 
-            <div className="glossary-term-nav__pill-group">
-              {prevTerm ? (
-                <a
-                  href={`/glossary/${prevTerm.slug}.html`}
-                  className="glossary-term-nav__item"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onNavigate?.("glossary-term", { slug: prevTerm.slug });
-                  }}
-                  title={prevTerm.name}
+          <div className="glossary-term-nav__arrows">
+            {prevTerm ? (
+              <a
+                href={isUk ? `/uk/glossary/${prevTerm.slug}.html` : `/glossary/${prevTerm.slug}.html`}
+                className="glossary-term-nav__item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate?.("glossary-term", { slug: prevTerm.slug });
+                }}
+                title={prevTerm.name}
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="19" y1="12" x2="5" y2="12" />
-                    <polyline points="12 19 5 12 12 5" />
-                  </svg>
-                  <span>Previous</span>
-                </a>
-              ) : (
-                <span
-                  className="glossary-term-nav__item glossary-term-nav__item--disabled"
-                  aria-disabled="true"
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                  <polyline points="12 19 5 12 12 5" />
+                </svg>
+                <span>{isUk ? "Попередній" : "Previous"}</span>
+              </a>
+            ) : (
+              <span
+                className="glossary-term-nav__item glossary-term-nav__item--disabled"
+                aria-disabled="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="19" y1="12" x2="5" y2="12" />
-                    <polyline points="12 19 5 12 12 5" />
-                  </svg>
-                  <span>Previous</span>
-                </span>
-              )}
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                  <polyline points="12 19 5 12 12 5" />
+                </svg>
+                <span>{isUk ? "Попередній" : "Previous"}</span>
+              </span>
+            )}
 
-              <span className="glossary-term-nav__divider" aria-hidden="true" />
+            <span className="glossary-term-nav__divider" aria-hidden="true" />
 
-              {nextTerm ? (
-                <a
-                  href={`/glossary/${nextTerm.slug}.html`}
-                  className="glossary-term-nav__item"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onNavigate?.("glossary-term", { slug: nextTerm.slug });
-                  }}
-                  title={nextTerm.name}
+            {nextTerm ? (
+              <a
+                href={isUk ? `/uk/glossary/${nextTerm.slug}.html` : `/glossary/${nextTerm.slug}.html`}
+                className="glossary-term-nav__item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate?.("glossary-term", { slug: nextTerm.slug });
+                }}
+                title={nextTerm.name}
+              >
+                <span>{isUk ? "Наступний" : "Next"}</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  <span>Next</span>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              ) : (
-                <span
-                  className="glossary-term-nav__item glossary-term-nav__item--disabled"
-                  aria-disabled="true"
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            ) : (
+              <span
+                className="glossary-term-nav__item glossary-term-nav__item--disabled"
+                aria-disabled="true"
+              >
+                <span>{isUk ? "Наступний" : "Next"}</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  <span>Next</span>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </span>
-              )}
-            </div>
-          </nav>
-        </article>
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            )}
+          </div>
+        </nav>
+      </article>
     </div>
   );
 }

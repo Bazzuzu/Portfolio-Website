@@ -17,6 +17,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
   const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
   const [selectedGlossarySlug, setSelectedGlossarySlug] = useState<string | null>(null);
+  const [glossaryLang, setGlossaryLang] = useState<"en" | "uk">("en");
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [bottomOffset, setBottomOffset] = useState<number>(32);
@@ -41,6 +42,24 @@ export default function App() {
         setCurrentPage("case-study");
         setSelectedCaseId(caseId);
         setSelectedGlossarySlug(null);
+      } else if (relativePath.startsWith("/uk/glossary/")) {
+        const rawSlug = relativePath.replace("/uk/glossary/", "");
+        const slug = rawSlug.replace(/\/$/, "").replace(/\.html$/, "").trim();
+        if (slug) {
+          setCurrentPage("glossary-term");
+          setSelectedGlossarySlug(slug);
+          setSelectedCaseId(null);
+        } else {
+          setCurrentPage("glossary");
+          setSelectedGlossarySlug(null);
+          setSelectedCaseId(null);
+        }
+        setGlossaryLang("uk");
+      } else if (relativePath === "/uk/glossary") {
+        setCurrentPage("glossary");
+        setSelectedGlossarySlug(null);
+        setSelectedCaseId(null);
+        setGlossaryLang("uk");
       } else if (relativePath.startsWith("/glossary/")) {
         const rawSlug = relativePath.replace("/glossary/", "");
         const slug = rawSlug.replace(/\/$/, "").replace(/\.html$/, "").trim();
@@ -53,10 +72,12 @@ export default function App() {
           setSelectedGlossarySlug(null);
           setSelectedCaseId(null);
         }
+        setGlossaryLang("en");
       } else if (relativePath === "/glossary") {
         setCurrentPage("glossary");
         setSelectedGlossarySlug(null);
         setSelectedCaseId(null);
+        setGlossaryLang("en");
       } else if (relativePath === "/about") {
         setCurrentPage("about");
         setSelectedCaseId(null);
@@ -114,22 +135,37 @@ export default function App() {
     let description = "Lead Product Designer. I use Object-Oriented UX to map dense B2B platforms, and data to optimize B2C checkouts. Based in the EU.";
     let canonicalUrl = "https://lexkonovalov.com/";
 
+    const isGlossaryPage = currentPage === "glossary" || currentPage === "glossary-term";
+    if (isGlossaryPage && glossaryLang === "uk") {
+      document.documentElement.setAttribute("lang", "uk-UA");
+    } else {
+      document.documentElement.setAttribute("lang", "en-US");
+    }
+
     if (currentPage === "about") {
       title = "About Lex Konovalov — Lead Product Designer";
       description = "Read about Lead Product Designer Lex Konovalov's professional DNA, pragmatic product design toolkit, and the pre-emptive interview answers regarding time zones, OOUX, and legacy systems.";
       canonicalUrl = "https://lexkonovalov.com/about/";
     } else if (currentPage === "glossary") {
-      title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
-      description = `A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`;
-      canonicalUrl = "https://lexkonovalov.com/glossary/";
+      if (glossaryLang === "uk") {
+        title = "Словник продуктового дизайну — Архітектурний лексикон та системна онтологія | Lex Konovalov";
+        description = "Канонічна таксономія зі 176 термінів, що охоплює UX та архітектуру продукту, дизайн-системи та інженерію, ШІ та агентні системи, а також продуктову стратегію та зростання.";
+        canonicalUrl = "https://lexkonovalov.com/uk/glossary/";
+      } else {
+        title = "Product Design Glossary — Architectural Lexicon & Systems Ontology | Lex Konovalov";
+        description = `A canonical ${glossaryTerms.length}-term taxonomy covering UX & Product Architecture, Design Systems & Engineering, AI & Agentic Systems, and Product Strategy & Growth.`;
+        canonicalUrl = "https://lexkonovalov.com/glossary/";
+      }
     } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
-      const termData = getTermBySlug(selectedGlossarySlug);
+      const termData = getTermBySlug(selectedGlossarySlug, glossaryLang);
       if (termData) {
         // If an explicit custom seoTitle exists, use it verbatim with NO automatic suffix
         const td = termData as any;
         title = td.seoTitle ? td.seoTitle : (td.title || `${td.name} — Lex Konovalov`);
         description = td.seoDescription || td.description || td.definition;
-        canonicalUrl = td.canonicalUrl || `https://lexkonovalov.com/glossary/${td.slug}.html`;
+        const prefix = glossaryLang === "uk" ? "/uk/glossary" : "/glossary";
+        const cleanSlug = td.slug.replace(/\.html$/, "");
+        canonicalUrl = td.canonicalUrl || (cleanSlug === "ooux" ? `https://lexkonovalov.com${prefix}/ooux/` : `https://lexkonovalov.com${prefix}/${cleanSlug}.html`);
       }
     } else if (currentPage === "case-study" && selectedCaseId) {
       const caseData = portfolioData.caseStudies.find(c => c.id === selectedCaseId);
@@ -198,6 +234,49 @@ export default function App() {
       ogUrl.setAttribute("content", canonicalUrl);
     }
 
+    // Dynamic hreflang alternate tags for glossary
+    let hreflangEn = document.querySelector('link[rel="alternate"][hreflang="en"]');
+    let hreflangUk = document.querySelector('link[rel="alternate"][hreflang="uk"]');
+    let hreflangDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+
+    if (isGlossaryPage) {
+      let slugPart = "";
+      if (currentPage === "glossary-term" && selectedGlossarySlug) {
+        const clean = selectedGlossarySlug.replace(/\.html$/, "").replace(/^\/|\/$/g, "");
+        slugPart = clean === "ooux" ? "ooux/" : `${clean}.html`;
+      }
+      const enUrl = `https://lexkonovalov.com/glossary/${slugPart}`;
+      const ukUrl = `https://lexkonovalov.com/uk/glossary/${slugPart}`;
+
+      if (!hreflangEn) {
+        hreflangEn = document.createElement("link");
+        hreflangEn.setAttribute("rel", "alternate");
+        hreflangEn.setAttribute("hreflang", "en");
+        document.head.appendChild(hreflangEn);
+      }
+      hreflangEn.setAttribute("href", enUrl);
+
+      if (!hreflangUk) {
+        hreflangUk = document.createElement("link");
+        hreflangUk.setAttribute("rel", "alternate");
+        hreflangUk.setAttribute("hreflang", "uk");
+        document.head.appendChild(hreflangUk);
+      }
+      hreflangUk.setAttribute("href", ukUrl);
+
+      if (!hreflangDefault) {
+        hreflangDefault = document.createElement("link");
+        hreflangDefault.setAttribute("rel", "alternate");
+        hreflangDefault.setAttribute("hreflang", "x-default");
+        document.head.appendChild(hreflangDefault);
+      }
+      hreflangDefault.setAttribute("href", enUrl);
+    } else {
+      if (hreflangEn) hreflangEn.remove();
+      if (hreflangUk) hreflangUk.remove();
+      if (hreflangDefault) hreflangDefault.remove();
+    }
+
     let robotsMeta = document.querySelector('meta[name="robots"]');
     if (currentPage === "jobs") {
       if (!robotsMeta) {
@@ -209,7 +288,25 @@ export default function App() {
     } else if (robotsMeta) {
       robotsMeta.setAttribute("content", "index, follow");
     }
-  }, [currentPage, selectedCaseId, selectedGlossarySlug]);
+  }, [currentPage, selectedCaseId, selectedGlossarySlug, glossaryLang]);
+
+  const switchGlossaryLanguage = (newLang: "en" | "uk") => {
+    if (newLang === glossaryLang) return;
+    setGlossaryLang(newLang);
+    const prefix = newLang === "uk" ? "/uk/glossary" : "/glossary";
+
+    if (currentPage === "glossary") {
+      const targetPath = `${prefix}/`;
+      window.history.pushState(null, "", targetPath);
+    } else if (currentPage === "glossary-term" && selectedGlossarySlug) {
+      const cleanSlug = selectedGlossarySlug.replace(/\.html$/, "").replace(/^\/|\/$/g, "");
+      let targetPath = `${prefix}/${cleanSlug}.html`;
+      if (cleanSlug === "ooux") {
+        targetPath = `${prefix}/ooux/`;
+      }
+      window.history.pushState(null, "", targetPath);
+    }
+  };
 
   const navigateTo = (page: string, params?: { caseId?: string; slug?: string }) => {
     let targetPath = "/";
@@ -218,13 +315,14 @@ export default function App() {
     } else if (page === "jobs") {
       targetPath = "/jobs/";
     } else if (page === "glossary") {
-      targetPath = "/glossary/";
+      targetPath = glossaryLang === "uk" ? "/uk/glossary/" : "/glossary/";
     } else if (page === "glossary-term" && params?.slug) {
       const cleanSlug = params.slug.replace(/\.html$/, "").replace(/^\/|\/$/g, "");
+      const prefix = glossaryLang === "uk" ? "/uk/glossary" : "/glossary";
       if (cleanSlug === "ooux") {
-        targetPath = "/glossary/ooux/";
+        targetPath = `${prefix}/ooux/`;
       } else {
-        targetPath = `/glossary/${cleanSlug}.html`;
+        targetPath = `${prefix}/${cleanSlug}.html`;
       }
     } else if (page === "daily-thing" && params?.caseId) {
       const cleanId = params.caseId.replace(/\.html$/, "");
@@ -426,19 +524,23 @@ export default function App() {
 
           {currentPage === "glossary" && (
             <motion.div
-              key="glossary-hub"
+              key={`glossary-hub-${glossaryLang}`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <GlossaryHub onNavigate={navigateTo} />
+              <GlossaryHub
+                lang={glossaryLang}
+                onLanguageChange={switchGlossaryLanguage}
+                onNavigate={navigateTo}
+              />
             </motion.div>
           )}
 
           {currentPage === "glossary-term" && selectedGlossarySlug && (
             <motion.div
-              key={`glossary-term-${selectedGlossarySlug}`}
+              key={`glossary-term-${selectedGlossarySlug}-${glossaryLang}`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
@@ -446,6 +548,8 @@ export default function App() {
             >
               <GlossaryTerm
                 termSlug={selectedGlossarySlug}
+                lang={glossaryLang}
+                onLanguageChange={switchGlossaryLanguage}
                 onNavigate={navigateTo}
               />
             </motion.div>

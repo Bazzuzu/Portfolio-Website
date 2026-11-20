@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Об&#039;єктно-орієнтований UX (OOUX) та фреймворк ORCA | Словник продуктового дизайну</title>
+  <meta name="description" content="Вичерпний посібник з методології Object-Oriented UX (OOUX) та 4-етапного фреймворку ORCA. Дізнайтеся, як проектувати цифрові продукти навколо ментальних моделей користувачів.">
+  <link rel="canonical" href="https://lexkonovalov.com/uk/glossary/ooux/" />
+  <link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux/" />
+  <link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux/" />
+  <link rel="alternate" hreflang="x-default" href="https://lexkonovalov.com/glossary/ooux/" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Об&#039;єктно-орієнтований UX (OOUX) та фреймворк ORCA | Словник продуктового дизайну">
+  <meta property="og:description" content="Вичерпний посібник з методології Object-Oriented UX (OOUX) та 4-етапного фреймворку ORCA. Дізнайтеся, як проектувати цифрові продукти навколо ментальних моделей користувачів.">
+  <meta property="og:url" content="https://lexkonovalov.com/uk/glossary/ooux/">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="uk_UA">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Об&#039;єктно-орієнтований UX (OOUX) та фреймворк ORCA | Словник продуктового дизайну">
+  <meta name="twitter:description" content="Вичерпний посібник з методології Object-Oriented UX (OOUX) та 4-етапного фреймворку ORCA. Дізнайтеся, як проектувати цифрові продукти навколо ментальних моделей користувачів.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/uk/glossary/ooux/');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://lexkonovalov.com/uk/glossary/ooux/#webpage",
+      "url": "https://lexkonovalov.com/uk/glossary/ooux/",
+      "name": "OOUX & ORCA: Glossary, Tools, and Worked Example",
+      "description": "Explore OOUX and ORCA through glossary definitions, modeling tools, practical examples, and a reading path from research to tested interface design.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/ooux/#breadcrumbs"
+      },
+      "citation": [
+        "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+      ],
+      "about": [
+        {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+        },
+        {
+          "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/ooux/#reading-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://lexkonovalov.com/uk/glossary/ooux/#reading-list",
+      "name": "OOUX and ORCA reading path",
+      "numberOfItems": 29,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Object-Oriented UX",
+          "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ORCA Framework",
+          "url": "https://lexkonovalov.com/glossary/orca-framework.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "worked booking example",
+          "url": "https://lexkonovalov.com/glossary/ooux-worked-example.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Noun Foraging",
+          "url": "https://lexkonovalov.com/glossary/noun-foraging.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Nested Object Matrix",
+          "url": "https://lexkonovalov.com/glossary/nested-object-matrix.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "CTA Matrix",
+          "url": "https://lexkonovalov.com/glossary/cta-matrix.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Object Mapping",
+          "url": "https://lexkonovalov.com/glossary/object-mapping.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Object Attributes in OOUX",
+          "url": "https://lexkonovalov.com/glossary/object-attributes-ooux.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Object Guide",
+          "url": "https://lexkonovalov.com/glossary/object-guide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "ORCA Relationship Requirements",
+          "url": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Cardinality",
+          "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Object-Oriented User Stories",
+          "url": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "State Transition Matrix",
+          "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Object Prioritization",
+          "url": "https://lexkonovalov.com/glossary/object-prioritization.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Relationship Prioritization",
+          "url": "https://lexkonovalov.com/glossary/relationship-prioritization.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "CTA Prioritization",
+          "url": "https://lexkonovalov.com/glossary/cta-prioritization.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Attribute Prioritization",
+          "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Object Representation",
+          "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Shapeshifter Matrix",
+          "url": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Four UX Fails in OOUX",
+          "url": "https://lexkonovalov.com/glossary/ooux-ux-fails.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Content Prototyping",
+          "url": "https://lexkonovalov.com/glossary/content-prototyping.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "OOUX Prototyping and Testing",
+          "url": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Junction Object",
+          "url": "https://lexkonovalov.com/glossary/junction-object.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Tree Systems",
+          "url": "https://lexkonovalov.com/glossary/tree-systems-ooux.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Object Inheritance in OOUX",
+          "url": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Content Modeling",
+          "url": "https://lexkonovalov.com/glossary/content-modeling.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Domain Context Modeling",
+          "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Structural Navigation Model",
+          "url": "https://lexkonovalov.com/glossary/structural-navigation-model.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "ORCA Sprint",
+          "url": "https://lexkonovalov.com/glossary/orca-sprint.html"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/uk/glossary/ooux/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Головна",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Словник продуктового дизайну",
+          "item": "https://lexkonovalov.com/uk/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Об'єктно-орієнтований UX (OOUX)",
+          "item": "https://lexkonovalov.com/uk/glossary/ooux/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1c1b18;
+    max-width: 840px;
+    margin: 40px auto;
+    padding: 0 24px;
+    background-color: #faf9f6;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1c1b18;
+    text-decoration: none;
+  }
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f4f2ec;
+    border: 1px solid #e8e6dc;
+    border-radius: 9999px;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .lang-btn {
+    color: #5e605c;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 9999px;
+  }
+  .lang-btn.active {
+    background: #ffffff;
+    color: #1c1b18;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  nav.breadcrumbs {
+    font-size: 0.875rem;
+    color: #5e605c;
+    margin-bottom: 12px;
+  }
+  nav.breadcrumbs a {
+    color: #3E70A2;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  nav.breadcrumbs a:hover {
+    color: #D93636;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.2;
+  }
+  .meta-bar {
+    font-size: 0.875rem;
+    color: #5e605c;
+    margin-bottom: 32px;
+  }
+  .lead {
+    font-size: 1.15rem;
+    color: #5e605c;
+    margin-bottom: 24px;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .cat-card {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .cat-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    color: #1c1b18;
+  }
+  .cat-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5e605c;
+  }
+  .directory {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 12px;
+    padding: 32px;
+  }
+  .letter-group {
+    margin-bottom: 32px;
+  }
+  .letter-group h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e8e6dc;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  .terms-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .terms-list li a {
+    color: #3E70A2;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .terms-list li a:hover {
+    color: #D93636;
+    text-decoration: underline;
+  }
+  article {
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 12px;
+    padding: 40px;
+  }
+  .glossary-term-section {
+    margin-bottom: 32px;
+  }
+  .glossary-term-section__title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #1c1b18;
+  }
+  .glossary-term-section__text {
+    font-family: "Noto Serif", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1c1b18;
+  }
+  .glossary-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+  }
+  .glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .glossary-table th, .glossary-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e8e6dc;
+  }
+  .glossary-table th {
+    background: #f4f2ec;
+    font-weight: 600;
+  }
+  .glossary-code-block-wrapper {
+    margin: 24px 0;
+    border: 1px solid #e8e6dc;
+    border-radius: 8px;
+    background: #f4f2ec;
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+  .glossary-code-block {
+    margin: 0;
+    font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 0.9rem;
+    white-space: pre;
+  }
+  .glossary-term-nav {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #e8e6dc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .glossary-term-nav__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 20px;
+    background: #ffffff;
+    border: 1px solid #e8e6dc;
+    border-radius: 9999px;
+    color: #1c1b18;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .glossary-term-nav__btn:hover {
+    background: #f4f2ec;
+    color: #D93636;
+  }
+  .glossary-term-nav__pill-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .glossary-term-nav__item {
+    color: #3E70A2;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .glossary-term-nav__item:hover {
+    color: #D93636;
+    text-decoration: underline;
+  }
+  .glossary-term-nav__item--disabled {
+    color: #a09e97;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #d0cdc2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #5e605c;
+  }
+  footer a {
+    color: #5e605c;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #D93636;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <a href="/uk/glossary/" class="logo">Lex Konovalov</a>
+      <div class="lang-switcher" role="group" aria-label="Перемикач мови">
+        <a href="/glossary/ooux/" class="lang-btn">EN</a><span>|</span><span class="lang-btn active">UA</span>
+      </div>
+    </div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Головна</a> / <a href="/uk/glossary/">Словник продуктового дизайну</a> / <span>Об&#039;єктно-орієнтований UX (OOUX)</span>
+    </nav>
+    <h1>Об&#039;єктно-орієнтований UX (OOUX)</h1>
+    <div class="meta-bar">
+      <span>UX та архітектура продукту</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Explore the OOUX and ORCA glossary through the questions a product team needs to answer: what people work with, how those things connect, what users can do, and what information they need.</p>
+<p class="glossary-term-section__text">Start with <a href="/uk/glossary/object-oriented-ux.html">Object-Oriented UX</a> for the design approach and <a href="/uk/glossary/orca-framework.html">ORCA Framework</a> for the four iterative rounds. Then follow the <a href="/uk/glossary/ooux-worked-example.html">worked booking example</a> to see how the pieces fit together.</p>
+<section class="glossary-term-section" aria-labelledby="section-discover-the-product-s-structure">
+<h2 id="section-discover-the-product-s-structure" class="glossary-term-section__title">Discover the product's structure</h2>
+<p class="glossary-term-section__text">Use <a href="/uk/glossary/noun-foraging.html">Noun Foraging</a> to identify candidate objects from research. Investigate connections with a <a href="/uk/glossary/nested-object-matrix.html">Nested Object Matrix</a>, actions with a <a href="/uk/glossary/cta-matrix.html">CTA Matrix</a>, and information through <a href="/uk/glossary/object-mapping.html">Object Mapping</a>.</p>
+<p class="glossary-term-section__text"><a href="/uk/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a> explains core content, metadata, and the distinction between a field and a related object.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-clarify-requirements">
+<h2 id="section-clarify-requirements" class="glossary-term-section__title">Clarify requirements</h2>
+<p class="glossary-term-section__text">An <a href="/uk/glossary/object-guide.html">Object Guide</a> records what each object means. <a href="/uk/glossary/orca-relationship-requirements.html">ORCA Relationship Requirements</a> examines how connections work, while <a href="/uk/glossary/cardinality-ux-architecture.html">Cardinality</a> clarifies permitted counts in both directions.</p>
+<p class="glossary-term-section__text"><a href="/uk/glossary/object-oriented-user-stories.html">Object-Oriented User Stories</a> develops the reason and conditions for an action. A <a href="/uk/glossary/state-transition-matrix.html">State Transition Matrix</a> can document the lifecycle behind it.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-prioritize-the-release-and-the-experience">
+<h2 id="section-prioritize-the-release-and-the-experience" class="glossary-term-section__title">Prioritize the release and the experience</h2>
+<p class="glossary-term-section__text">These four activities address related decisions:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Activity</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/uk/glossary/object-prioritization.html">Object Prioritization</a></td>
+<td>Which things need support, and how will users reach them?</td>
+</tr>
+<tr>
+<td><a href="/uk/glossary/relationship-prioritization.html">Relationship Prioritization</a></td>
+<td>Which connections and navigation paths matter for the task?</td>
+</tr>
+<tr>
+<td><a href="/uk/glossary/cta-prioritization.html">CTA Prioritization</a></td>
+<td>Which actions need support and prominence in this context?</td>
+</tr>
+<tr>
+<td><a href="/uk/glossary/attribute-prioritization.html">Attribute Prioritization</a></td>
+<td>Which information helps users identify, compare, and act?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-represent-and-test-the-model">
+<h2 id="section-represent-and-test-the-model" class="glossary-term-section__title">Represent and test the model</h2>
+<p class="glossary-term-section__text"><a href="/uk/glossary/object-representation-ooux.html">Object Representation</a> connects the model to cards, lists, and detailed views. A <a href="/uk/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> helps document intentional variants.</p>
+<p class="glossary-term-section__text">Use the <a href="/uk/glossary/ooux-ux-fails.html">Four UX Fails in OOUX</a> as a diagnostic lens, <a href="/uk/glossary/content-prototyping.html">Content Prototyping</a> to populate the model, and <a href="/uk/glossary/ooux-prototyping-and-testing.html">OOUX Prototyping and Testing</a> to observe recognition, navigation, and action understanding.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-work-through-more-complex-models">
+<h2 id="section-work-through-more-complex-models" class="glossary-term-section__title">Work through more complex models</h2>
+<p class="glossary-term-section__text">A <a href="/uk/glossary/junction-object.html">Junction Object</a> can represent a connection with its own information. <a href="/uk/glossary/tree-systems-ooux.html">Tree Systems</a> describes related forms that become more specific in context. <a href="/uk/glossary/object-inheritance-ooux.html">Object Inheritance in OOUX</a> examines general types and meaningful subtypes.</p>
+<p class="glossary-term-section__text">For surrounding practices, explore <a href="/uk/glossary/content-modeling.html">Content Modeling</a>, <a href="/uk/glossary/domain-context-modeling.html">Domain Context Modeling</a>, and <a href="/uk/glossary/structural-navigation-model.html">Structural Navigation Model</a>.</p>
+<p class="glossary-term-section__text">To plan collaborative work, see <a href="/uk/glossary/orca-sprint.html">ORCA Sprint</a>. Choose a bounded problem and use the relevant tools; revisit research whenever the model exposes an unanswered question.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Джерела</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Introducing ORCA</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Навігація">
+      <a href="/uk/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>До словника</span>
+      </a>
+      
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/uk/glossary/">Словник</a>
+    </div>
+  </footer>
+</body>
+</html>

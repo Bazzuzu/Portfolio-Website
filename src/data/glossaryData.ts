@@ -18943,40 +18943,48 @@ export const supportingPages: SupportingPage[] = [
   }
 ];
 
-export function getTermBySlug(slug: string): GlossaryTerm | SupportingPage | undefined {
+import { glossaryCategoriesUk, glossaryTermsUk, supportingPagesUk } from "./glossaryData.uk.ts";
+
+export function getTermBySlug(slug: string, lang: "en" | "uk" = "en"): GlossaryTerm | SupportingPage | undefined {
   const normalized = slug.replace(/\.html$/, "").toLowerCase().replace(/^\/|\/$/g, "");
-  return glossaryTerms.find((t) => t.slug.toLowerCase() === normalized) ||
-         supportingPages.find((p) => p.slug.toLowerCase() === normalized);
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
+  const pages = lang === "uk" ? supportingPagesUk : supportingPages;
+  return terms.find((t) => t.slug.toLowerCase() === normalized) ||
+         pages.find((p) => p.slug.toLowerCase() === normalized);
 }
 
-export function getTermById(id: string): GlossaryTerm | undefined {
-  return glossaryTerms.find((t) => t.id === id);
+export function getTermById(id: string, lang: "en" | "uk" = "en"): GlossaryTerm | undefined {
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
+  return terms.find((t) => t.id === id);
 }
 
-export function getTermsByCategory(category: string): GlossaryTerm[] {
-  return glossaryTerms.filter((t) => t.category.toLowerCase() === category.toLowerCase());
+export function getTermsByCategory(category: string, lang: "en" | "uk" = "en"): GlossaryTerm[] {
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
+  return terms.filter((t) => t.category.toLowerCase() === category.toLowerCase());
 }
 
-export function getAlphabeticalLetters(): string[] {
+export function getAlphabeticalLetters(lang: "en" | "uk" = "en"): string[] {
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
   const lettersSet = new Set<string>();
-  glossaryTerms.forEach((t) => {
+  terms.forEach((t) => {
     const firstChar = t.name.trim().charAt(0).toUpperCase();
-    if (/[A-Z]/.test(firstChar)) {
+    if (/[A-ZА-ЯЄІЇҐ]/.test(firstChar)) {
       lettersSet.add(firstChar);
     }
   });
-  return Array.from(lettersSet).sort();
+  return Array.from(lettersSet).sort((a, b) => a.localeCompare(b, lang === "uk" ? "uk" : "en"));
 }
 
-export function getTermsGroupedByLetter(): Record<string, GlossaryTerm[]> {
+export function getTermsGroupedByLetter(lang: "en" | "uk" = "en"): Record<string, GlossaryTerm[]> {
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
   const grouped: Record<string, GlossaryTerm[]> = {};
   
   // Sort alphabetically
-  const sorted = [...glossaryTerms].sort((a, b) => a.name.localeCompare(b.name));
+  const sorted = [...terms].sort((a, b) => a.name.localeCompare(b.name, lang === "uk" ? "uk" : "en"));
   
   sorted.forEach((term) => {
     const firstChar = term.name.trim().charAt(0).toUpperCase();
-    const key = /[A-Z]/.test(firstChar) ? firstChar : "#";
+    const key = /[A-ZА-ЯЄІЇҐ]/.test(firstChar) ? firstChar : "#";
     if (!grouped[key]) {
       grouped[key] = [];
     }
@@ -18986,14 +18994,30 @@ export function getTermsGroupedByLetter(): Record<string, GlossaryTerm[]> {
   return grouped;
 }
 
-export function searchGlossary(query: string): GlossaryTerm[] {
-  if (!query.trim()) return glossaryTerms;
+export function searchGlossary(query: string, lang: "en" | "uk" = "en"): GlossaryTerm[] {
+  const terms = lang === "uk" ? glossaryTermsUk : glossaryTerms;
+  if (!query.trim()) return terms;
   const q = query.toLowerCase().trim();
-  return glossaryTerms.filter((term) => 
+  return terms.filter((term) => 
     term.name.toLowerCase().includes(q) ||
     term.definition.toLowerCase().includes(q) ||
     term.slug.toLowerCase().includes(q) ||
+    (term.alternateName && (Array.isArray(term.alternateName) ? term.alternateName.some(a => a.toLowerCase().includes(q)) : term.alternateName.toLowerCase().includes(q))) ||
     term.keyConcepts.some((k) => k.toLowerCase().includes(q)) ||
     term.category.toLowerCase().includes(q)
   );
 }
+
+export function getGlossaryTerms(lang: "en" | "uk" = "en"): GlossaryTerm[] {
+  return lang === "uk" ? glossaryTermsUk : glossaryTerms;
+}
+
+export function getGlossaryCategories(lang: "en" | "uk" = "en"): GlossaryCategory[] {
+  return lang === "uk" ? glossaryCategoriesUk : glossaryCategories;
+}
+
+export function getSupportingPages(lang: "en" | "uk" = "en"): SupportingPage[] {
+  return lang === "uk" ? supportingPagesUk : supportingPages;
+}
+
+export { glossaryCategoriesUk, glossaryTermsUk, supportingPagesUk };

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lexkonovalov.com/</loc>
     <lastmod>2026-09-11</lastmod>
@@ -47,1073 +47,2863 @@
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ooux/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux/" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ooux/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux/" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ooux-worked-example.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-worked-example.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-worked-example.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ooux-worked-example.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-worked-example.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-worked-example.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-oriented-ux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-oriented-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-oriented-ux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-oriented-ux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-oriented-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-oriented-ux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/orca-framework.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-framework.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-framework.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/orca-framework.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-framework.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-framework.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-mapping.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-mapping.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-mapping.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-mapping.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/domain-context-modeling.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/domain-context-modeling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/domain-context-modeling.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/domain-context-modeling.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/domain-context-modeling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/domain-context-modeling.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/cardinality-ux-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cardinality-ux-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cardinality-ux-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/cardinality-ux-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cardinality-ux-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cardinality-ux-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/information-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/information-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/information-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/information-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/information-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/information-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/core-model.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/core-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/core-model.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/core-model.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/core-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/core-model.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/enterprise-information-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/enterprise-information-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/enterprise-information-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/enterprise-information-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/enterprise-information-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/enterprise-information-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/mental-model-mapping.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/mental-model-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/mental-model-mapping.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/mental-model-mapping.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/mental-model-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/mental-model-mapping.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/content-modeling.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/content-modeling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/content-modeling.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/content-modeling.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/content-modeling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/content-modeling.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/operational-ux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/operational-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/operational-ux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/operational-ux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/operational-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/operational-ux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/service-blueprinting.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/service-blueprinting.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/service-blueprinting.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/service-blueprinting.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/service-blueprinting.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/service-blueprinting.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/structural-navigation-model.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structural-navigation-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structural-navigation-model.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/structural-navigation-model.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structural-navigation-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structural-navigation-model.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/state-transition-matrix.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/state-transition-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/state-transition-matrix.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/state-transition-matrix.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/state-transition-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/state-transition-matrix.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/polyhierarchy.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/polyhierarchy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/polyhierarchy.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/polyhierarchy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/polyhierarchy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/polyhierarchy.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/controlled-vocabulary.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/controlled-vocabulary.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/controlled-vocabulary.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/controlled-vocabulary.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/controlled-vocabulary.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/controlled-vocabulary.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/faceted-classification.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/faceted-classification.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/faceted-classification.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/faceted-classification.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/faceted-classification.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/faceted-classification.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/task-model.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/task-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/task-model.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/task-model.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/task-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/task-model.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/wayfinding-system.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/wayfinding-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/wayfinding-system.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/wayfinding-system.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/wayfinding-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/wayfinding-system.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/semantic-zoom.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-zoom.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-zoom.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/semantic-zoom.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-zoom.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-zoom.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/breadcrumb-hierarchy.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/breadcrumb-hierarchy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/breadcrumb-hierarchy.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/affordance-layering.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/affordance-layering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/affordance-layering.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/affordance-layering.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/affordance-layering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/affordance-layering.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/progressive-disclosure.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/progressive-disclosure.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/progressive-disclosure.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/progressive-disclosure.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/progressive-disclosure.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/progressive-disclosure.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/conceptual-schema.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conceptual-schema.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conceptual-schema.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/conceptual-schema.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conceptual-schema.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conceptual-schema.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/interaction-invariant.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/interaction-invariant.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/interaction-invariant.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/interaction-invariant.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/interaction-invariant.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/interaction-invariant.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-tokens.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-tokens.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-tokens.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-tokens.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-tokens.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-tokens.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-tokens-format-module-dtcg.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-tokens-format-module-dtcg.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-tokens-format-module-dtcg.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/semantic-tokens.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-tokens.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-tokens.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/semantic-tokens.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-tokens.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-tokens.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-primitives.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-primitives.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-primitives.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-primitives.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-primitives.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-primitives.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/component-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/component-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/component-libraries.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-libraries.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-libraries.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/component-libraries.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-libraries.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-libraries.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-governance.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-governance.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-governance.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-governance.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-governance.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-governance.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-engineering.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-engineering.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-engineering.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-engineering.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-to-code-workflow.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-to-code-workflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-to-code-workflow.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-to-code-workflow.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-to-code-workflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-to-code-workflow.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/atomic-design.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/atomic-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/atomic-design.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/atomic-design.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/atomic-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/atomic-design.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/figma-variables-modes.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-variables-modes.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-variables-modes.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/figma-variables-modes.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-variables-modes.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-variables-modes.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/semantic-html.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-html.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-html.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/semantic-html.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/semantic-html.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/semantic-html.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/accessibility-wcag.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/accessibility-wcag.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/accessibility-wcag.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/accessibility-wcag.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/accessibility-wcag.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/accessibility-wcag.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/aria-accessible-rich-internet-applications.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/aria-accessible-rich-internet-applications.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/aria-accessible-rich-internet-applications.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/web-components.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/web-components.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/web-components.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/web-components.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/web-components.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/web-components.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/designops.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/designops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/designops.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/designops.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/designops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/designops.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/style-dictionary.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/style-dictionary.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/style-dictionary.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/style-dictionary.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/style-dictionary.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/style-dictionary.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/token-resolver-engine.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/token-resolver-engine.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/token-resolver-engine.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/token-resolver-engine.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/token-resolver-engine.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/token-resolver-engine.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/headless-ui-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/headless-ui-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/headless-ui-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/headless-ui-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/headless-ui-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/headless-ui-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/composite-design-token.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/composite-design-token.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/composite-design-token.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/composite-design-token.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/composite-design-token.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/composite-design-token.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/fluid-typography-spacing-system.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/fluid-typography-spacing-system.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/fluid-typography-spacing-system.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/component-telemetry.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-telemetry.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-telemetry.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/component-telemetry.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/component-telemetry.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/component-telemetry.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/visual-regression-testing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/visual-regression-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/visual-regression-testing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/visual-regression-testing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/visual-regression-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/visual-regression-testing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-versioning-semver.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-versioning-semver.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-versioning-semver.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-versioning-semver.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-versioning-semver.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-versioning-semver.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/agentic-ai.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agentic-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agentic-ai.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/agentic-ai.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agentic-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agentic-ai.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-agent.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-agent.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-agent.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-agent.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-agent.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-agent.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/agent-harness.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agent-harness.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agent-harness.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/agent-harness.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agent-harness.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agent-harness.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-harness.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-harness.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-harness.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-harness.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-harness.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-harness.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/model-context-protocol-mcp.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/model-context-protocol-mcp.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/model-context-protocol-mcp.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/model-context-protocol-mcp.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/model-context-protocol-mcp.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/model-context-protocol-mcp.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/agent-skills-skill-md.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agent-skills-skill-md.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agent-skills-skill-md.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/agent-skills-skill-md.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agent-skills-skill-md.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agent-skills-skill-md.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/context-engineering.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-engineering.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/context-engineering.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-engineering.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/prompt-engineering.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/prompt-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/prompt-engineering.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/prompt-engineering.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/prompt-engineering.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/prompt-engineering.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/retrieval-augmented-generation-rag.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/retrieval-augmented-generation-rag.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/retrieval-augmented-generation-rag.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/tool-calling-function-calling.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/tool-calling-function-calling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/tool-calling-function-calling.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/tool-calling-function-calling.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/tool-calling-function-calling.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/tool-calling-function-calling.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/human-in-the-loop-hitl.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/human-in-the-loop-hitl.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/human-in-the-loop-hitl.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/generative-ui.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/generative-ui.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/generative-ui.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/generative-ui.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/generative-ui.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/generative-ui.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-native-design.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-native-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-native-design.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-native-design.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-native-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-native-design.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/vibe-coding.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/vibe-coding.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/vibe-coding.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/vibe-coding.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/vibe-coding.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/vibe-coding.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/structured-data-for-llms.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structured-data-for-llms.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structured-data-for-llms.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/structured-data-for-llms.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structured-data-for-llms.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structured-data-for-llms.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/llms-txt-proposal.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/llms-txt-proposal.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/llms-txt-proposal.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/llms-txt-proposal.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/llms-txt-proposal.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/llms-txt-proposal.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/multimodal-ai.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/multimodal-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/multimodal-ai.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/multimodal-ai.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/multimodal-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/multimodal-ai.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/knowledge-graphs-ai-context.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/knowledge-graphs-ai-context.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/knowledge-graphs-ai-context.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/agentic-ux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agentic-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agentic-ux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/agentic-ux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/agentic-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/agentic-ux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/system-prompts-guardrails.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/system-prompts-guardrails.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/system-prompts-guardrails.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/system-prompts-guardrails.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/system-prompts-guardrails.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/system-prompts-guardrails.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/synthetic-user-testing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/synthetic-user-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/synthetic-user-testing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/synthetic-user-testing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/synthetic-user-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/synthetic-user-testing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/autonomous-workflow-orchestration.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/autonomous-workflow-orchestration.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/autonomous-workflow-orchestration.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/evaluation-harness-ai-evals.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/evaluation-harness-ai-evals.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/evaluation-harness-ai-evals.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/context-drift.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-drift.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-drift.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/context-drift.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-drift.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-drift.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/multi-agent-systems-mas.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/multi-agent-systems-mas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/multi-agent-systems-mas.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/multi-agent-systems-mas.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/multi-agent-systems-mas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/multi-agent-systems-mas.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversion-rate-optimization-cro.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/conversion-rate-optimization-cro.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversion-rate-optimization-cro.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ab-testing-split-testing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ab-testing-split-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ab-testing-split-testing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ab-testing-split-testing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ab-testing-split-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ab-testing-split-testing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/continuous-experimentation.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/continuous-experimentation.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/continuous-experimentation.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/continuous-experimentation.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/continuous-experimentation.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/continuous-experimentation.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/conversion-funnel-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversion-funnel-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversion-funnel-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/conversion-funnel-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversion-funnel-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversion-funnel-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/lead-capture-mechanics.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/lead-capture-mechanics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/lead-capture-mechanics.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/lead-capture-mechanics.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/lead-capture-mechanics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/lead-capture-mechanics.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/checkout-flow-optimization.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/checkout-flow-optimization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/checkout-flow-optimization.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/checkout-flow-optimization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/checkout-flow-optimization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/checkout-flow-optimization.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-discovery.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-discovery.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-discovery.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-discovery.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-discovery.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-discovery.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/jobs-to-be-done-jtbd.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/jobs-to-be-done-jtbd.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/jobs-to-be-done-jtbd.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-led-growth-plg.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-led-growth-plg.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-led-growth-plg.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-led-growth-plg.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-led-growth-plg.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-led-growth-plg.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/north-star-metric-nsm.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/north-star-metric-nsm.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/north-star-metric-nsm.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/north-star-metric-nsm.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/north-star-metric-nsm.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/north-star-metric-nsm.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-strategy-canvas.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-strategy-canvas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-strategy-canvas.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-strategy-canvas.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-strategy-canvas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-strategy-canvas.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/customer-journey-mapping.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-journey-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-journey-mapping.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/customer-journey-mapping.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-journey-mapping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-journey-mapping.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/enterprise-ux-strategy.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/enterprise-ux-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/enterprise-ux-strategy.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/enterprise-ux-strategy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/enterprise-ux-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/enterprise-ux-strategy.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/b2b-saas-interaction-model.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/b2b-saas-interaction-model.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/b2b-saas-interaction-model.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/b2c-engagement-loops.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/b2c-engagement-loops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/b2c-engagement-loops.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/b2c-engagement-loops.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/b2c-engagement-loops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/b2c-engagement-loops.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-telemetry-analytics.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-telemetry-analytics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-telemetry-analytics.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-telemetry-analytics.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-telemetry-analytics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-telemetry-analytics.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/growth-design.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/growth-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/growth-design.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/growth-design.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/growth-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/growth-design.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-strategy-alignment.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-strategy-alignment.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-strategy-alignment.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-strategy-alignment.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-strategy-alignment.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-strategy-alignment.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-market-fit-pmf-engine.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-market-fit-pmf-engine.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-market-fit-pmf-engine.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ltv-to-cac-ratio.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ltv-to-cac-ratio.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ltv-to-cac-ratio.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/activation-metric.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/activation-metric.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/activation-metric.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/activation-metric.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/activation-metric.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/activation-metric.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/time-to-value-ttv.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/time-to-value-ttv.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/time-to-value-ttv.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/time-to-value-ttv.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/time-to-value-ttv.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/time-to-value-ttv.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/churn-mitigation-architecture.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/churn-mitigation-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/churn-mitigation-architecture.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/churn-mitigation-architecture.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/churn-mitigation-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/churn-mitigation-architecture.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/feature-flag-strategy.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/feature-flag-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/feature-flag-strategy.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/feature-flag-strategy.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/feature-flag-strategy.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/feature-flag-strategy.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/value-proposition-canvas.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/value-proposition-canvas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/value-proposition-canvas.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/value-proposition-canvas.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/value-proposition-canvas.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/value-proposition-canvas.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/noun-foraging.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/noun-foraging.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/noun-foraging.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/noun-foraging.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/noun-foraging.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/noun-foraging.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/nested-object-matrix.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/nested-object-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/nested-object-matrix.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/nested-object-matrix.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/nested-object-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/nested-object-matrix.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/cta-matrix.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cta-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cta-matrix.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/cta-matrix.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cta-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cta-matrix.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-guide.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-guide.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-guide.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-guide.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-guide.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-guide.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ooux-ux-fails.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-ux-fails.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-ux-fails.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ooux-ux-fails.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-ux-fails.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-ux-fails.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-prioritization.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-prioritization.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-prioritization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-prioritization.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/orca-relationship-requirements.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-relationship-requirements.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-relationship-requirements.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/orca-relationship-requirements.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-relationship-requirements.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-relationship-requirements.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/junction-object.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/junction-object.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/junction-object.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/junction-object.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/junction-object.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/junction-object.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/user-retention.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/user-retention.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/user-retention.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/user-retention.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/user-retention.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/user-retention.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/product-qualified-lead-pql.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-qualified-lead-pql.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-qualified-lead-pql.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/product-qualified-lead-pql.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/product-qualified-lead-pql.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/product-qualified-lead-pql.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/european-accessibility-act.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/european-accessibility-act.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/european-accessibility-act.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/european-accessibility-act.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/european-accessibility-act.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/european-accessibility-act.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/en-301-549.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/en-301-549.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/en-301-549.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/en-301-549.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/en-301-549.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/en-301-549.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ada-web-accessibility.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ada-web-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ada-web-accessibility.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ada-web-accessibility.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ada-web-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ada-web-accessibility.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/section-508.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/section-508.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/section-508.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/section-508.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/section-508.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/section-508.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/web-accessibility-audit.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/web-accessibility-audit.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/web-accessibility-audit.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/web-accessibility-audit.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/web-accessibility-audit.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/web-accessibility-audit.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/accessible-forms.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/accessible-forms.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/accessible-forms.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/accessible-forms.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/accessible-forms.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/accessible-forms.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/keyboard-accessibility.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/keyboard-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/keyboard-accessibility.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/keyboard-accessibility.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/keyboard-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/keyboard-accessibility.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-attributes-ooux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-attributes-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-attributes-ooux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-attributes-ooux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-attributes-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-attributes-ooux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-inheritance-ooux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-inheritance-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-inheritance-ooux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-inheritance-ooux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-inheritance-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-inheritance-ooux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-representation-ooux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-representation-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-representation-ooux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-representation-ooux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-representation-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-representation-ooux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/object-oriented-user-stories.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-oriented-user-stories.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-oriented-user-stories.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/object-oriented-user-stories.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/object-oriented-user-stories.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/object-oriented-user-stories.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-prototyping-and-testing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ooux-prototyping-and-testing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ooux-prototyping-and-testing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/orca-sprint.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-sprint.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-sprint.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/orca-sprint.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/orca-sprint.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/orca-sprint.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/relationship-prioritization.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/relationship-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/relationship-prioritization.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/relationship-prioritization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/relationship-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/relationship-prioritization.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/attribute-prioritization.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/attribute-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/attribute-prioritization.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/attribute-prioritization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/attribute-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/attribute-prioritization.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/cta-prioritization.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cta-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cta-prioritization.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/cta-prioritization.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cta-prioritization.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cta-prioritization.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/shapeshifter-matrix.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/shapeshifter-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/shapeshifter-matrix.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/shapeshifter-matrix.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/shapeshifter-matrix.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/shapeshifter-matrix.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/tree-systems-ooux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/tree-systems-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/tree-systems-ooux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/tree-systems-ooux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/tree-systems-ooux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/tree-systems-ooux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/content-prototyping.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/content-prototyping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/content-prototyping.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/content-prototyping.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/content-prototyping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/content-prototyping.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/conversational-ux.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversational-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversational-ux.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/conversational-ux.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/conversational-ux.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/conversational-ux.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-critique.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-critique.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-critique.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-critique.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-critique.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-critique.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/researchops.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/researchops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/researchops.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/researchops.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/researchops.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/researchops.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/figma-code-connect.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-code-connect.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-code-connect.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/figma-code-connect.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-code-connect.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-code-connect.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/figma-mcp-server.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-mcp-server.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-mcp-server.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/figma-mcp-server.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/figma-mcp-server.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/figma-mcp-server.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/code-to-design-workflow.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/code-to-design-workflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/code-to-design-workflow.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/code-to-design-workflow.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/code-to-design-workflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/code-to-design-workflow.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-adoption.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-adoption.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-adoption.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-adoption.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-adoption.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-adoption.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-audit.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-audit.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-audit.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-audit.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-audit.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-audit.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-documentation.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-documentation.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-documentation.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-documentation.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-documentation.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-documentation.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-metrics.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-metrics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-metrics.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-metrics.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-metrics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-metrics.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-migration.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-migration.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-migration.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-migration.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-migration.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-migration.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-system-theming.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-theming.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-theming.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-system-theming.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-system-theming.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-system-theming.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/pattern-library.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/pattern-library.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/pattern-library.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/pattern-library.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/pattern-library.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/pattern-library.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-ready-design-system.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-ready-design-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-ready-design-system.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-ready-design-system.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-ready-design-system.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-ready-design-system.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/alt-text.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/alt-text.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/alt-text.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/alt-text.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/alt-text.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/alt-text.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-debt.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-debt.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-debt.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-debt.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-debt.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-debt.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/design-qa.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-qa.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-qa.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/design-qa.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/design-qa.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/design-qa.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/shadcn-ui.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/shadcn-ui.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/shadcn-ui.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/shadcn-ui.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/shadcn-ui.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/shadcn-ui.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/storybook.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/storybook.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/storybook.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/storybook.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/storybook.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/storybook.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/touch-target-size.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/touch-target-size.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/touch-target-size.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/touch-target-size.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/touch-target-size.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/touch-target-size.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/wcag-color-contrast.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/wcag-color-contrast.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/wcag-color-contrast.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/wcag-color-contrast.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/wcag-color-contrast.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/wcag-color-contrast.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/zoom-text-resize-reflow.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/zoom-text-resize-reflow.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/zoom-text-resize-reflow.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-assisted-design.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-assisted-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-assisted-design.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-assisted-design.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-assisted-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-assisted-design.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-grounding.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-grounding.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-grounding.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-grounding.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-grounding.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-grounding.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-hallucination.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-hallucination.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-hallucination.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-hallucination.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-hallucination.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-hallucination.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-model-routing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-model-routing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-model-routing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-model-routing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-model-routing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-model-routing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-prototyping.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-prototyping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-prototyping.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-prototyping.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-prototyping.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-prototyping.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-transparency.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-transparency.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-transparency.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-transparency.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-transparency.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-transparency.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-ux-research.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-ux-research.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-ux-research.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-ux-research.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-ux-research.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-ux-research.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/context-window.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-window.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-window.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/context-window.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/context-window.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/context-window.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/explainable-ai.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/explainable-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/explainable-ai.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/explainable-ai.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/explainable-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/explainable-ai.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/prompt-injection.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/prompt-injection.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/prompt-injection.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/prompt-injection.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/prompt-injection.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/prompt-injection.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/responsible-ai-design.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/responsible-ai-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/responsible-ai-design.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/responsible-ai-design.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/responsible-ai-design.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/responsible-ai-design.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/structured-outputs.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structured-outputs.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structured-outputs.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/structured-outputs.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/structured-outputs.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/structured-outputs.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/trust-calibration-ai.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/trust-calibration-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/trust-calibration-ai.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/trust-calibration-ai.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/trust-calibration-ai.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/trust-calibration-ai.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/ai-unit-economics.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-unit-economics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-unit-economics.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/ai-unit-economics.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/ai-unit-economics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/ai-unit-economics.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/cac-payback-period.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cac-payback-period.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cac-payback-period.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/cac-payback-period.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cac-payback-period.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cac-payback-period.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/contribution-margin.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/contribution-margin.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/contribution-margin.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/contribution-margin.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/contribution-margin.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/contribution-margin.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/cost-to-serve.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cost-to-serve.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cost-to-serve.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/cost-to-serve.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/cost-to-serve.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/cost-to-serve.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-acquisition-cost-cac.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/customer-acquisition-cost-cac.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-acquisition-cost-cac.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-lifetime-value-ltv.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/customer-lifetime-value-ltv.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/customer-lifetime-value-ltv.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/gross-margin.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/gross-margin.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/gross-margin.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/gross-margin.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/gross-margin.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/gross-margin.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/net-revenue-retention-nrr.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/net-revenue-retention-nrr.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/net-revenue-retention-nrr.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/outcome-based-pricing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/outcome-based-pricing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/outcome-based-pricing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/outcome-based-pricing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/outcome-based-pricing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/outcome-based-pricing.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/pricing-metric.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/pricing-metric.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/pricing-metric.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/pricing-metric.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/pricing-metric.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/pricing-metric.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/unit-economics.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/unit-economics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/unit-economics.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/unit-economics.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/unit-economics.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/unit-economics.html" />
   </url>
   <url>
     <loc>https://lexkonovalov.com/glossary/usage-based-pricing.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/usage-based-pricing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/usage-based-pricing.html" />
+  </url>
+  <url>
+    <loc>https://lexkonovalov.com/uk/glossary/usage-based-pricing.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexkonovalov.com/glossary/usage-based-pricing.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://lexkonovalov.com/uk/glossary/usage-based-pricing.html" />
   </url>
 </urlset>

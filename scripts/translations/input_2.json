@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "headless-ui-architecture",
+    "name": "Headless UI Architecture",
+    "category": "Design Systems & Engineering",
+    "definition": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow."
+  },
+  {
+    "slug": "composite-design-token",
+    "name": "Composite Design Token",
+    "category": "Design Systems & Engineering",
+    "definition": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision."
+  },
+  {
+    "slug": "fluid-typography-spacing-system",
+    "name": "Fluid Typography & Spacing System",
+    "category": "Design Systems & Engineering",
+    "definition": "A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width."
+  },
+  {
+    "slug": "component-telemetry",
+    "name": "Component Telemetry",
+    "category": "Design Systems & Engineering",
+    "definition": "Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them."
+  },
+  {
+    "slug": "visual-regression-testing",
+    "name": "Visual Regression Testing",
+    "category": "Design Systems & Engineering",
+    "definition": "Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update."
+  },
+  {
+    "slug": "design-system-versioning-semver",
+    "name": "Design System Versioning & SemVer",
+    "category": "Design Systems & Engineering",
+    "definition": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API."
+  },
+  {
+    "slug": "agentic-ai",
+    "name": "Agentic AI",
+    "category": "AI & Agentic Systems",
+    "definition": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits."
+  },
+  {
+    "slug": "ai-agent",
+    "name": "AI Agent",
+    "category": "AI & Agentic Systems",
+    "definition": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step."
+  },
+  {
+    "slug": "agent-harness",
+    "name": "Agent Harness",
+    "category": "AI & Agentic Systems",
+    "definition": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment."
+  },
+  {
+    "slug": "design-harness",
+    "name": "Design Harness",
+    "category": "AI & Agentic Systems",
+    "definition": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria."
+  },
+  {
+    "slug": "model-context-protocol-mcp",
+    "name": "Model Context Protocol (MCP)",
+    "category": "AI & Agentic Systems",
+    "definition": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications."
+  },
+  {
+    "slug": "agent-skills-skill-md",
+    "name": "Agent Skills (SKILL.md)",
+    "category": "AI & Agentic Systems",
+    "definition": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets."
+  },
+  {
+    "slug": "context-engineering",
+    "name": "Context Engineering",
+    "category": "AI & Agentic Systems",
+    "definition": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results."
+  },
+  {
+    "slug": "prompt-engineering",
+    "name": "Prompt Engineering",
+    "category": "AI & Agentic Systems",
+    "definition": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior."
+  },
+  {
+    "slug": "retrieval-augmented-generation-rag",
+    "name": "Retrieval-Augmented Generation (RAG)",
+    "category": "AI & Agentic Systems",
+    "definition": "Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence."
+  },
+  {
+    "slug": "tool-calling-function-calling",
+    "name": "Tool Calling (Function Calling)",
+    "category": "AI & Agentic Systems",
+    "definition": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use."
+  },
+  {
+    "slug": "human-in-the-loop-hitl",
+    "name": "Human-in-the-Loop (HITL)",
+    "category": "AI & Agentic Systems",
+    "definition": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds."
+  },
+  {
+    "slug": "generative-ui",
+    "name": "Generative UI",
+    "category": "AI & Agentic Systems",
+    "definition": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text."
+  },
+  {
+    "slug": "ai-native-design",
+    "name": "AI-native Design",
+    "category": "AI & Agentic Systems",
+    "definition": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes."
+  },
+  {
+    "slug": "vibe-coding",
+    "name": "Vibe Coding",
+    "category": "AI & Agentic Systems",
+    "definition": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation."
+  },
+  {
+    "slug": "structured-data-for-llms",
+    "name": "Structured Data for LLMs",
+    "category": "AI & Agentic Systems",
+    "definition": "Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD."
+  },
+  {
+    "slug": "llms-txt-proposal",
+    "name": "llms.txt Proposal",
+    "category": "AI & Agentic Systems",
+    "definition": "llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources."
+  },
+  {
+    "slug": "multimodal-ai",
+    "name": "Multimodal AI",
+    "category": "AI & Agentic Systems",
+    "definition": "Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen."
+  },
+  {
+    "slug": "knowledge-graphs-ai-context",
+    "name": "Knowledge Graphs (AI Context)",
+    "category": "AI & Agentic Systems",
+    "definition": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation."
+  },
+  {
+    "slug": "agentic-ux",
+    "name": "Agentic UX",
+    "category": "AI & Agentic Systems",
+    "definition": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action."
+  },
+  {
+    "slug": "system-prompts-guardrails",
+    "name": "System Prompts & Guardrails",
+    "category": "AI & Agentic Systems",
+    "definition": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate."
+  },
+  {
+    "slug": "synthetic-user-testing",
+    "name": "Synthetic User Testing",
+    "category": "AI & Agentic Systems",
+    "definition": "Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users."
+  },
+  {
+    "slug": "autonomous-workflow-orchestration",
+    "name": "Autonomous Workflow Orchestration",
+    "category": "AI & Agentic Systems",
+    "definition": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions."
+  },
+  {
+    "slug": "evaluation-harness-ai-evals",
+    "name": "Evaluation Harness (AI Evals)",
+    "category": "AI & Agentic Systems",
+    "definition": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior."
+  },
+  {
+    "slug": "context-drift",
+    "name": "Context Drift",
+    "category": "AI & Agentic Systems",
+    "definition": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate."
+  },
+  {
+    "slug": "multi-agent-systems-mas",
+    "name": "Multi-Agent Systems (MAS)",
+    "category": "AI & Agentic Systems",
+    "definition": "A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state."
+  },
+  {
+    "slug": "conversion-rate-optimization-cro",
+    "name": "Conversion Rate Optimization (CRO)",
+    "category": "Product Strategy & Growth",
+    "definition": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes."
+  },
+  {
+    "slug": "ab-testing-split-testing",
+    "name": "A/B Testing (Split Testing)",
+    "category": "Product Strategy & Growth",
+    "definition": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested."
+  },
+  {
+    "slug": "continuous-experimentation",
+    "name": "Continuous Experimentation",
+    "category": "Product Strategy & Growth",
+    "definition": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned."
+  },
+  {
+    "slug": "conversion-funnel-architecture",
+    "name": "Conversion Funnel",
+    "category": "Product Strategy & Growth",
+    "definition": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking."
+  },
+  {
+    "slug": "lead-capture-mechanics",
+    "name": "Lead Capture",
+    "category": "Product Strategy & Growth",
+    "definition": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission."
+  },
+  {
+    "slug": "checkout-flow-optimization",
+    "name": "Checkout Flow Optimization",
+    "category": "Product Strategy & Growth",
+    "definition": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation."
+  },
+  {
+    "slug": "product-discovery",
+    "name": "Product Discovery",
+    "category": "Product Strategy & Growth",
+    "definition": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used."
+  },
+  {
+    "slug": "jobs-to-be-done-jtbd",
+    "name": "Jobs to Be Done (JTBD)",
+    "category": "Product Strategy & Growth",
+    "definition": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions."
+  },
+  {
+    "slug": "product-led-growth-plg",
+    "name": "Product-Led Growth (PLG)",
+    "category": "Product Strategy & Growth",
+    "definition": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization."
+  },
+  {
+    "slug": "north-star-metric-nsm",
+    "name": "North Star Metric (NSM)",
+    "category": "Product Strategy & Growth",
+    "definition": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue."
+  },
+  {
+    "slug": "product-strategy-canvas",
+    "name": "Product Strategy Canvas",
+    "category": "Product Strategy & Growth",
+    "definition": "A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve."
+  },
+  {
+    "slug": "customer-journey-mapping",
+    "name": "Customer Journey Mapping",
+    "category": "Product Strategy & Growth",
+    "definition": "Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities."
+  },
+  {
+    "slug": "enterprise-ux-strategy",
+    "name": "Enterprise UX Strategy",
+    "category": "Product Strategy & Growth",
+    "definition": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements."
+  }
+]

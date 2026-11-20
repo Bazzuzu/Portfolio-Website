@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "object-oriented-ux",
+    "name": "Object-Oriented UX",
+    "category": "UX & Product Architecture",
+    "definition": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows."
+  },
+  {
+    "slug": "orca-framework",
+    "name": "ORCA Framework",
+    "category": "UX & Product Architecture",
+    "definition": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information."
+  },
+  {
+    "slug": "object-mapping",
+    "name": "Object Mapping",
+    "category": "UX & Product Architecture",
+    "definition": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens."
+  },
+  {
+    "slug": "domain-context-modeling",
+    "name": "Domain Context Modeling",
+    "category": "UX & Product Architecture",
+    "definition": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail."
+  },
+  {
+    "slug": "cardinality-ux-architecture",
+    "name": "Cardinality (UX Architecture)",
+    "category": "UX & Product Architecture",
+    "definition": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search."
+  },
+  {
+    "slug": "information-architecture",
+    "name": "Information Architecture (IA)",
+    "category": "UX & Product Architecture",
+    "definition": "Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete."
+  },
+  {
+    "slug": "core-model",
+    "name": "Core Model",
+    "category": "UX & Product Architecture",
+    "definition": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take."
+  },
+  {
+    "slug": "enterprise-information-architecture",
+    "name": "Enterprise Information Architecture",
+    "category": "UX & Product Architecture",
+    "definition": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems."
+  },
+  {
+    "slug": "mental-model-mapping",
+    "name": "Mental Model Mapping",
+    "category": "UX & Product Architecture",
+    "definition": "Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur."
+  },
+  {
+    "slug": "content-modeling",
+    "name": "Content Modeling",
+    "category": "UX & Product Architecture",
+    "definition": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels."
+  },
+  {
+    "slug": "operational-ux",
+    "name": "Operational UX",
+    "category": "UX & Product Architecture",
+    "definition": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems."
+  },
+  {
+    "slug": "service-blueprinting",
+    "name": "Service Blueprinting",
+    "category": "UX & Product Architecture",
+    "definition": "Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible."
+  },
+  {
+    "slug": "structural-navigation-model",
+    "name": "Structural Navigation Model",
+    "category": "UX & Product Architecture",
+    "definition": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view."
+  },
+  {
+    "slug": "state-transition-matrix",
+    "name": "State Transition Matrix",
+    "category": "UX & Product Architecture",
+    "definition": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests."
+  },
+  {
+    "slug": "polyhierarchy",
+    "name": "Polyhierarchy",
+    "category": "UX & Product Architecture",
+    "definition": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths."
+  },
+  {
+    "slug": "controlled-vocabulary",
+    "name": "Controlled Vocabulary",
+    "category": "UX & Product Architecture",
+    "definition": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect."
+  },
+  {
+    "slug": "faceted-classification",
+    "name": "Faceted Classification",
+    "category": "UX & Product Architecture",
+    "definition": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin."
+  },
+  {
+    "slug": "task-model",
+    "name": "Task Model",
+    "category": "UX & Product Architecture",
+    "definition": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support."
+  },
+  {
+    "slug": "wayfinding-system",
+    "name": "Wayfinding System",
+    "category": "UX & Product Architecture",
+    "definition": "A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations."
+  },
+  {
+    "slug": "semantic-zoom",
+    "name": "Semantic Zoom",
+    "category": "UX & Product Architecture",
+    "definition": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content."
+  },
+  {
+    "slug": "breadcrumb-hierarchy",
+    "name": "Breadcrumb Hierarchy",
+    "category": "UX & Product Architecture",
+    "definition": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page."
+  },
+  {
+    "slug": "affordance-layering",
+    "name": "Affordance Layering",
+    "category": "UX & Product Architecture",
+    "definition": "Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant."
+  },
+  {
+    "slug": "progressive-disclosure",
+    "name": "Progressive Disclosure",
+    "category": "UX & Product Architecture",
+    "definition": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available."
+  },
+  {
+    "slug": "conceptual-schema",
+    "name": "Conceptual Schema",
+    "category": "UX & Product Architecture",
+    "definition": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy."
+  },
+  {
+    "slug": "interaction-invariant",
+    "name": "Interaction Invariant",
+    "category": "UX & Product Architecture",
+    "definition": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule."
+  },
+  {
+    "slug": "design-system",
+    "name": "Design System",
+    "category": "Design Systems & Engineering",
+    "definition": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share."
+  },
+  {
+    "slug": "design-tokens",
+    "name": "Design Tokens",
+    "category": "Design Systems & Engineering",
+    "definition": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms."
+  },
+  {
+    "slug": "design-tokens-format-module-dtcg",
+    "name": "Design Tokens Format Module (DTCG)",
+    "category": "Design Systems & Engineering",
+    "definition": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track."
+  },
+  {
+    "slug": "semantic-tokens",
+    "name": "Semantic Tokens",
+    "category": "Design Systems & Engineering",
+    "definition": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes."
+  },
+  {
+    "slug": "design-primitives",
+    "name": "Design Primitives",
+    "category": "Design Systems & Engineering",
+    "definition": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout."
+  },
+  {
+    "slug": "component-architecture",
+    "name": "Component Architecture",
+    "category": "Design Systems & Engineering",
+    "definition": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction."
+  },
+  {
+    "slug": "component-libraries",
+    "name": "Component Libraries",
+    "category": "Design Systems & Engineering",
+    "definition": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them."
+  },
+  {
+    "slug": "design-system-governance",
+    "name": "Design System Governance",
+    "category": "Design Systems & Engineering",
+    "definition": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption."
+  },
+  {
+    "slug": "design-engineering",
+    "name": "Design Engineering",
+    "category": "Design Systems & Engineering",
+    "definition": "Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production."
+  },
+  {
+    "slug": "design-to-code-workflow",
+    "name": "Design-to-Code Workflow",
+    "category": "Design Systems & Engineering",
+    "definition": "A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app."
+  },
+  {
+    "slug": "atomic-design",
+    "name": "Atomic Design",
+    "category": "Design Systems & Engineering",
+    "definition": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface."
+  },
+  {
+    "slug": "figma-variables-modes",
+    "name": "Figma Variables & Modes",
+    "category": "Design Systems & Engineering",
+    "definition": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme."
+  },
+  {
+    "slug": "semantic-html",
+    "name": "Semantic HTML",
+    "category": "Design Systems & Engineering",
+    "definition": "Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it."
+  },
+  {
+    "slug": "accessibility-wcag",
+    "name": "Accessibility and WCAG",
+    "category": "Design Systems & Engineering",
+    "definition": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible."
+  },
+  {
+    "slug": "aria-accessible-rich-internet-applications",
+    "name": "ARIA (Accessible Rich Internet Applications)",
+    "category": "Design Systems & Engineering",
+    "definition": "WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded."
+  },
+  {
+    "slug": "web-components",
+    "name": "Web Components",
+    "category": "Design Systems & Engineering",
+    "definition": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements."
+  },
+  {
+    "slug": "designops",
+    "name": "DesignOps",
+    "category": "Design Systems & Engineering",
+    "definition": "DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn."
+  },
+  {
+    "slug": "style-dictionary",
+    "name": "Style Dictionary",
+    "category": "Design Systems & Engineering",
+    "definition": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions."
+  },
+  {
+    "slug": "token-resolver-engine",
+    "name": "Token Resolver Engine",
+    "category": "Design Systems & Engineering",
+    "definition": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use."
+  }
+]

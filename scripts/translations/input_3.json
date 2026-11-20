@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "b2b-saas-interaction-model",
+    "name": "B2B SaaS Interaction Model",
+    "category": "Product Strategy & Growth",
+    "definition": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product."
+  },
+  {
+    "slug": "b2c-engagement-loops",
+    "name": "B2C Engagement Loops",
+    "category": "Product Strategy & Growth",
+    "definition": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about."
+  },
+  {
+    "slug": "product-telemetry-analytics",
+    "name": "Product Telemetry & Analytics",
+    "category": "Product Strategy & Growth",
+    "definition": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both."
+  },
+  {
+    "slug": "growth-design",
+    "name": "Growth Design",
+    "category": "Product Strategy & Growth",
+    "definition": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey."
+  },
+  {
+    "slug": "design-strategy-alignment",
+    "name": "Design Strategy Alignment",
+    "category": "Product Strategy & Growth",
+    "definition": "Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result."
+  },
+  {
+    "slug": "product-market-fit-pmf-engine",
+    "name": "Product–Market Fit (PMF)",
+    "category": "Product Strategy & Growth",
+    "definition": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business."
+  },
+  {
+    "slug": "ltv-to-cac-ratio",
+    "name": "LTV to CAC Ratio",
+    "category": "Product Strategy & Growth",
+    "definition": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone."
+  },
+  {
+    "slug": "activation-metric",
+    "name": "Activation Metric",
+    "category": "Product Strategy & Growth",
+    "definition": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window."
+  },
+  {
+    "slug": "time-to-value-ttv",
+    "name": "Time-to-Value (TTV)",
+    "category": "Product Strategy & Growth",
+    "definition": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days."
+  },
+  {
+    "slug": "churn-mitigation-architecture",
+    "name": "Churn Mitigation",
+    "category": "Product Strategy & Growth",
+    "definition": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally."
+  },
+  {
+    "slug": "feature-flag-strategy",
+    "name": "Feature Flag Strategy",
+    "category": "Product Strategy & Growth",
+    "definition": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it."
+  },
+  {
+    "slug": "value-proposition-canvas",
+    "name": "Value Proposition Canvas",
+    "category": "Product Strategy & Growth",
+    "definition": "The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators."
+  },
+  {
+    "slug": "noun-foraging",
+    "name": "Noun Foraging",
+    "category": "UX & Product Architecture",
+    "definition": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers."
+  },
+  {
+    "slug": "nested-object-matrix",
+    "name": "Nested Object Matrix",
+    "category": "UX & Product Architecture",
+    "definition": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records."
+  },
+  {
+    "slug": "cta-matrix",
+    "name": "CTA Matrix",
+    "category": "UX & Product Architecture",
+    "definition": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens."
+  },
+  {
+    "slug": "object-guide",
+    "name": "Object Guide",
+    "category": "UX & Product Architecture",
+    "definition": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round."
+  },
+  {
+    "slug": "ooux-ux-fails",
+    "name": "Four UX Fails in OOUX",
+    "category": "UX & Product Architecture",
+    "definition": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records."
+  },
+  {
+    "slug": "object-prioritization",
+    "name": "Object Prioritization",
+    "category": "UX & Product Architecture",
+    "definition": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens."
+  },
+  {
+    "slug": "orca-relationship-requirements",
+    "name": "ORCA Relationship Requirements",
+    "category": "UX & Product Architecture",
+    "definition": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test."
+  },
+  {
+    "slug": "junction-object",
+    "name": "Junction Object",
+    "category": "UX & Product Architecture",
+    "definition": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it."
+  },
+  {
+    "slug": "user-retention",
+    "name": "User Retention",
+    "category": "Product Strategy & Growth",
+    "definition": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level."
+  },
+  {
+    "slug": "product-qualified-lead-pql",
+    "name": "Product-Qualified Lead (PQL)",
+    "category": "Product Strategy & Growth",
+    "definition": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service."
+  },
+  {
+    "slug": "european-accessibility-act",
+    "name": "European Accessibility Act (EAA)",
+    "category": "Design Systems & Engineering",
+    "definition": "The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases."
+  },
+  {
+    "slug": "en-301-549",
+    "name": "EN 301 549",
+    "category": "Design Systems & Engineering",
+    "definition": "EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services."
+  },
+  {
+    "slug": "ada-web-accessibility",
+    "name": "ADA Web Accessibility",
+    "category": "Design Systems & Engineering",
+    "definition": "ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation."
+  },
+  {
+    "slug": "section-508",
+    "name": "Section 508",
+    "category": "Design Systems & Engineering",
+    "definition": "Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation."
+  },
+  {
+    "slug": "web-accessibility-audit",
+    "name": "Web Accessibility Audit",
+    "category": "Design Systems & Engineering",
+    "definition": "A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes."
+  },
+  {
+    "slug": "accessible-forms",
+    "name": "Accessible Forms",
+    "category": "UX & Product Architecture",
+    "definition": "An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand."
+  },
+  {
+    "slug": "keyboard-accessibility",
+    "name": "Keyboard Accessibility & Focus Management",
+    "category": "Design Systems & Engineering",
+    "definition": "Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task."
+  },
+  {
+    "slug": "object-attributes-ooux",
+    "name": "Object Attributes in OOUX",
+    "category": "UX & Product Architecture",
+    "definition": "Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description."
+  },
+  {
+    "slug": "object-inheritance-ooux",
+    "name": "Object Inheritance in OOUX",
+    "category": "UX & Product Architecture",
+    "definition": "Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve."
+  },
+  {
+    "slug": "object-representation-ooux",
+    "name": "Object Representation",
+    "category": "UX & Product Architecture",
+    "definition": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view."
+  },
+  {
+    "slug": "object-oriented-user-stories",
+    "name": "Object-Oriented User Stories",
+    "category": "UX & Product Architecture",
+    "definition": "Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round."
+  },
+  {
+    "slug": "ooux-prototyping-and-testing",
+    "name": "OOUX Prototyping and Testing",
+    "category": "UX & Product Architecture",
+    "definition": "OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface."
+  },
+  {
+    "slug": "orca-sprint",
+    "name": "ORCA Sprint",
+    "category": "UX & Product Architecture",
+    "definition": "An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners."
+  },
+  {
+    "slug": "relationship-prioritization",
+    "name": "Relationship Prioritization",
+    "category": "UX & Product Architecture",
+    "definition": "Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information."
+  },
+  {
+    "slug": "attribute-prioritization",
+    "name": "Attribute Prioritization",
+    "category": "UX & Product Architecture",
+    "definition": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait."
+  },
+  {
+    "slug": "cta-prioritization",
+    "name": "CTA Prioritization",
+    "category": "UX & Product Architecture",
+    "definition": "CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant."
+  },
+  {
+    "slug": "shapeshifter-matrix",
+    "name": "Shapeshifter Matrix",
+    "category": "UX & Product Architecture",
+    "definition": "A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface."
+  },
+  {
+    "slug": "tree-systems-ooux",
+    "name": "Tree Systems in OOUX",
+    "category": "UX & Product Architecture",
+    "definition": "A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects."
+  },
+  {
+    "slug": "content-prototyping",
+    "name": "Content Prototyping",
+    "category": "UX & Product Architecture",
+    "definition": "Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design."
+  },
+  {
+    "slug": "conversational-ux",
+    "name": "Conversational UX",
+    "category": "UX & Product Architecture",
+    "definition": "Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task."
+  },
+  {
+    "slug": "design-critique",
+    "name": "Design Critique",
+    "category": "UX & Product Architecture",
+    "definition": "A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project."
+  },
+  {
+    "slug": "researchops",
+    "name": "ResearchOps",
+    "category": "UX & Product Architecture",
+    "definition": "ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use."
+  }
+]

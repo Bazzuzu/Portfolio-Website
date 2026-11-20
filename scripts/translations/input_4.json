@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "figma-code-connect",
+    "name": "Figma Code Connect",
+    "category": "Design Systems & Engineering",
+    "definition": "Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component."
+  },
+  {
+    "slug": "figma-mcp-server",
+    "name": "Figma MCP Server",
+    "category": "Design Systems & Engineering",
+    "definition": "The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content."
+  },
+  {
+    "slug": "code-to-design-workflow",
+    "name": "Code-to-Design Workflow",
+    "category": "Design Systems & Engineering",
+    "definition": "A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work."
+  },
+  {
+    "slug": "design-system-adoption",
+    "name": "Design System Adoption",
+    "category": "Design Systems & Engineering",
+    "definition": "Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately."
+  },
+  {
+    "slug": "design-system-audit",
+    "name": "Design System Audit",
+    "category": "Design Systems & Engineering",
+    "definition": "A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire."
+  },
+  {
+    "slug": "design-system-documentation",
+    "name": "Design System Documentation",
+    "category": "Design Systems & Engineering",
+    "definition": "Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product."
+  },
+  {
+    "slug": "design-system-metrics",
+    "name": "Design System Metrics",
+    "category": "Design Systems & Engineering",
+    "definition": "Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist."
+  },
+  {
+    "slug": "design-system-migration",
+    "name": "Design System Migration",
+    "category": "Design Systems & Engineering",
+    "definition": "A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them."
+  },
+  {
+    "slug": "design-system-theming",
+    "name": "Theming",
+    "category": "Design Systems & Engineering",
+    "definition": "Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API."
+  },
+  {
+    "slug": "pattern-library",
+    "name": "Pattern Library",
+    "category": "Design Systems & Engineering",
+    "definition": "A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task."
+  },
+  {
+    "slug": "ai-ready-design-system",
+    "name": "AI-ready Design System",
+    "category": "Design Systems & Engineering",
+    "definition": "An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format."
+  },
+  {
+    "slug": "alt-text",
+    "name": "Alt Text",
+    "category": "Design Systems & Engineering",
+    "definition": "Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image."
+  },
+  {
+    "slug": "design-debt",
+    "name": "Design Debt",
+    "category": "Design Systems & Engineering",
+    "definition": "Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited."
+  },
+  {
+    "slug": "design-qa",
+    "name": "Design QA",
+    "category": "Design Systems & Engineering",
+    "definition": "Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods."
+  },
+  {
+    "slug": "shadcn-ui",
+    "name": "shadcn/ui",
+    "category": "Design Systems & Engineering",
+    "definition": "shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase."
+  },
+  {
+    "slug": "storybook",
+    "name": "Storybook",
+    "category": "Design Systems & Engineering",
+    "definition": "Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error."
+  },
+  {
+    "slug": "touch-target-size",
+    "name": "Touch Target Size",
+    "category": "Design Systems & Engineering",
+    "definition": "Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input."
+  },
+  {
+    "slug": "wcag-color-contrast",
+    "name": "WCAG Color Contrast",
+    "category": "Design Systems & Engineering",
+    "definition": "WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics."
+  },
+  {
+    "slug": "zoom-text-resize-reflow",
+    "name": "Zoom, Text Resize & Reflow",
+    "category": "Design Systems & Engineering",
+    "definition": "Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions."
+  },
+  {
+    "slug": "ai-assisted-design",
+    "name": "AI-assisted Design",
+    "category": "AI & Agentic Systems",
+    "definition": "AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result."
+  },
+  {
+    "slug": "ai-grounding",
+    "name": "AI Grounding",
+    "category": "AI & Agentic Systems",
+    "definition": "In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns."
+  },
+  {
+    "slug": "ai-hallucination",
+    "name": "AI Hallucination",
+    "category": "AI & Agentic Systems",
+    "definition": "An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record."
+  },
+  {
+    "slug": "ai-model-routing",
+    "name": "Model Routing",
+    "category": "AI & Agentic Systems",
+    "definition": "Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints."
+  },
+  {
+    "slug": "ai-prototyping",
+    "name": "AI Prototyping",
+    "category": "AI & Agentic Systems",
+    "definition": "AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype."
+  },
+  {
+    "slug": "ai-transparency",
+    "name": "AI Transparency",
+    "category": "AI & Agentic Systems",
+    "definition": "AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has."
+  },
+  {
+    "slug": "ai-ux-research",
+    "name": "AI in UX Research",
+    "category": "AI & Agentic Systems",
+    "definition": "AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use."
+  },
+  {
+    "slug": "context-window",
+    "name": "Context Window",
+    "category": "AI & Agentic Systems",
+    "definition": "A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response."
+  },
+  {
+    "slug": "explainable-ai",
+    "name": "Explainable AI",
+    "category": "AI & Agentic Systems",
+    "definition": "Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next."
+  },
+  {
+    "slug": "prompt-injection",
+    "name": "Prompt Injection",
+    "category": "AI & Agentic Systems",
+    "definition": "Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page."
+  },
+  {
+    "slug": "responsible-ai-design",
+    "name": "Responsible AI Design",
+    "category": "AI & Agentic Systems",
+    "definition": "Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation."
+  },
+  {
+    "slug": "structured-outputs",
+    "name": "Structured Outputs",
+    "category": "AI & Agentic Systems",
+    "definition": "Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer."
+  },
+  {
+    "slug": "trust-calibration-ai",
+    "name": "Trust Calibration in AI",
+    "category": "AI & Agentic Systems",
+    "definition": "Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed."
+  },
+  {
+    "slug": "ai-unit-economics",
+    "name": "AI Unit Economics",
+    "category": "Product Strategy & Growth",
+    "definition": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary."
+  },
+  {
+    "slug": "cac-payback-period",
+    "name": "CAC Payback Period",
+    "category": "Product Strategy & Growth",
+    "definition": "CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months."
+  },
+  {
+    "slug": "contribution-margin",
+    "name": "Contribution Margin",
+    "category": "Product Strategy & Growth",
+    "definition": "Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue."
+  },
+  {
+    "slug": "cost-to-serve",
+    "name": "Cost to Serve",
+    "category": "Product Strategy & Growth",
+    "definition": "Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method."
+  },
+  {
+    "slug": "customer-acquisition-cost-cac",
+    "name": "Customer Acquisition Cost (CAC)",
+    "category": "Product Strategy & Growth",
+    "definition": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired."
+  },
+  {
+    "slug": "customer-lifetime-value-ltv",
+    "name": "Customer Lifetime Value (LTV)",
+    "category": "Product Strategy & Growth",
+    "definition": "Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone."
+  },
+  {
+    "slug": "gross-margin",
+    "name": "Gross Margin",
+    "category": "Product Strategy & Growth",
+    "definition": "Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted."
+  },
+  {
+    "slug": "net-revenue-retention-nrr",
+    "name": "Net Revenue Retention (NRR)",
+    "category": "Product Strategy & Growth",
+    "definition": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers."
+  },
+  {
+    "slug": "outcome-based-pricing",
+    "name": "Outcome-Based Pricing",
+    "category": "Product Strategy & Growth",
+    "definition": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable."
+  },
+  {
+    "slug": "pricing-metric",
+    "name": "Pricing Metric",
+    "category": "Product Strategy & Growth",
+    "definition": "A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change."
+  },
+  {
+    "slug": "unit-economics",
+    "name": "Unit Economics",
+    "category": "Product Strategy & Growth",
+    "definition": "Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs."
+  },
+  {
+    "slug": "usage-based-pricing",
+    "name": "Usage-Based Pricing",
+    "category": "Product Strategy & Growth",
+    "definition": "Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits."
+  }
+]
