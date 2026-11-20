@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Understanding Context Drift in LLMs and AI Agent Sessions</title>
-  <meta name="description" content="Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.">
+  <title>Context Drift in AI Agents: Signs and Practical Checks</title>
+  <meta name="description" content="Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/context-drift.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Understanding Context Drift in LLMs and AI Agent Sessions">
-  <meta property="og:description" content="Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.">
+  <meta property="og:title" content="Context Drift in AI Agents: Signs and Practical Checks">
+  <meta property="og:description" content="Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/context-drift.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Understanding Context Drift in LLMs and AI Agent Sessions">
-  <meta name="twitter:description" content="Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.">
+  <meta name="twitter:title" content="Context Drift in AI Agents: Signs and Practical Checks">
+  <meta name="twitter:description" content="Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/context-drift.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/context-drift.html",
+      "name": "Context Drift in AI Agents: Signs and Practical Checks",
+      "description": "Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+        "https://arxiv.org/abs/2307.03172"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/context-drift.html#term",
       "name": "Context Drift",
       "termCode": "context-drift",
-      "description": "Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.",
+      "description": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.",
+      "url": "https://lexkonovalov.com/glossary/context-drift.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/context-drift.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,39 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.</p>
-      </section>
+    <p class="glossary-term-section__text">Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-context-drift-look-like">
+<h2 id="section-what-does-context-drift-look-like" class="glossary-term-section__title">What does context drift look like?</h2>
+<p class="glossary-term-section__text">An assistant may revert to a rejected option, apply a rule to the wrong record, or continue after the goal has changed. Record the specific failure and the information available at that step. A long conversation can expose such problems, while the same symptom can also come from ambiguous instructions, poor retrieval, or an incorrect tool result.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-booking-assistant-forgets-a-constraint">
+<h2 id="section-example-a-booking-assistant-forgets-a-constraint" class="glossary-term-section__title">Example: A booking assistant forgets a constraint</h2>
+<p class="glossary-term-section__text">A traveler asks for a refundable flight arriving before noon. After several alternatives and policy lookups, the assistant recommends a cheaper nonrefundable fare. The team checks whether the refundability requirement remained in the model’s context and whether the tool result described that fare correctly.</p>
+<p class="glossary-term-section__text">A useful task state records the selected traveler, dates, constraints, and unresolved questions. Refresh it when the user changes a requirement. When summarizing history, retain the reason an option was rejected.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-for-drift">
+<h2 id="section-how-do-you-test-for-drift" class="glossary-term-section__title">How do you test for drift?</h2>
+<p class="glossary-term-section__text">Create a multi-turn task with constraints that remain relevant near the end. Check the final recommendation and intermediate actions against those constraints. Compare context-management changes on the same cases, including a changed requirement and conflicting evidence. Summarization and selective retrieval are approaches to evaluate. Measure whether they preserve the facts the task requires.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/context-window.html">Context Window</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective Context Engineering for AI Agents, Anthropic</a></li>
+<li><a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener noreferrer">Lost in the Middle, Liu et al.</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Pinpoints the root cause of late-session agent failures, guiding developers to implement periodic state summarization and context pruning mechanisms.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Context saturation</span><span class="concept-tag">attention dilution</span><span class="concept-tag">instruction degradation</span><span class="concept-tag">state decay.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">As token lengths expand, the model&#039;s self-attention attention weights disperse, reducing adherence to system prompts and causing task derailment.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li><li><span>Memory Management</span></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Nelson F. Liu et al., Lost in the Middle: How Language Models Use Long Contexts</li><li>Thoughtworks Agent Research</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

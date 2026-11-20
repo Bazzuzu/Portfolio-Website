@@ -8,18 +8,26 @@ function runCommand(cmd: string) {
 }
 
 function safeGitCommit(commitMsg: string) {
-  if (fs.existsSync('.git/index.lock')) {
-    fs.unlinkSync('.git/index.lock');
+  for (let i = 0; i < 5; i++) {
+    try {
+      if (fs.existsSync('.git/index.lock')) {
+        fs.unlinkSync('.git/index.lock');
+      }
+      runCommand('git add -A');
+      if (fs.existsSync('.git/index.lock')) {
+        fs.unlinkSync('.git/index.lock');
+      }
+      runCommand(`git commit -m "${commitMsg}"`);
+      return;
+    } catch (e) {
+      console.warn(`Git commit attempt ${i + 1} failed, retrying in 1s...`, e);
+      execSync('sleep 1');
+    }
   }
-  runCommand('git add -A');
-  if (fs.existsSync('.git/index.lock')) {
-    fs.unlinkSync('.git/index.lock');
-  }
-  runCommand(`git commit -m "${commitMsg}"`);
 }
 
 async function main() {
-  const batchesToRun = [3, 4, 5];
+  const batchesToRun = [5];
 
   for (const bNum of batchesToRun) {
     const bDef = BATCH_DEFINITIONS.find(b => b.batchNumber === bNum)!;

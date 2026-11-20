@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Evaluation Harnesses: Benchmarking and Testing LLM Agents</title>
-  <meta name="description" content="An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.">
+  <title>AI Evaluation Harness: Definition, Test Cases, and Example</title>
+  <meta name="description" content="Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Evaluation Harnesses: Benchmarking and Testing LLM Agents">
-  <meta property="og:description" content="An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.">
+  <meta property="og:title" content="AI Evaluation Harness: Definition, Test Cases, and Example">
+  <meta property="og:description" content="Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Evaluation Harnesses: Benchmarking and Testing LLM Agents">
-  <meta name="twitter:description" content="An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.">
+  <meta name="twitter:title" content="AI Evaluation Harness: Definition, Test Cases, and Example">
+  <meta name="twitter:description" content="Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html",
+      "name": "AI Evaluation Harness: Definition, Test Cases, and Example",
+      "description": "Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+        "https://docs.langchain.com/langsmith/evaluation"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#term",
       "name": "Evaluation Harness (AI Evals)",
       "termCode": "evaluation-harness-ai-evals",
-      "description": "An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.",
+      "description": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.",
+      "url": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,44 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.</p>
-      </section>
+    <p class="glossary-term-section__text">An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.</p>
+<p class="glossary-term-section__text">An evaluation suite is the collection of test cases. The harness executes those cases. An agent harness, by comparison, runs the agent itself; an evaluation can test that runtime and its model together.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-a-useful-test-includes">
+<h2 id="section-what-a-useful-test-includes" class="glossary-term-section__title">What a useful test includes</h2>
+<p class="glossary-term-section__text">A test case needs an input, relevant starting conditions, and explicit success criteria. The harness should capture the outputs and, when relevant, tool calls and changes in the test environment.</p>
+<p class="glossary-term-section__text">Graders can use code, human judgment, or another model. Use a method appropriate to the claim being checked, and calibrate model-based judgments against reviewed examples.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-updating-a-customer-address">
+<h2 id="section-example-updating-a-customer-address" class="glossary-term-section__title">Example: updating a customer address</h2>
+<p class="glossary-term-section__text">An agent is asked to change a test customer's delivery address. A useful evaluation checks that the correct record contains the requested address, unrelated records remain unchanged, and the final message accurately describes the outcome.</p>
+<p class="glossary-term-section__text">The suite should also cover missing address fields, insufficient permissions, and a tool timeout. A successful-sounding reply alone does not prove that the update happened.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-make-comparisons-meaningful">
+<h2 id="section-make-comparisons-meaningful" class="glossary-term-section__title">Make comparisons meaningful</h2>
+<p class="glossary-term-section__text">Version the cases, prompts, model configuration, tools, and grading rules. Keep initial conditions comparable and run multiple trials when behavior varies.</p>
+<p class="glossary-term-section__text">Report failures by category alongside aggregate scores. Record latency and cost where they matter to the task.</p>
+<p class="glossary-term-section__text">Keep evaluation cases separate from examples used to tune the system. A strong offline score supports a release decision, while production monitoring and user research provide additional evidence about real use.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-harness.html">Design Harness</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
+<li><a href="/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-hallucination.html">AI Hallucination</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">Anthropic: Demystifying Evals for AI Agents</a></li>
+<li><a href="https://docs.langchain.com/langsmith/evaluation" target="_blank" rel="noopener noreferrer">LangChain: LangSmith Evaluation</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Quantifies generative quality, detects performance regressions across prompt adjustments or model upgrades, and ensures production reliability.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Golden datasets</span><span class="concept-tag">LLM-as-a-judge</span><span class="concept-tag">metric rubrics</span><span class="concept-tag">automated benchmarking.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The harness runs hundreds of deterministic scenarios against the AI system, scoring outputs using automated assertions, reference comparisons, and model-based evaluators.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-harness.html">Design Harness</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/continuous-experimentation.html">Continuous Experimentation</a></li><li><a href="/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>OpenAI Evals Framework</li><li>Thoughtworks, Testing and Evaluating AI Agents</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

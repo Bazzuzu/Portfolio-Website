@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2B SaaS Interaction Design: UI Patterns for Enterprise Software</title>
-  <meta name="description" content="A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.">
+  <title>B2B SaaS Interaction Model: Roles, Objects, and Workflows</title>
+  <meta name="description" content="Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="B2B SaaS Interaction Design: UI Patterns for Enterprise Software">
-  <meta property="og:description" content="A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.">
+  <meta property="og:title" content="B2B SaaS Interaction Model: Roles, Objects, and Workflows">
+  <meta property="og:description" content="Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="B2B SaaS Interaction Design: UI Patterns for Enterprise Software">
-  <meta name="twitter:description" content="A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.">
+  <meta name="twitter:title" content="B2B SaaS Interaction Model: Roles, Objects, and Workflows">
+  <meta name="twitter:description" content="Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html",
+      "name": "B2B SaaS Interaction Model: Roles, Objects, and Workflows",
+      "description": "Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#breadcrumbs"
+      },
+      "citation": [
+        "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#term",
       "name": "B2B SaaS Interaction Model",
       "termCode": "b2b-saas-interaction-model",
-      "description": "A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.",
+      "description": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.",
+      "url": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,44 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.</p>
-      </section>
+    <p class="glossary-term-section__text">A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.</p>
+<p class="glossary-term-section__text">This is a descriptive planning concept rather than one prescribed framework. The relevant model depends on the work: an invoice system, reservation platform, and inventory service need different objects and rules.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-reviewing-invoices">
+<h2 id="section-example-reviewing-invoices" class="glossary-term-section__title">Example: reviewing invoices</h2>
+<p class="glossary-term-section__text">An accountant opens an invoice list for the selected organization, filters pending invoices, and inspects supporting records. A manager can approve invoices within an assigned limit; another reviewer handles larger amounts.</p>
+<p class="glossary-term-section__text">The interaction model needs to explain:</p>
+<ul class="glossary-term-ul">
+<li>Which organization or workspace is active.</li>
+<li>Which records the user can see.</li>
+<li>Which actions are available in the current state.</li>
+<li>How selection works across pages and filters.</li>
+<li>What happens when another person changes a record.</li>
+</ul>
+<p class="glossary-term-section__text">In a multitenant product, the tenant is the customer or organizational context; it is distinct from an individual user.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-model-actions-and-exceptions">
+<h2 id="section-model-actions-and-exceptions" class="glossary-term-section__title">Model actions and exceptions</h2>
+<p class="glossary-term-section__text">For a bulk approval, show the selection count and scope before execution. If some invoices are ineligible, identify the affected records and reason. Give the user a clear account of successful, failed, and unresolved changes.</p>
+<p class="glossary-term-section__text">A disabled button can communicate availability, but the application must also enforce authorization for each request. Interface visibility alone cannot protect a record.</p>
+<p class="glossary-term-section__text">Validate the model through representative tasks with people in different roles. Include handoffs, lost access, stale records, and interrupted work. Keep the resulting rules close to the relevant component and workflow documentation.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/enterprise-information-architecture.html">Enterprise Information Architecture</a></li>
+<li><a href="/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
+<li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview" target="_blank" rel="noopener noreferrer">Microsoft: Architect Multitenant Solutions</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Authorization Cheat Sheet</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Balances high-density functional efficiency for daily power users with intuitive simplicity for executive buyers and occasional administrative reviewers.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Multi-tenancy</span><span class="concept-tag">role-based interfaces</span><span class="concept-tag">bulk operations</span><span class="concept-tag">workspace switching.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Deploys adaptable screen architectures featuring collapsible rails, complex tabular data grids, contextual actions, and permission-aware view gating.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/enterprise-ux-strategy.html">Enterprise UX Strategy</a></li><li><a href="/glossary/b2c-engagement-loops.html">B2C Engagement Loops</a></li><li><a href="/glossary/cardinality-ux-architecture.html">Cardinality (UX Architecture)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Daniel Rosenberg, UX Magic</li><li>Luke Wroblewski, Multi-Device Interaction Design</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

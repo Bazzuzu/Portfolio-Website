@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outcome-Based Pricing: Definition, AI Examples, and UX</title>
+  <meta name="description" content="Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/outcome-based-pricing.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Outcome-Based Pricing: Definition, AI Examples, and UX">
+  <meta property="og:description" content="Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/outcome-based-pricing.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Outcome-Based Pricing: Definition, AI Examples, and UX">
+  <meta name="twitter:description" content="Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/outcome-based-pricing.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/outcome-based-pricing.html",
+      "name": "Outcome-Based Pricing: Definition, AI Examples, and UX",
+      "description": "Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes",
+        "https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage",
+        "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#term",
+      "name": "Outcome-Based Pricing",
+      "termCode": "outcome-based-pricing",
+      "description": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.",
+      "url": "https://lexkonovalov.com/glossary/outcome-based-pricing.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#webpage"
+      },
+      "alternateName": [
+        "Outcome pricing",
+        "Results-based pricing"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Outcome-Based Pricing",
+          "item": "https://lexkonovalov.com/glossary/outcome-based-pricing.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Outcome-Based Pricing</span>
+    </nav>
+    <h1>Outcome-Based Pricing</h1>
+    <div class="meta-bar">
+      <span>Product Strategy &amp; Growth</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-does-outcome-based-pricing-work">
+<h2 id="section-how-does-outcome-based-pricing-work" class="glossary-term-section__title">How does outcome-based pricing work?</h2>
+<p class="glossary-term-section__text">The product needs an operational definition of the result and a way to verify it. A support tool might charge per resolved case; a data service might charge per accepted record.</p>
+<p class="glossary-term-section__text">A billable event does not automatically prove the customer's broader business goal. A support case marked resolved can differ from a customer who is satisfied and able to continue their work.</p>
+<p class="glossary-term-section__text">Document these rules before designing the meter:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Rule</th>
+<th>Question to resolve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outcome</td>
+<td>What result counts, for which customer or task?</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Is acceptance confirmed, inferred, or independently checked?</td>
+</tr>
+<tr>
+<td>Timing</td>
+<td>When is the result final enough to charge?</td>
+</tr>
+<tr>
+<td>Reversal</td>
+<td>What happens if the case reopens or the result is rejected?</td>
+</tr>
+<tr>
+<td>Deduplication</td>
+<td>Can repeated actions create more than one charge?</td>
+</tr>
+<tr>
+<td>Human work</td>
+<td>Do escalation or human-assisted completion count?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-a-simple-outcome-pricing-example">
+<h2 id="section-a-simple-outcome-pricing-example" class="glossary-term-section__title">A simple outcome-pricing example</h2>
+<p class="glossary-term-section__text">Consider a fictional support product charging $2 per resolved case. Its policy requires customer confirmation and no reopening during a seven-day verification window.</p>
+<p class="glossary-term-section__text">Of 100 initially confirmed cases, 10 reopen before the window closes. After every case completes that window, 90 qualify:</p>
+<p class="glossary-term-section__text"><strong>Charge = 90 billable outcomes × $2 = $180.</strong></p>
+<p class="glossary-term-section__text">This is an illustrative policy, not a universal definition of resolution. The provider also incurs costs for the reopened cases and any work that never qualified for billing.</p>
+<p class="glossary-term-section__text">If the product shows provisional charges before verification ends, label them as pending and explain when they can change.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-a-real-ai-example-intercom-fin">
+<h2 id="section-a-real-ai-example-intercom-fin" class="glossary-term-section__title">A real AI example: Intercom Fin</h2>
+<p class="glossary-term-section__text">Intercom documents both confirmed and assumed resolutions. An assumed resolution can occur when a customer leaves after an answer without asking for further help. Its policy also describes adjustments when a customer returns to the same conversation for assistance.</p>
+<p class="glossary-term-section__text">Intercom caps outcome charges at one per conversation even when several actions occur. These are vendor-specific billing rules, not a general definition every AI product follows. Check the current documentation when evaluating the service.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-outcome-based-vs-usage-based-pricing">
+<h2 id="section-outcome-based-vs-usage-based-pricing" class="glossary-term-section__title">Outcome-based vs. usage-based pricing</h2>
+<p class="glossary-term-section__text"><a href="/glossary/usage-based-pricing.html">Usage-based pricing</a> can charge for attempts or resource consumption. Outcome-based pricing makes the defined result central to the charge.</p>
+<p class="glossary-term-section__text">The provider's costs still arise during attempts, retries, and failures. Review <a href="/glossary/ai-unit-economics.html">cost per successful task</a> as well as the price per billed outcome. They may use different success definitions and include different tasks.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-product-designers-make-visible">
+<h2 id="section-what-should-product-designers-make-visible" class="glossary-term-section__title">What should product designers make visible?</h2>
+<p class="glossary-term-section__text">Show the charging rule before customers rely on the service. Provide a history with the task, outcome, verification status, amount, and any correction.</p>
+<p class="glossary-term-section__text">Let customers inspect the evidence and find a clear route to dispute a charge. Explain what happens after a spending limit is reached, including whether work pauses or passes to a person.</p>
+<p class="glossary-term-section__text">Evaluate the quality measure separately from billable volume. A change that marks more cases resolved may increase charges without improving task success or satisfaction.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-does-this-model-become-difficult">
+<h2 id="section-when-does-this-model-become-difficult" class="glossary-term-section__title">When does this model become difficult?</h2>
+<p class="glossary-term-section__text">Outcome pricing becomes harder when the result depends on events outside the product, appears much later, or is difficult for both parties to verify. Define attribution and disputes carefully rather than implying that every generated output is a delivered outcome.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/usage-based-pricing.html">Usage-Based Pricing</a></li>
+<li><a href="/glossary/pricing-metric.html">Pricing Metric</a></li>
+<li><a href="/glossary/ai-unit-economics.html">AI Unit Economics</a></li>
+<li><a href="/glossary/cost-to-serve.html">Cost to Serve</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes" target="_blank" rel="noopener noreferrer">Intercom: Fin AI Agent outcomes</a></li>
+<li><a href="https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage" target="_blank" rel="noopener noreferrer">Intercom: See and manage usage</a></li>
+<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Optimizing cost per task and proving agent ROI</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/net-revenue-retention-nrr.html" class="glossary-term-nav__item" title="Net Revenue Retention (NRR)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/pricing-metric.html" class="glossary-term-nav__item" title="Pricing Metric">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

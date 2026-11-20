@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tool Calling Explained: How LLMs Invoke Code and APIs</title>
-  <meta name="description" content="Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.">
+  <title>Tool Calling (Function Calling): How It Works and Examples</title>
+  <meta name="description" content="Learn how tool calling turns a model">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/tool-calling-function-calling.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Tool Calling Explained: How LLMs Invoke Code and APIs">
-  <meta property="og:description" content="Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.">
+  <meta property="og:title" content="Tool Calling (Function Calling): How It Works and Examples">
+  <meta property="og:description" content="Learn how tool calling turns a model">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/tool-calling-function-calling.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tool Calling Explained: How LLMs Invoke Code and APIs">
-  <meta name="twitter:description" content="Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.">
+  <meta name="twitter:title" content="Tool Calling (Function Calling): How It Works and Examples">
+  <meta name="twitter:description" content="Learn how tool calling turns a model">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,53 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html",
+      "name": "Tool Calling (Function Calling): How It Works and Examples",
+      "description": "Learn how tool calling turns a model's request into an application operation, with a flight-search example and checks for arguments, access, and results.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#breadcrumbs"
+      },
+      "citation": [
+        "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#term",
       "name": "Tool Calling (Function Calling)",
       "termCode": "tool-calling-function-calling",
-      "description": "Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.",
+      "description": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.",
+      "url": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#webpage"
+      },
+      "alternateName": [
+        "Function calling",
+        "Tool use"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +420,54 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.</p>
-      </section>
+    <p class="glossary-term-section__text">Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.</p>
+<p class="glossary-term-section__text">A tool might retrieve records, calculate a value, search available inventory, or update a system. The model's request and the actual execution are separate steps.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-it-works">
+<h2 id="section-how-it-works" class="glossary-term-section__title">How it works</h2>
+<p class="glossary-term-section__text">For an application-defined tool, a typical sequence is:</p>
+<ol class="glossary-term-ol">
+<li>The application supplies a tool name, description, and input schema.</li>
+<li>The model requests the tool with arguments.</li>
+<li>The application validates the request and checks authorization.</li>
+<li>The application executes the permitted operation.</li>
+<li>The result or error is returned for the next response.</li>
+</ol>
+<p class="glossary-term-section__text">Provider-hosted tools can manage execution within the provider's service. The surrounding product still needs to define its permitted scope.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-checking-flight-availability">
+<h2 id="section-example-checking-flight-availability" class="glossary-term-section__title">Example: checking flight availability</h2>
+<p class="glossary-term-section__text">A traveler asks for flights from Madrid to Rome on a specified date. The model requests the search tool with the route and date.</p>
+<p class="glossary-term-section__text">The tool returns available options and relevant fare data. The interface can render those results as comparison cards. If the destination or date is unclear, the application should obtain the missing information before running a consequential operation.</p>
+<p class="glossary-term-section__text">A separate booking tool would need its own requirements and authorization.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-to-check">
+<h2 id="section-what-to-check" class="glossary-term-section__title">What to check</h2>
+<p class="glossary-term-section__text">Validate arguments against both the schema and business rules. A correctly formatted date can still be outside the supported booking window.</p>
+<p class="glossary-term-section__text">Inspect tool errors and unknown outcomes before retrying a write. Use returned evidence when reporting success. Structured arguments improve integration, but they do not establish that the operation is authorized or that its result is correct.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
+<li><a href="/glossary/generative-ui.html">Generative UI</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/agentic-ai.html">Agentic AI</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/structured-outputs.html">Structured Outputs</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/prompt-injection.html">Prompt Injection</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener noreferrer">Anthropic: Tool Use Overview</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Authorization Cheat Sheet</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Empowers probabilistic text models to safely invoke external software functions, query relational databases, and drive computational side effects.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Function signatures</span><span class="concept-tag">JSON Schema definitions</span><span class="concept-tag">programmatic execution</span><span class="concept-tag">argument parsing.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The host application passes available tool schemas to the model; the model evaluates user intent, returns argument JSON, and pauses until the host returns execution results.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li><li><a href="/glossary/generative-ui.html">Generative UI</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/agentic-ai.html">Agentic AI</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>OpenAI Function Calling Documentation</li><li>Anthropic Tool Use Specification</li><li>Vercel AI SDK</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

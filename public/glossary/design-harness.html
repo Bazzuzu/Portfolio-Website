@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is a Design Harness? Enforcing UI Systems in Agentic Code</title>
-  <meta name="description" content="A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.">
+  <title>Design Harness: Guiding and Checking AI-Generated Interfaces</title>
+  <meta name="description" content="Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/design-harness.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is a Design Harness? Enforcing UI Systems in Agentic Code">
-  <meta property="og:description" content="A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.">
+  <meta property="og:title" content="Design Harness: Guiding and Checking AI-Generated Interfaces">
+  <meta property="og:description" content="Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/design-harness.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is a Design Harness? Enforcing UI Systems in Agentic Code">
-  <meta name="twitter:description" content="A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.">
+  <meta name="twitter:title" content="Design Harness: Guiding and Checking AI-Generated Interfaces">
+  <meta name="twitter:description" content="Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/design-harness.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/design-harness.html",
+      "name": "Design Harness: Guiding and Checking AI-Generated Interfaces",
+      "description": "Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#breadcrumbs"
+      },
+      "citation": [
+        "https://developers.figma.com/docs/code-connect/",
+        "https://storybook.js.org/docs/writing-tests"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/design-harness.html#term",
       "name": "Design Harness",
       "termCode": "design-harness",
-      "description": "A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.",
+      "description": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.",
+      "url": "https://lexkonovalov.com/glossary/design-harness.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/design-harness.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,55 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.</p>
-      </section>
+    <p class="glossary-term-section__text">A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.</p>
+<p class="glossary-term-section__text">The term is emerging and its scope varies. There is no single required file format or toolchain. A team should state what its harness includes and which checks it actually enforces.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-it-can-contain">
+<h2 id="section-what-it-can-contain" class="glossary-term-section__title">What it can contain</h2>
+<ul class="glossary-term-ul">
+<li>Component documentation and working usage examples.</li>
+<li>Token names and rules for spacing, typography, and color.</li>
+<li>Interaction, content, and accessibility requirements.</li>
+<li>Representative component states and test data.</li>
+<li>Automated checks and a process for reviewing results.</li>
+</ul>
+<p class="glossary-term-section__text"><a href="/glossary/figma-code-connect.html">Figma Code Connect</a> can link design components to implementation references. <a href="/glossary/storybook.html">Storybook</a> can document component states and support interaction, visual, and accessibility tests. These are possible ingredients in a harness.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-building-a-booking-form">
+<h2 id="section-example-building-a-booking-form" class="glossary-term-section__title">Example: building a booking form</h2>
+<p class="glossary-term-section__text">A task gives an agent the existing field components, date-selection rules, error messages, and responsive examples. It also specifies how focus should move after validation fails.</p>
+<p class="glossary-term-section__text">The agent implements the form and runs the relevant checks. A reviewer then inspects the submitted-data behavior, keyboard interaction, error recovery, and layout with realistic content.</p>
+<p class="glossary-term-section__text">If a required component does not support the scenario, record the gap and make an explicit implementation decision.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-keep-the-checks-meaningful">
+<h2 id="section-keep-the-checks-meaningful" class="glossary-term-section__title">Keep the checks meaningful</h2>
+<p class="glossary-term-section__text">Separate instructions from enforced checks. Documentation can request token use; a configured rule or review process determines whether deviations are caught.</p>
+<p class="glossary-term-section__text">Automated accessibility checks cover only some issues. Include manual evaluation and task testing where needed. Maintain the harness when the underlying design system changes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-which-rules-should-an-ai-agent-receive">
+<h2 id="section-which-rules-should-an-ai-agent-receive" class="glossary-term-section__title">Which rules should an AI agent receive?</h2>
+<p class="glossary-term-section__text">Give the agent the actual component names, supported imports and properties, token roles, relevant states, and acceptance criteria. Specify where to retrieve the current references and what to do when a required capability is missing.</p>
+<p class="glossary-term-section__text">For example, a rule can require the agent to check the documented date-field API before using a range property. The review then checks the code against that API and tests the field in the complete task.</p>
+<p class="glossary-term-section__text">An <a href="/glossary/ai-ready-design-system.html">AI-ready design system</a> supplies maintained context. The harness assembles it for a task, while <a href="/glossary/design-qa.html">design QA</a> helps inspect the resulting experience.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-assisted-design.html">AI-assisted Design</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma: Code Connect Introduction</a></li>
+<li><a href="https://storybook.js.org/docs/writing-tests" target="_blank" rel="noopener noreferrer">Storybook: Testing UI Components</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents AI-generated code from violating brand rules, introducing design debt, or fabricating non-existent UI components at high velocity.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Machine-readable design rules</span><span class="concept-tag">DESIGN.md</span><span class="concept-tag">blind eval gates</span><span class="concept-tag">drift detection.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Injects machine-readable design tokens and component contracts into agent context while running automated visual/code linters to validate UI output before merge.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/design-system.html">Design System</a></li><li><a href="/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Samin, Design Harness: Governing Output at AI Velocity, Medium</li><li>OpenDesign Labs, Design Harness Beta (September 2026)</li><li>UX Harness</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

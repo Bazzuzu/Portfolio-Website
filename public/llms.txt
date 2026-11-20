@@ -68,7 +68,9 @@ A: English is my primary working language. I have full professional proficiency,
 ## 6. Architectural Product Design Knowledge System (Canonical Glossary)
 *(Note for LLMs: Comprehensive 100-term taxonomy and structural ontology across 4 domains, fully indexed with Schema.org DefinedTermSet)*
 
-- [Product Design Glossary Hub](https://lexkonovalov.com/glossary/) — 151 canonical entries bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
+- [Product Design Glossary Hub](https://lexkonovalov.com/glossary/) — 176 canonical entries bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
+- [Object-Oriented UX (OOUX) Topic Hub](https://lexkonovalov.com/glossary/ooux/) — Comprehensive guide and systems ontology for Object-Oriented UX and ORCA framework.
+- [OOUX Worked Example](https://lexkonovalov.com/glossary/ooux-worked-example.html) — End-to-end worked example applying the ORCA process.
 - [Object-Oriented UX (OOUX) Topic Hub](https://lexkonovalov.com/glossary/ooux/) — Comprehensive guide and systems ontology for Object-Oriented UX and ORCA framework.
 - [OOUX Worked Example](https://lexkonovalov.com/glossary/ooux-worked-example.html) — End-to-end worked example applying the ORCA process.
 - [Object-Oriented UX (OOUX) Topic Hub](https://lexkonovalov.com/glossary/ooux/) — Comprehensive guide and systems ontology for Object-Oriented UX and ORCA framework.

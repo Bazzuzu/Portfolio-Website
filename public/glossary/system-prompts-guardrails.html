@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI System Prompts &amp; Guardrails: Architecture and Safety Patterns</title>
-  <meta name="description" content="System Prompts &amp; Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application&#039;s execution harness to enforce safety, tone, data privacy, and operational constraints.">
+  <title>System Prompts and Guardrails: Instructions and Checks</title>
+  <meta name="description" content="Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/system-prompts-guardrails.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI System Prompts &amp; Guardrails: Architecture and Safety Patterns">
-  <meta property="og:description" content="System Prompts &amp; Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application&#039;s execution harness to enforce safety, tone, data privacy, and operational constraints.">
+  <meta property="og:title" content="System Prompts and Guardrails: Instructions and Checks">
+  <meta property="og:description" content="Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/system-prompts-guardrails.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI System Prompts &amp; Guardrails: Architecture and Safety Patterns">
-  <meta name="twitter:description" content="System Prompts &amp; Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application&#039;s execution harness to enforce safety, tone, data privacy, and operational constraints.">
+  <meta name="twitter:title" content="System Prompts and Guardrails: Instructions and Checks">
+  <meta name="twitter:description" content="Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html",
+      "name": "System Prompts and Guardrails: Instructions and Checks",
+      "description": "Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#breadcrumbs"
+      },
+      "citation": [
+        "https://docs.langchain.com/oss/python/langchain/guardrails",
+        "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#term",
       "name": "System Prompts & Guardrails",
       "termCode": "system-prompts-guardrails",
-      "description": "System Prompts & Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application's execution harness to enforce safety, tone, data privacy, and operational constraints.",
+      "description": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.",
+      "url": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">System Prompts &amp; Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application&#039;s execution harness to enforce safety, tone, data privacy, and operational constraints.</p>
-      </section>
+    <p class="glossary-term-section__text">System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-each-layer">
+<h2 id="section-what-belongs-in-each-layer" class="glossary-term-section__title">What belongs in each layer?</h2>
+<p class="glossary-term-section__text">A prompt can explain the assistant’s role, response format, and how to handle missing information. Application controls can validate structured output, restrict available tools, check authorization, and pause an operation for review.</p>
+<p class="glossary-term-section__text">The system should enforce permissions at the point where an action is executed. Retrieved text and model output can contain misleading instructions, so the application needs a defined way to handle them.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-flight-change">
+<h2 id="section-example-preparing-a-flight-change" class="glossary-term-section__title">Example: Preparing a flight change</h2>
+<p class="glossary-term-section__text">A booking assistant is instructed to explain available options and identify uncertain conditions. Its tools can retrieve a booking and prepare a quote. The application checks that the requesting user can access the booking and that the quote is still current.</p>
+<p class="glossary-term-section__text">Before executing the change, the workflow presents the proposed itinerary and price for approval. The execution service validates the approved operation and returns its actual result.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-the-controls">
+<h2 id="section-how-do-you-evaluate-the-controls" class="glossary-term-section__title">How do you evaluate the controls?</h2>
+<p class="glossary-term-section__text">Test ordinary requests, malformed outputs, stale quotes, unauthorized records, and retrieved text that tries to redirect the assistant. Check the behavior of the complete workflow, including what the user sees when a check fails. Record whether the controls prevented the invalid action and whether the user could recover.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/design-harness.html">Design Harness</a></li>
+<li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/prompt-injection.html">Prompt Injection</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://docs.langchain.com/oss/python/langchain/guardrails" target="_blank" rel="noopener noreferrer">Guardrails, LangChain</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">Prompt Injection, OWASP Gen AI Security Project</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Prevents prompt injections, ensures regulatory compliance, restricts system permissions, and maintains brand voice integrity across generative responses.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Metaprompts</span><span class="concept-tag">input/output validation</span><span class="concept-tag">safety boundary rails</span><span class="concept-tag">prompt isolation.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Upstream middleware evaluates inputs and model outputs against safety policies, intercepting and modifying non-compliant generations.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/design-harness.html">Design Harness</a></li><li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>NVIDIA NeMo Guardrails Specification</li><li>Anthropic Claude System Prompting Architecture</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net Revenue Retention (NRR): Formula, Example, and GRR</title>
+  <meta name="description" content="Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Net Revenue Retention (NRR): Formula, Example, and GRR">
+  <meta property="og:description" content="Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Net Revenue Retention (NRR): Formula, Example, and GRR">
+  <meta name="twitter:description" content="Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/net-revenue-retention-nrr.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html",
+      "name": "Net Revenue Retention (NRR): Formula, Example, and GRR",
+      "description": "Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#breadcrumbs"
+      },
+      "citation": [
+        "https://help.chartmogul.com/article/143-chart-net-mrr-retention",
+        "https://help.chartmogul.com/article/142-chart-gross-mrr-retention",
+        "https://help.chartmogul.com/article/160-cohort-net-mrr-retention"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#term",
+      "name": "Net Revenue Retention (NRR)",
+      "termCode": "net-revenue-retention-nrr",
+      "description": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.",
+      "url": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#webpage"
+      },
+      "alternateName": [
+        "NRR",
+        "Net dollar retention",
+        "NDR"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Net Revenue Retention (NRR)",
+          "item": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Net Revenue Retention (NRR)</span>
+    </nav>
+    <h1>Net Revenue Retention (NRR)</h1>
+    <div class="meta-bar">
+      <span>Product Strategy &amp; Growth</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-is-the-nrr-formula">
+<h2 id="section-what-is-the-nrr-formula" class="glossary-term-section__title">What is the NRR formula?</h2>
+<p class="glossary-term-section__text">For a fixed group of paying accounts present at the start:</p>
+<p class="glossary-term-section__text"><strong>NRR = ending monthly recurring revenue from that group ÷ its starting monthly recurring revenue × 100.</strong></p>
+<p class="glossary-term-section__text">Monthly recurring revenue (MRR) is a normalized monthly revenue measure, not cash collected during the period. Use the same revenue definition at both endpoints.</p>
+<p class="glossary-term-section__text">A movement-based version, when there are no reactivations, is:</p>
+<p class="glossary-term-section__text"><strong>NRR = (starting MRR + expansion MRR − contraction MRR − churned MRR) ÷ starting MRR × 100.</strong></p>
+<p class="glossary-term-section__text">Choose a monthly, quarterly, or annual comparison and state it explicitly. If starting MRR is zero, the ratio is undefined.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-an-nrr-calculation-example">
+<h2 id="section-an-nrr-calculation-example" class="glossary-term-section__title">An NRR calculation example</h2>
+<p class="glossary-term-section__text">An illustrative SaaS business starts a quarter with 50 paying accounts and $10,000 MRR. By quarter-end, five of those accounts have canceled, and the others have these revenue changes:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Movement in the starting group</th>
+<th>MRR change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expansion from upgrades</td>
+<td>+$2,500</td>
+</tr>
+<tr>
+<td>Contraction from downgrades</td>
+<td>−$500</td>
+</tr>
+<tr>
+<td>Churn from five canceled accounts</td>
+<td>−$1,000</td>
+</tr>
+<tr>
+<td>Ending MRR from the original group</td>
+<td>$11,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text"><strong>Quarterly NRR = $11,000 ÷ $10,000 × 100 = 110%.</strong></p>
+<p class="glossary-term-section__text">Revenue from accounts acquired during the quarter is excluded. The result means the original group generates 10% more MRR at the ending snapshot, despite losing five customers. It does not mean every customer expanded.</p>
+<p class="glossary-term-section__text">Label this as a quarterly comparison; it is not an annual NRR figure.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-nrr-vs-grr-vs-customer-retention">
+<h2 id="section-nrr-vs-grr-vs-customer-retention" class="glossary-term-section__title">NRR vs. GRR vs. customer retention</h2>
+<p class="glossary-term-section__text"><strong>Gross revenue retention (GRR)</strong> excludes gains from expansion and reactivation. In this example, with no reactivations:</p>
+<p class="glossary-term-section__text"><strong>GRR = ($10,000 − $500 − $1,000) ÷ $10,000 × 100 = 85%.</strong></p>
+<p class="glossary-term-section__text"><strong>Customer retention = 45 remaining accounts ÷ 50 starting accounts × 100 = 90%.</strong></p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Metric</th>
+<th>What it tracks</th>
+<th>Can exceed 100%?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NRR</td>
+<td>Recurring revenue, including expansion</td>
+<td>Yes.</td>
+</tr>
+<tr>
+<td>GRR</td>
+<td>Revenue retained after contraction and churn, excluding expansion</td>
+<td>No under the standard definition.</td>
+</tr>
+<tr>
+<td>Customer retention</td>
+<td>The original customer accounts still retained</td>
+<td>No.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Read NRR and GRR together. Expansion in some accounts can offset losses elsewhere; it does not remove the need to investigate those losses.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-should-you-handle-reactivation">
+<h2 id="section-how-should-you-handle-reactivation" class="glossary-term-section__title">How should you handle reactivation?</h2>
+<p class="glossary-term-section__text">Declare the rule. In the fixed-group calculation here, an account that cancels and returns during the window remains part of the original group; its ending MRR is included. An account already inactive at the starting snapshot is outside that group.</p>
+<p class="glossary-term-section__text">Some dashboards include a broader pool of reactivation MRR. ChartMogul's standard report, for example, includes reactivations and offers a setting to exclude them. Check the report definition before comparing it with a fixed-cohort calculation.</p>
+<p class="glossary-term-section__text">Do not add reactivation on top of ending cohort revenue; that would count it twice.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-can-product-designers-learn-from-nrr">
+<h2 id="section-what-can-product-designers-learn-from-nrr" class="glossary-term-section__title">What can product designers learn from NRR?</h2>
+<p class="glossary-term-section__text">Investigate expansion and contraction separately. A workspace may upgrade because more teams adopt it, while another downgrades because its workflow no longer fits.</p>
+<p class="glossary-term-section__text">Test whether users understand limits, permissions, and what an upgrade adds. Keep legitimate downgrade and cancellation paths usable.</p>
+<p class="glossary-term-section__text">NRR is a revenue measure. Price increases can affect it, and high NRR does not establish high <a href="/glossary/gross-margin.html">gross margin</a>, customer satisfaction, or a causal effect from a redesign. For AI features, review delivery costs alongside retained revenue.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/user-retention.html">User Retention</a></li>
+<li><a href="/glossary/customer-lifetime-value-ltv.html">Customer Lifetime Value (LTV)</a></li>
+<li><a href="/glossary/gross-margin.html">Gross Margin</a></li>
+<li><a href="/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://help.chartmogul.com/article/143-chart-net-mrr-retention" target="_blank" rel="noopener noreferrer">ChartMogul: Net MRR Retention report</a></li>
+<li><a href="https://help.chartmogul.com/article/142-chart-gross-mrr-retention" target="_blank" rel="noopener noreferrer">ChartMogul: Gross MRR Retention report</a></li>
+<li><a href="https://help.chartmogul.com/article/160-cohort-net-mrr-retention" target="_blank" rel="noopener noreferrer">ChartMogul: Cohort Net MRR Retention</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/gross-margin.html" class="glossary-term-nav__item" title="Gross Margin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/outcome-based-pricing.html" class="glossary-term-nav__item" title="Outcome-Based Pricing">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

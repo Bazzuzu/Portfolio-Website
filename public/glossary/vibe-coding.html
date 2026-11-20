@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is Vibe Coding? Origins, Karpathy Definition, and Limits</title>
-  <meta name="description" content="Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.">
+  <title>Vibe Coding: Meaning, Prototype Example, and Limits</title>
+  <meta name="description" content="Understand vibe coding">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/vibe-coding.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is Vibe Coding? Origins, Karpathy Definition, and Limits">
-  <meta property="og:description" content="Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.">
+  <meta property="og:title" content="Vibe Coding: Meaning, Prototype Example, and Limits">
+  <meta property="og:description" content="Understand vibe coding">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/vibe-coding.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is Vibe Coding? Origins, Karpathy Definition, and Limits">
-  <meta name="twitter:description" content="Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.">
+  <meta name="twitter:title" content="Vibe Coding: Meaning, Prototype Example, and Limits">
+  <meta name="twitter:description" content="Understand vibe coding">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/vibe-coding.html",
+      "name": "Vibe Coding: Meaning, Prototype Example, and Limits",
+      "description": "Understand vibe coding's original meaning, how it differs from broader AI-assisted development, and what a working prototype still needs before release.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#breadcrumbs"
+      },
+      "citation": [
+        "https://x.com/karpathy/status/1886192184808149383",
+        "https://simonwillison.net/2025/Mar/19/vibe-coding/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#term",
       "name": "Vibe Coding",
       "termCode": "vibe-coding",
-      "description": "Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.",
+      "description": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.",
+      "url": "https://lexkonovalov.com/glossary/vibe-coding.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/vibe-coding.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,44 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.</p>
-      </section>
+    <p class="glossary-term-section__text">Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.</p>
+<p class="glossary-term-section__text">The term is also used more broadly for AI-assisted development. Its original meaning is narrower: accepting and modifying generated software without closely reviewing how the implementation works.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-exploring-a-scheduling-interface">
+<h2 id="section-example-exploring-a-scheduling-interface" class="glossary-term-section__title">Example: exploring a scheduling interface</h2>
+<p class="glossary-term-section__text">A designer asks an AI tool to build a room-assignment prototype using fictional reservations. They adjust the layout through prompts, try the interactions, and ask the tool to fix visible problems.</p>
+<p class="glossary-term-section__text">That can help the team explore whether a calendar, list, or split view communicates the task clearly. It does not establish that the scheduling rules are complete or that concurrent edits are handled correctly.</p>
+<p class="glossary-term-section__text">Keep the prototype's assumptions visible. For example, it might assume every reservation has an assigned room and ignore maintenance blocks.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-vibe-coding-and-reviewed-development">
+<h2 id="section-vibe-coding-and-reviewed-development" class="glossary-term-section__title">Vibe coding and reviewed development</h2>
+<p class="glossary-term-section__text">AI-assisted development also includes workflows in which people inspect changes, understand the implementation, and verify requirements. Describe the actual level of review when discussing the work.</p>
+<p class="glossary-term-section__text">Before turning the scheduling prototype into a service, review data access, business rules, error handling, accessibility, and deployment behavior. Test conflicting bookings and failed saves, and identify who will maintain the code.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-designers-can-evaluate">
+<h2 id="section-what-designers-can-evaluate" class="glossary-term-section__title">What designers can evaluate</h2>
+<p class="glossary-term-section__text">Separate the interaction hypothesis from implementation readiness. Observe whether people understand the prototype and can complete representative tasks.</p>
+<p class="glossary-term-section__text">A fast build can make an idea easier to test. Its value depends on what the team learns and whether the resulting product solves a real problem.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/ai-agent.html">AI Agent</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-prototyping.html">AI Prototyping</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreferrer">Andrej Karpathy: Original Vibe Coding Post</a></li>
+<li><a href="https://simonwillison.net/2025/Mar/19/vibe-coding/" target="_blank" rel="noopener noreferrer">Simon Willison: Vibe Coding and AI-Assisted Programming</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Drastically lowers barriers to software creation, enabling rapid prototyping and concept iteration at high speed.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Material disengagement</span><span class="concept-tag">prompt-driven execution</span><span class="concept-tag">iterative goal satisfaction</span><span class="concept-tag">automated debugging loops.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The user instructs an agent, observes the running application preview, and prompts iterative refinements while the agent writes and fixes code autonomously.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-engineering.html">Design Engineering</a></li><li><a href="/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/ai-agent.html">AI Agent</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Andrej Karpathy, Vibe Coding Announcement (February 2025)</li><li>ArXiv Research, Material Disengagement in AI Programming</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

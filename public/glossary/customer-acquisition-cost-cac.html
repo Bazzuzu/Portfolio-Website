@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Acquisition Cost (CAC): Formula and Example</title>
+  <meta name="description" content="Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Customer Acquisition Cost (CAC): Formula and Example">
+  <meta property="og:description" content="Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Customer Acquisition Cost (CAC): Formula and Example">
+  <meta name="twitter:description" content="Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/customer-acquisition-cost-cac.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html",
+      "name": "Customer Acquisition Cost (CAC): Formula and Example",
+      "description": "Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#breadcrumbs"
+      },
+      "citation": [
+        "https://stripe.com/resources/more/cac-in-saas",
+        "https://www.forentrepreneurs.com/saas-metrics-2-definitions/"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#term",
+      "name": "Customer Acquisition Cost (CAC)",
+      "termCode": "customer-acquisition-cost-cac",
+      "description": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.",
+      "url": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#webpage"
+      },
+      "alternateName": [
+        "CAC",
+        "Cost to acquire a customer"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Customer Acquisition Cost (CAC)",
+          "item": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Customer Acquisition Cost (CAC)</span>
+    </nav>
+    <h1>Customer Acquisition Cost (CAC)</h1>
+    <div class="meta-bar">
+      <span>Product Strategy &amp; Growth</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-cac">
+<h2 id="section-how-do-you-calculate-cac" class="glossary-term-section__title">How do you calculate CAC?</h2>
+<p class="glossary-term-section__text"><strong>CAC = acquisition-related sales and marketing costs ÷ new paying customers acquired.</strong></p>
+<p class="glossary-term-section__text">Define what counts as a customer and align the costs with the acquisition process. In B2B SaaS, count a paying company account once; its invited users are not separate acquired customers.</p>
+<p class="glossary-term-section__text">A practical calculation needs a documented cost boundary:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Include in acquisition spending</th>
+<th>Handle separately</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advertising, acquisition content, and campaign agencies</td>
+<td>Product development and ongoing service delivery.</td>
+</tr>
+<tr>
+<td>Acquisition-related sales and marketing salaries, benefits, and commissions</td>
+<td>Customer retention and account expansion work.</td>
+</tr>
+<tr>
+<td>Acquisition tools and the acquisition share of shared expenses</td>
+<td>Free signups and leads, which are not paying customers in this calculation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">Allocate mixed activities consistently. For example, a team member who handles both new sales and renewals should not have their entire cost automatically assigned to new customer acquisition.</p>
+<p class="glossary-term-section__text">If no paying customers were acquired, the denominator is zero. Report that CAC is undefined for that calculation and show the spending and customer count separately.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-a-cac-calculation-example">
+<h2 id="section-a-cac-calculation-example" class="glossary-term-section__title">A CAC calculation example</h2>
+<p class="glossary-term-section__text">An illustrative SaaS business attributes these costs to acquiring 100 new paying accounts:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Cost</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paid campaigns</td>
+<td>$40,000</td>
+</tr>
+<tr>
+<td>Acquisition-related sales and marketing compensation</td>
+<td>$45,000</td>
+</tr>
+<tr>
+<td>Acquisition tools, content, and agency work</td>
+<td>$15,000</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$100,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text"><strong>CAC = $100,000 ÷ 100 = $1,000 per new paying account.</strong></p>
+<p class="glossary-term-section__text">Using only advertising spend would produce $400 per account. Label that narrower measure as ad spend per acquired account; it excludes $60,000 of acquisition costs.</p>
+<p class="glossary-term-section__text">If the same campaign also generates 1,000 free signups, dividing the full $100,000 by signups gives $100 per signup. It does not change the paying-customer CAC to $100.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-cac-vs-cpa-and-blended-vs-paid-cac">
+<h2 id="section-cac-vs-cpa-and-blended-vs-paid-cac" class="glossary-term-section__title">CAC vs. CPA and blended vs. paid CAC</h2>
+<p class="glossary-term-section__text"><strong>Cost per acquisition or action (CPA)</strong> depends on the conversion event being counted. A campaign's event might be a lead, signup, or purchase. CPA matches CAC only when the customer definition and cost scope match.</p>
+<p class="glossary-term-section__text"><strong>Blended CAC</strong> combines acquisition channels. A <strong>paid-channel CAC</strong> calculation focuses on customers attributed to paid channels and the costs assigned to them. State the attribution method, handling of shared costs, and treatment of customers who encounter several channels.</p>
+<p class="glossary-term-section__text">Organic acquisition can involve content, staff, and tools. A customer arriving without a paid ad does not establish that acquiring them cost nothing.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-makes-a-cac-estimate-misleading">
+<h2 id="section-what-makes-a-cac-estimate-misleading" class="glossary-term-section__title">What makes a CAC estimate misleading?</h2>
+<p class="glossary-term-section__text">Timing matters. Spending in January may acquire accounts in March. For longer sales cycles, use an appropriate lag or cohort model rather than assuming this month's wins came from this month's spending.</p>
+<p class="glossary-term-section__text">Also check whether the result mixes sales-assisted enterprise accounts with self-serve customers. Report comparable segments before interpreting a change.</p>
+<p class="glossary-term-section__text">There is no universal good dollar value for CAC. Read it alongside <a href="/glossary/ltv-to-cac-ratio.html">LTV:CAC</a>, <a href="/glossary/cac-payback-period.html">payback period</a>, retention, and delivery costs.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-can-product-designers-use-cac">
+<h2 id="section-how-can-product-designers-use-cac" class="glossary-term-section__title">How can product designers use CAC?</h2>
+<p class="glossary-term-section__text">Investigate where suitable prospects fail to understand the offer, complete a trial task, or become paying accounts. Pricing clarity, accessible forms, and an effective first-use experience give the team specific hypotheses to test.</p>
+<p class="glossary-term-section__text">A higher trial-to-paid conversion rate could lower CAC if acquisition spending and customer quality stay comparable. Check retained paying accounts and refunds as well. Changing the channel mix or admitting poorly matched customers can make a conversion increase misleading.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/unit-economics.html">Unit Economics</a></li>
+<li><a href="/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li>
+<li><a href="/glossary/cac-payback-period.html">CAC Payback Period</a></li>
+<li><a href="/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li>
+<li><a href="/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://stripe.com/resources/more/cac-in-saas" target="_blank" rel="noopener noreferrer">Stripe: CAC in SaaS</a></li>
+<li><a href="https://www.forentrepreneurs.com/saas-metrics-2-definitions/" target="_blank" rel="noopener noreferrer">David Skok: SaaS Metrics 2.0 — Detailed Definitions</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/cost-to-serve.html" class="glossary-term-nav__item" title="Cost to Serve">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/customer-lifetime-value-ltv.html" class="glossary-term-nav__item" title="Customer Lifetime Value (LTV)">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

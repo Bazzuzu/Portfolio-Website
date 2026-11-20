@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Context Engineering: Optimizing Information Flow in LLMs &amp; Agents</title>
-  <meta name="description" content="Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM&#039;s context window for a given task.">
+  <title>Context Engineering for AI Agents: A Practical Example</title>
+  <meta name="description" content="Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/context-engineering.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Context Engineering: Optimizing Information Flow in LLMs &amp; Agents">
-  <meta property="og:description" content="Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM&#039;s context window for a given task.">
+  <meta property="og:title" content="Context Engineering for AI Agents: A Practical Example">
+  <meta property="og:description" content="Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/context-engineering.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Context Engineering: Optimizing Information Flow in LLMs &amp; Agents">
-  <meta name="twitter:description" content="Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM&#039;s context window for a given task.">
+  <meta name="twitter:title" content="Context Engineering for AI Agents: A Practical Example">
+  <meta name="twitter:description" content="Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/context-engineering.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/context-engineering.html",
+      "name": "Context Engineering for AI Agents: A Practical Example",
+      "description": "Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+        "https://docs.langchain.com/oss/python/langchain/context-engineering"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/context-engineering.html#term",
       "name": "Context Engineering",
       "termCode": "context-engineering",
-      "description": "Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM's context window for a given task.",
+      "description": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.",
+      "url": "https://lexkonovalov.com/glossary/context-engineering.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/context-engineering.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,43 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM&#039;s context window for a given task.</p>
-      </section>
+    <p class="glossary-term-section__text">Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-context-engineering-involve">
+<h2 id="section-what-does-context-engineering-involve" class="glossary-term-section__title">What does context engineering involve?</h2>
+<p class="glossary-term-section__text">The team decides what the model needs for its next step and how that information should be supplied. This can mean retrieving a relevant policy, keeping the current task state, choosing which tools to expose, or summarizing older messages while preserving facts the task still needs.</p>
+<p class="glossary-term-section__text">Prompt engineering focuses on the instructions and examples given to the model. Context engineering also covers the other information provided during the interaction. Retrieval-augmented generation can supply external content as part of that process.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-explaining-a-booking-change">
+<h2 id="section-example-explaining-a-booking-change" class="glossary-term-section__title">Example: Explaining a booking change</h2>
+<p class="glossary-term-section__text">A traveler asks, “Can I move my flight to Friday?” The assistant needs the selected booking, the intended Friday, and the applicable fare rules. If several dates or bookings are possible, it asks the traveler to clarify.</p>
+<p class="glossary-term-section__text">A tool retrieves current booking data and the relevant rule text. The model receives those results with instructions to explain the conditions and identify anything still unresolved. If the system retrieves a new quote, it also keeps the quote’s time and expiry information in context so the response can identify the price being discussed.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-context-quality">
+<h2 id="section-how-do-you-evaluate-context-quality" class="glossary-term-section__title">How do you evaluate context quality?</h2>
+<p class="glossary-term-section__text">Create representative tasks with expected outcomes. Test whether the assistant selects the right booking and policy, notices missing information, and supports its explanation with the retrieved evidence. Include stale and conflicting results in the evaluation.</p>
+<p class="glossary-term-section__text">Compare changes against the same tasks. Record answer correctness and task completion alongside latency and token use. A shorter context can omit a crucial restriction, and additional context can introduce irrelevant or conflicting material. Compare both versions to find which information the task and model need.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li>
+<li><a href="/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li>
+<li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/context-window.html">Context Window</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective Context Engineering for AI Agents, Anthropic</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langchain/context-engineering" target="_blank" rel="noopener noreferrer">Context Engineering in Agents, LangChain</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Solves the &quot;needle in a haystack&quot; problem and context window bloat, maximizing model reasoning fidelity while minimizing inference latency and token costs.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Information pruning</span><span class="concept-tag">dynamic context assembly</span><span class="concept-tag">token budgeting</span><span class="concept-tag">prompt caching.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Systems pull data from databases, active states, and RAG pipelines, compressing and ranking the payload into structured formats before dispatching the model prompt.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/prompt-engineering.html">Prompt Engineering</a></li><li><a href="/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li><li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Birgitta Böckeler, AI Agent Harness, Thoughtworks</li><li>DomainDrivenUX Context Architecture</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

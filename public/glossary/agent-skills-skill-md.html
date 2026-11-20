@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Skills &amp; SKILL.md: Building Portable Capabilities for AI</title>
-  <meta name="description" content="Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.">
+  <title>Agent Skills and SKILL.md: Format, Uses, and Example</title>
+  <meta name="description" content="Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/agent-skills-skill-md.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Agent Skills &amp; SKILL.md: Building Portable Capabilities for AI">
-  <meta property="og:description" content="Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.">
+  <meta property="og:title" content="Agent Skills and SKILL.md: Format, Uses, and Example">
+  <meta property="og:description" content="Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/agent-skills-skill-md.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Agent Skills &amp; SKILL.md: Building Portable Capabilities for AI">
-  <meta name="twitter:description" content="Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.">
+  <meta name="twitter:title" content="Agent Skills and SKILL.md: Format, Uses, and Example">
+  <meta name="twitter:description" content="Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html",
+      "name": "Agent Skills and SKILL.md: Format, Uses, and Example",
+      "description": "Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#breadcrumbs"
+      },
+      "citation": [
+        "https://agentskills.io/home",
+        "https://agentskills.io/specification"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#term",
       "name": "Agent Skills (SKILL.md)",
       "termCode": "agent-skills-skill-md",
-      "description": "Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.",
+      "description": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.",
+      "url": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.</p>
-      </section>
+    <p class="glossary-term-section__text">Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.</p>
+<p class="glossary-term-section__text">SKILL.md uses YAML frontmatter for metadata, followed by Markdown instructions. The specification requires a name and description. Compatible agents can use the description to identify relevant skills and load further instructions when needed; support depends on the agent implementation.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-glossary-entry">
+<h2 id="section-example-preparing-a-glossary-entry" class="glossary-term-section__title">Example: preparing a glossary entry</h2>
+<p class="glossary-term-section__text">A publication skill could describe when to use it, the required metadata, the site's Markdown format, and the checks needed before publishing. A reference file could contain the site's schema example, while a script validates the completed document.</p>
+<p class="glossary-term-section__text">The instructions should identify the expected input and output, explain how to handle missing information, and state when the agent must stop for a decision. Keep examples specific enough to guide execution.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-skills-tools-and-mcp">
+<h2 id="section-skills-tools-and-mcp" class="glossary-term-section__title">Skills, tools, and MCP</h2>
+<p class="glossary-term-section__text">These concepts serve different purposes:</p>
+<ul class="glossary-term-ul">
+<li>A skill describes a reusable way to complete work.</li>
+<li>A tool exposes an operation the application can execute.</li>
+<li>MCP provides a protocol for connecting an AI application to capabilities such as tools and resources.</li>
+</ul>
+<p class="glossary-term-section__text">A skill can tell an agent how to use a tool supplied through MCP. It does not itself grant access to an account or make an operation safe.</p>
+<p class="glossary-term-section__text">Review scripts and external resources before use. Test the skill with incomplete inputs and realistic failure cases. Version the instructions so a later result can be traced to the procedure used.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer">Agent Skills: Overview</a></li>
+<li><a href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills: Specification</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Scales agent capabilities modularly without bloating model prompt windows, loading context dynamically only when specific tasks are triggered.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">File-system-first architecture</span><span class="concept-tag">SKILL.md manifest</span><span class="concept-tag">unbounded context</span><span class="concept-tag">modular execution.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Agents scan skill catalogs; when a task matches a skill&#039;s metadata, the agent loads procedural files and executes localized helper scripts.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Anthropic, Equipping Agents for the Real World with Agent Skills</li><li>Agent Skills Open Specification</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

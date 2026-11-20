@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autonomous Workflow Orchestration: Multi-Agent Systems Architecture</title>
-  <meta name="description" content="Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.">
+  <title>Autonomous Workflow Orchestration: Definition and Example</title>
+  <meta name="description" content="See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Autonomous Workflow Orchestration: Multi-Agent Systems Architecture">
-  <meta property="og:description" content="Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.">
+  <meta property="og:title" content="Autonomous Workflow Orchestration: Definition and Example">
+  <meta property="og:description" content="See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Autonomous Workflow Orchestration: Multi-Agent Systems Architecture">
-  <meta name="twitter:description" content="Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.">
+  <meta name="twitter:title" content="Autonomous Workflow Orchestration: Definition and Example">
+  <meta name="twitter:description" content="See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html",
+      "name": "Autonomous Workflow Orchestration: Definition and Example",
+      "description": "See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#breadcrumbs"
+      },
+      "citation": [
+        "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+        "https://docs.langchain.com/oss/python/langgraph/persistence"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#term",
       "name": "Autonomous Workflow Orchestration",
       "termCode": "autonomous-workflow-orchestration",
-      "description": "Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.",
+      "description": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.",
+      "url": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,47 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.</p>
-      </section>
+    <p class="glossary-term-section__text">Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.</p>
+<p class="glossary-term-section__text">“Autonomous” describes the scope of delegated work. The system still needs rules for permissions, stopping, exceptions, and human involvement.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-supplier-onboarding">
+<h2 id="section-example-supplier-onboarding" class="glossary-term-section__title">Example: supplier onboarding</h2>
+<p class="glossary-term-section__text">A supplier-onboarding workflow could collect submitted documents, check required fields, request missing information, and prepare a record for approval.</p>
+<p class="glossary-term-section__text">Some checks can run independently. Creating the active supplier account depends on the required checks and approval being complete. If an external verification service is unavailable, the workflow should preserve its state and show what is waiting.</p>
+<p class="glossary-term-section__text">An agent might help interpret an unfamiliar document while the application controls the approval requirement and account-creation operation.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-orchestration-manages">
+<h2 id="section-what-orchestration-manages" class="glossary-term-section__title">What orchestration manages</h2>
+<ul class="glossary-term-ul">
+<li>Dependencies: which steps must finish before another can start.</li>
+<li>State: the inputs, completed work, and pending decisions.</li>
+<li>Recovery: how failures, timeouts, and interruptions are handled.</li>
+<li>Coordination: handoffs between services, agents, and people.</li>
+<li>Limits: when a run must stop or request intervention.</li>
+</ul>
+<p class="glossary-term-section__text">A single agent can participate in an orchestrated workflow; multiple agents are optional.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-check-before-retrying">
+<h2 id="section-check-before-retrying" class="glossary-term-section__title">Check before retrying</h2>
+<p class="glossary-term-section__text">A timeout does not establish that an external operation failed. If account creation returns no result, check the target system before repeating it. Use operation identifiers or idempotency mechanisms where supported.</p>
+<p class="glossary-term-section__text">Test partial completion and resumed runs. Persisting workflow state helps recovery, but external side effects still require deliberate duplicate prevention and reconciliation.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/multi-agent-systems-mas.html">Multi-Agent Systems (MAS)</a></li>
+<li><a href="/glossary/agentic-ai.html">Agentic AI</a></li>
+<li><a href="/glossary/ai-agent.html">AI Agent</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Workflows and Agents</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/persistence" target="_blank" rel="noopener noreferrer">LangChain: Persistence</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables the execution of massive enterprise procedures—such as supply chain optimization or legal compliance verification—without human micro-management.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Directed acyclic graphs (DAGs)</span><span class="concept-tag">state orchestration</span><span class="concept-tag">sub-agent delegation</span><span class="concept-tag">checkpoint recovery.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">A master orchestrator agent assigns partitioned tasks to specialized child agents, synchronizing intermediate outputs and merging final deliverables.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/multi-agent-systems-mas.html">Multi-Agent Systems (MAS)</a></li><li><a href="/glossary/agentic-ai.html">Agentic AI</a></li><li><a href="/glossary/ai-agent.html">AI Agent</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>LangGraph Framework Documentation</li><li>Microsoft AutoGen Multi-Agent Architecture</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

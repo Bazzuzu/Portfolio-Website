@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Model Context Protocol (MCP): The Universal Standard for AI Context</title>
-  <meta name="description" content="The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.">
+  <title>Model Context Protocol (MCP): Definition and How It Works</title>
+  <meta name="description" content="Understand MCP">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/model-context-protocol-mcp.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Model Context Protocol (MCP): The Universal Standard for AI Context">
-  <meta property="og:description" content="The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.">
+  <meta property="og:title" content="Model Context Protocol (MCP): Definition and How It Works">
+  <meta property="og:description" content="Understand MCP">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/model-context-protocol-mcp.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Model Context Protocol (MCP): The Universal Standard for AI Context">
-  <meta name="twitter:description" content="The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.">
+  <meta name="twitter:title" content="Model Context Protocol (MCP): Definition and How It Works">
+  <meta name="twitter:description" content="Understand MCP">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,52 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html",
+      "name": "Model Context Protocol (MCP): Definition and How It Works",
+      "description": "Understand MCP's host, client, and server architecture, how it exposes tools and resources, and what product teams should define before connecting systems.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#breadcrumbs"
+      },
+      "citation": [
+        "https://modelcontextprotocol.io/docs/learn/architecture",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#term",
       "name": "Model Context Protocol (MCP)",
       "termCode": "model-context-protocol-mcp",
-      "description": "The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.",
+      "description": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.",
+      "url": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#webpage"
+      },
+      "alternateName": [
+        "MCP"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +419,48 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.</p>
-      </section>
+    <p class="glossary-term-section__text">Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.</p>
+<p class="glossary-term-section__text">It defines how participants exchange information. The AI application determines how to use that information and which operations to permit.</p>
+<section class="glossary-term-section" aria-labelledby="section-host-client-and-server">
+<h2 id="section-host-client-and-server" class="glossary-term-section__title">Host, client, and server</h2>
+<ul class="glossary-term-ul">
+<li>The host is the AI application that manages the integration.</li>
+<li>A client is the host-side component communicating with an MCP server.</li>
+<li>A server exposes supported capabilities, such as tools or resources.</li>
+</ul>
+<p class="glossary-term-section__text">Servers can run locally or remotely. Available features depend on the implementation and the capabilities supported by both sides.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-checking-a-support-ticket">
+<h2 id="section-example-checking-a-support-ticket" class="glossary-term-section__title">Example: checking a support ticket</h2>
+<p class="glossary-term-section__text">A support application connects to an MCP server that exposes ticket-search and ticket-update tools. The AI can request ticket data and use the returned records to prepare a response.</p>
+<p class="glossary-term-section__text">The product might permit search while requiring review before posting a reply. The interface should identify the destination ticket and proposed message. The service must enforce access to that ticket when the operation runs.</p>
+<p class="glossary-term-section__text">Connecting a server does not establish that all of its tools are suitable for every user.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-mcp-tool-calling-and-skills">
+<h2 id="section-mcp-tool-calling-and-skills" class="glossary-term-section__title">MCP, tool calling, and skills</h2>
+<p class="glossary-term-section__text">Tool calling lets a model request an operation with structured arguments. MCP can make tools available through a shared integration protocol. A skill packages procedural instructions that may tell an agent how to use those capabilities.</p>
+<p class="glossary-term-section__text">For a product integration, specify accessible data, permitted actions, review requirements, and failure behavior. Test disconnected servers, expired authorization, and tool errors as part of the user experience.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/agent-skills-skill-md.html">Agent Skills (SKILL.md)</a></li>
+<li><a href="/glossary/ai-agent.html">AI Agent</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/figma-mcp-server.html">Figma MCP Server</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noopener noreferrer">Model Context Protocol: Architecture Overview</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Authorization Cheat Sheet</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Replaces bespoke, fragmented point-to-point API connectors with a universal protocol, analogous to the Language Server Protocol (LSP) for developer tooling.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Host-Client-Server architecture</span><span class="concept-tag">Tools</span><span class="concept-tag">Resources</span><span class="concept-tag">Prompts</span><span class="concept-tag">JSON-RPC 2.022.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">An MCP Host spawns MCP Clients that connect to isolated MCP Servers over stdio or Streamable HTTP, discovering available tools and data via JSON-RPC.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li><li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/agent-skills-skill-md.html">Agent Skills (SKILL.md)</a></li><li><a href="/glossary/ai-agent.html">AI Agent</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Anthropic, Introducing the Model Context Protocol</li><li>ModelContextProtocol.io Specification</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

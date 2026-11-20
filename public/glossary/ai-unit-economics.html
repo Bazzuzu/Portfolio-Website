@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Unit Economics: Cost per Successful Task and Margin</title>
+  <meta name="description" content="Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/ai-unit-economics.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Unit Economics: Cost per Successful Task and Margin">
+  <meta property="og:description" content="Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/ai-unit-economics.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Unit Economics: Cost per Successful Task and Margin">
+  <meta name="twitter:description" content="Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/ai-unit-economics.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/ai-unit-economics.html",
+      "name": "AI Unit Economics: Cost per Successful Task and Margin",
+      "description": "Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#breadcrumbs"
+      },
+      "citation": [
+        "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/",
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#term",
+      "name": "AI Unit Economics",
+      "termCode": "ai-unit-economics",
+      "description": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.",
+      "url": "https://lexkonovalov.com/glossary/ai-unit-economics.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#webpage"
+      },
+      "alternateName": [
+        "AI product unit economics"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Unit Economics",
+          "item": "https://lexkonovalov.com/glossary/ai-unit-economics.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>AI Unit Economics</span>
+    </nav>
+    <h1>AI Unit Economics</h1>
+    <div class="meta-bar">
+      <span>Product Strategy &amp; Growth</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-is-the-unit-in-an-ai-product">
+<h2 id="section-what-is-the-unit-in-an-ai-product" class="glossary-term-section__title">What is the unit in an AI product?</h2>
+<p class="glossary-term-section__text">Choose an account, workflow, or task that matches the decision. A model call is not necessarily a completed task: extracting one correct invoice record may require several calls and a human check.</p>
+<p class="glossary-term-section__text">Define success before calculating cost. For invoice extraction, acceptance might require the right supplier, date, currency, and total, checked against the source document. Producing valid JSON alone does not establish correctness.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-cost-per-successful-task">
+<h2 id="section-how-do-you-calculate-cost-per-successful-task" class="glossary-term-section__title">How do you calculate cost per successful task?</h2>
+<p class="glossary-term-section__text">For a defined group of tasks with a complete observation window:</p>
+<p class="glossary-term-section__text"><strong>Cost per successful task = total stated workflow costs ÷ tasks meeting the success criteria.</strong></p>
+<p class="glossary-term-section__text">Include costs from failed, abandoned, and retried tasks in the numerator. Count each accepted task once. State whether a task completed by a human counts as a success, and include that human work when it does.</p>
+<p class="glossary-term-section__text">This is an operational measure with a declared cost boundary, not a universally standardized accounting ratio. If no tasks succeed, the average cost per success is undefined.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-an-ai-unit-economics-example">
+<h2 id="section-an-ai-unit-economics-example" class="glossary-term-section__title">An AI unit economics example</h2>
+<p class="glossary-term-section__text">Consider an illustrative invoice workflow with 1,000 submitted tasks. After retries and review, 800 produce accepted records within the observation window.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Cost pool for all 1,000 tasks</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model inference across all attempts</td>
+<td>$120</td>
+</tr>
+<tr>
+<td>Retrieval, tools, and allocated infrastructure</td>
+<td>$30</td>
+</tr>
+<tr>
+<td>Human checking and correction</td>
+<td>$50</td>
+</tr>
+<tr>
+<td>Total stated workflow cost</td>
+<td>$200</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="glossary-term-ul">
+<li>Cost per submitted task = $200 ÷ 1,000 = <strong>$0.20</strong>.</li>
+<li>Cost per successful task = $200 ÷ 800 = <strong>$0.25</strong>.</li>
+</ul>
+<p class="glossary-term-section__text">If those 800 accepted tasks generate $400 in attributable revenue, $200 remains after this cost pool. That subtotal still excludes acquisition, product development, and any other unmodeled expenses; it is not automatically company net profit.</p>
+<p class="glossary-term-section__text">A variant that costs $150 but produces only 500 accepted tasks costs $0.30 per success. Compare variants on the same workload and acceptance rules.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-why-is-token-price-insufficient">
+<h2 id="section-why-is-token-price-insufficient" class="glossary-term-section__title">Why is token price insufficient?</h2>
+<p class="glossary-term-section__text">Provider bills can distinguish input and output tokens, cache writes and reads, and paid tools. Additional attempts and growing context can change the number of billable units.</p>
+<p class="glossary-term-section__text">Use actual workflow measurements, including human effort, and reconcile estimates with billing data. A lower token rate does not establish a lower cost per accepted result.</p>
+<p class="glossary-term-section__text">When tasks span reporting periods, use a consistent task cohort or account for work still in progress. Dividing this month's costs by this month's completions can misalign work and outcomes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-product-designers-influence">
+<h2 id="section-what-should-product-designers-influence" class="glossary-term-section__title">What should product designers influence?</h2>
+<p class="glossary-term-section__text">Investigate the behavior behind costly runs:</p>
+<ul class="glossary-term-ul">
+<li>Help users supply the required source information.</li>
+<li>Let users revise the affected part rather than repeat the entire workflow.</li>
+<li>Explain an estimate and obtain confirmation before expensive work where appropriate.</li>
+<li>Provide a usable recovery or human handoff when automation fails.</li>
+</ul>
+<p class="glossary-term-section__text">Measure acceptance, rework, latency, and service effort alongside cost. A design that reduces calls but leaves more work for customers has shifted effort rather than necessarily improved the outcome.</p>
+<p class="glossary-term-section__text">Connect the findings to <a href="/glossary/pricing-metric.html">pricing</a> and <a href="/glossary/cost-to-serve.html">cost to serve</a>. An internal successful-task definition may differ from an <a href="/glossary/outcome-based-pricing.html">outcome-based pricing</a> contract's billable event.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/unit-economics.html">Unit Economics</a></li>
+<li><a href="/glossary/cost-to-serve.html">Cost to Serve</a></li>
+<li><a href="/glossary/gross-margin.html">Gross Margin</a></li>
+<li><a href="/glossary/outcome-based-pricing.html">Outcome-Based Pricing</a></li>
+<li><a href="/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-model-routing.html">Model Routing</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/responsible-ai-design.html">Responsible AI Design</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Optimizing cost per task and proving agent ROI</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic: API pricing and tool-use charges</a></li>
+<li><a href="https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html" target="_blank" rel="noopener noreferrer">AWS Well-Architected SaaS Lens: Expenditure awareness</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/trust-calibration-ai.html" class="glossary-term-nav__item" title="Trust Calibration in AI">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/cac-payback-period.html" class="glossary-term-nav__item" title="CAC Payback Period">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

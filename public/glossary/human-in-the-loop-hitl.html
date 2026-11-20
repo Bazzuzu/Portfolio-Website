@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Human-in-the-Loop (HITL) Architecture: Designing Safe AI Workflows</title>
-  <meta name="description" content="Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.">
+  <title>Human-in-the-Loop (HITL): Review and Control in AI</title>
+  <meta name="description" content="Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Human-in-the-Loop (HITL) Architecture: Designing Safe AI Workflows">
-  <meta property="og:description" content="Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.">
+  <meta property="og:title" content="Human-in-the-Loop (HITL): Review and Control in AI">
+  <meta property="og:description" content="Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Human-in-the-Loop (HITL) Architecture: Designing Safe AI Workflows">
-  <meta name="twitter:description" content="Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.">
+  <meta name="twitter:title" content="Human-in-the-Loop (HITL): Review and Control in AI">
+  <meta name="twitter:description" content="Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,53 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html",
+      "name": "Human-in-the-Loop (HITL): Review and Control in AI",
+      "description": "Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#breadcrumbs"
+      },
+      "citation": [
+        "https://pair.withgoogle.com/chapter/feedback-controls/",
+        "https://docs.langchain.com/oss/python/langgraph/interrupts"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#term",
       "name": "Human-in-the-Loop (HITL)",
       "termCode": "human-in-the-loop-hitl",
-      "description": "Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.",
+      "description": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.",
+      "url": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#webpage"
+      },
+      "alternateName": [
+        "HITL",
+        "Human-in-the-Loop"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +420,43 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.</p>
-      </section>
+    <p class="glossary-term-section__text">Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.</p>
+<section class="glossary-term-section" aria-labelledby="section-where-does-the-person-enter-the-loop">
+<h2 id="section-where-does-the-person-enter-the-loop" class="glossary-term-section__title">Where does the person enter the loop?</h2>
+<p class="glossary-term-section__text">Choose the intervention around the task. Specify what the system prepares, what the person decides, and how their response changes the next step. The reviewer needs enough context to understand the proposed action and its consequences.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-approving-a-flight-change">
+<h2 id="section-example-approving-a-flight-change" class="glossary-term-section__title">Example: Approving a flight change</h2>
+<p class="glossary-term-section__text">An assistant finds an alternative flight and prepares a change. The review shows the original and proposed itineraries, price difference, conditions, and quote expiry. The traveler can approve, edit the request, or cancel.</p>
+<p class="glossary-term-section__text">The workflow pauses while it waits. If the quote expires or the booking changes before approval, the system refreshes the proposal and asks the traveler to review the revised details. On resuming, it records the decision and shows whether the change completed or needs recovery.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-the-review">
+<h2 id="section-how-do-you-evaluate-the-review" class="glossary-term-section__title">How do you evaluate the review?</h2>
+<p class="glossary-term-section__text">Test whether people understand what they are approving, spot a deliberately incorrect detail, and can decline or correct it. Also test timeout, refresh, and failure paths. Record review quality and the outcome of the task. An approval click is one event in the process, and its value depends on whether the person could make an informed decision.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/agentic-ux.html">Agentic UX</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/explainable-ai.html">Explainable AI</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Feedback and Control, Google PAIR</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">Interrupts, LangGraph</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Balances the execution velocity of autonomous agents with human accountability, safety, and legal compliance in mission-critical applications.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Decision gates</span><span class="concept-tag">escalation triggers</span><span class="concept-tag">approval flows</span><span class="concept-tag">trust calibration.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The agent pauses when encountering high-risk actions (e.g., database writes, financial transfers), rendering an approval UI for human sign-off before proceeding.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/agentic-ux.html">Agentic UX</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Defense Innovation Board, AI Ethics Principles</li><li>UX Product Design Harness Contract</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

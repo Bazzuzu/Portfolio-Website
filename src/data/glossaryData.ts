@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 151-term taxonomy across four foundational product design domains
+// Canonical 176-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -78,7 +78,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "product-strategy-growth",
     "name": "Product Strategy & Growth",
-    "count": 27,
+    "count": 39,
     "description": "Connecting UX decisions with business outcomes, continuous experimentation, and unit economics.",
     "primaryFocus": "Experimentation, Unit Economics, Conversion Architecture",
     "representativeSpecs": "Continuous Discovery, JTBD, Product-Led Growth, Telemetry",
@@ -87,7 +87,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "ai-agentic-systems",
     "name": "AI & Agentic Systems",
-    "count": 25,
+    "count": 38,
     "description": "Probabilistic, intent-driven systems, agent harnesses, and runtime generative interfaces.",
     "primaryFocus": "Agentic Orchestration, Context Ingestion, Dynamic Run-Time UI",
     "representativeSpecs": "Model Context Protocol (MCP), Agent Skills (SKILL.md), Vercel Generative UI",
@@ -5352,25 +5352,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.",
-    "purpose": "Elevates software from passive transactional execution to proactive, goal-oriented problem solving, autonomously executing intricate enterprise workflows.",
+    "definition": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.",
+    "purpose": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.",
     "keyConcepts": [
-      "Autonomous planning",
-      "environmental tool invocation",
-      "reflection loops",
-      "iterative state tracking."
+      "Example: preparing a trip proposal",
+      "Agents, workflows, and multiple agents",
+      "Questions for product teams"
     ],
-    "howItWorks": "The model decomposes broad user objectives into discrete sub-goals, evaluates intermediate outcomes, interacts with APIs, and iteratively refines plans until completion.",
+    "howItWorks": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.",
     "relatedTerms": [
       "AI Agent",
       "Agent Harness",
       "Tool Calling (Function Calling)",
       "Autonomous Workflow Orchestration"
     ],
-    "seoTitle": "What is Agentic AI? Autonomous Agents & Cognitive Architecture",
+    "seoTitle": "Agentic AI: Meaning, Autonomy, and Workflow Example",
     "sources": [
-      "Andrew Ng, Agentic Design Patterns",
-      "Thoughtworks, Understanding AI Agents"
+      "Anthropic: Building Effective Agents (https://www.anthropic.com/research/building-effective-agents)",
+      "LangChain: Workflows and Agents (https://docs.langchain.com/oss/python/langgraph/workflows-agents)"
+    ],
+    "seoDescription": "Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/agentic-ai.html",
+    "contentMarkdown": "# Agentic AI\n\nAgentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.\n\nUsage varies across vendors and products. Some systems follow mostly predefined workflows; others let a model choose more of the process. State which decisions are delegated when describing a system as agentic.\n\n## Example: preparing a trip proposal\n\nA travel assistant receives dates, a budget, and arrival constraints. It retrieves flight options, compares eligible results, and prepares a proposal.\n\nIf no option meets the constraints, it can explain the conflict and ask which condition the traveler wants to change. It should preserve the budget unless the user authorizes a change.\n\nThe product might allow autonomous research while requiring explicit approval before purchasing. That boundary is part of the system's design.\n\n## Agents, workflows, and multiple agents\n\nAn AI agent is a system that takes actions toward a goal. A workflow coordinates steps and dependencies. An agentic product can combine a fixed workflow with model-driven decisions inside particular steps.\n\nMultiple agents are optional. Splitting work among several agents adds coordination requirements and should have a clear purpose.\n\n## Questions for product teams\n\nIdentify the decisions the AI may make, the evidence it must use, and the actions requiring authorization. Set limits on duration and resource use.\n\nEvaluate completion against the requested outcome and constraints. Also inspect failed and abandoned runs: a system that completes an easy demonstration may still struggle with missing information, changed conditions, or unavailable tools.\n\n## Related terms\n\n- [AI Agent](/glossary/ai-agent.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n- [Autonomous Workflow Orchestration](/glossary/autonomous-workflow-orchestration.html)\n\n## Sources\n\n- [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)\n- [LangChain: Workflows and Agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/agentic-ai.html",
+        "name": "Agentic AI: Meaning, Autonomy, and Workflow Example",
+        "description": "Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.anthropic.com/research/building-effective-agents",
+          "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#term",
+        "name": "Agentic AI",
+        "termCode": "agentic-ai",
+        "description": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.",
+        "url": "https://lexkonovalov.com/glossary/agentic-ai.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agentic AI",
+            "item": "https://lexkonovalov.com/glossary/agentic-ai.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5380,25 +5453,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.",
-    "purpose": "Enables probabilistic reasoning models to execute deterministic operations, read live software environments, and alter real-world system states.",
+    "definition": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.",
+    "purpose": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.",
     "keyConcepts": [
-      "Reasoning engine (LLM)",
-      "external harness",
-      "tool interfaces",
-      "sensory inputs."
+      "How an LLM-based agent works",
+      "Example: investigating a delayed order",
+      "What designers should define"
     ],
-    "howItWorks": "Formulated systematically as AI Agent ≈ Model + Harness. The model acts as the reasoning brain, while the harness provides tools, data, and feedback loops.",
+    "howItWorks": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.",
     "relatedTerms": [
       "Agentic AI",
       "Agent Harness",
       "Model Context Protocol (MCP)",
       "Tool Calling (Function Calling)"
     ],
-    "seoTitle": "AI Agents Explained: Architecture, Models, and Execution Harnesses",
+    "seoTitle": "AI Agent: Definition, How It Works, and Product Example",
     "sources": [
-      "Birgitta Böckeler, AI Agent Harness, Thoughtworks",
-      "Harrison Chase, LangChain Agent Architecture"
+      "Yao et al.: ReAct (https://arxiv.org/abs/2210.03629)",
+      "Anthropic: Building Effective Agents (https://www.anthropic.com/research/building-effective-agents)"
+    ],
+    "seoDescription": "Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-agent.html",
+    "contentMarkdown": "# AI Agent\n\nAn AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.\n\nThe broader AI concept also includes systems built without language models. An agent's autonomy depends on the decisions and actions its application permits.\n\n## How an LLM-based agent works\n\nA typical interaction includes a goal, available context, a set of permitted tools, and a loop that evaluates tool results before continuing or stopping. Persistent memory and multiple cooperating agents are optional design choices.\n\nReAct is one research approach that interleaves reasoning and actions. It illustrates how a model can interact with external information while working through a task; it is not a requirement for every agent.\n\n## Example: investigating a delayed order\n\nA support agent receives an order reference, retrieves the order, checks shipment tracking, and summarizes the available evidence. It may ask for clarification if the reference matches more than one order.\n\nThe application can allow these read operations while requiring an authorized person to approve a replacement shipment. A tool result should establish whether the replacement was actually created.\n\n## What designers should define\n\nSpecify the task boundary, available actions, stopping conditions, and escalation path. Make progress and important outcomes visible to the user.\n\nTest missing data, tool failures, and ambiguous requests. A plausible final message is insufficient evidence of success when the task requires a change in another system.\n\n## Related terms\n\n- [Agentic AI](/glossary/agentic-ai.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Model Context Protocol (MCP)](/glossary/model-context-protocol-mcp.html)\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n\n## Sources\n\n- [Yao et al.: ReAct](https://arxiv.org/abs/2210.03629)\n- [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-agent.html",
+        "name": "AI Agent: Definition, How It Works, and Product Example",
+        "description": "Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-agent.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-agent.html#breadcrumbs"
+        },
+        "citation": [
+          "https://arxiv.org/abs/2210.03629",
+          "https://www.anthropic.com/research/building-effective-agents"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#term",
+        "name": "AI Agent",
+        "termCode": "ai-agent",
+        "description": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.",
+        "url": "https://lexkonovalov.com/glossary/ai-agent.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-agent.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Agent",
+            "item": "https://lexkonovalov.com/glossary/ai-agent.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5408,25 +5554,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Emerging",
-    "definition": "An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.",
-    "purpose": "Bridges raw model reasoning with real-world infrastructure, preventing stochastic hallucination by enforcing testing, permission bounds, and error recovery.",
+    "definition": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.",
+    "purpose": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.",
     "keyConcepts": [
-      "Context provisioning",
-      "sandbox execution",
-      "error-feedback loops",
-      "security guardrails."
+      "What it can include",
+      "Example: a support task across sessions",
+      "What to evaluate"
     ],
-    "howItWorks": "Wraps the LLM in an execution loop: it injects relevant repository state, intercepts function calls, runs code in sandboxes, and feeds compiler errors back to the model.",
+    "howItWorks": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.",
     "relatedTerms": [
       "Design Harness",
       "AI Agent",
       "Context Engineering",
-      "Tool Calling (Function Calling)"
+      "Tool Calling (Function Calling)",
+      "Model Routing"
     ],
-    "seoTitle": "The AI Agent Harness: Architecture, Tooling, and Sandboxing",
+    "seoTitle": "Agent Harness: Definition, Components, and Example",
     "sources": [
-      "Birgitta Böckeler, AI Agent Harness, Thoughtworks (October 2026)",
-      "Anthropic Engineering Guides"
+      "Anthropic: Scaling Managed Agents (https://www.anthropic.com/research/managed-agents)",
+      "Anthropic: Effective Harnesses for Long-Running Agents (https://www.anthropic.com/research/effective-harnesses-for-long-running-agents)"
+    ],
+    "seoDescription": "Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/agent-harness.html",
+    "contentMarkdown": "# Agent Harness\n\nAn agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.\n\nThe exact boundary varies by implementation. In Anthropic's Managed Agents architecture, the harness runs the loop that calls the model and routes tool calls, while sessions and sandboxes are separate abstractions.\n\n## What it can include\n\nDepending on the application, a harness may provide:\n\n- Tool definitions, argument checks, and execution.\n- Context assembly and state persistence.\n- Access controls and approval checkpoints.\n- Time limits, budgets, and stopping rules.\n- Logs, error handling, and recovery behavior.\n\nSome of these capabilities may live in connected services. A harness needs to coordinate with them rather than assume that a model instruction enforces them.\n\n## Example: a support task across sessions\n\nAn agent investigates a customer issue and prepares a proposed account correction. Its harness records completed steps, preserves the relevant identifiers, and pauses before a write operation that needs approval.\n\nIf the session is interrupted, the resumed run checks the saved state and current account data. It should determine whether an earlier action completed before attempting it again.\n\nFor this task, a useful completion record identifies the requested correction, the verified outcome, and any unresolved issue.\n\n## What to evaluate\n\nTest the complete runtime with expired access, failed tools, and interrupted sessions. Evaluate whether it preserves the user's scope and recovers without repeating consequential actions.\n\nThe model's capabilities and the harness's behavior both affect the resulting product experience.\n\n## Related terms\n\n- [Design Harness](/glossary/design-harness.html)\n- [AI Agent](/glossary/ai-agent.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n\n- [Model Routing](/glossary/ai-model-routing.html)\n\n## Sources\n\n- [Anthropic: Scaling Managed Agents](https://www.anthropic.com/research/managed-agents)\n- [Anthropic: Effective Harnesses for Long-Running Agents](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/agent-harness.html",
+        "name": "Agent Harness: Definition, Components, and Example",
+        "description": "Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/agent-harness.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/agent-harness.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.anthropic.com/research/managed-agents",
+          "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#term",
+        "name": "Agent Harness",
+        "termCode": "agent-harness",
+        "description": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.",
+        "url": "https://lexkonovalov.com/glossary/agent-harness.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/agent-harness.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agent Harness",
+            "item": "https://lexkonovalov.com/glossary/agent-harness.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5436,25 +5656,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Coined / Interpretive",
-    "definition": "A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.",
-    "purpose": "Prevents AI-generated code from violating brand rules, introducing design debt, or fabricating non-existent UI components at high velocity.",
+    "definition": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.",
+    "purpose": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.",
     "keyConcepts": [
-      "Machine-readable design rules",
-      "DESIGN.md",
-      "blind eval gates",
-      "drift detection."
+      "What it can contain",
+      "Example: building a booking form",
+      "Keep the checks meaningful",
+      "Which rules should an AI agent receive?"
     ],
-    "howItWorks": "Injects machine-readable design tokens and component contracts into agent context while running automated visual/code linters to validate UI output before merge.",
+    "howItWorks": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.",
     "relatedTerms": [
       "Agent Harness",
       "Design System",
-      "Evaluation Harness (AI Evals)"
+      "Evaluation Harness (AI Evals)",
+      "AI-assisted Design"
     ],
-    "seoTitle": "What is a Design Harness? Enforcing UI Systems in Agentic Code",
+    "seoTitle": "Design Harness: Guiding and Checking AI-Generated Interfaces",
     "sources": [
-      "Samin, Design Harness: Governing Output at AI Velocity, Medium",
-      "OpenDesign Labs, Design Harness Beta (September 2026)",
-      "UX Harness"
+      "Figma: Code Connect Introduction (https://developers.figma.com/docs/code-connect/)",
+      "Storybook: Testing UI Components (https://storybook.js.org/docs/writing-tests)"
+    ],
+    "seoDescription": "Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-harness.html",
+    "contentMarkdown": "# Design Harness\n\nA design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.\n\nThe term is emerging and its scope varies. There is no single required file format or toolchain. A team should state what its harness includes and which checks it actually enforces.\n\n## What it can contain\n\n- Component documentation and working usage examples.\n- Token names and rules for spacing, typography, and color.\n- Interaction, content, and accessibility requirements.\n- Representative component states and test data.\n- Automated checks and a process for reviewing results.\n\n[Figma Code Connect](/glossary/figma-code-connect.html) can link design components to implementation references. [Storybook](/glossary/storybook.html) can document component states and support interaction, visual, and accessibility tests. These are possible ingredients in a harness.\n\n## Example: building a booking form\n\nA task gives an agent the existing field components, date-selection rules, error messages, and responsive examples. It also specifies how focus should move after validation fails.\n\nThe agent implements the form and runs the relevant checks. A reviewer then inspects the submitted-data behavior, keyboard interaction, error recovery, and layout with realistic content.\n\nIf a required component does not support the scenario, record the gap and make an explicit implementation decision.\n\n## Keep the checks meaningful\n\nSeparate instructions from enforced checks. Documentation can request token use; a configured rule or review process determines whether deviations are caught.\n\nAutomated accessibility checks cover only some issues. Include manual evaluation and task testing where needed. Maintain the harness when the underlying design system changes.\n\n## Which rules should an AI agent receive?\n\nGive the agent the actual component names, supported imports and properties, token roles, relevant states, and acceptance criteria. Specify where to retrieve the current references and what to do when a required capability is missing.\n\nFor example, a rule can require the agent to check the documented date-field API before using a range property. The review then checks the code against that API and tests the field in the complete task.\n\nAn [AI-ready design system](/glossary/ai-ready-design-system.html) supplies maintained context. The harness assembles it for a task, while [design QA](/glossary/design-qa.html) helps inspect the resulting experience.\n\n## Related terms\n\n- [Agent Harness](/glossary/agent-harness.html)\n- [Design System](/glossary/design-system.html)\n- [Evaluation Harness (AI Evals)](/glossary/evaluation-harness-ai-evals.html)\n\n- [AI-assisted Design](/glossary/ai-assisted-design.html)\n\n## Sources\n\n- [Figma: Code Connect Introduction](https://developers.figma.com/docs/code-connect/)\n- [Storybook: Testing UI Components](https://storybook.js.org/docs/writing-tests)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-harness.html",
+        "name": "Design Harness: Guiding and Checking AI-Generated Interfaces",
+        "description": "Learn how a design harness gives AI coding agents component references, design rules, and checks, with a practical booking-form implementation example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-harness.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-harness.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.figma.com/docs/code-connect/",
+          "https://storybook.js.org/docs/writing-tests"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#term",
+        "name": "Design Harness",
+        "termCode": "design-harness",
+        "description": "A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.",
+        "url": "https://lexkonovalov.com/glossary/design-harness.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-harness.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-harness.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design Harness",
+            "item": "https://lexkonovalov.com/glossary/design-harness.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5464,26 +5758,105 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Emerging",
-    "definition": "The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.",
-    "purpose": "Replaces bespoke, fragmented point-to-point API connectors with a universal protocol, analogous to the Language Server Protocol (LSP) for developer tooling.",
+    "definition": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.",
+    "purpose": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.",
     "keyConcepts": [
-      "Host-Client-Server architecture",
-      "Tools",
-      "Resources",
-      "Prompts",
-      "JSON-RPC 2.022."
+      "Host, client, and server",
+      "Example: checking a support ticket",
+      "MCP, tool calling, and skills"
     ],
-    "howItWorks": "An MCP Host spawns MCP Clients that connect to isolated MCP Servers over stdio or Streamable HTTP, discovering available tools and data via JSON-RPC.",
+    "howItWorks": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.",
     "relatedTerms": [
       "Tool Calling (Function Calling)",
       "Context Engineering",
       "Agent Skills (SKILL.md)",
-      "AI Agent"
+      "AI Agent",
+      "Figma MCP Server"
     ],
-    "seoTitle": "Model Context Protocol (MCP): The Universal Standard for AI Context",
+    "seoTitle": "Model Context Protocol (MCP): Definition and How It Works",
     "sources": [
-      "Anthropic, Introducing the Model Context Protocol",
-      "ModelContextProtocol.io Specification"
+      "Model Context Protocol: Architecture Overview (https://modelcontextprotocol.io/docs/learn/architecture)",
+      "OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
+    ],
+    "seoDescription": "Understand MCP",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html",
+    "contentMarkdown": "# Model Context Protocol (MCP)\n\nModel Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.\n\nIt defines how participants exchange information. The AI application determines how to use that information and which operations to permit.\n\n## Host, client, and server\n\n- The host is the AI application that manages the integration.\n- A client is the host-side component communicating with an MCP server.\n- A server exposes supported capabilities, such as tools or resources.\n\nServers can run locally or remotely. Available features depend on the implementation and the capabilities supported by both sides.\n\n## Example: checking a support ticket\n\nA support application connects to an MCP server that exposes ticket-search and ticket-update tools. The AI can request ticket data and use the returned records to prepare a response.\n\nThe product might permit search while requiring review before posting a reply. The interface should identify the destination ticket and proposed message. The service must enforce access to that ticket when the operation runs.\n\nConnecting a server does not establish that all of its tools are suitable for every user.\n\n## MCP, tool calling, and skills\n\nTool calling lets a model request an operation with structured arguments. MCP can make tools available through a shared integration protocol. A skill packages procedural instructions that may tell an agent how to use those capabilities.\n\nFor a product integration, specify accessible data, permitted actions, review requirements, and failure behavior. Test disconnected servers, expired authorization, and tool errors as part of the user experience.\n\n## Related terms\n\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Agent Skills (SKILL.md)](/glossary/agent-skills-skill-md.html)\n- [AI Agent](/glossary/ai-agent.html)\n\n- [Figma MCP Server](/glossary/figma-mcp-server.html)\n\n## Sources\n\n- [Model Context Protocol: Architecture Overview](https://modelcontextprotocol.io/docs/learn/architecture)\n- [OWASP: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html",
+        "name": "Model Context Protocol (MCP): Definition and How It Works",
+        "description": "Understand MCP's host, client, and server architecture, how it exposes tools and resources, and what product teams should define before connecting systems.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#breadcrumbs"
+        },
+        "citation": [
+          "https://modelcontextprotocol.io/docs/learn/architecture",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#term",
+        "name": "Model Context Protocol (MCP)",
+        "termCode": "model-context-protocol-mcp",
+        "description": "Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.",
+        "url": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#webpage"
+        },
+        "alternateName": [
+          "MCP"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Model Context Protocol (MCP)",
+            "item": "https://lexkonovalov.com/glossary/model-context-protocol-mcp.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "MCP"
     ]
   },
   {
@@ -5493,25 +5866,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Emerging",
-    "definition": "Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.",
-    "purpose": "Scales agent capabilities modularly without bloating model prompt windows, loading context dynamically only when specific tasks are triggered.",
+    "definition": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.",
+    "purpose": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.",
     "keyConcepts": [
-      "File-system-first architecture",
-      "SKILL.md manifest",
-      "unbounded context",
-      "modular execution."
+      "Example: preparing a glossary entry",
+      "Skills, tools, and MCP"
     ],
-    "howItWorks": "Agents scan skill catalogs; when a task matches a skill's metadata, the agent loads procedural files and executes localized helper scripts.",
+    "howItWorks": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.",
     "relatedTerms": [
       "Model Context Protocol (MCP)",
       "Agent Harness",
       "Context Engineering",
       "Tool Calling (Function Calling)"
     ],
-    "seoTitle": "Agent Skills & SKILL.md: Building Portable Capabilities for AI",
+    "seoTitle": "Agent Skills and SKILL.md: Format, Uses, and Example",
     "sources": [
-      "Anthropic, Equipping Agents for the Real World with Agent Skills",
-      "Agent Skills Open Specification"
+      "Agent Skills: Overview (https://agentskills.io/home)",
+      "Agent Skills: Specification (https://agentskills.io/specification)"
+    ],
+    "seoDescription": "Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html",
+    "contentMarkdown": "# Agent Skills (SKILL.md)\n\nAgent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.\n\nSKILL.md uses YAML frontmatter for metadata, followed by Markdown instructions. The specification requires a name and description. Compatible agents can use the description to identify relevant skills and load further instructions when needed; support depends on the agent implementation.\n\n## Example: preparing a glossary entry\n\nA publication skill could describe when to use it, the required metadata, the site's Markdown format, and the checks needed before publishing. A reference file could contain the site's schema example, while a script validates the completed document.\n\nThe instructions should identify the expected input and output, explain how to handle missing information, and state when the agent must stop for a decision. Keep examples specific enough to guide execution.\n\n## Skills, tools, and MCP\n\nThese concepts serve different purposes:\n\n- A skill describes a reusable way to complete work.\n- A tool exposes an operation the application can execute.\n- MCP provides a protocol for connecting an AI application to capabilities such as tools and resources.\n\nA skill can tell an agent how to use a tool supplied through MCP. It does not itself grant access to an account or make an operation safe.\n\nReview scripts and external resources before use. Test the skill with incomplete inputs and realistic failure cases. Version the instructions so a later result can be traced to the procedure used.\n\n## Related terms\n\n- [Model Context Protocol (MCP)](/glossary/model-context-protocol-mcp.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n\n## Sources\n\n- [Agent Skills: Overview](https://agentskills.io/home)\n- [Agent Skills: Specification](https://agentskills.io/specification)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html",
+        "name": "Agent Skills and SKILL.md: Format, Uses, and Example",
+        "description": "Learn what Agent Skills contain, how SKILL.md instructions are discovered, and how skills differ from tools and MCP connections in an AI workflow.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#breadcrumbs"
+        },
+        "citation": [
+          "https://agentskills.io/home",
+          "https://agentskills.io/specification"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#term",
+        "name": "Agent Skills (SKILL.md)",
+        "termCode": "agent-skills-skill-md",
+        "description": "Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.",
+        "url": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agent Skills (SKILL.md)",
+            "item": "https://lexkonovalov.com/glossary/agent-skills-skill-md.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5521,25 +5966,100 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Emerging",
-    "definition": "Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM's context window for a given task.",
-    "purpose": "Solves the \"needle in a haystack\" problem and context window bloat, maximizing model reasoning fidelity while minimizing inference latency and token costs.",
+    "definition": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.",
+    "purpose": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.",
     "keyConcepts": [
-      "Information pruning",
-      "dynamic context assembly",
-      "token budgeting",
-      "prompt caching."
+      "What does context engineering involve?",
+      "Example: Explaining a booking change",
+      "How do you evaluate context quality?"
     ],
-    "howItWorks": "Systems pull data from databases, active states, and RAG pipelines, compressing and ranking the payload into structured formats before dispatching the model prompt.",
+    "howItWorks": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.",
     "relatedTerms": [
       "Prompt Engineering",
       "Retrieval-Augmented Generation (RAG)",
       "Structured Data for LLMs",
-      "Agent Harness"
+      "Agent Harness",
+      "Evaluation Harness (AI Evals)",
+      "Context Window"
     ],
-    "seoTitle": "Context Engineering: Optimizing Information Flow in LLMs & Agents",
+    "seoTitle": "Context Engineering for AI Agents: A Practical Example",
     "sources": [
-      "Birgitta Böckeler, AI Agent Harness, Thoughtworks",
-      "DomainDrivenUX Context Architecture"
+      "Effective Context Engineering for AI Agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)",
+      "Context Engineering in Agents, LangChain (https://docs.langchain.com/oss/python/langchain/context-engineering)"
+    ],
+    "seoDescription": "Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/context-engineering.html",
+    "contentMarkdown": "# Context Engineering\n\nContext engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.\n\n## What does context engineering involve?\n\nThe team decides what the model needs for its next step and how that information should be supplied. This can mean retrieving a relevant policy, keeping the current task state, choosing which tools to expose, or summarizing older messages while preserving facts the task still needs.\n\nPrompt engineering focuses on the instructions and examples given to the model. Context engineering also covers the other information provided during the interaction. Retrieval-augmented generation can supply external content as part of that process.\n\n## Example: Explaining a booking change\n\nA traveler asks, “Can I move my flight to Friday?” The assistant needs the selected booking, the intended Friday, and the applicable fare rules. If several dates or bookings are possible, it asks the traveler to clarify.\n\nA tool retrieves current booking data and the relevant rule text. The model receives those results with instructions to explain the conditions and identify anything still unresolved. If the system retrieves a new quote, it also keeps the quote’s time and expiry information in context so the response can identify the price being discussed.\n\n## How do you evaluate context quality?\n\nCreate representative tasks with expected outcomes. Test whether the assistant selects the right booking and policy, notices missing information, and supports its explanation with the retrieved evidence. Include stale and conflicting results in the evaluation.\n\nCompare changes against the same tasks. Record answer correctness and task completion alongside latency and token use. A shorter context can omit a crucial restriction, and additional context can introduce irrelevant or conflicting material. Compare both versions to find which information the task and model need.\n\n## Related terms\n\n- [Prompt Engineering](/glossary/prompt-engineering.html)\n- [Retrieval-Augmented Generation (RAG)](/glossary/retrieval-augmented-generation-rag.html)\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Evaluation Harness (AI Evals)](/glossary/evaluation-harness-ai-evals.html)\n\n- [Context Window](/glossary/context-window.html)\n\n## Sources\n\n- [Effective Context Engineering for AI Agents, Anthropic](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)\n- [Context Engineering in Agents, LangChain](https://docs.langchain.com/oss/python/langchain/context-engineering)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/context-engineering.html",
+        "name": "Context Engineering for AI Agents: A Practical Example",
+        "description": "Learn how context engineering selects instructions, data, tools, and history for an AI agent, with a booking example and checks for context quality.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/context-engineering.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/context-engineering.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "https://docs.langchain.com/oss/python/langchain/context-engineering"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#term",
+        "name": "Context Engineering",
+        "termCode": "context-engineering",
+        "description": "Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.",
+        "url": "https://lexkonovalov.com/glossary/context-engineering.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/context-engineering.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/context-engineering.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Context Engineering",
+            "item": "https://lexkonovalov.com/glossary/context-engineering.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5549,25 +6069,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.",
-    "purpose": "Calibrates stochastic model outputs to achieve syntactic correctness, tone compliance, and structured schemas without fine-tuning underlying model weights.",
+    "definition": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.",
+    "purpose": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.",
     "keyConcepts": [
-      "System prompts",
-      "few-shot demonstration",
-      "chain-of-thought",
-      "output formatting constraints."
+      "Example: summarizing a support ticket",
+      "How to improve a prompt",
+      "Where the prompt's role ends"
     ],
-    "howItWorks": "Authors construct instructions specifying persona, context, step-by-step reasoning steps, and strict response schemas (such as JSON).",
+    "howItWorks": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.",
     "relatedTerms": [
       "Context Engineering",
       "System Prompts & Guardrails",
       "Generative UI",
       "Vibe Coding"
     ],
-    "seoTitle": "What is Prompt Engineering? Modern Techniques and Best Practices",
+    "seoTitle": "Prompt Engineering: Definition, Example, and Evaluation",
     "sources": [
-      "Lilian Weng, Prompt Engineering Guides, OpenAI Cookbook",
-      "Anthropic Interactive Prompting Guide"
+      "Anthropic: Prompt Engineering Overview (https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)",
+      "Anthropic: Prompting Best Practices (https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)"
+    ],
+    "seoDescription": "Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/prompt-engineering.html",
+    "contentMarkdown": "# Prompt Engineering\n\nPrompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.\n\nA prompt can include a user message, application-level instructions, supplied reference material, and examples. Its effectiveness depends on the model, the task, and the information available.\n\n## Example: summarizing a support ticket\n\nA vague request such as “Summarize this” leaves important choices unspecified. A more useful task description could be:\n\n> Summarize the supplied support ticket for the next agent. Include the reported problem, actions already attempted, current status, and unresolved questions. Use only facts present in the ticket. Label missing information as unknown. Do not infer that an issue is resolved from a proposed fix.\n\nProvide the actual ticket content separately and make the boundary between instructions and reference material clear.\n\n## How to improve a prompt\n\nStart with explicit success criteria. Test representative inputs, inspect failures, and change the prompt to address a specific problem. Examples can clarify an ambiguous format or decision rule.\n\nFor the ticket summary, check factual accuracy, omitted actions, invented resolutions, and whether another agent can understand what remains to do.\n\nKeep a small set of test cases, including incomplete and contradictory tickets. Version the prompt and compare results when the model or workflow changes.\n\n## Where the prompt's role ends\n\nPrompt instructions cannot enforce account permissions or replace missing source data. Retrieval, application checks, and tool design may be needed.\n\nContext engineering covers the wider process of assembling and managing what reaches the model. Prompt engineering is one part of that work.\n\n## Related terms\n\n- [Context Engineering](/glossary/context-engineering.html)\n- [System Prompts & Guardrails](/glossary/system-prompts-guardrails.html)\n- [Generative UI](/glossary/generative-ui.html)\n- [Vibe Coding](/glossary/vibe-coding.html)\n\n## Sources\n\n- [Anthropic: Prompt Engineering Overview](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)\n- [Anthropic: Prompting Best Practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/prompt-engineering.html",
+        "name": "Prompt Engineering: Definition, Example, and Evaluation",
+        "description": "Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#breadcrumbs"
+        },
+        "citation": [
+          "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+          "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#term",
+        "name": "Prompt Engineering",
+        "termCode": "prompt-engineering",
+        "description": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.",
+        "url": "https://lexkonovalov.com/glossary/prompt-engineering.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Prompt Engineering",
+            "item": "https://lexkonovalov.com/glossary/prompt-engineering.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5577,25 +6170,105 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Retrieval-Augmented Generation (RAG) is an architectural pattern that retrieves relevant factual knowledge from external vectorized databases and injects it into an LLM's prompt context prior to response synthesis.",
-    "purpose": "Prevents factual hallucinations and delivers up-to-date domain expertise without the massive computational expense of continuous model retraining.",
+    "definition": "Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.",
+    "purpose": "Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.",
     "keyConcepts": [
-      "Vector embeddings",
-      "semantic similarity search",
-      "chunking strategies",
-      "dense retrieval."
+      "How RAG works",
+      "Example: answering a cancellation question",
+      "Product and content checks"
     ],
-    "howItWorks": "User queries are embedded into vector space, matched against document databases via cosine similarity, and top chunks are prepended to the prompt context.",
+    "howItWorks": "Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.",
     "relatedTerms": [
       "Context Engineering",
       "Knowledge Graphs (AI Context)",
       "Structured Data for LLMs",
-      "AI Agent"
+      "AI Agent",
+      "AI Grounding"
     ],
-    "seoTitle": "What is RAG? Retrieval-Augmented Generation Architecture",
+    "seoTitle": "Retrieval-Augmented Generation (RAG): How It Works",
     "sources": [
-      "Patrick Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, Meta AI / NeurIPS",
-      "Pinecone System Architecture"
+      "Lewis et al.: Retrieval-Augmented Generation (https://arxiv.org/abs/2005.11401)",
+      "Microsoft: Retrieval-Augmented Generation Overview (https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)"
+    ],
+    "seoDescription": "Learn how RAG retrieves source material before generating an answer, with a policy example and checks for permissions, evidence, freshness, and citations.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html",
+    "contentMarkdown": "# Retrieval-Augmented Generation (RAG)\n\nRetrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.\n\nThe original RAG research combined a language model with retrieved documents. Current implementations vary and can use keyword, vector, hybrid, or graph-based retrieval. A vector database is one possible component.\n\n## How RAG works\n\nA typical application interprets the user's question, retrieves relevant material, and provides selected results as context for generation. It may also rerank results and attach source references.\n\nRetrieval quality and answer quality need separate evaluation: the application can find the right document but summarize it incorrectly, or produce a plausible answer from the wrong document.\n\n## Example: answering a cancellation question\n\nA traveler asks whether a booking can be canceled without a fee. The application retrieves the terms associated with that booking and any relevant current policy.\n\nA useful answer identifies the applicable conditions and links to the supporting text. If the retrieved material does not establish the answer, the product should communicate that gap and provide a next step.\n\nA citation is useful only when the cited material supports the associated statement.\n\n## Product and content checks\n\nKeep documents current, record their scope and effective dates, and enforce access before material reaches the model. Test questions whose answers are missing, ambiguous, or spread across sources.\n\nRAG supplies information at runtime. Fine-tuning changes model parameters; the approaches can be combined.\n\nRetrieval does not guarantee factual answers or remove prompt-injection risks from external content. Evaluate both the evidence selected and the claims generated from it.\n\n## Related terms\n\n- [Context Engineering](/glossary/context-engineering.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n- [AI Agent](/glossary/ai-agent.html)\n\n- [AI Grounding](/glossary/ai-grounding.html)\n\n## Sources\n\n- [Lewis et al.: Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401)\n- [Microsoft: Retrieval-Augmented Generation Overview](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html",
+        "name": "Retrieval-Augmented Generation (RAG): How It Works",
+        "description": "Learn how RAG retrieves source material before generating an answer, with a policy example and checks for permissions, evidence, freshness, and citations.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#breadcrumbs"
+        },
+        "citation": [
+          "https://arxiv.org/abs/2005.11401",
+          "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#term",
+        "name": "Retrieval-Augmented Generation (RAG)",
+        "termCode": "retrieval-augmented-generation-rag",
+        "description": "Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.",
+        "url": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#webpage"
+        },
+        "alternateName": [
+          "RAG"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Retrieval-Augmented Generation (RAG)",
+            "item": "https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "RAG"
     ]
   },
   {
@@ -5605,26 +6278,108 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.",
-    "purpose": "Empowers probabilistic text models to safely invoke external software functions, query relational databases, and drive computational side effects.",
+    "definition": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.",
+    "purpose": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.",
     "keyConcepts": [
-      "Function signatures",
-      "JSON Schema definitions",
-      "programmatic execution",
-      "argument parsing."
+      "How it works",
+      "Example: checking flight availability",
+      "What to check"
     ],
-    "howItWorks": "The host application passes available tool schemas to the model; the model evaluates user intent, returns argument JSON, and pauses until the host returns execution results.",
+    "howItWorks": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.",
     "relatedTerms": [
       "Model Context Protocol (MCP)",
       "Generative UI",
       "Agent Harness",
-      "Agentic AI"
+      "Agentic AI",
+      "Structured Outputs",
+      "Prompt Injection"
     ],
-    "seoTitle": "Tool Calling Explained: How LLMs Invoke Code and APIs",
+    "seoTitle": "Tool Calling (Function Calling): How It Works and Examples",
     "sources": [
-      "OpenAI Function Calling Documentation",
-      "Anthropic Tool Use Specification",
-      "Vercel AI SDK"
+      "Anthropic: Tool Use Overview (https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)",
+      "OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
+    ],
+    "seoDescription": "Learn how tool calling turns a model",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html",
+    "contentMarkdown": "# Tool Calling (Function Calling)\n\nTool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.\n\nA tool might retrieve records, calculate a value, search available inventory, or update a system. The model's request and the actual execution are separate steps.\n\n## How it works\n\nFor an application-defined tool, a typical sequence is:\n\n1. The application supplies a tool name, description, and input schema.\n2. The model requests the tool with arguments.\n3. The application validates the request and checks authorization.\n4. The application executes the permitted operation.\n5. The result or error is returned for the next response.\n\nProvider-hosted tools can manage execution within the provider's service. The surrounding product still needs to define its permitted scope.\n\n## Example: checking flight availability\n\nA traveler asks for flights from Madrid to Rome on a specified date. The model requests the search tool with the route and date.\n\nThe tool returns available options and relevant fare data. The interface can render those results as comparison cards. If the destination or date is unclear, the application should obtain the missing information before running a consequential operation.\n\nA separate booking tool would need its own requirements and authorization.\n\n## What to check\n\nValidate arguments against both the schema and business rules. A correctly formatted date can still be outside the supported booking window.\n\nInspect tool errors and unknown outcomes before retrying a write. Use returned evidence when reporting success. Structured arguments improve integration, but they do not establish that the operation is authorized or that its result is correct.\n\n## Related terms\n\n- [Model Context Protocol (MCP)](/glossary/model-context-protocol-mcp.html)\n- [Generative UI](/glossary/generative-ui.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Agentic AI](/glossary/agentic-ai.html)\n\n- [Structured Outputs](/glossary/structured-outputs.html)\n\n- [Prompt Injection](/glossary/prompt-injection.html)\n\n## Sources\n\n- [Anthropic: Tool Use Overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)\n- [OWASP: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html",
+        "name": "Tool Calling (Function Calling): How It Works and Examples",
+        "description": "Learn how tool calling turns a model's request into an application operation, with a flight-search example and checks for arguments, access, and results.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#breadcrumbs"
+        },
+        "citation": [
+          "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#term",
+        "name": "Tool Calling (Function Calling)",
+        "termCode": "tool-calling-function-calling",
+        "description": "Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.",
+        "url": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#webpage"
+        },
+        "alternateName": [
+          "Function calling",
+          "Tool use"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tool Calling (Function Calling)",
+            "item": "https://lexkonovalov.com/glossary/tool-calling-function-calling.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Function calling",
+      "Tool use"
     ]
   },
   {
@@ -5634,25 +6389,108 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.",
-    "purpose": "Balances the execution velocity of autonomous agents with human accountability, safety, and legal compliance in mission-critical applications.",
+    "definition": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.",
+    "purpose": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.",
     "keyConcepts": [
-      "Decision gates",
-      "escalation triggers",
-      "approval flows",
-      "trust calibration."
+      "Where does the person enter the loop?",
+      "Example: Approving a flight change",
+      "How do you evaluate the review?"
     ],
-    "howItWorks": "The agent pauses when encountering high-risk actions (e.g., database writes, financial transfers), rendering an approval UI for human sign-off before proceeding.",
+    "howItWorks": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.",
     "relatedTerms": [
       "Agentic UX",
       "Agent Harness",
       "Operational UX",
-      "Design System Governance"
+      "Design System Governance",
+      "Explainable AI",
+      "Trust Calibration in AI"
     ],
-    "seoTitle": "Human-in-the-Loop (HITL) Architecture: Designing Safe AI Workflows",
+    "seoTitle": "Human-in-the-Loop (HITL): Review and Control in AI",
     "sources": [
-      "Defense Innovation Board, AI Ethics Principles",
-      "UX Product Design Harness Contract"
+      "Feedback and Control, Google PAIR (https://pair.withgoogle.com/chapter/feedback-controls/)",
+      "Interrupts, LangGraph (https://docs.langchain.com/oss/python/langgraph/interrupts)"
+    ],
+    "seoDescription": "Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html",
+    "contentMarkdown": "# Human-in-the-Loop (HITL)\n\nHuman-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.\n\n## Where does the person enter the loop?\n\nChoose the intervention around the task. Specify what the system prepares, what the person decides, and how their response changes the next step. The reviewer needs enough context to understand the proposed action and its consequences.\n\n## Example: Approving a flight change\n\nAn assistant finds an alternative flight and prepares a change. The review shows the original and proposed itineraries, price difference, conditions, and quote expiry. The traveler can approve, edit the request, or cancel.\n\nThe workflow pauses while it waits. If the quote expires or the booking changes before approval, the system refreshes the proposal and asks the traveler to review the revised details. On resuming, it records the decision and shows whether the change completed or needs recovery.\n\n## How do you evaluate the review?\n\nTest whether people understand what they are approving, spot a deliberately incorrect detail, and can decline or correct it. Also test timeout, refresh, and failure paths. Record review quality and the outcome of the task. An approval click is one event in the process, and its value depends on whether the person could make an informed decision.\n\n## Related terms\n\n- [Agentic UX](/glossary/agentic-ux.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n- [Explainable AI](/glossary/explainable-ai.html)\n\n- [Trust Calibration in AI](/glossary/trust-calibration-ai.html)\n\n## Sources\n\n- [Feedback and Control, Google PAIR](https://pair.withgoogle.com/chapter/feedback-controls/)\n- [Interrupts, LangGraph](https://docs.langchain.com/oss/python/langgraph/interrupts)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html",
+        "name": "Human-in-the-Loop (HITL): Review and Control in AI",
+        "description": "Understand human-in-the-loop AI through a booking approval example, including what reviewers need to see and how a paused task resumes.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#breadcrumbs"
+        },
+        "citation": [
+          "https://pair.withgoogle.com/chapter/feedback-controls/",
+          "https://docs.langchain.com/oss/python/langgraph/interrupts"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#term",
+        "name": "Human-in-the-Loop (HITL)",
+        "termCode": "human-in-the-loop-hitl",
+        "description": "Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.",
+        "url": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#webpage"
+        },
+        "alternateName": [
+          "HITL",
+          "Human-in-the-Loop"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Human-in-the-Loop (HITL)",
+            "item": "https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "HITL",
+      "Human-in-the-Loop"
     ]
   },
   {
@@ -5662,24 +6500,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Emerging",
-    "definition": "Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.",
-    "purpose": "Moves conversational AI beyond static text and markdown, providing tailored visual affordances (e.g., flight booking cards, charts, interactive forms) directly inside conversation streams.",
+    "definition": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.",
+    "purpose": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.",
     "keyConcepts": [
-      "Dynamic component hydration",
-      "streamable React Server Components",
-      "tool-driven UI rendering."
+      "Example: comparing flight options",
+      "What designers should specify",
+      "How can schemas constrain generated UI?"
     ],
-    "howItWorks": "Tool calls made by the model map to registered design system components, which are streamed and mounted into the DOM using modern libraries.",
+    "howItWorks": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.",
     "relatedTerms": [
       "AI-native Design",
       "Tool Calling (Function Calling)",
       "Component Architecture",
-      "Model Context Protocol (MCP)"
+      "Model Context Protocol (MCP)",
+      "Conversational UX"
     ],
-    "seoTitle": "Generative UI: Dynamic Component Streaming with AI SDK",
+    "seoTitle": "Generative UI: Definition, Examples, and Design Controls",
     "sources": [
-      "Vercel, AI SDK 3.0: Generative UI (https://vercel.com/blog/ai-sdk-3-generative-ui)",
-      "Ultralytics, Generative UI Architecture"
+      "Vercel AI SDK: Generative User Interfaces (https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces)",
+      "W3C: Understanding Status Messages (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)"
+    ],
+    "seoDescription": "Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/generative-ui.html",
+    "contentMarkdown": "# Generative UI\n\nGenerative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.\n\nImplementations vary. A model might select an approved component and supply its data, or generate a new layout. The AI SDK documents an approach that connects tool results to existing React components. A product can use generative UI while retaining a stable navigation system and design language.\n\n## Example: comparing flight options\n\nA traveler asks for two flights that arrive before noon. The application retrieves available flights and renders comparison cards with arrival times, prices, and fare conditions.\n\nThe user can change the dates or open an option's details directly. If the request is ambiguous, the interface asks for the missing constraint. If availability cannot be retrieved, it displays that state instead of inventing a bookable fare.\n\nThe useful interaction is the ability to inspect and act on structured information.\n\n## What designers should specify\n\n- Define the components the system can use and the data each requires.\n- Distinguish retrieved facts from generated explanations.\n- Design loading, empty, error, and partial-result states.\n- Preserve labels, focus order, and keyboard operation when content changes.\n- Make important status changes available to assistive technology.\n- Require the appropriate review before a consequential action.\n\nTest representative requests, including unavailable data and contradictory constraints. Evaluate whether users can complete the task and understand the result. Visual variety alone does not establish that the interface is useful.\n\n## How can schemas constrain generated UI?\n\nA product can use [structured outputs](/glossary/structured-outputs.html) to restrict a model to supported component names and data fields. A controlled renderer then maps those descriptions to approved implementations.\n\nSchema conformance does not establish that a fare is available, a record belongs to the user, or an action is authorized. Validate data and enforce permissions in the application. Test focus, keyboard interaction, and recovery when the generated selection changes.\n\n## Related terms\n\n- [AI-native Design](/glossary/ai-native-design.html)\n- [Tool Calling (Function Calling)](/glossary/tool-calling-function-calling.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Model Context Protocol (MCP)](/glossary/model-context-protocol-mcp.html)\n\n- [Conversational UX](/glossary/conversational-ux.html)\n\n## Sources\n\n- [Vercel AI SDK: Generative User Interfaces](https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces)\n- [W3C: Understanding Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/generative-ui.html",
+        "name": "Generative UI: Definition, Examples, and Design Controls",
+        "description": "Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/generative-ui.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/generative-ui.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces",
+          "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#term",
+        "name": "Generative UI",
+        "termCode": "generative-ui",
+        "description": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.",
+        "url": "https://lexkonovalov.com/glossary/generative-ui.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/generative-ui.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Generative UI",
+            "item": "https://lexkonovalov.com/glossary/generative-ui.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5693,14 +6606,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Coined / Interpretive",
     "definition": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
-    "purpose": "Creates novel human-computer interaction paradigms that leverage autonomy, context awareness, and dynamic interfaces to solve previously intractable workflow challenges.",
+    "purpose": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
     "keyConcepts": [
-      "Probabilistic interactions",
-      "ambient context",
-      "variable UI layouts",
-      "intent over navigation."
+      "What makes a product AI-native?",
+      "An AI-native design example: support triage",
+      "What should designers define?",
+      "How do you know it helps?",
+      "Which AI concepts affect the interaction?"
     ],
-    "howItWorks": "Designers construct experiences where user intent replaces rigid navigational trees, pairing dynamic generative canvases with system constraints and telemetry.",
+    "howItWorks": "AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.",
     "relatedTerms": [
       "Generative UI",
       "Agentic UX",
@@ -5716,7 +6630,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Guidelines for Human-AI Interaction, Microsoft HAX Design Library (https://www.microsoft.com/en-us/haxtoolkit/library/)",
       "Errors + Graceful Failure, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)"
     ],
-    "contentMarkdown": "# AI-native Design\n\nAI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.\n\nThe term is evolving. This glossary uses it as a working definition, not a formal methodology. AI may generate, classify, recommend, or predict; the appropriate interaction depends on the task.\n\n## What makes a product AI-native?\n\nA useful design question is: **How would the core workflow change if the AI capability were removed?** If the product’s main value depends on interpreting information, generating useful output, or adapting assistance, AI is central to the design.\n\nUsing AI to create wireframes or write code describes the designer’s process. AI-native describes the product experience. A chatbot, autonomous agent, or dynamically generated interface is one possible interaction pattern, not a requirement.\n\n## An AI-native design example: support triage\n\nImagine a support workspace whose core workflow turns incoming messages into suggested categories, relevant account context, and draft replies. The following example is illustrative.\n\nFor “I paid yesterday, but my account is still locked,” the system proposes a billing category and a reply based on available account records and help content.\n\n| Design decision | Example behavior |\n|---|---|\n| Context | Show which message, account record, and help article informed the suggestion. |\n| Review | Let the agent inspect sources, change the category, and edit the draft. |\n| Control | Require the agent to approve sending the reply; account changes follow separate permissions. |\n| Recovery | If payment status is unavailable, avoid claiming payment is confirmed; show the limitation and offer a manual lookup. |\n\nA polished draft can still contain a mistake. Source links help the agent verify claims; they do not guarantee that the response is correct. The design should make checking and correcting the output practical within the actual workload.\n\n## What should designers define?\n\n1. **The user outcome.** Identify the problem AI is suited to solve and compare the proposed workflow with the current way of doing the task.\n2. **Capabilities and limits.** Explain what the system can do, what information it can access, and where its output needs review.\n3. **Control and consequences.** Specify what AI may suggest or execute, when approval is needed, and what users can correct, dismiss, or undo.\n4. **Failure behavior.** Design for missing context, incorrect output, unavailable services, and a usable manual path.\n5. **Evaluation.** Test representative tasks, including difficult cases, and examine both output quality and the effort needed to review it. Repeat these checks when models, prompts, or source data change.\n\nGoogle’s People + AI Guidebook and Microsoft’s HAX guidelines provide practical guidance for these interaction decisions.\n\n## How do you know it helps?\n\nFor the support example, measure time to a correct resolution, incorrect replies, and the effort agents spend checking drafts. Draft acceptance alone cannot tell you whether the replies are correct. Compare results with the existing workflow and investigate where users need to intervene.\n\n## Related terms\n\n- [Generative UI](/glossary/generative-ui.html)\n- [Agentic UX](/glossary/agentic-ux.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Operational UX](/glossary/operational-ux.html)\n\n## Sources\n\n- [User Needs + Defining Success, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/)\n- [Mental Models, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/)\n- [Guidelines for Human-AI Interaction, Microsoft HAX Design Library](https://www.microsoft.com/en-us/haxtoolkit/library/)\n- [Errors + Graceful Failure, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)",
+    "contentMarkdown": "# AI-native Design\n\nAI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.\n\nThe term is evolving. This glossary uses it as a working definition, not a formal methodology. AI may generate, classify, recommend, or predict; the appropriate interaction depends on the task.\n\n## What makes a product AI-native?\n\nA useful design question is: **How would the core workflow change if the AI capability were removed?** If the product’s main value depends on interpreting information, generating useful output, or adapting assistance, AI is central to the design.\n\nUsing AI to create wireframes or write code describes [AI-assisted design](/glossary/ai-assisted-design.html), the designer’s process. AI-native describes the product experience. A chatbot, autonomous agent, or dynamically generated interface is one possible interaction pattern, not a requirement.\n\n## An AI-native design example: support triage\n\nImagine a support workspace whose core workflow turns incoming messages into suggested categories, relevant account context, and draft replies. The following example is illustrative.\n\nFor “I paid yesterday, but my account is still locked,” the system proposes a billing category and a reply based on available account records and help content.\n\n| Design decision | Example behavior |\n|---|---|\n| Context | Show which message, account record, and help article informed the suggestion. |\n| Review | Let the agent inspect sources, change the category, and edit the draft. |\n| Control | Require the agent to approve sending the reply; account changes follow separate permissions. |\n| Recovery | If payment status is unavailable, avoid claiming payment is confirmed; show the limitation and offer a manual lookup. |\n\nA polished draft can still contain a mistake. Source links help the agent verify claims; they do not guarantee that the response is correct. The design should make checking and correcting the output practical within the actual workload.\n\n## What should designers define?\n\n1. **The user outcome.** Identify the problem AI is suited to solve and compare the proposed workflow with the current way of doing the task.\n2. **Capabilities and limits.** Explain what the system can do, what information it can access, and where its output needs review.\n3. **Control and consequences.** Specify what AI may suggest or execute, when approval is needed, and what users can correct, dismiss, or undo.\n4. **Failure behavior.** Design for missing context, incorrect output, unavailable services, and a usable manual path.\n5. **Evaluation.** Test representative tasks, including difficult cases, and examine both output quality and the effort needed to review it. Repeat these checks when models, prompts, or source data change.\n\nGoogle’s People + AI Guidebook and Microsoft’s HAX guidelines provide practical guidance for these interaction decisions.\n\n## How do you know it helps?\n\nFor the support example, measure time to a correct resolution, incorrect replies, and the effort agents spend checking drafts. Draft acceptance alone cannot tell you whether the replies are correct. Compare results with the existing workflow and investigate where users need to intervene.\n\n## Which AI concepts affect the interaction?\n\n[Grounding](/glossary/ai-grounding.html) connects an answer to evidence; [hallucinations](/glossary/ai-hallucination.html) can still produce unsupported claims. The interface needs a useful way to inspect the relevant source and recover when information is missing.\n\n[AI transparency](/glossary/ai-transparency.html) explains the system's role and boundaries. [Explainable AI](/glossary/explainable-ai.html) focuses on making behavior or results understandable. [Trust calibration](/glossary/trust-calibration-ai.html) concerns whether users rely on the system appropriately.\n\nThese interaction decisions form part of [responsible AI design](/glossary/responsible-ai-design.html), alongside evaluation, accessibility, data handling, and clear operational ownership.\n\n## Related terms\n\n- [Generative UI](/glossary/generative-ui.html)\n- [Agentic UX](/glossary/agentic-ux.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Operational UX](/glossary/operational-ux.html)\n\n## Sources\n\n- [User Needs + Defining Success, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/)\n- [Mental Models, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/)\n- [Guidelines for Human-AI Interaction, Microsoft HAX Design Library](https://www.microsoft.com/en-us/haxtoolkit/library/)\n- [Errors + Graceful Failure, Google People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -5801,25 +6715,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Coined / Interpretive",
-    "definition": "Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.",
-    "purpose": "Drastically lowers barriers to software creation, enabling rapid prototyping and concept iteration at high speed.",
+    "definition": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.",
+    "purpose": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.",
     "keyConcepts": [
-      "Material disengagement",
-      "prompt-driven execution",
-      "iterative goal satisfaction",
-      "automated debugging loops."
+      "Example: exploring a scheduling interface",
+      "Vibe coding and reviewed development",
+      "What designers can evaluate"
     ],
-    "howItWorks": "The user instructs an agent, observes the running application preview, and prompts iterative refinements while the agent writes and fixes code autonomously.",
+    "howItWorks": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.",
     "relatedTerms": [
       "Design Engineering",
       "Design-to-Code Workflow",
       "Agent Harness",
-      "AI Agent"
+      "AI Agent",
+      "AI Prototyping"
     ],
-    "seoTitle": "What is Vibe Coding? Origins, Karpathy Definition, and Limits",
+    "seoTitle": "Vibe Coding: Meaning, Prototype Example, and Limits",
     "sources": [
-      "Andrej Karpathy, Vibe Coding Announcement (February 2025)",
-      "ArXiv Research, Material Disengagement in AI Programming"
+      "Andrej Karpathy: Original Vibe Coding Post (https://x.com/karpathy/status/1886192184808149383)",
+      "Simon Willison: Vibe Coding and AI-Assisted Programming (https://simonwillison.net/2025/Mar/19/vibe-coding/)"
+    ],
+    "seoDescription": "Understand vibe coding",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/vibe-coding.html",
+    "contentMarkdown": "# Vibe Coding\n\nVibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.\n\nThe term is also used more broadly for AI-assisted development. Its original meaning is narrower: accepting and modifying generated software without closely reviewing how the implementation works.\n\n## Example: exploring a scheduling interface\n\nA designer asks an AI tool to build a room-assignment prototype using fictional reservations. They adjust the layout through prompts, try the interactions, and ask the tool to fix visible problems.\n\nThat can help the team explore whether a calendar, list, or split view communicates the task clearly. It does not establish that the scheduling rules are complete or that concurrent edits are handled correctly.\n\nKeep the prototype's assumptions visible. For example, it might assume every reservation has an assigned room and ignore maintenance blocks.\n\n## Vibe coding and reviewed development\n\nAI-assisted development also includes workflows in which people inspect changes, understand the implementation, and verify requirements. Describe the actual level of review when discussing the work.\n\nBefore turning the scheduling prototype into a service, review data access, business rules, error handling, accessibility, and deployment behavior. Test conflicting bookings and failed saves, and identify who will maintain the code.\n\n## What designers can evaluate\n\nSeparate the interaction hypothesis from implementation readiness. Observe whether people understand the prototype and can complete representative tasks.\n\nA fast build can make an idea easier to test. Its value depends on what the team learns and whether the resulting product solves a real problem.\n\n## Related terms\n\n- [Design Engineering](/glossary/design-engineering.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [AI Agent](/glossary/ai-agent.html)\n\n- [AI Prototyping](/glossary/ai-prototyping.html)\n\n## Sources\n\n- [Andrej Karpathy: Original Vibe Coding Post](https://x.com/karpathy/status/1886192184808149383)\n- [Simon Willison: Vibe Coding and AI-Assisted Programming](https://simonwillison.net/2025/Mar/19/vibe-coding/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/vibe-coding.html",
+        "name": "Vibe Coding: Meaning, Prototype Example, and Limits",
+        "description": "Understand vibe coding's original meaning, how it differs from broader AI-assisted development, and what a working prototype still needs before release.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#breadcrumbs"
+        },
+        "citation": [
+          "https://x.com/karpathy/status/1886192184808149383",
+          "https://simonwillison.net/2025/Mar/19/vibe-coding/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#term",
+        "name": "Vibe Coding",
+        "termCode": "vibe-coding",
+        "description": "Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.",
+        "url": "https://lexkonovalov.com/glossary/vibe-coding.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/vibe-coding.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Vibe Coding",
+            "item": "https://lexkonovalov.com/glossary/vibe-coding.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5830,15 +6818,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.",
-    "purpose": "Enhances semantic discoverability, unambiguous entity disambiguation, and structured grounding for search engine generative overviews and LLM retrieval-augmented agents.",
+    "purpose": "Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.",
     "keyConcepts": [
-      "JSON-LD 1.1 formatting",
-      "Schema.org vocabularies (DefinedTerm, etc.)",
-      "entity relationship graphs",
-      "semantic HTML vs structured data",
-      "AI Overviews indexing eligibility"
+      "What can structured data describe?",
+      "How is it different from semantic HTML?",
+      "Do Google’s AI features need special structured data?",
+      "Is structured data the same as structured AI output?"
     ],
-    "howItWorks": "Injects machine-readable JSON-LD graph objects into HTML documents, enabling web scrapers, semantic search engines, and LLM context pipelines to parse entity hierarchies directly.",
+    "howItWorks": "Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.",
     "relatedTerms": [
       "llms.txt Proposal",
       "Content Modeling",
@@ -5856,7 +6843,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     "seoDescription": "Learn what JSON-LD and Schema.org tell machines about a web page, how that differs from HTML semantics, and what Google’s AI features require.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/structured-data-for-llms.html",
-    "contentMarkdown": "# Structured Data for LLMs\n\nStructured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.\n\n## What can structured data describe?\n\nSchema.org defines types and properties. JSON-LD is a format for expressing that information. A glossary page, for example, can identify its entry as a `DefinedTerm`, give it a name and description, and link it to a `DefinedTermSet`. The description should agree with the visible definition. Whether a particular system reads or uses those fields depends on how that system retrieves and processes pages.\n\n## How is it different from semantic HTML?\n\nJSON-LD can describe what a page is about. Semantic HTML describes the structure and controls that appear on the page. For example, the glossary entry’s JSON-LD can identify a term, while a native HTML button gives the browser the semantics for a control that opens a panel. Both can be useful on the same page.\n\n## Do Google’s AI features need special structured data?\n\nGoogle says its AI Overviews and AI Mode require no special Schema.org markup. A page needs to be indexed and eligible to appear with a snippet to be eligible as a supporting link. Whether a page appears as a source depends on the system and the query. Keep your visible content clear and use structured data to describe it faithfully.\n\n## Related terms\n\n- [llms.txt Proposal](/glossary/llms-txt-proposal.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n\n## Sources\n\n- [Getting Started with Schema.org, Schema.org](https://schema.org/docs/gs.html)\n- [DefinedTerm, Schema.org](https://schema.org/DefinedTerm)\n- [JSON-LD 1.1, W3C](https://www.w3.org/TR/json-ld11/)\n- [Introduction to Structured Data, Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)\n- [AI Features and Your Website, Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)",
+    "contentMarkdown": "# Structured Data for LLMs\n\nStructured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.\n\n## What can structured data describe?\n\nSchema.org defines types and properties. JSON-LD is a format for expressing that information. A glossary page, for example, can identify its entry as a `DefinedTerm`, give it a name and description, and link it to a `DefinedTermSet`. The description should agree with the visible definition. Whether a particular system reads or uses those fields depends on how that system retrieves and processes pages.\n\n## How is it different from semantic HTML?\n\nJSON-LD can describe what a page is about. Semantic HTML describes the structure and controls that appear on the page. For example, the glossary entry’s JSON-LD can identify a term, while a native HTML button gives the browser the semantics for a control that opens a panel. Both can be useful on the same page.\n\n## Do Google’s AI features need special structured data?\n\nGoogle says its AI Overviews and AI Mode require no special Schema.org markup. A page needs to be indexed and eligible to appear with a snippet to be eligible as a supporting link. Whether a page appears as a source depends on the system and the query. Keep your visible content clear and use structured data to describe it faithfully.\n\n## Is structured data the same as structured AI output?\n\n[Structured outputs](/glossary/structured-outputs.html) constrain a model's response to a supported schema. Website structured data describes published entities and their relationships. Both can use JSON, but they address different tasks; publishing JSON-LD does not constrain an unrelated model's answer format.\n\n## Related terms\n\n- [llms.txt Proposal](/glossary/llms-txt-proposal.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n\n## Sources\n\n- [Getting Started with Schema.org, Schema.org](https://schema.org/docs/gs.html)\n- [DefinedTerm, Schema.org](https://schema.org/DefinedTerm)\n- [JSON-LD 1.1, W3C](https://www.w3.org/TR/json-ld11/)\n- [Introduction to Structured Data, Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)\n- [AI Features and Your Website, Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -5939,24 +6926,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Emerging",
-    "definition": "The llms.txt Proposal is a proposed web standard specifying a curated, Markdown-formatted navigation map located at a website's root (/llms.txt), pointing AI models and agents to core content pages.",
-    "purpose": "Provides AI agents with a clean, low-token navigation index of high-value site documentation, bypassing the clutter of heavy HTML scripts and complex navigation trees.",
+    "definition": "llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.",
+    "purpose": "llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.",
     "keyConcepts": [
-      "/llms.txt root file",
-      "curated link markdown",
-      "low-token context aid",
-      "/llms-full.txt companion."
+      "What the file contains",
+      "Example: a product design glossary",
+      "Does llms.txt improve SEO?"
     ],
-    "howItWorks": "The server hosts a lightweight markdown file with H project names, summary blockquotes, and link lists with 1-line descriptions, accompanied by raw .md content mirrors.",
+    "howItWorks": "llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.",
     "relatedTerms": [
       "Structured Data for LLMs",
       "Content Modeling",
       "Context Engineering"
     ],
-    "seoTitle": "What is llms.txt? Jeremy Howard's Proposal Explained",
+    "seoTitle": "llms.txt: Proposal, File Format, and SEO Expectations",
     "sources": [
-      "Jeremy Howard, llms.txt Specification, Answer.AI (v, August 2026)",
-      "W2B Agency Technical Guide"
+      "Jeremy Howard: The llms.txt Proposal, v2 (https://llmstxt.org/)",
+      "Google Search Central: AI Features and Your Website (https://developers.google.com/search/docs/appearance/ai-features)"
+    ],
+    "seoDescription": "Learn what the llms.txt proposal does, how its Markdown overview links to useful content, and why it is optional for Google",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/llms-txt-proposal.html",
+    "contentMarkdown": "# llms.txt Proposal\n\nllms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.\n\nIt is a community proposal rather than a universal requirement for AI systems or search engines. Whether an agent reads it depends on that agent's behavior.\n\n## What the file contains\n\nThe proposal specifies a project or site name as an H1, with optional summary text, explanatory content, and sections of descriptive links. Its current version permits files at the site root or within a section, such as a documentation directory.\n\nIt also recommends clean Markdown versions of relevant pages and link relations that help clients discover those versions.\n\n## Example: a product design glossary\n\nA glossary could provide a short explanation of its scope and grouped links to core terms, such as OOUX, accessibility, and design tokens. Each link description should explain what information is available.\n\nIf Markdown page versions are offered, keep them synchronized with the public articles. A stale summary or broken link can make the file less useful.\n\n## Does llms.txt improve SEO?\n\nGoogle states that no new AI text files or special schema.org markup are required for inclusion in AI Overviews or AI Mode. Publishing llms.txt does not guarantee indexing, ranking improvements, or citations.\n\nFor a small site, consider it an optional documentation experiment. First maintain useful visible content, discoverable internal links, and correct indexing controls.\n\nIf implemented, test whether agents can answer representative questions using the file and its links. Review actual usage where observable rather than assuming a search benefit.\n\n## Related terms\n\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Context Engineering](/glossary/context-engineering.html)\n\n## Sources\n\n- [Jeremy Howard: The llms.txt Proposal, v2](https://llmstxt.org/)\n- [Google Search Central: AI Features and Your Website](https://developers.google.com/search/docs/appearance/ai-features)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/llms-txt-proposal.html",
+        "name": "llms.txt: Proposal, File Format, and SEO Expectations",
+        "description": "Learn what the llms.txt proposal does, how its Markdown overview links to useful content, and why it is optional for Google's AI search features.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#breadcrumbs"
+        },
+        "citation": [
+          "https://llmstxt.org/",
+          "https://developers.google.com/search/docs/appearance/ai-features"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#term",
+        "name": "llms.txt Proposal",
+        "termCode": "llms-txt-proposal",
+        "description": "llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.",
+        "url": "https://lexkonovalov.com/glossary/llms-txt-proposal.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/llms-txt-proposal.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "llms.txt Proposal",
+            "item": "https://lexkonovalov.com/glossary/llms-txt-proposal.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5966,25 +7026,101 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Multimodal AI refers to machine learning architectures capable of processing, synthesizing, and relating information across multiple diverse sensory modalities, including text, vector graphics, raster images, audio, and video.",
-    "purpose": "Enables computers to comprehend real-world design artifacts—such as visual mockups, spatial whiteboards, and spoken design critiques—in their native formats.",
+    "definition": "Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.",
+    "purpose": "Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.",
     "keyConcepts": [
-      "Cross-attention mechanisms",
-      "joint embedding spaces",
-      "sensory fusion",
-      "unified encoders."
+      "What can multimodal AI do?",
+      "How does multimodal AI relate to generative AI?",
+      "Example: Reviewing a receipt in an expense app"
     ],
-    "howItWorks": "Deep neural networks map heterogeneous data streams (e.g., pixels and tokens) into shared high-dimensional vector spaces to compute cross-modal reasoning.",
+    "howItWorks": "Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.",
     "relatedTerms": [
       "AI Agent",
       "Generative UI",
       "Semantic Zoom",
-      "AI-native Design"
+      "AI-native Design",
+      "Context Engineering"
     ],
-    "seoTitle": "Multimodal AI in Product Design: Vision, Audio & Canvas UX",
+    "seoTitle": "Multimodal AI: Text, Image, and Audio Examples",
     "sources": [
-      "OpenAI GPT-4V Technical Report",
-      "DeepMind Gemini Architectural Overview"
+      "Multimodal AI, Google Cloud (https://cloud.google.com/use-cases/multimodal-ai)",
+      "Image Understanding, Google Gemini API Documentation (https://ai.google.dev/gemini-api/docs/image-understanding)",
+      "Audio Understanding, Google Gemini API Documentation (https://ai.google.dev/gemini-api/docs/audio)"
+    ],
+    "seoDescription": "Understand multimodal AI through text, image, and audio examples, how it relates to generative AI, and what to verify in a product workflow.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/multimodal-ai.html",
+    "contentMarkdown": "# Multimodal AI\n\nMultimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.\n\n## What can multimodal AI do?\n\n| Input | Example output |\n|---|---|\n| A receipt image and a written instruction | A draft expense entry with the merchant, date, currency, and amount. |\n| An audio recording and a request for a summary | A written account of the discussion and proposed action items. |\n| A screenshot and a written question | An explanation of a visible interface state. |\n\nThe supported combinations depend on the model and the application. Check which inputs and outputs the chosen system accepts and evaluate the task you intend to support.\n\n## How does multimodal AI relate to generative AI?\n\nMultimodal describes the types of information a system handles. Generative AI creates content. A system that reads a receipt image and generates a written explanation uses both capabilities. Other multimodal applications may classify content or retrieve matching items.\n\n## Example: Reviewing a receipt in an expense app\n\nAn employee uploads a receipt and asks the app to prepare an expense entry. The system sends the image and instructions to a model that supports image input. It presents the extracted fields beside the source image so the employee can correct them before submitting.\n\nTest the flow with blurred images, different layouts, and receipts showing several totals or currencies. Check whether the app identifies missing or ambiguous information and lets the employee resolve it. Measure field correctness and successful submission, including whether the saved amount and currency match the intended expense.\n\n## Related terms\n\n- [AI Agent](/glossary/ai-agent.html)\n- [Generative UI](/glossary/generative-ui.html)\n- [Semantic Zoom](/glossary/semantic-zoom.html)\n- [AI-native Design](/glossary/ai-native-design.html)\n- [Context Engineering](/glossary/context-engineering.html)\n\n## Sources\n\n- [Multimodal AI, Google Cloud](https://cloud.google.com/use-cases/multimodal-ai)\n- [Image Understanding, Google Gemini API Documentation](https://ai.google.dev/gemini-api/docs/image-understanding)\n- [Audio Understanding, Google Gemini API Documentation](https://ai.google.dev/gemini-api/docs/audio)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/multimodal-ai.html",
+        "name": "Multimodal AI: Text, Image, and Audio Examples",
+        "description": "Understand multimodal AI through text, image, and audio examples, how it relates to generative AI, and what to verify in a product workflow.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#breadcrumbs"
+        },
+        "citation": [
+          "https://cloud.google.com/use-cases/multimodal-ai",
+          "https://ai.google.dev/gemini-api/docs/image-understanding",
+          "https://ai.google.dev/gemini-api/docs/audio"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#term",
+        "name": "Multimodal AI",
+        "termCode": "multimodal-ai",
+        "description": "Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.",
+        "url": "https://lexkonovalov.com/glossary/multimodal-ai.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/multimodal-ai.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Multimodal AI",
+            "item": "https://lexkonovalov.com/glossary/multimodal-ai.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -5994,25 +7130,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.",
-    "purpose": "Provides deterministic, verifiable ground-truth data structures for AI reasoning, eliminating the factual hallucinations common to unstructured vector embeddings.",
+    "definition": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.",
+    "purpose": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.",
     "keyConcepts": [
-      "Nodes (entities)",
-      "edges (predicates)",
-      "triple stores",
-      "ontological reasoning."
+      "Example: finding affected reservations",
+      "Knowledge graphs and RAG",
+      "Check the relationships"
     ],
-    "howItWorks": "Information is structured as RDF triples (Subject -[Predicate]-> Object); query engines traverse these relationships to feed structured contextual subgraphs to LLMs.",
+    "howItWorks": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.",
     "relatedTerms": [
       "Conceptual Schema",
       "Domain Context Modeling",
       "Retrieval-Augmented Generation (RAG)",
       "Structured Data for LLMs"
     ],
-    "seoTitle": "Knowledge Graphs in AI: Structuring Graph Context for LLMs",
+    "seoTitle": "Knowledge Graphs for AI: Entities, Relationships, and Uses",
     "sources": [
-      "Tim Berners-Lee, The Semantic Web, Scientific American",
-      "MCP Memory Server Specification"
+      "W3C: RDF 1.1 Primer (https://www.w3.org/TR/rdf11-primer/)",
+      "Microsoft: GraphRAG Documentation (https://microsoft.github.io/graphrag/)"
+    ],
+    "seoDescription": "Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html",
+    "contentMarkdown": "# Knowledge Graphs (AI Context)\n\nA knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.\n\nFor example, a graph can connect a hotel to its rooms, a reservation to its guest, and a maintenance issue to the room it affects. Relationships make those connections available for queries.\n\n## Example: finding affected reservations\n\nSuppose room 204 has an unresolved maintenance issue. A hotel tool could follow relationships from that room to overlapping reservations and their assigned guests.\n\nAn AI assistant could use the resulting records to explain which reservations need review. The application still needs date logic, current data, and access checks to determine the actual result.\n\nStable identifiers matter: two guests with the same name should remain distinct entities. Record where important facts came from and when they were updated.\n\n## Knowledge graphs and RAG\n\nA knowledge graph can support retrieval-augmented generation by helping retrieve connected facts. Graphs can also be combined with keyword or vector search.\n\nMicrosoft's GraphRAG is one specific approach that builds a graph and community summaries from text. Its architecture does not define every graph-based retrieval system.\n\nRDF is one way to represent graph data; knowledge graphs can also use other data models.\n\n## Check the relationships\n\nDefine the meaning and direction of each relationship. Validate extracted entities, duplicate records, and unsupported connections before relying on them.\n\nA graph structures information, including information that may be incomplete or incorrect. Test retrieval quality and the generated answer against the underlying sources. More connections alone do not establish better answers.\n\n## Related terms\n\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Retrieval-Augmented Generation (RAG)](/glossary/retrieval-augmented-generation-rag.html)\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n\n## Sources\n\n- [W3C: RDF 1.1 Primer](https://www.w3.org/TR/rdf11-primer/)\n- [Microsoft: GraphRAG Documentation](https://microsoft.github.io/graphrag/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html",
+        "name": "Knowledge Graphs for AI: Entities, Relationships, and Uses",
+        "description": "Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/TR/rdf11-primer/",
+          "https://microsoft.github.io/graphrag/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#term",
+        "name": "Knowledge Graphs (AI Context)",
+        "termCode": "knowledge-graphs-ai-context",
+        "description": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.",
+        "url": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knowledge Graphs (AI Context)",
+            "item": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6022,25 +7231,102 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Coined / Interpretive",
-    "definition": "Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.",
-    "purpose": "Establishes human trust, transparency, and situational control over autonomous processes executing multi-step operations without immediate supervision.",
+    "definition": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.",
+    "purpose": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.",
     "keyConcepts": [
-      "Intent signaling",
-      "progress observability",
-      "intervention triggers",
-      "trust calibration."
+      "Example: updating a set of reservations",
+      "Design around delegation",
+      "Evaluate the outcome"
     ],
-    "howItWorks": "Designers build multi-state feedback systems, activity logs, reversible actions, and explicit decision checkpoints into agent workflows.",
+    "howItWorks": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.",
     "relatedTerms": [
       "Human-in-the-Loop (HITL)",
       "Operational UX",
       "AI-native Design",
-      "Agent Harness"
+      "Agent Harness",
+      "Conversational UX",
+      "AI Transparency"
     ],
-    "seoTitle": "Agentic UX: Designing for Autonomous AI Agents and Trust",
+    "seoTitle": "Agentic UX: Designing Control, Progress, and Recovery",
     "sources": [
-      "Interaction Design Foundation, Designing for Agentic AI",
-      "Thoughtworks Customer Insights"
+      "Google PAIR: Feedback and Control (https://pair.withgoogle.com/chapter/feedback-controls/)",
+      "Google PAIR: Errors and Graceful Failure (https://pair.withgoogle.com/chapter/errors-failing/)",
+      "LangChain: Interrupts (https://docs.langchain.com/oss/python/langgraph/interrupts)"
+    ],
+    "seoDescription": "Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/agentic-ux.html",
+    "contentMarkdown": "# Agentic UX\n\nAgentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.\n\nA conversational interface is one possible entry point. The experience may also include task queues, approval screens, notifications, and activity records.\n\n## Example: updating a set of reservations\n\nAn operations manager asks an agent to find reservations affected by a schedule change and prepare customer notifications.\n\nBefore work begins, the interface makes the affected date range and intended actions visible. During the task, it distinguishes records being checked from messages awaiting review. Before sending, it lets the manager inspect recipients, content, and exceptions.\n\nIf some messages fail, the final state identifies which were sent, which failed, and which have an uncertain outcome. The recovery path should avoid sending successful messages again.\n\n## Design around delegation\n\nUseful questions include:\n\n- What information does the agent need before starting?\n- Which actions are already authorized?\n- Where can a person inspect, change, or stop the work?\n- What happens to completed actions when the task stops?\n- How does the user resolve missing information or partial failure?\n\nA stop control needs an accurate explanation of its effect. It may prevent further work without reversing changes already made.\n\n## Evaluate the outcome\n\nTest whether users can understand what happened and take the next appropriate action. Include unexpected results and delayed approvals.\n\nKeep necessary review concise and informative. Approval is useful when the reviewer can identify the target, proposed change, and consequence.\n\n## Related terms\n\n- [Human-in-the-Loop (HITL)](/glossary/human-in-the-loop-hitl.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [AI-native Design](/glossary/ai-native-design.html)\n- [Agent Harness](/glossary/agent-harness.html)\n\n- [Conversational UX](/glossary/conversational-ux.html)\n\n- [AI Transparency](/glossary/ai-transparency.html)\n\n## Sources\n\n- [Google PAIR: Feedback and Control](https://pair.withgoogle.com/chapter/feedback-controls/)\n- [Google PAIR: Errors and Graceful Failure](https://pair.withgoogle.com/chapter/errors-failing/)\n- [LangChain: Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/agentic-ux.html",
+        "name": "Agentic UX: Designing Control, Progress, and Recovery",
+        "description": "Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://pair.withgoogle.com/chapter/feedback-controls/",
+          "https://pair.withgoogle.com/chapter/errors-failing/",
+          "https://docs.langchain.com/oss/python/langgraph/interrupts"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#term",
+        "name": "Agentic UX",
+        "termCode": "agentic-ux",
+        "description": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.",
+        "url": "https://lexkonovalov.com/glossary/agentic-ux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agentic UX",
+            "item": "https://lexkonovalov.com/glossary/agentic-ux.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6050,25 +7336,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "System Prompts & Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application's execution harness to enforce safety, tone, data privacy, and operational constraints.",
-    "purpose": "Prevents prompt injections, ensures regulatory compliance, restricts system permissions, and maintains brand voice integrity across generative responses.",
+    "definition": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.",
+    "purpose": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.",
     "keyConcepts": [
-      "Metaprompts",
-      "input/output validation",
-      "safety boundary rails",
-      "prompt isolation."
+      "What belongs in each layer?",
+      "Example: Preparing a flight change",
+      "How do you evaluate the controls?"
     ],
-    "howItWorks": "Upstream middleware evaluates inputs and model outputs against safety policies, intercepting and modifying non-compliant generations.",
+    "howItWorks": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.",
     "relatedTerms": [
       "Context Engineering",
       "Agent Harness",
       "Design Harness",
-      "Prompt Engineering"
+      "Prompt Engineering",
+      "Prompt Injection"
     ],
-    "seoTitle": "AI System Prompts & Guardrails: Architecture and Safety Patterns",
+    "seoTitle": "System Prompts and Guardrails: Instructions and Checks",
     "sources": [
-      "NVIDIA NeMo Guardrails Specification",
-      "Anthropic Claude System Prompting Architecture"
+      "Guardrails, LangChain (https://docs.langchain.com/oss/python/langchain/guardrails)",
+      "Prompt Injection, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm01-prompt-injection/)"
+    ],
+    "seoDescription": "Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html",
+    "contentMarkdown": "# System Prompts & Guardrails\n\nSystem prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.\n\n## What belongs in each layer?\n\nA prompt can explain the assistant’s role, response format, and how to handle missing information. Application controls can validate structured output, restrict available tools, check authorization, and pause an operation for review.\n\nThe system should enforce permissions at the point where an action is executed. Retrieved text and model output can contain misleading instructions, so the application needs a defined way to handle them.\n\n## Example: Preparing a flight change\n\nA booking assistant is instructed to explain available options and identify uncertain conditions. Its tools can retrieve a booking and prepare a quote. The application checks that the requesting user can access the booking and that the quote is still current.\n\nBefore executing the change, the workflow presents the proposed itinerary and price for approval. The execution service validates the approved operation and returns its actual result.\n\n## How do you evaluate the controls?\n\nTest ordinary requests, malformed outputs, stale quotes, unauthorized records, and retrieved text that tries to redirect the assistant. Check the behavior of the complete workflow, including what the user sees when a check fails. Record whether the controls prevented the invalid action and whether the user could recover.\n\n## Related terms\n\n- [Context Engineering](/glossary/context-engineering.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Prompt Engineering](/glossary/prompt-engineering.html)\n\n- [Prompt Injection](/glossary/prompt-injection.html)\n\n## Sources\n\n- [Guardrails, LangChain](https://docs.langchain.com/oss/python/langchain/guardrails)\n- [Prompt Injection, OWASP Gen AI Security Project](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html",
+        "name": "System Prompts and Guardrails: Instructions and Checks",
+        "description": "Learn how system prompts guide AI behavior and how application guardrails check inputs, outputs, and actions, with a booking workflow example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.langchain.com/oss/python/langchain/guardrails",
+          "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#term",
+        "name": "System Prompts & Guardrails",
+        "termCode": "system-prompts-guardrails",
+        "description": "System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.",
+        "url": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "System Prompts & Guardrails",
+            "item": "https://lexkonovalov.com/glossary/system-prompts-guardrails.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6078,25 +7438,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Emerging",
-    "definition": "Synthetic User Testing is the research simulation practice of executing automated user experience audits, heuristic reviews, and usability walk-throughs using AI agents prompted with precise behavioral personas.",
-    "purpose": "Accelerates discovery cycles and catches glaring usability defects early in sprint cycles before investing time in expensive human cohort testing.",
+    "definition": "Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.",
+    "purpose": "Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.",
     "keyConcepts": [
-      "Persona prompting",
-      "agentic simulation",
-      "automated heuristic evaluations",
-      "synthetic bias calibration."
+      "Where it can help",
+      "Limits to check"
     ],
-    "howItWorks": "Personas are parameterized into agent harnesses that navigate digital prototypes, recording task completions, perceived friction points, and heuristic scores.",
+    "howItWorks": "Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.",
     "relatedTerms": [
       "Product Discovery",
       "Continuous Experimentation",
       "Design Harness",
-      "Evaluation Harness (AI Evals)"
+      "Evaluation Harness (AI Evals)",
+      "AI in UX Research",
+      "ResearchOps"
     ],
-    "seoTitle": "Synthetic User Testing: Running AI-Powered UX Audits",
+    "seoTitle": "Synthetic User Testing: Uses, Limits, and Validation",
     "sources": [
-      "Jakob Nielsen, AI-Driven Usability Testing",
-      "OpenDesign Labs Evaluation Benchmarks"
+      "Nielsen Norman Group: Synthetic Users vs. Human Respondents (https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/)",
+      "Nielsen Norman Group: Synthetic Users (https://www.nngroup.com/articles/synthetic-users/)"
+    ],
+    "seoDescription": "Understand synthetic user testing, where AI simulations can help research preparation, and why generated feedback needs validation with real people.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/synthetic-user-testing.html",
+    "contentMarkdown": "# Synthetic User Testing\n\nSynthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.\n\nThe label covers different activities. An AI persona answering interview questions produces simulated opinions. An agent attempting a task in an interface produces evidence about that agent's performance. Neither directly establishes how representative people will behave.\n\n## Where it can help\n\nA team can use simulations to rehearse interview questions, generate possible objections, or identify scenarios to include in a usability study. These are useful inputs to research planning.\n\nFor example, a designer could ask a model to review a booking cancellation flow from several stated perspectives. If it flags a missing refund explanation, the team can inspect the policy and add that topic to its research plan.\n\nA synthetic response that says “I would subscribe” does not establish demand or willingness to pay.\n\n## Limits to check\n\nGenerated responses can reflect the assumptions in the prompt, repeat common patterns, and miss unusual behavior. In one NN/g comparison of a terminology survey, synthetic respondents reached a similar overall conclusion but produced less varied answers. That result applies to the study's task and setup; it does not establish general equivalence.\n\nLabel simulated findings, record the model and prompts, and keep them separate from participant evidence. Validate important decisions through suitable methods, such as interviews, observed task performance, or behavioral experiments.\n\nTreat disagreement between simulated and observed results as a reason to investigate the assumptions.\n\n## Related terms\n\n- [Product Discovery](/glossary/product-discovery.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Evaluation Harness (AI Evals)](/glossary/evaluation-harness-ai-evals.html)\n\n- [AI in UX Research](/glossary/ai-ux-research.html)\n\n- [ResearchOps](/glossary/researchops.html)\n\n## Sources\n\n- [Nielsen Norman Group: Synthetic Users vs. Human Respondents](https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/)\n- [Nielsen Norman Group: Synthetic Users](https://www.nngroup.com/articles/synthetic-users/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/synthetic-user-testing.html",
+        "name": "Synthetic User Testing: Uses, Limits, and Validation",
+        "description": "Understand synthetic user testing, where AI simulations can help research preparation, and why generated feedback needs validation with real people.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+          "https://www.nngroup.com/articles/synthetic-users/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#term",
+        "name": "Synthetic User Testing",
+        "termCode": "synthetic-user-testing",
+        "description": "Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.",
+        "url": "https://lexkonovalov.com/glossary/synthetic-user-testing.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/synthetic-user-testing.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Synthetic User Testing",
+            "item": "https://lexkonovalov.com/glossary/synthetic-user-testing.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6106,25 +7540,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Emerging",
-    "definition": "Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.",
-    "purpose": "Enables the execution of massive enterprise procedures—such as supply chain optimization or legal compliance verification—without human micro-management.",
+    "definition": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.",
+    "purpose": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.",
     "keyConcepts": [
-      "Directed acyclic graphs (DAGs)",
-      "state orchestration",
-      "sub-agent delegation",
-      "checkpoint recovery."
+      "Example: supplier onboarding",
+      "What orchestration manages",
+      "Check before retrying"
     ],
-    "howItWorks": "A master orchestrator agent assigns partitioned tasks to specialized child agents, synchronizing intermediate outputs and merging final deliverables.",
+    "howItWorks": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.",
     "relatedTerms": [
       "Multi-Agent Systems (MAS)",
       "Agentic AI",
       "AI Agent",
       "Agent Harness"
     ],
-    "seoTitle": "Autonomous Workflow Orchestration: Multi-Agent Systems Architecture",
+    "seoTitle": "Autonomous Workflow Orchestration: Definition and Example",
     "sources": [
-      "LangGraph Framework Documentation",
-      "Microsoft AutoGen Multi-Agent Architecture"
+      "LangChain: Workflows and Agents (https://docs.langchain.com/oss/python/langgraph/workflows-agents)",
+      "LangChain: Persistence (https://docs.langchain.com/oss/python/langgraph/persistence)"
+    ],
+    "seoDescription": "See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html",
+    "contentMarkdown": "# Autonomous Workflow Orchestration\n\nAutonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.\n\n“Autonomous” describes the scope of delegated work. The system still needs rules for permissions, stopping, exceptions, and human involvement.\n\n## Example: supplier onboarding\n\nA supplier-onboarding workflow could collect submitted documents, check required fields, request missing information, and prepare a record for approval.\n\nSome checks can run independently. Creating the active supplier account depends on the required checks and approval being complete. If an external verification service is unavailable, the workflow should preserve its state and show what is waiting.\n\nAn agent might help interpret an unfamiliar document while the application controls the approval requirement and account-creation operation.\n\n## What orchestration manages\n\n- Dependencies: which steps must finish before another can start.\n- State: the inputs, completed work, and pending decisions.\n- Recovery: how failures, timeouts, and interruptions are handled.\n- Coordination: handoffs between services, agents, and people.\n- Limits: when a run must stop or request intervention.\n\nA single agent can participate in an orchestrated workflow; multiple agents are optional.\n\n## Check before retrying\n\nA timeout does not establish that an external operation failed. If account creation returns no result, check the target system before repeating it. Use operation identifiers or idempotency mechanisms where supported.\n\nTest partial completion and resumed runs. Persisting workflow state helps recovery, but external side effects still require deliberate duplicate prevention and reconciliation.\n\n## Related terms\n\n- [Multi-Agent Systems (MAS)](/glossary/multi-agent-systems-mas.html)\n- [Agentic AI](/glossary/agentic-ai.html)\n- [AI Agent](/glossary/ai-agent.html)\n- [Agent Harness](/glossary/agent-harness.html)\n\n## Sources\n\n- [LangChain: Workflows and Agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)\n- [LangChain: Persistence](https://docs.langchain.com/oss/python/langgraph/persistence)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html",
+        "name": "Autonomous Workflow Orchestration: Definition and Example",
+        "description": "See how autonomous workflow orchestration coordinates AI tasks, dependencies, saved state, retries, and approvals, with a supplier-onboarding example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+          "https://docs.langchain.com/oss/python/langgraph/persistence"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#term",
+        "name": "Autonomous Workflow Orchestration",
+        "termCode": "autonomous-workflow-orchestration",
+        "description": "Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.",
+        "url": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Autonomous Workflow Orchestration",
+            "item": "https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6134,25 +7641,99 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Emerging",
-    "definition": "An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.",
-    "purpose": "Quantifies generative quality, detects performance regressions across prompt adjustments or model upgrades, and ensures production reliability.",
+    "definition": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.",
+    "purpose": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.",
     "keyConcepts": [
-      "Golden datasets",
-      "LLM-as-a-judge",
-      "metric rubrics",
-      "automated benchmarking."
+      "What a useful test includes",
+      "Example: updating a customer address",
+      "Make comparisons meaningful"
     ],
-    "howItWorks": "The harness runs hundreds of deterministic scenarios against the AI system, scoring outputs using automated assertions, reference comparisons, and model-based evaluators.",
+    "howItWorks": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.",
     "relatedTerms": [
       "Design Harness",
       "Agent Harness",
       "Continuous Experimentation",
-      "Visual Regression Testing"
+      "Visual Regression Testing",
+      "AI Hallucination"
     ],
-    "seoTitle": "AI Evaluation Harnesses: Benchmarking and Testing LLM Agents",
+    "seoTitle": "AI Evaluation Harness: Definition, Test Cases, and Example",
     "sources": [
-      "OpenAI Evals Framework",
-      "Thoughtworks, Testing and Evaluating AI Agents"
+      "Anthropic: Demystifying Evals for AI Agents (https://www.anthropic.com/research/demystifying-evals-for-ai-agents)",
+      "LangChain: LangSmith Evaluation (https://docs.langchain.com/langsmith/evaluation)"
+    ],
+    "seoDescription": "Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html",
+    "contentMarkdown": "# Evaluation Harness (AI Evals)\n\nAn evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.\n\nAn evaluation suite is the collection of test cases. The harness executes those cases. An agent harness, by comparison, runs the agent itself; an evaluation can test that runtime and its model together.\n\n## What a useful test includes\n\nA test case needs an input, relevant starting conditions, and explicit success criteria. The harness should capture the outputs and, when relevant, tool calls and changes in the test environment.\n\nGraders can use code, human judgment, or another model. Use a method appropriate to the claim being checked, and calibrate model-based judgments against reviewed examples.\n\n## Example: updating a customer address\n\nAn agent is asked to change a test customer's delivery address. A useful evaluation checks that the correct record contains the requested address, unrelated records remain unchanged, and the final message accurately describes the outcome.\n\nThe suite should also cover missing address fields, insufficient permissions, and a tool timeout. A successful-sounding reply alone does not prove that the update happened.\n\n## Make comparisons meaningful\n\nVersion the cases, prompts, model configuration, tools, and grading rules. Keep initial conditions comparable and run multiple trials when behavior varies.\n\nReport failures by category alongside aggregate scores. Record latency and cost where they matter to the task.\n\nKeep evaluation cases separate from examples used to tune the system. A strong offline score supports a release decision, while production monitoring and user research provide additional evidence about real use.\n\n## Related terms\n\n- [Design Harness](/glossary/design-harness.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Visual Regression Testing](/glossary/visual-regression-testing.html)\n\n- [AI Hallucination](/glossary/ai-hallucination.html)\n\n## Sources\n\n- [Anthropic: Demystifying Evals for AI Agents](https://www.anthropic.com/research/demystifying-evals-for-ai-agents)\n- [LangChain: LangSmith Evaluation](https://docs.langchain.com/langsmith/evaluation)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html",
+        "name": "AI Evaluation Harness: Definition, Test Cases, and Example",
+        "description": "Learn how an AI evaluation harness runs test cases, records outcomes, and compares system versions, with a concrete example and guidance on graders.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+          "https://docs.langchain.com/langsmith/evaluation"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#term",
+        "name": "Evaluation Harness (AI Evals)",
+        "termCode": "evaluation-harness-ai-evals",
+        "description": "An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.",
+        "url": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Evaluation Harness (AI Evals)",
+            "item": "https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6162,25 +7743,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Emerging",
-    "definition": "Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.",
-    "purpose": "Pinpoints the root cause of late-session agent failures, guiding developers to implement periodic state summarization and context pruning mechanisms.",
+    "definition": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.",
+    "purpose": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.",
     "keyConcepts": [
-      "Context saturation",
-      "attention dilution",
-      "instruction degradation",
-      "state decay."
+      "What does context drift look like?",
+      "Example: A booking assistant forgets a constraint",
+      "How do you test for drift?"
     ],
-    "howItWorks": "As token lengths expand, the model's self-attention attention weights disperse, reducing adherence to system prompts and causing task derailment.",
+    "howItWorks": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.",
     "relatedTerms": [
       "Context Engineering",
       "Agent Harness",
       "Prompt Engineering",
-      "Memory Management"
+      "Context Window"
     ],
-    "seoTitle": "Understanding Context Drift in LLMs and AI Agent Sessions",
+    "seoTitle": "Context Drift in AI Agents: Signs and Practical Checks",
     "sources": [
-      "Nelson F. Liu et al., Lost in the Middle: How Language Models Use Long Contexts",
-      "Thoughtworks Agent Research"
+      "Effective Context Engineering for AI Agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)",
+      "Lost in the Middle, Liu et al. (https://arxiv.org/abs/2307.03172)"
+    ],
+    "seoDescription": "Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/context-drift.html",
+    "contentMarkdown": "# Context Drift\n\nContext drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.\n\n## What does context drift look like?\n\nAn assistant may revert to a rejected option, apply a rule to the wrong record, or continue after the goal has changed. Record the specific failure and the information available at that step. A long conversation can expose such problems, while the same symptom can also come from ambiguous instructions, poor retrieval, or an incorrect tool result.\n\n## Example: A booking assistant forgets a constraint\n\nA traveler asks for a refundable flight arriving before noon. After several alternatives and policy lookups, the assistant recommends a cheaper nonrefundable fare. The team checks whether the refundability requirement remained in the model’s context and whether the tool result described that fare correctly.\n\nA useful task state records the selected traveler, dates, constraints, and unresolved questions. Refresh it when the user changes a requirement. When summarizing history, retain the reason an option was rejected.\n\n## How do you test for drift?\n\nCreate a multi-turn task with constraints that remain relevant near the end. Check the final recommendation and intermediate actions against those constraints. Compare context-management changes on the same cases, including a changed requirement and conflicting evidence. Summarization and selective retrieval are approaches to evaluate. Measure whether they preserve the facts the task requires.\n\n## Related terms\n\n- [Context Engineering](/glossary/context-engineering.html)\n- [Agent Harness](/glossary/agent-harness.html)\n- [Prompt Engineering](/glossary/prompt-engineering.html)\n\n- [Context Window](/glossary/context-window.html)\n\n## Sources\n\n- [Effective Context Engineering for AI Agents, Anthropic](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)\n- [Lost in the Middle, Liu et al.](https://arxiv.org/abs/2307.03172)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/context-drift.html",
+        "name": "Context Drift in AI Agents: Signs and Practical Checks",
+        "description": "Learn how to recognize context drift in an AI conversation, test lost constraints, and preserve the task state an agent needs.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/context-drift.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/context-drift.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+          "https://arxiv.org/abs/2307.03172"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#term",
+        "name": "Context Drift",
+        "termCode": "context-drift",
+        "description": "Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.",
+        "url": "https://lexkonovalov.com/glossary/context-drift.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/context-drift.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/context-drift.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Context Drift",
+            "item": "https://lexkonovalov.com/glossary/context-drift.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -6190,25 +7844,109 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "AI & Agentic Systems",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Multi-Agent Systems (MAS) are computational environments in which multiple autonomous software agents collaborate, negotiate, and execute specialized roles to solve complex, distributed tasks.",
-    "purpose": "Prevents single-model cognitive overload by distributing responsibilities—such as research, critique, drafting, and testing—across modular agent personas.",
+    "definition": "A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.",
+    "purpose": "A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.",
     "keyConcepts": [
-      "Role specialization",
-      "inter-agent communication protocols",
-      "consensus mechanisms",
-      "task delegation."
+      "How do multi-agent systems work?",
+      "Example: Researching a travel policy",
+      "When should you use multiple agents?"
     ],
-    "howItWorks": "Specialized agents exchange messages, challenge assumptions, and validate intermediate outputs via formal protocols (e.g., Critic-Actor loops) to achieve verified deliverables.",
+    "howItWorks": "A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.",
     "relatedTerms": [
-      "Agentic AI",
+      "AI Agent",
+      "Context Engineering",
       "Autonomous Workflow Orchestration",
-      "Agent Harness",
-      "Model Context Protocol (MCP)"
+      "Human-in-the-Loop (HITL)",
+      "Evaluation Harness (AI Evals)"
     ],
-    "seoTitle": "Multi-Agent Systems (MAS): Collaborative AI Architecture",
+    "seoTitle": "Multi-Agent Systems (MAS): Architecture and Examples",
     "sources": [
-      "Michael Wooldridge, An Introduction to MultiAgent Systems, Wiley",
-      "Microsoft Research AutoGen. Category 04 — Product Strategy & Growth High-performance product design connects UX decisions with business outcomes and unit economics. Modern product organizations avoid vanity design output by aligning around continuous experimentation, clear behavioral funnels, and structured value discovery. From customer journey architectures in complex enterprise SaaS to high-velocity conversion optimization in TravelTech and consumer funnels, designers must master product metrics, Jobs to Be Done, and growth levers"
+      "An Introduction to MultiAgent Systems, Michael Wooldridge (https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html)",
+      "How We Built Our Multi-Agent Research System, Anthropic (https://www.anthropic.com/research/multi-agent-research-system)"
+    ],
+    "seoDescription": "Understand how multi-agent systems coordinate autonomous agents, with an AI research example, common architectures, and criteria for evaluating results.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html",
+    "contentMarkdown": "# Multi-Agent Systems (MAS)\n\nA multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.\n\n## How do multi-agent systems work?\n\nEach agent has a goal, information it can access, and actions it can take. The system defines how agents communicate, assign work, resolve disagreements, and decide when to stop. An AI application may use one coordinator to delegate tasks to specialists, or let agents hand work to each other as the task develops.\n\nThe agents can use different instructions and tools while sharing the same underlying model. Context engineering determines what each agent receives and what information survives a handoff.\n\n## Example: Researching a travel policy\n\nA coordinator receives a request to compare two travel policies. It assigns each policy to a separate research agent and asks for the relevant passages, their sources, and any gaps. The coordinator combines the findings into a comparison and flags unresolved differences for the user.\n\nThis structure is useful when the searches can proceed independently and the findings can be combined. Define which agent owns the final answer and what counts as enough evidence. If one agent fails, the coordinator should identify the missing result before presenting the comparison.\n\n## When should you use multiple agents?\n\nConsider them when a task has separable research directions or needs specialist tools and context. Compare the design with a single-agent baseline on the same tasks. Measure the correctness and completeness of the final result, source quality, task completion, latency, and cost. Inspect handoffs for duplicated work or lost information.\n\nAnthropic’s research system is one published example of an orchestrator coordinating parallel research agents. Its account describes the coordination, evaluation, and operational work involved.\n\n## Related terms\n\n- [AI Agent](/glossary/ai-agent.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Autonomous Workflow Orchestration](/glossary/autonomous-workflow-orchestration.html)\n- [Human-in-the-Loop (HITL)](/glossary/human-in-the-loop-hitl.html)\n- [Evaluation Harness (AI Evals)](/glossary/evaluation-harness-ai-evals.html)\n\n## Sources\n\n- [An Introduction to MultiAgent Systems, Michael Wooldridge](https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html)\n- [How We Built Our Multi-Agent Research System, Anthropic](https://www.anthropic.com/research/multi-agent-research-system)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html",
+        "name": "Multi-Agent Systems (MAS): Architecture and Examples",
+        "description": "Understand how multi-agent systems coordinate autonomous agents, with an AI research example, common architectures, and criteria for evaluating results.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html",
+          "https://www.anthropic.com/research/multi-agent-research-system"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#term",
+        "name": "Multi-Agent Systems (MAS)",
+        "termCode": "multi-agent-systems-mas",
+        "description": "A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.",
+        "url": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#webpage"
+        },
+        "alternateName": [
+          "MAS",
+          "Multi-Agent Systems",
+          "Multiagent Systems"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Multi-Agent Systems (MAS)",
+            "item": "https://lexkonovalov.com/glossary/multi-agent-systems-mas.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "MAS",
+      "Multi-Agent Systems",
+      "Multiagent Systems"
     ]
   },
   {
@@ -6223,17 +7961,17 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
-    "purpose": "Increases revenue generation efficiency and customer acquisition ROI without requiring additional marketing or acquisition spend.",
+    "purpose": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
     "keyConcepts": [
-      "Conversion rate formula",
-      "baseline analytics",
-      "heuristic evaluation",
-      "iterative testing."
+      "How do you calculate conversion rate?",
+      "How does a CRO process work?",
+      "A CRO example: a quote request form",
+      "What if traffic is too low for A/B testing?"
     ],
-    "howItWorks": "Formulated as Conversion Rate = (Conversions / Total Visitors) * 100. Teams isolate funnel friction, formulate behavioral hypotheses, and validate variations using controlled A/B testing.",
+    "howItWorks": "Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.",
     "relatedTerms": [
       "A/B Testing (Split Testing)",
-      "Conversion Funnel",
+      "Conversion Funnel Architecture",
       "Checkout Flow Optimization",
       "Growth Design"
     ],
@@ -6335,14 +8073,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
-    "purpose": "Replaces internal stakeholder opinions with empirical behavioral evidence, mitigating financial and operational risks when deploying new product designs.",
+    "purpose": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
     "keyConcepts": [
-      "Control vs. variant",
-      "statistical significance (p-value)",
-      "sample size power",
-      "minimum detectable effect (MDE)"
+      "How do you plan a UX A/B test?",
+      "What should you check before reading the result?",
+      "How do you interpret an inconclusive test?"
     ],
-    "howItWorks": "Traffic is split randomly by experimentation routing engines; user interactions are tracked, and statistical hypothesis tests evaluate metric differentials.",
+    "howItWorks": "A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.",
     "relatedTerms": [
       "Continuous Experimentation",
       "Conversion Rate Optimization (CRO)",
@@ -6443,14 +8180,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
-    "purpose": "Transforms product development from risky, large-batch feature deployments into an agile, hypothesis-driven scientific discovery process.",
+    "purpose": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
     "keyConcepts": [
-      "High test velocity",
-      "experimentation culture",
-      "feature flag decoupling",
-      "institutional learning."
+      "How does the cycle work?",
+      "Example of using one test to plan the next"
     ],
-    "howItWorks": "Product teams deploy features behind feature toggles, measuring immediate telemetry to determine whether variations are scaled globally, adjusted, or rolled back.",
+    "howItWorks": "Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.",
     "relatedTerms": [
       "A/B Testing (Split Testing)",
       "Product Discovery",
@@ -6550,14 +8285,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.",
-    "purpose": "Visualizes and quantifies user friction across critical journey steps, highlighting operational bottlenecks that depress customer throughput.",
+    "purpose": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.",
     "keyConcepts": [
-      "Step drop-off rates",
-      "funnel leakage",
-      "cognitive momentum",
-      "activation thresholds."
+      "How do you define the steps?",
+      "How do you calculate funnel conversion?",
+      "What does drop-off tell you?"
     ],
-    "howItWorks": "Designers map required user actions into discrete, measurable milestones, analyzing drop-off telemetry at each transition to optimize page transitions and forms.",
+    "howItWorks": "A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
       "Checkout Flow Optimization",
@@ -6654,15 +8388,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.",
-    "purpose": "Balances user effort and friction against sales readiness, capturing high-intent prospective buyers and qualifying them for suitable follow-up.",
+    "purpose": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.",
     "keyConcepts": [
-      "Offer value exchange",
-      "Request conversion",
-      "Qualified lead rate",
-      "Progressive disclosure in forms",
-      "Error prevention and feedback"
+      "What should a lead capture form ask for?",
+      "How do you measure lead capture?"
     ],
-    "howItWorks": "Designs progressive, accessible form experiences that preserve user context from upstream interactions, asks only for necessary qualification fields, and delivers immediate confirmation and expectations.",
+    "howItWorks": "Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
       "Conversion Funnel",
@@ -6765,14 +8496,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.",
-    "purpose": "Protects bottom-of-the-funnel revenue realization by removing unexpected costs, cognitive distractions, payment friction, and form validation hurdles.",
+    "purpose": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.",
     "keyConcepts": [
-      "Frictionless payments",
-      "single-page vs. multi-step checkout",
-      "trust signals",
-      "inline form recovery."
+      "What should you improve first?",
+      "Example of payment recovery in travel checkout",
+      "How do you measure checkout improvements?"
     ],
-    "howItWorks": "Designers implement guest checkouts, native mobile wallet integrations, explicit cost breakdowns, and real-time input error handling.",
+    "howItWorks": "Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
       "Conversion Funnel",
@@ -6870,20 +8600,19 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.",
-    "purpose": "Mitigates value, usability, feasibility, and business viability risks through continuous customer contact, assumption testing, and rapid prototyping.",
+    "purpose": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.",
     "keyConcepts": [
-      "Four product risks (Value, Usability, Feasibility, Viability)",
-      "Continuous discovery habits",
-      "Assumption testing",
-      "Discovery vs delivery",
-      "Generative research"
+      "What do teams learn in discovery?",
+      "Example: helping accounts send their first invoice",
+      "How does discovery fit with delivery?"
     ],
-    "howItWorks": "Engages cross-functional product trios in weekly customer interviews and rapid prototype evaluations to test critical assumptions before committing engineering resources.",
+    "howItWorks": "Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "Continuous Experimentation",
       "Mental Model Mapping",
-      "Product Strategy Canvas"
+      "Product Strategy Canvas",
+      "AI in UX Research"
     ],
     "seoTitle": "Product Discovery in UX | Product Design Glossary",
     "sources": [
@@ -6963,7 +8692,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Product Discovery\n\nProduct discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.\n\n## What do teams learn in discovery?\n\nStart with the outcome you want to improve and the decisions you need to make. Marty Cagan describes four risks: whether customers will value the solution, whether they can use it, whether the team can build it, and whether it works for the business.\n\nChoose evidence that fits the risk. A prototype can show whether users understand an interaction. A technical investigation can establish whether the proposed behavior is feasible. Interview findings can explain why a problem matters and help the team decide which solutions to explore.\n\n## Example: helping accounts send their first invoice\n\nAn invoicing team sees that many new accounts create drafts but few send a first real invoice. The team wants more eligible new accounts to send a first real invoice within seven days of signup.\n\n| Discovery question | What the team does |\n|---|---|\n| Why do people hesitate? | Observe people preparing a real invoice and ask about the last time they stopped before sending. |\n| Would a preview help? | Show a prototype that lets users see the client’s view. Ask them to explain what the client would receive and when. |\n| Can the preview reflect the actual invoice? | Check with engineering that the preview and the final invoice use the same data and render consistently. |\n| Is it worth supporting? | Estimate what it will cost to maintain accurate previews across invoice templates. Compare that effort with the value of helping more accounts send correctly. |\n\nIf the evidence supports the preview, the team can build it and evaluate whether it changes the share of new accounts sending a real invoice. Use usability sessions to check comprehension, then consider a [randomized test](/glossary/ab-testing-split-testing.html) to estimate the effect on activation if traffic supports one.\n\n## How does discovery fit with delivery?\n\nKeep the next important assumption visible while delivery proceeds. Teresa Torres’s continuous discovery approach advocates at least weekly customer contact by the team building the product and small research activities tied to a desired outcome. A team can start by recording the decision, the evidence that informed it, and what would change its mind.\n\n## Related terms\n\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Mental Model Mapping](/glossary/mental-model-mapping.html)\n- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)\n\n## Sources\n\n- [Continuous Discovery Habits, Teresa Torres](https://www.producttalk.org/continuous-discovery-habits/)\n- [The Four Big Risks, Marty Cagan, Silicon Valley Product Group](https://www.svpg.com/four-big-risks/)"
+    "contentMarkdown": "# Product Discovery\n\nProduct discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.\n\n## What do teams learn in discovery?\n\nStart with the outcome you want to improve and the decisions you need to make. Marty Cagan describes four risks: whether customers will value the solution, whether they can use it, whether the team can build it, and whether it works for the business.\n\nChoose evidence that fits the risk. A prototype can show whether users understand an interaction. A technical investigation can establish whether the proposed behavior is feasible. Interview findings can explain why a problem matters and help the team decide which solutions to explore.\n\n## Example: helping accounts send their first invoice\n\nAn invoicing team sees that many new accounts create drafts but few send a first real invoice. The team wants more eligible new accounts to send a first real invoice within seven days of signup.\n\n| Discovery question | What the team does |\n|---|---|\n| Why do people hesitate? | Observe people preparing a real invoice and ask about the last time they stopped before sending. |\n| Would a preview help? | Show a prototype that lets users see the client’s view. Ask them to explain what the client would receive and when. |\n| Can the preview reflect the actual invoice? | Check with engineering that the preview and the final invoice use the same data and render consistently. |\n| Is it worth supporting? | Estimate what it will cost to maintain accurate previews across invoice templates. Compare that effort with the value of helping more accounts send correctly. |\n\nIf the evidence supports the preview, the team can build it and evaluate whether it changes the share of new accounts sending a real invoice. Use usability sessions to check comprehension, then consider a [randomized test](/glossary/ab-testing-split-testing.html) to estimate the effect on activation if traffic supports one.\n\n## How does discovery fit with delivery?\n\nKeep the next important assumption visible while delivery proceeds. Teresa Torres’s continuous discovery approach advocates at least weekly customer contact by the team building the product and small research activities tied to a desired outcome. A team can start by recording the decision, the evidence that informed it, and what would change its mind.\n\n## Related terms\n\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Mental Model Mapping](/glossary/mental-model-mapping.html)\n- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)\n\n- [AI in UX Research](/glossary/ai-ux-research.html)\n\n## Sources\n\n- [Continuous Discovery Habits, Teresa Torres](https://www.producttalk.org/continuous-discovery-habits/)\n- [The Four Big Risks, Marty Cagan, Silicon Valley Product Group](https://www.svpg.com/four-big-risks/)"
   },
   {
     "id": "083",
@@ -6973,15 +8702,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.",
-    "purpose": "Shifts product focus from surface demographics to the underlying progress and context that motivates users to hire or fire solutions.",
+    "purpose": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.",
     "keyConcepts": [
-      "Functional dimension",
-      "Emotional dimension",
-      "Social dimension",
-      "Forces of progress (push, pull, inertia, anxiety)",
-      "Hiring and firing alternatives"
+      "What does a job look like?",
+      "How do you research a job?",
+      "How does JTBD inform design?"
     ],
-    "howItWorks": "Investigates past customer switching moments through timeline interviews, identifying the specific triggering circumstances, trade-offs, and progress sought.",
+    "howItWorks": "Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.",
     "relatedTerms": [
       "Mental Model Mapping",
       "Product Discovery",
@@ -7088,14 +8815,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
-    "purpose": "Reduces customer acquisition costs (CAC) and accelerates enterprise expansion by empowering end-users to experience immediate value before sales interactions.",
+    "purpose": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
     "keyConcepts": [
-      "Self-serve onboarding",
-      "freemium mechanics",
-      "product viral loops",
-      "product qualified leads (PQL)."
+      "How does product-led growth work?",
+      "A PLG example: a team planning tool",
+      "How is PLG different from sales-led growth?",
+      "Which PLG metrics are useful?"
     ],
-    "howItWorks": "Removes upfront paywalls and sales gates, engineering rapid time-to-value so that the user realizes organic utility and triggers expansion within their organization.",
+    "howItWorks": "Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.",
     "relatedTerms": [
       "Time-to-Value (TTV)",
       "Activation Metric",
@@ -7110,7 +8837,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed (https://productled.com/blog/sales-led-growth-definition)",
       "How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls)"
     ],
-    "contentMarkdown": "# Product-Led Growth (PLG)\n\nProduct-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.\n\nFree trials and freemium plans are common ways to let people try a product. Their effectiveness depends on whether users can solve a meaningful problem and have a reason to return.\n\n## How does product-led growth work?\n\nTeams design a path from discovering the product to experiencing value, building a habit where appropriate, and paying for capabilities they need. This involves onboarding, the core workflow, pricing, and support, with product, design, engineering, marketing, and sales working toward shared outcomes.\n\nSelf-service can make that path easier to start. Sales and customer-success teams can still help with evaluation, integration, procurement, or expansion into larger accounts.\n\n## A PLG example: a team planning tool\n\nImagine a planning tool that lets a team try one shared project. This is an illustrative model, not a case study.\n\n| Stage | Example product experience |\n|---|---|\n| Acquisition | A colleague receives an invitation to join a real project. |\n| Activation | Two teammates coordinate work and complete their first shared task. |\n| Retention | The team returns to plan and complete more work. |\n| Monetization and expansion | The team chooses a paid plan when it needs additional projects or administrative controls. |\n\nThe design work includes a useful starting template, clear invitations, understandable permissions, and pricing that explains what an upgrade adds. Prompt invitations when users have work to share and explain what the invited person can access.\n\n## How is PLG different from sales-led growth?\n\nIn a sales-led motion, sales interactions lead the evaluation and purchasing process. In PLG, hands-on product use leads much of that process. A hybrid approach can combine self-service adoption with sales assistance when an account needs it.\n\nA free tier is a pricing choice. PLG is the broader strategy connecting product value to growth. Offering a free plan alone does not create that connection or guarantee lower acquisition costs.\n\n## Which PLG metrics are useful?\n\n- **Activation rate:** The proportion of new users or accounts reaching a defined milestone that indicates initial value.\n- **Time to value:** How long it takes that audience to reach the milestone.\n- **Retention:** Whether users or accounts return to perform meaningful work over time.\n- **Paid conversion and expansion:** Whether customers begin paying and increase their use of paid capabilities.\n\nDefine the unit, cohort, and time window before comparing these metrics. In the planning example, measure activation at the team level. Check whether the proposed activation milestone is associated with later retention.\n\nA [**product-qualified lead (PQL)**](/glossary/product-qualified-lead-pql.html) is a user qualified through product usage that signals meaningful value and potential readiness to buy or expand. Define the qualifying behavior for your product, using customer fit and intent to decide whether sales assistance is appropriate.\n\n## Related terms\n\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [Activation Metric](/glossary/activation-metric.html)\n- [Growth Design](/glossary/growth-design.html)\n- [B2B SaaS Interaction Model](/glossary/b2b-saas-interaction-model.html)\n\n## Sources\n\n- [Product-Led Growth: Definition and Examples, Wes Bush / ProductLed](https://productled.com/blog/product-led-growth-definition)\n- [Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed](https://productled.com/blog/sales-led-growth-definition)\n- [How to Define PQLs, ProductLed](https://productled.com/blog/how-to-define-pqls)",
+    "contentMarkdown": "# Product-Led Growth (PLG)\n\nProduct-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.\n\nFree trials and freemium plans are common ways to let people try a product. Their effectiveness depends on whether users can solve a meaningful problem and have a reason to return.\n\n## How does product-led growth work?\n\nTeams design a path from discovering the product to experiencing value, building a habit where appropriate, and paying for capabilities they need. This involves onboarding, the core workflow, pricing, and support, with product, design, engineering, marketing, and sales working toward shared outcomes.\n\nSelf-service can make that path easier to start. Sales and customer-success teams can still help with evaluation, integration, procurement, or expansion into larger accounts.\n\n## A PLG example: a team planning tool\n\nImagine a planning tool that lets a team try one shared project. This is an illustrative model, not a case study.\n\n| Stage | Example product experience |\n|---|---|\n| Acquisition | A colleague receives an invitation to join a real project. |\n| Activation | Two teammates coordinate work and complete their first shared task. |\n| Retention | The team returns to plan and complete more work. |\n| Monetization and expansion | The team chooses a paid plan when it needs additional projects or administrative controls. |\n\nThe design work includes a useful starting template, clear invitations, understandable permissions, and pricing that explains what an upgrade adds. Prompt invitations when users have work to share and explain what the invited person can access.\n\n## How is PLG different from sales-led growth?\n\nIn a sales-led motion, sales interactions lead the evaluation and purchasing process. In PLG, hands-on product use leads much of that process. A hybrid approach can combine self-service adoption with sales assistance when an account needs it.\n\nA free tier is a pricing choice. PLG is the broader strategy connecting product value to growth. Offering a free plan alone does not create that connection or guarantee lower acquisition costs.\n\n## Which PLG metrics are useful?\n\n- **Activation rate:** The proportion of new users or accounts reaching a defined milestone that indicates initial value.\n- **Time to value:** How long it takes that audience to reach the milestone.\n- **Retention:** Whether users or accounts return to perform meaningful work over time.\n- **Paid conversion and expansion:** Whether customers begin paying and increase their use of paid capabilities.\n\nDefine the unit, cohort, and time window before comparing these metrics. In the planning example, measure activation at the team level. Check whether the proposed activation milestone is associated with later retention.\n\nA **product-qualified lead (PQL)** is a user qualified through product usage that signals meaningful value and potential readiness to buy or expand. Define the qualifying behavior for your product, using customer fit and intent to decide whether sales assistance is appropriate.\n\n## Related terms\n\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [Activation Metric](/glossary/activation-metric.html)\n- [Growth Design](/glossary/growth-design.html)\n- [B2B SaaS Interaction Model](/glossary/b2b-saas-interaction-model.html)\n\n## Sources\n\n- [Product-Led Growth: Definition and Examples, Wes Bush / ProductLed](https://productled.com/blog/product-led-growth-definition)\n- [Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed](https://productled.com/blog/sales-led-growth-definition)\n- [How to Define PQLs, ProductLed](https://productled.com/blog/how-to-define-pqls)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -7200,14 +8927,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.",
-    "purpose": "Unifies cross-functional teams around a common goal, prevents conflicting departmental priorities, and ensures product decisions tie directly to sustained customer value.",
+    "purpose": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.",
     "keyConcepts": [
-      "Core value capture",
-      "leading growth indicator",
-      "input metrics tree",
-      "team alignment."
+      "What makes a useful North Star Metric?",
+      "Example for an invoicing product"
     ],
-    "howItWorks": "Leadership identifies the quantitative signal that reflects recurring customer success (e.g., \"Nights Booked\" for Airbnb), decomposing it into localized tactical input levers.",
+    "howItWorks": "A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.",
     "relatedTerms": [
       "Product Strategy Canvas",
       "Product Telemetry & Analytics",
@@ -7305,25 +9030,100 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A Product Strategy Canvas is a visual strategic planning framework that articulates target customer segments, market positioning, unique value propositions, capability horizons, and competitive moats on a single page.",
-    "purpose": "Aligns executive leadership and delivery squads around a defensible product thesis, preventing feature-factory execution divorced from business strategy.",
+    "definition": "A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.",
+    "purpose": "A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.",
     "keyConcepts": [
-      "Strategic positioning",
-      "competitive defensibility",
-      "target segment prioritization",
-      "outcome mapping."
+      "Which questions should a strategy canvas answer?",
+      "Example: A hotel operations product",
+      "How do you keep the canvas useful?"
     ],
-    "howItWorks": "Teams articulate user problems, market alternatives, unique capabilities, and business levers, reviewing the canvas quarterly to steer roadmap priorities.",
+    "howItWorks": "A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.",
     "relatedTerms": [
       "Value Proposition Canvas",
       "North Star Metric (NSM)",
       "Product Discovery",
       "Product–Market Fit (PMF)"
     ],
-    "seoTitle": "Product Strategy Canvas: Modern Strategic Frameworks for Design",
+    "seoTitle": "Product Strategy Canvas: Questions and an Example",
     "sources": [
-      "Melissa Perri, Escaping the Build Trap, O'Reilly",
-      "Roman Pichler, Strategize: Product Strategy and Roadmapping"
+      "The Product Vision Board, Roman Pichler (https://www.romanpichler.com/tools/product-vision-board/)",
+      "What Exactly Is a Product Strategy?, Roman Pichler (https://www.romanpichler.com/blog/what-is-a-product-strategy/)",
+      "The Product Canvas, Roman Pichler (https://www.romanpichler.com/tools/the-product-canvas/)"
+    ],
+    "seoDescription": "Learn how a product strategy canvas captures target users, their needs, product choices, and business goals, with an example and a plan for validation.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/product-strategy-canvas.html",
+    "contentMarkdown": "# Product Strategy Canvas\n\nA product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.\n\n## Which questions should a strategy canvas answer?\n\nTemplates use different fields. One documented approach is Roman Pichler’s Product Vision Board, which captures a vision, target group, needs, product features, and business goals. Choose a named template or state which questions your team’s version covers so collaborators understand the choices it records.\n\n## Example: A hotel operations product\n\nThe following example uses the Product Vision Board’s headings.\n\n| Field | Illustrative choice |\n|---|---|\n| Vision | Make room-turnover handoffs clear for small hotel teams. |\n| Target group | Owners, front-desk staff, and housekeeping teams in small hotels. |\n| Needs | Know which rooms need attention and which are ready, with clear responsibility for outstanding work. |\n| Product | A shared mobile room-status view, task assignments, and a way to hand over unresolved issues. |\n| Business goals | Establish repeat use across shifts and paid renewal after a pilot. |\n\nThe team still needs evidence that these needs matter and that the proposed product helps. For example, observe a shift change and test whether staff can identify the next room to prepare and who owns an unresolved issue. Review repeat use and the decision to renew alongside those task outcomes.\n\n## How do you keep the canvas useful?\n\nMark assumptions, identify the most consequential uncertainty, and choose a discovery activity that can resolve it. Update the canvas when evidence changes a strategic choice. Then use those choices to guide roadmap priorities.\n\nName related tools precisely. Pichler’s Product Vision Board captures vision and strategy. His separate Product Canvas combines user stories with personas, scenarios, and other UX material for more detailed product work.\n\n## Related terms\n\n- [Value Proposition Canvas](/glossary/value-proposition-canvas.html)\n- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)\n- [Product Discovery](/glossary/product-discovery.html)\n- [Product–Market Fit (PMF)](/glossary/product-market-fit-pmf-engine.html)\n\n## Sources\n\n- [The Product Vision Board, Roman Pichler](https://www.romanpichler.com/tools/product-vision-board/)\n- [What Exactly Is a Product Strategy?, Roman Pichler](https://www.romanpichler.com/blog/what-is-a-product-strategy/)\n- [The Product Canvas, Roman Pichler](https://www.romanpichler.com/tools/the-product-canvas/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/product-strategy-canvas.html",
+        "name": "Product Strategy Canvas: Questions and an Example",
+        "description": "Learn how a product strategy canvas captures target users, their needs, product choices, and business goals, with an example and a plan for validation.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.romanpichler.com/tools/product-vision-board/",
+          "https://www.romanpichler.com/blog/what-is-a-product-strategy/",
+          "https://www.romanpichler.com/tools/the-product-canvas/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#term",
+        "name": "Product Strategy Canvas",
+        "termCode": "product-strategy-canvas",
+        "description": "A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.",
+        "url": "https://lexkonovalov.com/glossary/product-strategy-canvas.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/product-strategy-canvas.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Product Strategy Canvas",
+            "item": "https://lexkonovalov.com/glossary/product-strategy-canvas.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -7542,25 +9342,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.",
-    "purpose": "Balances high-density functional efficiency for daily power users with intuitive simplicity for executive buyers and occasional administrative reviewers.",
+    "definition": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.",
+    "purpose": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.",
     "keyConcepts": [
-      "Multi-tenancy",
-      "role-based interfaces",
-      "bulk operations",
-      "workspace switching."
+      "Example: reviewing invoices",
+      "Model actions and exceptions"
     ],
-    "howItWorks": "Deploys adaptable screen architectures featuring collapsible rails, complex tabular data grids, contextual actions, and permission-aware view gating.",
+    "howItWorks": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.",
     "relatedTerms": [
       "Operational UX",
-      "Enterprise UX Strategy",
-      "B2C Engagement Loops",
-      "Cardinality (UX Architecture)"
+      "Enterprise Information Architecture",
+      "State Transition Matrix",
+      "Interaction Invariant"
     ],
-    "seoTitle": "B2B SaaS Interaction Design: UI Patterns for Enterprise Software",
+    "seoTitle": "B2B SaaS Interaction Model: Roles, Objects, and Workflows",
     "sources": [
-      "Daniel Rosenberg, UX Magic",
-      "Luke Wroblewski, Multi-Device Interaction Design"
+      "Microsoft: Architect Multitenant Solutions (https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview)",
+      "OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
+    ],
+    "seoDescription": "Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html",
+    "contentMarkdown": "# B2B SaaS Interaction Model\n\nA B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.\n\nThis is a descriptive planning concept rather than one prescribed framework. The relevant model depends on the work: an invoice system, reservation platform, and inventory service need different objects and rules.\n\n## Example: reviewing invoices\n\nAn accountant opens an invoice list for the selected organization, filters pending invoices, and inspects supporting records. A manager can approve invoices within an assigned limit; another reviewer handles larger amounts.\n\nThe interaction model needs to explain:\n\n- Which organization or workspace is active.\n- Which records the user can see.\n- Which actions are available in the current state.\n- How selection works across pages and filters.\n- What happens when another person changes a record.\n\nIn a multitenant product, the tenant is the customer or organizational context; it is distinct from an individual user.\n\n## Model actions and exceptions\n\nFor a bulk approval, show the selection count and scope before execution. If some invoices are ineligible, identify the affected records and reason. Give the user a clear account of successful, failed, and unresolved changes.\n\nA disabled button can communicate availability, but the application must also enforce authorization for each request. Interface visibility alone cannot protect a record.\n\nValidate the model through representative tasks with people in different roles. Include handoffs, lost access, stale records, and interrupted work. Keep the resulting rules close to the relevant component and workflow documentation.\n\n## Related terms\n\n- [Operational UX](/glossary/operational-ux.html)\n- [Enterprise Information Architecture](/glossary/enterprise-information-architecture.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [Microsoft: Architect Multitenant Solutions](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview)\n- [OWASP: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html",
+        "name": "B2B SaaS Interaction Model: Roles, Objects, and Workflows",
+        "description": "Design B2B SaaS interactions around business objects, roles, permissions, and workflow states, with a practical invoice-review and bulk-action example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#breadcrumbs"
+        },
+        "citation": [
+          "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview",
+          "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#term",
+        "name": "B2B SaaS Interaction Model",
+        "termCode": "b2b-saas-interaction-model",
+        "description": "A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.",
+        "url": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "B2B SaaS Interaction Model",
+            "item": "https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -7571,15 +9443,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.",
-    "purpose": "Drives organic retention and repeat engagement by reinforcing customer progress through intrinsic triggers, useful updates, and compounding utility.",
+    "purpose": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.",
     "keyConcepts": [
-      "Engagement loop vs growth loop",
-      "Trigger and action",
-      "Price watch cycle",
-      "Return condition",
-      "Notification controls"
+      "What does an engagement loop look like?",
+      "How is this different from a growth loop or a funnel?",
+      "How do you measure the loop?"
     ],
-    "howItWorks": "Captures initial user intent into a stateful watch or preference, automatically monitoring state changes to trigger contextually relevant, valuable alerts that prompt return visits and progress.",
+    "howItWorks": "A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.",
     "relatedTerms": [
       "Product-Led Growth (PLG)",
       "Conversion Funnel",
@@ -7611,7 +9481,6 @@ export const glossaryTerms: GlossaryTerm[] = [
           "@id": "https://lexkonovalov.com/glossary/b2c-engagement-loops.html#breadcrumbs"
         },
         "citation": [
-          "https://www.reforge.com/blog/growth-loops",
           "https://www.reforge.com/blog/growth-loops",
           "https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf"
         ]
@@ -7675,14 +9544,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
-    "purpose": "Provides objective, real-time behavioral evidence of how software is utilized in the wild, identifying drop-off friction and validating feature success against business targets.",
+    "purpose": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
     "keyConcepts": [
-      "Event tracking plans",
-      "cohort analysis",
-      "conversion funnels",
-      "retention matrices."
+      "What belongs in a tracking plan?",
+      "Example of an invoice tracking plan",
+      "How do you check the data before using it?"
     ],
-    "howItWorks": "Engineers implement client-side event tracking schemas, piping clickstream payloads to data warehouses for cross-sectional user cohort analysis.",
+    "howItWorks": "Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.",
     "relatedTerms": [
       "Component Telemetry",
       "Continuous Experimentation",
@@ -7777,37 +9645,37 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
-    "purpose": "Unifies design quality with aggressive business scalability, proving that UX decisions directly drive quantitative commercial outcomes.",
+    "purpose": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
     "keyConcepts": [
-      "Behavioral economics",
-      "psychological friction removal",
-      "experimentation velocity",
-      "metric accountability."
+      "How does growth design relate to product design, CRO, and PLG?",
+      "What does a growth designer do?",
+      "A growth design example: first invoice sent",
+      "How do you run a growth design cycle?",
+      "What should growth design avoid?"
     ],
-    "howItWorks": "Growth designers formulate quantitative hypotheses, build targeted micro-interactions (e.g., onboarding personalization, referral prompts), and iterate via rapid A/B experiments.",
+    "howItWorks": "Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.",
     "relatedTerms": [
       "Conversion Rate Optimization (CRO)",
       "Product-Led Growth (PLG)",
       "Continuous Experimentation",
-      "Jobs to Be Done (JTBD)",
-      "User Retention"
+      "Jobs to Be Done (JTBD)"
     ],
     "seoTitle": "Growth Design: Meaning & Example | Product Design Glossary",
-    "seoDescription": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
+    "seoDescription": "Understand growth design, what growth designers do, and how research and experiments improve activation and retention, with a practical invoice example.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/growth-design.html",
     "sources": [
       "Practicing Growth Design, Lex Roman / Amplitude (https://amplitude.com/blog/practicing-growth-design)",
       "A Primer on Growth Design, Chetana Deorah and Lex Roman (https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)",
       "Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)"
     ],
-    "contentMarkdown": "# Growth Design\n\nGrowth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, [user retention](/glossary/user-retention.html), referral, and revenue across the product journey.\n\nGrowth designers identify where people struggle to get value, develop hypotheses about why, and evaluate changes with product, engineering, and analytics partners. The work can involve onboarding, core workflows, pricing, or communication around the product.\n\n## How does growth design relate to product design, CRO, and PLG?\n\n| Term | Main focus |\n|---|---|\n| Product design | Shaping a useful, usable product that serves users and the business. |\n| Growth design | Applying design to a specific growth opportunity and measuring the outcome. |\n| Conversion rate optimization (CRO) | Increasing the proportion of people completing a defined action. |\n| Product-led growth (PLG) | A business strategy that makes product experience the primary driver of growth. |\n\nThese areas overlap. Growth design uses product design skills, and CRO can be part of its work. Growth design can support PLG, sales-led businesses, or hybrid models. Measurement and business outcomes also belong in broader product design.\n\n## A growth design example: first invoice sent\n\nImagine an invoicing tool where many new accounts create a draft but never send it. Analytics reveals the drop-off; usability sessions reveal that users cannot tell what their clients will receive.\n\nThe team proposes a preview of the invoice as the client will see it, with an explanation of what happens after sending. The hypothesis is that resolving this uncertainty will help users send a correct first invoice. The measurement windows below are examples; choose windows that fit actual usage.\n\n| Measurement | Illustrative definition |\n|---|---|\n| Primary outcome | Percentage of eligible new accounts sending a first invoice within seven days of signup. |\n| Longer-term outcome | Percentage of the same eligible account cohort sending a second invoice within 30 days of signup. |\n| Guardrails | Accidental sends, canceled invoices, and related support requests. |\n\nClicking “Preview” is a diagnostic event. It does not establish that users completed the task successfully. The team checks sending behavior and downstream outcomes before deciding whether to roll out the change.\n\n## How do you run a growth design cycle?\n\n1. **Choose an outcome.** Define the audience, behavior, measurement window, and guardrails.\n2. **Investigate.** Combine funnel or cohort analysis with research into the user’s task and obstacles.\n3. **Design a hypothesis.** Explain how a proposed change addresses the observed barrier.\n4. **Evaluate.** Test comprehension and usability. When traffic supports it, use a randomized experiment to estimate the change’s effect.\n5. **Learn and follow through.** Review uncertainty and downstream results, then refine, release, or discard the idea.\n\n## What should growth design avoid?\n\nOptimizing a visible metric can hide harm elsewhere. Making cancellation difficult might reduce recorded cancellations while increasing complaints and frustration. Judge improvements against useful outcomes and customer choice, with guardrails that reveal those tradeoffs.\n\nTrack what each experiment teaches you and whether the result improves the chosen outcome without violating its guardrails.\n\n## Related terms\n\n- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n\n## Sources\n\n- [Practicing Growth Design, Lex Roman / Amplitude](https://amplitude.com/blog/practicing-growth-design)\n- [A Primer on Growth Design, Chetana Deorah and Lex Roman](https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)\n- [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)",
+    "contentMarkdown": "# Growth Design\n\nGrowth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.\n\nGrowth designers identify where people struggle to get value, develop hypotheses about why, and evaluate changes with product, engineering, and analytics partners. The work can involve onboarding, core workflows, pricing, or communication around the product.\n\n## How does growth design relate to product design, CRO, and PLG?\n\n| Term | Main focus |\n|---|---|\n| Product design | Shaping a useful, usable product that serves users and the business. |\n| Growth design | Applying design to a specific growth opportunity and measuring the outcome. |\n| Conversion rate optimization (CRO) | Increasing the proportion of people completing a defined action. |\n| Product-led growth (PLG) | A business strategy that makes product experience the primary driver of growth. |\n\nThese areas overlap. Growth design uses product design skills, and CRO can be part of its work. Growth design can support PLG, sales-led businesses, or hybrid models. Measurement and business outcomes also belong in broader product design.\n\n## What does a growth designer do?\n\nA growth designer turns an observed barrier into a design hypothesis, builds a way to test it, and reviews the outcome with product, engineering, and analytics partners. The work includes research, interaction design, experiment design, and follow-up. For example, the designer may investigate why new accounts stop during onboarding and test whether a clearer first task helps them get value.\n\n## A growth design example: first invoice sent\n\nImagine an invoicing tool where many new accounts create a draft but never send it. Analytics reveals the drop-off; usability sessions reveal that users cannot tell what their clients will receive.\n\nThe team proposes a preview of the invoice as the client will see it, with an explanation of what happens after sending. The hypothesis is that resolving this uncertainty will help users send a correct first invoice. The measurement windows below are examples; choose windows that fit actual usage.\n\n| Measurement | Illustrative definition |\n|---|---|\n| Primary outcome | Percentage of eligible new accounts sending a first invoice within seven days of signup. |\n| Longer-term outcome | Percentage of the same eligible account cohort sending a second invoice within 30 days of signup. |\n| Guardrails | Accidental sends, canceled invoices, and related support requests. |\n\nClicking “Preview” is a diagnostic event. It does not establish that users completed the task successfully. The team checks sending behavior and downstream outcomes before deciding whether to roll out the change.\n\n## How do you run a growth design cycle?\n\n1. **Choose an outcome.** Define the audience, behavior, measurement window, and guardrails.\n2. **Investigate.** Combine funnel or cohort analysis with research into the user’s task and obstacles.\n3. **Design a hypothesis.** Explain how a proposed change addresses the observed barrier.\n4. **Evaluate.** Test comprehension and usability. When traffic supports it, use a randomized experiment to estimate the change’s effect.\n5. **Learn and follow through.** Review uncertainty and downstream results, then refine, release, or discard the idea.\n\n## What should growth design avoid?\n\nOptimizing a visible metric can hide harm elsewhere. Making cancellation difficult might reduce recorded cancellations while increasing complaints and frustration. Judge improvements against useful outcomes and customer choice, with guardrails that reveal those tradeoffs.\n\nTrack what each experiment teaches you and whether the result improves the chosen outcome without violating its guardrails.\n\n## Related terms\n\n- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n\n## Sources\n\n- [Practicing Growth Design, Lex Roman / Amplitude](https://amplitude.com/blog/practicing-growth-design)\n- [A Primer on Growth Design, Chetana Deorah and Lex Roman](https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design)\n- [Primary metrics, secondary metrics, and monitoring goals, Optimizely](https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
         "@id": "https://lexkonovalov.com/glossary/growth-design.html#webpage",
         "url": "https://lexkonovalov.com/glossary/growth-design.html",
         "name": "Growth Design: Meaning & Example | Product Design Glossary",
-        "description": "Understand growth design, how it relates to CRO and PLG, and how research and experiments can improve activation and retention without chasing clicks.",
+        "description": "Understand growth design, what growth designers do, and how research and experiments improve activation and retention, with a practical invoice example.",
         "inLanguage": "en-US",
         "isPartOf": {
           "@id": "https://lexkonovalov.com/#website"
@@ -7881,24 +9749,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Design Strategy Alignment is the organizational practice of explicitly linking visual, interaction, and architectural design roadmaps to executive business strategies and revenue priorities.",
-    "purpose": "Elevates design from a downstream production service to a strategic leadership partner, ensuring every design initiative drives recognized enterprise value.",
+    "definition": "Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.",
+    "purpose": "Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.",
     "keyConcepts": [
-      "Strategic OKR mapping",
-      "business case modeling",
-      "design executive advocacy",
-      "outcome focus."
+      "Example: improving enterprise onboarding",
+      "A lightweight alignment check"
     ],
-    "howItWorks": "Designers translate customer experience pain points into financial cost-benefit models, presenting design roadmaps framed in terms of business revenue and risk reduction.",
+    "howItWorks": "Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.",
     "relatedTerms": [
       "Product Strategy Canvas",
       "North Star Metric (NSM)",
-      "Product Discovery"
+      "Product Discovery",
+      "Design Critique"
     ],
-    "seoTitle": "Design Strategy Alignment: Connecting Product Craft to Business OKRs",
+    "seoTitle": "Design Strategy Alignment: Connect UX Decisions to Outcomes",
     "sources": [
-      "Richard Rumelt, Good Strategy Bad Strategy, Crown Business",
-      "Jesse James Garrett, The Elements of User Experience"
+      "Roman Pichler: What Exactly Is a Product Strategy? (https://www.romanpichler.com/blog/what-is-a-product-strategy/)",
+      "Google Research: Measuring the User Experience on a Large Scale (https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/)"
+    ],
+    "seoDescription": "Connect design priorities to user needs and product strategy with a practical example, explicit tradeoffs, and measures beyond feature delivery.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-strategy-alignment.html",
+    "contentMarkdown": "# Design Strategy Alignment\n\nDesign strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.\n\nA useful strategy identifies who the product serves, why those people would choose it, and what outcomes the organization needs. Design work translates those choices into research priorities, experience principles, and product decisions.\n\n## Example: improving enterprise onboarding\n\nSuppose a SaaS product aims to help small operations teams start working without extensive support. Research finds that new administrators struggle to import their existing records.\n\nAn aligned design initiative could simplify field mapping, explain validation errors, and let administrators preview the import before committing it.\n\nThe team could measure successful first imports, time to a usable workspace, and support requests about import failures. It should also check data accuracy: a faster import that silently corrupts records fails the user's task.\n\nThis makes the relationship between the strategy, problem, design response, and evidence explicit.\n\n## A lightweight alignment check\n\nBefore committing to a substantial initiative, record:\n\n- The target user and the problem supported by evidence.\n- The strategic outcome the work is expected to support.\n- The design hypothesis and main tradeoff.\n- An outcome measure and a quality check.\n- Who will review the result and when.\n\nRevisit the decision when evidence changes. Measures can show whether behavior or outcomes improved, but an observed change alone does not prove that a particular design caused it.\n\n## Related terms\n\n- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)\n- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)\n- [Product Discovery](/glossary/product-discovery.html)\n\n- [Design Critique](/glossary/design-critique.html)\n\n## Sources\n\n- [Roman Pichler: What Exactly Is a Product Strategy?](https://www.romanpichler.com/blog/what-is-a-product-strategy/)\n- [Google Research: Measuring the User Experience on a Large Scale](https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-strategy-alignment.html",
+        "name": "Design Strategy Alignment: Connect UX Decisions to Outcomes",
+        "description": "Connect design priorities to user needs and product strategy with a practical example, explicit tradeoffs, and measures beyond feature delivery.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.romanpichler.com/blog/what-is-a-product-strategy/",
+          "https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#term",
+        "name": "Design Strategy Alignment",
+        "termCode": "design-strategy-alignment",
+        "description": "Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.",
+        "url": "https://lexkonovalov.com/glossary/design-strategy-alignment.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-strategy-alignment.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design Strategy Alignment",
+            "item": "https://lexkonovalov.com/glossary/design-strategy-alignment.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -7908,15 +9849,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.",
-    "purpose": "Identifies and validates the core segment where exponential organic retention, word-of-mouth adoption, and sustainable commercial willingness-to-pay converge.",
+    "purpose": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.",
     "keyConcepts": [
-      "Cohort retention flattening",
-      "Sean Ellis 40% benchmark",
-      "Segment-specific fit",
-      "Commercial demand evidence",
-      "Superhuman PMF engine"
+      "How do you assess product–market fit?",
+      "What does the 40% PMF survey benchmark mean?"
     ],
-    "howItWorks": "Surveys target users on emotional disappointment upon product withdrawal while correlating responses with usage data and recurring renewal patterns across narrow customer profiles.",
+    "howItWorks": "Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "North Star Metric (NSM)",
@@ -8024,16 +9962,16 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
-    "purpose": "Evaluates the long-term commercial sustainability and marketing efficiency of a software product, directly steering product investment decisions.",
+    "purpose": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
     "keyConcepts": [
-      "Unit economics",
-      "payback period",
-      "churn mitigation",
-      "customer acquisition spend."
+      "How do you calculate LTV:CAC?",
+      "A simple SaaS example",
+      "What is a good LTV:CAC ratio?",
+      "What can make the estimate misleading?"
     ],
-    "howItWorks": "Calculated as Ratio = Lifetime Value (LTV) / Customer Acquisition Cost (CAC), where LTV = (Average Revenue Per User (ARPU) * Gross Margin) / Churn Rate. A healthy benchmark for SaaS is generally considered 3 : 1 or higher.",
+    "howItWorks": "The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.",
     "relatedTerms": [
-      "Churn Mitigation",
+      "Churn Mitigation Architecture",
       "Product-Led Growth (PLG)",
       "Activation Metric"
     ],
@@ -8046,7 +9984,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "What is the CAC payback period?, Stripe (https://stripe.com/resources/more/what-is-the-cac-payback-period)",
       "CAC in SaaS, Stripe (https://stripe.com/resources/more/cac-in-saas)"
     ],
-    "contentMarkdown": "# LTV to CAC Ratio\n\nThe LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.\n\n**LTV:CAC = customer lifetime value ÷ customer acquisition cost.**\n\nA ratio of 4:1 means an estimated $4 in lifetime gross profit for each $1 spent acquiring a customer. It does not mean $4 in net profit: acquisition costs and other operating expenses still matter.\n\n## How do you calculate LTV:CAC?\n\nFor a simplified subscription model:\n\n- **LTV ≈ average monthly revenue per account × gross margin ÷ monthly customer churn rate.**\n- **CAC = acquisition-related sales and marketing costs ÷ new paying customers acquired.**\n\nHere, an account is one paying customer. Monthly customer churn is the share of accounts present at the start of the month that cancel during it. Use decimals for percentages: 80% becomes 0.80. Match the revenue and churn periods; do not substitute net revenue churn.\n\nInclude relevant salaries, commissions, tools, and campaign costs in CAC. Align costs and acquired customers with the sales cycle; dividing this month's spending by this month's wins can mislead when acquisition takes several months.\n\n## A simple SaaS example\n\nAssume similar customer accounts, stable monthly revenue and churn, and no expansion revenue.\n\n| Input | Illustrative value |\n|---|---:|\n| Average monthly revenue per account | $100 |\n| Gross margin | 80% |\n| Monthly customer churn | 2% |\n| Acquisition spending attributable to 100 new accounts | $100,000 |\n\n- Estimated LTV = $100 × 0.80 ÷ 0.02 = **$4,000**.\n- CAC = $100,000 ÷ 100 = **$1,000**.\n- LTV:CAC = $4,000 ÷ $1,000 = **4:1**.\n\nThis is a simplified estimate, not a prediction that every account will generate $4,000.\n\n## What is a good LTV:CAC ratio?\n\n**3:1 is a common SaaS rule of thumb, not a universal threshold.** Check how LTV and CAC were calculated before comparing companies or benchmarks. David Skok's detailed definitions explicitly qualify their guideline with assumptions about gross margin and the LTV formula.\n\nA ratio below 1:1 means estimated lifetime gross profit does not cover acquisition cost under this model. A higher ratio can reflect stronger retention or lower acquisition costs, but also optimistic assumptions or incomplete cost allocation.\n\nReview **CAC payback** alongside the ratio: payback asks how long it takes to recover acquisition costs. A favorable lifetime ratio can still require a long wait for that recovery.\n\n## What can make the estimate misleading?\n\nThe simple formula assumes stable churn, revenue, and margin. It breaks down at zero churn and does not model expansion or changing retention. Do not substitute negative net revenue churn into its denominator.\n\nFor those cases, model cohorts (customers acquired in the same period) with explicit retention, revenue, margin, and forecast-horizon assumptions. Compare segments and acquisition channels; a blended average can hide weak economics.\n\nFor product designers, LTV:CAC provides business context. Test more immediate outcomes, such as activation and retained usage, before attributing a change in lifetime economics to a redesign.\n\n## Related terms\n\n- [Churn Mitigation](/glossary/churn-mitigation-architecture.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Activation Metric](/glossary/activation-metric.html)\n\n## Sources\n\n- [SaaS Metrics 2.0: Detailed Definitions, David Skok](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)\n- [SaaS Metrics 2.0, David Skok](https://www.forentrepreneurs.com/saas-metrics-2/)\n- [What is the CAC payback period?, Stripe](https://stripe.com/resources/more/what-is-the-cac-payback-period)\n- [CAC in SaaS, Stripe](https://stripe.com/resources/more/cac-in-saas)",
+    "contentMarkdown": "# LTV to CAC Ratio\n\nThe LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.\n\n**LTV:CAC = customer lifetime value ÷ customer acquisition cost.**\n\nA ratio of 4:1 means an estimated $4 in lifetime gross profit for each $1 spent acquiring a customer. It does not mean $4 in net profit: acquisition costs and other operating expenses still matter.\n\n## How do you calculate LTV:CAC?\n\nFor a simplified subscription model:\n\n- **LTV ≈ average monthly revenue per account × gross margin ÷ monthly customer churn rate.**\n- **CAC = acquisition-related sales and marketing costs ÷ new paying customers acquired.**\n\nHere, an account is one paying customer. Monthly customer churn is the share of accounts present at the start of the month that cancel during it. Use decimals for percentages: 80% becomes 0.80. Match the revenue and churn periods; do not substitute net revenue churn.\n\nInclude relevant salaries, commissions, tools, and campaign costs in CAC. Align costs and acquired customers with the sales cycle; dividing this month's spending by this month's wins can mislead when acquisition takes several months.\n\n## A simple SaaS example\n\nAssume similar customer accounts, stable monthly revenue and churn, and no expansion revenue.\n\n| Input | Illustrative value |\n|---|---:|\n| Average monthly revenue per account | $100 |\n| Gross margin | 80% |\n| Monthly customer churn | 2% |\n| Acquisition spending attributable to 100 new accounts | $100,000 |\n\n- Estimated LTV = $100 × 0.80 ÷ 0.02 = **$4,000**.\n- CAC = $100,000 ÷ 100 = **$1,000**.\n- LTV:CAC = $4,000 ÷ $1,000 = **4:1**.\n\nThis is a simplified estimate, not a prediction that every account will generate $4,000.\n\n## What is a good LTV:CAC ratio?\n\n**3:1 is a common SaaS rule of thumb, not a universal threshold.** Check how LTV and CAC were calculated before comparing companies or benchmarks. David Skok's detailed definitions explicitly qualify their guideline with assumptions about gross margin and the LTV formula.\n\nA ratio below 1:1 means estimated lifetime gross profit does not cover acquisition cost under this model. A higher ratio can reflect stronger retention or lower acquisition costs, but also optimistic assumptions or incomplete cost allocation.\n\nReview **CAC payback** alongside the ratio: payback asks how long it takes to recover acquisition costs. A favorable lifetime ratio can still require a long wait for that recovery.\n\n## What can make the estimate misleading?\n\nThe simple formula assumes stable churn, revenue, and margin. It breaks down at zero churn and does not model expansion or changing retention. Do not substitute negative net revenue churn into its denominator.\n\nFor those cases, model cohorts (customers acquired in the same period) with explicit retention, revenue, margin, and forecast-horizon assumptions. Compare segments and acquisition channels; a blended average can hide weak economics.\n\nFor product designers, LTV:CAC provides business context. Test more immediate outcomes, such as activation and retained usage, before attributing a change in lifetime economics to a redesign.\n\n## Related terms\n\n- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Activation Metric](/glossary/activation-metric.html)\n\n## Sources\n\n- [SaaS Metrics 2.0: Detailed Definitions, David Skok](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)\n- [SaaS Metrics 2.0, David Skok](https://www.forentrepreneurs.com/saas-metrics-2/)\n- [What is the CAC payback period?, Stripe](https://stripe.com/resources/more/what-is-the-cac-payback-period)\n- [CAC in SaaS, Stripe](https://stripe.com/resources/more/cac-in-saas)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -8133,20 +10071,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
-    "purpose": "Serves as the primary operational target for product onboarding teams, directly correlating with sustained long-term user retention.",
+    "purpose": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
     "keyConcepts": [
-      "\"Aha! moment\"",
-      "early behavioral threshold",
-      "onboarding milestone",
-      "retention correlation."
+      "How do you choose an activation event?",
+      "How do you calculate activation rate?",
+      "How do you validate the milestone?"
     ],
-    "howItWorks": "Data teams correlate early user actions with 90-day retention curves, discovering leading indicators (e.g., Slack's \"2,000 messages sent\" or Facebook's \"7 friends in 10 days\").",
+    "howItWorks": "An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.",
     "relatedTerms": [
       "Time-to-Value (TTV)",
       "Product-Led Growth (PLG)",
       "Conversion Funnel",
-      "Product Telemetry & Analytics",
-      "User Retention"
+      "Product Telemetry & Analytics"
     ],
     "seoTitle": "Activation Metric and Rate | Product Design Glossary",
     "seoDescription": "Learn how to choose an activation event, calculate activation rate, and check whether early product behavior is associated with later retention.",
@@ -8156,7 +10092,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)",
       "Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention)"
     ],
-    "contentMarkdown": "# Activation Metric\n\nAn activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.\n\n## How do you choose an activation event?\n\nStart with the outcome people came for. In an invoicing product, account creation and opening a template are setup steps. Sending a first invoice is a stronger candidate when the product’s job is to help businesses bill their clients. If users can send test invoices, distinguish those from real ones in the event definition.\n\nUse research to check whether the action reflects progress users care about. Then use behavioral data to test whether it is associated with later meaningful use. Some products need a milestone made up of several actions. In a shared workspace, for example, value may depend on two people completing a task together.\n\n## How do you calculate activation rate?\n\n**Activation rate = eligible new users or accounts that reach the milestone within the window ÷ all eligible new users or accounts in the cohort × 100.**\n\nIn the invoicing example, count new accounts that send a first real invoice within seven days of signup. If 120 of 200 eligible accounts do so, seven-day activation is **60%**. Count each account once, including accounts where several teammates send invoices. Report the cohort after every account has had seven days to activate.\n\n## How do you validate the milestone?\n\nCompare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.\n\nAn association can help you choose a milestone. It cannot establish that prompting the action will improve [user retention](/glossary/user-retention.html). Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.\n\nRead activation rate alongside [time to value](/glossary/time-to-value-ttv.html). One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.\n\n## Related terms\n\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)\n- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)\n\n## Sources\n\n- [Mastering Engagement Playbook, Amplitude](https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf)\n- [How Amplitude calculates retention](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)\n- [Time to Value, Amplitude](https://amplitude.com/blog/time-to-value-drives-user-retention)",
+    "contentMarkdown": "# Activation Metric\n\nAn activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.\n\n## How do you choose an activation event?\n\nStart with the outcome people came for. In an invoicing product, account creation and opening a template are setup steps. Sending a first invoice is a stronger candidate when the product’s job is to help businesses bill their clients. If users can send test invoices, distinguish those from real ones in the event definition.\n\nUse research to check whether the action reflects progress users care about. Then use behavioral data to test whether it is associated with later meaningful use. Some products need a milestone made up of several actions. In a shared workspace, for example, value may depend on two people completing a task together.\n\n## How do you calculate activation rate?\n\n**Activation rate = eligible new users or accounts that reach the milestone within the window ÷ all eligible new users or accounts in the cohort × 100.**\n\nIn the invoicing example, count new accounts that send a first real invoice within seven days of signup. If 120 of 200 eligible accounts do so, seven-day activation is **60%**. Count each account once, including accounts where several teammates send invoices. Report the cohort after every account has had seven days to activate.\n\n## How do you validate the milestone?\n\nCompare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.\n\nAn association can help you choose a milestone. It cannot establish that prompting the action will improve retention. Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.\n\nRead activation rate alongside [time to value](/glossary/time-to-value-ttv.html). One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.\n\n## Related terms\n\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)\n- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)\n\n## Sources\n\n- [Mastering Engagement Playbook, Amplitude](https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf)\n- [How Amplitude calculates retention](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)\n- [Time to Value, Amplitude](https://amplitude.com/blog/time-to-value-drives-user-retention)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -8242,14 +10178,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.",
-    "purpose": "Reduces early abandonment by eliminating friction, unnecessary setup steps, and cognitive hurdles during onboarding.",
+    "purpose": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.",
     "keyConcepts": [
-      "Friction reduction",
-      "progressive onboarding",
-      "immediate utility",
-      "deferred setup."
+      "How do you measure time to value?",
+      "Why report time alongside activation rate?",
+      "How can design reduce time to value?"
     ],
-    "howItWorks": "Designers streamline first-run wizards, defer registration forms, provide interactive templates, and utilize sample data so users experience core value immediately.",
+    "howItWorks": "Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.",
     "relatedTerms": [
       "Activation Metric",
       "Product-Led Growth (PLG)",
@@ -8347,15 +10282,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
-    "purpose": "Protects recurring revenue and customer lifetime value by detecting, preventing, and recovering from both voluntary cancellations and involuntary payment failures.",
+    "purpose": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
     "keyConcepts": [
-      "Voluntary churn",
-      "Involuntary churn",
-      "Smart retries",
-      "Usage drop signal",
-      "Retention recovery window"
+      "What causes customer churn?",
+      "What should the product do?",
+      "How do you measure the result?"
     ],
-    "howItWorks": "Differentiates voluntary from involuntary loss, deploying automated dunning and retries for billing issues, while analyzing behavioral drops to provide targeted retention interventions, pauses, or downgrades.",
+    "howItWorks": "Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.",
     "relatedTerms": [
       "Product Telemetry & Analytics",
       "LTV to CAC Ratio",
@@ -8458,15 +10391,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
-    "purpose": "Decouples code deployment from feature release, enabling progressive delivery, granular audience segmentation, rapid kill-switches, and trustworthy A/B experimentation.",
+    "purpose": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
     "keyConcepts": [
-      "Staged rollout",
-      "A/B test toggles",
-      "Operational kill-switch",
-      "Fallback behavior",
-      "Flag cleanup lifecycle"
+      "How do rollouts and experiments use flags?",
+      "Example of a staged rollout",
+      "What should a flag plan include?"
     ],
-    "howItWorks": "Runtime evaluations check user or account attributes against targeted rule configurations, serving experimental or baseline variants while telemetry monitors errors and business metrics before general availability.",
+    "howItWorks": "A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.",
     "relatedTerms": [
       "Continuous Experimentation",
       "A/B Testing (Split Testing)",
@@ -8562,26 +10493,96 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "The Value Proposition Canvas is a strategic mapping tool that maps a target customer’s profile (Jobs, Pains, Gains) against an organization’s value map (Products & Services, Pain Relievers, Gain Creators).",
-    "purpose": "Ensures structural alignment between product feature development and genuine user needs, preventing companies from launching unviable products.",
+    "definition": "The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.",
+    "purpose": "The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.",
     "keyConcepts": [
-      "Customer profile",
-      "value map",
-      "pain relievers",
-      "gain creators",
-      "solution fit."
+      "What are its six parts?",
+      "Example: Helping a hotel coordinate room turnover",
+      "How do you use the canvas?"
     ],
-    "howItWorks": "Cross-functional squads map validated customer pains and jobs on the right canvas side, ensuring every proposed product capability on the left directly alleviates an identified pain or unlocks a gain.",
+    "howItWorks": "The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "Product Discovery",
       "Product Strategy Canvas",
-      "Product–Market Fit (PMF)"
+      "Product-Market Fit (PMF) Engine"
     ],
-    "seoTitle": "The Value Proposition Canvas: Designing User-Centered Products",
+    "seoTitle": "Value Proposition Canvas: Jobs, Pains, Gains, and Fit",
     "sources": [
-      "Alexander Osterwalder et al., Value Proposition Design, Wiley",
-      "Strategyzer Methodology"
+      "The Value Proposition Canvas, Strategyzer (https://www.strategyzer.com/library/the-value-proposition-canvas)"
+    ],
+    "seoDescription": "Learn the six parts of the Value Proposition Canvas with a hotel operations example and a way to test the proposed fit with customers.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/value-proposition-canvas.html",
+    "contentMarkdown": "# Value Proposition Canvas\n\nThe Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.\n\n## What are its six parts?\n\nCustomer jobs describe what people want to accomplish. Pains capture obstacles, costs, and undesirable outcomes. Gains describe the benefits they seek. The value map records what the team offers and how it intends to address those pains and gains.\n\n## Example: Helping a hotel coordinate room turnover\n\nA hotel manager’s job is to make rooms ready for arriving guests. A possible pain is learning about an unresolved repair after assigning a room. A desired gain is confidence about which rooms are ready.\n\nA proposed operations tool offers a shared room-status view. A linked maintenance issue could relieve the late-discovery problem. A clear record of readiness could support the manager’s decision. These connections are hypotheses to investigate with hotel staff.\n\n## How do you use the canvas?\n\nFocus on one segment and prioritize its most consequential jobs, pains, and gains. Discuss the proposed connections with customers, observe the task, and test an early version of the offering. Record which assumptions the evidence supports and which need revision.\n\nThe canvas helps organize a value proposition. Decisions about pricing, delivery, and the wider business still need their own evidence and planning.\n\n## Related terms\n\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n- [Product Discovery](/glossary/product-discovery.html)\n- [Product Strategy Canvas](/glossary/product-strategy-canvas.html)\n- [Product-Market Fit (PMF) Engine](/glossary/product-market-fit-pmf-engine.html)\n\n## Sources\n\n- [The Value Proposition Canvas, Strategyzer](https://www.strategyzer.com/library/the-value-proposition-canvas)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/value-proposition-canvas.html",
+        "name": "Value Proposition Canvas: Jobs, Pains, Gains, and Fit",
+        "description": "Learn the six parts of the Value Proposition Canvas with a hotel operations example and a way to test the proposed fit with customers.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.strategyzer.com/library/the-value-proposition-canvas"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#term",
+        "name": "Value Proposition Canvas",
+        "termCode": "value-proposition-canvas",
+        "description": "The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.",
+        "url": "https://lexkonovalov.com/glossary/value-proposition-canvas.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/value-proposition-canvas.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Value Proposition Canvas",
+            "item": "https://lexkonovalov.com/glossary/value-proposition-canvas.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -9429,20 +11430,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
-    "purpose": "Measures sustained product engagement and value delivery over time, distinguishing one-time activation from habitual, long-term adoption.",
+    "purpose": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
     "keyConcepts": [
-      "Cohort analysis",
-      "Return condition",
-      "Time window",
-      "Account-level retention",
-      "Retention curve"
+      "How do you calculate a retention rate?",
+      "Example of account retention",
+      "Which time window should you use?"
     ],
-    "howItWorks": "Tracks a defined cohort of users or accounts from a shared starting milestone, evaluating the percentage that executes a meaningful qualifying return event within designated subsequent time windows.",
+    "howItWorks": "User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.",
     "relatedTerms": [
       "Activation Metric",
       "Time-to-Value (TTV)",
       "North Star Metric (NSM)",
-      "Churn Mitigation"
+      "Churn Mitigation Architecture"
     ],
     "seoTitle": "User Retention: Definition and Formula | Product Design Glossary",
     "seoDescription": "Learn how to calculate user retention with a cohort, a meaningful return event, and a time window. Includes a worked account retention example.",
@@ -9452,7 +11451,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "How the Retention Analysis chart calculates retention, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)",
       "How time works in a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)"
     ],
-    "contentMarkdown": "# User Retention\n\nUser retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.\n\n## How do you calculate a retention rate?\n\n**Retention rate = eligible cohort members who meet the return condition ÷ all eligible members of the starting cohort × 100.**\n\nA cohort is a group that shares a starting condition, such as signing up in the same week. Define what counts as returning, then give every cohort member the full observation window. Choose a return event that reflects the product’s job, such as sending an invoice for an invoicing tool.\n\n## Example of account retention\n\nAn invoicing team wants to know whether new accounts keep using the product after initial activation. The cohort includes 120 eligible new accounts that sent their first real invoice within seven days of signup. The return condition is sending another real invoice during days 15–30 after signup.\n\nIf 72 of those accounts meet the return condition, the **retention rate for this activated cohort is 60%** (72 ÷ 120 × 100). Count each account once, even if its team sends several invoices. Read the result after all accounts have finished day 30.\n\nTo compare later use across activated and non-activated accounts, use a return condition both can meet. Sending any real invoice during days 15–30 works for that question. It answers a different question from repeat use among accounts that already sent an invoice.\n\n## Which time window should you use?\n\nMatch the window to the natural usage cycle. A daily collaboration tool and a monthly invoicing product can show very different patterns. Day-30 retention counts a return on that day. A days 15–30 window counts any qualifying return in that interval. For “day 30 or later,” state the reporting cutoff and give cohorts comparable follow-up time.\n\nRead retention alongside [activation](/glossary/activation-metric.html). Activation tracks initial progress. Retention tracks a return to meaningful work. A drop in usage retention can prompt investigation into who stopped returning and why. Subscription churn measures a separate outcome, such as cancellation or nonrenewal.\n\n## Related terms\n\n- [Activation Metric](/glossary/activation-metric.html)\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)\n- [Churn Mitigation](/glossary/churn-mitigation-architecture.html)\n\n## Sources\n\n- [Build a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)\n- [How the Retention Analysis chart calculates retention, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)\n- [How time works in a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)",
+    "contentMarkdown": "# User Retention\n\nUser retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.\n\n## How do you calculate a retention rate?\n\n**Retention rate = eligible cohort members who meet the return condition ÷ all eligible members of the starting cohort × 100.**\n\nA cohort is a group that shares a starting condition, such as signing up in the same week. Define what counts as returning, then give every cohort member the full observation window. Choose a return event that reflects the product’s job, such as sending an invoice for an invoicing tool.\n\n## Example of account retention\n\nAn invoicing team wants to know whether new accounts keep using the product after initial activation. The cohort includes 120 eligible new accounts that sent their first real invoice within seven days of signup. The return condition is sending another real invoice during days 15–30 after signup.\n\nIf 72 of those accounts meet the return condition, the **retention rate for this activated cohort is 60%** (72 ÷ 120 × 100). Count each account once, even if its team sends several invoices. Read the result after all accounts have finished day 30.\n\nTo compare later use across activated and non-activated accounts, use a return condition both can meet. Sending any real invoice during days 15–30 works for that question. It answers a different question from repeat use among accounts that already sent an invoice.\n\n## Which time window should you use?\n\nMatch the window to the natural usage cycle. A daily collaboration tool and a monthly invoicing product can show very different patterns. Day-30 retention counts a return on that day. A days 15–30 window counts any qualifying return in that interval. For “day 30 or later,” state the reporting cutoff and give cohorts comparable follow-up time.\n\nRead retention alongside [activation](/glossary/activation-metric.html). Activation tracks initial progress. Retention tracks a return to meaningful work. A drop in usage retention can prompt investigation into who stopped returning and why. Subscription churn measures a separate outcome, such as cancellation or nonrenewal.\n\n## Related terms\n\n- [Activation Metric](/glossary/activation-metric.html)\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n- [North Star Metric (NSM)](/glossary/north-star-metric-nsm.html)\n- [Churn Mitigation Architecture](/glossary/churn-mitigation-architecture.html)\n\n## Sources\n\n- [Build a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)\n- [How the Retention Analysis chart calculates retention, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)\n- [How time works in a retention analysis, Amplitude Docs](https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -9533,15 +11532,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.",
-    "purpose": "Bridges self-serve product adoption and sales-assisted expansion by identifying accounts whose organic usage and commercial fit warrant high-touch engagement.",
+    "purpose": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.",
     "keyConcepts": [
-      "PQL vs MQL vs Activation",
-      "Usage threshold signal",
-      "Product-qualified account (PQA)",
-      "Intent triggers",
-      "Product-led sales (PLS)"
+      "How is a PQL different from activation or an MQL?",
+      "Example for a team planning tool",
+      "How do you validate a PQL rule?"
     ],
-    "howItWorks": "Evaluates live telemetry against predefined behavioral milestones, combining usage volume with firmographic fit and explicit feature intent to alert go-to-market teams.",
+    "howItWorks": "A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.",
     "relatedTerms": [
       "Product-Led Growth (PLG)",
       "Activation Metric",
@@ -13933,6 +15930,2677 @@ export const glossaryTerms: GlossaryTerm[] = [
     "alternateName": [
       "WCAG Reflow",
       "Text Resize and Reflow"
+    ]
+  },
+  {
+    "id": "152",
+    "name": "AI-assisted Design",
+    "slug": "ai-assisted-design",
+    "category": "AI & Agentic Systems",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.",
+    "purpose": "AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.",
+    "keyConcepts": [
+      "Designing with AI vs. designing an AI product",
+      "Where can AI help a designer?",
+      "Example: an operations dashboard",
+      "A practical AI-assisted workflow"
+    ],
+    "howItWorks": "AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.",
+    "relatedTerms": [
+      "AI-native Design",
+      "AI Prototyping",
+      "Design Harness",
+      "AI in UX Research"
+    ],
+    "seoTitle": "AI-assisted Design: Practical Workflow | Product Design Glossary",
+    "seoDescription": "Learn how designers can use AI for exploration, prototyping, and review while keeping research evidence, design decisions, and verification clear.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-assisted-design.html",
+    "sources": [
+      "Design Process Isn't Dead, It's Compressed, NN/g (https://www.nngroup.com/articles/design-process-isnt-dead/)",
+      "AI Prototyping in Real Design Contexts, NN/g (https://www.nngroup.com/articles/ai-prototyping/)"
+    ],
+    "contentMarkdown": "# AI-assisted Design\n\nAI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.\n\n## Designing with AI vs. designing an AI product\n\n**AI-assisted design** describes how the work is done. **[AI-native design](/glossary/ai-native-design.html)** concerns products whose experience depends substantially on AI capabilities.\n\nA designer can use AI to prototype a conventional settings page. A team can also design an AI assistant using sketches and ordinary prototyping tools. These are different dimensions of the work.\n\n## Where can AI help a designer?\n\n| Task | Useful contribution | What still needs judgment |\n|---|---|---|\n| Explore alternatives | Draft different layouts or approaches | Whether they address a real need |\n| Write interface content | Suggest labels and error messages | Accuracy, tone, and the actual recovery path |\n| Build a prototype | Implement a specified interaction | Whether the behavior represents the idea being tested |\n| Review a design | Identify possible omissions | Whether each finding is supported and important |\n\nTreat generated alternatives as proposals. Repetition across several responses is not independent evidence.\n\n## Example: an operations dashboard\n\nSuppose a designer has identified the core objects, statuses, and relationships in a booking workflow. They give an agent that model, representative content, and the shared component references.\n\nThe agent builds a prototype with sorting and filtering. The designer checks whether the filters refer to the right objects, whether important exceptions remain visible, and whether the UI fits the actual task.\n\nStarting from a verified [object model](/glossary/object-mapping.html) gives the prototype a clearer structure. It does not establish that users will understand or value the proposed dashboard.\n\n## A practical AI-assisted workflow\n\nDefine the question and constraints first. Supply the evidence, source material, component references, and examples needed for that question. Ask for a bounded deliverable that can be inspected.\n\nReview the result against the brief. Check factual claims against sources, behavior against requirements, and implementation against the real component API. Revise or discard proposals that do not hold up.\n\nThen test the design with appropriate users or other evidence. Record which conclusions come from research and which remain assumptions.\n\nInclude review, correction, and maintenance when assessing effort. Producing a screen quickly is one part of the work, not a complete measure of the design process.\n\n## Related terms\n\n- [AI-native Design](/glossary/ai-native-design.html)\n- [AI Prototyping](/glossary/ai-prototyping.html)\n- [Design Harness](/glossary/design-harness.html)\n- [AI in UX Research](/glossary/ai-ux-research.html)\n\n## Sources\n\n- [Design Process Isn't Dead, It's Compressed, NN/g](https://www.nngroup.com/articles/design-process-isnt-dead/)\n- [AI Prototyping in Real Design Contexts, NN/g](https://www.nngroup.com/articles/ai-prototyping/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-assisted-design.html",
+        "name": "AI-assisted Design: Practical Workflow | Product Design Glossary",
+        "description": "Learn how designers can use AI for exploration, prototyping, and review while keeping research evidence, design decisions, and verification clear.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/design-process-isnt-dead/",
+          "https://www.nngroup.com/articles/ai-prototyping/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#term",
+        "name": "AI-assisted Design",
+        "termCode": "ai-assisted-design",
+        "description": "AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.",
+        "url": "https://lexkonovalov.com/glossary/ai-assisted-design.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-assisted-design.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI-assisted Design",
+            "item": "https://lexkonovalov.com/glossary/ai-assisted-design.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "153",
+    "name": "AI Grounding",
+    "slug": "ai-grounding",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.",
+    "purpose": "In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.",
+    "keyConcepts": [
+      "How does grounding work?",
+      "Grounding vs. RAG vs. citations",
+      "Example: explaining a baggage allowance",
+      "What should designers make visible?"
+    ],
+    "howItWorks": "In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.",
+    "relatedTerms": [
+      "Retrieval-Augmented Generation",
+      "AI Hallucination",
+      "Context Engineering",
+      "AI Transparency"
+    ],
+    "seoTitle": "AI Grounding and RAG Explained | Product Design Glossary",
+    "seoDescription": "Understand AI grounding, how it relates to RAG and citations, and how to show the source, freshness, and limitations of an AI-generated answer.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-grounding.html",
+    "sources": [
+      "Grounding overview, Google Cloud (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview)",
+      "Misinformation, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm092025-misinformation/)"
+    ],
+    "contentMarkdown": "# AI Grounding\n\nIn generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.\n\n## How does grounding work?\n\nAn application makes information available to the model and asks it to use that information when responding. Sources might include a policy document, a search result, or the result of an authorized tool call.\n\nA useful product also keeps enough source context to check the answer. This can include the document version, record identifier, relevant passage, and retrieval time.\n\nGrounding can reduce unsupported output, but it does not guarantee that the evidence is correct, current, relevant, or accurately represented.\n\n## Grounding vs. RAG vs. citations\n\n| Concept | What it describes |\n|---|---|\n| Grounding | Connecting an answer to supporting information |\n| Retrieval-augmented generation (RAG) | Retrieving information and using it during generation |\n| Citation | A reference shown with a claim or answer |\n\nRAG is one way to provide grounding information. A citation is an interface element and a reference; its presence alone does not prove that the source supports the statement.\n\nVerify whether a cited passage establishes the specific claim. A valid link to a general policy is insufficient if the answer invents an exception that the policy never mentions.\n\n## Example: explaining a baggage allowance\n\nA travel assistant retrieves the baggage conditions associated with a selected fare. It summarizes the relevant allowance and provides a route to the underlying conditions.\n\nIf the record is unavailable or conflicting, the interface shows that limitation and offers a way to check. It should not turn a generic airline policy into a confident claim about this particular fare.\n\nThe example depends on the correct fare, journey, and current record. A well-written answer based on the wrong record is still unsuitable.\n\n## What should designers make visible?\n\nShow the source detail needed for the decision: which record or document supports the answer, how current it is when freshness matters, and which parts remain uncertain.\n\nKeep retrieved facts distinct from generated suggestions. Let people inspect evidence without losing their task, and provide a correction or escalation route.\n\nEvaluate grounding with representative questions, missing sources, outdated documents, and conflicting records. Measure whether the answer is supported and whether the user can make the intended decision.\n\n## Related terms\n\n- [Retrieval-Augmented Generation](/glossary/retrieval-augmented-generation-rag.html)\n- [AI Hallucination](/glossary/ai-hallucination.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [AI Transparency](/glossary/ai-transparency.html)\n\n## Sources\n\n- [Grounding overview, Google Cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview)\n- [Misinformation, OWASP Gen AI Security Project](https://genai.owasp.org/llmrisk/llm092025-misinformation/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-grounding.html",
+        "name": "AI Grounding and RAG Explained | Product Design Glossary",
+        "description": "Understand AI grounding, how it relates to RAG and citations, and how to show the source, freshness, and limitations of an AI-generated answer.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview",
+          "https://genai.owasp.org/llmrisk/llm092025-misinformation/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#term",
+        "name": "AI Grounding",
+        "termCode": "ai-grounding",
+        "description": "In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.",
+        "url": "https://lexkonovalov.com/glossary/ai-grounding.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-grounding.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Grounding",
+            "item": "https://lexkonovalov.com/glossary/ai-grounding.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "154",
+    "name": "AI Hallucination",
+    "slug": "ai-hallucination",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.",
+    "purpose": "An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.",
+    "keyConcepts": [
+      "Why can a convincing answer still be wrong?",
+      "Example: an invented refund exception",
+      "How can a product reduce the impact?",
+      "How should teams evaluate hallucinations?"
+    ],
+    "howItWorks": "An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.",
+    "relatedTerms": [
+      "AI Grounding",
+      "Evaluation Harness",
+      "Human-in-the-Loop",
+      "Trust Calibration in AI"
+    ],
+    "seoTitle": "What Is an AI Hallucination? | Product Design Glossary",
+    "seoDescription": "Learn what AI hallucination means, how it differs from other errors, and how product interfaces can help people verify and recover from unsupported output.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-hallucination.html",
+    "sources": [
+      "Misinformation, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm092025-misinformation/)",
+      "Grounding overview, Google Cloud (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview)"
+    ],
+    "contentMarkdown": "# AI Hallucination\n\nAn AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.\n\n## Why can a convincing answer still be wrong?\n\nGenerative models produce responses from patterns and the context they receive. Fluent wording is not a verification step.\n\nA model can supply a plausible detail when the required information is missing. It can also misrepresent a retrieved source. Product teams need to evaluate the result against evidence rather than infer correctness from confidence, length, or polished formatting.\n\nNot every incorrect answer has the same cause. A stale database value, a failed calculation, and fabricated supporting evidence require different investigations. Record the observed failure instead of labeling every defect a hallucination.\n\n## Example: an invented refund exception\n\nSuppose a support assistant summarizes a booking's refund conditions. The source says the fare is nonrefundable, but the answer invents a “24-hour exception” without supporting evidence.\n\nA helpful interface lets the user inspect the relevant conditions and request a review. The system should not let that generated statement automatically authorize a refund.\n\nIf the source cannot be retrieved, say that the conditions could not be verified. Repeating the same unsupported answer in a more confident tone does not resolve the problem.\n\n## How can a product reduce the impact?\n\nUseful design and implementation choices include:\n\n- Retrieve the information needed for the specific record and question.\n- Validate consequential values and actions against authoritative application data.\n- Provide relevant evidence where users need to assess a claim.\n- Support explicit missing-information and uncertain-result states.\n- Give users a practical correction, retry, or escalation path.\n\n[Grounding](/glossary/ai-grounding.html) and validation can help, but no generic disclaimer or single technique makes generated answers universally reliable.\n\n## How should teams evaluate hallucinations?\n\nBuild a set of representative tasks with clear criteria for what counts as supported. Include questions with no answer in the available sources, conflicting records, and misleading context.\n\nCheck the correctness of claims and the adequacy of citations separately. A source can exist without supporting the answer.\n\nTrack the effect on the task, including whether users notice and recover from a problem. Do not report a hallucination rate without stating the dataset, evaluation method, and type of failure counted.\n\n## Related terms\n\n- [AI Grounding](/glossary/ai-grounding.html)\n- [Evaluation Harness](/glossary/evaluation-harness-ai-evals.html)\n- [Human-in-the-Loop](/glossary/human-in-the-loop-hitl.html)\n- [Trust Calibration in AI](/glossary/trust-calibration-ai.html)\n\n## Sources\n\n- [Misinformation, OWASP Gen AI Security Project](https://genai.owasp.org/llmrisk/llm092025-misinformation/)\n- [Grounding overview, Google Cloud](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-hallucination.html",
+        "name": "What Is an AI Hallucination? | Product Design Glossary",
+        "description": "Learn what AI hallucination means, how it differs from other errors, and how product interfaces can help people verify and recover from unsupported output.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#breadcrumbs"
+        },
+        "citation": [
+          "https://genai.owasp.org/llmrisk/llm092025-misinformation/",
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#term",
+        "name": "AI Hallucination",
+        "termCode": "ai-hallucination",
+        "description": "An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.",
+        "url": "https://lexkonovalov.com/glossary/ai-hallucination.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-hallucination.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Hallucination",
+            "item": "https://lexkonovalov.com/glossary/ai-hallucination.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "155",
+    "name": "Model Routing",
+    "slug": "ai-model-routing",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.",
+    "purpose": "Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.",
+    "keyConcepts": [
+      "How does model routing work?",
+      "Routing vs. fallback vs. multi-agent systems",
+      "Example: an assisted support workflow",
+      "What matters to the user experience?"
+    ],
+    "howItWorks": "Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.",
+    "relatedTerms": [
+      "AI Unit Economics",
+      "Evaluation Harness",
+      "Multi-Agent Systems",
+      "Agent Harness"
+    ],
+    "seoTitle": "AI Model Routing Explained | Product Design Glossary",
+    "seoDescription": "Learn how model routing selects a model for a task, how it differs from fallback and multi-agent workflows, and which tradeoffs affect the user experience.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-model-routing.html",
+    "sources": [
+      "Understanding intelligent prompt routing, Amazon Bedrock (https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html)",
+      "Context windows, Anthropic (https://platform.claude.com/docs/en/build-with-claude/context-windows)"
+    ],
+    "contentMarkdown": "# Model Routing\n\nModel routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.\n\n## How does model routing work?\n\nAn application evaluates a request and chooses among supported models. The decision may follow explicit rules or use a learned prediction about which model is suitable.\n\nFor example, a rule may send a short classification task to one model and a complex document comparison to another. A commercial router may support only particular models or families. Amazon Bedrock's documented intelligent prompt routing is one specific implementation, not a universal routing specification.\n\n## Routing vs. fallback vs. multi-agent systems\n\n| Mechanism | Main decision |\n|---|---|\n| Model routing | Which model is suitable for this request or step? |\n| Fallback | What should happen if the preferred path is unavailable or fails? |\n| Multi-agent orchestration | Which agent does which part of a larger task? |\n\nA workflow can use all three. Changing the model does not necessarily create a new agent, and delegating to several agents does not guarantee that different models are involved.\n\n## Example: an assisted support workflow\n\nSuppose a product first classifies a message, then drafts a reply using verified booking details. The two steps may have different quality, context, and latency requirements.\n\nThe team evaluates each route with representative messages, languages, and failure cases. If the drafting route fails, the product may offer a manual workflow or another evaluated route.\n\nA fallback must preserve authorization and relevant context. Retrying after an uncertain action result also needs protection against duplicating the action.\n\n## What matters to the user experience?\n\nKeep the product's promises consistent across supported routes. Check differences in response format, source handling, refusal behavior, speed, and available tools.\n\nModel names are useful only when they help the user make a meaningful choice or understand a limitation. A simple task interface may not need a model selector.\n\nMeasure cost per successful task alongside quality and latency. A cheaper request can produce a more expensive workflow if it causes more retries, corrections, or support.\n\nReevaluate routing when models or task distributions change. Results from a benchmark do not automatically describe the product's actual users and requests.\n\n## Related terms\n\n- [AI Unit Economics](/glossary/ai-unit-economics.html)\n- [Evaluation Harness](/glossary/evaluation-harness-ai-evals.html)\n- [Multi-Agent Systems](/glossary/multi-agent-systems-mas.html)\n- [Agent Harness](/glossary/agent-harness.html)\n\n## Sources\n\n- [Understanding intelligent prompt routing, Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html)\n- [Context windows, Anthropic](https://platform.claude.com/docs/en/build-with-claude/context-windows)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-model-routing.html",
+        "name": "AI Model Routing Explained | Product Design Glossary",
+        "description": "Learn how model routing selects a model for a task, how it differs from fallback and multi-agent workflows, and which tradeoffs affect the user experience.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html",
+          "https://platform.claude.com/docs/en/build-with-claude/context-windows"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#term",
+        "name": "Model Routing",
+        "termCode": "ai-model-routing",
+        "description": "Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.",
+        "url": "https://lexkonovalov.com/glossary/ai-model-routing.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-model-routing.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Model Routing",
+            "item": "https://lexkonovalov.com/glossary/ai-model-routing.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "156",
+    "name": "AI Prototyping",
+    "slug": "ai-prototyping",
+    "category": "AI & Agentic Systems",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.",
+    "purpose": "AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.",
+    "keyConcepts": [
+      "What should an AI prototype help you learn?",
+      "Example: testing a rule editor",
+      "What should go into the brief?",
+      "How do you review the result?"
+    ],
+    "howItWorks": "AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.",
+    "relatedTerms": [
+      "AI-assisted Design",
+      "Content Prototyping",
+      "Design Harness",
+      "Product Discovery"
+    ],
+    "seoTitle": "AI Prototyping: From Idea to Test | Product Design Glossary",
+    "seoDescription": "Understand AI prototyping, when it helps test interactions, and how to define realistic behavior, data, and success criteria before evaluating a prototype.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-prototyping.html",
+    "sources": [
+      "AI Prototyping in Real Design Contexts, NN/g (https://www.nngroup.com/articles/ai-prototyping/)",
+      "User Needs and Defining Success, Google PAIR (https://pair.withgoogle.com/chapter/user-needs/)"
+    ],
+    "contentMarkdown": "# AI Prototyping\n\nAI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.\n\n## What should an AI prototype help you learn?\n\nStart with a question, such as whether users can compare options or recover from an invalid entry. Choose the fidelity needed to investigate it.\n\nA visual concept can support discussion about hierarchy. A working filter may be needed to observe how people narrow a large set of records. Neither establishes production readiness.\n\nNN/g's evaluation of AI prototyping tools found that contextual guidance and specific prompts mattered in its tested design scenarios. Treat that as evidence about the evaluated tools and tasks, not a permanent ranking of every product.\n\n## Example: testing a rule editor\n\nSuppose administrators need to define which expenses require approval. A static screen cannot reveal whether they understand how several rules combine.\n\nA designer specifies the rule model, realistic expense examples, validation, and the expected result of conflicting rules. An agent implements a local prototype with editable conditions and a preview of affected expenses.\n\nParticipants then try concrete tasks. The team observes whether they can predict the effect of a rule and correct an error. Attractive generated screens are secondary to whether the interaction answers the research question.\n\n## What should go into the brief?\n\n- The user task and the uncertainty being investigated.\n- The relevant objects, states, rules, and sample content.\n- Existing components and interaction constraints.\n- Loading, empty, error, and recovery behavior relevant to the test.\n- What is simulated and what is connected to real systems.\n\nUse representative test data and make simulated outcomes clear to the team. Avoid letting a prototype make consequential changes while it is being explored.\n\n## How do you review the result?\n\nTry the intended task yourself before involving participants. Check that the prototype implements the idea, rather than a plausible substitute. Inspect edge cases that could change the conclusion.\n\nRecord limitations alongside findings. A study using simulated latency cannot establish satisfaction with actual production performance. A prototype without screen reader support cannot answer questions about that experience.\n\nIf the concept works, decide what to reuse and what to rebuild. Review architecture, security, accessibility, and integration before treating prototype code as a production implementation.\n\n## Related terms\n\n- [AI-assisted Design](/glossary/ai-assisted-design.html)\n- [Content Prototyping](/glossary/content-prototyping.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Product Discovery](/glossary/product-discovery.html)\n\n## Sources\n\n- [AI Prototyping in Real Design Contexts, NN/g](https://www.nngroup.com/articles/ai-prototyping/)\n- [User Needs and Defining Success, Google PAIR](https://pair.withgoogle.com/chapter/user-needs/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-prototyping.html",
+        "name": "AI Prototyping: From Idea to Test | Product Design Glossary",
+        "description": "Understand AI prototyping, when it helps test interactions, and how to define realistic behavior, data, and success criteria before evaluating a prototype.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/ai-prototyping/",
+          "https://pair.withgoogle.com/chapter/user-needs/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#term",
+        "name": "AI Prototyping",
+        "termCode": "ai-prototyping",
+        "description": "AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.",
+        "url": "https://lexkonovalov.com/glossary/ai-prototyping.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-prototyping.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Prototyping",
+            "item": "https://lexkonovalov.com/glossary/ai-prototyping.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "name": "AI Transparency",
+    "slug": "ai-transparency",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.",
+    "purpose": "AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.",
+    "keyConcepts": [
+      "What should an AI interface make clear?",
+      "Example: drafting a support reply",
+      "Transparency vs. explainability",
+      "How do you test transparency?"
+    ],
+    "howItWorks": "AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.",
+    "relatedTerms": [
+      "Explainable AI",
+      "Trust Calibration in AI",
+      "Agentic UX",
+      "AI Grounding"
+    ],
+    "seoTitle": "AI Transparency in Product Design | Product Design Glossary",
+    "seoDescription": "Learn what users need to know about an AI feature: its role, sources, limitations, actions, and controls, with an example of an assisted support workflow.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-transparency.html",
+    "sources": [
+      "Mental Models, Google PAIR (https://pair.withgoogle.com/chapter/mental-models/)",
+      "Guidelines for Human-AI Interaction, Microsoft HAX (https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)"
+    ],
+    "contentMarkdown": "# AI Transparency\n\nAI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.\n\n## What should an AI interface make clear?\n\nDisclose information where it helps a person understand or influence the task.\n\n| User question | Useful information |\n|---|---|\n| What is happening? | Whether AI is drafting, recommending, or taking action |\n| What is this based on? | Relevant records, documents, or other inputs |\n| What might be wrong? | Task-specific limitations and missing information |\n| Can I change it? | Editing, correction, cancellation, and review options |\n| What has happened already? | Completed actions, failures, and uncertain outcomes |\n\nAn “AI-powered” badge identifies a technology. It does not answer these questions by itself.\n\n## Example: drafting a support reply\n\nSuppose an assistant drafts a reply using a customer message and a booking record. The interface identifies it as a draft, shows the relevant source details, and makes clear that it has not been sent.\n\nThe reviewer can edit the text and check the conditions behind any proposed statement. If the assistant cannot retrieve the booking, the interface exposes that gap instead of presenting a complete-looking answer based on assumed details.\n\nAfter sending, the product reports the actual result. A draft and a successfully delivered message are different states.\n\n## Transparency vs. explainability\n\nTransparency covers the system's role, inputs, boundaries, and operation. [Explainable AI](/glossary/explainable-ai.html) focuses on making behavior or results understandable.\n\nA product may clearly disclose that a model generated an answer without being able to explain the result faithfully. It should represent both facts accurately.\n\nTransparency also does not require showing every technical detail. Select information for the audience and decision, with access to further detail when useful.\n\n## How do you test transparency?\n\nAsk people to explain what the system has done, what it can do next, and which parts they can control. Test these questions during real tasks, including missing information and failures.\n\nWatch for misleading labels and default states. A prominent “Verified” label needs a defined verification process and scope. Clearer wording is preferable to a reassuring claim the product cannot substantiate.\n\n## Related terms\n\n- [Explainable AI](/glossary/explainable-ai.html)\n- [Trust Calibration in AI](/glossary/trust-calibration-ai.html)\n- [Agentic UX](/glossary/agentic-ux.html)\n- [AI Grounding](/glossary/ai-grounding.html)\n\n## Sources\n\n- [Mental Models, Google PAIR](https://pair.withgoogle.com/chapter/mental-models/)\n- [Guidelines for Human-AI Interaction, Microsoft HAX](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-transparency.html",
+        "name": "AI Transparency in Product Design | Product Design Glossary",
+        "description": "Learn what users need to know about an AI feature: its role, sources, limitations, actions, and controls, with an example of an assisted support workflow.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#breadcrumbs"
+        },
+        "citation": [
+          "https://pair.withgoogle.com/chapter/mental-models/",
+          "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#term",
+        "name": "AI Transparency",
+        "termCode": "ai-transparency",
+        "description": "AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.",
+        "url": "https://lexkonovalov.com/glossary/ai-transparency.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-transparency.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Transparency",
+            "item": "https://lexkonovalov.com/glossary/ai-transparency.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "name": "AI in UX Research",
+    "slug": "ai-ux-research",
+    "category": "AI & Agentic Systems",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.",
+    "purpose": "AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.",
+    "keyConcepts": [
+      "Where can AI support UX research?",
+      "Example: checking a proposed research theme",
+      "How do you preserve traceability?",
+      "What about participant data?"
+    ],
+    "howItWorks": "AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.",
+    "relatedTerms": [
+      "Synthetic User Testing",
+      "ResearchOps",
+      "AI-assisted Design",
+      "Product Discovery"
+    ],
+    "seoTitle": "AI in UX Research: Uses and Limits | Product Design Glossary",
+    "seoDescription": "Learn how AI can support UX research preparation and analysis while preserving participant evidence, traceability, privacy, and human interpretation.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-ux-research.html",
+    "sources": [
+      "Analyse a research session, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/analyse-a-research-session)",
+      "Getting users' consent for research, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)"
+    ],
+    "contentMarkdown": "# AI in UX Research\n\nAI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.\n\n## Where can AI support UX research?\n\nA tool can propose interview questions, organize supplied notes, suggest candidate themes, or help locate relevant passages. Each use still needs a clear research question and a way to check the result.\n\n| Activity | Useful support | Required check |\n|---|---|---|\n| Preparation | Draft questions or task wording | Remove leading assumptions |\n| Transcription | Produce a searchable draft | Verify important words and speaker attribution |\n| Analysis | Suggest clusters or exceptions | Compare with the original observations |\n| Reporting | Draft a concise account | Trace claims and quotes to evidence |\n\nAn AI-generated persona or hypothetical answer is an assumption to investigate. It does not establish what a real participant thinks or does.\n\n## Example: checking a proposed research theme\n\nSuppose a researcher supplies approved, de-identified notes about a quote-request form. A tool proposes a theme: “People avoid sharing a phone number.”\n\nThe researcher checks the underlying sessions. Some participants may object to calls; others may not understand why the field is required. Combining these into one explanation could lead to the wrong design response.\n\nKeep the observations, interpretation, and proposed action separate. Preserve contradictory evidence and the boundaries of the study.\n\n## How do you preserve traceability?\n\nGive observations stable references to sessions, passages, or timestamps. Ask for those references in generated summaries, then verify that they exist and support the claim.\n\nDo not turn a paraphrase into a quotation. Check any quote against the original recording or transcript. Report sample counts only when the underlying records and counting rule support them.\n\nGOV.UK's analysis guidance distinguishes observed evidence from its interpretation and resulting actions. AI support should preserve that distinction.\n\n## What about participant data?\n\nUse an approved workflow for the actual data involved. Check consent, access, retention, and the tool's handling of uploaded material before submitting recordings or notes.\n\nRemoving a name does not necessarily remove identifying details from a story. Supply only what the task needs, and keep human review of consequential interpretations.\n\nEvaluate the workflow by the quality and usefulness of the findings, including checking effort. A faster summary that loses important exceptions can make the research less useful.\n\n## Related terms\n\n- [Synthetic User Testing](/glossary/synthetic-user-testing.html)\n- [ResearchOps](/glossary/researchops.html)\n- [AI-assisted Design](/glossary/ai-assisted-design.html)\n- [Product Discovery](/glossary/product-discovery.html)\n\n## Sources\n\n- [Analyse a research session, GOV.UK Service Manual](https://www.gov.uk/service-manual/user-research/analyse-a-research-session)\n- [Getting users' consent for research, GOV.UK Service Manual](https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-ux-research.html",
+        "name": "AI in UX Research: Uses and Limits | Product Design Glossary",
+        "description": "Learn how AI can support UX research preparation and analysis while preserving participant evidence, traceability, privacy, and human interpretation.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.gov.uk/service-manual/user-research/analyse-a-research-session",
+          "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#term",
+        "name": "AI in UX Research",
+        "termCode": "ai-ux-research",
+        "description": "AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.",
+        "url": "https://lexkonovalov.com/glossary/ai-ux-research.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-ux-research.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI in UX Research",
+            "item": "https://lexkonovalov.com/glossary/ai-ux-research.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "name": "Context Window",
+    "slug": "context-window",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.",
+    "purpose": "A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.",
+    "keyConcepts": [
+      "What counts toward the context window?",
+      "Context window vs. training vs. memory",
+      "Example: a long policy conversation",
+      "Why doesn't more context guarantee a better answer?"
+    ],
+    "howItWorks": "A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.",
+    "relatedTerms": [
+      "Context Engineering",
+      "Context Drift",
+      "Retrieval-Augmented Generation",
+      "AI Grounding"
+    ],
+    "seoTitle": "Context Window in AI Explained | Product Design Glossary",
+    "seoDescription": "Learn what an AI context window contains, how it differs from memory and training, and why a larger token limit does not guarantee better answers.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/context-window.html",
+    "sources": [
+      "Context windows, Anthropic (https://platform.claude.com/docs/en/build-with-claude/context-windows)",
+      "Effective context engineering for AI agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)"
+    ],
+    "contentMarkdown": "# Context Window\n\nA context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.\n\n## What counts toward the context window?\n\nDepending on the model and API, context can include system instructions, user messages, conversation history, tool definitions, tool results, documents, and generated output. Multimodal inputs also consume capacity under provider-specific rules.\n\nInput, output, and reasoning budgets are not identical across providers. Check the selected model's documentation before planning around a particular limit.\n\nA token is a unit used by the model, not a fixed number of English words. File size and page count are also unreliable substitutes for the actual token budget.\n\n## Context window vs. training vs. memory\n\n| Concept | What it describes |\n|---|---|\n| Training | The process that produces the model's learned parameters |\n| Context window | Information available within the current processing budget |\n| Product memory | Application features that store and later supply selected information |\n\nA saved conversation is not necessarily supplied in full on every request. A memory feature may retrieve a small relevant part of stored information. Neither means the model has unlimited access to every previous interaction.\n\n## Example: a long policy conversation\n\nA support tool starts with a policy document, a customer message, and booking details. Later turns add search results and corrections.\n\nAs the conversation grows, the application may need to retrieve relevant passages, summarize earlier material, or ask for a missing detail. The exact overflow behavior depends on implementation; a request might be rejected, shortened, or processed through a context-management mechanism.\n\nIf summarization drops an important exception, the interface should make the relevant source available again rather than asking the user to trust a compressed account.\n\n## Why doesn't more context guarantee a better answer?\n\nA larger window allows more information to fit. It does not establish that the information is relevant, accurate, or used reliably.\n\n[Context engineering](/glossary/context-engineering.html) concerns selecting and maintaining useful information within that budget. Test long interactions as well as short prompts, especially when earlier decisions or corrections matter.\n\nExpose context limitations when they affect the task. Users need a recovery path when the system no longer has the information required to continue accurately.\n\n## Related terms\n\n- [Context Engineering](/glossary/context-engineering.html)\n- [Context Drift](/glossary/context-drift.html)\n- [Retrieval-Augmented Generation](/glossary/retrieval-augmented-generation-rag.html)\n- [AI Grounding](/glossary/ai-grounding.html)\n\n## Sources\n\n- [Context windows, Anthropic](https://platform.claude.com/docs/en/build-with-claude/context-windows)\n- [Effective context engineering for AI agents, Anthropic](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/context-window.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/context-window.html",
+        "name": "Context Window in AI Explained | Product Design Glossary",
+        "description": "Learn what an AI context window contains, how it differs from memory and training, and why a larger token limit does not guarantee better answers.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/context-window.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/context-window.html#breadcrumbs"
+        },
+        "citation": [
+          "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+          "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/context-window.html#term",
+        "name": "Context Window",
+        "termCode": "context-window",
+        "description": "A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.",
+        "url": "https://lexkonovalov.com/glossary/context-window.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/context-window.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/context-window.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Context Window",
+            "item": "https://lexkonovalov.com/glossary/context-window.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "160",
+    "name": "Explainable AI",
+    "slug": "explainable-ai",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.",
+    "purpose": "Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.",
+    "keyConcepts": [
+      "What makes an explanation useful?",
+      "Example: explaining an expense flag",
+      "Explanation vs. generated rationale",
+      "How should designers choose the level of detail?"
+    ],
+    "howItWorks": "Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.",
+    "relatedTerms": [
+      "AI Transparency",
+      "Trust Calibration in AI",
+      "AI Grounding",
+      "Human-in-the-Loop"
+    ],
+    "seoTitle": "Explainable AI (XAI) for Product Design | Product Design Glossary",
+    "seoDescription": "Learn what explainable AI means, how to choose an explanation for a user",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/explainable-ai.html",
+    "sources": [
+      "Four Principles of Explainable Artificial Intelligence, NIST (https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence)",
+      "Explainability and Trust, Google PAIR (https://pair.withgoogle.com/chapter/explainability-trust/)"
+    ],
+    "contentMarkdown": "# Explainable AI\n\nExplainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.\n\n## What makes an explanation useful?\n\nDifferent people need different explanations. A person reviewing a recommendation may need the relevant evidence and limitations. A developer investigating a failure may need model diagnostics.\n\nNIST describes four principles: provide an explanation, make it meaningful to the intended audience, represent the system's process accurately, and recognize its knowledge limits. These are principles for explanation quality, not a requirement to display every internal detail.\n\n## Example: explaining an expense flag\n\nSuppose an assistant flags an expense for review. The reviewer needs to know which submitted values and policy provisions support that flag, what information is missing, and how to correct or challenge it.\n\n“AI detected a problem” does not support that decision. A concise explanation connecting a particular date or amount to a relevant policy passage may help.\n\nIf the product cannot establish that the cited factor caused the model's result, it should avoid presenting that factor as a verified causal explanation. Showing relevant evidence and explaining the limitation may be more accurate.\n\n## Explanation vs. generated rationale\n\nA language model can produce a convincing account of why an answer seems reasonable. That account is not automatically a faithful record of the computation that produced it.\n\nDistinguish evidence, system rules, model interpretation methods, and generated summaries. Do not imply that a conversational explanation exposes the model's complete reasoning.\n\nLikewise, an explanation does not establish that the outcome is correct or fair. Those questions require their own evaluation.\n\n## How should designers choose the level of detail?\n\nIdentify the decision, audience, and consequences. Present the most useful information at the point where it is needed, with a route to supporting detail.\n\nTest whether people understand the explanation and use it appropriately. More text or a confidence badge may create reassurance without improving judgment.\n\nGive users a next step: inspect a source, edit an input, request review, or decline the recommendation. The explanation is useful when it supports informed action, not merely when it sounds plausible.\n\n## Related terms\n\n- [AI Transparency](/glossary/ai-transparency.html)\n- [Trust Calibration in AI](/glossary/trust-calibration-ai.html)\n- [AI Grounding](/glossary/ai-grounding.html)\n- [Human-in-the-Loop](/glossary/human-in-the-loop-hitl.html)\n\n## Sources\n\n- [Four Principles of Explainable Artificial Intelligence, NIST](https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence)\n- [Explainability and Trust, Google PAIR](https://pair.withgoogle.com/chapter/explainability-trust/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/explainable-ai.html",
+        "name": "Explainable AI (XAI) for Product Design | Product Design Glossary",
+        "description": "Learn what explainable AI means, how to choose an explanation for a user's decision, and why a generated rationale is not proof of how a model worked.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence",
+          "https://pair.withgoogle.com/chapter/explainability-trust/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#term",
+        "name": "Explainable AI",
+        "termCode": "explainable-ai",
+        "description": "Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.",
+        "url": "https://lexkonovalov.com/glossary/explainable-ai.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/explainable-ai.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Explainable AI",
+            "item": "https://lexkonovalov.com/glossary/explainable-ai.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "161",
+    "name": "Prompt Injection",
+    "slug": "prompt-injection",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.",
+    "purpose": "Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.",
+    "keyConcepts": [
+      "Direct vs. indirect prompt injection",
+      "Example: a supplier document in an operations tool",
+      "What belongs in the product design?",
+      "Why are system prompts insufficient?"
+    ],
+    "howItWorks": "Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.",
+    "relatedTerms": [
+      "System Prompts and Guardrails",
+      "Tool Calling",
+      "Agentic UX",
+      "Human-in-the-Loop"
+    ],
+    "seoTitle": "Prompt Injection and AI Workflows | Product Design Glossary",
+    "seoDescription": "Understand direct and indirect prompt injection, why instructions alone cannot protect an AI workflow, and how permissions and action review reduce impact.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/prompt-injection.html",
+    "sources": [
+      "Prompt Injection, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm01-prompt-injection/)",
+      "Prompt Shields, Microsoft Learn (https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection)"
+    ],
+    "contentMarkdown": "# Prompt Injection\n\nPrompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.\n\n## Direct vs. indirect prompt injection\n\nA direct injection is supplied through an input to the AI system. An indirect injection arrives through material the system reads while performing another task.\n\nFor example, an agent may need to summarize an uploaded document. An instruction embedded in that document can try to make the agent perform an unrelated action. The document is task data; it should not receive the authority of the person who delegated the task.\n\nPrompt injection differs from a hallucination. The central issue is influence over instructions and actions, rather than unsupported generated facts.\n\n## Example: a supplier document in an operations tool\n\nSuppose an assistant reads a supplier's attachment to extract booking details. The attachment also contains instructions to send internal records elsewhere.\n\nA well-designed workflow does not let a document grant new permissions. The application limits which records the assistant can access and which destinations it can use. If a consequential action needs review, the interface shows its actual target, content, and effect.\n\nA confirmation labeled only “Continue?” gives the reviewer little basis for detecting an unintended action.\n\n## What belongs in the product design?\n\nMake permissions and action boundaries understandable. Separate reading a source, preparing a change, and committing that change when their consequences differ.\n\nFor consequential operations, provide a review that lets the person inspect the proposed action. Show what completed, what failed, and whether anything may already have changed. Recovery needs to account for partial execution.\n\nThe appropriate controls depend on the operation. Requiring confirmation for every harmless step can obscure the decisions that actually need attention.\n\n## Why are system prompts insufficient?\n\nInstructions asking a model to ignore malicious content can be one layer, but they are not a complete security boundary. Access checks, authorization, constrained tools, and output handling must be enforced by the application.\n\nOWASP recommends measures including least-privilege access, separation of external content, and human review for high-risk actions. Test the complete workflow against adversarial inputs as well as ordinary tasks.\n\nTreat a strong-looking refusal or successful demonstration as one observation, not evidence that all prompt injection has been prevented.\n\n## Related terms\n\n- [System Prompts and Guardrails](/glossary/system-prompts-guardrails.html)\n- [Tool Calling](/glossary/tool-calling-function-calling.html)\n- [Agentic UX](/glossary/agentic-ux.html)\n- [Human-in-the-Loop](/glossary/human-in-the-loop-hitl.html)\n\n## Sources\n\n- [Prompt Injection, OWASP Gen AI Security Project](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)\n- [Prompt Shields, Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/prompt-injection.html",
+        "name": "Prompt Injection and AI Workflows | Product Design Glossary",
+        "description": "Understand direct and indirect prompt injection, why instructions alone cannot protect an AI workflow, and how permissions and action review reduce impact.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#breadcrumbs"
+        },
+        "citation": [
+          "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+          "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#term",
+        "name": "Prompt Injection",
+        "termCode": "prompt-injection",
+        "description": "Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.",
+        "url": "https://lexkonovalov.com/glossary/prompt-injection.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/prompt-injection.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Prompt Injection",
+            "item": "https://lexkonovalov.com/glossary/prompt-injection.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "162",
+    "name": "Responsible AI Design",
+    "slug": "responsible-ai-design",
+    "category": "AI & Agentic Systems",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.",
+    "purpose": "Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.",
+    "keyConcepts": [
+      "What does responsible AI design involve?",
+      "Example: assisting with customer support",
+      "How does this relate to the NIST AI RMF?",
+      "How do you keep the work practical?"
+    ],
+    "howItWorks": "Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.",
+    "relatedTerms": [
+      "AI Transparency",
+      "Trust Calibration in AI",
+      "Accessibility and WCAG",
+      "Prompt Injection"
+    ],
+    "seoTitle": "Responsible AI Design Explained | Product Design Glossary",
+    "seoDescription": "Learn how responsible AI design connects intended use, user control, accessibility, evidence, and ongoing evaluation throughout a product",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/responsible-ai-design.html",
+    "sources": [
+      "AI Risk Management Framework, NIST (https://www.nist.gov/itl/ai-risk-management-framework)",
+      "AI RMF Core, NIST (https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)"
+    ],
+    "contentMarkdown": "# Responsible AI Design\n\nResponsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.\n\n## What does responsible AI design involve?\n\nStart with the people affected by the feature, the intended use, and the consequences of failure. Include those who may be affected without directly using the interface.\n\n| Area | Practical design question |\n|---|---|\n| Purpose | Is AI appropriate for this task and its consequences? |\n| Information | What inputs are necessary, and who may access them? |\n| Performance | Where does the feature fail, including across relevant groups and contexts? |\n| Control | What can a person inspect, correct, decline, or stop? |\n| Access | Can people with different access needs complete the task? |\n| Accountability | Who investigates and addresses problems after launch? |\n\nThese questions require collaboration with engineering, research, product, and the relevant operational owners. Interface copy cannot compensate for an unsupported capability or missing access control.\n\n## Example: assisting with customer support\n\nSuppose a product drafts replies to customer questions. The team defines which topics it supports, which records it can access, and when a person must review a reply.\n\nEvaluation includes missing records, different language needs, misleading input, and customers whose circumstances do not fit the usual case. The interface makes unsupported requests and unresolved information visible.\n\nAfter launch, the team needs a route for corrections and a way to investigate recurring failures. A launch checklist alone does not maintain the feature.\n\n## How does this relate to the NIST AI RMF?\n\nThe NIST AI Risk Management Framework is a voluntary framework for managing AI risks. Its core functions are Govern, Map, Measure, and Manage.\n\nDesign work can contribute to each function: clarifying responsibility, understanding the use context, evaluating experiences, and improving controls. The framework is not a design-system certification or a promise that a product meets every applicable requirement.\n\n## How do you keep the work practical?\n\nChoose concrete acceptance criteria tied to the intended use. For example, verify that a reviewer can identify the source behind a draft and can reject it without losing the original customer message.\n\nRecord known limitations and who owns them. Reevaluate when models, data, users, or workflows change. Focus on observable behavior and outcomes rather than a broad “responsible AI” label.\n\n## Related terms\n\n- [AI Transparency](/glossary/ai-transparency.html)\n- [Trust Calibration in AI](/glossary/trust-calibration-ai.html)\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Prompt Injection](/glossary/prompt-injection.html)\n\n## Sources\n\n- [AI Risk Management Framework, NIST](https://www.nist.gov/itl/ai-risk-management-framework)\n- [AI RMF Core, NIST](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/responsible-ai-design.html",
+        "name": "Responsible AI Design Explained | Product Design Glossary",
+        "description": "Learn how responsible AI design connects intended use, user control, accessibility, evidence, and ongoing evaluation throughout a product's lifecycle.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nist.gov/itl/ai-risk-management-framework",
+          "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#term",
+        "name": "Responsible AI Design",
+        "termCode": "responsible-ai-design",
+        "description": "Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.",
+        "url": "https://lexkonovalov.com/glossary/responsible-ai-design.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/responsible-ai-design.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Responsible AI Design",
+            "item": "https://lexkonovalov.com/glossary/responsible-ai-design.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "163",
+    "name": "Structured Outputs",
+    "slug": "structured-outputs",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.",
+    "purpose": "Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.",
+    "keyConcepts": [
+      "What does a schema control?",
+      "Structured outputs vs. JSON mode vs. tool calling",
+      "Example: turning an email into a review form",
+      "What should designers specify?"
+    ],
+    "howItWorks": "Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.",
+    "relatedTerms": [
+      "Tool Calling",
+      "Generative UI",
+      "AI Grounding",
+      "Evaluation Harness"
+    ],
+    "seoTitle": "Structured Outputs in AI Explained | Product Design Glossary",
+    "seoDescription": "Learn how structured outputs constrain AI response formats, how they differ from JSON mode and tool calling, and why application validation still matters.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/structured-outputs.html",
+    "sources": [
+      "Structured outputs, Google Gemini documentation (https://aistudio.google.com/docs/structured-output)",
+      "Objects, Understanding JSON Schema (https://json-schema.org/understanding-json-schema/reference/object)"
+    ],
+    "contentMarkdown": "# Structured Outputs\n\nStructured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.\n\n## What does a schema control?\n\nA schema can describe properties, required fields, types, and permitted values. The model API determines which schema features it supports and enforces.\n\nFor example, an application might require a string `reservation_id` and a `status` chosen from `confirmed`, `canceled`, or `unknown`. A possible response is:\n\n```json\n{\n  \"reservation_id\": \"R-104\",\n  \"status\": \"unknown\"\n}\n```\n\nThis is illustrative application data, not evidence that reservation R-104 exists. The schema controls the response's structure. The application still needs to verify the record, source, and current status.\n\n## Structured outputs vs. JSON mode vs. tool calling\n\n| Mechanism | Main purpose |\n|---|---|\n| JSON mode | Request syntactically valid JSON, subject to the API's behavior |\n| Structured outputs | Constrain the response using a supported schema |\n| Tool or function calling | Let the model request an application-defined operation |\n\nThese mechanisms can be combined in a workflow. A model-generated tool argument is still an input to validate, not permission to perform the operation.\n\n[Structured Data for LLMs](/glossary/structured-data-for-llms.html) is a different topic: publishing machine-readable information about web content, such as Schema.org JSON-LD.\n\n## Example: turning an email into a review form\n\nAn operations tool extracts a passenger name and requested travel date from an email. The response uses defined fields and represents missing information explicitly.\n\nThe interface shows the original passage beside each extracted value. The operator can correct the form before saving. The server checks formats, record ownership, and any business rules independently.\n\nA date can be a valid string and still be wrong for the reservation. A response that fits the schema can also omit an important qualification from the email.\n\n## What should designers specify?\n\nDesign for missing values, unsupported requests, refusals, incomplete responses, and failed validation. Decide which values can be used directly, which need verification, and what users can inspect or edit.\n\nTest meaning as well as formatting. Include ambiguous source text and contradictory records in the evaluation set. A high schema-pass rate says little about whether users receive the correct information.\n\n## Related terms\n\n- [Tool Calling](/glossary/tool-calling-function-calling.html)\n- [Generative UI](/glossary/generative-ui.html)\n- [AI Grounding](/glossary/ai-grounding.html)\n- [Evaluation Harness](/glossary/evaluation-harness-ai-evals.html)\n\n## Sources\n\n- [Structured outputs, Google Gemini documentation](https://aistudio.google.com/docs/structured-output)\n- [Objects, Understanding JSON Schema](https://json-schema.org/understanding-json-schema/reference/object)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/structured-outputs.html",
+        "name": "Structured Outputs in AI Explained | Product Design Glossary",
+        "description": "Learn how structured outputs constrain AI response formats, how they differ from JSON mode and tool calling, and why application validation still matters.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#breadcrumbs"
+        },
+        "citation": [
+          "https://aistudio.google.com/docs/structured-output",
+          "https://json-schema.org/understanding-json-schema/reference/object"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#term",
+        "name": "Structured Outputs",
+        "termCode": "structured-outputs",
+        "description": "Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.",
+        "url": "https://lexkonovalov.com/glossary/structured-outputs.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/structured-outputs.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Structured Outputs",
+            "item": "https://lexkonovalov.com/glossary/structured-outputs.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "164",
+    "name": "Trust Calibration in AI",
+    "slug": "trust-calibration-ai",
+    "category": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.",
+    "purpose": "Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.",
+    "keyConcepts": [
+      "Why is more trust not always better?",
+      "Example: reviewing a policy summary",
+      "Should an interface show a confidence score?",
+      "How do you evaluate appropriate reliance?"
+    ],
+    "howItWorks": "Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.",
+    "relatedTerms": [
+      "Explainable AI",
+      "AI Transparency",
+      "AI Hallucination",
+      "Human-in-the-Loop"
+    ],
+    "seoTitle": "Trust Calibration in AI Explained | Product Design Glossary",
+    "seoDescription": "Understand trust calibration and appropriate reliance on AI. Learn how evidence, uncertainty, and verification can help users judge when to accept an answer.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/trust-calibration-ai.html",
+    "sources": [
+      "Fostering appropriate reliance on GenAI, Microsoft Research (https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf)",
+      "Explainability and Trust, Google PAIR (https://pair.withgoogle.com/chapter/explainability-trust/)"
+    ],
+    "contentMarkdown": "# Trust Calibration in AI\n\nTrust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.\n\n## Why is more trust not always better?\n\nA person can over-rely on an incorrect answer or reject a useful one. Both can prevent successful task completion.\n\nThe amount of trust reported in a survey is not the same as how someone behaves. A user may say they are skeptical and still accept an unsupported recommendation when verification is difficult.\n\nMicrosoft's research on appropriate reliance identifies useful mental models, signals to verify, and lower verification effort as important UX goals. These are directions to test in context, not guarantees that a particular interface treatment will work.\n\n## Example: reviewing a policy summary\n\nAn assistant summarizes an expense policy for a submitted claim. The interface provides the relevant passage and highlights a missing date that may affect the conclusion.\n\nThe reviewer can inspect the evidence and correct the missing detail. If the source does not support the summary, the reviewer can reject it and continue with the underlying policy.\n\nA generic “AI can make mistakes” message would not identify which part needs attention or make that check easier.\n\n## Should an interface show a confidence score?\n\nOnly show a score when its meaning and limitations are understood and validated for the task.\n\nA model-generated statement such as “95% confident” is not automatically a calibrated probability of correctness. A score measured for one dataset may not describe performance for a different user group or task.\n\nSometimes a concrete signal is more useful: which record was retrieved, which information is missing, or whether a deterministic check passed. Explain exactly what that check establishes.\n\n## How do you evaluate appropriate reliance?\n\nUse tasks with independently assessable outcomes. Observe acceptance of correct and incorrect outputs, rejection of useful outputs, verification behavior, and the final task result.\n\nInclude realistic verification effort. A design that requires opening several disconnected documents may look transparent while making careful review impractical.\n\nEvaluate confidence and behavior separately. Improving perceived trust without improving decisions is not sufficient evidence that the experience works better.\n\n## Related terms\n\n- [Explainable AI](/glossary/explainable-ai.html)\n- [AI Transparency](/glossary/ai-transparency.html)\n- [AI Hallucination](/glossary/ai-hallucination.html)\n- [Human-in-the-Loop](/glossary/human-in-the-loop-hitl.html)\n\n## Sources\n\n- [Fostering appropriate reliance on GenAI, Microsoft Research](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf)\n- [Explainability and Trust, Google PAIR](https://pair.withgoogle.com/chapter/explainability-trust/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/trust-calibration-ai.html",
+        "name": "Trust Calibration in AI Explained | Product Design Glossary",
+        "description": "Understand trust calibration and appropriate reliance on AI. Learn how evidence, uncertainty, and verification can help users judge when to accept an answer.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf",
+          "https://pair.withgoogle.com/chapter/explainability-trust/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#term",
+        "name": "Trust Calibration in AI",
+        "termCode": "trust-calibration-ai",
+        "description": "Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.",
+        "url": "https://lexkonovalov.com/glossary/trust-calibration-ai.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/trust-calibration-ai.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Trust Calibration in AI",
+            "item": "https://lexkonovalov.com/glossary/trust-calibration-ai.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "165",
+    "name": "AI Unit Economics",
+    "slug": "ai-unit-economics",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.",
+    "purpose": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.",
+    "keyConcepts": [
+      "What is the unit in an AI product?",
+      "How do you calculate cost per successful task?",
+      "An AI unit economics example",
+      "Why is token price insufficient?",
+      "What should product designers influence?"
+    ],
+    "howItWorks": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.",
+    "relatedTerms": [
+      "Unit Economics",
+      "Cost to Serve",
+      "Gross Margin",
+      "Outcome-Based Pricing",
+      "Human-in-the-Loop (HITL)",
+      "Model Routing",
+      "Responsible AI Design"
+    ],
+    "seoTitle": "AI Unit Economics: Cost per Successful Task and Margin",
+    "seoDescription": "Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-unit-economics.html",
+    "sources": [
+      "AWS: Optimizing cost per task and proving agent ROI (https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/)",
+      "Anthropic: API pricing and tool-use charges (https://platform.claude.com/docs/en/about-claude/pricing)",
+      "AWS Well-Architected SaaS Lens: Expenditure awareness (https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html)"
+    ],
+    "contentMarkdown": "# AI Unit Economics\n\nAI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.\n\n## What is the unit in an AI product?\n\nChoose an account, workflow, or task that matches the decision. A model call is not necessarily a completed task: extracting one correct invoice record may require several calls and a human check.\n\nDefine success before calculating cost. For invoice extraction, acceptance might require the right supplier, date, currency, and total, checked against the source document. Producing valid JSON alone does not establish correctness.\n\n## How do you calculate cost per successful task?\n\nFor a defined group of tasks with a complete observation window:\n\n**Cost per successful task = total stated workflow costs ÷ tasks meeting the success criteria.**\n\nInclude costs from failed, abandoned, and retried tasks in the numerator. Count each accepted task once. State whether a task completed by a human counts as a success, and include that human work when it does.\n\nThis is an operational measure with a declared cost boundary, not a universally standardized accounting ratio. If no tasks succeed, the average cost per success is undefined.\n\n## An AI unit economics example\n\nConsider an illustrative invoice workflow with 1,000 submitted tasks. After retries and review, 800 produce accepted records within the observation window.\n\n| Cost pool for all 1,000 tasks | Amount |\n|---|---:|\n| Model inference across all attempts | $120 |\n| Retrieval, tools, and allocated infrastructure | $30 |\n| Human checking and correction | $50 |\n| Total stated workflow cost | $200 |\n\n- Cost per submitted task = $200 ÷ 1,000 = **$0.20**.\n- Cost per successful task = $200 ÷ 800 = **$0.25**.\n\nIf those 800 accepted tasks generate $400 in attributable revenue, $200 remains after this cost pool. That subtotal still excludes acquisition, product development, and any other unmodeled expenses; it is not automatically company net profit.\n\nA variant that costs $150 but produces only 500 accepted tasks costs $0.30 per success. Compare variants on the same workload and acceptance rules.\n\n## Why is token price insufficient?\n\nProvider bills can distinguish input and output tokens, cache writes and reads, and paid tools. Additional attempts and growing context can change the number of billable units.\n\nUse actual workflow measurements, including human effort, and reconcile estimates with billing data. A lower token rate does not establish a lower cost per accepted result.\n\nWhen tasks span reporting periods, use a consistent task cohort or account for work still in progress. Dividing this month's costs by this month's completions can misalign work and outcomes.\n\n## What should product designers influence?\n\nInvestigate the behavior behind costly runs:\n\n- Help users supply the required source information.\n- Let users revise the affected part rather than repeat the entire workflow.\n- Explain an estimate and obtain confirmation before expensive work where appropriate.\n- Provide a usable recovery or human handoff when automation fails.\n\nMeasure acceptance, rework, latency, and service effort alongside cost. A design that reduces calls but leaves more work for customers has shifted effort rather than necessarily improved the outcome.\n\nConnect the findings to [pricing](/glossary/pricing-metric.html) and [cost to serve](/glossary/cost-to-serve.html). An internal successful-task definition may differ from an [outcome-based pricing](/glossary/outcome-based-pricing.html) contract's billable event.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [Cost to Serve](/glossary/cost-to-serve.html)\n- [Gross Margin](/glossary/gross-margin.html)\n- [Outcome-Based Pricing](/glossary/outcome-based-pricing.html)\n- [Human-in-the-Loop (HITL)](/glossary/human-in-the-loop-hitl.html)\n\n- [Model Routing](/glossary/ai-model-routing.html)\n\n- [Responsible AI Design](/glossary/responsible-ai-design.html)\n\n## Sources\n\n- [AWS: Optimizing cost per task and proving agent ROI](https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/)\n- [Anthropic: API pricing and tool-use charges](https://platform.claude.com/docs/en/about-claude/pricing)\n- [AWS Well-Architected SaaS Lens: Expenditure awareness](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-unit-economics.html",
+        "name": "AI Unit Economics: Cost per Successful Task and Margin",
+        "description": "Calculate AI cost per successful task with retries, failed runs, and human review included. Connect workflow quality, pricing, and delivery costs.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#breadcrumbs"
+        },
+        "citation": [
+          "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/",
+          "https://platform.claude.com/docs/en/about-claude/pricing",
+          "https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#term",
+        "name": "AI Unit Economics",
+        "termCode": "ai-unit-economics",
+        "description": "AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.",
+        "url": "https://lexkonovalov.com/glossary/ai-unit-economics.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#webpage"
+        },
+        "alternateName": [
+          "AI product unit economics"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-unit-economics.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI Unit Economics",
+            "item": "https://lexkonovalov.com/glossary/ai-unit-economics.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "AI product unit economics"
+    ]
+  },
+  {
+    "id": "166",
+    "name": "CAC Payback Period",
+    "slug": "cac-payback-period",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.",
+    "purpose": "CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.",
+    "keyConcepts": [
+      "What is the CAC payback formula?",
+      "A SaaS payback example",
+      "How do you account for churn and changing usage?",
+      "CAC payback vs. LTV:CAC",
+      "What is a good CAC payback period?"
+    ],
+    "howItWorks": "CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.",
+    "relatedTerms": [
+      "Unit Economics",
+      "Customer Acquisition Cost (CAC)",
+      "Customer Lifetime Value (LTV)",
+      "LTV to CAC Ratio",
+      "Time-to-Value (TTV)"
+    ],
+    "seoTitle": "CAC Payback Period: Formula and SaaS Example",
+    "seoDescription": "Calculate CAC payback using gross profit, compare it with LTV:CAC, and see how churn, usage changes, and annual billing affect the interpretation.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/cac-payback-period.html",
+    "sources": [
+      "Stripe: What is the CAC payback period? (https://stripe.com/resources/more/what-is-the-cac-payback-period)",
+      "ChartMogul: Usage-based billing cheat sheet (https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/)",
+      "David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)"
+    ],
+    "contentMarkdown": "# CAC Payback Period\n\nCAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.\n\n## What is the CAC payback formula?\n\nFor a simplified subscription model:\n\n**CAC payback in months = CAC ÷ (average monthly revenue per account × gross margin percentage).**\n\nThe denominator is monthly gross profit per account. Use the same customer definition and cost boundary as your [CAC](/glossary/customer-acquisition-cost-cac.html) and [LTV](/glossary/customer-lifetime-value-ltv.html) calculations.\n\nThis shortcut assumes the account continues paying and produces stable monthly gross profit. It does not model cancellations, a gradual increase in usage, or changes in delivery costs.\n\nIf monthly gross profit is zero or negative, there is no finite payback under the unchanged assumptions. A negative arithmetic result is not a negative recovery time.\n\n## A SaaS payback example\n\nAn illustrative business spends $100,000 to acquire 100 paying accounts. Each account generates $100 in monthly revenue with $20 in cost of revenue.\n\n| Calculation | Result |\n|---|---:|\n| CAC: $100,000 ÷ 100 | $1,000 |\n| Monthly gross profit per account: $100 − $20 | $80 |\n| Gross margin: $80 ÷ $100 | 80% |\n| Simplified payback: $1,000 ÷ $80 | 12.5 months |\n\nWith monthly contributions posted at month-end, the account crosses the $1,000 threshold in month 13 if it remains a customer.\n\nDividing $1,000 by $100 gives 10 months, but that revenue-only calculation leaves out delivery costs. Label the basis whenever comparing payback figures.\n\n## How do you account for churn and changing usage?\n\nTrack the acquired cohort as a group. For each month after acquisition, subtract that cohort's cost of revenue from its revenue. Add the monthly gross profit until the cumulative total reaches the cohort's original acquisition spending.\n\nKeep accounts that cancel in the original cohort; their later contribution is zero. Averaging only surviving customers makes recovery appear faster.\n\nIn the example, 2% monthly customer churn means the cohort will not keep generating its initial $8,000 of gross profit each month. A model that includes those departures therefore gives a longer payback than the 12.5-month shortcut, assuming the other inputs stay unchanged.\n\nFor usage-based products, track changing consumption and costs directly. If AI usage increases revenue while also increasing delivery costs, additional revenue alone does not establish faster payback.\n\n## CAC payback vs. LTV:CAC\n\n[LTV:CAC](/glossary/ltv-to-cac-ratio.html) compares estimated lifetime value with acquisition cost. Payback measures how quickly acquisition cost is recovered.\n\nTwo products can have the same lifetime ratio and different payback periods. If each has $1,000 CAC and $4,000 estimated gross-profit LTV, one might generate $80 monthly gross profit while another generates $40 over a longer customer relationship.\n\nA favorable lifetime ratio can still leave a long period before acquisition spending is recovered.\n\n## What is a good CAC payback period?\n\nThere is no universal target. Customer segment, retention, margin, sales cycle, and available cash all affect interpretation.\n\nCompare the same calculation across comparable cohorts. Check whether customers tend to leave before acquisition spending is recovered, and whether the business can fund the intervening costs.\n\nAnnual upfront billing changes cash collection timing. It does not make a year of gross profit earned immediately; distinguish cash recovery from the gross-profit payback measure used here.\n\n## How can product designers use payback?\n\nInvestigate delays between acquisition and paid value: incomplete setup, failed first tasks, or confusing upgrades. Measure whether a change helps appropriate accounts reach sustained paid use, with support costs and cancellations included.\n\nAn interface that pushes an unsuitable annual commitment might improve cash collection while increasing refunds or distrust. Assess the whole customer outcome before interpreting a shorter cash-recovery period as a product improvement.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [Customer Acquisition Cost (CAC)](/glossary/customer-acquisition-cost-cac.html)\n- [Customer Lifetime Value (LTV)](/glossary/customer-lifetime-value-ltv.html)\n- [LTV to CAC Ratio](/glossary/ltv-to-cac-ratio.html)\n- [Time-to-Value (TTV)](/glossary/time-to-value-ttv.html)\n\n## Sources\n\n- [Stripe: What is the CAC payback period?](https://stripe.com/resources/more/what-is-the-cac-payback-period)\n- [ChartMogul: Usage-based billing cheat sheet](https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/)\n- [David Skok: SaaS Metrics 2.0 — Detailed Definitions](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/cac-payback-period.html",
+        "name": "CAC Payback Period: Formula and SaaS Example",
+        "description": "Calculate CAC payback using gross profit, compare it with LTV:CAC, and see how churn, usage changes, and annual billing affect the interpretation.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#breadcrumbs"
+        },
+        "citation": [
+          "https://stripe.com/resources/more/what-is-the-cac-payback-period",
+          "https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/",
+          "https://www.forentrepreneurs.com/saas-metrics-2-definitions/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#term",
+        "name": "CAC Payback Period",
+        "termCode": "cac-payback-period",
+        "description": "CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.",
+        "url": "https://lexkonovalov.com/glossary/cac-payback-period.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#webpage"
+        },
+        "alternateName": [
+          "Customer acquisition cost payback period",
+          "Months to recover CAC"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/cac-payback-period.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CAC Payback Period",
+            "item": "https://lexkonovalov.com/glossary/cac-payback-period.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Customer acquisition cost payback period",
+      "Months to recover CAC"
+    ]
+  },
+  {
+    "id": "167",
+    "name": "Contribution Margin",
+    "slug": "contribution-margin",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.",
+    "purpose": "Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.",
+    "keyConcepts": [
+      "What are the contribution margin formulas?",
+      "A SaaS contribution margin example",
+      "Why can contribution margin differ from gross margin?",
+      "How does contribution margin inform product decisions?",
+      "What should designers avoid?"
+    ],
+    "howItWorks": "Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.",
+    "relatedTerms": [
+      "Gross Margin",
+      "Unit Economics",
+      "Cost to Serve",
+      "Customer Acquisition Cost (CAC)"
+    ],
+    "seoTitle": "Contribution Margin: Formula, Example, and Gross Margin",
+    "seoDescription": "Learn how to calculate contribution margin, distinguish variable from fixed costs, and use the result to evaluate product and pricing decisions.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/contribution-margin.html",
+    "sources": [
+      "OpenStax: Contribution margin per unit, ratio, and total (https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin)",
+      "Stripe: Variable costs and ecommerce profitability (https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability)",
+      "SEC: Beginners' Guide to Financial Statements (https://www.sec.gov/investor/pubs/begfinstmtguide.htm)"
+    ],
+    "contentMarkdown": "# Contribution Margin\n\nContribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.\n\n## What are the contribution margin formulas?\n\n- **Total contribution margin = total revenue − total variable costs.**\n- **Contribution per unit = revenue per unit − variable cost per unit.**\n- **Contribution margin ratio = contribution margin ÷ revenue × 100.**\n\nState the unit and time period. One order, one active account-month, and one completed task are different units.\n\nVariable costs change with the relevant activity. Fixed costs remain unchanged within a stated activity range and period. A salaried support team, for example, does not necessarily cost less immediately because a workflow generates fewer tickets.\n\n## A SaaS contribution margin example\n\nConsider one illustrative active account-month, with these documented cost classifications:\n\n| Item | Amount | Treatment in this example |\n|---|---:|---|\n| Revenue | $100 | Revenue for the month. |\n| Variable delivery costs | $12 | Included in cost of revenue. |\n| Allocated fixed delivery costs | $8 | Included in cost of revenue, excluded from variable costs. |\n| Recurring partner commission | $5 | Variable selling expense outside cost of revenue. |\n\n**Contribution per account-month = $100 − $12 − $5 = $83.**\n\n**Contribution margin ratio = $83 ÷ $100 × 100 = 83%.**\n\nAt 100 equivalent account-months, total contribution is $8,300 before fixed costs. This is not $8,300 of net profit.\n\nThe $5 commission is an ongoing monthly expense in this example. If acquisition spending is evaluated elsewhere in the model, reconcile the cost pools to avoid subtracting the same commission twice.\n\n## Why can contribution margin differ from gross margin?\n\nUsing the same example, cost of revenue is $12 + $8 = $20. [Gross profit](/glossary/gross-margin.html) is therefore $80 and gross margin is 80%.\n\nContribution is $83 because it excludes the $8 fixed allocation but includes the $5 variable commission. The higher percentage does not mean the business earned extra money. It means the two measures subtract different cost categories.\n\nFor internal decisions, list every included cost rather than relying on a label such as “margin after costs.” If you remove only selected variable costs, name that narrower subtotal clearly.\n\n## How does contribution margin inform product decisions?\n\nSuppose a workflow consumes a paid third-party check on every submission. A clearer preview might help users correct mistakes before submitting, reducing unnecessary checks.\n\nMeasure successful submissions, repeated checks, and the variable cost per completed task. Include the implementation effort and any new fixed expenses in the broader decision.\n\nWith positive contribution, additional volume helps cover fixed costs under unchanged assumptions. With negative contribution, each additional unit increases the shortfall. That conclusion depends on prices, costs, and capacity remaining as modeled; growth may require new capacity.\n\n## What should designers avoid?\n\nDo not treat every allocated cost as an immediate saving. Reducing support work can free capacity while payroll remains unchanged. Report the capacity benefit separately from cash savings.\n\nAlso check customer outcomes. Blocking legitimate retries or making support harder to reach can reduce a visible cost while leaving users unable to complete their work.\n\n## Related terms\n\n- [Gross Margin](/glossary/gross-margin.html)\n- [Unit Economics](/glossary/unit-economics.html)\n- [Cost to Serve](/glossary/cost-to-serve.html)\n- [Customer Acquisition Cost (CAC)](/glossary/customer-acquisition-cost-cac.html)\n\n## Sources\n\n- [OpenStax: Contribution margin per unit, ratio, and total](https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin)\n- [Stripe: Variable costs and ecommerce profitability](https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability)\n- [SEC: Beginners' Guide to Financial Statements](https://www.sec.gov/investor/pubs/begfinstmtguide.htm)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/contribution-margin.html",
+        "name": "Contribution Margin: Formula, Example, and Gross Margin",
+        "description": "Learn how to calculate contribution margin, distinguish variable from fixed costs, and use the result to evaluate product and pricing decisions.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#breadcrumbs"
+        },
+        "citation": [
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+          "https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability",
+          "https://www.sec.gov/investor/pubs/begfinstmtguide.htm"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#term",
+        "name": "Contribution Margin",
+        "termCode": "contribution-margin",
+        "description": "Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.",
+        "url": "https://lexkonovalov.com/glossary/contribution-margin.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#webpage"
+        },
+        "alternateName": [
+          "Unit contribution margin",
+          "Contribution margin ratio"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/contribution-margin.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contribution Margin",
+            "item": "https://lexkonovalov.com/glossary/contribution-margin.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Unit contribution margin",
+      "Contribution margin ratio"
+    ]
+  },
+  {
+    "id": "168",
+    "name": "Cost to Serve",
+    "slug": "cost-to-serve",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.",
+    "purpose": "Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.",
+    "keyConcepts": [
+      "What should you include?",
+      "A cost-to-serve example",
+      "How do you allocate shared costs?",
+      "How can workflow design change cost to serve?",
+      "What can an average hide?"
+    ],
+    "howItWorks": "Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.",
+    "relatedTerms": [
+      "Unit Economics",
+      "Gross Margin",
+      "Contribution Margin",
+      "Operational UX",
+      "Service Blueprinting"
+    ],
+    "seoTitle": "Cost to Serve: Definition, SaaS Example, and UX Decisions",
+    "seoDescription": "Estimate cost to serve using infrastructure, support, and shared costs. See how workflow design affects service effort without overstating savings.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/cost-to-serve.html",
+    "sources": [
+      "AWS Well-Architected SaaS Lens: Expenditure awareness (https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html)",
+      "OpenStax: Calculate activity-based product costs (https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs)",
+      "AWS: Tenant-aware cost visibility and SaaS cloud costs (https://aws.amazon.com/isv/resources/cloud-cost-management-strategies-for-saas/)"
+    ],
+    "contentMarkdown": "# Cost to Serve\n\nCost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.\n\n## What should you include?\n\nStart with the decision and choose the cost boundary. For a SaaS account, useful categories may include:\n\n| Cost category | Possible basis |\n|---|---|\n| Production infrastructure and storage | Measured consumption or an appropriate allocation. |\n| AI inference and other paid services | Requests, tokens, or billed operations attributable to the account. |\n| Support and manual operations | Time spent multiplied by a documented labor cost rate. |\n| Shared service resources | A stated allocation based on relevant activity or capacity. |\n\nKeep initial acquisition costs separate unless the analysis explicitly includes them. Distinguish one-time onboarding or migration work from recurring service costs.\n\nReconcile the categories so shared allocations do not include infrastructure or labor already counted elsewhere in the model.\n\nCost to serve is an internal analytical view. Its cost pool is not automatically identical to reported cost of revenue or to all variable costs.\n\n## A cost-to-serve example\n\nFor a separate illustrative account-month, assume these measured or allocated costs:\n\n| Item | Calculation | Monthly cost |\n|---|---|---:|\n| Infrastructure and storage | Assigned consumption | $18 |\n| Paid AI operations | Usage attributable to the account | $6 |\n| Support work | 0.5 hours × $40 per hour | $20 |\n| Other shared service costs | Documented allocation | $4 |\n| Total cost to serve | $18 + $6 + $20 + $4 | $48 |\n\nAt $100 in monthly revenue, $52 remains after this stated service-cost pool. Do not label it gross profit without reconciling the categories with the company's accounting policy. Acquisition, product development, and other excluded expenses still matter.\n\n## How do you allocate shared costs?\n\nTrace costs directly where practical. For shared resources, choose a driver related to consumption: processing work, storage, support time, or another relevant activity.\n\nAn equal split across accounts may be a useful first estimate, but can hide large differences in usage. Conversely, counting API calls alone can mislead when one call is much more expensive than another.\n\nStart with the largest cost drivers. AWS's SaaS Lens explicitly discusses the tradeoff between measurement detail and instrumentation complexity. A lightweight estimate with clear assumptions can be more useful than expensive precision on a minor expense.\n\n## How can workflow design change cost to serve?\n\nSuppose an ambiguous import error causes customers to contact support. A redesign names the affected rows, explains the problem, and allows users to retry only those rows.\n\nCompare completed imports, repeat attempts, and handling time. Check whether users can still reach support when the problem requires help.\n\nIn the example, reducing support effort from 30 to 15 minutes lowers allocated support cost from $20 to $10 and modeled cost to serve from $48 to $38, if the other inputs remain unchanged.\n\nThis may free team capacity without reducing payroll immediately. Separate modeled allocation, released capacity, and cash savings when reporting the outcome.\n\n## What can an average hide?\n\nBreak down service costs by segment, pricing tier, or workflow when the differences affect decisions. A low-price account with frequent manual intervention can have different economics from a similarly priced account that completes tasks independently.\n\nCompare like periods and workloads. One month of intensive onboarding should not automatically become the forecast for every future month.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [Gross Margin](/glossary/gross-margin.html)\n- [Contribution Margin](/glossary/contribution-margin.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Service Blueprinting](/glossary/service-blueprinting.html)\n\n## Sources\n\n- [AWS Well-Architected SaaS Lens: Expenditure awareness](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html)\n- [OpenStax: Calculate activity-based product costs](https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs)\n- [AWS: Tenant-aware cost visibility and SaaS cloud costs](https://aws.amazon.com/isv/resources/cloud-cost-management-strategies-for-saas/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/cost-to-serve.html",
+        "name": "Cost to Serve: Definition, SaaS Example, and UX Decisions",
+        "description": "Estimate cost to serve using infrastructure, support, and shared costs. See how workflow design affects service effort without overstating savings.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html",
+          "https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs",
+          "https://aws.amazon.com/isv/resources/cloud-cost-management-strategies-for-saas/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#term",
+        "name": "Cost to Serve",
+        "termCode": "cost-to-serve",
+        "description": "Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.",
+        "url": "https://lexkonovalov.com/glossary/cost-to-serve.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#webpage"
+        },
+        "alternateName": [
+          "Cost-to-serve",
+          "CTS"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/cost-to-serve.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cost to Serve",
+            "item": "https://lexkonovalov.com/glossary/cost-to-serve.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Cost-to-serve",
+      "CTS"
+    ]
+  },
+  {
+    "id": "169",
+    "name": "Customer Acquisition Cost (CAC)",
+    "slug": "customer-acquisition-cost-cac",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.",
+    "purpose": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.",
+    "keyConcepts": [
+      "How do you calculate CAC?",
+      "A CAC calculation example",
+      "CAC vs. CPA and blended vs. paid CAC",
+      "What makes a CAC estimate misleading?",
+      "How can product designers use CAC?"
+    ],
+    "howItWorks": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.",
+    "relatedTerms": [
+      "Unit Economics",
+      "LTV to CAC Ratio",
+      "CAC Payback Period",
+      "Conversion Rate Optimization (CRO)",
+      "Product-Led Growth (PLG)"
+    ],
+    "seoTitle": "Customer Acquisition Cost (CAC): Formula and Example",
+    "seoDescription": "Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html",
+    "sources": [
+      "Stripe: CAC in SaaS (https://stripe.com/resources/more/cac-in-saas)",
+      "David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)"
+    ],
+    "contentMarkdown": "# Customer Acquisition Cost (CAC)\n\nCustomer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.\n\n## How do you calculate CAC?\n\n**CAC = acquisition-related sales and marketing costs ÷ new paying customers acquired.**\n\nDefine what counts as a customer and align the costs with the acquisition process. In B2B SaaS, count a paying company account once; its invited users are not separate acquired customers.\n\nA practical calculation needs a documented cost boundary:\n\n| Include in acquisition spending | Handle separately |\n|---|---|\n| Advertising, acquisition content, and campaign agencies | Product development and ongoing service delivery. |\n| Acquisition-related sales and marketing salaries, benefits, and commissions | Customer retention and account expansion work. |\n| Acquisition tools and the acquisition share of shared expenses | Free signups and leads, which are not paying customers in this calculation. |\n\nAllocate mixed activities consistently. For example, a team member who handles both new sales and renewals should not have their entire cost automatically assigned to new customer acquisition.\n\nIf no paying customers were acquired, the denominator is zero. Report that CAC is undefined for that calculation and show the spending and customer count separately.\n\n## A CAC calculation example\n\nAn illustrative SaaS business attributes these costs to acquiring 100 new paying accounts:\n\n| Cost | Amount |\n|---|---:|\n| Paid campaigns | $40,000 |\n| Acquisition-related sales and marketing compensation | $45,000 |\n| Acquisition tools, content, and agency work | $15,000 |\n| Total | $100,000 |\n\n**CAC = $100,000 ÷ 100 = $1,000 per new paying account.**\n\nUsing only advertising spend would produce $400 per account. Label that narrower measure as ad spend per acquired account; it excludes $60,000 of acquisition costs.\n\nIf the same campaign also generates 1,000 free signups, dividing the full $100,000 by signups gives $100 per signup. It does not change the paying-customer CAC to $100.\n\n## CAC vs. CPA and blended vs. paid CAC\n\n**Cost per acquisition or action (CPA)** depends on the conversion event being counted. A campaign's event might be a lead, signup, or purchase. CPA matches CAC only when the customer definition and cost scope match.\n\n**Blended CAC** combines acquisition channels. A **paid-channel CAC** calculation focuses on customers attributed to paid channels and the costs assigned to them. State the attribution method, handling of shared costs, and treatment of customers who encounter several channels.\n\nOrganic acquisition can involve content, staff, and tools. A customer arriving without a paid ad does not establish that acquiring them cost nothing.\n\n## What makes a CAC estimate misleading?\n\nTiming matters. Spending in January may acquire accounts in March. For longer sales cycles, use an appropriate lag or cohort model rather than assuming this month's wins came from this month's spending.\n\nAlso check whether the result mixes sales-assisted enterprise accounts with self-serve customers. Report comparable segments before interpreting a change.\n\nThere is no universal good dollar value for CAC. Read it alongside [LTV:CAC](/glossary/ltv-to-cac-ratio.html), [payback period](/glossary/cac-payback-period.html), retention, and delivery costs.\n\n## How can product designers use CAC?\n\nInvestigate where suitable prospects fail to understand the offer, complete a trial task, or become paying accounts. Pricing clarity, accessible forms, and an effective first-use experience give the team specific hypotheses to test.\n\nA higher trial-to-paid conversion rate could lower CAC if acquisition spending and customer quality stay comparable. Check retained paying accounts and refunds as well. Changing the channel mix or admitting poorly matched customers can make a conversion increase misleading.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [LTV to CAC Ratio](/glossary/ltv-to-cac-ratio.html)\n- [CAC Payback Period](/glossary/cac-payback-period.html)\n- [Conversion Rate Optimization (CRO)](/glossary/conversion-rate-optimization-cro.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n\n## Sources\n\n- [Stripe: CAC in SaaS](https://stripe.com/resources/more/cac-in-saas)\n- [David Skok: SaaS Metrics 2.0 — Detailed Definitions](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html",
+        "name": "Customer Acquisition Cost (CAC): Formula and Example",
+        "description": "Calculate customer acquisition cost with a worked SaaS example. Learn which costs to include, how CAC differs from CPA, and what designers can influence.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#breadcrumbs"
+        },
+        "citation": [
+          "https://stripe.com/resources/more/cac-in-saas",
+          "https://www.forentrepreneurs.com/saas-metrics-2-definitions/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#term",
+        "name": "Customer Acquisition Cost (CAC)",
+        "termCode": "customer-acquisition-cost-cac",
+        "description": "Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.",
+        "url": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#webpage"
+        },
+        "alternateName": [
+          "CAC",
+          "Cost to acquire a customer"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Customer Acquisition Cost (CAC)",
+            "item": "https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "CAC",
+      "Cost to acquire a customer"
+    ]
+  },
+  {
+    "id": "170",
+    "name": "Customer Lifetime Value (LTV)",
+    "slug": "customer-lifetime-value-ltv",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.",
+    "purpose": "Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.",
+    "keyConcepts": [
+      "What is the SaaS LTV formula?",
+      "A customer lifetime value example",
+      "Why do LTV definitions differ?",
+      "When is the simple formula unreliable?",
+      "How can product designers use LTV?"
+    ],
+    "howItWorks": "Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.",
+    "relatedTerms": [
+      "Unit Economics",
+      "Customer Acquisition Cost (CAC)",
+      "LTV to CAC Ratio",
+      "User Retention",
+      "CAC Payback Period"
+    ],
+    "seoTitle": "Customer Lifetime Value (LTV): Formula and Example",
+    "seoDescription": "Understand customer lifetime value, calculate a gross-margin-adjusted SaaS example, and learn when churn-based LTV estimates need a cohort model.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html",
+    "sources": [
+      "ChartMogul: Customer Lifetime Value (LTV) (https://chartmogul.com/saas-metrics/ltv/)",
+      "David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)",
+      "Stripe: Calculating subscriber Lifetime Value in Billing (https://support.stripe.com/questions/calculating-subscriber-lifetime-value-in-billing)"
+    ],
+    "contentMarkdown": "# Customer Lifetime Value (LTV)\n\nCustomer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.\n\nLTV, CLV, and CLTV are common abbreviations for customer lifetime value. In subscription software, define whether the customer is a paying account or an individual subscriber before calculating it.\n\n## What is the SaaS LTV formula?\n\nFor a simplified subscription model with stable revenue, margin, and customer churn, and no expansion revenue:\n\n**Estimated LTV = average monthly revenue per account × gross margin percentage ÷ monthly customer churn rate.**\n\n- **Average revenue per account (ARPA):** monthly recurring revenue divided by paying customer accounts under a consistent reporting definition.\n- **Gross margin percentage:** revenue minus cost of revenue, divided by revenue.\n- **Monthly customer churn:** the share of paying accounts present at the start of the month that leave during that month.\n\nUse percentages as decimals and keep periods consistent. Monthly ARPA requires monthly churn. Revenue churn, which measures lost revenue, is a different input and should not replace customer churn in this formula.\n\n## A customer lifetime value example\n\nAssume an illustrative account pays $100 per month, with $20 in monthly cost of revenue and a constant 2% monthly customer churn rate.\n\n| Calculation | Result |\n|---|---:|\n| Monthly gross profit: $100 − $20 | $80 |\n| Gross margin: $80 ÷ $100 | 80% |\n| Estimated gross-profit LTV: $100 × 0.80 ÷ 0.02 | $4,000 |\n| Revenue-only LTV: $100 ÷ 0.02 | $5,000 |\n\nThe $1,000 difference is estimated lifetime cost of revenue under these assumptions. Neither result is company net profit. Acquisition cost and other operating expenses remain outside the gross-profit figure.\n\nAt a [CAC](/glossary/customer-acquisition-cost-cac.html) of $1,000, the gross-profit estimate gives an [LTV:CAC ratio](/glossary/ltv-to-cac-ratio.html) of 4:1. Use the same value basis when comparing periods or products.\n\n## Why do LTV definitions differ?\n\nSome reports use expected revenue; others adjust for gross margin or additional costs. A dashboard's label alone does not identify the calculation. Stripe Billing, for example, documents subscriber LTV as average revenue per subscriber divided by subscriber churn.\n\nRecord the formula, customer definition, included costs, and forecast horizon beside the metric. Do not compare a revenue-only LTV with a gross-profit LTV as if they measured the same thing.\n\n## When is the simple formula unreliable?\n\nThe formula assumes a constant probability of customer churn each period, not a fixed number of departures. It also leaves out expansion, contraction, discounting, and changes in delivery costs.\n\nAt zero churn, dividing by the observed churn rate provides no usable estimate. A short period without cancellations does not establish unlimited customer lifetime. Negative net revenue churn is not a substitute denominator.\n\nFor uneven retention or changing revenue, model cohorts: groups of customers acquired in the same period. Track their retained accounts, revenue, and delivery costs by month. Separate observed results from the forecast and state how far the forecast extends.\n\n## How can product designers use LTV?\n\nConnect the estimate to behavior the team can investigate. An invoicing product might examine whether accounts that successfully send and reconcile their first invoice continue using the product.\n\nTest onboarding changes against task completion and retained paying accounts. Include customer fit, price changes, and service costs when interpreting results. A redesign's financial effect needs evidence beyond a modeled LTV increase.\n\nFor an AI feature, also check whether additional retained usage increases delivery costs. Revenue growth and gross-profit growth can differ.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [Customer Acquisition Cost (CAC)](/glossary/customer-acquisition-cost-cac.html)\n- [LTV to CAC Ratio](/glossary/ltv-to-cac-ratio.html)\n- [User Retention](/glossary/user-retention.html)\n- [CAC Payback Period](/glossary/cac-payback-period.html)\n\n## Sources\n\n- [ChartMogul: Customer Lifetime Value (LTV)](https://chartmogul.com/saas-metrics/ltv/)\n- [David Skok: SaaS Metrics 2.0 — Detailed Definitions](https://www.forentrepreneurs.com/saas-metrics-2-definitions/)\n- [Stripe: Calculating subscriber Lifetime Value in Billing](https://support.stripe.com/questions/calculating-subscriber-lifetime-value-in-billing)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html",
+        "name": "Customer Lifetime Value (LTV): Formula and Example",
+        "description": "Understand customer lifetime value, calculate a gross-margin-adjusted SaaS example, and learn when churn-based LTV estimates need a cohort model.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#breadcrumbs"
+        },
+        "citation": [
+          "https://chartmogul.com/saas-metrics/ltv/",
+          "https://www.forentrepreneurs.com/saas-metrics-2-definitions/",
+          "https://support.stripe.com/questions/calculating-subscriber-lifetime-value-in-billing"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#term",
+        "name": "Customer Lifetime Value (LTV)",
+        "termCode": "customer-lifetime-value-ltv",
+        "description": "Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.",
+        "url": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#webpage"
+        },
+        "alternateName": [
+          "LTV",
+          "CLV",
+          "CLTV",
+          "Customer lifetime value"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Customer Lifetime Value (LTV)",
+            "item": "https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "LTV",
+      "CLV",
+      "CLTV",
+      "Customer lifetime value"
+    ]
+  },
+  {
+    "id": "171",
+    "name": "Gross Margin",
+    "slug": "gross-margin",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.",
+    "purpose": "Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.",
+    "keyConcepts": [
+      "How do you calculate gross margin?",
+      "A SaaS gross margin example",
+      "What belongs in SaaS cost of revenue?",
+      "Gross margin vs. contribution margin",
+      "How can product designers use gross margin?"
+    ],
+    "howItWorks": "Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.",
+    "relatedTerms": [
+      "Unit Economics",
+      "Contribution Margin",
+      "Cost to Serve",
+      "Customer Lifetime Value (LTV)"
+    ],
+    "seoTitle": "Gross Margin: Formula, SaaS Example, and Cost Boundaries",
+    "seoDescription": "Calculate gross profit and gross margin, understand SaaS delivery costs, and compare gross margin with contribution margin and net profit.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/gross-margin.html",
+    "sources": [
+      "SEC: Beginners' Guide to Financial Statements (https://www.sec.gov/investor/pubs/begfinstmtguide.htm)",
+      "Stripe: SaaS gross margin explained (https://stripe.com/resources/more/saas-gross-margin-explained-what-it-is-and-why-it-is-important)",
+      "OpenStax: Contribution margin and cost behavior (https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin)"
+    ],
+    "contentMarkdown": "# Gross Margin\n\nGross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.\n\n## How do you calculate gross margin?\n\n**Gross profit = revenue − cost of revenue.**\n\n**Gross margin = gross profit ÷ revenue × 100.**\n\nUse revenue and costs from the same reporting period. Some reports use “gross margin” for a dollar subtotal; check whether a figure is an amount or a percentage. This article uses the percentage meaning.\n\nIf revenue is zero, the percentage is undefined. A negative gross profit with positive revenue produces a negative gross margin.\n\n## A SaaS gross margin example\n\nAn illustrative subscription account generates $100 in monthly revenue. Its assigned monthly cost of revenue is $20.\n\n| Calculation | Result |\n|---|---:|\n| Revenue | $100 |\n| Cost of revenue | $20 |\n| Gross profit: $100 − $20 | $80 |\n| Gross margin: $80 ÷ $100 × 100 | 80% |\n\nFor 100 identical accounts, revenue is $10,000, cost of revenue is $2,000, and gross profit is $8,000. The gross margin remains 80%.\n\nThe business still needs to cover other expenses, such as sales, marketing, general administration, and product development classified outside cost of revenue. An 80% gross margin is not an 80% net profit margin.\n\n## What belongs in SaaS cost of revenue?\n\nPotential categories include production hosting, third-party services used to deliver the product, and customer support classified as delivery work. AI inference can be a delivery cost when the product relies on paid model calls.\n\nThe exact boundary depends on the company's accounting policies and operations. Ask finance which labor, infrastructure, payment, and software costs are included. Do not assume every engineering expense belongs in cost of revenue.\n\nFor an internal account-level analysis, also document how shared costs were assigned. A company-wide reported margin and a modeled margin for one customer segment may use different levels of allocation.\n\n## Gross margin vs. contribution margin\n\nGross margin follows the cost-of-revenue classification. [Contribution margin](/glossary/contribution-margin.html) subtracts variable costs.\n\nA delivery cost can be fixed within a capacity range, while a sales commission can vary with sales outside cost of revenue. The two calculations can therefore differ even when they use the same revenue.\n\nKeep the cost lists visible. Changing a classification or allocation can change a reported margin without changing the underlying customer experience or spending.\n\n## How can product designers use gross margin?\n\nConsider a proposed AI feature for the $100 subscription. If it adds $15 in monthly delivery costs without additional revenue, gross profit falls from $80 to $65 and margin falls from 80% to 65%.\n\nThat is an illustrative scenario, not a reason to reject the feature automatically. Investigate the value it creates, whether customers will pay for it, and how it affects retention and service effort.\n\nTest input quality, revision controls, and successful task completion alongside cost. Compare [cost to serve](/glossary/cost-to-serve.html) across customer segments before attributing a company-wide margin change to one interface decision.\n\n## Related terms\n\n- [Unit Economics](/glossary/unit-economics.html)\n- [Contribution Margin](/glossary/contribution-margin.html)\n- [Cost to Serve](/glossary/cost-to-serve.html)\n- [Customer Lifetime Value (LTV)](/glossary/customer-lifetime-value-ltv.html)\n\n## Sources\n\n- [SEC: Beginners' Guide to Financial Statements](https://www.sec.gov/investor/pubs/begfinstmtguide.htm)\n- [Stripe: SaaS gross margin explained](https://stripe.com/resources/more/saas-gross-margin-explained-what-it-is-and-why-it-is-important)\n- [OpenStax: Contribution margin and cost behavior](https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/gross-margin.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/gross-margin.html",
+        "name": "Gross Margin: Formula, SaaS Example, and Cost Boundaries",
+        "description": "Calculate gross profit and gross margin, understand SaaS delivery costs, and compare gross margin with contribution margin and net profit.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/gross-margin.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/gross-margin.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.sec.gov/investor/pubs/begfinstmtguide.htm",
+          "https://stripe.com/resources/more/saas-gross-margin-explained-what-it-is-and-why-it-is-important",
+          "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/gross-margin.html#term",
+        "name": "Gross Margin",
+        "termCode": "gross-margin",
+        "description": "Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.",
+        "url": "https://lexkonovalov.com/glossary/gross-margin.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/gross-margin.html#webpage"
+        },
+        "alternateName": [
+          "Gross profit margin",
+          "Gross margin percentage"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/gross-margin.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Gross Margin",
+            "item": "https://lexkonovalov.com/glossary/gross-margin.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Gross profit margin",
+      "Gross margin percentage"
+    ]
+  },
+  {
+    "id": "172",
+    "name": "Net Revenue Retention (NRR)",
+    "slug": "net-revenue-retention-nrr",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.",
+    "purpose": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.",
+    "keyConcepts": [
+      "What is the NRR formula?",
+      "An NRR calculation example",
+      "NRR vs. GRR vs. customer retention",
+      "How should you handle reactivation?",
+      "What can product designers learn from NRR?"
+    ],
+    "howItWorks": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.",
+    "relatedTerms": [
+      "User Retention",
+      "Customer Lifetime Value (LTV)",
+      "Gross Margin",
+      "Product-Led Growth (PLG)"
+    ],
+    "seoTitle": "Net Revenue Retention (NRR): Formula, Example, and GRR",
+    "seoDescription": "Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html",
+    "sources": [
+      "ChartMogul: Net MRR Retention report (https://help.chartmogul.com/article/143-chart-net-mrr-retention)",
+      "ChartMogul: Gross MRR Retention report (https://help.chartmogul.com/article/142-chart-gross-mrr-retention)",
+      "ChartMogul: Cohort Net MRR Retention (https://help.chartmogul.com/article/160-cohort-net-mrr-retention)"
+    ],
+    "contentMarkdown": "# Net Revenue Retention (NRR)\n\nNet revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.\n\n## What is the NRR formula?\n\nFor a fixed group of paying accounts present at the start:\n\n**NRR = ending monthly recurring revenue from that group ÷ its starting monthly recurring revenue × 100.**\n\nMonthly recurring revenue (MRR) is a normalized monthly revenue measure, not cash collected during the period. Use the same revenue definition at both endpoints.\n\nA movement-based version, when there are no reactivations, is:\n\n**NRR = (starting MRR + expansion MRR − contraction MRR − churned MRR) ÷ starting MRR × 100.**\n\nChoose a monthly, quarterly, or annual comparison and state it explicitly. If starting MRR is zero, the ratio is undefined.\n\n## An NRR calculation example\n\nAn illustrative SaaS business starts a quarter with 50 paying accounts and $10,000 MRR. By quarter-end, five of those accounts have canceled, and the others have these revenue changes:\n\n| Movement in the starting group | MRR change |\n|---|---:|\n| Expansion from upgrades | +$2,500 |\n| Contraction from downgrades | −$500 |\n| Churn from five canceled accounts | −$1,000 |\n| Ending MRR from the original group | $11,000 |\n\n**Quarterly NRR = $11,000 ÷ $10,000 × 100 = 110%.**\n\nRevenue from accounts acquired during the quarter is excluded. The result means the original group generates 10% more MRR at the ending snapshot, despite losing five customers. It does not mean every customer expanded.\n\nLabel this as a quarterly comparison; it is not an annual NRR figure.\n\n## NRR vs. GRR vs. customer retention\n\n**Gross revenue retention (GRR)** excludes gains from expansion and reactivation. In this example, with no reactivations:\n\n**GRR = ($10,000 − $500 − $1,000) ÷ $10,000 × 100 = 85%.**\n\n**Customer retention = 45 remaining accounts ÷ 50 starting accounts × 100 = 90%.**\n\n| Metric | What it tracks | Can exceed 100%? |\n|---|---|---|\n| NRR | Recurring revenue, including expansion | Yes. |\n| GRR | Revenue retained after contraction and churn, excluding expansion | No under the standard definition. |\n| Customer retention | The original customer accounts still retained | No. |\n\nRead NRR and GRR together. Expansion in some accounts can offset losses elsewhere; it does not remove the need to investigate those losses.\n\n## How should you handle reactivation?\n\nDeclare the rule. In the fixed-group calculation here, an account that cancels and returns during the window remains part of the original group; its ending MRR is included. An account already inactive at the starting snapshot is outside that group.\n\nSome dashboards include a broader pool of reactivation MRR. ChartMogul's standard report, for example, includes reactivations and offers a setting to exclude them. Check the report definition before comparing it with a fixed-cohort calculation.\n\nDo not add reactivation on top of ending cohort revenue; that would count it twice.\n\n## What can product designers learn from NRR?\n\nInvestigate expansion and contraction separately. A workspace may upgrade because more teams adopt it, while another downgrades because its workflow no longer fits.\n\nTest whether users understand limits, permissions, and what an upgrade adds. Keep legitimate downgrade and cancellation paths usable.\n\nNRR is a revenue measure. Price increases can affect it, and high NRR does not establish high [gross margin](/glossary/gross-margin.html), customer satisfaction, or a causal effect from a redesign. For AI features, review delivery costs alongside retained revenue.\n\n## Related terms\n\n- [User Retention](/glossary/user-retention.html)\n- [Customer Lifetime Value (LTV)](/glossary/customer-lifetime-value-ltv.html)\n- [Gross Margin](/glossary/gross-margin.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n\n## Sources\n\n- [ChartMogul: Net MRR Retention report](https://help.chartmogul.com/article/143-chart-net-mrr-retention)\n- [ChartMogul: Gross MRR Retention report](https://help.chartmogul.com/article/142-chart-gross-mrr-retention)\n- [ChartMogul: Cohort Net MRR Retention](https://help.chartmogul.com/article/160-cohort-net-mrr-retention)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html",
+        "name": "Net Revenue Retention (NRR): Formula, Example, and GRR",
+        "description": "Calculate NRR for an existing customer cohort, compare it with GRR and customer retention, and understand expansion, churn, and reactivation rules.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#breadcrumbs"
+        },
+        "citation": [
+          "https://help.chartmogul.com/article/143-chart-net-mrr-retention",
+          "https://help.chartmogul.com/article/142-chart-gross-mrr-retention",
+          "https://help.chartmogul.com/article/160-cohort-net-mrr-retention"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#term",
+        "name": "Net Revenue Retention (NRR)",
+        "termCode": "net-revenue-retention-nrr",
+        "description": "Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.",
+        "url": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#webpage"
+        },
+        "alternateName": [
+          "NRR",
+          "Net dollar retention",
+          "NDR"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Net Revenue Retention (NRR)",
+            "item": "https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "NRR",
+      "Net dollar retention",
+      "NDR"
+    ]
+  },
+  {
+    "id": "173",
+    "name": "Outcome-Based Pricing",
+    "slug": "outcome-based-pricing",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.",
+    "purpose": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.",
+    "keyConcepts": [
+      "How does outcome-based pricing work?",
+      "A simple outcome-pricing example",
+      "A real AI example: Intercom Fin",
+      "Outcome-based vs. usage-based pricing",
+      "What should product designers make visible?"
+    ],
+    "howItWorks": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.",
+    "relatedTerms": [
+      "Usage-Based Pricing",
+      "Pricing Metric",
+      "AI Unit Economics",
+      "Cost to Serve"
+    ],
+    "seoTitle": "Outcome-Based Pricing: Definition, AI Examples, and UX",
+    "seoDescription": "Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/outcome-based-pricing.html",
+    "sources": [
+      "Intercom: Fin AI Agent outcomes (https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes)",
+      "Intercom: See and manage usage (https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage)",
+      "AWS: Optimizing cost per task and proving agent ROI (https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/)"
+    ],
+    "contentMarkdown": "# Outcome-Based Pricing\n\nOutcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.\n\n## How does outcome-based pricing work?\n\nThe product needs an operational definition of the result and a way to verify it. A support tool might charge per resolved case; a data service might charge per accepted record.\n\nA billable event does not automatically prove the customer's broader business goal. A support case marked resolved can differ from a customer who is satisfied and able to continue their work.\n\nDocument these rules before designing the meter:\n\n| Rule | Question to resolve |\n|---|---|\n| Outcome | What result counts, for which customer or task? |\n| Evidence | Is acceptance confirmed, inferred, or independently checked? |\n| Timing | When is the result final enough to charge? |\n| Reversal | What happens if the case reopens or the result is rejected? |\n| Deduplication | Can repeated actions create more than one charge? |\n| Human work | Do escalation or human-assisted completion count? |\n\n## A simple outcome-pricing example\n\nConsider a fictional support product charging $2 per resolved case. Its policy requires customer confirmation and no reopening during a seven-day verification window.\n\nOf 100 initially confirmed cases, 10 reopen before the window closes. After every case completes that window, 90 qualify:\n\n**Charge = 90 billable outcomes × $2 = $180.**\n\nThis is an illustrative policy, not a universal definition of resolution. The provider also incurs costs for the reopened cases and any work that never qualified for billing.\n\nIf the product shows provisional charges before verification ends, label them as pending and explain when they can change.\n\n## A real AI example: Intercom Fin\n\nIntercom documents both confirmed and assumed resolutions. An assumed resolution can occur when a customer leaves after an answer without asking for further help. Its policy also describes adjustments when a customer returns to the same conversation for assistance.\n\nIntercom caps outcome charges at one per conversation even when several actions occur. These are vendor-specific billing rules, not a general definition every AI product follows. Check the current documentation when evaluating the service.\n\n## Outcome-based vs. usage-based pricing\n\n[Usage-based pricing](/glossary/usage-based-pricing.html) can charge for attempts or resource consumption. Outcome-based pricing makes the defined result central to the charge.\n\nThe provider's costs still arise during attempts, retries, and failures. Review [cost per successful task](/glossary/ai-unit-economics.html) as well as the price per billed outcome. They may use different success definitions and include different tasks.\n\n## What should product designers make visible?\n\nShow the charging rule before customers rely on the service. Provide a history with the task, outcome, verification status, amount, and any correction.\n\nLet customers inspect the evidence and find a clear route to dispute a charge. Explain what happens after a spending limit is reached, including whether work pauses or passes to a person.\n\nEvaluate the quality measure separately from billable volume. A change that marks more cases resolved may increase charges without improving task success or satisfaction.\n\n## When does this model become difficult?\n\nOutcome pricing becomes harder when the result depends on events outside the product, appears much later, or is difficult for both parties to verify. Define attribution and disputes carefully rather than implying that every generated output is a delivered outcome.\n\n## Related terms\n\n- [Usage-Based Pricing](/glossary/usage-based-pricing.html)\n- [Pricing Metric](/glossary/pricing-metric.html)\n- [AI Unit Economics](/glossary/ai-unit-economics.html)\n- [Cost to Serve](/glossary/cost-to-serve.html)\n\n## Sources\n\n- [Intercom: Fin AI Agent outcomes](https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes)\n- [Intercom: See and manage usage](https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage)\n- [AWS: Optimizing cost per task and proving agent ROI](https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/outcome-based-pricing.html",
+        "name": "Outcome-Based Pricing: Definition, AI Examples, and UX",
+        "description": "Learn how outcome-based pricing defines a billable result, handles reopened or failed work, and differs from usage-based charging in AI products.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes",
+          "https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage",
+          "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#term",
+        "name": "Outcome-Based Pricing",
+        "termCode": "outcome-based-pricing",
+        "description": "Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.",
+        "url": "https://lexkonovalov.com/glossary/outcome-based-pricing.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#webpage"
+        },
+        "alternateName": [
+          "Outcome pricing",
+          "Results-based pricing"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/outcome-based-pricing.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Outcome-Based Pricing",
+            "item": "https://lexkonovalov.com/glossary/outcome-based-pricing.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Outcome pricing",
+      "Results-based pricing"
+    ]
+  },
+  {
+    "id": "174",
+    "name": "Pricing Metric",
+    "slug": "pricing-metric",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.",
+    "purpose": "A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.",
+    "keyConcepts": [
+      "Pricing metric vs. value metric",
+      "Examples of pricing metrics",
+      "A product-design example",
+      "How should you evaluate a candidate?",
+      "What is the difference from a pricing model?"
+    ],
+    "howItWorks": "A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.",
+    "relatedTerms": [
+      "Usage-Based Pricing",
+      "Outcome-Based Pricing",
+      "AI Unit Economics",
+      "Product-Led Growth (PLG)"
+    ],
+    "seoTitle": "Pricing Metric: Value Metrics, Examples, and Selection",
+    "seoDescription": "Choose a pricing metric customers can understand and predict. Compare seats, usage, and outcomes against customer value, delivery cost, and UX.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/pricing-metric.html",
+    "sources": [
+      "Paddle: How to use value metrics to optimize pricing (https://www.paddle.com/blog/value-metrics-pricing)",
+      "Stripe: Recurring pricing models (https://docs.stripe.com/products-prices/pricing-models)"
+    ],
+    "contentMarkdown": "# Pricing Metric\n\nA pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.\n\n## Pricing metric vs. value metric\n\nPricing practitioners often use **value metric** for a charging unit intended to grow with the value customers receive. Paddle uses the term in this pricing context.\n\nTreat that connection as something to investigate. A countable event does not prove customer value. A pricing metric is also different from a product success metric such as activation rate or task completion.\n\nSeparate three decisions:\n\n- **Metric:** what is counted, such as a licensed editor.\n- **Rate:** the amount charged per unit.\n- **Packaging:** the capabilities and allowances included in a plan.\n\nA flat subscription can coexist with a metered allowance, and a product can use more than one charging unit.\n\n## Examples of pricing metrics\n\n| Metric | Possible fit | Question to investigate |\n|---|---|---|\n| Licensed user or seat | Products where more participating users receive useful access | Does charging for each participant discourage necessary collaboration? |\n| Processed document or API request | Services with measurable consumption | Can buyers predict volume, and do failed attempts count? |\n| Stored data | Products where maintained storage is a meaningful resource | Can customers understand, manage, and export what is counted? |\n| Verified outcome | Services with an observable accepted result | Can both parties verify the result and handle reversals? |\n\nThese are candidates, not universal recommendations. The right choice depends on the product, audience, and delivery model.\n\n## A product-design example\n\nImagine a procurement tool with two candidate metrics: licensed users and completed purchase orders.\n\nCharging for all users might affect how a company invites occasional approvers. Charging per purchase order might better reflect activity, but requires clear rules for drafts, canceled orders, and corrections.\n\nInterview buyers and the people doing the work. Ask them to estimate next month's charge for realistic scenarios and explain which activity feels related to the value they receive. Compare those answers with actual usage and [cost to serve](/glossary/cost-to-serve.html).\n\nDo not select a metric solely because it is easy for the billing system to count.\n\n## How should you evaluate a candidate?\n\nCheck five practical questions:\n\n1. **Value:** Does a larger count usually correspond to something customers find useful?\n2. **Predictability:** Can the buyer estimate a bill and manage a budget?\n3. **Verifiability:** Can customers inspect how the quantity was counted?\n4. **Delivery economics:** How do revenue and costs change as the quantity grows?\n5. **Behavior:** Does charging this way discourage the collaboration or task completion the product needs?\n\nFor [AI products](/glossary/ai-unit-economics.html), tokens can be a useful internal cost measure but difficult for some buyers to forecast. A task-based metric still needs rules for retries and acceptance.\n\n## What is the difference from a pricing model?\n\nThe metric is the unit. The model describes how charges are organized, such as a flat subscription, graduated tiers, or [usage-based pricing](/glossary/usage-based-pricing.html).\n\nFor example, documents can be sold individually, included in a subscription allowance, or covered by prepaid credits. [Outcome-based pricing](/glossary/outcome-based-pricing.html) adds a result requirement to what becomes billable.\n\nChanging a metric can change customer behavior as well as revenue. Test comprehension and workflow effects, and provide a clear transition for existing customers rather than assuming a pricing-page rewrite is sufficient.\n\n## Related terms\n\n- [Usage-Based Pricing](/glossary/usage-based-pricing.html)\n- [Outcome-Based Pricing](/glossary/outcome-based-pricing.html)\n- [AI Unit Economics](/glossary/ai-unit-economics.html)\n- [Product-Led Growth (PLG)](/glossary/product-led-growth-plg.html)\n\n## Sources\n\n- [Paddle: How to use value metrics to optimize pricing](https://www.paddle.com/blog/value-metrics-pricing)\n- [Stripe: Recurring pricing models](https://docs.stripe.com/products-prices/pricing-models)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/pricing-metric.html",
+        "name": "Pricing Metric: Value Metrics, Examples, and Selection",
+        "description": "Choose a pricing metric customers can understand and predict. Compare seats, usage, and outcomes against customer value, delivery cost, and UX.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.paddle.com/blog/value-metrics-pricing",
+          "https://docs.stripe.com/products-prices/pricing-models"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#term",
+        "name": "Pricing Metric",
+        "termCode": "pricing-metric",
+        "description": "A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.",
+        "url": "https://lexkonovalov.com/glossary/pricing-metric.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#webpage"
+        },
+        "alternateName": [
+          "Pricing unit",
+          "Billing unit"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/pricing-metric.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pricing Metric",
+            "item": "https://lexkonovalov.com/glossary/pricing-metric.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Pricing unit",
+      "Billing unit"
+    ]
+  },
+  {
+    "id": "175",
+    "name": "Unit Economics",
+    "slug": "unit-economics",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.",
+    "purpose": "Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.",
+    "keyConcepts": [
+      "What counts as a unit?",
+      "How do you calculate unit economics?",
+      "A SaaS unit economics example",
+      "How does this affect product design?",
+      "What changes with AI products?"
+    ],
+    "howItWorks": "Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.",
+    "relatedTerms": [
+      "LTV to CAC Ratio",
+      "Customer Acquisition Cost (CAC)",
+      "Customer Lifetime Value (LTV)",
+      "CAC Payback Period",
+      "Growth Design"
+    ],
+    "seoTitle": "Unit Economics: Meaning, Metrics, and SaaS Example",
+    "seoDescription": "Learn what unit economics means, how to choose the right unit, and how CAC, LTV, margin, and payback inform product decisions in SaaS and AI products.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/unit-economics.html",
+    "sources": [
+      "David Skok: SaaS Metrics 2.0 (https://www.forentrepreneurs.com/saas-metrics-2/)",
+      "Stripe: How to calculate the break-even point (https://stripe.com/resources/more/how-to-calculate-the-break-even-point)",
+      "Stripe: Variable costs and ecommerce profitability (https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability)",
+      "Stripe: Marketplace metrics (https://stripe.com/en-es/resources/more/14-key-marketplace-metrics)",
+      "Anthropic: API pricing (https://platform.claude.com/docs/en/about-claude/pricing)"
+    ],
+    "contentMarkdown": "# Unit Economics\n\nUnit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.\n\n## What counts as a unit?\n\nChoose the unit before choosing a formula. A paying account, an individual user, and a completed order answer different questions.\n\n| Business model | Useful unit | What to examine |\n|---|---|---|\n| Subscription software | One paying customer account | Acquisition cost, revenue, delivery costs, and retention over time. |\n| Marketplace | One completed transaction | The platform's recognized revenue and the costs of facilitating the transaction. |\n| AI workflow | One completed customer task | Allocated revenue and workflow costs, including failed and abandoned attempts. |\n\nFor a marketplace, the total value customers transact, often called gross merchandise value (GMV), is not automatically the platform's revenue. Use the revenue the business actually recognizes under its model.\n\n## How do you calculate unit economics?\n\nThere is no single formula for every business. Two useful starting points are:\n\n- **Contribution per order = net revenue per order − variable costs per order.** State whether acquisition costs are included or reported separately.\n- **Customer economics:** compare [customer acquisition cost](/glossary/customer-acquisition-cost-cac.html) with [customer lifetime value](/glossary/customer-lifetime-value-ltv.html), then check [CAC payback](/glossary/cac-payback-period.html).\n\nGross profit subtracts cost of goods sold or cost of revenue. Contribution margin subtracts the variable costs included in the analysis. These measures can differ because some delivery costs are fixed and some variable costs sit outside cost of revenue.\n\nDocument the cost categories and avoid counting an expense twice. Positive contribution still has to cover fixed expenses; positive lifetime customer economics does not establish company-wide profitability.\n\n## A SaaS unit economics example\n\nConsider an illustrative subscription product. One paying account is one customer. Assume stable monthly revenue, gross margin, and customer churn, with no expansion revenue.\n\n| Input or result | Amount |\n|---|---:|\n| Acquisition spending attributable to 100 new accounts | $100,000 |\n| CAC: $100,000 ÷ 100 | $1,000 |\n| Monthly revenue per account | $100 |\n| Monthly cost of revenue per account | $20 |\n| Monthly gross profit per account | $80 |\n| Gross margin: $80 ÷ $100 | 80% |\n| Monthly customer churn | 2% |\n| Estimated gross-profit LTV: $100 × 0.80 ÷ 0.02 | $4,000 |\n| LTV:CAC: $4,000 ÷ $1,000 | 4:1 |\n| Simplified CAC payback: $1,000 ÷ $80 | 12.5 months |\n\nThe payback shortcut assumes an account continues generating $80 each month. Actual cohort payback must account for customers who leave. The LTV estimate also depends on its assumptions; it is not $4,000 of guaranteed profit from every account.\n\n## How does this affect product design?\n\nUse the model to choose a measurable product question. If customers struggle to complete setup, investigate whether clearer onboarding helps suitable accounts reach their first useful result and become paying customers.\n\nIf the workflow requires repeated support intervention, examine the errors and handoffs behind that work. Measure task completion and support effort together before estimating a financial effect.\n\nCompare customers acquired in the same period, called a cohort, and separate segments with different service requirements. A blended average can conceal a costly customer group.\n\n## What changes with AI products?\n\nAI API charges can depend on input tokens, output tokens, caching, and tool use. An interface that encourages repeated generation can change delivery costs.\n\nFor example, an itinerary assistant might need three attempts and human review to produce one usable itinerary. Include those attempts and review work when estimating cost per completed task. Also include spending on tasks that never succeed within the measurement window. Define “usable” through explicit acceptance criteria. Test whether better inputs and clearer revision controls reduce avoidable retries while preserving output quality.\n\n## Related terms\n\n- [LTV to CAC Ratio](/glossary/ltv-to-cac-ratio.html)\n- [Customer Acquisition Cost (CAC)](/glossary/customer-acquisition-cost-cac.html)\n- [Customer Lifetime Value (LTV)](/glossary/customer-lifetime-value-ltv.html)\n- [CAC Payback Period](/glossary/cac-payback-period.html)\n- [Growth Design](/glossary/growth-design.html)\n\n## Sources\n\n- [David Skok: SaaS Metrics 2.0](https://www.forentrepreneurs.com/saas-metrics-2/)\n- [Stripe: How to calculate the break-even point](https://stripe.com/resources/more/how-to-calculate-the-break-even-point)\n- [Stripe: Variable costs and ecommerce profitability](https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability)\n- [Stripe: Marketplace metrics](https://stripe.com/en-es/resources/more/14-key-marketplace-metrics)\n- [Anthropic: API pricing](https://platform.claude.com/docs/en/about-claude/pricing)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/unit-economics.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/unit-economics.html",
+        "name": "Unit Economics: Meaning, Metrics, and SaaS Example",
+        "description": "Learn what unit economics means, how to choose the right unit, and how CAC, LTV, margin, and payback inform product decisions in SaaS and AI products.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/unit-economics.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/unit-economics.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.forentrepreneurs.com/saas-metrics-2/",
+          "https://stripe.com/resources/more/how-to-calculate-the-break-even-point",
+          "https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability",
+          "https://stripe.com/en-es/resources/more/14-key-marketplace-metrics",
+          "https://platform.claude.com/docs/en/about-claude/pricing"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/unit-economics.html#term",
+        "name": "Unit Economics",
+        "termCode": "unit-economics",
+        "description": "Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.",
+        "url": "https://lexkonovalov.com/glossary/unit-economics.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/unit-economics.html#webpage"
+        },
+        "alternateName": [
+          "Unit economics analysis"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/unit-economics.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Unit Economics",
+            "item": "https://lexkonovalov.com/glossary/unit-economics.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Unit economics analysis"
+    ]
+  },
+  {
+    "id": "176",
+    "name": "Usage-Based Pricing",
+    "slug": "usage-based-pricing",
+    "category": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.",
+    "purpose": "Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.",
+    "keyConcepts": [
+      "How does usage-based pricing work?",
+      "A usage-based pricing calculation",
+      "Usage-based vs. seat-based and outcome-based pricing",
+      "What makes the experience understandable?",
+      "How should designers test it?"
+    ],
+    "howItWorks": "Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.",
+    "relatedTerms": [
+      "Pricing Metric",
+      "Outcome-Based Pricing",
+      "AI Unit Economics",
+      "Cost to Serve"
+    ],
+    "seoTitle": "Usage-Based Pricing: Models, Examples, and UX",
+    "seoDescription": "Understand usage-based pricing, calculate an allowance-and-overage example, and design clear meters, estimates, alerts, and spending controls.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/usage-based-pricing.html",
+    "sources": [
+      "Stripe: Usage-based billing (https://docs.stripe.com/billing/subscriptions/usage-based)",
+      "Stripe: Recurring pricing models (https://docs.stripe.com/products-prices/pricing-models)",
+      "Stripe: Monitor usage with alerts (https://docs.stripe.com/billing/subscriptions/usage-based/monitor)"
+    ],
+    "contentMarkdown": "# Usage-Based Pricing\n\nUsage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.\n\n## How does usage-based pricing work?\n\nDefine the [pricing metric](/glossary/pricing-metric.html), how usage is counted, the rate, and the billing period. The pricing policy determines the charge; usage-based billing measures events and turns the policy into an invoice.\n\nCommon arrangements include:\n\n| Model | Illustrative arrangement | What customers need to understand |\n|---|---|---|\n| Pay as you go | A charge per processed document | Which documents count and when usage is billed. |\n| Subscription plus overage | A monthly fee includes an allowance, with extra units charged separately | Remaining allowance and the rate beyond it. |\n| Prepaid credits | Customers buy a balance consumed by specified operations | Credit consumption, expiration, rollover, and refund rules. |\n| Graduated usage tiers | Different portions of consumption have different rates | Which rate applies to each portion. |\n\nThese are examples, not recommended prices or vendor offers. A product can combine several arrangements.\n\n## A usage-based pricing calculation\n\nAn illustrative document service costs $49 per month, includes 1,000 processed documents, and charges $0.02 for each additional document. Assume no taxes, discounts, or other charges.\n\nFor 2,500 billable documents:\n\n**Monthly charge = $49 + (2,500 − 1,000) × $0.02 = $79.**\n\nAt 800 documents, the charge remains $49 under this policy. Unused allowance does not become a refund unless the terms explicitly provide one.\n\nThe service must define whether failed processing, duplicate submissions, previews, and retries count. “Processed document” is incomplete billing language until those cases are resolved.\n\n## Usage-based vs. seat-based and outcome-based pricing\n\nSeat-based pricing counts licensed users. Usage-based pricing counts consumption. A product can charge for both.\n\n[Outcome-based pricing](/glossary/outcome-based-pricing.html) counts a defined result. Charging for a document-processing attempt and charging for an accepted extraction can lead to different bills, even if both use a meter.\n\nChoose the unit based on customer value, predictability, measurement reliability, and [delivery costs](/glossary/cost-to-serve.html). Usage does not automatically correspond to value for the customer.\n\n## What makes the experience understandable?\n\nShow customers enough information to predict and check the bill:\n\n- The billable unit, included quantity, and overage rate.\n- Consumption during the current period and when the meter last updated.\n- Remaining credits or allowance, with an understandable estimate where feasible.\n- The behavior of alerts, caps, and automatic top-ups.\n- A usage history that explains significant charges and corrections.\n\nA notification is not a hard spending cap. Stripe's documentation distinguishes usage alerts and billing thresholds and notes that threshold invoices may slightly exceed the threshold. A product promising a hard cap needs enforcement that matches that promise, including work already in progress.\n\n## How should designers test it?\n\nUse realistic tasks: estimate the bill for 2,500 documents, identify whether a retry will cost more, find the largest source of usage, and set the intended limit.\n\nCheck comprehension, calculation errors, unexpected charges, and successful task completion. If credits have different consumption rates by operation, make the conversion visible before users commit.\n\nFor AI workflows, evaluate the customer's bill and the provider's [unit economics](/glossary/ai-unit-economics.html) separately. A fixed fee can coexist with variable delivery costs.\n\n## Related terms\n\n- [Pricing Metric](/glossary/pricing-metric.html)\n- [Outcome-Based Pricing](/glossary/outcome-based-pricing.html)\n- [AI Unit Economics](/glossary/ai-unit-economics.html)\n- [Cost to Serve](/glossary/cost-to-serve.html)\n\n## Sources\n\n- [Stripe: Usage-based billing](https://docs.stripe.com/billing/subscriptions/usage-based)\n- [Stripe: Recurring pricing models](https://docs.stripe.com/products-prices/pricing-models)\n- [Stripe: Monitor usage with alerts](https://docs.stripe.com/billing/subscriptions/usage-based/monitor)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/usage-based-pricing.html",
+        "name": "Usage-Based Pricing: Models, Examples, and UX",
+        "description": "Understand usage-based pricing, calculate an allowance-and-overage example, and design clear meters, estimates, alerts, and spending controls.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#breadcrumbs"
+        },
+        "citation": [
+          "https://docs.stripe.com/billing/subscriptions/usage-based",
+          "https://docs.stripe.com/products-prices/pricing-models",
+          "https://docs.stripe.com/billing/subscriptions/usage-based/monitor"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#term",
+        "name": "Usage-Based Pricing",
+        "termCode": "usage-based-pricing",
+        "description": "Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.",
+        "url": "https://lexkonovalov.com/glossary/usage-based-pricing.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#webpage"
+        },
+        "alternateName": [
+          "Consumption-based pricing",
+          "Metered pricing"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/usage-based-pricing.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Usage-Based Pricing",
+            "item": "https://lexkonovalov.com/glossary/usage-based-pricing.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Consumption-based pricing",
+      "Metered pricing"
     ]
   }
 ];

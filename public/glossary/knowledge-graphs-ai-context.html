@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge Graphs in AI: Structuring Graph Context for LLMs</title>
-  <meta name="description" content="A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.">
+  <title>Knowledge Graphs for AI: Entities, Relationships, and Uses</title>
+  <meta name="description" content="Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Knowledge Graphs in AI: Structuring Graph Context for LLMs">
-  <meta property="og:description" content="A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.">
+  <meta property="og:title" content="Knowledge Graphs for AI: Entities, Relationships, and Uses">
+  <meta property="og:description" content="Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Knowledge Graphs in AI: Structuring Graph Context for LLMs">
-  <meta name="twitter:description" content="A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.">
+  <meta name="twitter:title" content="Knowledge Graphs for AI: Entities, Relationships, and Uses">
+  <meta name="twitter:description" content="Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html",
+      "name": "Knowledge Graphs for AI: Entities, Relationships, and Uses",
+      "description": "Understand knowledge graphs as AI context, with a hotel-booking example, their role in retrieval, and practical checks for sources and relationship quality.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.w3.org/TR/rdf11-primer/",
+        "https://microsoft.github.io/graphrag/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#term",
       "name": "Knowledge Graphs (AI Context)",
       "termCode": "knowledge-graphs-ai-context",
-      "description": "A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.",
+      "description": "A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.",
+      "url": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,42 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.</p>
-      </section>
+    <p class="glossary-term-section__text">A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.</p>
+<p class="glossary-term-section__text">For example, a graph can connect a hotel to its rooms, a reservation to its guest, and a maintenance issue to the room it affects. Relationships make those connections available for queries.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-finding-affected-reservations">
+<h2 id="section-example-finding-affected-reservations" class="glossary-term-section__title">Example: finding affected reservations</h2>
+<p class="glossary-term-section__text">Suppose room 204 has an unresolved maintenance issue. A hotel tool could follow relationships from that room to overlapping reservations and their assigned guests.</p>
+<p class="glossary-term-section__text">An AI assistant could use the resulting records to explain which reservations need review. The application still needs date logic, current data, and access checks to determine the actual result.</p>
+<p class="glossary-term-section__text">Stable identifiers matter: two guests with the same name should remain distinct entities. Record where important facts came from and when they were updated.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-knowledge-graphs-and-rag">
+<h2 id="section-knowledge-graphs-and-rag" class="glossary-term-section__title">Knowledge graphs and RAG</h2>
+<p class="glossary-term-section__text">A knowledge graph can support retrieval-augmented generation by helping retrieve connected facts. Graphs can also be combined with keyword or vector search.</p>
+<p class="glossary-term-section__text">Microsoft's GraphRAG is one specific approach that builds a graph and community summaries from text. Its architecture does not define every graph-based retrieval system.</p>
+<p class="glossary-term-section__text">RDF is one way to represent graph data; knowledge graphs can also use other data models.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-check-the-relationships">
+<h2 id="section-check-the-relationships" class="glossary-term-section__title">Check the relationships</h2>
+<p class="glossary-term-section__text">Define the meaning and direction of each relationship. Validate extracted entities, duplicate records, and unsupported connections before relying on them.</p>
+<p class="glossary-term-section__text">A graph structures information, including information that may be incomplete or incorrect. Test retrieval quality and the generated answer against the underlying sources. More connections alone do not establish better answers.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li>
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li>
+<li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.w3.org/TR/rdf11-primer/" target="_blank" rel="noopener noreferrer">W3C: RDF 1.1 Primer</a></li>
+<li><a href="https://microsoft.github.io/graphrag/" target="_blank" rel="noopener noreferrer">Microsoft: GraphRAG Documentation</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Provides deterministic, verifiable ground-truth data structures for AI reasoning, eliminating the factual hallucinations common to unstructured vector embeddings.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Nodes (entities)</span><span class="concept-tag">edges (predicates)</span><span class="concept-tag">triple stores</span><span class="concept-tag">ontological reasoning.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Information is structured as RDF triples (Subject -[Predicate]-&gt; Object); query engines traverse these relationships to feed structured contextual subgraphs to LLMs.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/conceptual-schema.html">Conceptual Schema</a></li><li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li><a href="/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li><li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Tim Berners-Lee, The Semantic Web, Scientific American</li><li>MCP Memory Server Specification</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The AI Agent Harness: Architecture, Tooling, and Sandboxing</title>
-  <meta name="description" content="An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.">
+  <title>Agent Harness: Definition, Components, and Example</title>
+  <meta name="description" content="Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/agent-harness.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The AI Agent Harness: Architecture, Tooling, and Sandboxing">
-  <meta property="og:description" content="An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.">
+  <meta property="og:title" content="Agent Harness: Definition, Components, and Example">
+  <meta property="og:description" content="Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/agent-harness.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The AI Agent Harness: Architecture, Tooling, and Sandboxing">
-  <meta name="twitter:description" content="An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.">
+  <meta name="twitter:title" content="Agent Harness: Definition, Components, and Example">
+  <meta name="twitter:description" content="Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/agent-harness.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/agent-harness.html",
+      "name": "Agent Harness: Definition, Components, and Example",
+      "description": "Understand the runtime around an AI agent, including tool execution, state, permissions, and recovery, with a practical customer-support example.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.anthropic.com/research/managed-agents",
+        "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/agent-harness.html#term",
       "name": "Agent Harness",
       "termCode": "agent-harness",
-      "description": "An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.",
+      "description": "An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.",
+      "url": "https://lexkonovalov.com/glossary/agent-harness.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/agent-harness.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/agent-harness.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,51 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.</p>
-      </section>
+    <p class="glossary-term-section__text">An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.</p>
+<p class="glossary-term-section__text">The exact boundary varies by implementation. In Anthropic's Managed Agents architecture, the harness runs the loop that calls the model and routes tool calls, while sessions and sandboxes are separate abstractions.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-it-can-include">
+<h2 id="section-what-it-can-include" class="glossary-term-section__title">What it can include</h2>
+<p class="glossary-term-section__text">Depending on the application, a harness may provide:</p>
+<ul class="glossary-term-ul">
+<li>Tool definitions, argument checks, and execution.</li>
+<li>Context assembly and state persistence.</li>
+<li>Access controls and approval checkpoints.</li>
+<li>Time limits, budgets, and stopping rules.</li>
+<li>Logs, error handling, and recovery behavior.</li>
+</ul>
+<p class="glossary-term-section__text">Some of these capabilities may live in connected services. A harness needs to coordinate with them rather than assume that a model instruction enforces them.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-support-task-across-sessions">
+<h2 id="section-example-a-support-task-across-sessions" class="glossary-term-section__title">Example: a support task across sessions</h2>
+<p class="glossary-term-section__text">An agent investigates a customer issue and prepares a proposed account correction. Its harness records completed steps, preserves the relevant identifiers, and pauses before a write operation that needs approval.</p>
+<p class="glossary-term-section__text">If the session is interrupted, the resumed run checks the saved state and current account data. It should determine whether an earlier action completed before attempting it again.</p>
+<p class="glossary-term-section__text">For this task, a useful completion record identifies the requested correction, the verified outcome, and any unresolved issue.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-to-evaluate">
+<h2 id="section-what-to-evaluate" class="glossary-term-section__title">What to evaluate</h2>
+<p class="glossary-term-section__text">Test the complete runtime with expired access, failed tools, and interrupted sessions. Evaluate whether it preserves the user's scope and recovers without repeating consequential actions.</p>
+<p class="glossary-term-section__text">The model's capabilities and the harness's behavior both affect the resulting product experience.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/design-harness.html">Design Harness</a></li>
+<li><a href="/glossary/ai-agent.html">AI Agent</a></li>
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-model-routing.html">Model Routing</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.anthropic.com/research/managed-agents" target="_blank" rel="noopener noreferrer">Anthropic: Scaling Managed Agents</a></li>
+<li><a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">Anthropic: Effective Harnesses for Long-Running Agents</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Bridges raw model reasoning with real-world infrastructure, preventing stochastic hallucination by enforcing testing, permission bounds, and error recovery.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Context provisioning</span><span class="concept-tag">sandbox execution</span><span class="concept-tag">error-feedback loops</span><span class="concept-tag">security guardrails.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Wraps the LLM in an execution loop: it injects relevant repository state, intercepts function calls, runs code in sandboxes, and feeds compiler errors back to the model.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/design-harness.html">Design Harness</a></li><li><a href="/glossary/ai-agent.html">AI Agent</a></li><li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Birgitta Böckeler, AI Agent Harness, Thoughtworks (October 2026)</li><li>Anthropic Engineering Guides</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

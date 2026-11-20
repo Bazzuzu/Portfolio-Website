@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agents Explained: Architecture, Models, and Execution Harnesses</title>
-  <meta name="description" content="An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.">
+  <title>AI Agent: Definition, How It Works, and Product Example</title>
+  <meta name="description" content="Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/ai-agent.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI Agents Explained: Architecture, Models, and Execution Harnesses">
-  <meta property="og:description" content="An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.">
+  <meta property="og:title" content="AI Agent: Definition, How It Works, and Product Example">
+  <meta property="og:description" content="Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/ai-agent.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI Agents Explained: Architecture, Models, and Execution Harnesses">
-  <meta name="twitter:description" content="An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.">
+  <meta name="twitter:title" content="AI Agent: Definition, How It Works, and Product Example">
+  <meta name="twitter:description" content="Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/ai-agent.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/ai-agent.html",
+      "name": "AI Agent: Definition, How It Works, and Product Example",
+      "description": "Learn what an AI agent does, how an LLM-based agent uses tools and feedback, and which task boundaries product designers need to make explicit.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#breadcrumbs"
+      },
+      "citation": [
+        "https://arxiv.org/abs/2210.03629",
+        "https://www.anthropic.com/research/building-effective-agents"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/ai-agent.html#term",
       "name": "AI Agent",
       "termCode": "ai-agent",
-      "description": "An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.",
+      "description": "An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.",
+      "url": "https://lexkonovalov.com/glossary/ai-agent.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/ai-agent.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/ai-agent.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,40 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.</p>
-      </section>
+    <p class="glossary-term-section__text">An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.</p>
+<p class="glossary-term-section__text">The broader AI concept also includes systems built without language models. An agent's autonomy depends on the decisions and actions its application permits.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-an-llm-based-agent-works">
+<h2 id="section-how-an-llm-based-agent-works" class="glossary-term-section__title">How an LLM-based agent works</h2>
+<p class="glossary-term-section__text">A typical interaction includes a goal, available context, a set of permitted tools, and a loop that evaluates tool results before continuing or stopping. Persistent memory and multiple cooperating agents are optional design choices.</p>
+<p class="glossary-term-section__text">ReAct is one research approach that interleaves reasoning and actions. It illustrates how a model can interact with external information while working through a task; it is not a requirement for every agent.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-investigating-a-delayed-order">
+<h2 id="section-example-investigating-a-delayed-order" class="glossary-term-section__title">Example: investigating a delayed order</h2>
+<p class="glossary-term-section__text">A support agent receives an order reference, retrieves the order, checks shipment tracking, and summarizes the available evidence. It may ask for clarification if the reference matches more than one order.</p>
+<p class="glossary-term-section__text">The application can allow these read operations while requiring an authorized person to approve a replacement shipment. A tool result should establish whether the replacement was actually created.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-designers-should-define">
+<h2 id="section-what-designers-should-define" class="glossary-term-section__title">What designers should define</h2>
+<p class="glossary-term-section__text">Specify the task boundary, available actions, stopping conditions, and escalation path. Make progress and important outcomes visible to the user.</p>
+<p class="glossary-term-section__text">Test missing data, tool failures, and ambiguous requests. A plausible final message is insufficient evidence of success when the task requires a change in another system.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/agentic-ai.html">Agentic AI</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">Yao et al.: ReAct</a></li>
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Building Effective Agents</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables probabilistic reasoning models to execute deterministic operations, read live software environments, and alter real-world system states.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Reasoning engine (LLM)</span><span class="concept-tag">external harness</span><span class="concept-tag">tool interfaces</span><span class="concept-tag">sensory inputs.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Formulated systematically as AI Agent ≈ Model + Harness. The model acts as the reasoning brain, while the harness provides tools, data, and feedback loops.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/agentic-ai.html">Agentic AI</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li><li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Birgitta Böckeler, AI Agent Harness, Thoughtworks</li><li>Harrison Chase, LangChain Agent Architecture</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is Agentic AI? Autonomous Agents &amp; Cognitive Architecture</title>
-  <meta name="description" content="Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.">
+  <title>Agentic AI: Meaning, Autonomy, and Workflow Example</title>
+  <meta name="description" content="Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/agentic-ai.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is Agentic AI? Autonomous Agents &amp; Cognitive Architecture">
-  <meta property="og:description" content="Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.">
+  <meta property="og:title" content="Agentic AI: Meaning, Autonomy, and Workflow Example">
+  <meta property="og:description" content="Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/agentic-ai.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is Agentic AI? Autonomous Agents &amp; Cognitive Architecture">
-  <meta name="twitter:description" content="Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.">
+  <meta name="twitter:title" content="Agentic AI: Meaning, Autonomy, and Workflow Example">
+  <meta name="twitter:description" content="Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/agentic-ai.html",
+      "name": "Agentic AI: Meaning, Autonomy, and Workflow Example",
+      "description": "Learn what agentic AI means, how autonomy varies across products, and how to scope a goal-driven workflow with tools, checkpoints, and outcome checks.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.anthropic.com/research/building-effective-agents",
+        "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#term",
       "name": "Agentic AI",
       "termCode": "agentic-ai",
-      "description": "Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.",
+      "description": "Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.",
+      "url": "https://lexkonovalov.com/glossary/agentic-ai.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/agentic-ai.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ai.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,41 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.</p>
-      </section>
+    <p class="glossary-term-section__text">Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.</p>
+<p class="glossary-term-section__text">Usage varies across vendors and products. Some systems follow mostly predefined workflows; others let a model choose more of the process. State which decisions are delegated when describing a system as agentic.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-trip-proposal">
+<h2 id="section-example-preparing-a-trip-proposal" class="glossary-term-section__title">Example: preparing a trip proposal</h2>
+<p class="glossary-term-section__text">A travel assistant receives dates, a budget, and arrival constraints. It retrieves flight options, compares eligible results, and prepares a proposal.</p>
+<p class="glossary-term-section__text">If no option meets the constraints, it can explain the conflict and ask which condition the traveler wants to change. It should preserve the budget unless the user authorizes a change.</p>
+<p class="glossary-term-section__text">The product might allow autonomous research while requiring explicit approval before purchasing. That boundary is part of the system's design.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-agents-workflows-and-multiple-agents">
+<h2 id="section-agents-workflows-and-multiple-agents" class="glossary-term-section__title">Agents, workflows, and multiple agents</h2>
+<p class="glossary-term-section__text">An AI agent is a system that takes actions toward a goal. A workflow coordinates steps and dependencies. An agentic product can combine a fixed workflow with model-driven decisions inside particular steps.</p>
+<p class="glossary-term-section__text">Multiple agents are optional. Splitting work among several agents adds coordination requirements and should have a clear purpose.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-questions-for-product-teams">
+<h2 id="section-questions-for-product-teams" class="glossary-term-section__title">Questions for product teams</h2>
+<p class="glossary-term-section__text">Identify the decisions the AI may make, the evidence it must use, and the actions requiring authorization. Set limits on duration and resource use.</p>
+<p class="glossary-term-section__text">Evaluate completion against the requested outcome and constraints. Also inspect failed and abandoned runs: a system that completes an easy demonstration may still struggle with missing information, changed conditions, or unavailable tools.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-agent.html">AI Agent</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+<li><a href="/glossary/autonomous-workflow-orchestration.html">Autonomous Workflow Orchestration</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Building Effective Agents</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Workflows and Agents</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Elevates software from passive transactional execution to proactive, goal-oriented problem solving, autonomously executing intricate enterprise workflows.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Autonomous planning</span><span class="concept-tag">environmental tool invocation</span><span class="concept-tag">reflection loops</span><span class="concept-tag">iterative state tracking.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The model decomposes broad user objectives into discrete sub-goals, evaluates intermediate outcomes, interacts with APIs, and iteratively refines plans until completion.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/ai-agent.html">AI Agent</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li><li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li><li><a href="/glossary/autonomous-workflow-orchestration.html">Autonomous Workflow Orchestration</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Andrew Ng, Agentic Design Patterns</li><li>Thoughtworks, Understanding AI Agents</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

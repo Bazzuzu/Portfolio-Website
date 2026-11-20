@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentic UX: Designing for Autonomous AI Agents and Trust</title>
-  <meta name="description" content="Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.">
+  <title>Agentic UX: Designing Control, Progress, and Recovery</title>
+  <meta name="description" content="Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/agentic-ux.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Agentic UX: Designing for Autonomous AI Agents and Trust">
-  <meta property="og:description" content="Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.">
+  <meta property="og:title" content="Agentic UX: Designing Control, Progress, and Recovery">
+  <meta property="og:description" content="Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/agentic-ux.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Agentic UX: Designing for Autonomous AI Agents and Trust">
-  <meta name="twitter:description" content="Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.">
+  <meta name="twitter:title" content="Agentic UX: Designing Control, Progress, and Recovery">
+  <meta name="twitter:description" content="Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,50 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/agentic-ux.html",
+      "name": "Agentic UX: Designing Control, Progress, and Recovery",
+      "description": "Learn how agentic UX helps people delegate work to AI agents, review proposed actions, track progress, and recover when part of a task fails.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#breadcrumbs"
+      },
+      "citation": [
+        "https://pair.withgoogle.com/chapter/feedback-controls/",
+        "https://pair.withgoogle.com/chapter/errors-failing/",
+        "https://docs.langchain.com/oss/python/langgraph/interrupts"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#term",
       "name": "Agentic UX",
       "termCode": "agentic-ux",
-      "description": "Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.",
+      "description": "Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.",
+      "url": "https://lexkonovalov.com/glossary/agentic-ux.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/agentic-ux.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/agentic-ux.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +417,55 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.</p>
-      </section>
+    <p class="glossary-term-section__text">Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.</p>
+<p class="glossary-term-section__text">A conversational interface is one possible entry point. The experience may also include task queues, approval screens, notifications, and activity records.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-updating-a-set-of-reservations">
+<h2 id="section-example-updating-a-set-of-reservations" class="glossary-term-section__title">Example: updating a set of reservations</h2>
+<p class="glossary-term-section__text">An operations manager asks an agent to find reservations affected by a schedule change and prepare customer notifications.</p>
+<p class="glossary-term-section__text">Before work begins, the interface makes the affected date range and intended actions visible. During the task, it distinguishes records being checked from messages awaiting review. Before sending, it lets the manager inspect recipients, content, and exceptions.</p>
+<p class="glossary-term-section__text">If some messages fail, the final state identifies which were sent, which failed, and which have an uncertain outcome. The recovery path should avoid sending successful messages again.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-design-around-delegation">
+<h2 id="section-design-around-delegation" class="glossary-term-section__title">Design around delegation</h2>
+<p class="glossary-term-section__text">Useful questions include:</p>
+<ul class="glossary-term-ul">
+<li>What information does the agent need before starting?</li>
+<li>Which actions are already authorized?</li>
+<li>Where can a person inspect, change, or stop the work?</li>
+<li>What happens to completed actions when the task stops?</li>
+<li>How does the user resolve missing information or partial failure?</li>
+</ul>
+<p class="glossary-term-section__text">A stop control needs an accurate explanation of its effect. It may prevent further work without reversing changes already made.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-evaluate-the-outcome">
+<h2 id="section-evaluate-the-outcome" class="glossary-term-section__title">Evaluate the outcome</h2>
+<p class="glossary-term-section__text">Test whether users can understand what happened and take the next appropriate action. Include unexpected results and delayed approvals.</p>
+<p class="glossary-term-section__text">Keep necessary review concise and informative. Approval is useful when the reviewer can identify the target, proposed change, and consequence.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li>
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/ai-native-design.html">AI-native Design</a></li>
+<li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/conversational-ux.html">Conversational UX</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-transparency.html">AI Transparency</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Google PAIR: Feedback and Control</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/errors-failing/" target="_blank" rel="noopener noreferrer">Google PAIR: Errors and Graceful Failure</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">LangChain: Interrupts</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Establishes human trust, transparency, and situational control over autonomous processes executing multi-step operations without immediate supervision.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Intent signaling</span><span class="concept-tag">progress observability</span><span class="concept-tag">intervention triggers</span><span class="concept-tag">trust calibration.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers build multi-state feedback systems, activity logs, reversible actions, and explicit decision checkpoints into agent workflows.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li><li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/ai-native-design.html">AI-native Design</a></li><li><a href="/glossary/agent-harness.html">Agent Harness</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Interaction Design Foundation, Designing for Agentic AI</li><li>Thoughtworks Customer Insights</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

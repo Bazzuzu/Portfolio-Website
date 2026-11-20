@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generative UI: Dynamic Component Streaming with AI SDK</title>
-  <meta name="description" content="Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.">
+  <title>Generative UI: Definition, Examples, and Design Controls</title>
+  <meta name="description" content="Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/generative-ui.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Generative UI: Dynamic Component Streaming with AI SDK">
-  <meta property="og:description" content="Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.">
+  <meta property="og:title" content="Generative UI: Definition, Examples, and Design Controls">
+  <meta property="og:description" content="Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/generative-ui.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Generative UI: Dynamic Component Streaming with AI SDK">
-  <meta name="twitter:description" content="Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.">
+  <meta name="twitter:title" content="Generative UI: Definition, Examples, and Design Controls">
+  <meta name="twitter:description" content="Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/generative-ui.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/generative-ui.html",
+      "name": "Generative UI: Definition, Examples, and Design Controls",
+      "description": "Learn how generative UI turns AI responses into interactive interfaces, with a booking example and practical controls for consistency and accessibility.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#breadcrumbs"
+      },
+      "citation": [
+        "https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/generative-ui.html#term",
       "name": "Generative UI",
       "termCode": "generative-ui",
-      "description": "Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.",
+      "description": "Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.",
+      "url": "https://lexkonovalov.com/glossary/generative-ui.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/generative-ui.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/generative-ui.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,51 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.</p>
-      </section>
+    <p class="glossary-term-section__text">Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.</p>
+<p class="glossary-term-section__text">Implementations vary. A model might select an approved component and supply its data, or generate a new layout. The AI SDK documents an approach that connects tool results to existing React components. A product can use generative UI while retaining a stable navigation system and design language.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-comparing-flight-options">
+<h2 id="section-example-comparing-flight-options" class="glossary-term-section__title">Example: comparing flight options</h2>
+<p class="glossary-term-section__text">A traveler asks for two flights that arrive before noon. The application retrieves available flights and renders comparison cards with arrival times, prices, and fare conditions.</p>
+<p class="glossary-term-section__text">The user can change the dates or open an option's details directly. If the request is ambiguous, the interface asks for the missing constraint. If availability cannot be retrieved, it displays that state instead of inventing a bookable fare.</p>
+<p class="glossary-term-section__text">The useful interaction is the ability to inspect and act on structured information.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-designers-should-specify">
+<h2 id="section-what-designers-should-specify" class="glossary-term-section__title">What designers should specify</h2>
+<ul class="glossary-term-ul">
+<li>Define the components the system can use and the data each requires.</li>
+<li>Distinguish retrieved facts from generated explanations.</li>
+<li>Design loading, empty, error, and partial-result states.</li>
+<li>Preserve labels, focus order, and keyboard operation when content changes.</li>
+<li>Make important status changes available to assistive technology.</li>
+<li>Require the appropriate review before a consequential action.</li>
+</ul>
+<p class="glossary-term-section__text">Test representative requests, including unavailable data and contradictory constraints. Evaluate whether users can complete the task and understand the result. Visual variety alone does not establish that the interface is useful.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-can-schemas-constrain-generated-ui">
+<h2 id="section-how-can-schemas-constrain-generated-ui" class="glossary-term-section__title">How can schemas constrain generated UI?</h2>
+<p class="glossary-term-section__text">A product can use <a href="/glossary/structured-outputs.html">structured outputs</a> to restrict a model to supported component names and data fields. A controlled renderer then maps those descriptions to approved implementations.</p>
+<p class="glossary-term-section__text">Schema conformance does not establish that a fare is available, a record belongs to the user, or an action is authorized. Validate data and enforce permissions in the application. Test focus, keyboard interaction, and recovery when the generated selection changes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/ai-native-design.html">AI-native Design</a></li>
+<li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
+</ul>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/conversational-ux.html">Conversational UX</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces" target="_blank" rel="noopener noreferrer">Vercel AI SDK: Generative User Interfaces</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Status Messages</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Moves conversational AI beyond static text and markdown, providing tailored visual affordances (e.g., flight booking cards, charts, interactive forms) directly inside conversation streams.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Dynamic component hydration</span><span class="concept-tag">streamable React Server Components</span><span class="concept-tag">tool-driven UI rendering.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Tool calls made by the model map to registered design system components, which are streamed and mounted into the DOM using modern libraries.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/ai-native-design.html">AI-native Design</a></li><li><a href="/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li><li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Vercel, AI SDK 3.0: Generative UI (https://vercel.com/blog/ai-sdk-3-generative-ui)</li><li>Ultralytics, Generative UI Architecture</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is Prompt Engineering? Modern Techniques and Best Practices</title>
-  <meta name="description" content="Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.">
+  <title>Prompt Engineering: Definition, Example, and Evaluation</title>
+  <meta name="description" content="Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/prompt-engineering.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="What is Prompt Engineering? Modern Techniques and Best Practices">
-  <meta property="og:description" content="Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.">
+  <meta property="og:title" content="Prompt Engineering: Definition, Example, and Evaluation">
+  <meta property="og:description" content="Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/prompt-engineering.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="What is Prompt Engineering? Modern Techniques and Best Practices">
-  <meta name="twitter:description" content="Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.">
+  <meta name="twitter:title" content="Prompt Engineering: Definition, Example, and Evaluation">
+  <meta name="twitter:description" content="Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/prompt-engineering.html",
+      "name": "Prompt Engineering: Definition, Example, and Evaluation",
+      "description": "Learn how to improve AI prompts with clear tasks, context, constraints, and examples, then evaluate the results against realistic cases and success criteria.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#breadcrumbs"
+      },
+      "citation": [
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#term",
       "name": "Prompt Engineering",
       "termCode": "prompt-engineering",
-      "description": "Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.",
+      "description": "Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.",
+      "url": "https://lexkonovalov.com/glossary/prompt-engineering.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/prompt-engineering.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/prompt-engineering.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,42 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.</p>
-      </section>
+    <p class="glossary-term-section__text">Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.</p>
+<p class="glossary-term-section__text">A prompt can include a user message, application-level instructions, supplied reference material, and examples. Its effectiveness depends on the model, the task, and the information available.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-summarizing-a-support-ticket">
+<h2 id="section-example-summarizing-a-support-ticket" class="glossary-term-section__title">Example: summarizing a support ticket</h2>
+<p class="glossary-term-section__text">A vague request such as “Summarize this” leaves important choices unspecified. A more useful task description could be:</p>
+<p class="glossary-term-section__text">> Summarize the supplied support ticket for the next agent. Include the reported problem, actions already attempted, current status, and unresolved questions. Use only facts present in the ticket. Label missing information as unknown. Do not infer that an issue is resolved from a proposed fix.</p>
+<p class="glossary-term-section__text">Provide the actual ticket content separately and make the boundary between instructions and reference material clear.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-to-improve-a-prompt">
+<h2 id="section-how-to-improve-a-prompt" class="glossary-term-section__title">How to improve a prompt</h2>
+<p class="glossary-term-section__text">Start with explicit success criteria. Test representative inputs, inspect failures, and change the prompt to address a specific problem. Examples can clarify an ambiguous format or decision rule.</p>
+<p class="glossary-term-section__text">For the ticket summary, check factual accuracy, omitted actions, invented resolutions, and whether another agent can understand what remains to do.</p>
+<p class="glossary-term-section__text">Keep a small set of test cases, including incomplete and contradictory tickets. Version the prompt and compare results when the model or workflow changes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-where-the-prompt-s-role-ends">
+<h2 id="section-where-the-prompt-s-role-ends" class="glossary-term-section__title">Where the prompt's role ends</h2>
+<p class="glossary-term-section__text">Prompt instructions cannot enforce account permissions or replace missing source data. Retrieval, application checks, and tool design may be needed.</p>
+<p class="glossary-term-section__text">Context engineering covers the wider process of assembling and managing what reaches the model. Prompt engineering is one part of that work.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/glossary/system-prompts-guardrails.html">System Prompts & Guardrails</a></li>
+<li><a href="/glossary/generative-ui.html">Generative UI</a></li>
+<li><a href="/glossary/vibe-coding.html">Vibe Coding</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer">Anthropic: Prompt Engineering Overview</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener noreferrer">Anthropic: Prompting Best Practices</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Calibrates stochastic model outputs to achieve syntactic correctness, tone compliance, and structured schemas without fine-tuning underlying model weights.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">System prompts</span><span class="concept-tag">few-shot demonstration</span><span class="concept-tag">chain-of-thought</span><span class="concept-tag">output formatting constraints.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Authors construct instructions specifying persona, context, step-by-step reasoning steps, and strict response schemas (such as JSON).</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/context-engineering.html">Context Engineering</a></li><li><a href="/glossary/system-prompts-guardrails.html">System Prompts &amp; Guardrails</a></li><li><a href="/glossary/generative-ui.html">Generative UI</a></li><li><a href="/glossary/vibe-coding.html">Vibe Coding</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Lilian Weng, Prompt Engineering Guides, OpenAI Cookbook</li><li>Anthropic Interactive Prompting Guide</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

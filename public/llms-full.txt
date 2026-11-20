@@ -298,7 +298,7 @@ Bypassed static Figma mocks to directly model dynamic fee calculations. Delivere
 
 ## 6. Architectural Product Design Knowledge System (A Canonical Glossary and Structural Ontology)
 **Index URL:** https://lexkonovalov.com/glossary/
-**Total Canonical Terms:** 151
+**Total Canonical Terms:** 176
 **Supporting Pages:** https://lexkonovalov.com/glossary/ooux/, https://lexkonovalov.com/glossary/ooux-worked-example.html
 
 This ontology establishes an authoritative, search-indexable reference bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
@@ -315,12 +315,12 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Representative Frameworks:** W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components
 - **Maturity Distribution:** 75% Established, 25% Emerging
 
-#### Product Strategy & Growth (27 terms)
+#### Product Strategy & Growth (39 terms)
 - **Primary Focus:** Experimentation, Unit Economics, Conversion Architecture
 - **Representative Frameworks:** Continuous Discovery, JTBD, Product-Led Growth, Telemetry
 - **Maturity Distribution:** 80% Established, 20% Emerging
 
-#### AI & Agentic Systems (25 terms)
+#### AI & Agentic Systems (38 terms)
 - **Primary Focus:** Agentic Orchestration, Context Ingestion, Dynamic Run-Time UI
 - **Representative Frameworks:** Model Context Protocol (MCP), Agent Skills (SKILL.md), Vercel Generative UI
 - **Maturity Distribution:** 20% Established, 55% Emerging, 25% Coined
@@ -945,154 +945,154 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/agentic-ai.html
 - **Category:** AI & Agentic Systems (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Agentic AI refers to autonomous artificial intelligence systems equipped with reasoning loops, memory systems, and tool access that pursue complex, multi-step goals with minimal real-time human intervention.
-- **Purpose:** Elevates software from passive transactional execution to proactive, goal-oriented problem solving, autonomously executing intricate enterprise workflows.
-- **Key Concepts:** Autonomous planning, environmental tool invocation, reflection loops, iterative state tracking.
-- **How It Works:** The model decomposes broad user objectives into discrete sub-goals, evaluates intermediate outcomes, interacts with APIs, and iteratively refines plans until completion.
+- **Definition:** Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.
+- **Purpose:** Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.
+- **Key Concepts:** Example: preparing a trip proposal, Agents, workflows, and multiple agents, Questions for product teams
+- **How It Works:** Agentic AI describes AI systems that can pursue goals through sequences of actions with some degree of autonomy. In LLM-based applications, this often includes selecting tools, responding to results, and adapting the next step within defined limits.
 - **Related Terms:** AI Agent, Agent Harness, Tool Calling (Function Calling), Autonomous Workflow Orchestration
-- **SEO Title:** What is Agentic AI? Autonomous Agents & Cognitive Architecture
-- **Sources:** Andrew Ng, Agentic Design Patterns; Thoughtworks, Understanding AI Agents
+- **SEO Title:** Agentic AI: Meaning, Autonomy, and Workflow Example
+- **Sources:** Anthropic: Building Effective Agents (https://www.anthropic.com/research/building-effective-agents); LangChain: Workflows and Agents (https://docs.langchain.com/oss/python/langgraph/workflows-agents)
 
 #### 052. AI Agent
 - **URL:** https://lexkonovalov.com/glossary/ai-agent.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** An AI Agent is an orchestrated computing system pairing a foundational reasoning model (LLM) with an external runtime harness that provides tools, context, long-term memory, and environment execution privileges.
-- **Purpose:** Enables probabilistic reasoning models to execute deterministic operations, read live software environments, and alter real-world system states.
-- **Key Concepts:** Reasoning engine (LLM), external harness, tool interfaces, sensory inputs.
-- **How It Works:** Formulated systematically as AI Agent ≈ Model + Harness. The model acts as the reasoning brain, while the harness provides tools, data, and feedback loops.
+- **Definition:** An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.
+- **Purpose:** An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.
+- **Key Concepts:** How an LLM-based agent works, Example: investigating a delayed order, What designers should define
+- **How It Works:** An AI agent is a system that observes information about its environment and chooses actions toward a goal. In current LLM-based products, an agent often uses a language model to decide which tools to call, inspect the results, and select a next step.
 - **Related Terms:** Agentic AI, Agent Harness, Model Context Protocol (MCP), Tool Calling (Function Calling)
-- **SEO Title:** AI Agents Explained: Architecture, Models, and Execution Harnesses
-- **Sources:** Birgitta Böckeler, AI Agent Harness, Thoughtworks; Harrison Chase, LangChain Agent Architecture
+- **SEO Title:** AI Agent: Definition, How It Works, and Product Example
+- **Sources:** Yao et al.: ReAct (https://arxiv.org/abs/2210.03629); Anthropic: Building Effective Agents (https://www.anthropic.com/research/building-effective-agents)
 
 #### 053. Agent Harness
 - **URL:** https://lexkonovalov.com/glossary/agent-harness.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Emerging
-- **Definition:** An Agent Harness is the comprehensive software runtime environment surrounding an AI model that supplies the context, tools, constraints, persistence layers, and feedback loops required to safely execute work.
-- **Purpose:** Bridges raw model reasoning with real-world infrastructure, preventing stochastic hallucination by enforcing testing, permission bounds, and error recovery.
-- **Key Concepts:** Context provisioning, sandbox execution, error-feedback loops, security guardrails.
-- **How It Works:** Wraps the LLM in an execution loop: it injects relevant repository state, intercepts function calls, runs code in sandboxes, and feeds compiler errors back to the model.
-- **Related Terms:** Design Harness, AI Agent, Context Engineering, Tool Calling (Function Calling)
-- **SEO Title:** The AI Agent Harness: Architecture, Tooling, and Sandboxing
-- **Sources:** Birgitta Böckeler, AI Agent Harness, Thoughtworks (October 2026); Anthropic Engineering Guides
+- **Definition:** An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.
+- **Purpose:** An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.
+- **Key Concepts:** What it can include, Example: a support task across sessions, What to evaluate
+- **How It Works:** An agent harness is the runtime and supporting infrastructure that enables an AI model to operate as an agent. It manages the interaction between model calls, tools, task state, and the execution environment.
+- **Related Terms:** Design Harness, AI Agent, Context Engineering, Tool Calling (Function Calling), Model Routing
+- **SEO Title:** Agent Harness: Definition, Components, and Example
+- **Sources:** Anthropic: Scaling Managed Agents (https://www.anthropic.com/research/managed-agents); Anthropic: Effective Harnesses for Long-Running Agents (https://www.anthropic.com/research/effective-harnesses-for-long-running-agents)
 
 #### 054. Design Harness
 - **URL:** https://lexkonovalov.com/glossary/design-harness.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Coined / Interpretive
-- **Definition:** A Design Harness is the structural environment of design systems, semantic tokens, DESIGN.md guidelines, and evaluation criteria that governs AI coding agents to prevent aesthetic and architectural drift.
-- **Purpose:** Prevents AI-generated code from violating brand rules, introducing design debt, or fabricating non-existent UI components at high velocity.
-- **Key Concepts:** Machine-readable design rules, DESIGN.md, blind eval gates, drift detection.
-- **How It Works:** Injects machine-readable design tokens and component contracts into agent context while running automated visual/code linters to validate UI output before merge.
-- **Related Terms:** Agent Harness, Design System, Evaluation Harness (AI Evals)
-- **SEO Title:** What is a Design Harness? Enforcing UI Systems in Agentic Code
-- **Sources:** Samin, Design Harness: Governing Output at AI Velocity, Medium; OpenDesign Labs, Design Harness Beta (September 2026); UX Harness
+- **Definition:** A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.
+- **Purpose:** A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.
+- **Key Concepts:** What it can contain, Example: building a booking form, Keep the checks meaningful, Which rules should an AI agent receive?
+- **How It Works:** A design harness is a set of design references, implementation constraints, and validation tools that guides AI-assisted interface development. It helps an agent work with a product's existing components, tokens, patterns, and acceptance criteria.
+- **Related Terms:** Agent Harness, Design System, Evaluation Harness (AI Evals), AI-assisted Design
+- **SEO Title:** Design Harness: Guiding and Checking AI-Generated Interfaces
+- **Sources:** Figma: Code Connect Introduction (https://developers.figma.com/docs/code-connect/); Storybook: Testing UI Components (https://storybook.js.org/docs/writing-tests)
 
 #### 055. Model Context Protocol (MCP)
 - **URL:** https://lexkonovalov.com/glossary/model-context-protocol-mcp.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Emerging
-- **Definition:** The Model Context Protocol (MCP) is an open standard created by Anthropic that standardizes how AI applications securely connect, share context, and invoke external tools, resources, and prompts across systems.
-- **Purpose:** Replaces bespoke, fragmented point-to-point API connectors with a universal protocol, analogous to the Language Server Protocol (LSP) for developer tooling.
-- **Key Concepts:** Host-Client-Server architecture, Tools, Resources, Prompts, JSON-RPC 2.022.
-- **How It Works:** An MCP Host spawns MCP Clients that connect to isolated MCP Servers over stdio or Streamable HTTP, discovering available tools and data via JSON-RPC.
-- **Related Terms:** Tool Calling (Function Calling), Context Engineering, Agent Skills (SKILL.md), AI Agent
-- **SEO Title:** Model Context Protocol (MCP): The Universal Standard for AI Context
-- **Sources:** Anthropic, Introducing the Model Context Protocol; ModelContextProtocol.io Specification
+- **Definition:** Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.
+- **Purpose:** Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.
+- **Key Concepts:** Host, client, and server, Example: checking a support ticket, MCP, tool calling, and skills
+- **How It Works:** Model Context Protocol (MCP) is an open protocol for connecting AI applications to external capabilities and context through a common client-server interface. MCP servers can expose tools, resources, and prompt templates for compatible applications.
+- **Related Terms:** Tool Calling (Function Calling), Context Engineering, Agent Skills (SKILL.md), AI Agent, Figma MCP Server
+- **SEO Title:** Model Context Protocol (MCP): Definition and How It Works
+- **Sources:** Model Context Protocol: Architecture Overview (https://modelcontextprotocol.io/docs/learn/architecture); OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 #### 056. Agent Skills (SKILL.md)
 - **URL:** https://lexkonovalov.com/glossary/agent-skills-skill-md.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Emerging
-- **Definition:** Agent Skills are structured file-system directories containing a SKILL.md manifest, procedural instructions, execution scripts, and resource references that supply agents with specialized capabilities on demand.
-- **Purpose:** Scales agent capabilities modularly without bloating model prompt windows, loading context dynamically only when specific tasks are triggered.
-- **Key Concepts:** File-system-first architecture, SKILL.md manifest, unbounded context, modular execution.
-- **How It Works:** Agents scan skill catalogs; when a task matches a skill's metadata, the agent loads procedural files and executes localized helper scripts.
+- **Definition:** Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.
+- **Purpose:** Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.
+- **Key Concepts:** Example: preparing a glossary entry, Skills, tools, and MCP
+- **How It Works:** Agent Skills are reusable packages of instructions and supporting resources that help compatible AI agents perform specific tasks. In the Agent Skills format, each skill is a directory containing a SKILL.md file, with optional scripts, references, and assets.
 - **Related Terms:** Model Context Protocol (MCP), Agent Harness, Context Engineering, Tool Calling (Function Calling)
-- **SEO Title:** Agent Skills & SKILL.md: Building Portable Capabilities for AI
-- **Sources:** Anthropic, Equipping Agents for the Real World with Agent Skills; Agent Skills Open Specification
+- **SEO Title:** Agent Skills and SKILL.md: Format, Uses, and Example
+- **Sources:** Agent Skills: Overview (https://agentskills.io/home); Agent Skills: Specification (https://agentskills.io/specification)
 
 #### 057. Context Engineering
 - **URL:** https://lexkonovalov.com/glossary/context-engineering.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Emerging
-- **Definition:** Context Engineering is the systematic software practice of sourcing, filtering, structuring, and sequencing dynamic information payloads supplied to an LLM's context window for a given task.
-- **Purpose:** Solves the "needle in a haystack" problem and context window bloat, maximizing model reasoning fidelity while minimizing inference latency and token costs.
-- **Key Concepts:** Information pruning, dynamic context assembly, token budgeting, prompt caching.
-- **How It Works:** Systems pull data from databases, active states, and RAG pipelines, compressing and ranking the payload into structured formats before dispatching the model prompt.
-- **Related Terms:** Prompt Engineering, Retrieval-Augmented Generation (RAG), Structured Data for LLMs, Agent Harness
-- **SEO Title:** Context Engineering: Optimizing Information Flow in LLMs & Agents
-- **Sources:** Birgitta Böckeler, AI Agent Harness, Thoughtworks; DomainDrivenUX Context Architecture
+- **Definition:** Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.
+- **Purpose:** Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.
+- **Key Concepts:** What does context engineering involve?, Example: Explaining a booking change, How do you evaluate context quality?
+- **How It Works:** Context engineering is the practice of selecting, organizing, and updating the information available to a language model for a task. For an AI agent, that information can include instructions, conversation history, retrieved documents, tool descriptions, and tool results.
+- **Related Terms:** Prompt Engineering, Retrieval-Augmented Generation (RAG), Structured Data for LLMs, Agent Harness, Evaluation Harness (AI Evals), Context Window
+- **SEO Title:** Context Engineering for AI Agents: A Practical Example
+- **Sources:** Effective Context Engineering for AI Agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents); Context Engineering in Agents, LangChain (https://docs.langchain.com/oss/python/langchain/context-engineering)
 
 #### 058. Prompt Engineering
 - **URL:** https://lexkonovalov.com/glossary/prompt-engineering.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Prompt Engineering is the craft of designing, formatting, and refining natural language inputs, system directives, and few-shot examples to steer LLMs toward desired output behaviors.
-- **Purpose:** Calibrates stochastic model outputs to achieve syntactic correctness, tone compliance, and structured schemas without fine-tuning underlying model weights.
-- **Key Concepts:** System prompts, few-shot demonstration, chain-of-thought, output formatting constraints.
-- **How It Works:** Authors construct instructions specifying persona, context, step-by-step reasoning steps, and strict response schemas (such as JSON).
+- **Definition:** Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.
+- **Purpose:** Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.
+- **Key Concepts:** Example: summarizing a support ticket, How to improve a prompt, Where the prompt's role ends
+- **How It Works:** Prompt engineering is the practice of designing and testing the instructions, context, examples, and output requirements given to an AI model to improve its performance on a task. It combines writing a clear request with evaluating the resulting behavior.
 - **Related Terms:** Context Engineering, System Prompts & Guardrails, Generative UI, Vibe Coding
-- **SEO Title:** What is Prompt Engineering? Modern Techniques and Best Practices
-- **Sources:** Lilian Weng, Prompt Engineering Guides, OpenAI Cookbook; Anthropic Interactive Prompting Guide
+- **SEO Title:** Prompt Engineering: Definition, Example, and Evaluation
+- **Sources:** Anthropic: Prompt Engineering Overview (https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview); Anthropic: Prompting Best Practices (https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
 
 #### 059. Retrieval-Augmented Generation (RAG)
 - **URL:** https://lexkonovalov.com/glossary/retrieval-augmented-generation-rag.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Retrieval-Augmented Generation (RAG) is an architectural pattern that retrieves relevant factual knowledge from external vectorized databases and injects it into an LLM's prompt context prior to response synthesis.
-- **Purpose:** Prevents factual hallucinations and delivers up-to-date domain expertise without the massive computational expense of continuous model retraining.
-- **Key Concepts:** Vector embeddings, semantic similarity search, chunking strategies, dense retrieval.
-- **How It Works:** User queries are embedded into vector space, matched against document databases via cosine similarity, and top chunks are prepended to the prompt context.
-- **Related Terms:** Context Engineering, Knowledge Graphs (AI Context), Structured Data for LLMs, AI Agent
-- **SEO Title:** What is RAG? Retrieval-Augmented Generation Architecture
-- **Sources:** Patrick Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, Meta AI / NeurIPS; Pinecone System Architecture
+- **Definition:** Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.
+- **Purpose:** Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.
+- **Key Concepts:** How RAG works, Example: answering a cancellation question, Product and content checks
+- **How It Works:** Retrieval-augmented generation (RAG) is an approach that retrieves relevant information from an external source and supplies it to a generative model to help produce an answer. It connects generation with a searchable body of evidence.
+- **Related Terms:** Context Engineering, Knowledge Graphs (AI Context), Structured Data for LLMs, AI Agent, AI Grounding
+- **SEO Title:** Retrieval-Augmented Generation (RAG): How It Works
+- **Sources:** Lewis et al.: Retrieval-Augmented Generation (https://arxiv.org/abs/2005.11401); Microsoft: Retrieval-Augmented Generation Overview (https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
 #### 060. Tool Calling (Function Calling)
 - **URL:** https://lexkonovalov.com/glossary/tool-calling-function-calling.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Tool Calling (or Function Calling) is an API capability where an LLM determines that an external action is needed, outputting a structured JSON object specifying function names and arguments rather than plain text.
-- **Purpose:** Empowers probabilistic text models to safely invoke external software functions, query relational databases, and drive computational side effects.
-- **Key Concepts:** Function signatures, JSON Schema definitions, programmatic execution, argument parsing.
-- **How It Works:** The host application passes available tool schemas to the model; the model evaluates user intent, returns argument JSON, and pauses until the host returns execution results.
-- **Related Terms:** Model Context Protocol (MCP), Generative UI, Agent Harness, Agentic AI
-- **SEO Title:** Tool Calling Explained: How LLMs Invoke Code and APIs
-- **Sources:** OpenAI Function Calling Documentation; Anthropic Tool Use Specification; Vercel AI SDK
+- **Definition:** Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.
+- **Purpose:** Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.
+- **Key Concepts:** How it works, Example: checking flight availability, What to check
+- **How It Works:** Tool calling, also called function calling, lets an AI model request a defined operation using structured arguments. Application code or a provider-hosted service executes the operation and returns a result that the model can use.
+- **Related Terms:** Model Context Protocol (MCP), Generative UI, Agent Harness, Agentic AI, Structured Outputs, Prompt Injection
+- **SEO Title:** Tool Calling (Function Calling): How It Works and Examples
+- **Sources:** Anthropic: Tool Use Overview (https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview); OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 #### 061. Human-in-the-Loop (HITL)
 - **URL:** https://lexkonovalov.com/glossary/human-in-the-loop-hitl.html
 - **Category:** AI & Agentic Systems (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Human-in-the-Loop (HITL) is a governance and interaction design framework requiring explicit human verification, authorization, or correction at designated risk thresholds within automated agent workflows.
-- **Purpose:** Balances the execution velocity of autonomous agents with human accountability, safety, and legal compliance in mission-critical applications.
-- **Key Concepts:** Decision gates, escalation triggers, approval flows, trust calibration.
-- **How It Works:** The agent pauses when encountering high-risk actions (e.g., database writes, financial transfers), rendering an approval UI for human sign-off before proceeding.
-- **Related Terms:** Agentic UX, Agent Harness, Operational UX, Design System Governance
-- **SEO Title:** Human-in-the-Loop (HITL) Architecture: Designing Safe AI Workflows
-- **Sources:** Defense Innovation Board, AI Ethics Principles; UX Product Design Harness Contract
+- **Definition:** Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.
+- **Purpose:** Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.
+- **Key Concepts:** Where does the person enter the loop?, Example: Approving a flight change, How do you evaluate the review?
+- **How It Works:** Human-in-the-loop (HITL) describes a process in which a person contributes judgment, feedback, or approval during an automated task. In an AI product, the person might correct extracted information, review a proposed decision, or authorize an action before it proceeds.
+- **Related Terms:** Agentic UX, Agent Harness, Operational UX, Design System Governance, Explainable AI, Trust Calibration in AI
+- **SEO Title:** Human-in-the-Loop (HITL): Review and Control in AI
+- **Sources:** Feedback and Control, Google PAIR (https://pair.withgoogle.com/chapter/feedback-controls/); Interrupts, LangGraph (https://docs.langchain.com/oss/python/langgraph/interrupts)
 
 #### 062. Generative UI
 - **URL:** https://lexkonovalov.com/glossary/generative-ui.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Emerging
-- **Definition:** Generative UI is an interface architecture where an AI system dynamically streams, assembles, and renders interactive, typed frontend UI components inline during conversation based on runtime user intent.
-- **Purpose:** Moves conversational AI beyond static text and markdown, providing tailored visual affordances (e.g., flight booking cards, charts, interactive forms) directly inside conversation streams.
-- **Key Concepts:** Dynamic component hydration, streamable React Server Components, tool-driven UI rendering.
-- **How It Works:** Tool calls made by the model map to registered design system components, which are streamed and mounted into the DOM using modern libraries.
-- **Related Terms:** AI-native Design, Tool Calling (Function Calling), Component Architecture, Model Context Protocol (MCP)
-- **SEO Title:** Generative UI: Dynamic Component Streaming with AI SDK
-- **Sources:** Vercel, AI SDK 3.0: Generative UI (https://vercel.com/blog/ai-sdk-3-generative-ui); Ultralytics, Generative UI Architecture
+- **Definition:** Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.
+- **Purpose:** Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.
+- **Key Concepts:** Example: comparing flight options, What designers should specify, How can schemas constrain generated UI?
+- **How It Works:** Generative UI is an approach in which AI generates or selects interface elements in response to a user's request and context. The result can include interactive cards, forms, tables, or charts alongside text.
+- **Related Terms:** AI-native Design, Tool Calling (Function Calling), Component Architecture, Model Context Protocol (MCP), Conversational UX
+- **SEO Title:** Generative UI: Definition, Examples, and Design Controls
+- **Sources:** Vercel AI SDK: Generative User Interfaces (https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces); W3C: Understanding Status Messages (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
 
 #### 063. AI-native Design
 - **URL:** https://lexkonovalov.com/glossary/ai-native-design.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Coined / Interpretive
 - **Definition:** AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.
-- **Purpose:** Creates novel human-computer interaction paradigms that leverage autonomy, context awareness, and dynamic interfaces to solve previously intractable workflow challenges.
-- **Key Concepts:** Probabilistic interactions, ambient context, variable UI layouts, intent over navigation.
-- **How It Works:** Designers construct experiences where user intent replaces rigid navigational trees, pairing dynamic generative canvases with system constraints and telemetry.
+- **Purpose:** AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.
+- **Key Concepts:** What makes a product AI-native?, An AI-native design example: support triage, What should designers define?, How do you know it helps?, Which AI concepts affect the interaction?
+- **How It Works:** AI-native design is an approach to product design in which AI capabilities are central to the product’s value and core workflows. Designers shape how people provide context, evaluate outputs, direct actions, and recover when the system makes mistakes.
 - **Related Terms:** Generative UI, Agentic UX, Design Harness, Operational UX
 - **SEO Title:** AI-native Design: Meaning & Example | Product Design Glossary
 - **Sources:** User Needs + Defining Success, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/); Mental Models, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/); Guidelines for Human-AI Interaction, Microsoft HAX Design Library (https://www.microsoft.com/en-us/haxtoolkit/library/); Errors + Graceful Failure, Google People + AI Guidebook (https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/)
@@ -1101,22 +1101,22 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/vibe-coding.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Coined / Interpretive
-- **Definition:** Vibe Coding is a software development workflow where a human orchestrates code generation and application construction entirely via natural language prompts, selectively reviewing and testing running software without reading raw syntax.
-- **Purpose:** Drastically lowers barriers to software creation, enabling rapid prototyping and concept iteration at high speed.
-- **Key Concepts:** Material disengagement, prompt-driven execution, iterative goal satisfaction, automated debugging loops.
-- **How It Works:** The user instructs an agent, observes the running application preview, and prompts iterative refinements while the agent writes and fixes code autonomously.
-- **Related Terms:** Design Engineering, Design-to-Code Workflow, Agent Harness, AI Agent
-- **SEO Title:** What is Vibe Coding? Origins, Karpathy Definition, and Limits
-- **Sources:** Andrej Karpathy, Vibe Coding Announcement (February 2025); ArXiv Research, Material Disengagement in AI Programming
+- **Definition:** Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.
+- **Purpose:** Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.
+- **Key Concepts:** Example: exploring a scheduling interface, Vibe coding and reviewed development, What designers can evaluate
+- **How It Works:** Vibe coding is an approach to building software by describing desired behavior to an AI coding tool and iterating on its output with limited attention to the generated code. Andrej Karpathy introduced the term in 2025 to describe this style of experimentation.
+- **Related Terms:** Design Engineering, Design-to-Code Workflow, Agent Harness, AI Agent, AI Prototyping
+- **SEO Title:** Vibe Coding: Meaning, Prototype Example, and Limits
+- **Sources:** Andrej Karpathy: Original Vibe Coding Post (https://x.com/karpathy/status/1886192184808149383); Simon Willison: Vibe Coding and AI-Assisted Programming (https://simonwillison.net/2025/Mar/19/vibe-coding/)
 
 #### 065. Structured Data for LLMs
 - **URL:** https://lexkonovalov.com/glossary/structured-data-for-llms.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.
-- **Purpose:** Enhances semantic discoverability, unambiguous entity disambiguation, and structured grounding for search engine generative overviews and LLM retrieval-augmented agents.
-- **Key Concepts:** JSON-LD 1.1 formatting, Schema.org vocabularies (DefinedTerm, etc.), entity relationship graphs, semantic HTML vs structured data, AI Overviews indexing eligibility
-- **How It Works:** Injects machine-readable JSON-LD graph objects into HTML documents, enabling web scrapers, semantic search engines, and LLM context pipelines to parse entity hierarchies directly.
+- **Purpose:** Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.
+- **Key Concepts:** What can structured data describe?, How is it different from semantic HTML?, Do Google’s AI features need special structured data?, Is structured data the same as structured AI output?
+- **How It Works:** Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.
 - **Related Terms:** llms.txt Proposal, Content Modeling, Knowledge Graphs (AI Context), Controlled Vocabulary, Semantic HTML
 - **SEO Title:** Structured Data for LLMs and Schema.org | Product Design Glossary
 - **Sources:** Getting Started with Schema.org, Schema.org (https://schema.org/docs/gs.html); DefinedTerm, Schema.org (https://schema.org/DefinedTerm); JSON-LD 1.1, W3C (https://www.w3.org/TR/json-ld11/); Introduction to Structured Data, Google Search Central (https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data); AI Features and Your Website, Google Search Central (https://developers.google.com/search/docs/appearance/ai-features)
@@ -1125,131 +1125,131 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/llms-txt-proposal.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Emerging
-- **Definition:** The llms.txt Proposal is a proposed web standard specifying a curated, Markdown-formatted navigation map located at a website's root (/llms.txt), pointing AI models and agents to core content pages.
-- **Purpose:** Provides AI agents with a clean, low-token navigation index of high-value site documentation, bypassing the clutter of heavy HTML scripts and complex navigation trees.
-- **Key Concepts:** /llms.txt root file, curated link markdown, low-token context aid, /llms-full.txt companion.
-- **How It Works:** The server hosts a lightweight markdown file with H project names, summary blockquotes, and link lists with 1-line descriptions, accompanied by raw .md content mirrors.
+- **Definition:** llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.
+- **Purpose:** llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.
+- **Key Concepts:** What the file contains, Example: a product design glossary, Does llms.txt improve SEO?
+- **How It Works:** llms.txt is a proposal for providing a concise Markdown overview that helps AI agents find and use a website's content. The file can summarize a site or section, explain important context, and link to relevant resources.
 - **Related Terms:** Structured Data for LLMs, Content Modeling, Context Engineering
-- **SEO Title:** What is llms.txt? Jeremy Howard's Proposal Explained
-- **Sources:** Jeremy Howard, llms.txt Specification, Answer.AI (v, August 2026); W2B Agency Technical Guide
+- **SEO Title:** llms.txt: Proposal, File Format, and SEO Expectations
+- **Sources:** Jeremy Howard: The llms.txt Proposal, v2 (https://llmstxt.org/); Google Search Central: AI Features and Your Website (https://developers.google.com/search/docs/appearance/ai-features)
 
 #### 067. Multimodal AI
 - **URL:** https://lexkonovalov.com/glossary/multimodal-ai.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Multimodal AI refers to machine learning architectures capable of processing, synthesizing, and relating information across multiple diverse sensory modalities, including text, vector graphics, raster images, audio, and video.
-- **Purpose:** Enables computers to comprehend real-world design artifacts—such as visual mockups, spatial whiteboards, and spoken design critiques—in their native formats.
-- **Key Concepts:** Cross-attention mechanisms, joint embedding spaces, sensory fusion, unified encoders.
-- **How It Works:** Deep neural networks map heterogeneous data streams (e.g., pixels and tokens) into shared high-dimensional vector spaces to compute cross-modal reasoning.
-- **Related Terms:** AI Agent, Generative UI, Semantic Zoom, AI-native Design
-- **SEO Title:** Multimodal AI in Product Design: Vision, Audio & Canvas UX
-- **Sources:** OpenAI GPT-4V Technical Report; DeepMind Gemini Architectural Overview
+- **Definition:** Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.
+- **Purpose:** Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.
+- **Key Concepts:** What can multimodal AI do?, How does multimodal AI relate to generative AI?, Example: Reviewing a receipt in an expense app
+- **How It Works:** Multimodal AI processes or combines information in more than one modality, such as text, images, audio, or video. A multimodal system might answer a written question about a photo or use a spoken request together with information shown on a screen.
+- **Related Terms:** AI Agent, Generative UI, Semantic Zoom, AI-native Design, Context Engineering
+- **SEO Title:** Multimodal AI: Text, Image, and Audio Examples
+- **Sources:** Multimodal AI, Google Cloud (https://cloud.google.com/use-cases/multimodal-ai); Image Understanding, Google Gemini API Documentation (https://ai.google.dev/gemini-api/docs/image-understanding); Audio Understanding, Google Gemini API Documentation (https://ai.google.dev/gemini-api/docs/audio)
 
 #### 068. Knowledge Graphs (AI Context)
 - **URL:** https://lexkonovalov.com/glossary/knowledge-graphs-ai-context.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A Knowledge Graph is a structured network representing real-world entities as nodes and their semantic interrelations as typed edges, used to provide explicit, relational context to AI systems.
-- **Purpose:** Provides deterministic, verifiable ground-truth data structures for AI reasoning, eliminating the factual hallucinations common to unstructured vector embeddings.
-- **Key Concepts:** Nodes (entities), edges (predicates), triple stores, ontological reasoning.
-- **How It Works:** Information is structured as RDF triples (Subject -[Predicate]-> Object); query engines traverse these relationships to feed structured contextual subgraphs to LLMs.
+- **Definition:** A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.
+- **Purpose:** A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.
+- **Key Concepts:** Example: finding affected reservations, Knowledge graphs and RAG, Check the relationships
+- **How It Works:** A knowledge graph represents entities and the relationships between them in a graph structure, often with properties and identifiers. In AI applications, it can supply structured context for retrieval, reasoning, and explanation.
 - **Related Terms:** Conceptual Schema, Domain Context Modeling, Retrieval-Augmented Generation (RAG), Structured Data for LLMs
-- **SEO Title:** Knowledge Graphs in AI: Structuring Graph Context for LLMs
-- **Sources:** Tim Berners-Lee, The Semantic Web, Scientific American; MCP Memory Server Specification
+- **SEO Title:** Knowledge Graphs for AI: Entities, Relationships, and Uses
+- **Sources:** W3C: RDF 1.1 Primer (https://www.w3.org/TR/rdf11-primer/); Microsoft: GraphRAG Documentation (https://microsoft.github.io/graphrag/)
 
 #### 069. Agentic UX
 - **URL:** https://lexkonovalov.com/glossary/agentic-ux.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Coined / Interpretive
-- **Definition:** Agentic UX is the interaction design framework governing how autonomous digital agents communicate operational intent, progress states, uncertainty calibrations, and permission requests to human operators.
-- **Purpose:** Establishes human trust, transparency, and situational control over autonomous processes executing multi-step operations without immediate supervision.
-- **Key Concepts:** Intent signaling, progress observability, intervention triggers, trust calibration.
-- **How It Works:** Designers build multi-state feedback systems, activity logs, reversible actions, and explicit decision checkpoints into agent workflows.
-- **Related Terms:** Human-in-the-Loop (HITL), Operational UX, AI-native Design, Agent Harness
-- **SEO Title:** Agentic UX: Designing for Autonomous AI Agents and Trust
-- **Sources:** Interaction Design Foundation, Designing for Agentic AI; Thoughtworks Customer Insights
+- **Definition:** Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.
+- **Purpose:** Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.
+- **Key Concepts:** Example: updating a set of reservations, Design around delegation, Evaluate the outcome
+- **How It Works:** Agentic UX is the design of experiences in which people delegate goals or tasks to AI agents and retain appropriate visibility and control over the work. It covers the interaction before, during, and after an agent takes action.
+- **Related Terms:** Human-in-the-Loop (HITL), Operational UX, AI-native Design, Agent Harness, Conversational UX, AI Transparency
+- **SEO Title:** Agentic UX: Designing Control, Progress, and Recovery
+- **Sources:** Google PAIR: Feedback and Control (https://pair.withgoogle.com/chapter/feedback-controls/); Google PAIR: Errors and Graceful Failure (https://pair.withgoogle.com/chapter/errors-failing/); LangChain: Interrupts (https://docs.langchain.com/oss/python/langgraph/interrupts)
 
 #### 070. System Prompts & Guardrails
 - **URL:** https://lexkonovalov.com/glossary/system-prompts-guardrails.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** System Prompts & Guardrails are structural boundary rules and meta-instructions hardcoded into an AI application's execution harness to enforce safety, tone, data privacy, and operational constraints.
-- **Purpose:** Prevents prompt injections, ensures regulatory compliance, restricts system permissions, and maintains brand voice integrity across generative responses.
-- **Key Concepts:** Metaprompts, input/output validation, safety boundary rails, prompt isolation.
-- **How It Works:** Upstream middleware evaluates inputs and model outputs against safety policies, intercepting and modifying non-compliant generations.
-- **Related Terms:** Context Engineering, Agent Harness, Design Harness, Prompt Engineering
-- **SEO Title:** AI System Prompts & Guardrails: Architecture and Safety Patterns
-- **Sources:** NVIDIA NeMo Guardrails Specification; Anthropic Claude System Prompting Architecture
+- **Definition:** System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.
+- **Purpose:** System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.
+- **Key Concepts:** What belongs in each layer?, Example: Preparing a flight change, How do you evaluate the controls?
+- **How It Works:** System prompts provide application-level instructions that guide an AI model’s behavior. Guardrails are additional controls that check or constrain inputs, outputs, and actions around the model. Together they help define how an AI feature is expected to operate.
+- **Related Terms:** Context Engineering, Agent Harness, Design Harness, Prompt Engineering, Prompt Injection
+- **SEO Title:** System Prompts and Guardrails: Instructions and Checks
+- **Sources:** Guardrails, LangChain (https://docs.langchain.com/oss/python/langchain/guardrails); Prompt Injection, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
 
 #### 071. Synthetic User Testing
 - **URL:** https://lexkonovalov.com/glossary/synthetic-user-testing.html
 - **Category:** AI & Agentic Systems (Secondary: Product Strategy & Growth)
 - **Maturity:** Emerging
-- **Definition:** Synthetic User Testing is the research simulation practice of executing automated user experience audits, heuristic reviews, and usability walk-throughs using AI agents prompted with precise behavioral personas.
-- **Purpose:** Accelerates discovery cycles and catches glaring usability defects early in sprint cycles before investing time in expensive human cohort testing.
-- **Key Concepts:** Persona prompting, agentic simulation, automated heuristic evaluations, synthetic bias calibration.
-- **How It Works:** Personas are parameterized into agent harnesses that navigate digital prototypes, recording task completions, perceived friction points, and heuristic scores.
-- **Related Terms:** Product Discovery, Continuous Experimentation, Design Harness, Evaluation Harness (AI Evals)
-- **SEO Title:** Synthetic User Testing: Running AI-Powered UX Audits
-- **Sources:** Jakob Nielsen, AI-Driven Usability Testing; OpenDesign Labs Evaluation Benchmarks
+- **Definition:** Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.
+- **Purpose:** Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.
+- **Key Concepts:** Where it can help, Limits to check
+- **How It Works:** Synthetic user testing uses AI-generated personas, responses, or simulated interactions to explore how people might react to a product. Its outputs are model-generated predictions that require validation against evidence from real users.
+- **Related Terms:** Product Discovery, Continuous Experimentation, Design Harness, Evaluation Harness (AI Evals), AI in UX Research, ResearchOps
+- **SEO Title:** Synthetic User Testing: Uses, Limits, and Validation
+- **Sources:** Nielsen Norman Group: Synthetic Users vs. Human Respondents (https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/); Nielsen Norman Group: Synthetic Users (https://www.nngroup.com/articles/synthetic-users/)
 
 #### 072. Autonomous Workflow Orchestration
 - **URL:** https://lexkonovalov.com/glossary/autonomous-workflow-orchestration.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Emerging
-- **Definition:** Autonomous Workflow Orchestration is the algorithmic coordination and execution of multi-agent computational pipelines, scheduling tasks, resolving dependencies, and synthesizing outputs across distributed sub-agents.
-- **Purpose:** Enables the execution of massive enterprise procedures—such as supply chain optimization or legal compliance verification—without human micro-management.
-- **Key Concepts:** Directed acyclic graphs (DAGs), state orchestration, sub-agent delegation, checkpoint recovery.
-- **How It Works:** A master orchestrator agent assigns partitioned tasks to specialized child agents, synchronizing intermediate outputs and merging final deliverables.
+- **Definition:** Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.
+- **Purpose:** Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.
+- **Key Concepts:** Example: supplier onboarding, What orchestration manages, Check before retrying
+- **How It Works:** Autonomous workflow orchestration coordinates tasks, decisions, dependencies, and execution state so an automated system can pursue a goal with limited ongoing supervision. In AI applications, it can combine predefined workflow steps with agent-selected actions.
 - **Related Terms:** Multi-Agent Systems (MAS), Agentic AI, AI Agent, Agent Harness
-- **SEO Title:** Autonomous Workflow Orchestration: Multi-Agent Systems Architecture
-- **Sources:** LangGraph Framework Documentation; Microsoft AutoGen Multi-Agent Architecture
+- **SEO Title:** Autonomous Workflow Orchestration: Definition and Example
+- **Sources:** LangChain: Workflows and Agents (https://docs.langchain.com/oss/python/langgraph/workflows-agents); LangChain: Persistence (https://docs.langchain.com/oss/python/langgraph/persistence)
 
 #### 073. Evaluation Harness (AI Evals)
 - **URL:** https://lexkonovalov.com/glossary/evaluation-harness-ai-evals.html
 - **Category:** AI & Agentic Systems (Secondary: Design Systems & Engineering)
 - **Maturity:** Emerging
-- **Definition:** An Evaluation Harness is an automated software testing suite that continuously benchmarks generative AI models and agents against standardized datasets, rubric criteria, and golden reference examples.
-- **Purpose:** Quantifies generative quality, detects performance regressions across prompt adjustments or model upgrades, and ensures production reliability.
-- **Key Concepts:** Golden datasets, LLM-as-a-judge, metric rubrics, automated benchmarking.
-- **How It Works:** The harness runs hundreds of deterministic scenarios against the AI system, scoring outputs using automated assertions, reference comparisons, and model-based evaluators.
-- **Related Terms:** Design Harness, Agent Harness, Continuous Experimentation, Visual Regression Testing
-- **SEO Title:** AI Evaluation Harnesses: Benchmarking and Testing LLM Agents
-- **Sources:** OpenAI Evals Framework; Thoughtworks, Testing and Evaluating AI Agents
+- **Definition:** An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.
+- **Purpose:** An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.
+- **Key Concepts:** What a useful test includes, Example: updating a customer address, Make comparisons meaningful
+- **How It Works:** An evaluation harness is the infrastructure that runs tests for an AI system, records what happened, applies scoring criteria, and aggregates results. Teams use it to compare versions and detect changes in behavior.
+- **Related Terms:** Design Harness, Agent Harness, Continuous Experimentation, Visual Regression Testing, AI Hallucination
+- **SEO Title:** AI Evaluation Harness: Definition, Test Cases, and Example
+- **Sources:** Anthropic: Demystifying Evals for AI Agents (https://www.anthropic.com/research/demystifying-evals-for-ai-agents); LangChain: LangSmith Evaluation (https://docs.langchain.com/langsmith/evaluation)
 
 #### 074. Context Drift
 - **URL:** https://lexkonovalov.com/glossary/context-drift.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Emerging
-- **Definition:** Context Drift is the gradual degradation of an AI agent’s reasoning coherence, instruction fidelity, or goal focus as its conversational context window fills with lengthy histories and tool responses.
-- **Purpose:** Pinpoints the root cause of late-session agent failures, guiding developers to implement periodic state summarization and context pruning mechanisms.
-- **Key Concepts:** Context saturation, attention dilution, instruction degradation, state decay.
-- **How It Works:** As token lengths expand, the model's self-attention attention weights disperse, reducing adherence to system prompts and causing task derailment.
-- **Related Terms:** Context Engineering, Agent Harness, Prompt Engineering, Memory Management
-- **SEO Title:** Understanding Context Drift in LLMs and AI Agent Sessions
-- **Sources:** Nelson F. Liu et al., Lost in the Middle: How Language Models Use Long Contexts; Thoughtworks Agent Research
+- **Definition:** Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.
+- **Purpose:** Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.
+- **Key Concepts:** What does context drift look like?, Example: A booking assistant forgets a constraint, How do you test for drift?
+- **How It Works:** Context drift describes an AI conversation or agent gradually losing track of the user’s goal, relevant facts, or earlier constraints. Teams use the term to discuss behavior over an interaction, especially when history, retrieved material, and tool results accumulate.
+- **Related Terms:** Context Engineering, Agent Harness, Prompt Engineering, Context Window
+- **SEO Title:** Context Drift in AI Agents: Signs and Practical Checks
+- **Sources:** Effective Context Engineering for AI Agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents); Lost in the Middle, Liu et al. (https://arxiv.org/abs/2307.03172)
 
 #### 075. Multi-Agent Systems (MAS)
 - **URL:** https://lexkonovalov.com/glossary/multi-agent-systems-mas.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Multi-Agent Systems (MAS) are computational environments in which multiple autonomous software agents collaborate, negotiate, and execute specialized roles to solve complex, distributed tasks.
-- **Purpose:** Prevents single-model cognitive overload by distributing responsibilities—such as research, critique, drafting, and testing—across modular agent personas.
-- **Key Concepts:** Role specialization, inter-agent communication protocols, consensus mechanisms, task delegation.
-- **How It Works:** Specialized agents exchange messages, challenge assumptions, and validate intermediate outputs via formal protocols (e.g., Critic-Actor loops) to achieve verified deliverables.
-- **Related Terms:** Agentic AI, Autonomous Workflow Orchestration, Agent Harness, Model Context Protocol (MCP)
-- **SEO Title:** Multi-Agent Systems (MAS): Collaborative AI Architecture
-- **Sources:** Michael Wooldridge, An Introduction to MultiAgent Systems, Wiley; Microsoft Research AutoGen. Category 04 — Product Strategy & Growth High-performance product design connects UX decisions with business outcomes and unit economics. Modern product organizations avoid vanity design output by aligning around continuous experimentation, clear behavioral funnels, and structured value discovery. From customer journey architectures in complex enterprise SaaS to high-velocity conversion optimization in TravelTech and consumer funnels, designers must master product metrics, Jobs to Be Done, and growth levers
+- **Definition:** A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.
+- **Purpose:** A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.
+- **Key Concepts:** How do multi-agent systems work?, Example: Researching a travel policy, When should you use multiple agents?
+- **How It Works:** A multi-agent system (MAS) is a system in which multiple autonomous agents interact to pursue goals in a shared environment. Agents may cooperate, negotiate, or compete. In applications built with language models, agents often divide a task and exchange findings through messages or shared state.
+- **Related Terms:** AI Agent, Context Engineering, Autonomous Workflow Orchestration, Human-in-the-Loop (HITL), Evaluation Harness (AI Evals)
+- **SEO Title:** Multi-Agent Systems (MAS): Architecture and Examples
+- **Sources:** An Introduction to MultiAgent Systems, Michael Wooldridge (https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html); How We Built Our Multi-Agent Research System, Anthropic (https://www.anthropic.com/research/multi-agent-research-system)
 
 #### 076. Conversion Rate Optimization (CRO)
 - **URL:** https://lexkonovalov.com/glossary/conversion-rate-optimization-cro.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.
-- **Purpose:** Increases revenue generation efficiency and customer acquisition ROI without requiring additional marketing or acquisition spend.
-- **Key Concepts:** Conversion rate formula, baseline analytics, heuristic evaluation, iterative testing.
-- **How It Works:** Formulated as Conversion Rate = (Conversions / Total Visitors) * 100. Teams isolate funnel friction, formulate behavioral hypotheses, and validate variations using controlled A/B testing.
-- **Related Terms:** A/B Testing (Split Testing), Conversion Funnel, Checkout Flow Optimization, Growth Design
+- **Purpose:** Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.
+- **Key Concepts:** How do you calculate conversion rate?, How does a CRO process work?, A CRO example: a quote request form, What if traffic is too low for A/B testing?
+- **How It Works:** Conversion rate optimization (CRO) is the practice of improving a website or app to increase the proportion of users who complete a defined action, such as purchasing, signing up, or requesting a quote. Teams use research, analytics, and experiments to identify barriers and evaluate changes.
+- **Related Terms:** A/B Testing (Split Testing), Conversion Funnel Architecture, Checkout Flow Optimization, Growth Design
 - **SEO Title:** Conversion Rate Optimization (CRO) | Product Design Glossary
 - **Sources:** Conversion rate optimization, Optimizely (https://www.optimizely.com/optimization-glossary/conversion-rate-optimization); Analytics dimensions and metrics, Google Analytics (https://support.google.com/analytics/table/13948007?hl=en); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
@@ -1258,9 +1258,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.
-- **Purpose:** Replaces internal stakeholder opinions with empirical behavioral evidence, mitigating financial and operational risks when deploying new product designs.
-- **Key Concepts:** Control vs. variant, statistical significance (p-value), sample size power, minimum detectable effect (MDE)
-- **How It Works:** Traffic is split randomly by experimentation routing engines; user interactions are tracked, and statistical hypothesis tests evaluate metric differentials.
+- **Purpose:** A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.
+- **Key Concepts:** How do you plan a UX A/B test?, What should you check before reading the result?, How do you interpret an inconclusive test?
+- **How It Works:** A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.
 - **Related Terms:** Continuous Experimentation, Conversion Rate Optimization (CRO), Feature Flag Strategy, Product Telemetry & Analytics
 - **SEO Title:** A/B Testing in UX | Product Design Glossary
 - **Sources:** Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/); Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research (https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/)
@@ -1270,9 +1270,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.
-- **Purpose:** Transforms product development from risky, large-batch feature deployments into an agile, hypothesis-driven scientific discovery process.
-- **Key Concepts:** High test velocity, experimentation culture, feature flag decoupling, institutional learning.
-- **How It Works:** Product teams deploy features behind feature toggles, measuring immediate telemetry to determine whether variations are scaled globally, adjusted, or rolled back.
+- **Purpose:** Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.
+- **Key Concepts:** How does the cycle work?, Example of using one test to plan the next
+- **How It Works:** Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.
 - **Related Terms:** A/B Testing (Split Testing), Product Discovery, Feature Flag Strategy, Growth Design
 - **SEO Title:** Continuous Experimentation | Product Design Glossary
 - **Sources:** Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/); Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/)
@@ -1282,9 +1282,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.
-- **Purpose:** Visualizes and quantifies user friction across critical journey steps, highlighting operational bottlenecks that depress customer throughput.
-- **Key Concepts:** Step drop-off rates, funnel leakage, cognitive momentum, activation thresholds.
-- **How It Works:** Designers map required user actions into discrete, measurable milestones, analyzing drop-off telemetry at each transition to optimize page transitions and forms.
+- **Purpose:** A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.
+- **Key Concepts:** How do you define the steps?, How do you calculate funnel conversion?, What does drop-off tell you?
+- **How It Works:** A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.
 - **Related Terms:** Conversion Rate Optimization (CRO), Checkout Flow Optimization, Time-to-Value (TTV)
 - **SEO Title:** Conversion Funnel: Steps and Drop-Off | Product Design Glossary
 - **Sources:** Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en); How Amplitude computes conversions through funnels, Amplitude Docs (https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions)
@@ -1294,9 +1294,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.
-- **Purpose:** Balances user effort and friction against sales readiness, capturing high-intent prospective buyers and qualifying them for suitable follow-up.
-- **Key Concepts:** Offer value exchange, Request conversion, Qualified lead rate, Progressive disclosure in forms, Error prevention and feedback
-- **How It Works:** Designs progressive, accessible form experiences that preserve user context from upstream interactions, asks only for necessary qualification fields, and delivers immediate confirmation and expectations.
+- **Purpose:** Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.
+- **Key Concepts:** What should a lead capture form ask for?, How do you measure lead capture?
+- **How It Works:** Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.
 - **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel, Progressive Disclosure, Checkout Flow Optimization
 - **SEO Title:** Lead Capture Forms: Design and Metrics | Product Design Glossary
 - **Sources:** Question pages, GOV.UK Design System (https://design-system.service.gov.uk/patterns/question-pages/); Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en); How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages)
@@ -1306,9 +1306,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.
-- **Purpose:** Protects bottom-of-the-funnel revenue realization by removing unexpected costs, cognitive distractions, payment friction, and form validation hurdles.
-- **Key Concepts:** Frictionless payments, single-page vs. multi-step checkout, trust signals, inline form recovery.
-- **How It Works:** Designers implement guest checkouts, native mobile wallet integrations, explicit cost breakdowns, and real-time input error handling.
+- **Purpose:** Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.
+- **Key Concepts:** What should you improve first?, Example of payment recovery in travel checkout, How do you measure checkout improvements?
+- **How It Works:** Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.
 - **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel, Operational UX
 - **SEO Title:** Checkout Flow Optimization | Product Design Glossary
 - **Sources:** Cart and Checkout Usability Research, Baymard Institute (https://baymard.com/research/checkout-usability); How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages); Payment UX, Baymard Institute (https://baymard.com/blog/payment-ux); How PaymentIntents work, Stripe documentation (https://docs.stripe.com/payments/paymentintents/lifecycle)
@@ -1318,10 +1318,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.
-- **Purpose:** Mitigates value, usability, feasibility, and business viability risks through continuous customer contact, assumption testing, and rapid prototyping.
-- **Key Concepts:** Four product risks (Value, Usability, Feasibility, Viability), Continuous discovery habits, Assumption testing, Discovery vs delivery, Generative research
-- **How It Works:** Engages cross-functional product trios in weekly customer interviews and rapid prototype evaluations to test critical assumptions before committing engineering resources.
-- **Related Terms:** Jobs to Be Done (JTBD), Continuous Experimentation, Mental Model Mapping, Product Strategy Canvas
+- **Purpose:** Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.
+- **Key Concepts:** What do teams learn in discovery?, Example: helping accounts send their first invoice, How does discovery fit with delivery?
+- **How It Works:** Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.
+- **Related Terms:** Jobs to Be Done (JTBD), Continuous Experimentation, Mental Model Mapping, Product Strategy Canvas, AI in UX Research
 - **SEO Title:** Product Discovery in UX | Product Design Glossary
 - **Sources:** Continuous Discovery Habits, Teresa Torres (https://www.producttalk.org/continuous-discovery-habits/); The Four Big Risks, Marty Cagan, Silicon Valley Product Group (https://www.svpg.com/four-big-risks/)
 
@@ -1330,9 +1330,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.
-- **Purpose:** Shifts product focus from surface demographics to the underlying progress and context that motivates users to hire or fire solutions.
-- **Key Concepts:** Functional dimension, Emotional dimension, Social dimension, Forces of progress (push, pull, inertia, anxiety), Hiring and firing alternatives
-- **How It Works:** Investigates past customer switching moments through timeline interviews, identifying the specific triggering circumstances, trade-offs, and progress sought.
+- **Purpose:** Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.
+- **Key Concepts:** What does a job look like?, How do you research a job?, How does JTBD inform design?
+- **How It Works:** Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.
 - **Related Terms:** Mental Model Mapping, Product Discovery, Value Proposition Canvas, Product Strategy Canvas
 - **SEO Title:** Jobs to Be Done (JTBD) in UX | Product Design Glossary
 - **Sources:** Jobs to Be Done Theory, Christensen Institute (https://www.christenseninstitute.org/theory/jobs-to-be-done/); The Jobs to Be Done Shaping Curriculum Decisions, Christensen Institute (https://www.christenseninstitute.org/wp-content/uploads/2021/04/Curriculum-Conundrum-4.20-update.pdf)
@@ -1342,9 +1342,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.
-- **Purpose:** Reduces customer acquisition costs (CAC) and accelerates enterprise expansion by empowering end-users to experience immediate value before sales interactions.
-- **Key Concepts:** Self-serve onboarding, freemium mechanics, product viral loops, product qualified leads (PQL).
-- **How It Works:** Removes upfront paywalls and sales gates, engineering rapid time-to-value so that the user realizes organic utility and triggers expansion within their organization.
+- **Purpose:** Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.
+- **Key Concepts:** How does product-led growth work?, A PLG example: a team planning tool, How is PLG different from sales-led growth?, Which PLG metrics are useful?
+- **How It Works:** Product-led growth (PLG) is a business strategy in which the product experience is the primary driver of customer acquisition, activation, retention, and expansion. People experience useful outcomes through the product, and that value supports adoption, paid conversion, or wider use within an organization.
 - **Related Terms:** Time-to-Value (TTV), Activation Metric, Growth Design, B2B SaaS Interaction Model
 - **SEO Title:** Product-Led Growth (PLG) | Product Design Glossary
 - **Sources:** Product-Led Growth: Definition and Examples, Wes Bush / ProductLed (https://productled.com/blog/product-led-growth-definition); Product-Led vs. Sales-Led Growth, Wes Bush / ProductLed (https://productled.com/blog/sales-led-growth-definition); How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls)
@@ -1354,9 +1354,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.
-- **Purpose:** Unifies cross-functional teams around a common goal, prevents conflicting departmental priorities, and ensures product decisions tie directly to sustained customer value.
-- **Key Concepts:** Core value capture, leading growth indicator, input metrics tree, team alignment.
-- **How It Works:** Leadership identifies the quantitative signal that reflects recurring customer success (e.g., "Nights Booked" for Airbnb), decomposing it into localized tactical input levers.
+- **Purpose:** A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.
+- **Key Concepts:** What makes a useful North Star Metric?, Example for an invoicing product
+- **How It Works:** A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.
 - **Related Terms:** Product Strategy Canvas, Product Telemetry & Analytics, Activation Metric, User Retention
 - **SEO Title:** North Star Metric: Examples and Inputs | Product Design Glossary
 - **Sources:** About the North Star Framework, Amplitude (https://www.amplitude.com/books/north-star/about-north-star-framework); Defining Your North Star, Amplitude (https://amplitude.com/books/north-star/defining-your-North-Star)
@@ -1365,13 +1365,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/product-strategy-canvas.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A Product Strategy Canvas is a visual strategic planning framework that articulates target customer segments, market positioning, unique value propositions, capability horizons, and competitive moats on a single page.
-- **Purpose:** Aligns executive leadership and delivery squads around a defensible product thesis, preventing feature-factory execution divorced from business strategy.
-- **Key Concepts:** Strategic positioning, competitive defensibility, target segment prioritization, outcome mapping.
-- **How It Works:** Teams articulate user problems, market alternatives, unique capabilities, and business levers, reviewing the canvas quarterly to steer roadmap priorities.
+- **Definition:** A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.
+- **Purpose:** A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.
+- **Key Concepts:** Which questions should a strategy canvas answer?, Example: A hotel operations product, How do you keep the canvas useful?
+- **How It Works:** A product strategy canvas is a one-page tool for making a product’s strategic choices explicit. It helps a team connect the people it serves, their needs, the product’s approach, and the business outcomes it aims to achieve.
 - **Related Terms:** Value Proposition Canvas, North Star Metric (NSM), Product Discovery, Product–Market Fit (PMF)
-- **SEO Title:** Product Strategy Canvas: Modern Strategic Frameworks for Design
-- **Sources:** Melissa Perri, Escaping the Build Trap, O'Reilly; Roman Pichler, Strategize: Product Strategy and Roadmapping
+- **SEO Title:** Product Strategy Canvas: Questions and an Example
+- **Sources:** The Product Vision Board, Roman Pichler (https://www.romanpichler.com/tools/product-vision-board/); What Exactly Is a Product Strategy?, Roman Pichler (https://www.romanpichler.com/blog/what-is-a-product-strategy/); The Product Canvas, Roman Pichler (https://www.romanpichler.com/tools/the-product-canvas/)
 
 #### 087. Customer Journey Mapping
 - **URL:** https://lexkonovalov.com/glossary/customer-journey-mapping.html
@@ -1401,22 +1401,22 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A B2B SaaS Interaction Model is the structural interaction framework specifically engineered for multi-tenant, role-governed cloud platforms handling complex enterprise data, workflows, and administrative controls.
-- **Purpose:** Balances high-density functional efficiency for daily power users with intuitive simplicity for executive buyers and occasional administrative reviewers.
-- **Key Concepts:** Multi-tenancy, role-based interfaces, bulk operations, workspace switching.
-- **How It Works:** Deploys adaptable screen architectures featuring collapsible rails, complex tabular data grids, contextual actions, and permission-aware view gating.
-- **Related Terms:** Operational UX, Enterprise UX Strategy, B2C Engagement Loops, Cardinality (UX Architecture)
-- **SEO Title:** B2B SaaS Interaction Design: UI Patterns for Enterprise Software
-- **Sources:** Daniel Rosenberg, UX Magic; Luke Wroblewski, Multi-Device Interaction Design
+- **Definition:** A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.
+- **Purpose:** A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.
+- **Key Concepts:** Example: reviewing invoices, Model actions and exceptions
+- **How It Works:** A B2B SaaS interaction model describes how people use a business software service to work with its objects, actions, roles, and workflow states. It connects interface behavior to the rules of the organization and the product.
+- **Related Terms:** Operational UX, Enterprise Information Architecture, State Transition Matrix, Interaction Invariant
+- **SEO Title:** B2B SaaS Interaction Model: Roles, Objects, and Workflows
+- **Sources:** Microsoft: Architect Multitenant Solutions (https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview); OWASP: Authorization Cheat Sheet (https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
 
 #### 090. B2C Engagement Loops
 - **URL:** https://lexkonovalov.com/glossary/b2c-engagement-loops.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.
-- **Purpose:** Drives organic retention and repeat engagement by reinforcing customer progress through intrinsic triggers, useful updates, and compounding utility.
-- **Key Concepts:** Engagement loop vs growth loop, Trigger and action, Price watch cycle, Return condition, Notification controls
-- **How It Works:** Captures initial user intent into a stateful watch or preference, automatically monitoring state changes to trigger contextually relevant, valuable alerts that prompt return visits and progress.
+- **Purpose:** A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.
+- **Key Concepts:** What does an engagement loop look like?, How is this different from a growth loop or a funnel?, How do you measure the loop?
+- **How It Works:** A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.
 - **Related Terms:** Product-Led Growth (PLG), Conversion Funnel, Growth Design, User Retention
 - **SEO Title:** B2C Engagement Loops: Example and Metrics | Product Design Glossary
 - **Sources:** Growth Loops are the New Funnels, Reforge (https://www.reforge.com/blog/growth-loops); Hooked Model, Nir Eyal (https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf)
@@ -1426,9 +1426,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.
-- **Purpose:** Provides objective, real-time behavioral evidence of how software is utilized in the wild, identifying drop-off friction and validating feature success against business targets.
-- **Key Concepts:** Event tracking plans, cohort analysis, conversion funnels, retention matrices.
-- **How It Works:** Engineers implement client-side event tracking schemas, piping clickstream payloads to data warehouses for cross-sectional user cohort analysis.
+- **Purpose:** Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.
+- **Key Concepts:** What belongs in a tracking plan?, Example of an invoice tracking plan, How do you check the data before using it?
+- **How It Works:** Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.
 - **Related Terms:** Component Telemetry, Continuous Experimentation, A/B Testing (Split Testing), Activation Metric
 - **SEO Title:** Product Telemetry and Analytics | Product Design Glossary
 - **Sources:** Plan your implementation, Amplitude Docs (https://amplitude.com/docs/get-started/plan-your-implementation); User properties and event properties, Amplitude Docs (https://www.amplitude.com/docs/data/user-properties-and-events)
@@ -1438,10 +1438,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
-- **Purpose:** Unifies design quality with aggressive business scalability, proving that UX decisions directly drive quantitative commercial outcomes.
-- **Key Concepts:** Behavioral economics, psychological friction removal, experimentation velocity, metric accountability.
-- **How It Works:** Growth designers formulate quantitative hypotheses, build targeted micro-interactions (e.g., onboarding personalization, referral prompts), and iterate via rapid A/B experiments.
-- **Related Terms:** Conversion Rate Optimization (CRO), Product-Led Growth (PLG), Continuous Experimentation, Jobs to Be Done (JTBD), User Retention
+- **Purpose:** Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
+- **Key Concepts:** How does growth design relate to product design, CRO, and PLG?, What does a growth designer do?, A growth design example: first invoice sent, How do you run a growth design cycle?, What should growth design avoid?
+- **How It Works:** Growth design is a product design practice that combines user research, behavioral data, and experimentation to improve customer outcomes and measurable business growth. Its scope can include acquisition, activation, retention, referral, and revenue across the product journey.
+- **Related Terms:** Conversion Rate Optimization (CRO), Product-Led Growth (PLG), Continuous Experimentation, Jobs to Be Done (JTBD)
 - **SEO Title:** Growth Design: Meaning & Example | Product Design Glossary
 - **Sources:** Practicing Growth Design, Lex Roman / Amplitude (https://amplitude.com/blog/practicing-growth-design); A Primer on Growth Design, Chetana Deorah and Lex Roman (https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
@@ -1449,22 +1449,22 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/design-strategy-alignment.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Design Strategy Alignment is the organizational practice of explicitly linking visual, interaction, and architectural design roadmaps to executive business strategies and revenue priorities.
-- **Purpose:** Elevates design from a downstream production service to a strategic leadership partner, ensuring every design initiative drives recognized enterprise value.
-- **Key Concepts:** Strategic OKR mapping, business case modeling, design executive advocacy, outcome focus.
-- **How It Works:** Designers translate customer experience pain points into financial cost-benefit models, presenting design roadmaps framed in terms of business revenue and risk reduction.
-- **Related Terms:** Product Strategy Canvas, North Star Metric (NSM), Product Discovery
-- **SEO Title:** Design Strategy Alignment: Connecting Product Craft to Business OKRs
-- **Sources:** Richard Rumelt, Good Strategy Bad Strategy, Crown Business; Jesse James Garrett, The Elements of User Experience
+- **Definition:** Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.
+- **Purpose:** Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.
+- **Key Concepts:** Example: improving enterprise onboarding, A lightweight alignment check
+- **How It Works:** Design strategy alignment is the practice of connecting design priorities and decisions to a product's intended users, value proposition, and business goals. It gives a team a shared basis for choosing which user problems to address and how to assess the result.
+- **Related Terms:** Product Strategy Canvas, North Star Metric (NSM), Product Discovery, Design Critique
+- **SEO Title:** Design Strategy Alignment: Connect UX Decisions to Outcomes
+- **Sources:** Roman Pichler: What Exactly Is a Product Strategy? (https://www.romanpichler.com/blog/what-is-a-product-strategy/); Google Research: Measuring the User Experience on a Large Scale (https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/)
 
 #### 094. Product–Market Fit (PMF)
 - **URL:** https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html
 - **Category:** Product Strategy & Growth
 - **Maturity:** Established
 - **Definition:** Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.
-- **Purpose:** Identifies and validates the core segment where exponential organic retention, word-of-mouth adoption, and sustainable commercial willingness-to-pay converge.
-- **Key Concepts:** Cohort retention flattening, Sean Ellis 40% benchmark, Segment-specific fit, Commercial demand evidence, Superhuman PMF engine
-- **How It Works:** Surveys target users on emotional disappointment upon product withdrawal while correlating responses with usage data and recurring renewal patterns across narrow customer profiles.
+- **Purpose:** Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.
+- **Key Concepts:** How do you assess product–market fit?, What does the 40% PMF survey benchmark mean?
+- **How It Works:** Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.
 - **Related Terms:** Jobs to Be Done (JTBD), North Star Metric (NSM), Product Discovery, Churn Mitigation
 - **SEO Title:** Product–Market Fit (PMF) | Product Design Glossary
 - **Sources:** The Only Thing That Matters, Marc Andreessen (https://web.stanford.edu/class/ee204/ProductMarketFit.html); How Superhuman Built an Engine to Find Product Market Fit, Rahul Vohra (https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/); Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)
@@ -1474,10 +1474,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth
 - **Maturity:** Established
 - **Definition:** The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.
-- **Purpose:** Evaluates the long-term commercial sustainability and marketing efficiency of a software product, directly steering product investment decisions.
-- **Key Concepts:** Unit economics, payback period, churn mitigation, customer acquisition spend.
-- **How It Works:** Calculated as Ratio = Lifetime Value (LTV) / Customer Acquisition Cost (CAC), where LTV = (Average Revenue Per User (ARPU) * Gross Margin) / Churn Rate. A healthy benchmark for SaaS is generally considered 3 : 1 or higher.
-- **Related Terms:** Churn Mitigation, Product-Led Growth (PLG), Activation Metric
+- **Purpose:** The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.
+- **Key Concepts:** How do you calculate LTV:CAC?, A simple SaaS example, What is a good LTV:CAC ratio?, What can make the estimate misleading?
+- **How It Works:** The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.
+- **Related Terms:** Churn Mitigation Architecture, Product-Led Growth (PLG), Activation Metric
 - **SEO Title:** LTV:CAC Ratio: Formula & Example | Product Design Glossary
 - **Sources:** SaaS Metrics 2.0: Detailed Definitions, David Skok (https://www.forentrepreneurs.com/saas-metrics-2-definitions/); SaaS Metrics 2.0, David Skok (https://www.forentrepreneurs.com/saas-metrics-2/); What is the CAC payback period?, Stripe (https://stripe.com/resources/more/what-is-the-cac-payback-period); CAC in SaaS, Stripe (https://stripe.com/resources/more/cac-in-saas)
 
@@ -1486,10 +1486,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.
-- **Purpose:** Serves as the primary operational target for product onboarding teams, directly correlating with sustained long-term user retention.
-- **Key Concepts:** "Aha! moment", early behavioral threshold, onboarding milestone, retention correlation.
-- **How It Works:** Data teams correlate early user actions with 90-day retention curves, discovering leading indicators (e.g., Slack's "2,000 messages sent" or Facebook's "7 friends in 10 days").
-- **Related Terms:** Time-to-Value (TTV), Product-Led Growth (PLG), Conversion Funnel, Product Telemetry & Analytics, User Retention
+- **Purpose:** An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.
+- **Key Concepts:** How do you choose an activation event?, How do you calculate activation rate?, How do you validate the milestone?
+- **How It Works:** An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.
+- **Related Terms:** Time-to-Value (TTV), Product-Led Growth (PLG), Conversion Funnel, Product Telemetry & Analytics
 - **SEO Title:** Activation Metric and Rate | Product Design Glossary
 - **Sources:** Mastering Engagement Playbook, Amplitude (https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf); How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation); Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention)
 
@@ -1498,9 +1498,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.
-- **Purpose:** Reduces early abandonment by eliminating friction, unnecessary setup steps, and cognitive hurdles during onboarding.
-- **Key Concepts:** Friction reduction, progressive onboarding, immediate utility, deferred setup.
-- **How It Works:** Designers streamline first-run wizards, defer registration forms, provide interactive templates, and utilize sample data so users experience core value immediately.
+- **Purpose:** Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.
+- **Key Concepts:** How do you measure time to value?, Why report time alongside activation rate?, How can design reduce time to value?
+- **How It Works:** Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.
 - **Related Terms:** Activation Metric, Product-Led Growth (PLG), Progressive Disclosure
 - **SEO Title:** Time to Value (TTV) | Product Design Glossary
 - **Sources:** Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention); How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)
@@ -1510,9 +1510,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.
-- **Purpose:** Protects recurring revenue and customer lifetime value by detecting, preventing, and recovering from both voluntary cancellations and involuntary payment failures.
-- **Key Concepts:** Voluntary churn, Involuntary churn, Smart retries, Usage drop signal, Retention recovery window
-- **How It Works:** Differentiates voluntary from involuntary loss, deploying automated dunning and retries for billing issues, while analyzing behavioral drops to provide targeted retention interventions, pauses, or downgrades.
+- **Purpose:** Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.
+- **Key Concepts:** What causes customer churn?, What should the product do?, How do you measure the result?
+- **How It Works:** Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.
 - **Related Terms:** Product Telemetry & Analytics, LTV to CAC Ratio, Activation Metric, User Retention
 - **SEO Title:** Churn Mitigation in SaaS | Product Design Glossary
 - **Sources:** Customer churn, Stripe (https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it); Automate payment retries, Stripe Docs (https://docs.stripe.com/billing/revenue-recovery/smart-retries)
@@ -1522,9 +1522,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.
-- **Purpose:** Decouples code deployment from feature release, enabling progressive delivery, granular audience segmentation, rapid kill-switches, and trustworthy A/B experimentation.
-- **Key Concepts:** Staged rollout, A/B test toggles, Operational kill-switch, Fallback behavior, Flag cleanup lifecycle
-- **How It Works:** Runtime evaluations check user or account attributes against targeted rule configurations, serving experimental or baseline variants while telemetry monitors errors and business metrics before general availability.
+- **Purpose:** A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.
+- **Key Concepts:** How do rollouts and experiments use flags?, Example of a staged rollout, What should a flag plan include?
+- **How It Works:** A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.
 - **Related Terms:** Continuous Experimentation, A/B Testing (Split Testing), Design Engineering, DesignOps
 - **SEO Title:** Feature Flags: Rollouts and A/B Tests | Product Design Glossary
 - **Sources:** Feature Toggles, Pete Hodgson (https://martinfowler.com/articles/feature-toggles.html); Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)
@@ -1533,13 +1533,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/value-proposition-canvas.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** The Value Proposition Canvas is a strategic mapping tool that maps a target customer’s profile (Jobs, Pains, Gains) against an organization’s value map (Products & Services, Pain Relievers, Gain Creators).
-- **Purpose:** Ensures structural alignment between product feature development and genuine user needs, preventing companies from launching unviable products.
-- **Key Concepts:** Customer profile, value map, pain relievers, gain creators, solution fit.
-- **How It Works:** Cross-functional squads map validated customer pains and jobs on the right canvas side, ensuring every proposed product capability on the left directly alleviates an identified pain or unlocks a gain.
-- **Related Terms:** Jobs to Be Done (JTBD), Product Discovery, Product Strategy Canvas, Product–Market Fit (PMF)
-- **SEO Title:** The Value Proposition Canvas: Designing User-Centered Products
-- **Sources:** Alexander Osterwalder et al., Value Proposition Design, Wiley; Strategyzer Methodology
+- **Definition:** The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.
+- **Purpose:** The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.
+- **Key Concepts:** What are its six parts?, Example: Helping a hotel coordinate room turnover, How do you use the canvas?
+- **How It Works:** The Value Proposition Canvas is a Strategyzer tool for exploring how an offering addresses a specific customer segment’s needs. It connects a customer profile of jobs, pains, and gains with a value map of products and services, pain relievers, and gain creators.
+- **Related Terms:** Jobs to Be Done (JTBD), Product Discovery, Product Strategy Canvas, Product-Market Fit (PMF) Engine
+- **SEO Title:** Value Proposition Canvas: Jobs, Pains, Gains, and Fit
+- **Sources:** The Value Proposition Canvas, Strategyzer (https://www.strategyzer.com/library/the-value-proposition-canvas)
 
 #### 101. Noun Foraging
 - **URL:** https://lexkonovalov.com/glossary/noun-foraging.html
@@ -1642,10 +1642,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth
 - **Maturity:** Established
 - **Definition:** User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.
-- **Purpose:** Measures sustained product engagement and value delivery over time, distinguishing one-time activation from habitual, long-term adoption.
-- **Key Concepts:** Cohort analysis, Return condition, Time window, Account-level retention, Retention curve
-- **How It Works:** Tracks a defined cohort of users or accounts from a shared starting milestone, evaluating the percentage that executes a meaningful qualifying return event within designated subsequent time windows.
-- **Related Terms:** Activation Metric, Time-to-Value (TTV), North Star Metric (NSM), Churn Mitigation
+- **Purpose:** User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.
+- **Key Concepts:** How do you calculate a retention rate?, Example of account retention, Which time window should you use?
+- **How It Works:** User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.
+- **Related Terms:** Activation Metric, Time-to-Value (TTV), North Star Metric (NSM), Churn Mitigation Architecture
 - **SEO Title:** User Retention: Definition and Formula | Product Design Glossary
 - **Sources:** Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build); How the Retention Analysis chart calculates retention, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation); How time works in a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)
 
@@ -1654,9 +1654,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Product Strategy & Growth
 - **Maturity:** Established
 - **Definition:** A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.
-- **Purpose:** Bridges self-serve product adoption and sales-assisted expansion by identifying accounts whose organic usage and commercial fit warrant high-touch engagement.
-- **Key Concepts:** PQL vs MQL vs Activation, Usage threshold signal, Product-qualified account (PQA), Intent triggers, Product-led sales (PLS)
-- **How It Works:** Evaluates live telemetry against predefined behavioral milestones, combining usage volume with firmographic fit and explicit feature intent to alert go-to-market teams.
+- **Purpose:** A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.
+- **Key Concepts:** How is a PQL different from activation or an MQL?, Example for a team planning tool, How do you validate a PQL rule?
+- **How It Works:** A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.
 - **Related Terms:** Product-Led Growth (PLG), Activation Metric, Lead Capture, Product Telemetry & Analytics
 - **SEO Title:** Product-Qualified Lead (PQL) | Product Design Glossary
 - **Sources:** How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls); Product Qualified Leads in Freemium, OpenView (https://openviewpartners.com/blog/freemium-startup-product-qualified-leads/); Product-Led Sales AMA with Kyle Poyar, Pocus (https://www.pocus.com/blog/product-led-sales-pls-ama-kyle-poyar-openview-pls-benchmarks)
@@ -2152,4 +2152,304 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Related Terms:** Accessibility and WCAG, Accessible Forms, Keyboard Accessibility & Focus Management, Touch Target Size, Fluid Typography & Spacing System, Web Accessibility Audit
 - **SEO Title:** WCAG Zoom, Text Resize & Reflow: 200% and 320 CSS px
 - **Sources:** Understanding Resize Text, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html); Understanding Reflow, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
+
+#### 152. AI-assisted Design
+- **URL:** https://lexkonovalov.com/glossary/ai-assisted-design.html
+- **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.
+- **Purpose:** AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.
+- **Key Concepts:** Designing with AI vs. designing an AI product, Where can AI help a designer?, Example: an operations dashboard, A practical AI-assisted workflow
+- **How It Works:** AI-assisted design is the use of AI tools to support parts of a design process, such as exploring alternatives, drafting content, or building prototypes. The designer remains responsible for deciding which problem to address and evaluating the result.
+- **Related Terms:** AI-native Design, AI Prototyping, Design Harness, AI in UX Research
+- **SEO Title:** AI-assisted Design: Practical Workflow | Product Design Glossary
+- **Sources:** Design Process Isn't Dead, It's Compressed, NN/g (https://www.nngroup.com/articles/design-process-isnt-dead/); AI Prototyping in Real Design Contexts, NN/g (https://www.nngroup.com/articles/ai-prototyping/)
+
+#### 153. AI Grounding
+- **URL:** https://lexkonovalov.com/glossary/ai-grounding.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.
+- **Purpose:** In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.
+- **Key Concepts:** How does grounding work?, Grounding vs. RAG vs. citations, Example: explaining a baggage allowance, What should designers make visible?
+- **How It Works:** In generative AI, grounding connects a model's response to relevant, verifiable information, such as retrieved documents or application records. It helps a product base an answer on identifiable evidence rather than relying only on the model's learned patterns.
+- **Related Terms:** Retrieval-Augmented Generation, AI Hallucination, Context Engineering, AI Transparency
+- **SEO Title:** AI Grounding and RAG Explained | Product Design Glossary
+- **Sources:** Grounding overview, Google Cloud (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview); Misinformation, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm092025-misinformation/)
+
+#### 154. AI Hallucination
+- **URL:** https://lexkonovalov.com/glossary/ai-hallucination.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.
+- **Purpose:** An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.
+- **Key Concepts:** Why can a convincing answer still be wrong?, Example: an invented refund exception, How can a product reduce the impact?, How should teams evaluate hallucinations?
+- **How It Works:** An AI hallucination is generated content that is presented as factual or source-based but is fabricated, unsupported, or inconsistent with the available evidence. Examples include an invented citation or a reservation detail that does not appear in the supplied record.
+- **Related Terms:** AI Grounding, Evaluation Harness, Human-in-the-Loop, Trust Calibration in AI
+- **SEO Title:** What Is an AI Hallucination? | Product Design Glossary
+- **Sources:** Misinformation, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm092025-misinformation/); Grounding overview, Google Cloud (https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview)
+
+#### 155. Model Routing
+- **URL:** https://lexkonovalov.com/glossary/ai-model-routing.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.
+- **Purpose:** Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.
+- **Key Concepts:** How does model routing work?, Routing vs. fallback vs. multi-agent systems, Example: an assisted support workflow, What matters to the user experience?
+- **How It Works:** Model routing selects which AI model should handle a request or a step in a workflow. The routing policy can consider task requirements, quality, latency, cost, availability, and data-handling constraints.
+- **Related Terms:** AI Unit Economics, Evaluation Harness, Multi-Agent Systems, Agent Harness
+- **SEO Title:** AI Model Routing Explained | Product Design Glossary
+- **Sources:** Understanding intelligent prompt routing, Amazon Bedrock (https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html); Context windows, Anthropic (https://platform.claude.com/docs/en/build-with-claude/context-windows)
+
+#### 156. AI Prototyping
+- **URL:** https://lexkonovalov.com/glossary/ai-prototyping.html
+- **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.
+- **Purpose:** AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.
+- **Key Concepts:** What should an AI prototype help you learn?, Example: testing a rule editor, What should go into the brief?, How do you review the result?
+- **How It Works:** AI prototyping uses AI tools to create or modify a representation of a product idea so it can be explored and tested. The result may be a static layout, an interactive simulation, or a code-based prototype.
+- **Related Terms:** AI-assisted Design, Content Prototyping, Design Harness, Product Discovery
+- **SEO Title:** AI Prototyping: From Idea to Test | Product Design Glossary
+- **Sources:** AI Prototyping in Real Design Contexts, NN/g (https://www.nngroup.com/articles/ai-prototyping/); User Needs and Defining Success, Google PAIR (https://pair.withgoogle.com/chapter/user-needs/)
+
+#### 157. AI Transparency
+- **URL:** https://lexkonovalov.com/glossary/ai-transparency.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.
+- **Purpose:** AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.
+- **Key Concepts:** What should an AI interface make clear?, Example: drafting a support reply, Transparency vs. explainability, How do you test transparency?
+- **How It Works:** AI transparency means making relevant information about an AI system available and understandable to the people affected by it. In a product interface, this includes what the AI does, what information it uses, its limitations, and what control the user has.
+- **Related Terms:** Explainable AI, Trust Calibration in AI, Agentic UX, AI Grounding
+- **SEO Title:** AI Transparency in Product Design | Product Design Glossary
+- **Sources:** Mental Models, Google PAIR (https://pair.withgoogle.com/chapter/mental-models/); Guidelines for Human-AI Interaction, Microsoft HAX (https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)
+
+#### 158. AI in UX Research
+- **URL:** https://lexkonovalov.com/glossary/ai-ux-research.html
+- **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.
+- **Purpose:** AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.
+- **Key Concepts:** Where can AI support UX research?, Example: checking a proposed research theme, How do you preserve traceability?, What about participant data?
+- **How It Works:** AI in UX research is the use of AI tools to support research activities such as preparing questions, organizing observations, or drafting summaries. Generated material must remain distinguishable from evidence collected from participants and actual product use.
+- **Related Terms:** Synthetic User Testing, ResearchOps, AI-assisted Design, Product Discovery
+- **SEO Title:** AI in UX Research: Uses and Limits | Product Design Glossary
+- **Sources:** Analyse a research session, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/analyse-a-research-session); Getting users' consent for research, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)
+
+#### 159. Context Window
+- **URL:** https://lexkonovalov.com/glossary/context-window.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.
+- **Purpose:** A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.
+- **Key Concepts:** What counts toward the context window?, Context window vs. training vs. memory, Example: a long policy conversation, Why doesn't more context guarantee a better answer?
+- **How It Works:** A context window is the amount of information a language model can process within a request or interaction, usually measured in tokens. It limits the instructions, conversation, retrieved material, and other content available when the model generates a response.
+- **Related Terms:** Context Engineering, Context Drift, Retrieval-Augmented Generation, AI Grounding
+- **SEO Title:** Context Window in AI Explained | Product Design Glossary
+- **Sources:** Context windows, Anthropic (https://platform.claude.com/docs/en/build-with-claude/context-windows); Effective context engineering for AI agents, Anthropic (https://www.anthropic.com/research/effective-context-engineering-for-ai-agents)
+
+#### 160. Explainable AI
+- **URL:** https://lexkonovalov.com/glossary/explainable-ai.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.
+- **Purpose:** Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.
+- **Key Concepts:** What makes an explanation useful?, Example: explaining an expense flag, Explanation vs. generated rationale, How should designers choose the level of detail?
+- **How It Works:** Explainable AI (XAI) refers to methods and practices that make an AI system's behavior or results understandable to people. In product design, an explanation should help a specific audience assess an output or decide what to do next.
+- **Related Terms:** AI Transparency, Trust Calibration in AI, AI Grounding, Human-in-the-Loop
+- **SEO Title:** Explainable AI (XAI) for Product Design | Product Design Glossary
+- **Sources:** Four Principles of Explainable Artificial Intelligence, NIST (https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence); Explainability and Trust, Google PAIR (https://pair.withgoogle.com/chapter/explainability-trust/)
+
+#### 161. Prompt Injection
+- **URL:** https://lexkonovalov.com/glossary/prompt-injection.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.
+- **Purpose:** Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.
+- **Key Concepts:** Direct vs. indirect prompt injection, Example: a supplier document in an operations tool, What belongs in the product design?, Why are system prompts insufficient?
+- **How It Works:** Prompt injection is an attack that puts instructions into content an AI system processes, attempting to redirect its behavior beyond the intended task. The instructions may come from a direct user input or from an external source such as a document or web page.
+- **Related Terms:** System Prompts and Guardrails, Tool Calling, Agentic UX, Human-in-the-Loop
+- **SEO Title:** Prompt Injection and AI Workflows | Product Design Glossary
+- **Sources:** Prompt Injection, OWASP Gen AI Security Project (https://genai.owasp.org/llmrisk/llm01-prompt-injection/); Prompt Shields, Microsoft Learn (https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection)
+
+#### 162. Responsible AI Design
+- **URL:** https://lexkonovalov.com/glossary/responsible-ai-design.html
+- **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.
+- **Purpose:** Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.
+- **Key Concepts:** What does responsible AI design involve?, Example: assisting with customer support, How does this relate to the NIST AI RMF?, How do you keep the work practical?
+- **How It Works:** Responsible AI design is the practice of considering an AI product's benefits, limitations, and potential harms when deciding how it should work. It connects user experience decisions to data, evaluation, governance, and ongoing operation.
+- **Related Terms:** AI Transparency, Trust Calibration in AI, Accessibility and WCAG, Prompt Injection
+- **SEO Title:** Responsible AI Design Explained | Product Design Glossary
+- **Sources:** AI Risk Management Framework, NIST (https://www.nist.gov/itl/ai-risk-management-framework); AI RMF Core, NIST (https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
+
+#### 163. Structured Outputs
+- **URL:** https://lexkonovalov.com/glossary/structured-outputs.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.
+- **Purpose:** Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.
+- **Key Concepts:** What does a schema control?, Structured outputs vs. JSON mode vs. tool calling, Example: turning an email into a review form, What should designers specify?
+- **How It Works:** Structured outputs are model responses constrained to a specified format or schema. They let an application request defined fields and types, such as a reservation identifier and a status, instead of interpreting an unrestricted text answer.
+- **Related Terms:** Tool Calling, Generative UI, AI Grounding, Evaluation Harness
+- **SEO Title:** Structured Outputs in AI Explained | Product Design Glossary
+- **Sources:** Structured outputs, Google Gemini documentation (https://aistudio.google.com/docs/structured-output); Objects, Understanding JSON Schema (https://json-schema.org/understanding-json-schema/reference/object)
+
+#### 164. Trust Calibration in AI
+- **URL:** https://lexkonovalov.com/glossary/trust-calibration-ai.html
+- **Category:** AI & Agentic Systems
+- **Maturity:** Established
+- **Definition:** Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.
+- **Purpose:** Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.
+- **Key Concepts:** Why is more trust not always better?, Example: reviewing a policy summary, Should an interface show a confidence score?, How do you evaluate appropriate reliance?
+- **How It Works:** Trust calibration in AI is the alignment between a person's expectations of a system and its actual capabilities and limitations. The design goal is appropriate reliance: helping people use valid outputs and recognize when verification, correction, or another approach is needed.
+- **Related Terms:** Explainable AI, AI Transparency, AI Hallucination, Human-in-the-Loop
+- **SEO Title:** Trust Calibration in AI Explained | Product Design Glossary
+- **Sources:** Fostering appropriate reliance on GenAI, Microsoft Research (https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf); Explainability and Trust, Google PAIR (https://pair.withgoogle.com/chapter/explainability-trust/)
+
+#### 165. AI Unit Economics
+- **URL:** https://lexkonovalov.com/glossary/ai-unit-economics.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.
+- **Purpose:** AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.
+- **Key Concepts:** What is the unit in an AI product?, How do you calculate cost per successful task?, An AI unit economics example, Why is token price insufficient?, What should product designers influence?
+- **How It Works:** AI unit economics is the analysis of revenue and costs for a defined unit of an AI product, such as a customer account or a completed task. Task-level analysis includes model use, tools, retries, failed runs, and any human work within the stated cost boundary.
+- **Related Terms:** Unit Economics, Cost to Serve, Gross Margin, Outcome-Based Pricing, Human-in-the-Loop (HITL), Model Routing, Responsible AI Design
+- **SEO Title:** AI Unit Economics: Cost per Successful Task and Margin
+- **Sources:** AWS: Optimizing cost per task and proving agent ROI (https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/); Anthropic: API pricing and tool-use charges (https://platform.claude.com/docs/en/about-claude/pricing); AWS Well-Architected SaaS Lens: Expenditure awareness (https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html)
+
+#### 166. CAC Payback Period
+- **URL:** https://lexkonovalov.com/glossary/cac-payback-period.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.
+- **Purpose:** CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.
+- **Key Concepts:** What is the CAC payback formula?, A SaaS payback example, How do you account for churn and changing usage?, CAC payback vs. LTV:CAC, What is a good CAC payback period?
+- **How It Works:** CAC payback period is the time required to recover customer acquisition cost from the value generated by acquired customers. The gross-margin-adjusted SaaS measure used here tracks recovery through gross profit and expresses the period in months.
+- **Related Terms:** Unit Economics, Customer Acquisition Cost (CAC), Customer Lifetime Value (LTV), LTV to CAC Ratio, Time-to-Value (TTV)
+- **SEO Title:** CAC Payback Period: Formula and SaaS Example
+- **Sources:** Stripe: What is the CAC payback period? (https://stripe.com/resources/more/what-is-the-cac-payback-period); ChartMogul: Usage-based billing cheat sheet (https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/); David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)
+
+#### 167. Contribution Margin
+- **URL:** https://lexkonovalov.com/glossary/contribution-margin.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.
+- **Purpose:** Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.
+- **Key Concepts:** What are the contribution margin formulas?, A SaaS contribution margin example, Why can contribution margin differ from gross margin?, How does contribution margin inform product decisions?, What should designers avoid?
+- **How It Works:** Contribution margin is revenue minus variable costs. It shows how much remains to cover fixed costs and, once those costs are covered, contribute to operating profit. It can be expressed as a total amount, an amount per unit, or a percentage of revenue.
+- **Related Terms:** Gross Margin, Unit Economics, Cost to Serve, Customer Acquisition Cost (CAC)
+- **SEO Title:** Contribution Margin: Formula, Example, and Gross Margin
+- **Sources:** OpenStax: Contribution margin per unit, ratio, and total (https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin); Stripe: Variable costs and ecommerce profitability (https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability); SEC: Beginners' Guide to Financial Statements (https://www.sec.gov/investor/pubs/begfinstmtguide.htm)
+
+#### 168. Cost to Serve
+- **URL:** https://lexkonovalov.com/glossary/cost-to-serve.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.
+- **Purpose:** Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.
+- **Key Concepts:** What should you include?, A cost-to-serve example, How do you allocate shared costs?, How can workflow design change cost to serve?, What can an average hide?
+- **How It Works:** Cost to serve is the cost of delivering and supporting a product or service for a defined customer, segment, order, or task over a stated period. The analysis includes directly traced costs and any shared costs assigned using a documented method.
+- **Related Terms:** Unit Economics, Gross Margin, Contribution Margin, Operational UX, Service Blueprinting
+- **SEO Title:** Cost to Serve: Definition, SaaS Example, and UX Decisions
+- **Sources:** AWS Well-Architected SaaS Lens: Expenditure awareness (https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html); OpenStax: Calculate activity-based product costs (https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs); AWS: Tenant-aware cost visibility and SaaS cloud costs (https://aws.amazon.com/isv/resources/cloud-cost-management-strategies-for-saas/)
+
+#### 169. Customer Acquisition Cost (CAC)
+- **URL:** https://lexkonovalov.com/glossary/customer-acquisition-cost-cac.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.
+- **Purpose:** Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.
+- **Key Concepts:** How do you calculate CAC?, A CAC calculation example, CAC vs. CPA and blended vs. paid CAC, What makes a CAC estimate misleading?, How can product designers use CAC?
+- **How It Works:** Customer acquisition cost (CAC) is the average cost of acquiring a new customer. For the SaaS model used here, it equals acquisition-related sales and marketing costs divided by the number of new paying customer accounts acquired.
+- **Related Terms:** Unit Economics, LTV to CAC Ratio, CAC Payback Period, Conversion Rate Optimization (CRO), Product-Led Growth (PLG)
+- **SEO Title:** Customer Acquisition Cost (CAC): Formula and Example
+- **Sources:** Stripe: CAC in SaaS (https://stripe.com/resources/more/cac-in-saas); David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/)
+
+#### 170. Customer Lifetime Value (LTV)
+- **URL:** https://lexkonovalov.com/glossary/customer-lifetime-value-ltv.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.
+- **Purpose:** Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.
+- **Key Concepts:** What is the SaaS LTV formula?, A customer lifetime value example, Why do LTV definitions differ?, When is the simple formula unreliable?, How can product designers use LTV?
+- **How It Works:** Customer lifetime value (LTV or CLV) estimates the value a customer generates over their relationship with a business. The value basis must be stated: the SaaS calculation here estimates lifetime gross profit, rather than revenue alone.
+- **Related Terms:** Unit Economics, Customer Acquisition Cost (CAC), LTV to CAC Ratio, User Retention, CAC Payback Period
+- **SEO Title:** Customer Lifetime Value (LTV): Formula and Example
+- **Sources:** ChartMogul: Customer Lifetime Value (LTV) (https://chartmogul.com/saas-metrics/ltv/); David Skok: SaaS Metrics 2.0 — Detailed Definitions (https://www.forentrepreneurs.com/saas-metrics-2-definitions/); Stripe: Calculating subscriber Lifetime Value in Billing (https://support.stripe.com/questions/calculating-subscriber-lifetime-value-in-billing)
+
+#### 171. Gross Margin
+- **URL:** https://lexkonovalov.com/glossary/gross-margin.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.
+- **Purpose:** Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.
+- **Key Concepts:** How do you calculate gross margin?, A SaaS gross margin example, What belongs in SaaS cost of revenue?, Gross margin vs. contribution margin, How can product designers use gross margin?
+- **How It Works:** Gross margin is the percentage of revenue remaining after subtracting cost of goods sold or cost of revenue. Gross profit is the corresponding dollar amount. Both measures describe delivery economics before other expenses are deducted.
+- **Related Terms:** Unit Economics, Contribution Margin, Cost to Serve, Customer Lifetime Value (LTV)
+- **SEO Title:** Gross Margin: Formula, SaaS Example, and Cost Boundaries
+- **Sources:** SEC: Beginners' Guide to Financial Statements (https://www.sec.gov/investor/pubs/begfinstmtguide.htm); Stripe: SaaS gross margin explained (https://stripe.com/resources/more/saas-gross-margin-explained-what-it-is-and-why-it-is-important); OpenStax: Contribution margin and cost behavior (https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin)
+
+#### 172. Net Revenue Retention (NRR)
+- **URL:** https://lexkonovalov.com/glossary/net-revenue-retention-nrr.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.
+- **Purpose:** Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.
+- **Key Concepts:** What is the NRR formula?, An NRR calculation example, NRR vs. GRR vs. customer retention, How should you handle reactivation?, What can product designers learn from NRR?
+- **How It Works:** Net revenue retention (NRR), also called net dollar retention (NDR), measures recurring revenue retained from an existing customer group over a defined period, including expansion and losses from contraction and churn. It excludes revenue from new customers.
+- **Related Terms:** User Retention, Customer Lifetime Value (LTV), Gross Margin, Product-Led Growth (PLG)
+- **SEO Title:** Net Revenue Retention (NRR): Formula, Example, and GRR
+- **Sources:** ChartMogul: Net MRR Retention report (https://help.chartmogul.com/article/143-chart-net-mrr-retention); ChartMogul: Gross MRR Retention report (https://help.chartmogul.com/article/142-chart-gross-mrr-retention); ChartMogul: Cohort Net MRR Retention (https://help.chartmogul.com/article/160-cohort-net-mrr-retention)
+
+#### 173. Outcome-Based Pricing
+- **URL:** https://lexkonovalov.com/glossary/outcome-based-pricing.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.
+- **Purpose:** Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.
+- **Key Concepts:** How does outcome-based pricing work?, A simple outcome-pricing example, A real AI example: Intercom Fin, Outcome-based vs. usage-based pricing, What should product designers make visible?
+- **How It Works:** Outcome-based pricing ties a charge to a defined result rather than only to access, time, or activity. In an AI product, the result might be a resolved support case or an accepted document extraction, with explicit rules for what counts and when it becomes billable.
+- **Related Terms:** Usage-Based Pricing, Pricing Metric, AI Unit Economics, Cost to Serve
+- **SEO Title:** Outcome-Based Pricing: Definition, AI Examples, and UX
+- **Sources:** Intercom: Fin AI Agent outcomes (https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes); Intercom: See and manage usage (https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage); AWS: Optimizing cost per task and proving agent ROI (https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/)
+
+#### 174. Pricing Metric
+- **URL:** https://lexkonovalov.com/glossary/pricing-metric.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.
+- **Purpose:** A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.
+- **Key Concepts:** Pricing metric vs. value metric, Examples of pricing metrics, A product-design example, How should you evaluate a candidate?, What is the difference from a pricing model?
+- **How It Works:** A pricing metric is the unit a product uses to calculate what a customer pays, such as a licensed user, an API request, or a verified result. Choosing it determines what is counted as customers adopt the product and their needs change.
+- **Related Terms:** Usage-Based Pricing, Outcome-Based Pricing, AI Unit Economics, Product-Led Growth (PLG)
+- **SEO Title:** Pricing Metric: Value Metrics, Examples, and Selection
+- **Sources:** Paddle: How to use value metrics to optimize pricing (https://www.paddle.com/blog/value-metrics-pricing); Stripe: Recurring pricing models (https://docs.stripe.com/products-prices/pricing-models)
+
+#### 175. Unit Economics
+- **URL:** https://lexkonovalov.com/glossary/unit-economics.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.
+- **Purpose:** Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.
+- **Key Concepts:** What counts as a unit?, How do you calculate unit economics?, A SaaS unit economics example, How does this affect product design?, What changes with AI products?
+- **How It Works:** Unit economics is the analysis of revenue and costs associated with one defined unit of a business, such as a customer, order, or transaction. It helps teams assess whether that unit generates enough value to cover its associated costs.
+- **Related Terms:** LTV to CAC Ratio, Customer Acquisition Cost (CAC), Customer Lifetime Value (LTV), CAC Payback Period, Growth Design
+- **SEO Title:** Unit Economics: Meaning, Metrics, and SaaS Example
+- **Sources:** David Skok: SaaS Metrics 2.0 (https://www.forentrepreneurs.com/saas-metrics-2/); Stripe: How to calculate the break-even point (https://stripe.com/resources/more/how-to-calculate-the-break-even-point); Stripe: Variable costs and ecommerce profitability (https://stripe.com/resources/more/variable-costs-and-ecommerce-profitability); Stripe: Marketplace metrics (https://stripe.com/en-es/resources/more/14-key-marketplace-metrics); Anthropic: API pricing (https://platform.claude.com/docs/en/about-claude/pricing)
+
+#### 176. Usage-Based Pricing
+- **URL:** https://lexkonovalov.com/glossary/usage-based-pricing.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.
+- **Purpose:** Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.
+- **Key Concepts:** How does usage-based pricing work?, A usage-based pricing calculation, Usage-based vs. seat-based and outcome-based pricing, What makes the experience understandable?, How should designers test it?
+- **How It Works:** Usage-based pricing charges customers according to a measured amount of product or service consumption, such as API requests, storage, or processed documents. It can be combined with a fixed subscription, included allowance, or prepaid credits.
+- **Related Terms:** Pricing Metric, Outcome-Based Pricing, AI Unit Economics, Cost to Serve
+- **SEO Title:** Usage-Based Pricing: Models, Examples, and UX
+- **Sources:** Stripe: Usage-based billing (https://docs.stripe.com/billing/subscriptions/usage-based); Stripe: Recurring pricing models (https://docs.stripe.com/products-prices/pricing-models); Stripe: Monitor usage with alerts (https://docs.stripe.com/billing/subscriptions/usage-based/monitor)
 
