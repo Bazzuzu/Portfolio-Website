@@ -384,40 +384,36 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Синтетичне користувацьке тестування використовує згенеровані ШІ персони, симульовані відповіді або сценарії взаємодії для дослідження потенційної реакції людей на продукт. Отримані результати є змодельованими прогнозами, які потребують обов'язкової валідації на емпіричних даних від реальних користувачів.</p>
-<p class="glossary-term-section__text">The label covers different activities. An AI persona answering interview questions produces simulated opinions. An agent attempting a task in an interface produces evidence about that agent's performance. Neither directly establishes how representative people will behave.</p>
-<section class="glossary-term-section" aria-labelledby="section-where-it-can-help">
-<h2 id="section-where-it-can-help" class="glossary-term-section__title">Where it can help</h2>
-<p class="glossary-term-section__text">A team can use simulations to rehearse interview questions, generate possible objections, or identify scenarios to include in a usability study. These are useful inputs to research planning.</p>
-<p class="glossary-term-section__text">For example, a designer could ask a model to review a booking cancellation flow from several stated perspectives. If it flags a missing refund explanation, the team can inspect the policy and add that topic to its research plan.</p>
-<p class="glossary-term-section__text">A synthetic response that says “I would subscribe” does not establish demand or willingness to pay.</p>
+    <p class="glossary-term-section__text">Тестування за допомогою синтетичних користувачів (Synthetic User Testing) використовує згенеровані ШІ персони, симульовані відповіді або змодельовані сценарії взаємодії для дослідження того, як потенційна аудиторія може відреагувати на продукт. Отримані результати є згенерованими моделлю прогнозами, які обов'язково потребують верифікації та валідації на емпіричних даних від реальних користувачів.</p>
+<p class="glossary-term-section__text">Це поняття охоплює різні типи діяльності. ШІ-персона, яка відповідає на запитання глибинного інтерв'ю, формує симульовані суб'єктивні судження. ШІ-агент, що намагається виконати завдання в інтерфейсі, надає дані виключно про власну продуктивність та обмеження. Жоден із цих підходів безпосередньо не визначає, як насправді поводитимуться реальні репрезентативні користувачі.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Де це може допомогти</h2>
+<p class="glossary-term-section__text">Команда може використовувати симуляції для відпрацювання та калібрування формулювань інтерв'ю, генерації можливих заперечень користувачів або виявлення неочевидних сценаріїв для включення в план юзабіліті-тестування. Це корисні вхідні дані для якісного планування продуктових досліджень.</p>
+<p class="glossary-term-section__text">Наприклад, дизайнер може попросити модель проаналізувати сценарій скасування бронювання з кількох визначених користувацьких перспектив. Якщо модель вкаже на відсутність чіткого пояснення правил повернення коштів, команда може перевірити бізнес-політику та додати цей аспект як окремий пункт до свого плану досліджень.</p>
+<p class="glossary-term-section__text">Синтетична відповідь на кшталт «Я б оформив підписку» в жодному разі не свідчить про наявність реального ринкового попиту чи готовності платити.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-limits-to-check">
-<h2 id="section-limits-to-check" class="glossary-term-section__title">Limits to check</h2>
-<p class="glossary-term-section__text">Generated responses can reflect the assumptions in the prompt, repeat common patterns, and miss unusual behavior. In one NN/g comparison of a terminology survey, synthetic respondents reached a similar overall conclusion but produced less varied answers. That result applies to the study's task and setup; it does not establish general equivalence.</p>
-<p class="glossary-term-section__text">Label simulated findings, record the model and prompts, and keep them separate from participant evidence. Validate important decisions through suitable methods, such as interviews, observed task performance, or behavioral experiments.</p>
-<p class="glossary-term-section__text">Treat disagreement between simulated and observed results as a reason to investigate the assumptions.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Обмеження, які слід враховувати</h2>
+<p class="glossary-term-section__text">Згенеровані відповіді можуть віддзеркалювати упередження та припущення, закладені в промпт, повторювати шаблонні патерни та повністю ігнорувати рідкісні чи нетипові поведінкові реакції. В одному з порівняльних досліджень Nielsen Norman Group (NN/g), присвяченому опитуванню щодо термінології, синтетичні респонденти дійшли схожого загального висновку, проте дали значно менш різноманітні відповіді. Цей результат стосується конкретного завдання та умов експерименту; він не доводить загальної еквівалентності синтетичних респондентів реальним людям.</p>
+<p class="glossary-term-section__text">Чітко маркуйте результати симуляцій, фіксуйте версію моделі та використані промпти, а також зберігайте ці дані окремо від фактичних свідчень респондентів. Валідуйте критично важливі рішення за допомогою надійних методів: користувацьких інтерв'ю, спостереження за виконанням завдань або поведінкових експериментів.</p>
+<p class="glossary-term-section__text">Розбіжності між результатами симуляції та реальними спостереженнями слід сприймати як привід для ретельної перевірки початкових гіпотез і системних припущень.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/product-discovery.html">Product Discovery</a></li>
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-ux-research.html">AI in UX Research</a></li>
-</ul>
-<ul class="glossary-term-ul">
+<li><a href="/ua/glossary/product-discovery.html">Продуктове відкриття (Product Discovery)</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Каркас оцінювання ШІ (AI Evals)</a></li>
+<li><a href="/ua/glossary/ai-ux-research.html">UX-дослідження з ШІ (AI in UX Research)</a></li>
 <li><a href="/ua/glossary/researchops.html">ResearchOps</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Synthetic Users vs. Human Respondents</a></li>
-<li><a href="https://www.nngroup.com/articles/synthetic-users/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Synthetic Users</a></li>
+<li><a href="https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Синтетичні користувачі проти респондентів-людей (Synthetic Users vs. Human Respondents)</a></li>
+<li><a href="https://www.nngroup.com/articles/synthetic-users/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Синтетичні користувачі (Synthetic Users)</a></li>
 </ul>
 </section>
 

@@ -388,40 +388,36 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Людина в контурі прийняття рішень (HITL, Human-in-the-Loop) описує процес, у якому людина вносить експертну оцінку, зворотний зв'язок або підтвердження під час виконання автоматизованого завдання. У продуктах із ШІ це може охоплювати верифікацію вилучених даних, ревізію запропонованого рішення або авторизацію критичної дії перед її виконанням.</p>
-<section class="glossary-term-section" aria-labelledby="section-where-does-the-person-enter-the-loop">
-<h2 id="section-where-does-the-person-enter-the-loop" class="glossary-term-section__title">Where does the person enter the loop?</h2>
-<p class="glossary-term-section__text">Choose the intervention around the task. Specify what the system prepares, what the person decides, and how their response changes the next step. The reviewer needs enough context to understand the proposed action and its consequences.</p>
+    <p class="glossary-term-section__text">Людина в контурі прийняття рішень (Human-in-the-Loop, HITL) описує процес, у якому людина вносить експертне судження, надає зворотний зв'язок або затверджує результат під час виконання автоматизованого завдання. У продукті на базі ШІ людина може виправляти вилучену інформацію, перевіряти запропоноване рішення або авторизувати дію перед її виконанням.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Де саме людина долучається до контуру?</h2>
+<p class="glossary-term-section__text">Обирайте точку втручання відповідно до специфіки завдання. Чітко визначте, що саме підготовлює система, яке рішення приймає людина і як її реакція змінює наступний крок. Той, хто здійснює перевірку, потребує достатнього контексту, щоб зрозуміти запропоновану дію та її наслідки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-approving-a-flight-change">
-<h2 id="section-example-approving-a-flight-change" class="glossary-term-section__title">Example: Approving a flight change</h2>
-<p class="glossary-term-section__text">An assistant finds an alternative flight and prepares a change. The review shows the original and proposed itineraries, price difference, conditions, and quote expiry. The traveler can approve, edit the request, or cancel.</p>
-<p class="glossary-term-section__text">The workflow pauses while it waits. If the quote expires or the booking changes before approval, the system refreshes the proposal and asks the traveler to review the revised details. On resuming, it records the decision and shows whether the change completed or needs recovery.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: підтвердження зміни рейсу</h2>
+<p class="glossary-term-section__text">Асистент знаходить альтернативний рейс і готує процедуру внесення змін. На етапі перевірки відображаються початковий і запропонований маршрути, різниця в ціні, умови та термін дії цінової пропозиції. Пасажир може підтвердити, відредагувати запит або скасувати дію.</p>
+<p class="glossary-term-section__text">Робочий процес призупиняється в очікуванні відповіді. Якщо термін дії пропозиції закінчується або бронювання змінюється до моменту затвердження, система оновлює пропозицію і просить пасажира переглянути змінені деталі. Після відновлення процес фіксує рішення та відображає, чи успішно завершено зміну, чи потрібні дії з відновлення після збою (recovery).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-the-review">
-<h2 id="section-how-do-you-evaluate-the-review" class="glossary-term-section__title">How do you evaluate the review?</h2>
-<p class="glossary-term-section__text">Test whether people understand what they are approving, spot a deliberately incorrect detail, and can decline or correct it. Also test timeout, refresh, and failure paths. Record review quality and the outcome of the task. An approval click is one event in the process, and its value depends on whether the person could make an informed decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як оцінювати ефективність етапу перевірки?</h2>
+<p class="glossary-term-section__text">Тестуйте, чи розуміють користувачі, що саме вони затверджують, чи помічають навмисно допущену помилку в деталях, і чи можуть вони відхилити пропозицію або внести виправлення. Також тестуйте сценарії вичерпання таймауту, примусового оновлення та обробки помилок. Фіксуйте якість перевірки та кінцевий результат виконання завдання. Клік по кнопці підтвердження — це лише одна з подій у процесі, і його справжня цінність залежить від того, чи мав користувач можливість прийняти зважене та поінформоване рішення.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/agentic-ux.html">Agentic UX</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
-<li><a href="/ua/glossary/design-system-governance.html">Design System Governance</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/explainable-ai.html">Explainable AI</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
+<li><a href="/ua/glossary/agentic-ux.html">Агентний UX (Agentic UX)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
+<li><a href="/ua/glossary/design-system-governance.html">Управління дизайн-системою (Governance)</a></li>
+<li><a href="/ua/glossary/explainable-ai.html">Пояснюваний штучний інтелект (XAI)</a></li>
+<li><a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри до ШІ (Trust Calibration)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Feedback and Control, Google PAIR</a></li>
-<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">Interrupts, LangGraph</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Зворотний зв'язок та контроль (Feedback and Control), Google PAIR</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">Механізми переривання (Interrupts), LangGraph</a></li>
 </ul>
 </section>
 

@@ -384,52 +384,50 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Дизайн-каркас (design harness) — це набір еталонних дизайн-специфікацій, інженерних обмежень та інструментів валідації, що спрямовують розробку інтерфейсів за участі ШІ. Він допомагає агенту коректно працювати з наявними компонентами продукту, дизайн-токенами, патернами проектування та критеріями приймання (acceptance criteria).</p>
-<p class="glossary-term-section__text">The term is emerging and its scope varies. There is no single required file format or toolchain. A team should state what its harness includes and which checks it actually enforces.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-it-can-contain">
-<h2 id="section-what-it-can-contain" class="glossary-term-section__title">What it can contain</h2>
+    <p class="glossary-term-section__text">Дизайн-каркас (design harness) — це набір еталонних дизайн-специфікацій, інженерних обмежень та інструментів валідації, що спрямовують розробку інтерфейсів за участі ШІ. Він допомагає агенту коректно працювати з наявними компонентами продукту, токенами, патернами проектування та критеріями приймання (acceptance criteria).</p>
+<p class="glossary-term-section__text">Цей термін активно формується, а його межі варіюються. Не існує єдиного обов'язкового формату файлів чи інструментарію. Команда повинна чітко зафіксувати, що саме входить до її дизайн-каркаса та які перевірки він дійсно примусово виконує.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що може містити дизайн-каркас</h2>
 <ul class="glossary-term-ul">
-<li>Component documentation and working usage examples.</li>
-<li>Token names and rules for spacing, typography, and color.</li>
-<li>Interaction, content, and accessibility requirements.</li>
-<li>Representative component states and test data.</li>
-<li>Automated checks and a process for reviewing results.</li>
+<li>Документацію на компоненти та робочі приклади їхнього використання.</li>
+<li>Назви токенів і правила роботи з відступами, типографікою та колірною палітрою.</li>
+<li>Вимоги до взаємодії, контенту та цифрової доступності (accessibility).</li>
+<li>Репрезентативні стани компонентів і тестові дані.</li>
+<li>Автоматизовані перевірки та регламент рецензування результатів.</li>
 </ul>
-<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> can link design components to implementation references. <a href="/ua/glossary/storybook.html">Storybook</a> can document component states and support interaction, visual, and accessibility tests. These are possible ingredients in a harness.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/figma-code-connect.html">Figma Code Connect</a> може пов'язувати дизайн-компоненти з посиланнями на їхню реалізацію в коді. <a href="/ua/glossary/storybook.html">Storybook</a> дозволяє документувати стани компонентів і підтримувати інтерактивні, візуальні та accessibility-тести. Усе це є потенційними складовими дизайн-каркаса.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-building-a-booking-form">
-<h2 id="section-example-building-a-booking-form" class="glossary-term-section__title">Example: building a booking form</h2>
-<p class="glossary-term-section__text">A task gives an agent the existing field components, date-selection rules, error messages, and responsive examples. It also specifies how focus should move after validation fails.</p>
-<p class="glossary-term-section__text">The agent implements the form and runs the relevant checks. A reviewer then inspects the submitted-data behavior, keyboard interaction, error recovery, and layout with realistic content.</p>
-<p class="glossary-term-section__text">If a required component does not support the scenario, record the gap and make an explicit implementation decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: створення форми бронювання</h2>
+<p class="glossary-term-section__text">У межах завдання агенту передаються готові компоненти полів вводу, правила вибору дат, повідомлення про помилки та приклади адаптивної верстки. Також зазначається, як має переміщатися фокус після невдалої валідації.</p>
+<p class="glossary-term-section__text">Агент реалізує форму та запускає відповідні перевірки. Після цього рецензент перевіряє поведінку під час відправки даних, взаємодію з клавіатури, відновлення після помилок і коректність верстки з реальним контентом.</p>
+<p class="glossary-term-section__text">Якщо необхідний компонент не підтримує потрібний сценарій, зафіксуйте цю невідповідність та прийміть явне інженерне рішення щодо реалізації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-keep-the-checks-meaningful">
-<h2 id="section-keep-the-checks-meaningful" class="glossary-term-section__title">Keep the checks meaningful</h2>
-<p class="glossary-term-section__text">Separate instructions from enforced checks. Documentation can request token use; a configured rule or review process determines whether deviations are caught.</p>
-<p class="glossary-term-section__text">Automated accessibility checks cover only some issues. Include manual evaluation and task testing where needed. Maintain the harness when the underlying design system changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Забезпечуйте змістовність перевірок</h2>
+<p class="glossary-term-section__text">Розділяйте текстові рекомендації та примусові перевірки (enforced checks). Документація може вимагати використання дизайн-токенів, але лише налаштоване правило або процес рев'ю гарантують, що відхилення від стандарту будуть зафіксовані.</p>
+<p class="glossary-term-section__text">Автоматизовані перевірки доступності покривають лише частину проблем. За потреби доповнюйте їх експертною оцінкою та тестуванням користувацьких завдань. Оновлюйте каркас синхронно зі змінами в базовій дизайн-системі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-which-rules-should-an-ai-agent-receive">
-<h2 id="section-which-rules-should-an-ai-agent-receive" class="glossary-term-section__title">Which rules should an AI agent receive?</h2>
-<p class="glossary-term-section__text">Give the agent the actual component names, supported imports and properties, token roles, relevant states, and acceptance criteria. Specify where to retrieve the current references and what to do when a required capability is missing.</p>
-<p class="glossary-term-section__text">For example, a rule can require the agent to check the documented date-field API before using a range property. The review then checks the code against that API and tests the field in the complete task.</p>
-<p class="glossary-term-section__text">An <a href="/ua/glossary/ai-ready-design-system.html">AI-ready design system</a> supplies maintained context. The harness assembles it for a task, while <a href="/ua/glossary/design-qa.html">design QA</a> helps inspect the resulting experience.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які правила повинен отримувати ШІ-агент?</h2>
+<p class="glossary-term-section__text">Надайте агенту точні назви компонентів, підтримувані шляхи імпорту та пропси, ролі токенів, перелік актуальних станів і критерії приймання. Вкажіть, де отримувати найсвіжіші специфікації та що робити, якщо необхідна функціональність відсутня.</p>
+<p class="glossary-term-section__text">Наприклад, правило може вимагати від агента перевірити задокументований API поля вибору дати перед використанням властивості вибору діапазону (range). Під час рев'ю код зіставляється з цим API, а поле тестується в межах повного користувацького завдання.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ai-ready-design-system.html">Дизайн-система, готова до ШІ</a> надає актуальний та структурований контекст. Каркас формує його для виконання конкретного завдання, а <a href="/ua/glossary/design-qa.html">контроль якості дизайну (Design QA)</a> допомагає комплексно перевірити отриманий інтерфейс.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/design-system.html">Design System</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-assisted-design.html">AI-assisted Design</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/design-system.html">Дизайн-система (Design System)</a></li>
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Каркас оцінювання ШІ (AI Evals)</a></li>
+<li><a href="/ua/glossary/ai-assisted-design.html">Дизайн за підтримки ШІ (AI-Assisted Design)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma: Code Connect Introduction</a></li>
-<li><a href="https://storybook.js.org/docs/writing-tests" target="_blank" rel="noopener noreferrer">Storybook: Testing UI Components</a></li>
+<li><a href="https://developers.figma.com/docs/code-connect/" target="_blank" rel="noopener noreferrer">Figma: Вступ до Code Connect</a></li>
+<li><a href="https://storybook.js.org/docs/writing-tests" target="_blank" rel="noopener noreferrer">Storybook: Тестування UI-компонентів</a></li>
 </ul>
 </section>
 

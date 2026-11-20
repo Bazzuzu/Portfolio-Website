@@ -384,78 +384,78 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Відповідальний дизайн ШІ (Responsible AI Design) — це практика комплексного врахування користі, обмежень та потенційних ризиків ШІ-продукту під час проєктування його роботи. Вона пов'язує рішення щодо користувацького досвіду з якістю даних, оцінюванням результатів, нормативним управлінням та безперервною експлуатацією.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-responsible-ai-design-involve">
-<h2 id="section-what-does-responsible-ai-design-involve" class="glossary-term-section__title">What does responsible AI design involve?</h2>
-<p class="glossary-term-section__text">Start with the people affected by the feature, the intended use, and the consequences of failure. Include those who may be affected without directly using the interface.</p>
+    <p class="glossary-term-section__text">Відповідальне проєктування ШІ (Responsible AI design) — це практика всебічного врахування переваг, обмежень та потенційних ризиків або шкоди від продукту на базі штучного інтелекту під час ухвалення рішень щодо принципів його роботи. Вона пов'язує рішення у сфері користувацького досвіду (UX) із роботою з даними, оцінюванням (evaluation), врядуванням (governance) та безперервною експлуатацією системи.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що передбачає відповідальне проєктування ШІ?</h2>
+<p class="glossary-term-section__text">Почніть із людей, на яких впливає функція, її цільового призначення та наслідків збоїв чи помилок. Враховуйте також тих, кого можуть торкнутися результати роботи системи, навіть якщо вони не взаємодіють з інтерфейсом безпосередньо.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Area</th>
-<th>Practical design question</th>
+<th>Сфера</th>
+<th>Практичне питання проєктування</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purpose</td>
-<td>Is AI appropriate for this task and its consequences?</td>
+<td>Призначення</td>
+<td>Чи є застосування ШІ доцільним для цього завдання та його можливих наслідків?</td>
 </tr>
 <tr>
-<td>Information</td>
-<td>What inputs are necessary, and who may access them?</td>
+<td>Інформація</td>
+<td>Які вхідні дані є необхідними та хто має до них доступ?</td>
 </tr>
 <tr>
-<td>Performance</td>
-<td>Where does the feature fail, including across relevant groups and contexts?</td>
+<td>Ефективність</td>
+<td>У яких випадках функція дає збій, зокрема для різних груп користувачів та контекстів?</td>
 </tr>
 <tr>
-<td>Control</td>
-<td>What can a person inspect, correct, decline, or stop?</td>
+<td>Контроль</td>
+<td>Що саме людина може перевірити, виправити, відхилити або зупинити?</td>
 </tr>
 <tr>
-<td>Access</td>
-<td>Can people with different access needs complete the task?</td>
+<td>Доступність</td>
+<td>Чи можуть люди з різними потребами доступності успішно виконати завдання?</td>
 </tr>
 <tr>
-<td>Accountability</td>
-<td>Who investigates and addresses problems after launch?</td>
+<td>Підзвітність</td>
+<td>Хто розслідує та усуває проблеми після релізу?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These questions require collaboration with engineering, research, product, and the relevant operational owners. Interface copy cannot compensate for an unsupported capability or missing access control.</p>
+<p class="glossary-term-section__text">Ці питання вимагають системної співпраці між інженерною командою, дослідниками, продуктовими менеджерами та відповідальними операційними власниками. Тексти в інтерфейсі (UX-копірайтинг) не здатні компенсувати непідтримувані можливості системи або відсутність контролю доступу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-assisting-with-customer-support">
-<h2 id="section-example-assisting-with-customer-support" class="glossary-term-section__title">Example: assisting with customer support</h2>
-<p class="glossary-term-section__text">Suppose a product drafts replies to customer questions. The team defines which topics it supports, which records it can access, and when a person must review a reply.</p>
-<p class="glossary-term-section__text">Evaluation includes missing records, different language needs, misleading input, and customers whose circumstances do not fit the usual case. The interface makes unsupported requests and unresolved information visible.</p>
-<p class="glossary-term-section__text">After launch, the team needs a route for corrections and a way to investigate recurring failures. A launch checklist alone does not maintain the feature.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: асистування службі підтримки клієнтів</h2>
+<p class="glossary-term-section__text">Припустимо, продукт формує чернетки відповідей на запити клієнтів. Команда визначає, які теми він підтримує, до яких записів має доступ і коли людина обов'язково повинна переглянути та схвалити відповідь.</p>
+<p class="glossary-term-section__text">Оцінювання (evaluation) охоплює сценарії з відсутніми записами, різними мовними потребами, оманливими або маніпулятивними вхідними даними, а також клієнтів, чиї життєві обставини не відповідають типовому сценарію. Інтерфейс робить непідтримувані запити та невирішені суперечності в інформації явно помітними.</p>
+<p class="glossary-term-section__text">Після запуску команді потрібен налагоджений маршрут для внесення виправлень і механізм розслідування повторюваних збоїв. Сам по собі чекліст перед запуском не забезпечує подальшої життєздатності та безпеки функції.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-this-relate-to-the-nist-ai-rmf">
-<h2 id="section-how-does-this-relate-to-the-nist-ai-rmf" class="glossary-term-section__title">How does this relate to the NIST AI RMF?</h2>
-<p class="glossary-term-section__text">The NIST AI Risk Management Framework is a voluntary framework for managing AI risks. Its core functions are Govern, Map, Measure, and Manage.</p>
-<p class="glossary-term-section__text">Design work can contribute to each function: clarifying responsibility, understanding the use context, evaluating experiences, and improving controls. The framework is not a design-system certification or a promise that a product meets every applicable requirement.</p>
+<section class="glossary-term-section" aria-labelledby="section-nist-ai-rmf">
+<h2 id="section-nist-ai-rmf" class="glossary-term-section__title">Як це пов'язано з NIST AI RMF?</h2>
+<p class="glossary-term-section__text">Фреймворк управління ризиками штучного інтелекту NIST (NIST AI Risk Management Framework, AI RMF) — це добровільний стандарт для виявлення та мінімізації ризиків ШІ. Його ключовими функціями є Управління (Govern), Картування (Map), Вимірювання (Measure) та Контроль (Manage).</p>
+<p class="glossary-term-section__text">Проєктування інтерфейсів та взаємодії може зробити внесок у кожну з цих функцій: уточнення зон відповідальності, глибоке розуміння контексту використання, оцінювання досвіду взаємодії та вдосконалення механізмів контролю. Цей фреймворк не є сертифікатом дизайн-системи чи гарантією того, що продукт автоматично відповідає всім застосовним регуляторним вимогам.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-keep-the-work-practical">
-<h2 id="section-how-do-you-keep-the-work-practical" class="glossary-term-section__title">How do you keep the work practical?</h2>
-<p class="glossary-term-section__text">Choose concrete acceptance criteria tied to the intended use. For example, verify that a reviewer can identify the source behind a draft and can reject it without losing the original customer message.</p>
-<p class="glossary-term-section__text">Record known limitations and who owns them. Reevaluate when models, data, users, or workflows change. Focus on observable behavior and outcomes rather than a broad “responsible AI” label.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як зберегти практичну цінність цієї роботи?</h2>
+<p class="glossary-term-section__text">Обирайте конкретні критерії приймання (acceptance criteria), безпосередньо прив'язані до цільового сценарію використання. Наприклад, переконайтеся, що рецензент може чітко ідентифікувати першоджерело чернетки та відхилити її без ризику втрати оригінального повідомлення клієнта.</p>
+<p class="glossary-term-section__text">Фіксуйте відомі обмеження та закріплюйте відповідальних за ними осіб. Проводьте повторне оцінювання, коли змінюються моделі, дані, профілі користувачів або робочі процеси. Фокусуйтеся на спостережуваній поведінці системи та вимірюваних результатах, а не на абстрактному ярлику «відповідального ШІ».</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-transparency.html">AI Transparency</a></li>
-<li><a href="/ua/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
-<li><a href="/ua/glossary/accessibility-wcag.html">Accessibility and WCAG</a></li>
-<li><a href="/ua/glossary/prompt-injection.html">Prompt Injection</a></li>
+<li><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a></li>
+<li><a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри до ШІ (Trust Calibration in AI)</a></li>
+<li><a href="/ua/glossary/accessibility-wcag.html">Доступність та WCAG (Accessibility and WCAG)</a></li>
+<li><a href="/ua/glossary/prompt-injection.html">Ін'єкція промптів (Prompt Injection)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">AI Risk Management Framework, NIST</a></li>
-<li><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener noreferrer">AI RMF Core, NIST</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">Фреймворк управління ризиками ШІ, NIST (AI Risk Management Framework)</a></li>
+<li><a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener noreferrer">Ядро AI RMF, NIST (AI RMF Core)</a></li>
 </ul>
 </section>
 

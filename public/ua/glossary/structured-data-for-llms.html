@@ -387,41 +387,41 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Структуровані дані для LLM — це загальний термін для публікації інформації в машиночитаних форматах, придатних для синтаксичного розбору системами ШІ та інструментами пошуку. У веб-середовищі провідним підходом є семантичний опис сутностей сторінки та зв'язків між ними за допомогою словника Schema.org у форматі JSON-LD.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-can-structured-data-describe">
-<h2 id="section-what-can-structured-data-describe" class="glossary-term-section__title">What can structured data describe?</h2>
-<p class="glossary-term-section__text">Schema.org defines types and properties. JSON-LD is a format for expressing that information. A glossary page, for example, can identify its entry as a <code>DefinedTerm</code>, give it a name and description, and link it to a <code>DefinedTermSet</code>. The description should agree with the visible definition. Whether a particular system reads or uses those fields depends on how that system retrieves and processes pages.</p>
+    <p class="glossary-term-section__text">Структуровані дані для LLM — це загальний термін для позначення публікації інформації в машиночитаному форматі, придатній для обробки системами штучного інтелекту або їхніми інструментами пошуку та вилучення даних (retrieval tools). У веб-середовищі провідним підходом є опис сутностей сторінки та взаємозв'язків між ними за допомогою словника Schema.org у форматі JSON-LD.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що можуть описувати структуровані дані?</h2>
+<p class="glossary-term-section__text">Schema.org визначає типи (types) та властивості (properties). JSON-LD є форматом для представлення цієї інформації. Наприклад, сторінка глосарія може ідентифікувати свій запис як сутність <code>DefinedTerm</code>, надати їй назву (name) та опис (description), а також зв'язати її з набором термінів <code>DefinedTermSet</code>. Опис у розмітці має точно відповідати видимому визначенню на сторінці. Те, чи прочитає певна система ці поля і чи використає їх, залежить від алгоритмів пошуку, індексації та обробки сторінок конкретною ШІ-системою.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-is-it-different-from-semantic-html">
-<h2 id="section-how-is-it-different-from-semantic-html" class="glossary-term-section__title">How is it different from semantic HTML?</h2>
-<p class="glossary-term-section__text">JSON-LD can describe what a page is about. Semantic HTML describes the structure and controls that appear on the page. For example, the glossary entry’s JSON-LD can identify a term, while a native HTML button gives the browser the semantics for a control that opens a panel. Both can be useful on the same page.</p>
+<section class="glossary-term-section" aria-labelledby="section-html">
+<h2 id="section-html" class="glossary-term-section__title">Чим вони відрізняються від семантичного HTML?</h2>
+<p class="glossary-term-section__text">JSON-LD описує семантичну суть того, про що йдеться на сторінці. Семантичний HTML описує структуру документа та елементи керування, присутні на екрані. Наприклад, JSON-LD запису глосарія ідентифікує термін як сутність знань, тоді як нативна HTML-кнопка (<code><button></code>) передає браузеру семантику елемента керування, який відкриває бічну панель. Обидва підходи взаємно доповнюють один одного та є корисними на одній і тій самій сторінці.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-do-google-s-ai-features-need-special-structured-data">
-<h2 id="section-do-google-s-ai-features-need-special-structured-data" class="glossary-term-section__title">Do Google’s AI features need special structured data?</h2>
-<p class="glossary-term-section__text">Google says its AI Overviews and AI Mode require no special Schema.org markup. A page needs to be indexed and eligible to appear with a snippet to be eligible as a supporting link. Whether a page appears as a source depends on the system and the query. Keep your visible content clear and use structured data to describe it faithfully.</p>
+<section class="glossary-term-section" aria-labelledby="section-google">
+<h2 id="section-google" class="glossary-term-section__title">Чи потребують ШІ-функції Google спеціальних структурованих даних?</h2>
+<p class="glossary-term-section__text">Згідно з офіційними рекомендаціями Google, функції AI Overviews та AI Mode не вимагають спеціальної розмітки Schema.org. Щоб сторінка могла претендувати на показ як джерело (supporting link), вона повинна бути проіндексована та мати право на формування звичайного сніпета. Поява сторінки серед джерел залежить від алгоритмів системи та конкретного запиту користувача. Дбайте про якість і чіткість видимого контенту та використовуйте структуровані дані для його коректного й точного опису.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-is-structured-data-the-same-as-structured-ai-output">
-<h2 id="section-is-structured-data-the-same-as-structured-ai-output" class="glossary-term-section__title">Is structured data the same as structured AI output?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/structured-outputs.html">Structured outputs</a> constrain a model's response to a supported schema. Website structured data describes published entities and their relationships. Both can use JSON, but they address different tasks; publishing JSON-LD does not constrain an unrelated model's answer format.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чи тотожні структуровані дані структурованому виводу ШІ?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/structured-outputs.html">Структуровані виводи (structured outputs)</a> обмежують відповіді генеративної моделі заданою підтримуваною схемою. Структуровані дані вебсайту описують опубліковані сутності та зв'язки між ними. Обидва підходи можуть використовувати формат JSON, але вони вирішують абсолютно різні завдання: розміщення розмітки JSON-LD на сайті жодним чином не обмежує формат відповіді сторонньої моделі.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/llms-txt-proposal.html">llms.txt Proposal</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
-<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
-<li><a href="/ua/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
-<li><a href="/ua/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/ua/glossary/llms-txt-proposal.html">Стандарт llms.txt (llms.txt Proposal)</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту (Content Modeling)</a></li>
+<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Графи знань для ШІ-контексту (Knowledge Graphs)</a></li>
+<li><a href="/ua/glossary/controlled-vocabulary.html">Контрольований словник (Controlled Vocabulary)</a></li>
+<li><a href="/ua/glossary/semantic-html.html">Семантичний HTML (Semantic HTML)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://schema.org/docs/gs.html" target="_blank" rel="noopener noreferrer">Getting Started with Schema.org, Schema.org</a></li>
+<li><a href="https://schema.org/docs/gs.html" target="_blank" rel="noopener noreferrer">Початок роботи зі Schema.org (Getting Started with Schema.org), Schema.org</a></li>
 <li><a href="https://schema.org/DefinedTerm" target="_blank" rel="noopener noreferrer">DefinedTerm, Schema.org</a></li>
-<li><a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener noreferrer">JSON-LD 1.1, W3C</a></li>
-<li><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener noreferrer">Introduction to Structured Data, Google Search Central</a></li>
-<li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">AI Features and Your Website, Google Search Central</a></li>
+<li><a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener noreferrer">Специфікація JSON-LD 1.1, W3C</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener noreferrer">Вступ до структурованих даних (Introduction to Structured Data), Google Search Central</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">ШІ-функції та ваш вебсайт (AI Features and Your Website), Google Search Central</a></li>
 </ul>
 </section>
 

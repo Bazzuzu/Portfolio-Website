@@ -384,41 +384,39 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Каркас оцінювання (evaluation harness, або стенд тестування ШІ) — це інфраструктура, яка запускає набори тестів для системи ШІ, фіксує перебіг виконання, застосовує критерії оцінювання та агрегує підсумкові результати. Команди використовують його для порівняння версій моделей і своєчасного виявлення регресій у поведінці.</p>
-<p class="glossary-term-section__text">An evaluation suite is the collection of test cases. The harness executes those cases. An agent harness, by comparison, runs the agent itself; an evaluation can test that runtime and its model together.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-a-useful-test-includes">
-<h2 id="section-what-a-useful-test-includes" class="glossary-term-section__title">What a useful test includes</h2>
-<p class="glossary-term-section__text">A test case needs an input, relevant starting conditions, and explicit success criteria. The harness should capture the outputs and, when relevant, tool calls and changes in the test environment.</p>
-<p class="glossary-term-section__text">Graders can use code, human judgment, or another model. Use a method appropriate to the claim being checked, and calibrate model-based judgments against reviewed examples.</p>
+    <p class="glossary-term-section__text">Каркас оцінювання (Evaluation Harness, або тестовий стенд AI Evals) — це інфраструктура, яка запускає набори тестів для системи штучного інтелекту, протоколює хід виконання, застосовує критерії оцінювання та агрегує підсумкові результати. Команди використовують його для порівняння версій і своєчасного виявлення регресій або змін у поведінці системи.</p>
+<p class="glossary-term-section__text">Набір для оцінювання (evaluation suite) є колекцією тестових сценаріїв. Каркас оцінювання (harness) забезпечує безпосереднє виконання цих сценаріїв. На відміну від нього, тестовий каркас агента (agent harness) запускає самого агента під час взаємодії; водночас система оцінювання може комплексно тестувати як це середовище виконання (runtime), так і саму модель.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що містить ефективний тест</h2>
+<p class="glossary-term-section__text">Тестовий випадок (test case) потребує вхідних даних, релевантних початкових умов і явних, вимірюваних критеріїв успіху. Каркас оцінювання має фіксувати згенеровані відповіді, а за потреби — виклики інструментів (tool calls) та зміни стану тестового середовища.</p>
+<p class="glossary-term-section__text">Для оцінювання результатів (grading) можна використовувати програмний код, експертну оцінку людини або іншу мовну модель (LLM-as-a-judge). Обирайте метод відповідно до суті перевірки та калібруйте модельні оцінки на ретельно верифікованих людиною прикладах (ground truth).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-updating-a-customer-address">
-<h2 id="section-example-updating-a-customer-address" class="glossary-term-section__title">Example: updating a customer address</h2>
-<p class="glossary-term-section__text">An agent is asked to change a test customer's delivery address. A useful evaluation checks that the correct record contains the requested address, unrelated records remain unchanged, and the final message accurately describes the outcome.</p>
-<p class="glossary-term-section__text">The suite should also cover missing address fields, insufficient permissions, and a tool timeout. A successful-sounding reply alone does not prove that the update happened.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: оновлення адреси клієнта</h2>
+<p class="glossary-term-section__text">Агенту дають завдання змінити адресу доставки тестового клієнта. Ефективне оцінювання перевіряє, що потрібний запис у базі дійсно містить запитану адресу, непов'язані записи залишилися без змін, а фінальне повідомлення користувачеві точно описує фактичний результат виконання.</p>
+<p class="glossary-term-section__text">Набір тестів також повинен охоплювати випадки з пропущеними полями адреси, недостатніми правами доступу та тайм-аутом інструмента. Переконлива й успішна за звучанням текстова відповідь сама по собі не є доказом того, що операція в базі даних дійсно відбулася.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-make-comparisons-meaningful">
-<h2 id="section-make-comparisons-meaningful" class="glossary-term-section__title">Make comparisons meaningful</h2>
-<p class="glossary-term-section__text">Version the cases, prompts, model configuration, tools, and grading rules. Keep initial conditions comparable and run multiple trials when behavior varies.</p>
-<p class="glossary-term-section__text">Report failures by category alongside aggregate scores. Record latency and cost where they matter to the task.</p>
-<p class="glossary-term-section__text">Keep evaluation cases separate from examples used to tune the system. A strong offline score supports a release decision, while production monitoring and user research provide additional evidence about real use.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Забезпечення достовірності порівнянь</h2>
+<p class="glossary-term-section__text">Здійснюйте версіонування тест-кейсів, промптів, конфігурацій моделі, інструментів і правил оцінювання. Зберігайте початкові умови ідентичними та проводьте серію повторних прогонів (multiple trials), якщо поведінка моделі має стохастичний характер.</p>
+<p class="glossary-term-section__text">Звітуйте про помилки за категоріями поруч із агрегованими балами. Фіксуйте затримку відповіді (latency) та вартість обчислень (cost), якщо вони мають значення для практичного виконання завдання.</p>
+<p class="glossary-term-section__text">Зберігайте набори для оцінювання окремо від прикладів, що використовуються для тонкого налаштування або промптингу системи (fine-tuning / few-shot). Високий бал в офлайн-тестах є вагомим аргументом для релізу, проте продуктовий моніторинг у продакшені та дослідження користувачів надають додаткові незамінні докази щодо реального досвіду взаємодії.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/visual-regression-testing.html">Visual Regression Testing</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-hallucination.html">AI Hallucination</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування</a></li>
+<li><a href="/ua/glossary/visual-regression-testing.html">Тестування візуальної регресії</a></li>
+<li><a href="/ua/glossary/ai-hallucination.html">Галюцинації ШІ (AI Hallucination)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">Anthropic: Demystifying Evals for AI Agents</a></li>
-<li><a href="https://docs.langchain.com/langsmith/evaluation" target="_blank" rel="noopener noreferrer">LangChain: LangSmith Evaluation</a></li>
+<li><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents" target="_blank" rel="noopener noreferrer">Anthropic: Демістифікація оцінювання для ШІ-агентів (Demystifying Evals for AI Agents)</a></li>
+<li><a href="https://docs.langchain.com/langsmith/evaluation" target="_blank" rel="noopener noreferrer">LangChain: Оцінювання в LangSmith (LangSmith Evaluation)</a></li>
 </ul>
 </section>
 

@@ -384,45 +384,45 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Калібрування довіри до ШІ (Trust Calibration in AI) — це узгодження очікувань користувача від системи з її реальними можливостями та обмеженнями. Метою дизайну є формування раціональної довіри (appropriate reliance): надання людям змоги впевнено застосовувати коректні результати та вчасно помічати випадки, коли потрібна перевірка, виправлення чи інший підхід.</p>
-<section class="glossary-term-section" aria-labelledby="section-why-is-more-trust-not-always-better">
-<h2 id="section-why-is-more-trust-not-always-better" class="glossary-term-section__title">Why is more trust not always better?</h2>
-<p class="glossary-term-section__text">A person can over-rely on an incorrect answer or reject a useful one. Both can prevent successful task completion.</p>
-<p class="glossary-term-section__text">The amount of trust reported in a survey is not the same as how someone behaves. A user may say they are skeptical and still accept an unsupported recommendation when verification is difficult.</p>
-<p class="glossary-term-section__text">Microsoft's research on appropriate reliance identifies useful mental models, signals to verify, and lower verification effort as important UX goals. These are directions to test in context, not guarantees that a particular interface treatment will work.</p>
+    <p class="glossary-term-section__text">Калібрування довіри до ШІ (Trust calibration in AI) — це вирівнювання між очікуваннями людини від системи та її реальними можливостями й обмеженнями. Головною метою проєктування є належна довіра та покладання (appropriate reliance): допомога людям у продуктивному використанні валідних результатів та своєчасному розпізнаванні ситуацій, коли необхідні додаткова верифікація, ручне коригування або альтернативний підхід.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому вищий рівень довіри не завжди є кращим?</h2>
+<p class="glossary-term-section__text">Людина може надмірно довіряти хибній відповіді (надмірне покладання, over-reliance) або відхилити корисну та точну (недостатня довіра, under-reliance). Обидва сценарії перешкоджають успішному виконанню завдання.</p>
+<p class="glossary-term-section__text">Рівень довіри, зафіксований в опитуваннях, часто не збігається з реальною поведінкою. Користувач може декларувати скептицизм, але все одно приймати необґрунтовану рекомендацію моделі, якщо процес її перевірки є занадто складним або обтяжливим.</p>
+<p class="glossary-term-section__text">Дослідження Microsoft щодо належної довіри виділяють три фундаментальні цілі для UX: формування адекватних ментальних моделей, надання чітких сигналів для верифікації та зниження зусиль, необхідних для перевірки. Це вектори для тестування в конкретному контексті, а не апріорні гарантії того, що окреме візуальне рішення спрацює.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-a-policy-summary">
-<h2 id="section-example-reviewing-a-policy-summary" class="glossary-term-section__title">Example: reviewing a policy summary</h2>
-<p class="glossary-term-section__text">An assistant summarizes an expense policy for a submitted claim. The interface provides the relevant passage and highlights a missing date that may affect the conclusion.</p>
-<p class="glossary-term-section__text">The reviewer can inspect the evidence and correct the missing detail. If the source does not support the summary, the reviewer can reject it and continue with the underlying policy.</p>
-<p class="glossary-term-section__text">A generic “AI can make mistakes” message would not identify which part needs attention or make that check easier.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: аналіз резюме корпоративної політики</h2>
+<p class="glossary-term-section__text">ШІ-асистент формує резюме політики компенсації витрат для поданого фінансового звіту. Інтерфейс надає відповідний фрагмент оригінального документа та виділяє відсутню дату, яка може суттєво вплинути на остаточний висновок.</p>
+<p class="glossary-term-section__text">Рецензент має можливість вивчити першоджерело та додати відсутню деталь. Якщо вихідний документ не підтверджує висновки резюме, рецензент може відхилити його та звернутися безпосередньо до тексту політики.</p>
+<p class="glossary-term-section__text">Універсальне шаблонне попередження «ШІ може припускатися помилок» не дає жодного розуміння, яка саме частина вимагає уваги, і ніяк не полегшує перевірку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-should-an-interface-show-a-confidence-score">
-<h2 id="section-should-an-interface-show-a-confidence-score" class="glossary-term-section__title">Should an interface show a confidence score?</h2>
-<p class="glossary-term-section__text">Only show a score when its meaning and limitations are understood and validated for the task.</p>
-<p class="glossary-term-section__text">A model-generated statement such as “95% confident” is not automatically a calibrated probability of correctness. A score measured for one dataset may not describe performance for a different user group or task.</p>
-<p class="glossary-term-section__text">Sometimes a concrete signal is more useful: which record was retrieved, which information is missing, or whether a deterministic check passed. Explain exactly what that check establishes.</p>
+<section class="glossary-term-section" aria-labelledby="section-confidence-score">
+<h2 id="section-confidence-score" class="glossary-term-section__title">Чи варто відображати оцінку впевненості (Confidence Score) в інтерфейсі?</h2>
+<p class="glossary-term-section__text">Показуйте оцінку впевненості лише тоді, коли її точне значення, математичні межі та обмеження зрозумілі користувачам і надійно валідовані для поточного завдання.</p>
+<p class="glossary-term-section__text">Згенероване моделлю твердження на кшталт «впевненість 95%» не є автоматично відкаліброваною ймовірністю коректності відповіді. Показник, виміряний для одного набору даних, може абсолютно не відповідати реальній точності для іншої аудиторії чи іншого типу робочих завдань.</p>
+<p class="glossary-term-section__text">Часто значно кориснішим є конкретний детермінований сигнал: який саме запис було вилучено, яких відомостей бракує або чи пройшла відповідь системну перевірку за правилами. Чітко пояснюйте користувачеві, що саме засвідчує або перевіряє такий сигнал.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-appropriate-reliance">
-<h2 id="section-how-do-you-evaluate-appropriate-reliance" class="glossary-term-section__title">How do you evaluate appropriate reliance?</h2>
-<p class="glossary-term-section__text">Use tasks with independently assessable outcomes. Observe acceptance of correct and incorrect outputs, rejection of useful outputs, verification behavior, and the final task result.</p>
-<p class="glossary-term-section__text">Include realistic verification effort. A design that requires opening several disconnected documents may look transparent while making careful review impractical.</p>
-<p class="glossary-term-section__text">Evaluate confidence and behavior separately. Improving perceived trust without improving decisions is not sufficient evidence that the experience works better.</p>
+<section class="glossary-term-section" aria-labelledby="section-appropriate-reliance">
+<h2 id="section-appropriate-reliance" class="glossary-term-section__title">Як оцінювати належну довіру (Appropriate Reliance)?</h2>
+<p class="glossary-term-section__text">Використовуйте завдання з результатами, які можна оцінити незалежно. Спостерігайте за тим, як користувачі приймають коректні та некоректні виводи, чи не відхиляють вони якісні відповіді, як саме здійснюють верифікацію та який фінальний результат завдання отримують.</p>
+<p class="glossary-term-section__text">Враховуйте реалістичні витрати зусиль на верифікацію (verification effort). Інтерфейс, який вимагає відкриття кількох розрізнених документів, може виглядати прозорим на папері, проте на практиці робить ретельну перевірку занадто виснажливою та неефективною.</p>
+<p class="glossary-term-section__text">Оцінюйте суб'єктивну впевненість і фактичну поведінку користувачів окремо. Підвищення суб'єктивного відчуття довіри без реального покращення якості рішень, які ухвалюють люди, не є достатнім доказом покращення продуктового досвіду.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/explainable-ai.html">Explainable AI</a></li>
-<li><a href="/ua/glossary/ai-transparency.html">AI Transparency</a></li>
-<li><a href="/ua/glossary/ai-hallucination.html">AI Hallucination</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop</a></li>
+<li><a href="/ua/glossary/explainable-ai.html">Пояснюваний ШІ (Explainable AI)</a></li>
+<li><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a></li>
+<li><a href="/ua/glossary/ai-hallucination.html">Галюцинації ШІ (AI Hallucination)</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі управління (Human-in-the-Loop, HITL)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf" target="_blank" rel="noopener noreferrer">Fostering appropriate reliance on GenAI, Microsoft Research</a></li>
-<li><a href="https://pair.withgoogle.com/chapter/explainability-trust/" target="_blank" rel="noopener noreferrer">Explainability and Trust, Google PAIR</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/Appropriate-Reliance-Lessons-Learned-Published-2025-3-3.pdf" target="_blank" rel="noopener noreferrer">Формування належної довіри до генеративного ШІ (Fostering appropriate reliance on GenAI), Microsoft Research</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/explainability-trust/" target="_blank" rel="noopener noreferrer">Пояснюваність та довіра (Explainability and Trust), Google PAIR</a></li>
 </ul>
 </section>
 

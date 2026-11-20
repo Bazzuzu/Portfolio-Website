@@ -384,39 +384,39 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Граф знань моделює сутності предметної області та зв'язки між ними у вигляді графової структури, доповненої властивостями й унікальними ідентифікаторами. У застосунках ШІ графи знань забезпечують структурований контекст для семантичного пошуку, логічного виведення фактів та формування зрозумілих пояснень.</p>
-<p class="glossary-term-section__text">For example, a graph can connect a hotel to its rooms, a reservation to its guest, and a maintenance issue to the room it affects. Relationships make those connections available for queries.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-finding-affected-reservations">
-<h2 id="section-example-finding-affected-reservations" class="glossary-term-section__title">Example: finding affected reservations</h2>
-<p class="glossary-term-section__text">Suppose room 204 has an unresolved maintenance issue. A hotel tool could follow relationships from that room to overlapping reservations and their assigned guests.</p>
-<p class="glossary-term-section__text">An AI assistant could use the resulting records to explain which reservations need review. The application still needs date logic, current data, and access checks to determine the actual result.</p>
-<p class="glossary-term-section__text">Stable identifiers matter: two guests with the same name should remain distinct entities. Record where important facts came from and when they were updated.</p>
+    <p class="glossary-term-section__text">Граф знань моделює сутності предметної області та зв'язки між ними у вигляді графової структури, збагаченої властивостями й унікальними ідентифікаторами. У застосунках штучного інтелекту графи знань забезпечують структурований контекст для семантичного пошуку, логічного міркування (reasoning) та формування зрозумілих пояснень.</p>
+<p class="glossary-term-section__text">Наприклад, граф може пов'язувати готель із його номерами, бронювання — з гостем, а технічну проблему — з номером, на який вона впливає. Чітко зафіксовані зв'язки роблять ці залежності доступними для системних запитів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: пошук зачеплених бронювань</h2>
+<p class="glossary-term-section__text">Уявімо, що в номері 204 виникла невирішена проблема з технічним обслуговуванням. Інструмент готельного менеджменту може пройти за зв'язками від цього номера до всіх активних бронювань на цей період та призначених гостей.</p>
+<p class="glossary-term-section__text">ШІ-асистент може використати отримані записи, щоб чітко пояснити персоналу, які саме бронювання потребують термінового перегляду або заміни номера. Водночас застосунок все одно потребує детермінованої логіки роботи з датами, актуальних даних у реальному часі та перевірки прав доступу, щоб сформувати остаточний результат.</p>
+<p class="glossary-term-section__text">Стабільні ідентифікатори критично важливі: двоє гостей з однаковими іменами повинні залишатися різними сутностями. Завжди фіксуйте джерело походження важливих фактів і час їхнього останнього оновлення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-knowledge-graphs-and-rag">
-<h2 id="section-knowledge-graphs-and-rag" class="glossary-term-section__title">Knowledge graphs and RAG</h2>
-<p class="glossary-term-section__text">A knowledge graph can support retrieval-augmented generation by helping retrieve connected facts. Graphs can also be combined with keyword or vector search.</p>
-<p class="glossary-term-section__text">Microsoft's GraphRAG is one specific approach that builds a graph and community summaries from text. Its architecture does not define every graph-based retrieval system.</p>
-<p class="glossary-term-section__text">RDF is one way to represent graph data; knowledge graphs can also use other data models.</p>
+<section class="glossary-term-section" aria-labelledby="section-rag">
+<h2 id="section-rag" class="glossary-term-section__title">Графи знань та RAG</h2>
+<p class="glossary-term-section__text">Граф знань може підсилювати генерацію з доповненим пошуком (<a href="/ua/glossary/retrieval-augmented-generation-rag.html">RAG</a>), полегшуючи вилучення взаємопов'язаних фактів. Графи також можна поєднувати з традиційним повнотекстовим або векторним семантичним пошуком.</p>
+<p class="glossary-term-section__text">GraphRAG від Microsoft — це один із конкретних підходів, що будує граф знань і резюме спільнот сутностей (community summaries) із неструктурованого тексту. Його архітектура є лише однією з можливих реалізацій і не вичерпує всіх графових систем пошуку.</p>
+<p class="glossary-term-section__text">RDF (Resource Description Framework) — це один зі способів представлення графових даних; графи знань можуть також застосовувати інші моделі, зокрема property graphs.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-check-the-relationships">
-<h2 id="section-check-the-relationships" class="glossary-term-section__title">Check the relationships</h2>
-<p class="glossary-term-section__text">Define the meaning and direction of each relationship. Validate extracted entities, duplicate records, and unsupported connections before relying on them.</p>
-<p class="glossary-term-section__text">A graph structures information, including information that may be incomplete or incorrect. Test retrieval quality and the generated answer against the underlying sources. More connections alone do not establish better answers.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Валідація взаємозв'язків</h2>
+<p class="glossary-term-section__text">Чітко визначайте семантичне значення та напрямок кожного зв'язку. Перш ніж покладатися на граф, перевіряйте вилучені сутності на наявність дублікатів і виявляйте зв'язки, що не мають підтвердження в першоджерелах.</p>
+<p class="glossary-term-section__text">Граф структурує інформацію, включно з даними, які можуть бути неповними або помилковими. Тестуйте якість пошуку та фінальні відповіді моделі безпосередньо щодо вихідних першоджерел. Сама по собі наявність більшої кількості зв'язків автоматично не гарантує кращих відповідей.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/conceptual-schema.html">Conceptual Schema</a></li>
-<li><a href="/ua/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
-<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li>
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+<li><a href="/ua/glossary/conceptual-schema.html">Концептуальна схема</a></li>
+<li><a href="/ua/glossary/domain-context-modeling.html">Моделювання контексту предметної області</a></li>
+<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Генерація з доповненим пошуком (RAG)</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.w3.org/TR/rdf11-primer/" target="_blank" rel="noopener noreferrer">W3C: RDF 1.1 Primer</a></li>
-<li><a href="https://microsoft.github.io/graphrag/" target="_blank" rel="noopener noreferrer">Microsoft: GraphRAG Documentation</a></li>
+<li><a href="https://www.w3.org/TR/rdf11-primer/" target="_blank" rel="noopener noreferrer">W3C: Вступ до RDF 1.1 (RDF 1.1 Primer)</a></li>
+<li><a href="https://microsoft.github.io/graphrag/" target="_blank" rel="noopener noreferrer">Microsoft: Документація GraphRAG</a></li>
 </ul>
 </section>
 

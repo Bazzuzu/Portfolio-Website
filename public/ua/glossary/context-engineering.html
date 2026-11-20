@@ -384,40 +384,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Контекстна інженерія (context engineering) — це практика відбору, структурування та динамічного оновлення інформації, що передається мовній моделі для вирішення конкретного завдання. Для ШІ-агента такий контекст охоплює системні інструкції, історію діалогу, знайдені документи, специфікації інструментів і результати їх виконання.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-context-engineering-involve">
-<h2 id="section-what-does-context-engineering-involve" class="glossary-term-section__title">What does context engineering involve?</h2>
-<p class="glossary-term-section__text">The team decides what the model needs for its next step and how that information should be supplied. This can mean retrieving a relevant policy, keeping the current task state, choosing which tools to expose, or summarizing older messages while preserving facts the task still needs.</p>
-<p class="glossary-term-section__text">Prompt engineering focuses on the instructions and examples given to the model. Context engineering also covers the other information provided during the interaction. Retrieval-augmented generation can supply external content as part of that process.</p>
+    <p class="glossary-term-section__text">Контекстна інженерія (Context Engineering) — це практика відбору, структурування та динамічного оновлення інформації, доступної мовній моделі для вирішення конкретного завдання. Для ШІ-агента ця інформація може охоплювати системні інструкції, історію діалогу, знайдені документи, описи доступних інструментів та результати їх виконання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що охоплює контекстна інженерія?</h2>
+<p class="glossary-term-section__text">Інженерна команда визначає, які саме дані потрібні моделі для виконання наступного кроку і в якій формі їх слід передати. Це може означати пошук релевантних регламентів, збереження поточного стану задачі (state), динамічний вибір доступних моделі інструментів або стиснення та самеризацію ранніх повідомлень зі збереженням критично важливих фактів, необхідних для поточної роботи.</p>
+<p class="glossary-term-section__text">Якщо промпт-інженерія фокусується безпосередньо на формулюванні інструкцій та прикладів (few-shot), то контекстна інженерія керує всім обсягом даних, що надходять у вікно контексту під час взаємодії. Генерація з доповненим пошуком (RAG) виступає одним із ключових механізмів постачання зовнішнього контенту в цьому процесі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-explaining-a-booking-change">
-<h2 id="section-example-explaining-a-booking-change" class="glossary-term-section__title">Example: Explaining a booking change</h2>
-<p class="glossary-term-section__text">A traveler asks, “Can I move my flight to Friday?” The assistant needs the selected booking, the intended Friday, and the applicable fare rules. If several dates or bookings are possible, it asks the traveler to clarify.</p>
-<p class="glossary-term-section__text">A tool retrieves current booking data and the relevant rule text. The model receives those results with instructions to explain the conditions and identify anything still unresolved. If the system retrieves a new quote, it also keeps the quote’s time and expiry information in context so the response can identify the price being discussed.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: пояснення змін у бронюванні</h2>
+<p class="glossary-term-section__text">Мандрівник запитує: «Чи можу я перенести свій рейс на п'ятницю?». Асистенту потрібні дані про вибране бронювання, конкретну дату п'ятниці та правила застосовного тарифу. Якщо можливі кілька дат або бронювань, асистент спочатку просить користувача уточнити запит.</p>
+<p class="glossary-term-section__text">Спеціалізований інструмент витягує актуальні дані бронювання та текст відповідних правил тарифу. Модель отримує ці результати разом з інструкцією пояснити умови та підсвітити невирішені моменти. Якщо система генерує нову цінову пропозицію, вона також фіксує в контексті час створення котирування та термін його дії, щоб у відповіді користувачеві було чітко зрозуміло, про яку саме ціну йдеться.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-context-quality">
-<h2 id="section-how-do-you-evaluate-context-quality" class="glossary-term-section__title">How do you evaluate context quality?</h2>
-<p class="glossary-term-section__text">Create representative tasks with expected outcomes. Test whether the assistant selects the right booking and policy, notices missing information, and supports its explanation with the retrieved evidence. Include stale and conflicting results in the evaluation.</p>
-<p class="glossary-term-section__text">Compare changes against the same tasks. Record answer correctness and task completion alongside latency and token use. A shorter context can omit a crucial restriction, and additional context can introduce irrelevant or conflicting material. Compare both versions to find which information the task and model need.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як оцінювати якість контексту?</h2>
+<p class="glossary-term-section__text">Створюйте репрезентативні тестові сценарії з еталонними очікуваними результатами. Перевіряйте, чи вибирає асистент правильне бронювання і тарифну політику, чи помічає відсутні дані та чи підтверджує свої пояснення знайденими фактами. Обов'язково включайте в оцінювання застарілі та суперечливі результати.</p>
+<p class="glossary-term-section__text">Порівнюйте зміни на одному й тому самому наборі завдань. Фіксуйте точність відповідей та рівень успішного завершення завдань разом із затримкою (latency) та витратами токенів. Занадто короткий контекст може втратити важливе обмеження, а надмірний — внести шум, нерелевантні деталі або конфліктні дані. Порівняння обох варіантів допомагає знайти точний баланс інформації, необхідної моделі для виконання завдання.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/prompt-engineering.html">Prompt Engineering</a></li>
-<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation (RAG)</a></li>
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+<li><a href="/ua/glossary/prompt-engineering.html">Промпт-інженерія (Prompt Engineering)</a></li>
+<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Генерація з доповненим пошуком (RAG)</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM</a></li>
 <li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
 <li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
-</ul>
-<ul class="glossary-term-ul">
 <li><a href="/ua/glossary/context-window.html">Context Window</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective Context Engineering for AI Agents, Anthropic</a></li>
-<li><a href="https://docs.langchain.com/oss/python/langchain/context-engineering" target="_blank" rel="noopener noreferrer">Context Engineering in Agents, LangChain</a></li>
+<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Ефективна контекстна інженерія для ШІ-агентів, Anthropic</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langchain/context-engineering" target="_blank" rel="noopener noreferrer">Контекстна інженерія в агентах, LangChain</a></li>
 </ul>
 </section>
 

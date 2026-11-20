@@ -384,48 +384,46 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Генеративний інтерфейс (Generative UI) — це підхід, за якого система ШІ динамічно генерує або обирає елементи інтерфейсу відповідно до запиту користувача та поточного контексту. Результатом генерації можуть бути інтерактивні картки, форми введення, таблиці або діаграми, інтегровані поруч із текстом.</p>
-<p class="glossary-term-section__text">Implementations vary. A model might select an approved component and supply its data, or generate a new layout. The AI SDK documents an approach that connects tool results to existing React components. A product can use generative UI while retaining a stable navigation system and design language.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-comparing-flight-options">
-<h2 id="section-example-comparing-flight-options" class="glossary-term-section__title">Example: comparing flight options</h2>
-<p class="glossary-term-section__text">A traveler asks for two flights that arrive before noon. The application retrieves available flights and renders comparison cards with arrival times, prices, and fare conditions.</p>
-<p class="glossary-term-section__text">The user can change the dates or open an option's details directly. If the request is ambiguous, the interface asks for the missing constraint. If availability cannot be retrieved, it displays that state instead of inventing a bookable fare.</p>
-<p class="glossary-term-section__text">The useful interaction is the ability to inspect and act on structured information.</p>
+    <p class="glossary-term-section__text">Генеративний інтерфейс (Generative UI) — це підхід, за якого система ШІ динамічно генерує або обирає елементи інтерфейсу відповідно до запиту користувача та поточного контексту. Результатом генерації можуть бути інтерактивні картки, форми введення, таблиці або діаграми, що відображаються поруч із текстом.</p>
+<p class="glossary-term-section__text">Підходи до реалізації варіюються. Модель може обирати затверджений компонент і заповнювати його даними або генерувати абсолютно нове компонування (layout). Наприклад, у документації AI SDK описано підхід, який пов'язує результати виклику інструментів (tool results) з наявними React-компонентами. Завдяки цьому продукт може використовувати генеративний інтерфейс, зберігаючи при цьому стабільну навігаційну систему та узгоджену мову дизайну.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: порівняння варіантів перельотів</h2>
+<p class="glossary-term-section__text">Пасажир запитує два рейси, що прибувають до полудня. Застосунок отримує дані про доступні рейси та рендерить картки порівняння з часом прибуття, цінами та тарифними умовами.</p>
+<p class="glossary-term-section__text">Користувач може змінити дати або відкрити деталі варіанта безпосередньо в інтерфейсі. Якщо запит сформульовано неоднозначно, інтерфейс запитує уточнення щодо відсутніх обмежень. Якщо ж дані про наявність отримати не вдається, система відображає відповідний стан замість того, щоб вигадувати неіснуючий тариф.</p>
+<p class="glossary-term-section__text">Ключова цінність взаємодії полягає в можливості переглядати структуровану інформацію та виконувати дії з нею.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-designers-should-specify">
-<h2 id="section-what-designers-should-specify" class="glossary-term-section__title">What designers should specify</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що мають визначити дизайнери</h2>
 <ul class="glossary-term-ul">
-<li>Define the components the system can use and the data each requires.</li>
-<li>Distinguish retrieved facts from generated explanations.</li>
-<li>Design loading, empty, error, and partial-result states.</li>
-<li>Preserve labels, focus order, and keyboard operation when content changes.</li>
-<li>Make important status changes available to assistive technology.</li>
-<li>Require the appropriate review before a consequential action.</li>
+<li>Визначити набір компонентів, доступних системі, та структуру даних, необхідну для кожного з них.</li>
+<li>Чітко розмежовувати фактичні дані, отримані з зовнішніх джерел (retrieved facts), і текстові пояснення, згенеровані моделлю.</li>
+<li>Спроєктувати стани завантаження (loading), порожні стани (empty), помилки (error) та стан часткових результатів (partial-result).</li>
+<li>Зберігати доступність текстових міток (labels), логічний порядок фокусу та керування з клавіатури в разі динамічної зміни контенту.</li>
+<li>Забезпечити передачу важливих змін статусу асистивним технологіям.</li>
+<li>Вимагати обов'язкового етапу перевірки людиною перед виконанням дій із суттєвими наслідками.</li>
 </ul>
-<p class="glossary-term-section__text">Test representative requests, including unavailable data and contradictory constraints. Evaluate whether users can complete the task and understand the result. Visual variety alone does not establish that the interface is useful.</p>
+<p class="glossary-term-section__text">Тестуйте репрезентативні запити, включно зі сценаріями відсутності даних та суперечливих обмежень. Перевіряйте, чи можуть користувачі успішно завершити завдання та чи розуміють вони отриманий результат. Сама по собі візуальна різноманітність ще не свідчить про користь інтерфейсу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-schemas-constrain-generated-ui">
-<h2 id="section-how-can-schemas-constrain-generated-ui" class="glossary-term-section__title">How can schemas constrain generated UI?</h2>
-<p class="glossary-term-section__text">A product can use <a href="/ua/glossary/structured-outputs.html">structured outputs</a> to restrict a model to supported component names and data fields. A controlled renderer then maps those descriptions to approved implementations.</p>
-<p class="glossary-term-section__text">Schema conformance does not establish that a fare is available, a record belongs to the user, or an action is authorized. Validate data and enforce permissions in the application. Test focus, keyboard interaction, and recovery when the generated selection changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як схеми обмежують згенерований інтерфейс?</h2>
+<p class="glossary-term-section__text">Продукт може застосовувати <a href="/ua/glossary/structured-outputs.html">структуровані виводи (structured outputs)</a>, щоб обмежити відповіді моделі лише підтримуваними назвами компонентів та валідними полями даних. Контрольований рендерер згодом зіставляє ці описи із затвердженими програмними реалізаціями.</p>
+<p class="glossary-term-section__text">Відповідність схемі не гарантує, що тариф дійсно доступний, що запис належить користувачеві або що дія авторизована. Валідація даних та перевірка прав доступу мають виконуватися на рівні логіки застосунку. Тестуйте поведінку фокусу, керування з клавіатури та відновлення у разі збоїв (recovery), коли згенерована вибірка елементів змінюється.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-native-design.html">AI-native Design</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-<li><a href="/ua/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/ua/glossary/ai-native-design.html">ШІ-нативний дизайн (AI-Native Design)</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів та функцій (Tool Calling)</a></li>
+<li><a href="/ua/glossary/component-architecture.html">Компонентна архітектура</a></li>
 <li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/conversational-ux.html">Conversational UX</a></li>
+<li><a href="/ua/glossary/conversational-ux.html">Розмовний UX (Conversational UX)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces" target="_blank" rel="noopener noreferrer">Vercel AI SDK: Generative User Interfaces</a></li>
-<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Status Messages</a></li>
+<li><a href="https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces" target="_blank" rel="noopener noreferrer">Генеративні користувацькі інтерфейси (Generative User Interfaces), Vercel AI SDK</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">Розуміння статусних повідомлень (Understanding Status Messages), W3C</a></li>
 </ul>
 </section>
 

@@ -385,52 +385,48 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Агентний UX (Agentic UX) — це проектування користувацького досвіду, в якому люди делегують цілі або завдання ШІ-агентам, зберігаючи належну прозорість процесу та контроль над роботою. Він охоплює інтерфейсні сценарії взаємодії до початку роботи, безпосередньо під час виконання дій агентом і після завершення завдання.</p>
-<p class="glossary-term-section__text">A conversational interface is one possible entry point. The experience may also include task queues, approval screens, notifications, and activity records.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-updating-a-set-of-reservations">
-<h2 id="section-example-updating-a-set-of-reservations" class="glossary-term-section__title">Example: updating a set of reservations</h2>
-<p class="glossary-term-section__text">An operations manager asks an agent to find reservations affected by a schedule change and prepare customer notifications.</p>
-<p class="glossary-term-section__text">Before work begins, the interface makes the affected date range and intended actions visible. During the task, it distinguishes records being checked from messages awaiting review. Before sending, it lets the manager inspect recipients, content, and exceptions.</p>
-<p class="glossary-term-section__text">If some messages fail, the final state identifies which were sent, which failed, and which have an uncertain outcome. The recovery path should avoid sending successful messages again.</p>
+    <p class="glossary-term-section__text">Агентний UX (Agentic UX) — це проєктування користувацького досвіду, в якому люди делегують цілі або завдання ШІ-агентам, зберігаючи належну прозорість процесу та контроль над ходом виконання роботи. Він охоплює інтерфейсні сценарії взаємодії до початку роботи, безпосередньо під час виконання дій агентом і після завершення завдання.</p>
+<p class="glossary-term-section__text">Діалоговий інтерфейс є лише однією з можливих точок входу. Досвід взаємодії може також включати черги завдань, екрани підтвердження, сповіщення та журнали аудиту дій.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: оновлення групи бронювань</h2>
+<p class="glossary-term-section__text">Операційний менеджер доручає агенту знайти всі бронювання, на які вплинула зміна розкладу, та підготувати сповіщення для клієнтів.</p>
+<p class="glossary-term-section__text">До початку роботи інтерфейс робить наочними зачеплений діапазон дат і заплановані дії. Під час виконання система чітко розмежовує записи, що перевіряються в поточний момент, та готові повідомлення, які очікують на рев'ю. Перед відправкою інтерфейс дозволяє менеджеру уважно перевірити список отримувачів, текст повідомлень та винятки.</p>
+<p class="glossary-term-section__text">Якщо надсилання частини повідомлень завершується збоєм, фінальний стан наочно показує, які з них було відправлено успішно, які зазнали невдачі, а результат яких залишається невизначеним. Сценарій відновлення має запобігати повторному надсиланню вже успішно доставлених повідомлень.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-design-around-delegation">
-<h2 id="section-design-around-delegation" class="glossary-term-section__title">Design around delegation</h2>
-<p class="glossary-term-section__text">Useful questions include:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Проєктування навколо делегування</h2>
+<p class="glossary-term-section__text">Корисні запитання для проєктування:</p>
 <ul class="glossary-term-ul">
-<li>What information does the agent need before starting?</li>
-<li>Which actions are already authorized?</li>
-<li>Where can a person inspect, change, or stop the work?</li>
-<li>What happens to completed actions when the task stops?</li>
-<li>How does the user resolve missing information or partial failure?</li>
+<li>Яка інформація потрібна агенту до початку роботи?</li>
+<li>Які дії вже попередньо авторизовані?</li>
+<li>Де саме людина може перевірити, змінити або зупинити виконання процесу?</li>
+<li>Що відбувається з уже виконаними діями в разі зупинки завдання?</li>
+<li>Як користувач має вирішувати проблему браку даних або часткових збоїв?</li>
 </ul>
-<p class="glossary-term-section__text">A stop control needs an accurate explanation of its effect. It may prevent further work without reversing changes already made.</p>
+<p class="glossary-term-section__text">Елемент зупинки процесу (stop control) потребує точного пояснення свого ефекту: він може блокувати подальшу роботу без відкочування вже внесених змін.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-evaluate-the-outcome">
-<h2 id="section-evaluate-the-outcome" class="glossary-term-section__title">Evaluate the outcome</h2>
-<p class="glossary-term-section__text">Test whether users can understand what happened and take the next appropriate action. Include unexpected results and delayed approvals.</p>
-<p class="glossary-term-section__text">Keep necessary review concise and informative. Approval is useful when the reviewer can identify the target, proposed change, and consequence.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Оцінка результативності</h2>
+<p class="glossary-term-section__text">Тестуйте, чи розуміють користувачі, що саме відбулося, і чи можуть вони впевнено обрати наступну доречну дію. Обов'язково перевіряйте сценарії з неочікуваними результатами та затримками погодження.</p>
+<p class="glossary-term-section__text">Зробіть процес необхідної верифікації лаконічним та інформативним. Підтвердження має сенс тоді, коли рецензент може швидко ідентифікувати цільовий об'єкт, запропоновану зміну та можливі наслідки.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li>
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
-<li><a href="/ua/glossary/ai-native-design.html">AI-native Design</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/conversational-ux.html">Conversational UX</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-transparency.html">AI Transparency</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
+<li><a href="/ua/glossary/ai-native-design.html">ШІ-нативний дизайн (AI-Native Design)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/conversational-ux.html">Розмовний UX (Conversational UX)</a></li>
+<li><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Google PAIR: Feedback and Control</a></li>
-<li><a href="https://pair.withgoogle.com/chapter/errors-failing/" target="_blank" rel="noopener noreferrer">Google PAIR: Errors and Graceful Failure</a></li>
-<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">LangChain: Interrupts</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/feedback-controls/" target="_blank" rel="noopener noreferrer">Google PAIR: Зворотний зв'язок і контроль (Feedback and Control)</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/errors-failing/" target="_blank" rel="noopener noreferrer">Google PAIR: Помилки та коректне відновлення після збоїв (Errors and Graceful Failure)</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/interrupts" target="_blank" rel="noopener noreferrer">LangChain: Переривання в LangGraph (Interrupts)</a></li>
 </ul>
 </section>
 

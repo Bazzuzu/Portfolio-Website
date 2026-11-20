@@ -389,37 +389,37 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Мультиагентна система (MAS, Multi-Agent System) — це система, в якій кілька автономних агентів взаємодіють для досягнення цілей у спільному середовищі. Агенти можуть співпрацювати, координувати дії або конкурувати; у системах на базі мовних моделей вони зазвичай декомпонують завдання та обмінюються проміжними результатами через повідомлення або спільний стан.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-multi-agent-systems-work">
-<h2 id="section-how-do-multi-agent-systems-work" class="glossary-term-section__title">How do multi-agent systems work?</h2>
-<p class="glossary-term-section__text">Each agent has a goal, information it can access, and actions it can take. The system defines how agents communicate, assign work, resolve disagreements, and decide when to stop. An AI application may use one coordinator to delegate tasks to specialists, or let agents hand work to each other as the task develops.</p>
-<p class="glossary-term-section__text">The agents can use different instructions and tools while sharing the same underlying model. Context engineering determines what each agent receives and what information survives a handoff.</p>
+    <p class="glossary-term-section__text">Мультиагентна система (Multi-Agent System, MAS) — це обчислювальна система, в якій кілька автономних агентів взаємодіють між собою для досягнення індивідуальних або спільних цілей у спільному середовищі. Агенти можуть співпрацювати, координувати плани, вести переговори або конкурувати. У системах, побудованих на базі мовних моделей, агенти зазвичай декомпонують складне комплексне завдання на підзадачі та обмінюються проміжними знахідками через повідомлення або спільний стан (shared state).</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працюють мультиагентні системи?</h2>
+<p class="glossary-term-section__text">Кожен агент має власну локальну мету, доступну йому інформацію та набір дій (інструментів), які він здатний виконувати. Архітектура системи визначає, як агенти спілкуються, розподіляють робоче навантаження, вирішують конфлікти та визначають критерії зупинки. Застосунок зі штучним інтелектом може використовувати агента-координатора для делегування завдань вузькоспеціалізованим агентам або дозволяти агентам передавати контекст і завдання один одному за ланцюжком у міру розвитку сценарію.</p>
+<p class="glossary-term-section__text">Різні агенти можуть використовувати відмінні системні інструкції та набори інструментів, навіть спираючись на одну й ту саму базову модель. Контекстна інженерія (Context Engineering) визначає, який саме фрагмент даних отримує кожен агент і яка інформація гарантовано зберігається під час передачі контексту (handoff).</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-researching-a-travel-policy">
-<h2 id="section-example-researching-a-travel-policy" class="glossary-term-section__title">Example: Researching a travel policy</h2>
-<p class="glossary-term-section__text">A coordinator receives a request to compare two travel policies. It assigns each policy to a separate research agent and asks for the relevant passages, their sources, and any gaps. The coordinator combines the findings into a comparison and flags unresolved differences for the user.</p>
-<p class="glossary-term-section__text">This structure is useful when the searches can proceed independently and the findings can be combined. Define which agent owns the final answer and what counts as enough evidence. If one agent fails, the coordinator should identify the missing result before presenting the comparison.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: дослідження політики відряджень</h2>
+<p class="glossary-term-section__text">Координатор отримує запит на порівняння двох корпоративних політик відряджень. Він призначає аналіз кожної політики окремому дослідницькому агенту, вимагаючи надати точні цитати, першоджерела та виявлені прогалини. Після цього координатор об'єднує результати в єдиний порівняльний звіт і виділяє нерозв'язані розбіжності для фінального перегляду користувачем.</p>
+<p class="glossary-term-section__text">Така структура є особливо ефективною, коли пошукові процеси можуть виконуватися незалежно й паралельно, а результати піддаються чіткій агрегації. Чітко визначте, який саме агент несе відповідальність за фінальну відповідь і який обсяг доказів вважається достатнім. Якщо один із агентів зазнає збою, координатор має зафіксувати відсутність потрібної частини результату ще до формування підсумкового порівняння.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-should-you-use-multiple-agents">
-<h2 id="section-when-should-you-use-multiple-agents" class="glossary-term-section__title">When should you use multiple agents?</h2>
-<p class="glossary-term-section__text">Consider them when a task has separable research directions or needs specialist tools and context. Compare the design with a single-agent baseline on the same tasks. Measure the correctness and completeness of the final result, source quality, task completion, latency, and cost. Inspect handoffs for duplicated work or lost information.</p>
-<p class="glossary-term-section__text">Anthropic’s research system is one published example of an orchestrator coordinating parallel research agents. Its account describes the coordination, evaluation, and operational work involved.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли доцільно використовувати мультиагентний підхід?</h2>
+<p class="glossary-term-section__text">Застосовуйте мультиагентну архітектуру, коли завдання містить чітко розмежовані незалежні напрями досліджень або вимагає ізольованих спеціалізованих інструментів та окремих контекстів. Обов'язково порівнюйте мультиагентну реалізацію з якісним одноагентним бейзлайном (single-agent baseline) на одному й тому самому наборі завдань. Оцінюйте коректність і повноту фінального результату, якість джерел, частку успішно завершених завдань, затримку (latency) та сукупну вартість виконання (cost). Ретельно аналізуйте моменти передачі контексту (handoffs) на предмет дублювання роботи або втрати важливої інформації.</p>
+<p class="glossary-term-section__text">Дослідницька система Anthropic — один із публічно описаних прикладів оркестратора, що керує паралельними дослідницькими агентами. Цей кейс докладно описує реальні виклики координації, оцінювання та інженерної підтримки подібних архітектур.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/autonomous-workflow-orchestration.html">Autonomous Workflow Orchestration</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness (AI Evals)</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/autonomous-workflow-orchestration.html">Автономна оркестрація робочих процесів</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Каркас оцінювання ШІ (AI Evals)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html" target="_blank" rel="noopener noreferrer">An Introduction to MultiAgent Systems, Michael Wooldridge</a></li>
-<li><a href="https://www.anthropic.com/research/multi-agent-research-system" target="_blank" rel="noopener noreferrer">How We Built Our Multi-Agent Research System, Anthropic</a></li>
+<li><a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html" target="_blank" rel="noopener noreferrer">Майкл Вулдрідж: Вступ до мультиагентних систем (An Introduction to MultiAgent Systems, Michael Wooldridge)</a></li>
+<li><a href="https://www.anthropic.com/research/multi-agent-research-system" target="_blank" rel="noopener noreferrer">Anthropic: Як ми побудували нашу мультиагентну дослідницьку систему (How We Built Our Multi-Agent Research System)</a></li>
 </ul>
 </section>
 

@@ -384,44 +384,44 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Автономна оркестрація робочих процесів координує послідовність завдань, розгалуження рішень, системні залежності та стан виконання, дозволяючи автоматизованій системі досягати мети з мінімальним постійним наглядом. У застосунках із ШІ вона поєднує детерміновані кроки процесу з динамічними діями, що обираються агентом.</p>
-<p class="glossary-term-section__text">“Autonomous” describes the scope of delegated work. The system still needs rules for permissions, stopping, exceptions, and human involvement.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-supplier-onboarding">
-<h2 id="section-example-supplier-onboarding" class="glossary-term-section__title">Example: supplier onboarding</h2>
-<p class="glossary-term-section__text">A supplier-onboarding workflow could collect submitted documents, check required fields, request missing information, and prepare a record for approval.</p>
-<p class="glossary-term-section__text">Some checks can run independently. Creating the active supplier account depends on the required checks and approval being complete. If an external verification service is unavailable, the workflow should preserve its state and show what is waiting.</p>
-<p class="glossary-term-section__text">An agent might help interpret an unfamiliar document while the application controls the approval requirement and account-creation operation.</p>
+    <p class="glossary-term-section__text">Автономна оркестрація робочих процесів (Autonomous Workflow Orchestration) координує завдання, розгалуження рішень, системні залежності та стан виконання, дозволяючи автоматизованій системі послідовно досягати поставленої мети за мінімального постійного нагляду з боку людини. У застосунках на базі ШІ вона поєднує детерміновані заздалегідь визначені етапи процесу з динамічними діями, які агент обирає самостійно.</p>
+<p class="glossary-term-section__text">Слово «автономна» визначає саме обсяг делегованих повноважень і завдань. При цьому системі все одно необхідні чіткі правила розмежування прав доступу, критерії зупинки, механізми обробки виняткових ситуацій і протоколи залучення людини.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: онбординг постачальника</h2>
+<p class="glossary-term-section__text">Робочий процес онбордингу постачальника може збирати надіслані документи, перевіряти обов'язкові поля, запитувати відсутню інформацію та готувати обліковий запис для фінального затвердження.</p>
+<p class="glossary-term-section__text">Деякі перевірки можуть виконуватися паралельно й незалежно одна від одної. Створення активного облікового запису постачальника безпосередньо залежить від успішного проходження всіх обов'язкових перевірок та отримання погодження. Якщо зовнішній сервіс верифікації тимчасово недоступний, оркестратор має зберегти поточний стан процесу та чітко позначити, виконання якого кроку очікується.</p>
+<p class="glossary-term-section__text">ШІ-агент може допомагати інтерпретувати нестандартний чи незнайомий документ, тоді як сама програма повністю контролює правила погодження та критичну операцію створення облікового запису.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-orchestration-manages">
-<h2 id="section-what-orchestration-manages" class="glossary-term-section__title">What orchestration manages</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чим керує оркестрація</h2>
 <ul class="glossary-term-ul">
-<li>Dependencies: which steps must finish before another can start.</li>
-<li>State: the inputs, completed work, and pending decisions.</li>
-<li>Recovery: how failures, timeouts, and interruptions are handled.</li>
-<li>Coordination: handoffs between services, agents, and people.</li>
-<li>Limits: when a run must stop or request intervention.</li>
+<li>Залежності: які кроки мають завершитися, перш ніж зможе розпочатися наступний.</li>
+<li>Стан: вхідні дані, вже виконана робота та рішення, що очікують на розгляд.</li>
+<li>Відновлення (Recovery): як обробляються збої, тайм-аути та зовнішні переривання.</li>
+<li>Координація: передача контексту та завдань між зовнішніми сервісами, агентами та людьми.</li>
+<li>Обмеження та ліміти: умови, за яких виконання має негайно зупинитися або вимагати втручання оператора.</li>
 </ul>
-<p class="glossary-term-section__text">A single agent can participate in an orchestrated workflow; multiple agents are optional.</p>
+<p class="glossary-term-section__text">В оркестрованому робочому процесі може брати участь як один агент, так і група агентів; використання мультиагентної архітектури є опціональним.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-check-before-retrying">
-<h2 id="section-check-before-retrying" class="glossary-term-section__title">Check before retrying</h2>
-<p class="glossary-term-section__text">A timeout does not establish that an external operation failed. If account creation returns no result, check the target system before repeating it. Use operation identifiers or idempotency mechanisms where supported.</p>
-<p class="glossary-term-section__text">Test partial completion and resumed runs. Persisting workflow state helps recovery, but external side effects still require deliberate duplicate prevention and reconciliation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Перевірка перед повторною спробою</h2>
+<p class="glossary-term-section__text">Тайм-аут запиту не свідчить про те, що зовнішня операція гарантовано зазнала невдачі. Якщо операція створення облікового запису не повернула результату, перевірте стан цільової системи, перш ніж повторювати виклик. Застосовуйте унікальні ідентифікатори операцій або механізми ідемпотентності (idempotency), де це підтримується.</p>
+<p class="glossary-term-section__text">Обов'язково тестуйте сценарії часткового виконання та відновлення перерваних запусків. Персистенція (збереження) стану робочого процесу суттєво полегшує відновлення після збоїв, проте зовнішні побічні ефекти все одно вимагають продуманих механізмів запобігання дублюванню та узгодження даних (reconciliation).</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/multi-agent-systems-mas.html">Multi-Agent Systems (MAS)</a></li>
-<li><a href="/ua/glossary/agentic-ai.html">Agentic AI</a></li>
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
+<li><a href="/ua/glossary/multi-agent-systems-mas.html">Мультиагентні системи (MAS)</a></li>
+<li><a href="/ua/glossary/agentic-ai.html">Агентний штучний інтелект (Agentic AI)</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Workflows and Agents</a></li>
-<li><a href="https://docs.langchain.com/oss/python/langgraph/persistence" target="_blank" rel="noopener noreferrer">LangChain: Persistence</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Робочі процеси та агенти (Workflows and Agents)</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/persistence" target="_blank" rel="noopener noreferrer">LangChain: Персистенція стану (Persistence)</a></li>
 </ul>
 </section>
 

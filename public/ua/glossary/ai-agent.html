@@ -384,37 +384,37 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">ШІ-агент — це система, яка сприймає інформацію про стан свого середовища та обирає цілеспрямовані дії для виконання завдання. У сучасних продуктах на базі LLM агент використовує мовну модель для прийняття рішень щодо виклику інструментів, аналізу отриманих результатів і планування наступних дій.</p>
-<p class="glossary-term-section__text">The broader AI concept also includes systems built without language models. An agent's autonomy depends on the decisions and actions its application permits.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-an-llm-based-agent-works">
-<h2 id="section-how-an-llm-based-agent-works" class="glossary-term-section__title">How an LLM-based agent works</h2>
-<p class="glossary-term-section__text">A typical interaction includes a goal, available context, a set of permitted tools, and a loop that evaluates tool results before continuing or stopping. Persistent memory and multiple cooperating agents are optional design choices.</p>
-<p class="glossary-term-section__text">ReAct is one research approach that interleaves reasoning and actions. It illustrates how a model can interact with external information while working through a task; it is not a requirement for every agent.</p>
+    <p class="glossary-term-section__text">ШІ-агент — це система, яка сприймає інформацію про стан свого середовища та обирає цілеспрямовані дії для виконання завдання. У сучасних продуктах на базі LLM агент зазвичай використовує мовну модель для прийняття рішень щодо виклику інструментів, аналізу отриманих результатів і вибору наступного кроку.</p>
+<p class="glossary-term-section__text">Ширша концепція штучного інтелекту охоплює також агентні системи, побудовані без використання мовних моделей. Ступінь автономності агента безпосередньо залежить від того, які рішення та дії йому дозволені з боку керівного застосунку.</p>
+<section class="glossary-term-section" aria-labelledby="section-llm">
+<h2 id="section-llm" class="glossary-term-section__title">Як працює агент на базі LLM</h2>
+<p class="glossary-term-section__text">Типовий життєвий цикл взаємодії включає мету, доступний контекст, набір дозволених інструментів та ітеративний цикл, який аналізує результати виконання інструментів перед тим, як продовжити виконання або завершити роботу. Довготривала пам'ять і взаємодія кількох агентів є опціональними архітектурними рішеннями.</p>
+<p class="glossary-term-section__text">ReAct — це один із дослідницьких підходів, що чергує міркування (reasoning) та дії (actions). Він демонструє, як модель може взаємодіяти із зовнішньою інформацією під час вирішення завдання, проте не є обов'язковою вимогою для кожного агента.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-investigating-a-delayed-order">
-<h2 id="section-example-investigating-a-delayed-order" class="glossary-term-section__title">Example: investigating a delayed order</h2>
-<p class="glossary-term-section__text">A support agent receives an order reference, retrieves the order, checks shipment tracking, and summarizes the available evidence. It may ask for clarification if the reference matches more than one order.</p>
-<p class="glossary-term-section__text">The application can allow these read operations while requiring an authorized person to approve a replacement shipment. A tool result should establish whether the replacement was actually created.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: розслідування затримки замовлення</h2>
+<p class="glossary-term-section__text">Агент служби підтримки отримує ідентифікатор замовлення, знаходить дані про замовлення, перевіряє статус доставки та підсумовує знайдену інформацію. Він може запросити уточнення, якщо зазначеному номеру відповідає декілька замовлень.</p>
+<p class="glossary-term-section__text">Застосунок може дозволити виконання цих операцій читання в автономному режимі, але вимагати схвалення уповноваженою особою для відправки заміни замовлення. Результат виклику інструмента повинен однозначно підтверджувати, чи було фактично створено повторне відправлення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-designers-should-define">
-<h2 id="section-what-designers-should-define" class="glossary-term-section__title">What designers should define</h2>
-<p class="glossary-term-section__text">Specify the task boundary, available actions, stopping conditions, and escalation path. Make progress and important outcomes visible to the user.</p>
-<p class="glossary-term-section__text">Test missing data, tool failures, and ambiguous requests. A plausible final message is insufficient evidence of success when the task requires a change in another system.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно визначити дизайнерам</h2>
+<p class="glossary-term-section__text">Чітко окресліть межі завдання, доступні дії, умови зупинки та механізми ескалації на людину. Забезпечте видимість прогресу виконання та ключових результатів для користувача.</p>
+<p class="glossary-term-section__text">Тестуйте поведінку системи на неповних даних, збоях інструментів і неоднозначних запитах. Правдоподібне фінальне повідомлення не є доказом успіху, якщо виконання завдання вимагає реальних змін у зовнішніх системах.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/agentic-ai.html">Agentic AI</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+<li><a href="/ua/glossary/agentic-ai.html">Агентний ШІ (Agentic AI)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/model-context-protocol-mcp.html">Протокол контексту моделі (Model Context Protocol, MCP)</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів (Tool Calling)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">Yao et al.: ReAct</a></li>
-<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Building Effective Agents</a></li>
+<li><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">Яо та ін.: ReAct (Synergizing Reasoning and Acting in Language Models)</a></li>
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Створення ефективних агентів</a></li>
 </ul>
 </section>
 

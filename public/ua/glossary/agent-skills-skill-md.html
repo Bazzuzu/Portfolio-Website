@@ -384,38 +384,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Навички агентів (Agent Skills) — це модульні пакети повторно використовуваних інструкцій і допоміжних ресурсів, які допомагають сумісним ШІ-агентам виконувати спеціалізовані завдання. У специфікації Agent Skills кожна навичка оформлюється як каталог із файлом SKILL.md, що може супроводжуватися скриптами, довідковими матеріалами та ресурсами.</p>
-<p class="glossary-term-section__text">SKILL.md uses YAML frontmatter for metadata, followed by Markdown instructions. The specification requires a name and description. Compatible agents can use the description to identify relevant skills and load further instructions when needed; support depends on the agent implementation.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-glossary-entry">
-<h2 id="section-example-preparing-a-glossary-entry" class="glossary-term-section__title">Example: preparing a glossary entry</h2>
-<p class="glossary-term-section__text">A publication skill could describe when to use it, the required metadata, the site's Markdown format, and the checks needed before publishing. A reference file could contain the site's schema example, while a script validates the completed document.</p>
-<p class="glossary-term-section__text">The instructions should identify the expected input and output, explain how to handle missing information, and state when the agent must stop for a decision. Keep examples specific enough to guide execution.</p>
+    <p class="glossary-term-section__text">Навички агентів (Agent Skills) — це повторно використовувані пакети інструкцій та допоміжних ресурсів, які допомагають сумісним ШІ-агентам виконувати конкретні завдання. У форматі Agent Skills кожна навичка являє собою каталог із файлом <code>SKILL.md</code>, а також додатковими скриптами, довідковими матеріалами та ресурсами.</p>
+<p class="glossary-term-section__text">У файлі <code>SKILL.md</code> використовується YAML frontmatter для опису метаданих, за якими слідують інструкції у форматі Markdown. Специфікація вимагає наявності назви (<code>name</code>) та опису (<code>description</code>). Сумісні агенти можуть використовувати цей опис для виявлення релевантних навичок і підвантажувати подальші детальні інструкції лише за потреби; підтримка залежить від конкретної реалізації агента.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: підготовка запису для глосарія</h2>
+<p class="glossary-term-section__text">Навичка публікації може описувати умови її використання, обов'язкові метадані, прийнятий на сайті формат Markdown та перевірки, необхідні перед випуском матеріалу. Довідковий файл може містити приклад схеми сайту, тоді як скрипт валідує готовий документ.</p>
+<p class="glossary-term-section__text">Інструкції повинні чітко визначати очікувані вхідні та вихідні дані, пояснювати правила обробки відсутньої інформації та фіксувати моменти, коли агент зобов'язаний зупинитися й запитати рішення в людини. Приклади мають бути достатньо конкретними, щоб ефективно спрямовувати виконання завдання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-skills-tools-and-mcp">
-<h2 id="section-skills-tools-and-mcp" class="glossary-term-section__title">Skills, tools, and MCP</h2>
-<p class="glossary-term-section__text">These concepts serve different purposes:</p>
+<section class="glossary-term-section" aria-labelledby="section-mcp">
+<h2 id="section-mcp" class="glossary-term-section__title">Навички, інструменти та MCP</h2>
+<p class="glossary-term-section__text">Ці концепції мають різне призначення:</p>
 <ul class="glossary-term-ul">
-<li>A skill describes a reusable way to complete work.</li>
-<li>A tool exposes an operation the application can execute.</li>
-<li>MCP provides a protocol for connecting an AI application to capabilities such as tools and resources.</li>
+<li><strong>Навичка (Skill)</strong> описує повторно використовуваний порядок і правила виконання роботи.</li>
+<li><strong>Інструмент (Tool)</strong> надає атомарну операцію, яку може виконати застосунок.</li>
+<li><strong>MCP (Model Context Protocol)</strong> забезпечує стандартний протокол для підключення ШІ-застосунку до зовнішніх можливостей, як-от інструментів і ресурсів.</li>
 </ul>
-<p class="glossary-term-section__text">A skill can tell an agent how to use a tool supplied through MCP. It does not itself grant access to an account or make an operation safe.</p>
-<p class="glossary-term-section__text">Review scripts and external resources before use. Test the skill with incomplete inputs and realistic failure cases. Version the instructions so a later result can be traced to the procedure used.</p>
+<p class="glossary-term-section__text">Навичка може пояснити агенту, як саме викликати інструмент, наданий через MCP. Проте вона сама по собі не надає доступу до облікового запису і не гарантує безпеку виконання операції.</p>
+<p class="glossary-term-section__text">Ретельно перевіряйте скрипти та зовнішні ресурси перед їх використанням. Тестуйте навичку на неповних вхідних даних та реалістичних сценаріях збоїв. Версіонуйте інструкції, щоб будь-який отриманий результат можна було чітко зіставити з використаною версією процедури.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
 <li><a href="/ua/glossary/model-context-protocol-mcp.html">Model Context Protocol (MCP)</a></li>
 <li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів та функцій (Tool Calling)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer">Agent Skills: Overview</a></li>
-<li><a href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills: Specification</a></li>
+<li><a href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer">Agent Skills: Огляд</a></li>
+<li><a href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills: Специфікація</a></li>
 </ul>
 </section>
 

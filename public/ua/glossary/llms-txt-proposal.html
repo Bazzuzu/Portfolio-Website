@@ -384,37 +384,37 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">llms.txt — це запропонований формат надання лаконічного огляду у розмітці Markdown, що допомагає ШІ-агентам ефективно орієнтуватися у структурі та змісті веб-сайту. Файл узагальнює контент сайту або розділу, розкриває важливий контекст і надає прямі посилання на цільові ресурси.</p>
-<p class="glossary-term-section__text">It is a community proposal rather than a universal requirement for AI systems or search engines. Whether an agent reads it depends on that agent's behavior.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-the-file-contains">
-<h2 id="section-what-the-file-contains" class="glossary-term-section__title">What the file contains</h2>
-<p class="glossary-term-section__text">The proposal specifies a project or site name as an H1, with optional summary text, explanatory content, and sections of descriptive links. Its current version permits files at the site root or within a section, such as a documentation directory.</p>
-<p class="glossary-term-section__text">It also recommends clean Markdown versions of relevant pages and link relations that help clients discover those versions.</p>
+    <p class="glossary-term-section__text">llms.txt — це запропонований формат надання лаконічного огляду у розмітці Markdown, що допомагає ШІ-агентам ефективно орієнтуватися у структурі та змісті вебсайту. Файл узагальнює контент сайту або окремого розділу, розкриває важливий контекст і надає прямі посилання на цільові ресурси.</p>
+<p class="glossary-term-section__text">Це відкрита ініціатива спільноти, а не універсальна обов'язкова вимога для систем штучного інтелекту чи пошукових систем. Чи зчитуватиме агент цей файл, залежить виключно від алгоритмів та поведінки самого агента.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що містить файл</h2>
+<p class="glossary-term-section__text">Специфікація передбачає зазначення назви проєкту чи сайту в заголовку першого рівня (H1), необов'язковий короткий опис, пояснювальний контекст і тематичні блоки описових посилань. Поточна версія стандарту дозволяє розміщувати файли як у кореневому каталозі сайту, так і всередині окремих підрозділів, наприклад, у папці з документацією.</p>
+<p class="glossary-term-section__text">Вона також рекомендує надавати чисті версії сторінок у форматі Markdown та налаштовувати атрибути зв'язків посилань (link relations), які допомагають клієнтам виявляти ці версії.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-product-design-glossary">
-<h2 id="section-example-a-product-design-glossary" class="glossary-term-section__title">Example: a product design glossary</h2>
-<p class="glossary-term-section__text">A glossary could provide a short explanation of its scope and grouped links to core terms, such as OOUX, accessibility, and design tokens. Each link description should explain what information is available.</p>
-<p class="glossary-term-section__text">If Markdown page versions are offered, keep them synchronized with the public articles. A stale summary or broken link can make the file less useful.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: глосарій продуктового дизайну</h2>
+<p class="glossary-term-section__text">Глосарій може містити стислий опис своєї предметної області та згруповані посилання на ключові терміни, такі як <a href="/ua/glossary/object-oriented-ux.html">OOUX</a>, цифрова доступність та <a href="/ua/glossary/design-tokens.html">дизайн-токени</a>. Опис кожного посилання має чітко пояснювати, яка саме інформація там представлена.</p>
+<p class="glossary-term-section__text">Якщо на сайті пропонуються Markdown-версії сторінок, підтримуйте їх синхронізованими з публічними статтями. Застарілий опис або непрацююче посилання значно знижують корисність файлу для агентів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-does-llms-txt-improve-seo">
-<h2 id="section-does-llms-txt-improve-seo" class="glossary-term-section__title">Does llms.txt improve SEO?</h2>
-<p class="glossary-term-section__text">Google states that no new AI text files or special schema.org markup are required for inclusion in AI Overviews or AI Mode. Publishing llms.txt does not guarantee indexing, ranking improvements, or citations.</p>
-<p class="glossary-term-section__text">For a small site, consider it an optional documentation experiment. First maintain useful visible content, discoverable internal links, and correct indexing controls.</p>
-<p class="glossary-term-section__text">If implemented, test whether agents can answer representative questions using the file and its links. Review actual usage where observable rather than assuming a search benefit.</p>
+<section class="glossary-term-section" aria-labelledby="section-llms-txt-seo">
+<h2 id="section-llms-txt-seo" class="glossary-term-section__title">Чи покращує llms.txt показники SEO?</h2>
+<p class="glossary-term-section__text">Google прямо зазначає, що для включення вмісту в огляди AI Overviews або режим AI Mode не потрібні жодні нові текстові файли для ШІ чи спеціальна мікророзмітка schema.org. Публікація файлу llms.txt не гарантує індексації, підвищення позицій у пошуковій видачі (ранжування) чи отримання цитувань.</p>
+<p class="glossary-term-section__text">Для невеликого сайту розглядайте це як необов'язковий експеримент із покращення доступності документації для ШІ. Передусім забезпечте наявність корисного видимого контенту, легко виявлюваних внутрішніх посилань та коректних директив індексації.</p>
+<p class="glossary-term-section__text">У разі впровадження протестуйте, чи здатні агенти відповідати на показові запитання користувачів, спираючись на цей файл і надані в ньому посилання. Аналізуйте фактичне використання там, де це можливо відстежити, замість того щоб безпідставно розраховувати на SEO-переваги.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
-<li><a href="/ua/glossary/content-modeling.html">Content Modeling</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM</a></li>
+<li><a href="/ua/glossary/content-modeling.html">Моделювання контенту</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer">Jeremy Howard: The llms.txt Proposal, v2</a></li>
-<li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central: AI Features and Your Website</a></li>
+<li><a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer">Джеремі Говард: Специфікація llms.txt, v2</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central: Функції ШІ та ваш вебсайт</a></li>
 </ul>
 </section>
 

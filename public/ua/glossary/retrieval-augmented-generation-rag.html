@@ -387,42 +387,40 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Генерація з доповненим пошуком (RAG, Retrieval-Augmented Generation) — це архітектурний підхід, який знаходить релевантну інформацію у зовнішніх джерелах і передає її генеративній моделі для формування точної відповіді. RAG забезпечує заземлення генерації на достовірну та верифіковану пошукову базу знань.</p>
-<p class="glossary-term-section__text">The original RAG research combined a language model with retrieved documents. Current implementations vary and can use keyword, vector, hybrid, or graph-based retrieval. A vector database is one possible component.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-rag-works">
-<h2 id="section-how-rag-works" class="glossary-term-section__title">How RAG works</h2>
-<p class="glossary-term-section__text">A typical application interprets the user's question, retrieves relevant material, and provides selected results as context for generation. It may also rerank results and attach source references.</p>
-<p class="glossary-term-section__text">Retrieval quality and answer quality need separate evaluation: the application can find the right document but summarize it incorrectly, or produce a plausible answer from the wrong document.</p>
+    <p class="glossary-term-section__text">Генерація з доповненим пошуком (Retrieval-Augmented Generation, RAG) — це архітектурний підхід, який витягує релевантну інформацію із зовнішніх джерел і передає її генеративній моделі для формування точної відповіді. RAG пов'язує генеративні можливості ШІ з верифікованою базою знань та фактичними доказами.</p>
+<p class="glossary-term-section__text">Оригінальні наукові дослідження RAG поєднували мовну модель із вибіркою документів. Сучасні реалізації суттєво відрізняються та можуть використовувати повнотекстовий пошук за ключовими словами, векторний, гібридний або графовий пошук. Векторна база даних є лише одним із можливих компонентів цієї архітектури.</p>
+<section class="glossary-term-section" aria-labelledby="section-rag">
+<h2 id="section-rag" class="glossary-term-section__title">Як працює RAG</h2>
+<p class="glossary-term-section__text">Типовий застосунок інтерпретує запит користувача, знаходить релевантні матеріали у сховищі та передає відібрані фрагменти в контекст генерації. Пайплайн може також виконувати переранжування результатів (reranking) та додавати посилання на першоджерела.</p>
+<p class="glossary-term-section__text">Якість пошуку (retrieval quality) та якість генерації відповіді (generation quality) вимагають роздільного оцінювання: система може знайти правильний документ, але некоректно інтерпретувати його зміст, або ж сформулювати правдоподібну галюцинацію на основі невідповідного документа.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-answering-a-cancellation-question">
-<h2 id="section-example-answering-a-cancellation-question" class="glossary-term-section__title">Example: answering a cancellation question</h2>
-<p class="glossary-term-section__text">A traveler asks whether a booking can be canceled without a fee. The application retrieves the terms associated with that booking and any relevant current policy.</p>
-<p class="glossary-term-section__text">A useful answer identifies the applicable conditions and links to the supporting text. If the retrieved material does not establish the answer, the product should communicate that gap and provide a next step.</p>
-<p class="glossary-term-section__text">A citation is useful only when the cited material supports the associated statement.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: відповідь на запит щодо скасування</h2>
+<p class="glossary-term-section__text">Мандрівник запитує, чи можна скасувати бронювання без сплати штрафу. Застосунок знаходить умови тарифу, прив'язані до цього конкретного бронювання, а також чинні правила перевізника.</p>
+<p class="glossary-term-section__text">Корисна відповідь чітко називає застосовні умови та посилається на підтверджувальні цитати з правил. Якщо знайдених матеріалів недостатньо для однозначного висновку, продукт має відкрито повідомити про брак даних і запропонувати подальші кроки.</p>
+<p class="glossary-term-section__text">Посилання на джерело має цінність лише тоді, коли цитований матеріал дійсно підтверджує сформульоване твердження.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-product-and-content-checks">
-<h2 id="section-product-and-content-checks" class="glossary-term-section__title">Product and content checks</h2>
-<p class="glossary-term-section__text">Keep documents current, record their scope and effective dates, and enforce access before material reaches the model. Test questions whose answers are missing, ambiguous, or spread across sources.</p>
-<p class="glossary-term-section__text">RAG supplies information at runtime. Fine-tuning changes model parameters; the approaches can be combined.</p>
-<p class="glossary-term-section__text">Retrieval does not guarantee factual answers or remove prompt-injection risks from external content. Evaluate both the evidence selected and the claims generated from it.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Перевірки на рівні продукту та контенту</h2>
+<p class="glossary-term-section__text">Підтримуйте актуальність документів, фіксуйте сферу їх дії та дати набуття чинності, а також контролюйте права доступу ще до того, як дані надійдуть у модель. Тестуйте систему на запитаннях, відповіді на які відсутні, неоднозначні або розпорошені між кількома джерелами.</p>
+<p class="glossary-term-section__text">RAG постачає інформацію динамічно під час виконання (runtime). Тонке налаштування (fine-tuning) модифікує внутрішні ваги моделі; ці підходи можна комбінувати.</p>
+<p class="glossary-term-section__text">Сам по собі пошук не гарантує фактологічної безпомилковості відповідей і не захищає від атак типу непрямої ін'єкції промпту (indirect prompt injection) через зовнішній контент. Системно оцінюйте як відібрані докази, так і згенеровані на їхній основі твердження.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Knowledge Graphs (AI Context)</a></li>
-<li><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/knowledge-graphs-ai-context.html">Графи знань для ШІ-контексту (Knowledge Graphs)</a></li>
+<li><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
 <li><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">Lewis et al.: Retrieval-Augmented Generation</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview" target="_blank" rel="noopener noreferrer">Microsoft: Retrieval-Augmented Generation Overview</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview" target="_blank" rel="noopener noreferrer">Microsoft: Огляд Retrieval-Augmented Generation</a></li>
 </ul>
 </section>
 

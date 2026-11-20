@@ -387,45 +387,43 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Model Context Protocol (MCP) — це відкритий протокол для стандартизованого підключення ШІ-застосунків до зовнішніх можливостей і контексту через клієнт-серверний інтерфейс. Сервери MCP надають доступ до інструментів, ресурсів і шаблонів промптів для сумісних клієнтських систем.</p>
-<p class="glossary-term-section__text">It defines how participants exchange information. The AI application determines how to use that information and which operations to permit.</p>
-<section class="glossary-term-section" aria-labelledby="section-host-client-and-server">
-<h2 id="section-host-client-and-server" class="glossary-term-section__title">Host, client, and server</h2>
+    <p class="glossary-term-section__text">Model Context Protocol (MCP) — це відкритий протокол для підключення ШІ-застосунків до зовнішніх можливостей і контексту через стандартизований клієнт-серверний інтерфейс. Сервери MCP можуть надавати інструменти, ресурси та шаблони промптів для сумісних застосунків.</p>
+<p class="glossary-term-section__text">Він визначає протокол взаємодії та обміну даними між учасниками. При цьому конкретний ШІ-застосунок самостійно вирішує, як використовувати цю інформацію та які саме операції дозволити виконувати.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Хост, клієнт і сервер</h2>
 <ul class="glossary-term-ul">
-<li>The host is the AI application that manages the integration.</li>
-<li>A client is the host-side component communicating with an MCP server.</li>
-<li>A server exposes supported capabilities, such as tools or resources.</li>
+<li>Хост (host) — це ШІ-застосунок, який керує інтеграцією.</li>
+<li>Клієнт (client) — компонент на стороні хоста, що взаємодіє з MCP-сервером.</li>
+<li>Сервер (server) — компонент, що надає доступ до підтримуваних можливостей, таких як інструменти або ресурси.</li>
 </ul>
-<p class="glossary-term-section__text">Servers can run locally or remotely. Available features depend on the implementation and the capabilities supported by both sides.</p>
+<p class="glossary-term-section__text">Сервери можуть працювати локально або віддалено. Доступні можливості залежать від конкретної реалізації та функцій, що підтримуються обома сторонами з'єднання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-checking-a-support-ticket">
-<h2 id="section-example-checking-a-support-ticket" class="glossary-term-section__title">Example: checking a support ticket</h2>
-<p class="glossary-term-section__text">A support application connects to an MCP server that exposes ticket-search and ticket-update tools. The AI can request ticket data and use the returned records to prepare a response.</p>
-<p class="glossary-term-section__text">The product might permit search while requiring review before posting a reply. The interface should identify the destination ticket and proposed message. The service must enforce access to that ticket when the operation runs.</p>
-<p class="glossary-term-section__text">Connecting a server does not establish that all of its tools are suitable for every user.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: опрацювання тікета служби підтримки</h2>
+<p class="glossary-term-section__text">Застосунок служби підтримки підключається до MCP-сервера, який надає інструменти пошуку та оновлення тікетів. ШІ може запитати дані тікета та використати отримані записи для формування відповіді.</p>
+<p class="glossary-term-section__text">Продукт може дозволяти пошук в автономному режимі, але вимагати схвалення людиною перед відправкою відповіді. Інтерфейс повинен чітко показувати цільовий тікет і запропонований текст повідомлення. Сервіс зобов'язаний примусово перевіряти права доступу до цього тікета безпосередньо під час виконання операції.</p>
+<p class="glossary-term-section__text">Саме по собі підключення сервера не означає, що всі його інструменти є доречними для кожного користувача.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-mcp-tool-calling-and-skills">
-<h2 id="section-mcp-tool-calling-and-skills" class="glossary-term-section__title">MCP, tool calling, and skills</h2>
-<p class="glossary-term-section__text">Tool calling lets a model request an operation with structured arguments. MCP can make tools available through a shared integration protocol. A skill packages procedural instructions that may tell an agent how to use those capabilities.</p>
-<p class="glossary-term-section__text">For a product integration, specify accessible data, permitted actions, review requirements, and failure behavior. Test disconnected servers, expired authorization, and tool errors as part of the user experience.</p>
+<section class="glossary-term-section" aria-labelledby="section-mcp">
+<h2 id="section-mcp" class="glossary-term-section__title">MCP, виклик інструментів і навички</h2>
+<p class="glossary-term-section__text">Виклик інструментів (tool calling) дозволяє моделі запитувати операції зі структурованими аргументами. MCP робить ці інструменти доступними через спільний відкритий протокол інтеграції. Навичка (skill) упаковує процедурні інструкції, які пояснюють агенту, як використовувати ці можливості.</p>
+<p class="glossary-term-section__text">Для продуктової інтеграції чітко визначте доступні дані, дозволені дії, вимоги до перевірки людиною та правила обробки збоїв. Тестуйте поведінку під час відключення серверів, закінчення терміну дії авторизації та помилок інструментів як невіддільну частину користувацького досвіду.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/agent-skills-skill-md.html">Agent Skills (SKILL.md)</a></li>
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-</ul>
-<ul class="glossary-term-ul">
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів (Tool Calling)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/agent-skills-skill-md.html">Навички агентів (SKILL.md)</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
 <li><a href="/ua/glossary/figma-mcp-server.html">Figma MCP Server</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noopener noreferrer">Model Context Protocol: Architecture Overview</a></li>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Authorization Cheat Sheet</a></li>
+<li><a href="https://modelcontextprotocol.io/docs/learn/architecture" target="_blank" rel="noopener noreferrer">Model Context Protocol: Огляд архітектури</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Шпаргалка з авторизації</a></li>
 </ul>
 </section>
 

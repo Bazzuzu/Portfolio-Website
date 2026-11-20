@@ -388,30 +388,30 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Виклик інструментів (tool calling), або виклик функцій (function calling), дозволяє моделі ШІ ініціювати виконання визначеної операції, передаючи структуровані аргументи. Код застосунку або зовнішній сервіс виконує цю дію та повертає результат, який модель використовує для подальших міркувань.</p>
-<p class="glossary-term-section__text">A tool might retrieve records, calculate a value, search available inventory, or update a system. The model's request and the actual execution are separate steps.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-it-works">
-<h2 id="section-how-it-works" class="glossary-term-section__title">How it works</h2>
-<p class="glossary-term-section__text">For an application-defined tool, a typical sequence is:</p>
+    <p class="glossary-term-section__text">Виклик інструментів (Tool Calling), також відомий як виклик функцій (Function Calling), дозволяє моделі штучного інтелекту ініціювати виконання чітко визначеної операції за допомогою структурованих аргументів. Код клієнтського застосунку або сервіс провайдера виконує запрошену дію та повертає результат, який модель використовує для подальшої відповіді.</p>
+<p class="glossary-term-section__text">Інструмент може витягувати записи з бази даних, розраховувати значення, перевіряти наявність товарів або змінювати стан зовнішньої системи. Запит моделі на виклик і безпосереднє виконання операції є суворо розділеними етапами.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як це працює</h2>
+<p class="glossary-term-section__text">Для інструменту, визначеного на стороні застосунку, типовий життєвий цикл виглядає так:</p>
 <ol class="glossary-term-ol">
-<li>The application supplies a tool name, description, and input schema.</li>
-<li>The model requests the tool with arguments.</li>
-<li>The application validates the request and checks authorization.</li>
-<li>The application executes the permitted operation.</li>
-<li>The result or error is returned for the next response.</li>
+<li>Застосунок передає моделі назву інструмента, його опис та схему вхідних параметрів (input schema).</li>
+<li>Модель формує запит на виклик інструмента зі структурованими аргументами.</li>
+<li>Застосунок валідує аргументи та перевіряє права доступу (authorization).</li>
+<li>Застосунок виконує дозволену операцію в безпечному середовищі.</li>
+<li>Результат виконання або помилка повертається моделі для генерації наступної відповіді.</li>
 </ol>
-<p class="glossary-term-section__text">Provider-hosted tools can manage execution within the provider's service. The surrounding product still needs to define its permitted scope.</p>
+<p class="glossary-term-section__text">Інструменти, розміщені на боці хмарного провайдера (provider-hosted tools), можуть виконуватися безпосередньо в його інфраструктурі. Проте зовнішній продукт усе одно повинен чітко обмежувати допустимі межі їхньої дії.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-checking-flight-availability">
-<h2 id="section-example-checking-flight-availability" class="glossary-term-section__title">Example: checking flight availability</h2>
-<p class="glossary-term-section__text">A traveler asks for flights from Madrid to Rome on a specified date. The model requests the search tool with the route and date.</p>
-<p class="glossary-term-section__text">The tool returns available options and relevant fare data. The interface can render those results as comparison cards. If the destination or date is unclear, the application should obtain the missing information before running a consequential operation.</p>
-<p class="glossary-term-section__text">A separate booking tool would need its own requirements and authorization.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перевірка наявності авіаквитків</h2>
+<p class="glossary-term-section__text">Мандрівник шукає рейси з Мадрида до Рима на конкретну дату. Модель викликає пошуковий інструмент, передаючи маршрут і дату як параметри.</p>
+<p class="glossary-term-section__text">Інструмент повертає доступні варіанти перельотів та актуальні тарифи. Інтерфейс може відобразити ці дані у вигляді інтерактивних карток порівняння. Якщо місто призначення або дата вказані нечітко, застосунок має уточнити відсутню інформацію перед запуском операцій із відчутними наслідками.</p>
+<p class="glossary-term-section__text">Окремий інструмент для бронювання квитків вимагатиме власних вхідних вимог, окремої автентифікації та підтвердження користувачем.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-to-check">
-<h2 id="section-what-to-check" class="glossary-term-section__title">What to check</h2>
-<p class="glossary-term-section__text">Validate arguments against both the schema and business rules. A correctly formatted date can still be outside the supported booking window.</p>
-<p class="glossary-term-section__text">Inspect tool errors and unknown outcomes before retrying a write. Use returned evidence when reporting success. Structured arguments improve integration, but they do not establish that the operation is authorized or that its result is correct.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">На що звернути увагу під час перевірки</h2>
+<p class="glossary-term-section__text">Валідуйте аргументи не лише на відповідність JSON-схемі, а й бізнес-правилам: коректно відформатована дата все одно може виходити за межі доступного вікна бронювання.</p>
+<p class="glossary-term-section__text">Аналізуйте помилки інструментів і невизначені результати перед повторними спробами операцій запису чи модифікації (write operations). Використовуйте повернуті системою фактичні докази при звітуванні про успіх. Структуровані аргументи спрощують інтеграцію, але самі по собі не підтверджують авторизацію дії та не гарантують коректність її результату.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
@@ -420,19 +420,15 @@
 <li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
 <li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
 <li><a href="/ua/glossary/agentic-ai.html">Agentic AI</a></li>
-</ul>
-<ul class="glossary-term-ul">
 <li><a href="/ua/glossary/structured-outputs.html">Structured Outputs</a></li>
-</ul>
-<ul class="glossary-term-ul">
 <li><a href="/ua/glossary/prompt-injection.html">Prompt Injection</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener noreferrer">Anthropic: Tool Use Overview</a></li>
-<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">OWASP: Authorization Cheat Sheet</a></li>
+<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener noreferrer">Anthropic: Огляд використання інструментів (Tool Use)</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer">Шпаргалка OWASP з авторизації</a></li>
 </ul>
 </section>
 

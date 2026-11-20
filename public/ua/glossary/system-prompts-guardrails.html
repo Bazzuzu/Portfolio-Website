@@ -384,38 +384,36 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Системні промпти визначають базові інструкції рівня застосунку, які керують поведінкою моделі ШІ. Захисні бар'єри (guardrails) слугують додатковими механізмами контролю, що перевіряють або обмежують вхідні дані, згенеровані відповіді та дозволені дії навколо моделі. Разом вони забезпечують надійне та безпечне функціонування ШІ-функціоналу.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-each-layer">
-<h2 id="section-what-belongs-in-each-layer" class="glossary-term-section__title">What belongs in each layer?</h2>
-<p class="glossary-term-section__text">A prompt can explain the assistant’s role, response format, and how to handle missing information. Application controls can validate structured output, restrict available tools, check authorization, and pause an operation for review.</p>
-<p class="glossary-term-section__text">The system should enforce permissions at the point where an action is executed. Retrieved text and model output can contain misleading instructions, so the application needs a defined way to handle them.</p>
+    <p class="glossary-term-section__text">Системні промпти визначають базові інструкції рівня застосунку, які керують поведінкою моделі штучного інтелекту. Захисні бар'єри (guardrails) слугують додатковими механізмами контролю, що перевіряють або обмежують вхідні дані, згенеровані результати та дозволені дії навколо моделі. Разом вони забезпечують надійне та безпечне функціонування ШІ-функціоналу у визначених рамках.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що належить до кожного рівня?</h2>
+<p class="glossary-term-section__text">Промпт може визначати роль асистента, формат відповіді та алгоритм дій у разі браку інформації. Контрольні механізми на рівні застосунку перевіряють валідність структурованого виводу, обмежують перелік доступних інструментів, верифікують авторизацію та призупиняють операцію для перевірки людиною.</p>
+<p class="glossary-term-section__text">Система повинна примусово застосовувати права доступу безпосередньо в точці виконання дії. Отриманий із зовнішніх джерел текст та відповіді моделі можуть містити оманливі або деструктивні інструкції, тому застосунок має мати чітко визначений механізм їх нейтралізації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-flight-change">
-<h2 id="section-example-preparing-a-flight-change" class="glossary-term-section__title">Example: Preparing a flight change</h2>
-<p class="glossary-term-section__text">A booking assistant is instructed to explain available options and identify uncertain conditions. Its tools can retrieve a booking and prepare a quote. The application checks that the requesting user can access the booking and that the quote is still current.</p>
-<p class="glossary-term-section__text">Before executing the change, the workflow presents the proposed itinerary and price for approval. The execution service validates the approved operation and returns its actual result.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: підготовка зміни авіаквитка</h2>
+<p class="glossary-term-section__text">Асистент бронювання має інструкцію роз'яснювати доступні варіанти перельотів і чітко вказувати на невизначені умови. Його інструменти можуть знаходити бронювання та розраховувати попередню вартість перебронювання. Застосунок перевіряє, чи має користувач право доступу до цього бронювання і чи залишається розрахунок вартості актуальним на дану мить.</p>
+<p class="glossary-term-section__text">Перед виконанням зміни робочий процес надає користувачеві запропонований маршрут і фінальну ціну для підтвердження. Сервіс виконання перевіряє схвалену операцію та повертає фактичний результат.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-evaluate-the-controls">
-<h2 id="section-how-do-you-evaluate-the-controls" class="glossary-term-section__title">How do you evaluate the controls?</h2>
-<p class="glossary-term-section__text">Test ordinary requests, malformed outputs, stale quotes, unauthorized records, and retrieved text that tries to redirect the assistant. Check the behavior of the complete workflow, including what the user sees when a check fails. Record whether the controls prevented the invalid action and whether the user could recover.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як оцінювати ефективність контрольних механізмів?</h2>
+<p class="glossary-term-section__text">Тестуйте систему на типових запитах, некоректно сформованих вихідних даних, застарілих цінових розрахунках, неавторизованих записах та підвантаженому тексті, який намагається перехопити керування асистентом (<a href="/ua/glossary/prompt-injection.html">промпт-ін'єкції</a>). Перевіряйте поведінку наскрізного робочого процесу, зокрема те, що саме бачить користувач, коли перевірка безпеки не проходить. Фіксуйте, чи запобігли захисні бар'єри невалідній дії та чи зміг користувач безпечно відновити роботу після збою.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/prompt-engineering.html">Prompt Engineering</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/prompt-injection.html">Prompt Injection</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/prompt-engineering.html">Промпт-інженерія (Prompt Engineering)</a></li>
+<li><a href="/ua/glossary/prompt-injection.html">Промпт-ін'єкція (Prompt Injection)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://docs.langchain.com/oss/python/langchain/guardrails" target="_blank" rel="noopener noreferrer">Guardrails, LangChain</a></li>
-<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">Prompt Injection, OWASP Gen AI Security Project</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langchain/guardrails" target="_blank" rel="noopener noreferrer">Захисні бар'єри (Guardrails), LangChain</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">Промпт-ін'єкція, OWASP Gen AI Security Project</a></li>
 </ul>
 </section>
 

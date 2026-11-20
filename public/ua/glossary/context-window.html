@@ -384,67 +384,67 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Контекстне вікно (Context Window) — це обсяг інформації, яку мовна модель може обробити в межах одного запиту або сесії взаємодії, зазвичай вимірюваний у токенах. Воно обмежує сумарний обсяг інструкцій, історії діалогу, витягнутих даних та іншого вмісту, доступного моделі під час генерації відповіді.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-counts-toward-the-context-window">
-<h2 id="section-what-counts-toward-the-context-window" class="glossary-term-section__title">What counts toward the context window?</h2>
-<p class="glossary-term-section__text">Depending on the model and API, context can include system instructions, user messages, conversation history, tool definitions, tool results, documents, and generated output. Multimodal inputs also consume capacity under provider-specific rules.</p>
-<p class="glossary-term-section__text">Input, output, and reasoning budgets are not identical across providers. Check the selected model's documentation before planning around a particular limit.</p>
-<p class="glossary-term-section__text">A token is a unit used by the model, not a fixed number of English words. File size and page count are also unreliable substitutes for the actual token budget.</p>
+    <p class="glossary-term-section__text">Контекстне вікно (context window) — це обсяг інформації, який мовна модель може обробити в межах одного запиту або сесії взаємодії, що зазвичай вимірюється в токенах. Воно обмежує кількість системних інструкцій, реплік діалогу, отриманих із зовнішніх баз матеріалів та іншого контенту, доступного моделі під час генерації відповіді.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що враховується в ліміт контекстного вікна?</h2>
+<p class="glossary-term-section__text">Залежно від моделі та API, контекст може включати системні інструкції, повідомлення користувача, історію діалогу, визначення інструментів (tools), результати виконання інструментів, передані документи та згенерований вивід. Мультимодальні вхідні дані також споживають місткість контексту за специфічними для кожного провайдера правилами.</p>
+<p class="glossary-term-section__text">Ліміти на вхідні дані (input), вихідні токени (output) та токени міркування (reasoning) суттєво відрізняються в різних постачальників. Завжди звіряйтеся з технічною документацією обраної моделі перед проєктуванням архітектури під конкретні обмеження.</p>
+<p class="glossary-term-section__text">Токен — це внутрішня одиниця обробки моделі, а не фіксована кількість слів природної мови. Розмір файлу чи кількість сторінок також не є надійними показниками фактичного бюджету токенів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-context-window-vs-training-vs-memory">
-<h2 id="section-context-window-vs-training-vs-memory" class="glossary-term-section__title">Context window vs. training vs. memory</h2>
+<section class="glossary-term-section" aria-labelledby="section-vs-vs">
+<h2 id="section-vs-vs" class="glossary-term-section__title">Контекстне вікно vs. навчання vs. пам'ять</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Concept</th>
-<th>What it describes</th>
+<th>Концепція</th>
+<th>Що вона описує</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Training</td>
-<td>The process that produces the model's learned parameters</td>
+<td>Навчання (Training)</td>
+<td>Процес формування внутрішніх ваг та параметрів моделі</td>
 </tr>
 <tr>
-<td>Context window</td>
-<td>Information available within the current processing budget</td>
+<td>Контекстне вікно (Context window)</td>
+<td>Інформація, доступна моделі в межах поточного обчислювального ліміту запиту</td>
 </tr>
 <tr>
-<td>Product memory</td>
-<td>Application features that store and later supply selected information</td>
+<td>Продуктова пам'ять (Product memory)</td>
+<td>Функціональність застосунку для збереження та подальшого вибіркового надання потрібних даних</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A saved conversation is not necessarily supplied in full on every request. A memory feature may retrieve a small relevant part of stored information. Neither means the model has unlimited access to every previous interaction.</p>
+<p class="glossary-term-section__text">Збережена історія листування зовсім не обов'язково передається в повному обсязі в кожному наступному запиті. Механізми пам'яті можуть витягувати лише невеликий релевантний фрагмент збереженої інформації. Жоден із цих підходів не означає, що модель має необмежений прямий доступ до всіх попередніх взаємодій.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-long-policy-conversation">
-<h2 id="section-example-a-long-policy-conversation" class="glossary-term-section__title">Example: a long policy conversation</h2>
-<p class="glossary-term-section__text">A support tool starts with a policy document, a customer message, and booking details. Later turns add search results and corrections.</p>
-<p class="glossary-term-section__text">As the conversation grows, the application may need to retrieve relevant passages, summarize earlier material, or ask for a missing detail. The exact overflow behavior depends on implementation; a request might be rejected, shortened, or processed through a context-management mechanism.</p>
-<p class="glossary-term-section__text">If summarization drops an important exception, the interface should make the relevant source available again rather than asking the user to trust a compressed account.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: тривалий діалог про правила компанії</h2>
+<p class="glossary-term-section__text">Інструмент служби підтримки розпочинає роботу з регламенту компанії, повідомлення клієнта та деталей бронювання. На наступних кроках до діалогу додаються результати пошуку та виправлення.</p>
+<p class="glossary-term-section__text">Зі зростанням тривалості бесіди застосунку може знадобитися динамічно підвантажувати потрібні фрагменти документів, стискати попередні матеріали або запитувати відсутні деталі. Точна поведінка в разі переповнення вікна залежить від архітектури: запит може бути відхилений, скорочений або опрацьований спеціальним механізмом керування контекстом.</p>
+<p class="glossary-term-section__text">Якщо процес стиснення (summarization) втрачає важливе виключення з правил, інтерфейс повинен знову зробити доступним пряме посилання на першоджерело, а не змушувати користувача довіряти стислому викладу.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-doesn-t-more-context-guarantee-a-better-answer">
-<h2 id="section-why-doesn-t-more-context-guarantee-a-better-answer" class="glossary-term-section__title">Why doesn't more context guarantee a better answer?</h2>
-<p class="glossary-term-section__text">A larger window allows more information to fit. It does not establish that the information is relevant, accurate, or used reliably.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/context-engineering.html">Context engineering</a> concerns selecting and maintaining useful information within that budget. Test long interactions as well as short prompts, especially when earlier decisions or corrections matter.</p>
-<p class="glossary-term-section__text">Expose context limitations when they affect the task. Users need a recovery path when the system no longer has the information required to continue accurately.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому збільшення контексту не гарантує якіснішої відповіді?</h2>
+<p class="glossary-term-section__text">Більший розмір контекстного вікна лише дозволяє помістити більше інформації. Це не гарантує, що вся ця інформація буде релевантною, точною або що модель надійно використає її під час генерації.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a> фокусується саме на виборі та підтримці критично важливої інформації в межах доступного бюджету. Тестуйте поведінку системи як на коротких запитах, так і на тривалих сесіях, особливо коли принципове значення мають прийняті раніше рішення або виправлення.</p>
+<p class="glossary-term-section__text">Прозоро відображайте обмеження контексту, якщо вони впливають на виконання завдання. Користувачам потрібен зрозумілий шлях відновлення (recovery path), коли система більше не має інформації, необхідної для точного продовження роботи.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/context-drift.html">Context Drift</a></li>
-<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation</a></li>
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/context-drift.html">Дрейф контексту (Context Drift)</a></li>
+<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Генерація з доповненим пошуком (RAG)</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" target="_blank" rel="noopener noreferrer">Context windows, Anthropic</a></li>
-<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective context engineering for AI agents, Anthropic</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" target="_blank" rel="noopener noreferrer">Контекстні вікна, Anthropic</a></li>
+<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Ефективна контекстна інженерія для агентів ШІ, Anthropic</a></li>
 </ul>
 </section>
 

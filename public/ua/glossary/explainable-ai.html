@@ -384,44 +384,44 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Пояснюваний ШІ (Explainable AI, XAI) охоплює методи та практики, які роблять логіку, поведінку або результати роботи системи штучного інтелекту зрозумілими для людей. У продуктовому дизайні пояснення має допомагати аудиторії оцінити коректність результату та вирішити, як діяти далі.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-makes-an-explanation-useful">
-<h2 id="section-what-makes-an-explanation-useful" class="glossary-term-section__title">What makes an explanation useful?</h2>
-<p class="glossary-term-section__text">Different people need different explanations. A person reviewing a recommendation may need the relevant evidence and limitations. A developer investigating a failure may need model diagnostics.</p>
-<p class="glossary-term-section__text">NIST describes four principles: provide an explanation, make it meaningful to the intended audience, represent the system's process accurately, and recognize its knowledge limits. These are principles for explanation quality, not a requirement to display every internal detail.</p>
+    <p class="glossary-term-section__text">Пояснюваний штучний інтелект (Explainable AI, XAI) охоплює методи та практики, які роблять поведінку або результати роботи системи штучного інтелекту зрозумілими для людей. У продуктовому дизайні пояснення має допомогти конкретній аудиторії оцінити отриманий результат та вирішити, що робити далі.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що робить пояснення корисним?</h2>
+<p class="glossary-term-section__text">Різні групи користувачів потребують абсолютно різного змісту пояснень. Спеціалісту, який перевіряє рекомендацію системи, потрібні первинні докази та перелік обмежень. Розробнику, який розслідує системний збій, необхідні детальні діагностичні дані моделі.</p>
+<p class="glossary-term-section__text">Національний інститут стандартів і технологій США (NIST) виділяє чотири ключові принципи: надання пояснення, його змістовність для цільової аудиторії, точність відображення системного процесу та усвідомлення меж компетенції системи (knowledge limits). Це орієнтири для оцінки якості пояснення, а не вимога демонструвати абсолютно всі внутрішні технічні параметри.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-explaining-an-expense-flag">
-<h2 id="section-example-explaining-an-expense-flag" class="glossary-term-section__title">Example: explaining an expense flag</h2>
-<p class="glossary-term-section__text">Suppose an assistant flags an expense for review. The reviewer needs to know which submitted values and policy provisions support that flag, what information is missing, and how to correct or challenge it.</p>
-<p class="glossary-term-section__text">“AI detected a problem” does not support that decision. A concise explanation connecting a particular date or amount to a relevant policy passage may help.</p>
-<p class="glossary-term-section__text">If the product cannot establish that the cited factor caused the model's result, it should avoid presenting that factor as a verified causal explanation. Showing relevant evidence and explaining the limitation may be more accurate.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: пояснення маркування витрат</h2>
+<p class="glossary-term-section__text">Припустимо, що асистент позначає статтю витрат як таку, що потребує додаткової перевірки. Рецензенту необхідно знати, які саме подані суми та які пункти корпоративної політики підтверджують це маркування, якої інформації бракує, і як виправити або оскаржити це рішення.</p>
+<p class="glossary-term-section__text">Повідомлення «ШІ виявив проблему» абсолютно не допомагає прийняти рішення. Натомість лаконічне пояснення, що пов'язує конкретну дату чи суму з відповідним пунктом внутрішнього регламенту, надає реальну користь.</p>
+<p class="glossary-term-section__text">Якщо продукт не може довести, що зазначений фактор дійсно став причиною результату моделі, слід уникати подання цього фактора як перевіреної причинно-наслідкової залежності. Наочна демонстрація релевантних доказів та відкрите пояснення обмежень будуть набагато точнішим рішенням.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-explanation-vs-generated-rationale">
-<h2 id="section-explanation-vs-generated-rationale" class="glossary-term-section__title">Explanation vs. generated rationale</h2>
-<p class="glossary-term-section__text">A language model can produce a convincing account of why an answer seems reasonable. That account is not automatically a faithful record of the computation that produced it.</p>
-<p class="glossary-term-section__text">Distinguish evidence, system rules, model interpretation methods, and generated summaries. Do not imply that a conversational explanation exposes the model's complete reasoning.</p>
-<p class="glossary-term-section__text">Likewise, an explanation does not establish that the outcome is correct or fair. Those questions require their own evaluation.</p>
+<section class="glossary-term-section" aria-labelledby="section-vs">
+<h2 id="section-vs" class="glossary-term-section__title">Справжнє пояснення vs. згенероване обґрунтування</h2>
+<p class="glossary-term-section__text">Мовна модель здатна сформулювати цілком переконливе обґрунтування того, чому відповідь виглядає логічною. Проте такий виклад не є автоматично достовірним протоколом обчислювального процесу, який насправді сформував цей результат.</p>
+<p class="glossary-term-section__text">Чітко розрізняйте прямі докази, бізнес-правила системи, методи інтерпретації моделей та згенеровані підсумкові резюме. Не створюйте хибного враження, ніби розмовне пояснення повністю розкриває весь внутрішній ланцюг міркувань моделі.</p>
+<p class="glossary-term-section__text">Так само наявність пояснення не гарантує, що підсумковий результат є правильним або справедливим. Ці питання вимагають власної окремої оцінки.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-should-designers-choose-the-level-of-detail">
-<h2 id="section-how-should-designers-choose-the-level-of-detail" class="glossary-term-section__title">How should designers choose the level of detail?</h2>
-<p class="glossary-term-section__text">Identify the decision, audience, and consequences. Present the most useful information at the point where it is needed, with a route to supporting detail.</p>
-<p class="glossary-term-section__text">Test whether people understand the explanation and use it appropriately. More text or a confidence badge may create reassurance without improving judgment.</p>
-<p class="glossary-term-section__text">Give users a next step: inspect a source, edit an input, request review, or decline the recommendation. The explanation is useful when it supports informed action, not merely when it sounds plausible.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як дизайнерам обирати рівень деталізації?</h2>
+<p class="glossary-term-section__text">Визначте характер рішення, цільову аудиторію та можливі наслідки. Надавайте найкориснішу інформацію безпосередньо в точці, де вона потрібна, забезпечуючи зручний перехід до детальніших підтверджувальних матеріалів.</p>
+<p class="glossary-term-section__text">Тестуйте, чи справді люди розуміють пояснення та чи належним чином його використовують. Додатковий обсяг тексту або декоративний бейдж упевненості можуть створити відчуття заспокоєння, не покращуючи при цьому якість судження користувача.</p>
+<p class="glossary-term-section__text">Завжди пропонуйте користувачам наступний крок: перевірити першоджерело, відредагувати вхідні дані, надіслати запит на перевірку або відхилити рекомендацію. Пояснення є по-справжньому корисним тоді, коли воно слугує основою для усвідомлених дій, а не просто звучить правдоподібно.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-transparency.html">AI Transparency</a></li>
-<li><a href="/ua/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop</a></li>
+<li><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a></li>
+<li><a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри до ШІ (Trust Calibration)</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence" target="_blank" rel="noopener noreferrer">Four Principles of Explainable Artificial Intelligence, NIST</a></li>
-<li><a href="https://pair.withgoogle.com/chapter/explainability-trust/" target="_blank" rel="noopener noreferrer">Explainability and Trust, Google PAIR</a></li>
+<li><a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence" target="_blank" rel="noopener noreferrer">Чотири принципи пояснюваного штучного інтелекту, NIST</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/explainability-trust/" target="_blank" rel="noopener noreferrer">Пояснюваність та довіра, Google PAIR</a></li>
 </ul>
 </section>
 

@@ -384,38 +384,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Агентний штучний інтелект (Agentic AI) описує системи ШІ, здатні досягати поставлених цілей шляхом виконання послідовностей дій із певним ступенем автономії. У застосунках на базі LLM це зазвичай охоплює вибір інструментів, динамічну інтерпретацію проміжних результатів і адаптацію подальших кроків у межах визначених обмежень.</p>
-<p class="glossary-term-section__text">Usage varies across vendors and products. Some systems follow mostly predefined workflows; others let a model choose more of the process. State which decisions are delegated when describing a system as agentic.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-preparing-a-trip-proposal">
-<h2 id="section-example-preparing-a-trip-proposal" class="glossary-term-section__title">Example: preparing a trip proposal</h2>
-<p class="glossary-term-section__text">A travel assistant receives dates, a budget, and arrival constraints. It retrieves flight options, compares eligible results, and prepares a proposal.</p>
-<p class="glossary-term-section__text">If no option meets the constraints, it can explain the conflict and ask which condition the traveler wants to change. It should preserve the budget unless the user authorizes a change.</p>
-<p class="glossary-term-section__text">The product might allow autonomous research while requiring explicit approval before purchasing. That boundary is part of the system's design.</p>
+    <p class="glossary-term-section__text">Агентний ШІ (Agentic AI) описує системи штучного інтелекту, здатні досягати поставлених цілей через послідовність дій із певним ступенем автономності. У застосунках на базі великих мовних моделей (LLM) це зазвичай охоплює вибір інструментів, динамічну інтерпретацію проміжних результатів і адаптацію подальших кроків у межах заздалегідь визначених обмежень.</p>
+<p class="glossary-term-section__text">Тлумачення цього терміна варіюється серед постачальників і продуктових команд. Деякі системи здебільшого дотримуються заздалегідь визначених робочих процесів (workflows), тоді як інші дозволяють моделі самостійно планувати більшу частину процесу. Описуючи систему як агентну, важливо чітко зазначати, які саме рішення делегуються штучному інтелекту.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: підготовка плану подорожі</h2>
+<p class="glossary-term-section__text">Віртуальний асистент із планування подорожей отримує дати, бюджет і часові обмеження щодо прибуття. Він знаходить варіанти авіаперельотів, порівнює відповідні результати та формує підсумкову пропозицію.</p>
+<p class="glossary-term-section__text">Якщо жоден із варіантів не задовольняє встановлені обмеження, асистент може пояснити конфлікт і запитати, яку саме умову мандрівник готовий змінити. Він повинен суворо дотримуватися бюджету, доки користувач явно не дозволить його коригування.</p>
+<p class="glossary-term-section__text">Продукт може дозволяти автономний збір інформації, але вимагати обов'язкового підтвердження користувача перед здійсненням покупки. Встановлення цієї межі є фундаментальною складовою архітектури системи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-agents-workflows-and-multiple-agents">
-<h2 id="section-agents-workflows-and-multiple-agents" class="glossary-term-section__title">Agents, workflows, and multiple agents</h2>
-<p class="glossary-term-section__text">An AI agent is a system that takes actions toward a goal. A workflow coordinates steps and dependencies. An agentic product can combine a fixed workflow with model-driven decisions inside particular steps.</p>
-<p class="glossary-term-section__text">Multiple agents are optional. Splitting work among several agents adds coordination requirements and should have a clear purpose.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Агенти, робочі процеси та мультиагентні системи</h2>
+<p class="glossary-term-section__text">ШІ-агент — це система, яка виконує дії для досягнення цілі. Робочий процес (workflow) координує послідовність кроків і системні залежності. Агентний продукт може поєднувати фіксований детермінований процес із динамічними рішеннями, які приймаються мовною моделлю на окремих етапах.</p>
+<p class="glossary-term-section__text">Використання кількох агентів є опціональним. Розподіл роботи між кількома агентами створює додаткові вимоги до координації та має мати чітке архітектурне обґрунтування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-questions-for-product-teams">
-<h2 id="section-questions-for-product-teams" class="glossary-term-section__title">Questions for product teams</h2>
-<p class="glossary-term-section__text">Identify the decisions the AI may make, the evidence it must use, and the actions requiring authorization. Set limits on duration and resource use.</p>
-<p class="glossary-term-section__text">Evaluate completion against the requested outcome and constraints. Also inspect failed and abandoned runs: a system that completes an easy demonstration may still struggle with missing information, changed conditions, or unavailable tools.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Питання для продуктових команд</h2>
+<p class="glossary-term-section__text">Визначте, які рішення ШІ може приймати самостійно, на які фактичні дані він повинен спиратися та які дії потребують обов'язкової авторизації людиною. Встановіть ліміти на тривалість виконання та використання ресурсів.</p>
+<p class="glossary-term-section__text">Оцінюйте успішність виконання відносно очікуваного кінцевого результату та встановлених обмежень. Також обов'язково аналізуйте невдалі та перервані сесії: система, яка бездоганно працює на спрощеній демонстрації, може зазнавати труднощів у разі відсутності необхідної інформації, зміни зовнішніх умов або недоступності інструментів.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-<li><a href="/ua/glossary/autonomous-workflow-orchestration.html">Autonomous Workflow Orchestration</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів (Tool Calling)</a></li>
+<li><a href="/ua/glossary/autonomous-workflow-orchestration.html">Автономна оркестрація робочих процесів</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Building Effective Agents</a></li>
-<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Workflows and Agents</a></li>
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic: Створення ефективних агентів</a></li>
+<li><a href="https://docs.langchain.com/oss/python/langgraph/workflows-agents" target="_blank" rel="noopener noreferrer">LangChain: Робочі процеси та агенти</a></li>
 </ul>
 </section>
 

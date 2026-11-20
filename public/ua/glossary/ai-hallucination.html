@@ -384,51 +384,51 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Галюцинація ШІ (AI Hallucination) — це згенерований вміст, який подається як достовірний або підтверджений джерелами, але насправді є сфабрикованим, непідтвердженим або таким, що суперечить наявним фактам. Прикладами є вигадане цитування або деталі бронювання, відсутні в наданих записах.</p>
-<section class="glossary-term-section" aria-labelledby="section-why-can-a-convincing-answer-still-be-wrong">
-<h2 id="section-why-can-a-convincing-answer-still-be-wrong" class="glossary-term-section__title">Why can a convincing answer still be wrong?</h2>
-<p class="glossary-term-section__text">Generative models produce responses from patterns and the context they receive. Fluent wording is not a verification step.</p>
-<p class="glossary-term-section__text">A model can supply a plausible detail when the required information is missing. It can also misrepresent a retrieved source. Product teams need to evaluate the result against evidence rather than infer correctness from confidence, length, or polished formatting.</p>
-<p class="glossary-term-section__text">Not every incorrect answer has the same cause. A stale database value, a failed calculation, and fabricated supporting evidence require different investigations. Record the observed failure instead of labeling every defect a hallucination.</p>
+    <p class="glossary-term-section__text">Галюцинація ШІ (AI hallucination) — це згенерований контент, який подається як фактичний або базований на першоджерелах, але насправді є вигаданим, безпідставним чи суперечить наявним фактам. Прикладами є вигадане посилання на джерело або деталі бронювання, яких узагалі немає в наданому записі.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому переконлива відповідь може бути хибною?</h2>
+<p class="glossary-term-section__text">Генеративні моделі створюють відповіді на основі статистичних закономірностей і отриманого контексту. Грамотне та плавне формулювання не є етапом верифікації фактів.</p>
+<p class="glossary-term-section__text">Модель може додати правдоподібну деталь, якщо необхідна інформація відсутня. Вона також може спотворити зміст отриманого першоджерела. Продуктові команди мають оцінювати результат на основі фактів, а не робити висновок про правильність за впевненим тоном, обсягом тексту чи охайним форматуванням.</p>
+<p class="glossary-term-section__text">Не кожна помилкова відповідь має однакову причину. Застаріле значення в базі даних, збій у математичних обчисленнях і сфабриковані докази вимагають принципово різних підходів до розслідування. Фіксуйте конкретний характер збою замість того, щоб вішати ярлик «галюцинація» на будь-який дефект у роботі системи.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-an-invented-refund-exception">
-<h2 id="section-example-an-invented-refund-exception" class="glossary-term-section__title">Example: an invented refund exception</h2>
-<p class="glossary-term-section__text">Suppose a support assistant summarizes a booking's refund conditions. The source says the fare is nonrefundable, but the answer invents a “24-hour exception” without supporting evidence.</p>
-<p class="glossary-term-section__text">A helpful interface lets the user inspect the relevant conditions and request a review. The system should not let that generated statement automatically authorize a refund.</p>
-<p class="glossary-term-section__text">If the source cannot be retrieved, say that the conditions could not be verified. Repeating the same unsupported answer in a more confident tone does not resolve the problem.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: вигаданий виняток для повернення коштів</h2>
+<p class="glossary-term-section__text">Припустимо, асистент служби підтримки підсумовує умови повернення коштів за бронювання. У першоджерелі зазначено, що тариф не підлягає поверненню, проте у відповіді вигадується «24-годинне виключення», яке не має під собою жодних підстав.</p>
+<p class="glossary-term-section__text">Корисний інтерфейс дає користувачеві можливість самостійно переглянути відповідні правила та надіслати запит на перевірку фахівцем. Система не повинна дозволяти згенерованому твердженню автоматично запускати процедуру повернення коштів.</p>
+<p class="glossary-term-section__text">Якщо джерело не вдається отримати, інтерфейс має прямо повідомити, що умови не вдалося перевірити. Повторення тієї самої необґрунтованої відповіді більш упевненим тоном не вирішує проблему.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-a-product-reduce-the-impact">
-<h2 id="section-how-can-a-product-reduce-the-impact" class="glossary-term-section__title">How can a product reduce the impact?</h2>
-<p class="glossary-term-section__text">Useful design and implementation choices include:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як продукт може зменшити негативний вплив?</h2>
+<p class="glossary-term-section__text">До ефективних рішень у дизайні та реалізації належать:</p>
 <ul class="glossary-term-ul">
-<li>Retrieve the information needed for the specific record and question.</li>
-<li>Validate consequential values and actions against authoritative application data.</li>
-<li>Provide relevant evidence where users need to assess a claim.</li>
-<li>Support explicit missing-information and uncertain-result states.</li>
-<li>Give users a practical correction, retry, or escalation path.</li>
+<li>Отримання точної інформації, необхідної для конкретного запису та запитання.</li>
+<li>Валідація критичних значень і дій за авторитетними даними застосунку.</li>
+<li>Надання релевантних доказів у тих місцях інтерфейсу, де користувачам потрібно оцінити достовірність твердження.</li>
+<li>Підтримка явних станів інтерфейсу для відсутньої інформації та невизначених результатів.</li>
+<li>Надання користувачам практичного шляху для виправлення, повторної спроби або ескалації питання до оператора.</li>
 </ul>
-<p class="glossary-term-section__text"><a href="/ua/glossary/ai-grounding.html">Grounding</a> and validation can help, but no generic disclaimer or single technique makes generated answers universally reliable.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ai-grounding.html">Заземлення (Grounding)</a> та валідація суттєво допомагають, проте жоден стандартний дисклеймер або ізольований технічний метод не робить згенеровані відповіді абсолютно надійними.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-should-teams-evaluate-hallucinations">
-<h2 id="section-how-should-teams-evaluate-hallucinations" class="glossary-term-section__title">How should teams evaluate hallucinations?</h2>
-<p class="glossary-term-section__text">Build a set of representative tasks with clear criteria for what counts as supported. Include questions with no answer in the available sources, conflicting records, and misleading context.</p>
-<p class="glossary-term-section__text">Check the correctness of claims and the adequacy of citations separately. A source can exist without supporting the answer.</p>
-<p class="glossary-term-section__text">Track the effect on the task, including whether users notice and recover from a problem. Do not report a hallucination rate without stating the dataset, evaluation method, and type of failure counted.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як командам слід оцінювати рівень галюцинацій?</h2>
+<p class="glossary-term-section__text">Сформуйте набір репрезентативних завдань із чіткими критеріями того, що вважається підтвердженим фактом. Включіть запитання, на які немає відповіді в наявних джерелах, суперечливі записи та контекст, що вводить в оману.</p>
+<p class="glossary-term-section__text">Оцінюйте правильність тверджень і відповідність цитат окремо. Джерело може реально існувати, але не підтверджувати надану відповідь.</p>
+<p class="glossary-term-section__text">Відстежуйте вплив на виконання завдання: зокрема те, чи помічають користувачі проблему і чи здатні вони відновити роботу після збою. Ніколи не заявляйте про відсоток галюцинацій без зазначення тестового набору даних, методики оцінювання та конкретних типів помилок, які враховувалися.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop</a></li>
-<li><a href="/ua/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Каркас оцінювання ШІ (AI Evals)</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
+<li><a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри до ШІ (Trust Calibration)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://genai.owasp.org/llmrisk/llm092025-misinformation/" target="_blank" rel="noopener noreferrer">Misinformation, OWASP Gen AI Security Project</a></li>
-<li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview" target="_blank" rel="noopener noreferrer">Grounding overview, Google Cloud</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm092025-misinformation/" target="_blank" rel="noopener noreferrer">Дезінформація (Misinformation), OWASP Gen AI Security Project</a></li>
+<li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview" target="_blank" rel="noopener noreferrer">Огляд заземлення (Grounding overview), Google Cloud</a></li>
 </ul>
 </section>
 

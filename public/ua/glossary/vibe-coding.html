@@ -384,41 +384,39 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Вайб-кодинг (vibe coding) — це підхід до створення програмного забезпечення, що полягає в описі бажаної поведінки системі ШІ та швидкому ітеруванні на основі результатів без детального занурення в згенерований код. Термін увів Андрей Карпати (Andrej Karpathy) у 2025 році для характеристики цього експериментального стилю розробки.</p>
-<p class="glossary-term-section__text">The term is also used more broadly for AI-assisted development. Its original meaning is narrower: accepting and modifying generated software without closely reviewing how the implementation works.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-exploring-a-scheduling-interface">
-<h2 id="section-example-exploring-a-scheduling-interface" class="glossary-term-section__title">Example: exploring a scheduling interface</h2>
-<p class="glossary-term-section__text">A designer asks an AI tool to build a room-assignment prototype using fictional reservations. They adjust the layout through prompts, try the interactions, and ask the tool to fix visible problems.</p>
-<p class="glossary-term-section__text">That can help the team explore whether a calendar, list, or split view communicates the task clearly. It does not establish that the scheduling rules are complete or that concurrent edits are handled correctly.</p>
-<p class="glossary-term-section__text">Keep the prototype's assumptions visible. For example, it might assume every reservation has an assigned room and ignore maintenance blocks.</p>
+    <p class="glossary-term-section__text">Вайб-кодинг (vibe coding) — це підхід до створення програмного забезпечення, що полягає в описі бажаної поведінки інструменту кодування на базі ШІ та швидкому ітеруванні на основі його виводів без детального занурення в згенерований код. Термін увів Андрей Карпати (Andrej Karpathy) у 2025 році для характеристики цього експериментального стилю розробки.</p>
+<p class="glossary-term-section__text">Цей термін також використовують у ширшому значенні для позначення будь-якої розробки за підтримки ШІ. Проте його первинне значення є вужчим: прийняття та модифікація згенерованого програмного забезпечення без ретельного аудиту внутрішніх механізмів його реалізації.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: дослідження інтерфейсу планування та бронювання</h2>
+<p class="glossary-term-section__text">Дизайнер просить ШІ-інструмент створити прототип розподілу номерів на основі вигаданих бронювань. За допомогою текстових промптів він коригує компонування, тестує взаємодії та просить інструмент усунути візуальні й логічні проблеми.</p>
+<p class="glossary-term-section__text">Це допомагає команді перевірити, чи вдало календар, список або розділений екран (split view) передають логіку завдання. Проте це не доводить, що правила розкладу є вичерпними або що конфлікти одночасного редагування обробляються належним чином.</p>
+<p class="glossary-term-section__text">Фіксуйте припущення, закладені в прототип, у явному вигляді. Наприклад, він може передбачати, що за кожним бронюванням закріплено номер, та повністю ігнорувати блокування кімнат на технічне обслуговування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-vibe-coding-and-reviewed-development">
-<h2 id="section-vibe-coding-and-reviewed-development" class="glossary-term-section__title">Vibe coding and reviewed development</h2>
-<p class="glossary-term-section__text">AI-assisted development also includes workflows in which people inspect changes, understand the implementation, and verify requirements. Describe the actual level of review when discussing the work.</p>
-<p class="glossary-term-section__text">Before turning the scheduling prototype into a service, review data access, business rules, error handling, accessibility, and deployment behavior. Test conflicting bookings and failed saves, and identify who will maintain the code.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Вайб-кодинг та рецензована розробка</h2>
+<p class="glossary-term-section__text">Розробка за підтримки ШІ також охоплює робочі процеси, в яких люди ретельно перевіряють зміни, розуміють архітектуру реалізації та верифікують вимоги. Обговорюючи результати роботи, відкрито окреслюйте фактичний рівень контролю та ревізії коду.</p>
+<p class="glossary-term-section__text">Перш ніж перетворювати прототип планування на повноцінний сервіс, проведіть ревізію доступу до даних, бізнес-правил, обробки помилок, цифрової доступності (accessibility) та поведінки під час розгортання. Протестуйте конфлікти одночасного бронювання, збої збереження даних і визначте, хто відповідатиме за подальшу підтримку цього коду.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-designers-can-evaluate">
-<h2 id="section-what-designers-can-evaluate" class="glossary-term-section__title">What designers can evaluate</h2>
-<p class="glossary-term-section__text">Separate the interaction hypothesis from implementation readiness. Observe whether people understand the prototype and can complete representative tasks.</p>
-<p class="glossary-term-section__text">A fast build can make an idea easier to test. Its value depends on what the team learns and whether the resulting product solves a real problem.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що можуть оцінювати дизайнери</h2>
+<p class="glossary-term-section__text">Відокремлюйте гіпотезу щодо взаємодії (interaction hypothesis) від технічної готовності до впровадження. Спостерігайте, чи розуміють користувачі логіку прототипу та чи здатні вони виконувати типові завдання.</p>
+<p class="glossary-term-section__text">Швидке створення прототипу спрощує перевірку ідеї. Проте його справжня цінність залежить від того, які інсайти отримує команда і чи справді кінцевий продукт вирішує реальну проблему.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-engineering.html">Design Engineering</a></li>
-<li><a href="/ua/glossary/design-to-code-workflow.html">Design-to-Code Workflow</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-prototyping.html">AI Prototyping</a></li>
+<li><a href="/ua/glossary/design-engineering.html">Дизайн-інженерія (Design Engineering)</a></li>
+<li><a href="/ua/glossary/design-to-code-workflow.html">Робочий процес від дизайну до коду (Design-to-Code)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/ai-prototyping.html">ШІ-прототипування (AI Prototyping)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreferrer">Andrej Karpathy: Original Vibe Coding Post</a></li>
-<li><a href="https://simonwillison.net/2025/Mar/19/vibe-coding/" target="_blank" rel="noopener noreferrer">Simon Willison: Vibe Coding and AI-Assisted Programming</a></li>
+<li><a href="https://x.com/karpathy/status/1886192184808149383" target="_blank" rel="noopener noreferrer">Андрей Карпати: оригінальний допис про вайб-кодинг (Andrej Karpathy: Original Vibe Coding Post)</a></li>
+<li><a href="https://simonwillison.net/2025/Mar/19/vibe-coding/" target="_blank" rel="noopener noreferrer">Саймон Віллісон: вайб-кодинг та програмування за підтримки ШІ (Simon Willison: Vibe Coding and AI-Assisted Programming)</a></li>
 </ul>
 </section>
 

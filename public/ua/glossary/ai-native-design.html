@@ -389,84 +389,84 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">ШІ-нативний дизайн (AI-native design) — це підхід до проектування продуктів, у якому можливості штучного інтелекту становлять фундаментальну основу створення цінності та ключових робочих процесів. Дизайнери фокусуються на тому, як користувачі передають контекст, оцінюють згенеровані результати, керують діями моделі та відновлюють контроль у разі помилок системи.</p>
-<p class="glossary-term-section__text">The term is evolving. This glossary uses it as a working definition, not a formal methodology. AI may generate, classify, recommend, or predict; the appropriate interaction depends on the task.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-makes-a-product-ai-native">
-<h2 id="section-what-makes-a-product-ai-native" class="glossary-term-section__title">What makes a product AI-native?</h2>
-<p class="glossary-term-section__text">A useful design question is: <strong>How would the core workflow change if the AI capability were removed?</strong> If the product’s main value depends on interpreting information, generating useful output, or adapting assistance, AI is central to the design.</p>
-<p class="glossary-term-section__text">Using AI to create wireframes or write code describes <a href="/ua/glossary/ai-assisted-design.html">AI-assisted design</a>, the designer’s process. AI-native describes the product experience. A chatbot, autonomous agent, or dynamically generated interface is one possible interaction pattern, not a requirement.</p>
+    <p class="glossary-term-section__text">ШІ-нативний дизайн (AI-native design) — це підхід до проектування продуктів, у якому можливості штучного інтелекту становлять фундаментальну основу створення споживчої цінності та ключових робочих процесів. Дизайнери визначають, як користувачі передають контекст, оцінюють згенеровані результати, спрямовують дії системи та відновлюють контроль у разі виникнення помилок.</p>
+<p class="glossary-term-section__text">Цей термін продовжує розвиватися. У цьому глосарії він використовується як робоче визначення, а не як формалізована методологія. ШІ може генерувати, класифікувати, рекомендувати чи прогнозувати; вибір відповідної моделі взаємодії залежить від конкретного завдання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що робить продукт ШІ-нативним?</h2>
+<p class="glossary-term-section__text">Корисне запитання для аналізу дизайну: <strong>Як змінився б ключовий робочий процес, якби функціональність ШІ видалили?</strong> Якщо основна цінність продукту полягає в інтерпретації інформації, генерації корисного результату чи адаптивній допомозі — ШІ є центральним ядром проєктування.</p>
+<p class="glossary-term-section__text">Використання ШІ для створення вайрфреймів чи написання коду описує <a href="/ua/glossary/ai-assisted-design.html">дизайн за підтримки ШІ (AI-assisted design)</a>, тобто робочий процес самого дизайнера. Натомість ШІ-нативність характеризує користувацький досвід кінцевого продукту. Чат-бот, автономний агент чи динамічно згенерований інтерфейс — це лише окремі патерни взаємодії, а не обов'язкові вимоги.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-an-ai-native-design-example-support-triage">
-<h2 id="section-an-ai-native-design-example-support-triage" class="glossary-term-section__title">An AI-native design example: support triage</h2>
-<p class="glossary-term-section__text">Imagine a support workspace whose core workflow turns incoming messages into suggested categories, relevant account context, and draft replies. The following example is illustrative.</p>
-<p class="glossary-term-section__text">For “I paid yesterday, but my account is still locked,” the system proposes a billing category and a reply based on available account records and help content.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад ШІ-нативного дизайну: сортування запитів служби підтримки</h2>
+<p class="glossary-term-section__text">Уявіть робочий простір служби підтримки, де ключовий процес перетворює вхідні повідомлення на запропоновані категорії, релевантний контекст облікового запису та чернетки відповідей. Наведений приклад має ілюстративний характер.</p>
+<p class="glossary-term-section__text">Для запиту «Я заплатив учора, але мій акаунт досі заблокований» система пропонує категорію «Оплата та білінг» і чернетку відповіді на основі наявних записів облікового запису та довідкових матеріалів.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Design decision</th>
-<th>Example behavior</th>
+<th>Дизайнерське рішення</th>
+<th>Приклад поведінки системи</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Context</td>
-<td>Show which message, account record, and help article informed the suggestion.</td>
+<td>Контекст</td>
+<td>Показати, яке саме повідомлення, запис облікового запису та стаття довідки лягли в основу пропозиції.</td>
 </tr>
 <tr>
-<td>Review</td>
-<td>Let the agent inspect sources, change the category, and edit the draft.</td>
+<td>Перевірка</td>
+<td>Надати оператору можливість переглянути джерела, змінити категорію та відредагувати чернетку.</td>
 </tr>
 <tr>
-<td>Control</td>
-<td>Require the agent to approve sending the reply; account changes follow separate permissions.</td>
+<td>Контроль</td>
+<td>Вимагати затвердження оператором відправлення відповіді; внесення змін до акаунту регулюється окремими правами доступу.</td>
 </tr>
 <tr>
-<td>Recovery</td>
-<td>If payment status is unavailable, avoid claiming payment is confirmed; show the limitation and offer a manual lookup.</td>
+<td>Відновлення після помилок</td>
+<td>Якщо статус платежу недоступний, уникати тверджень про підтвердження оплати; відобразити обмеження та запропонувати ручний пошук.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A polished draft can still contain a mistake. Source links help the agent verify claims; they do not guarantee that the response is correct. The design should make checking and correcting the output practical within the actual workload.</p>
+<p class="glossary-term-section__text">Бездоганно сформульована чернетка все одно може містити помилку. Посилання на джерела допомагають оператору верифікувати твердження, але не гарантують безпомилковості відповіді. Дизайн має робити перевірку та виправлення результатів зручними та практичними в умовах реального робочого навантаження.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-designers-define">
-<h2 id="section-what-should-designers-define" class="glossary-term-section__title">What should designers define?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що мають визначити дизайнери?</h2>
 <ol class="glossary-term-ol">
-<li><strong>The user outcome.</strong> Identify the problem AI is suited to solve and compare the proposed workflow with the current way of doing the task.</li>
-<li><strong>Capabilities and limits.</strong> Explain what the system can do, what information it can access, and where its output needs review.</li>
-<li><strong>Control and consequences.</strong> Specify what AI may suggest or execute, when approval is needed, and what users can correct, dismiss, or undo.</li>
-<li><strong>Failure behavior.</strong> Design for missing context, incorrect output, unavailable services, and a usable manual path.</li>
-<li><strong>Evaluation.</strong> Test representative tasks, including difficult cases, and examine both output quality and the effort needed to review it. Repeat these checks when models, prompts, or source data change.</li>
+<li><strong>Кінцевий результат для користувача (User outcome).</strong> Визначте проблему, для вирішення якої ШІ підходить найкраще, і порівняйте запропонований робочий процес із поточним способом виконання завдання.</li>
+<li><strong>Можливості та обмеження (Capabilities and limits).</strong> Поясніть, що система здатна робити, до якої інформації має доступ і в яких точках її виводи потребують перевірки людиною.</li>
+<li><strong>Контроль та наслідки (Control and consequences).</strong> Чітко зафіксуйте, що саме ШІ може пропонувати чи виконувати автономно, коли потрібне підтвердження, і що користувачі можуть виправити, відхилити чи скасувати (undo).</li>
+<li><strong>Поведінка у разі збоїв (Failure behavior).</strong> Спроєктуйте роботу для ситуацій відсутності контексту, некоректних відповідей, недоступності сервісів та забезпечте працездатний ручний альтернативний сценарій.</li>
+<li><strong>Оцінювання (Evaluation).</strong> Тестуйте репрезентативні сценарії, включно зі складними граничними випадками, аналізуючи як якість результату, так і зусилля, необхідні для його перевірки. Повторюйте ці перевірки при зміні моделей, промптів або джерел даних.</li>
 </ol>
-<p class="glossary-term-section__text">Google’s People + AI Guidebook and Microsoft’s HAX guidelines provide practical guidance for these interaction decisions.</p>
+<p class="glossary-term-section__text">Посібник Google People + AI Guidebook та рекомендації Microsoft HAX надають практичні настанови для прийняття цих рішень щодо взаємодії.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-know-it-helps">
-<h2 id="section-how-do-you-know-it-helps" class="glossary-term-section__title">How do you know it helps?</h2>
-<p class="glossary-term-section__text">For the support example, measure time to a correct resolution, incorrect replies, and the effort agents spend checking drafts. Draft acceptance alone cannot tell you whether the replies are correct. Compare results with the existing workflow and investigate where users need to intervene.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як зрозуміти, що це дійсно допомагає?</h2>
+<p class="glossary-term-section__text">У прикладі зі службою підтримки вимірюйте час до коректного вирішення проблеми, частку помилкових відповідей та зусилля, які оператори витрачають на вичитування чернеток. Сам факт прийняття чернетки без змін не гарантує, що відповіді правильні. Порівнюйте результати з наявним робочим процесом і досліджуйте, у яких саме моментах користувачам доводиться втручатися.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-which-ai-concepts-affect-the-interaction">
-<h2 id="section-which-ai-concepts-affect-the-interaction" class="glossary-term-section__title">Which AI concepts affect the interaction?</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/ai-grounding.html">Grounding</a> connects an answer to evidence; <a href="/ua/glossary/ai-hallucination.html">hallucinations</a> can still produce unsupported claims. The interface needs a useful way to inspect the relevant source and recover when information is missing.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/ai-transparency.html">AI transparency</a> explains the system's role and boundaries. <a href="/ua/glossary/explainable-ai.html">Explainable AI</a> focuses on making behavior or results understandable. <a href="/ua/glossary/trust-calibration-ai.html">Trust calibration</a> concerns whether users rely on the system appropriately.</p>
-<p class="glossary-term-section__text">These interaction decisions form part of <a href="/ua/glossary/responsible-ai-design.html">responsible AI design</a>, alongside evaluation, accessibility, data handling, and clear operational ownership.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Які концепції ШІ впливають на взаємодію?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ai-grounding.html">Заземлення (Grounding)</a> пов'язує відповідь із доказами та джерелами; проте <a href="/ua/glossary/ai-hallucination.html">галюцинації (Hallucinations)</a> все одно можуть породжувати безпідставні твердження. Інтерфейс повинен надавати зручний спосіб перевірити відповідне першоджерело та відновлювати роботу у випадках неповноти інформації.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a> роз'яснює роль системи та її межі. <a href="/ua/glossary/explainable-ai.html">Пояснюваний штучний інтелект (Explainable AI)</a> зосереджується на тому, щоб зробити поведінку чи висновки моделі зрозумілими. <a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри (Trust Calibration)</a> стосується того, наскільки адекватно користувачі покладаються на систему.</p>
+<p class="glossary-term-section__text">Ці рішення щодо взаємодії є невіддільною частиною <a href="/ua/glossary/responsible-ai-design.html">відповідального дизайну систем ШІ (Responsible AI Design)</a> поряд з оцінюванням, доступністю (accessibility), безпекою обробки даних та чітким операційним розподілом відповідальності.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
-<li><a href="/ua/glossary/agentic-ux.html">Agentic UX</a></li>
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/ua/glossary/generative-ui.html">Генеративний користувацький інтерфейс (Generative UI)</a></li>
+<li><a href="/ua/glossary/agentic-ux.html">Агентний UX (Agentic UX)</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/" target="_blank" rel="noopener noreferrer">User Needs + Defining Success, Google People + AI Guidebook</a></li>
-<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/" target="_blank" rel="noopener noreferrer">Mental Models, Google People + AI Guidebook</a></li>
-<li><a href="https://www.microsoft.com/en-us/haxtoolkit/library/" target="_blank" rel="noopener noreferrer">Guidelines for Human-AI Interaction, Microsoft HAX Design Library</a></li>
-<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/" target="_blank" rel="noopener noreferrer">Errors + Graceful Failure, Google People + AI Guidebook</a></li>
+<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/" target="_blank" rel="noopener noreferrer">Потреби користувачів та визначення успіху (User Needs + Defining Success), Google People + AI Guidebook</a></li>
+<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/mental-models/" target="_blank" rel="noopener noreferrer">Ментальні моделі (Mental Models), Google People + AI Guidebook</a></li>
+<li><a href="https://www.microsoft.com/en-us/haxtoolkit/library/" target="_blank" rel="noopener noreferrer">Настанови щодо взаємодії людини та ШІ (Guidelines for Human-AI Interaction), Microsoft HAX Design Library</a></li>
+<li><a href="https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/" target="_blank" rel="noopener noreferrer">Помилки та коректна обробка збоїв (Errors + Graceful Failure), Google People + AI Guidebook</a></li>
 </ul>
 </section>
 

@@ -384,68 +384,68 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">У генеративному ШІ заземлення (AI Grounding) прив'язує відповідь моделі до релевантної та верифікованої інформації, як-от отриманих документів чи записів бази даних. Це дозволяє продукту формувати відповіді на основі перевірених фактів, а не покладатися виключно на закономірності, засвоєні моделлю під час навчання.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-grounding-work">
-<h2 id="section-how-does-grounding-work" class="glossary-term-section__title">How does grounding work?</h2>
-<p class="glossary-term-section__text">An application makes information available to the model and asks it to use that information when responding. Sources might include a policy document, a search result, or the result of an authorized tool call.</p>
-<p class="glossary-term-section__text">A useful product also keeps enough source context to check the answer. This can include the document version, record identifier, relevant passage, and retrieval time.</p>
-<p class="glossary-term-section__text">Grounding can reduce unsupported output, but it does not guarantee that the evidence is correct, current, relevant, or accurately represented.</p>
+    <p class="glossary-term-section__text">У сфері генеративного штучного інтелекту заземлення (grounding) прив'язує відповідь моделі до релевантної інформації, яку можна перевірити — наприклад, до знайдених документів або записів у системі. Це допомагає продукту формувати відповіді на основі чітких фактичних доказів, а не покладатися виключно на закономірності, засвоєні моделлю під час навчання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює заземлення?</h2>
+<p class="glossary-term-section__text">Застосунок надає моделі доступ до інформації та спрямовує її використовувати ці дані під час формування відповіді. Джерелами можуть бути нормативний документ чи політика, результати пошуку або дані, отримані через авторизований виклик інструмента (tool call).</p>
+<p class="glossary-term-section__text">Якісний продукт також зберігає достатній контекст першоджерела, щоб відповідь можна було верифікувати. Це може включати версію документа, ідентифікатор запису, точний фрагмент тексту та час отримання даних.</p>
+<p class="glossary-term-section__text">Заземлення здатне суттєво зменшити кількість безпідставних тверджень, проте воно не гарантує, що самі вихідні дані є правильними, актуальними, релевантними чи безпомилково інтерпретованими моделлю.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-grounding-vs-rag-vs-citations">
-<h2 id="section-grounding-vs-rag-vs-citations" class="glossary-term-section__title">Grounding vs. RAG vs. citations</h2>
+<section class="glossary-term-section" aria-labelledby="section-vs-rag-vs">
+<h2 id="section-vs-rag-vs" class="glossary-term-section__title">Заземлення vs RAG vs цитування</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Concept</th>
-<th>What it describes</th>
+<th>Концепція</th>
+<th>Що вона описує</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Grounding</td>
-<td>Connecting an answer to supporting information</td>
+<td>Заземлення (Grounding)</td>
+<td>Прив'язування відповіді до підтверджувальної інформації</td>
 </tr>
 <tr>
-<td>Retrieval-augmented generation (RAG)</td>
-<td>Retrieving information and using it during generation</td>
+<td>Генерація з доповненим пошуком (RAG)</td>
+<td>Видобування інформації та її використання безпосередньо під час генерації</td>
 </tr>
 <tr>
-<td>Citation</td>
-<td>A reference shown with a claim or answer</td>
+<td>Цитування (Citation)</td>
+<td>Посилання, що відображається поруч із твердженням чи відповіддю</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">RAG is one way to provide grounding information. A citation is an interface element and a reference; its presence alone does not prove that the source supports the statement.</p>
-<p class="glossary-term-section__text">Verify whether a cited passage establishes the specific claim. A valid link to a general policy is insufficient if the answer invents an exception that the policy never mentions.</p>
+<p class="glossary-term-section__text">RAG — це один із технічних способів надання інформації для заземлення. Цитування — це елемент користувацького інтерфейсу та формальне посилання; сама його наявність ще не є доказом того, що першоджерело дійсно підтверджує згенероване твердження.</p>
+<p class="glossary-term-section__text">Завжди перевіряйте, чи дійсно процитований фрагмент обґрунтовує конкретну тезу. Валідне посилання на загальні правила авіакомпанії є марним, якщо у відповіді вигадано виняток, про який у цих правилах узагалі не йдеться.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-explaining-a-baggage-allowance">
-<h2 id="section-example-explaining-a-baggage-allowance" class="glossary-term-section__title">Example: explaining a baggage allowance</h2>
-<p class="glossary-term-section__text">A travel assistant retrieves the baggage conditions associated with a selected fare. It summarizes the relevant allowance and provides a route to the underlying conditions.</p>
-<p class="glossary-term-section__text">If the record is unavailable or conflicting, the interface shows that limitation and offers a way to check. It should not turn a generic airline policy into a confident claim about this particular fare.</p>
-<p class="glossary-term-section__text">The example depends on the correct fare, journey, and current record. A well-written answer based on the wrong record is still unsuitable.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: пояснення норми перевезення багажу</h2>
+<p class="glossary-term-section__text">Туристичний ШІ-асистент отримує правила перевезення багажу, прив'язані до обраного тарифу. Він формує коротке резюме дозволеної норми та надає прямий перехід до повного тексту умов тарифу.</p>
+<p class="glossary-term-section__text">Якщо запис недоступний або містить суперечливі дані, інтерфейс відкрито демонструє це обмеження та пропонує спосіб перевірки. Система не повинна перетворювати загальні правила авіалінії на категоричне й упевнене твердження щодо умов саме цього конкретного квитка.</p>
+<p class="glossary-term-section__text">Цей сценарій критично залежить від точності тарифу, маршруту та актуальності запису в системі. Бездоганно сформульована відповідь, побудована на хибному чи застарілому записі, усе одно є неприйнятною.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-designers-make-visible">
-<h2 id="section-what-should-designers-make-visible" class="glossary-term-section__title">What should designers make visible?</h2>
-<p class="glossary-term-section__text">Show the source detail needed for the decision: which record or document supports the answer, how current it is when freshness matters, and which parts remain uncertain.</p>
-<p class="glossary-term-section__text">Keep retrieved facts distinct from generated suggestions. Let people inspect evidence without losing their task, and provide a correction or escalation route.</p>
-<p class="glossary-term-section__text">Evaluate grounding with representative questions, missing sources, outdated documents, and conflicting records. Measure whether the answer is supported and whether the user can make the intended decision.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що дизайнери мають робити помітним в інтерфейсі?</h2>
+<p class="glossary-term-section__text">Відображайте деталі першоджерела, необхідні користувачеві для прийняття рішення: який саме запис чи документ обґрунтовує відповідь, наскільки він є актуальним (якщо часовий фактор має значення), і які саме частини інформації залишаються невизначеними.</p>
+<p class="glossary-term-section__text">Чітко відокремлюйте видобуті факти від згенерованих припущень. Надайте користувачам можливість ознайомитися з доказовою базою без переривання їхнього основного сценарію, а також передбачте маршрути виправлення даних чи ескалації проблеми.</p>
+<p class="glossary-term-section__text">Тестуйте механізми заземлення за допомогою репрезентативних запитань, сценаріїв із відсутніми джерелами, застарілої документації та суперечливих записів. Оцінюйте, чи має відповідь належне фактологічне підтвердження та чи може користувач упевнено прийняти заплановане рішення.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Retrieval-Augmented Generation</a></li>
-<li><a href="/ua/glossary/ai-hallucination.html">AI Hallucination</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/ai-transparency.html">AI Transparency</a></li>
+<li><a href="/ua/glossary/retrieval-augmented-generation-rag.html">Генерація з доповненим пошуком (RAG)</a></li>
+<li><a href="/ua/glossary/ai-hallucination.html">Галюцинації ШІ (AI Hallucination)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/ai-transparency.html">Прозорість ШІ (AI Transparency)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview" target="_blank" rel="noopener noreferrer">Grounding overview, Google Cloud</a></li>
-<li><a href="https://genai.owasp.org/llmrisk/llm092025-misinformation/" target="_blank" rel="noopener noreferrer">Misinformation, OWASP Gen AI Security Project</a></li>
+<li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview" target="_blank" rel="noopener noreferrer">Огляд заземлення (Grounding overview), Google Cloud</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm092025-misinformation/" target="_blank" rel="noopener noreferrer">Дезінформація (Misinformation), OWASP Gen AI Security Project</a></li>
 </ul>
 </section>
 

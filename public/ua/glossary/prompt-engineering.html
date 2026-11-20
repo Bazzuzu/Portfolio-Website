@@ -384,39 +384,39 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Промпт-інженерія (prompt engineering) — це дисципліна проектування, тестування та оптимізації інструкцій, контексту, прикладів і вимог до формату виводу, що передаються моделі ШІ. Вона поєднує точне формулювання запитів із системним аналізом та оцінюванням результуючої поведінки моделі.</p>
-<p class="glossary-term-section__text">A prompt can include a user message, application-level instructions, supplied reference material, and examples. Its effectiveness depends on the model, the task, and the information available.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-summarizing-a-support-ticket">
-<h2 id="section-example-summarizing-a-support-ticket" class="glossary-term-section__title">Example: summarizing a support ticket</h2>
-<p class="glossary-term-section__text">A vague request such as “Summarize this” leaves important choices unspecified. A more useful task description could be:</p>
-<p class="glossary-term-section__text">> Summarize the supplied support ticket for the next agent. Include the reported problem, actions already attempted, current status, and unresolved questions. Use only facts present in the ticket. Label missing information as unknown. Do not infer that an issue is resolved from a proposed fix.</p>
-<p class="glossary-term-section__text">Provide the actual ticket content separately and make the boundary between instructions and reference material clear.</p>
+    <p class="glossary-term-section__text">Промпт-інженерія (Prompt Engineering) — це практика проєктування, оптимізації та тестування інструкцій, контексту, прикладів і вимог до формату виводу, які передаються моделі штучного інтелекту для підвищення якості виконання завдань. Вона поєднує точне формулювання запиту з системним оцінюванням поведінки моделі.</p>
+<p class="glossary-term-section__text">Промпт може містити повідомлення користувача, системні директиви рівня застосунку, довідкові матеріали та демонстраційні приклади (few-shot). Його ефективність безпосередньо залежить від обраної моделі, специфіки задачі та повноти наданої інформації.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: створення резюме тікета підтримки</h2>
+<p class="glossary-term-section__text">Розмитий запит на кшталт «Зроби саммарі цього тікета» залишає ключові вимоги невизначеними. Набагато ефективнішим є структурований опис задачі:</p>
+<p class="glossary-term-section__text">> Склади стисле резюме наданого тікета служби підтримки для наступного оператора. Вкажи суть проблеми, вжиті спроби вирішення, поточний статус та відкриті питання. Використовуй виключно факти, зафіксовані в тікеті. Якщо інформація відсутня, позначай її як невідому. Не роби висновків про вирішення проблеми лише на основі запропонованого плану дій.</p>
+<p class="glossary-term-section__text">Передавайте сам текст тікета окремим блоком і забезпечте чітке розмежування між інструкціями та довідковими даними.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-to-improve-a-prompt">
-<h2 id="section-how-to-improve-a-prompt" class="glossary-term-section__title">How to improve a prompt</h2>
-<p class="glossary-term-section__text">Start with explicit success criteria. Test representative inputs, inspect failures, and change the prompt to address a specific problem. Examples can clarify an ambiguous format or decision rule.</p>
-<p class="glossary-term-section__text">For the ticket summary, check factual accuracy, omitted actions, invented resolutions, and whether another agent can understand what remains to do.</p>
-<p class="glossary-term-section__text">Keep a small set of test cases, including incomplete and contradictory tickets. Version the prompt and compare results when the model or workflow changes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як покращувати промпт</h2>
+<p class="glossary-term-section__text">Починайте з явних критеріїв успіху. Протестуйте репрезентативні вхідні дані, проаналізуйте збої та точково змініть промпт для усунення конкретних проблем. Демонстраційні приклади допомагають усунути двозначність у форматах або логіці прийняття рішень.</p>
+<p class="glossary-term-section__text">Для саммарі тікетів перевіряйте фактологічну точність, пропущені дії, вигадані статуси вирішення та те, чи зможе інший агент зрозуміти, які кроки залишилося виконати.</p>
+<p class="glossary-term-section__text">Підтримуйте базовий набір тестових сценаріїв (eval set), що включає неповні та суперечливі тікети. Обов'язково версіонуйте промпти та зіставляйте результати при зміні версій базової моделі чи логіки пайплайну.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-where-the-prompt-s-role-ends">
-<h2 id="section-where-the-prompt-s-role-ends" class="glossary-term-section__title">Where the prompt's role ends</h2>
-<p class="glossary-term-section__text">Prompt instructions cannot enforce account permissions or replace missing source data. Retrieval, application checks, and tool design may be needed.</p>
-<p class="glossary-term-section__text">Context engineering covers the wider process of assembling and managing what reaches the model. Prompt engineering is one part of that work.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Де закінчується роль промпту</h2>
+<p class="glossary-term-section__text">Інструкції промпту не здатні забезпечити розмежування прав доступу на рівні облікових записів або компенсувати відсутність первинних даних. Для цього необхідні механізми пошуку інформації, перевірки на рівні бекенду застосунку та надійна архітектура виклику інструментів.</p>
+<p class="glossary-term-section__text">Контекстна інженерія охоплює ширший процес формування та контролю всієї інформації, що надходить до моделі. Промпт-інженерія є лише однією з важливих складових цієї роботи.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
 <li><a href="/ua/glossary/system-prompts-guardrails.html">System Prompts & Guardrails</a></li>
 <li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
-<li><a href="/ua/glossary/vibe-coding.html">Vibe Coding</a></li>
+<li><a href="/ua/glossary/vibe-coding.html">Вайб-кодинг (Vibe Coding)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer">Anthropic: Prompt Engineering Overview</a></li>
-<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener noreferrer">Anthropic: Prompting Best Practices</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer">Anthropic: Огляд промпт-інженерії</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noopener noreferrer">Anthropic: Найкращі практики створення промптів</a></li>
 </ul>
 </section>
 

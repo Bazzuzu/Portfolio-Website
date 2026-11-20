@@ -384,45 +384,45 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Ін'єкція промпта (Prompt Injection) — це атака, за якої сторонні інструкції впроваджуються в контент, що обробляється системою ШІ, з метою перехоплення контролю та відхилення її поведінки від запланованого завдання. Інструкції можуть надходити як через пряме введення користувачем, так і з зовнішніх джерел (документів чи вебсторінок).</p>
-<section class="glossary-term-section" aria-labelledby="section-direct-vs-indirect-prompt-injection">
-<h2 id="section-direct-vs-indirect-prompt-injection" class="glossary-term-section__title">Direct vs. indirect prompt injection</h2>
-<p class="glossary-term-section__text">A direct injection is supplied through an input to the AI system. An indirect injection arrives through material the system reads while performing another task.</p>
-<p class="glossary-term-section__text">For example, an agent may need to summarize an uploaded document. An instruction embedded in that document can try to make the agent perform an unrelated action. The document is task data; it should not receive the authority of the person who delegated the task.</p>
-<p class="glossary-term-section__text">Prompt injection differs from a hallucination. The central issue is influence over instructions and actions, rather than unsupported generated facts.</p>
+    <p class="glossary-term-section__text">Промпт-ін'єкція (prompt injection) — це тип кібератаки, під час якої сторонні інструкції впроваджуються в контент, що обробляється системою штучного інтелекту, з метою перехоплення контролю над її поведінкою та виконання дій за межами призначеного завдання. Такі інструкції можуть надходити як через безпосереднє введення користувачем, так і з зовнішніх джерел — наприклад, із завантажених документів чи вебсторінок.</p>
+<section class="glossary-term-section" aria-labelledby="section-vs">
+<h2 id="section-vs" class="glossary-term-section__title">Пряма vs. непряма промпт-ін'єкція</h2>
+<p class="glossary-term-section__text">Пряма ін'єкція подається безпосередньо через інтерфейс введення даних у систему ШІ. Непряма ін'єкція (indirect prompt injection) потрапляє в систему через матеріали, які вона зчитує під час виконання іншого завдання.</p>
+<p class="glossary-term-section__text">Наприклад, автономний агент має підготувати резюме завантаженого документа. Впроваджена в цей документ інструкція може спробувати змусити агента виконати сторонню дію. Документ є лише робочими даними завдання; він у жодному разі не повинен отримувати повноважень людини, яка делегувала це завдання.</p>
+<p class="glossary-term-section__text">Промпт-ін'єкція принципово відрізняється від галюцинації. Її головна проблема полягає у впливі на системні інструкції та дії, а не в генерації голослівних фактів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-supplier-document-in-an-operations-tool">
-<h2 id="section-example-a-supplier-document-in-an-operations-tool" class="glossary-term-section__title">Example: a supplier document in an operations tool</h2>
-<p class="glossary-term-section__text">Suppose an assistant reads a supplier's attachment to extract booking details. The attachment also contains instructions to send internal records elsewhere.</p>
-<p class="glossary-term-section__text">A well-designed workflow does not let a document grant new permissions. The application limits which records the assistant can access and which destinations it can use. If a consequential action needs review, the interface shows its actual target, content, and effect.</p>
-<p class="glossary-term-section__text">A confirmation labeled only “Continue?” gives the reviewer little basis for detecting an unintended action.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: документ постачальника в операційній системі</h2>
+<p class="glossary-term-section__text">Припустимо, що асистент зчитує вкладений файл постачальника для вилучення деталей бронювання. Файл містить шкідливу інструкцію: надіслати внутрішні корпоративні записи на зовнішню адресу.</p>
+<p class="glossary-term-section__text">Грамотно спроєктований робочий процес ніколи не дозволяє сторонньому документу розширювати права доступу. Застосунок суворо обмежує записи, до яких асистент має доступ, та дозволені точки призначення. Якщо операція має вагомі наслідки та потребує перевірки, інтерфейс відображає її фактичну ціль, точний зміст та очікуваний ефект.</p>
+<p class="glossary-term-section__text">Підтвердження з розмитим підписом на кшталт «Продовжити?» практично позбавляє рецензента змоги вчасно виявити непередбачену дію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-the-product-design">
-<h2 id="section-what-belongs-in-the-product-design" class="glossary-term-section__title">What belongs in the product design?</h2>
-<p class="glossary-term-section__text">Make permissions and action boundaries understandable. Separate reading a source, preparing a change, and committing that change when their consequences differ.</p>
-<p class="glossary-term-section__text">For consequential operations, provide a review that lets the person inspect the proposed action. Show what completed, what failed, and whether anything may already have changed. Recovery needs to account for partial execution.</p>
-<p class="glossary-term-section__text">The appropriate controls depend on the operation. Requiring confirmation for every harmless step can obscure the decisions that actually need attention.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно передбачити в дизайні продукту?</h2>
+<p class="glossary-term-section__text">Робіть межі дозволів та доступних дій зрозумілими. Відокремлюйте зчитування джерела, підготовку зміни та остаточне застосування цієї зміни, якщо їхні наслідки відрізняються за рівнем ризику.</p>
+<p class="glossary-term-section__text">Для операцій із відчутними наслідками надавайте механізм перегляду, що дозволяє людині детально проінспектувати запропоновану дію. Показуйте, що саме було завершено, які дії зазнали невдачі, і чи не зазнали зміни будь-які системні дані. Сценарії відновлення мають обов'язково враховувати стан часткового виконання (partial execution).</p>
+<p class="glossary-term-section__text">Відповідні елементи контролю залежать від характеру самої операції. Вимога підтверджувати кожен безпечний крок може розмити фокус уваги на рішеннях, які дійсно вимагають зосередженості.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-are-system-prompts-insufficient">
-<h2 id="section-why-are-system-prompts-insufficient" class="glossary-term-section__title">Why are system prompts insufficient?</h2>
-<p class="glossary-term-section__text">Instructions asking a model to ignore malicious content can be one layer, but they are not a complete security boundary. Access checks, authorization, constrained tools, and output handling must be enforced by the application.</p>
-<p class="glossary-term-section__text">OWASP recommends measures including least-privilege access, separation of external content, and human review for high-risk actions. Test the complete workflow against adversarial inputs as well as ordinary tasks.</p>
-<p class="glossary-term-section__text">Treat a strong-looking refusal or successful demonstration as one observation, not evidence that all prompt injection has been prevented.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому системних промптів недостатньо?</h2>
+<p class="glossary-term-section__text">Інструкції з вимогою до моделі «ігнорувати шкідливий вміст» можуть бути одним із допоміжних рівнів захисту, проте вони не утворюють повноцінного контуру безпеки. Перевірка прав доступу, авторизація, обмеження виклику інструментів та належна обробка вихідних даних мають примусово контролюватися на рівні самого застосунку.</p>
+<p class="glossary-term-section__text">OWASP рекомендує комплексну стратегію захисту, що включає доступ за принципом найменших привілеїв (least privilege), суворе розмежування зовнішнього контенту та перевірку високоризикових дій людиною. Тестуйте весь наскрізний робочий процес як на зловмисних атаках, так і на типових повсякденних завданнях.</p>
+<p class="glossary-term-section__text">Сприймайте навіть переконливу відмову моделі виконати шкідливу команду або успішну тестову демонстрацію лише як одне окреме спостереження, а не як остаточне свідчення повного усунення загрози промпт-ін'єкцій.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/system-prompts-guardrails.html">System Prompts and Guardrails</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling</a></li>
-<li><a href="/ua/glossary/agentic-ux.html">Agentic UX</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop</a></li>
+<li><a href="/ua/glossary/system-prompts-guardrails.html">Системні промпти та захисні бар'єри</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів та функцій (Tool Calling)</a></li>
+<li><a href="/ua/glossary/agentic-ux.html">Агентний UX (Agentic UX)</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">Prompt Injection, OWASP Gen AI Security Project</a></li>
-<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection" target="_blank" rel="noopener noreferrer">Prompt Shields, Microsoft Learn</a></li>
+<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">Промпт-ін'єкції, Проєкт безпеки генеративного ШІ OWASP</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection" target="_blank" rel="noopener noreferrer">Захисні екрани промптів (Prompt Shields), Microsoft Learn</a></li>
 </ul>
 </section>
 

@@ -385,60 +385,60 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Мультимодальний штучний інтелект (Multimodal AI) обробляє та об'єднує інформацію з кількох типів даних (модальностей), таких як текст, зображення, аудіо чи відео. Мультимодальна система може відповідати на текстове запитання щодо наданого зображення або інтерпретувати голосові команди в поєднанні з інформацією на екрані.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-can-multimodal-ai-do">
-<h2 id="section-what-can-multimodal-ai-do" class="glossary-term-section__title">What can multimodal AI do?</h2>
+    <p class="glossary-term-section__text">Мультимодальний штучний інтелект (Multimodal AI) обробляє та поєднує інформацію з кількох типів даних (модальностей), таких як текст, зображення, аудіо чи відео. Мультимодальна система може відповідати на письмове запитання щодо фотографії або інтерпретувати голосовий запит у поєднанні з інформацією, що відображається на екрані.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що може робити мультимодальний ШІ?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Input</th>
-<th>Example output</th>
+<th>Вхідні дані</th>
+<th>Приклад результату</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>A receipt image and a written instruction</td>
-<td>A draft expense entry with the merchant, date, currency, and amount.</td>
+<td>Зображення чека та письмова інструкція</td>
+<td>Чернетка запису про витрати із зазначенням продавця, дати, валюти та суми.</td>
 </tr>
 <tr>
-<td>An audio recording and a request for a summary</td>
-<td>A written account of the discussion and proposed action items.</td>
+<td>Аудіозапис і запит на саммаризацію</td>
+<td>Письмовий звіт про перебіг обговорення та перелік запропонованих подальших дій (action items).</td>
 </tr>
 <tr>
-<td>A screenshot and a written question</td>
-<td>An explanation of a visible interface state.</td>
+<td>Знімок екрана та письмове запитання</td>
+<td>Пояснення видимого стану інтерфейсу.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The supported combinations depend on the model and the application. Check which inputs and outputs the chosen system accepts and evaluate the task you intend to support.</p>
+<p class="glossary-term-section__text">Підтримувані комбінації залежать від моделі та архітектури конкретного застосунку. Перевіряйте, які саме формати вхідних і вихідних даних підтримує обрана система, і ретельно оцінюйте завдання, які ви плануєте автоматизувати.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-does-multimodal-ai-relate-to-generative-ai">
-<h2 id="section-how-does-multimodal-ai-relate-to-generative-ai" class="glossary-term-section__title">How does multimodal AI relate to generative AI?</h2>
-<p class="glossary-term-section__text">Multimodal describes the types of information a system handles. Generative AI creates content. A system that reads a receipt image and generates a written explanation uses both capabilities. Other multimodal applications may classify content or retrieve matching items.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як мультимодальний ШІ співвідноситься з генеративним ШІ?</h2>
+<p class="glossary-term-section__text">Поняття «мультимодальний» описує різноманітність типів інформації, з якими працює система. Генеративний ШІ (Generative AI) створює новий контент. Система, яка розпізнає зображення чека та формує текстове пояснення, використовує обидві можливості одночасно. Інші мультимодальні системи можуть виконувати класифікацію контенту або здійснювати пошук відповідних об'єктів без безпосередньої генерації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-a-receipt-in-an-expense-app">
-<h2 id="section-example-reviewing-a-receipt-in-an-expense-app" class="glossary-term-section__title">Example: Reviewing a receipt in an expense app</h2>
-<p class="glossary-term-section__text">An employee uploads a receipt and asks the app to prepare an expense entry. The system sends the image and instructions to a model that supports image input. It presents the extracted fields beside the source image so the employee can correct them before submitting.</p>
-<p class="glossary-term-section__text">Test the flow with blurred images, different layouts, and receipts showing several totals or currencies. Check whether the app identifies missing or ambiguous information and lets the employee resolve it. Measure field correctness and successful submission, including whether the saved amount and currency match the intended expense.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перевірка чека в застосунку для обліку витрат</h2>
+<p class="glossary-term-section__text">Співробітник завантажує фотографію чека і просить застосунок підготувати запис про витрати. Система передає зображення разом з інструкціями в модель, що підтримує аналіз зображень. Вона відображає вилучені поля поруч із вихідним зображенням чека, щоб користувач міг перевірити та скоригувати їх перед надсиланням.</p>
+<p class="glossary-term-section__text">Протестуйте цей сценарій із розмитими фотографіями, різними варіантами верстки документів та чеками, що містять кілька проміжних підсумків або різні валюти. Переконайтеся, що застосунок коректно фіксує відсутню чи неоднозначну інформацію та надає людині зручний інтерфейс для її уточнення. Оцінюйте точність розпізнавання полів і частку успішних відправок, зокрема відповідність збереженої суми та валюти фактичним витратам.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-<li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
-<li><a href="/ua/glossary/semantic-zoom.html">Semantic Zoom</a></li>
-<li><a href="/ua/glossary/ai-native-design.html">AI-native Design</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/generative-ui.html">Генеративний користувацький інтерфейс (Generative UI)</a></li>
+<li><a href="/ua/glossary/semantic-zoom.html">Семантичне масштабування (Semantic Zoom)</a></li>
+<li><a href="/ua/glossary/ai-native-design.html">ШІ-нативний дизайн (AI-Native Design)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://cloud.google.com/use-cases/multimodal-ai" target="_blank" rel="noopener noreferrer">Multimodal AI, Google Cloud</a></li>
-<li><a href="https://ai.google.dev/gemini-api/docs/image-understanding" target="_blank" rel="noopener noreferrer">Image Understanding, Google Gemini API Documentation</a></li>
-<li><a href="https://ai.google.dev/gemini-api/docs/audio" target="_blank" rel="noopener noreferrer">Audio Understanding, Google Gemini API Documentation</a></li>
+<li><a href="https://cloud.google.com/use-cases/multimodal-ai" target="_blank" rel="noopener noreferrer">Мультимодальний ШІ, Google Cloud</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/image-understanding" target="_blank" rel="noopener noreferrer">Аналіз зображень, документація Google Gemini API</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/audio" target="_blank" rel="noopener noreferrer">Розпізнавання аудіо, документація Google Gemini API</a></li>
 </ul>
 </section>
 

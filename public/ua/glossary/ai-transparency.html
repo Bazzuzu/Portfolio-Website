@@ -384,75 +384,75 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Прозорість ШІ (AI Transparency) передбачає надання релевантної інформації про роботу системи штучного інтелекту у зрозумілій для користувачів формі. В інтерфейсі продукту це включає пояснення дій ШІ, використовуваних даних, системних обмежень та можливостей контролю з боку користувача.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-an-ai-interface-make-clear">
-<h2 id="section-what-should-an-ai-interface-make-clear" class="glossary-term-section__title">What should an AI interface make clear?</h2>
-<p class="glossary-term-section__text">Disclose information where it helps a person understand or influence the task.</p>
+    <p class="glossary-term-section__text">Прозорість ШІ (AI transparency) означає забезпечення доступності та зрозумілості релевантної інформації про систему штучного інтелекту для людей, на яких вона впливає. В інтерфейсі продукту це передбачає чітке пояснення того, що саме робить ШІ, яку інформацію він використовує, які має обмеження та які важелі контролю є в користувача.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме має роз'яснювати інтерфейс ШІ?</h2>
+<p class="glossary-term-section__text">Розкривайте інформацію в тих місцях, де вона допомагає людині зрозуміти перебіг виконання завдання або вплинути на нього.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>User question</th>
-<th>Useful information</th>
+<th>Запитання користувача</th>
+<th>Корисна інформація</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>What is happening?</td>
-<td>Whether AI is drafting, recommending, or taking action</td>
+<td>Що зараз відбувається?</td>
+<td>Чи ШІ створює чернетку, надає рекомендацію або виконує автономну дію</td>
 </tr>
 <tr>
-<td>What is this based on?</td>
-<td>Relevant records, documents, or other inputs</td>
+<td>На чому це базується?</td>
+<td>Релевантні записи, документи чи інші вхідні дані</td>
 </tr>
 <tr>
-<td>What might be wrong?</td>
-<td>Task-specific limitations and missing information</td>
+<td>Що може бути помилковим?</td>
+<td>Специфічні обмеження для конкретного завдання та відсутня інформація</td>
 </tr>
 <tr>
-<td>Can I change it?</td>
-<td>Editing, correction, cancellation, and review options</td>
+<td>Чи можу я це змінити?</td>
+<td>Можливості редагування, виправлення, скасування та рецензування</td>
 </tr>
 <tr>
-<td>What has happened already?</td>
-<td>Completed actions, failures, and uncertain outcomes</td>
+<td>Що вже відбулося?</td>
+<td>Завершені дії, системні збої та результати з невизначеним статусом</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">An “AI-powered” badge identifies a technology. It does not answer these questions by itself.</p>
+<p class="glossary-term-section__text">Бейдж «Працює на базі ШІ» лише вказує на технологію. Сам по собі він не дає відповідей на ці запитання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-drafting-a-support-reply">
-<h2 id="section-example-drafting-a-support-reply" class="glossary-term-section__title">Example: drafting a support reply</h2>
-<p class="glossary-term-section__text">Suppose an assistant drafts a reply using a customer message and a booking record. The interface identifies it as a draft, shows the relevant source details, and makes clear that it has not been sent.</p>
-<p class="glossary-term-section__text">The reviewer can edit the text and check the conditions behind any proposed statement. If the assistant cannot retrieve the booking, the interface exposes that gap instead of presenting a complete-looking answer based on assumed details.</p>
-<p class="glossary-term-section__text">After sending, the product reports the actual result. A draft and a successfully delivered message are different states.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: формування чернетки відповіді для служби підтримки</h2>
+<p class="glossary-term-section__text">Припустимо, що асистент готує чернетку відповіді, спираючись на повідомлення клієнта та дані бронювання. Інтерфейс чітко ідентифікує текст як чернетку, демонструє релевантні першоджерела та зазначає, що повідомлення ще не було надіслано.</p>
+<p class="glossary-term-section__text">Рецензент може відредагувати текст і перевірити умови, що лежать в основі будь-якого запропонованого твердження. Якщо асистент не може отримати дані про бронювання, інтерфейс явно підсвічує цю прогалину замість того, щоб подавати оманливо завершену відповідь, побудовану на вигаданих припущеннях.</p>
+<p class="glossary-term-section__text">Після надсилання продукт фіксує та відображає фактичний результат. Чернетка та успішно доставлене повідомлення — це принципово різні стани.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-transparency-vs-explainability">
-<h2 id="section-transparency-vs-explainability" class="glossary-term-section__title">Transparency vs. explainability</h2>
-<p class="glossary-term-section__text">Transparency covers the system's role, inputs, boundaries, and operation. <a href="/ua/glossary/explainable-ai.html">Explainable AI</a> focuses on making behavior or results understandable.</p>
-<p class="glossary-term-section__text">A product may clearly disclose that a model generated an answer without being able to explain the result faithfully. It should represent both facts accurately.</p>
-<p class="glossary-term-section__text">Transparency also does not require showing every technical detail. Select information for the audience and decision, with access to further detail when useful.</p>
+<section class="glossary-term-section" aria-labelledby="section-vs">
+<h2 id="section-vs" class="glossary-term-section__title">Прозорість vs. пояснюваність</h2>
+<p class="glossary-term-section__text">Прозорість охоплює роль системи, вхідні дані, її межі та особливості функціонування. <a href="/ua/glossary/explainable-ai.html">Пояснюваний штучний інтелект (XAI)</a> фокусується на тому, щоб зробити зрозумілою поведінку системи або отримані нею результати.</p>
+<p class="glossary-term-section__text">Продукт може чітко розкривати, що відповідь була згенерована моделлю, не маючи водночас змоги достовірно пояснити хід формування цього результату. Інтерфейс повинен коректно й чесно відображати обидва факти.</p>
+<p class="glossary-term-section__text">Прозорість також не вимагає демонстрації кожної технічної деталі. Дозуйте та адаптуйте інформацію під цільову аудиторію та рішення, яке вона приймає, залишаючи можливість заглибитися в деталі за потреби.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-transparency">
-<h2 id="section-how-do-you-test-transparency" class="glossary-term-section__title">How do you test transparency?</h2>
-<p class="glossary-term-section__text">Ask people to explain what the system has done, what it can do next, and which parts they can control. Test these questions during real tasks, including missing information and failures.</p>
-<p class="glossary-term-section__text">Watch for misleading labels and default states. A prominent “Verified” label needs a defined verification process and scope. Clearer wording is preferable to a reassuring claim the product cannot substantiate.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як тестувати прозорість?</h2>
+<p class="glossary-term-section__text">Попросіть користувачів пояснити, що система щойно виконала, які дії вона може зробити далі, і які саме компоненти процесу вони можуть контролювати. Перевіряйте ці питання під час виконання реальних завдань, зокрема в сценаріях із браком інформації та виникненням помилок.</p>
+<p class="glossary-term-section__text">Остерігайтеся оманливих позначок і станів за замовчуванням. Помітна плашка «Перевірено» вимагає чітко визначеного процесу верифікації та фіксованих меж перевірки. Краще використати точніші та стриманіші формулювання, ніж давати заспокійливі обіцянки, які продукт не здатен гарантувати.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/explainable-ai.html">Explainable AI</a></li>
-<li><a href="/ua/glossary/trust-calibration-ai.html">Trust Calibration in AI</a></li>
-<li><a href="/ua/glossary/agentic-ux.html">Agentic UX</a></li>
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
+<li><a href="/ua/glossary/explainable-ai.html">Пояснюваний штучний інтелект (XAI)</a></li>
+<li><a href="/ua/glossary/trust-calibration-ai.html">Калібрування довіри до ШІ (Trust Calibration)</a></li>
+<li><a href="/ua/glossary/agentic-ux.html">Агентний UX (Agentic UX)</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://pair.withgoogle.com/chapter/mental-models/" target="_blank" rel="noopener noreferrer">Mental Models, Google PAIR</a></li>
-<li><a href="https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/" target="_blank" rel="noopener noreferrer">Guidelines for Human-AI Interaction, Microsoft HAX</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/mental-models/" target="_blank" rel="noopener noreferrer">Ментальні моделі, Google PAIR</a></li>
+<li><a href="https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/" target="_blank" rel="noopener noreferrer">Настанови щодо взаємодії людини та ШІ, Microsoft HAX</a></li>
 </ul>
 </section>
 

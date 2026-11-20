@@ -384,48 +384,46 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Каркас агента (agent harness) — це середовище виконання та опорна інфраструктура, що забезпечують функціонування моделі ШІ як автономного агента. Він керує оркестрацією викликів моделі, виконанням інструментів, відстеженням стану завдань і взаємодією із зовнішнім середовищем.</p>
-<p class="glossary-term-section__text">The exact boundary varies by implementation. In Anthropic's Managed Agents architecture, the harness runs the loop that calls the model and routes tool calls, while sessions and sandboxes are separate abstractions.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-it-can-include">
-<h2 id="section-what-it-can-include" class="glossary-term-section__title">What it can include</h2>
-<p class="glossary-term-section__text">Depending on the application, a harness may provide:</p>
+    <p class="glossary-term-section__text">Каркас агента (agent harness) — це середовище виконання та опорна інфраструктура, що забезпечують функціонування моделі ШІ як агента. Він керує взаємодією між викликами моделі, інструментами, станом завдання та середовищем виконання.</p>
+<p class="glossary-term-section__text">Точні межі варіюються залежно від архітектури. В інфраструктурі Managed Agents від Anthropic каркас забезпечує виконання циклу, який опитує модель і маршрутизує виклики інструментів, тоді як сесії та ізольовані середовища (sandboxes) виступають окремими абстракціями.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що може містити каркас агента</h2>
+<p class="glossary-term-section__text">Залежно від застосунку, каркас може забезпечувати:</p>
 <ul class="glossary-term-ul">
-<li>Tool definitions, argument checks, and execution.</li>
-<li>Context assembly and state persistence.</li>
-<li>Access controls and approval checkpoints.</li>
-<li>Time limits, budgets, and stopping rules.</li>
-<li>Logs, error handling, and recovery behavior.</li>
+<li>Оголошення інструментів, валідацію аргументів та їхнє виконання.</li>
+<li>Збирання контексту та збереження стану (state persistence).</li>
+<li>Контроль доступу та контрольні точки схвалення (approval checkpoints).</li>
+<li>Часові ліміти, бюджети ресурсів і правила зупинки.</li>
+<li>Журналювання, обробку помилок і поведінку відновлення після збоїв.</li>
 </ul>
-<p class="glossary-term-section__text">Some of these capabilities may live in connected services. A harness needs to coordinate with them rather than assume that a model instruction enforces them.</p>
+<p class="glossary-term-section__text">Частина цих можливостей може бути винесена в підключені сервіси. Каркас повинен координувати взаємодію з ними, а не покладатися на те, що інструкції для моделі забезпечать їх виконання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-support-task-across-sessions">
-<h2 id="section-example-a-support-task-across-sessions" class="glossary-term-section__title">Example: a support task across sessions</h2>
-<p class="glossary-term-section__text">An agent investigates a customer issue and prepares a proposed account correction. Its harness records completed steps, preserves the relevant identifiers, and pauses before a write operation that needs approval.</p>
-<p class="glossary-term-section__text">If the session is interrupted, the resumed run checks the saved state and current account data. It should determine whether an earlier action completed before attempting it again.</p>
-<p class="glossary-term-section__text">For this task, a useful completion record identifies the requested correction, the verified outcome, and any unresolved issue.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: завдання служби підтримки крізь кілька сесій</h2>
+<p class="glossary-term-section__text">Агент розслідує звернення клієнта та формує проєкт коригування даних облікового запису. Його каркас фіксує виконані кроки, зберігає відповідні ідентифікатори та призупиняє роботу перед операцією запису, яка потребує підтвердження.</p>
+<p class="glossary-term-section__text">Якщо сесія переривається, відновлений запуск звіряє збережений стан з актуальними даними облікового запису. Він повинен перевірити, чи завершилася попередня дія, перш ніж намагатися виконати її знову.</p>
+<p class="glossary-term-section__text">Для такого завдання корисний запис про завершення фіксує запитане коригування, перевірений результат і будь-які невирішені проблеми.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-to-evaluate">
-<h2 id="section-what-to-evaluate" class="glossary-term-section__title">What to evaluate</h2>
-<p class="glossary-term-section__text">Test the complete runtime with expired access, failed tools, and interrupted sessions. Evaluate whether it preserves the user's scope and recovers without repeating consequential actions.</p>
-<p class="glossary-term-section__text">The model's capabilities and the harness's behavior both affect the resulting product experience.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно оцінювати</h2>
+<p class="glossary-term-section__text">Протестуйте повне середовище виконання за умов закінчення терміну дії токенів доступу, збоїв інструментів і раптового переривання сесій. Оцініть, чи зберігає система межі повноважень користувача та чи відновлюється вона без повторного виконання дій із незворотними наслідками.</p>
+<p class="glossary-term-section__text">Як можливості самої моделі, так і поведінка каркаса однаково впливають на підсумковий досвід використання продукту.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/ai-agent.html">AI Agent</a></li>
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling (Function Calling)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-model-routing.html">Model Routing</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/ai-agent.html">ШІ-агент (AI Agent)</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів (Tool Calling)</a></li>
+<li><a href="/ua/glossary/ai-model-routing.html">Маршрутизація моделей ШІ (Model Routing)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.anthropic.com/research/managed-agents" target="_blank" rel="noopener noreferrer">Anthropic: Scaling Managed Agents</a></li>
-<li><a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">Anthropic: Effective Harnesses for Long-Running Agents</a></li>
+<li><a href="https://www.anthropic.com/research/managed-agents" target="_blank" rel="noopener noreferrer">Anthropic: Масштабування керованих агентів</a></li>
+<li><a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer">Anthropic: Ефективні каркаси для довготривалих агентів</a></li>
 </ul>
 </section>
 

@@ -384,50 +384,50 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Прототипування за допомогою ШІ (AI Prototyping) використовує інструменти штучного інтелекту для швидкого створення або модифікації репрезентації продуктової ідеї з метою її дослідження та тестування. Результатом може бути статичний макет, інтерактивна симуляція або кодовий прототип.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-an-ai-prototype-help-you-learn">
-<h2 id="section-what-should-an-ai-prototype-help-you-learn" class="glossary-term-section__title">What should an AI prototype help you learn?</h2>
-<p class="glossary-term-section__text">Start with a question, such as whether users can compare options or recover from an invalid entry. Choose the fidelity needed to investigate it.</p>
-<p class="glossary-term-section__text">A visual concept can support discussion about hierarchy. A working filter may be needed to observe how people narrow a large set of records. Neither establishes production readiness.</p>
-<p class="glossary-term-section__text">NN/g's evaluation of AI prototyping tools found that contextual guidance and specific prompts mattered in its tested design scenarios. Treat that as evidence about the evaluated tools and tasks, not a permanent ranking of every product.</p>
+    <p class="glossary-term-section__text">ШІ-прототипування (AI prototyping) полягає у використанні інструментів штучного інтелекту для створення або модифікації репрезентації продуктової ідеї з метою її дослідження та тестування. Результатом може бути статичний макет, інтерактивна симуляція або прототип на основі реального коду.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Про що має допомагати дізнатися ШІ-прототип?</h2>
+<p class="glossary-term-section__text">Починайте з конкретного запитання: наприклад, чи зможуть користувачі порівняти доступні варіанти або відновити роботу після введення некоректних даних. Обирайте рівень деталізації (fidelity), необхідний для перевірки саме цієї гіпотези.</p>
+<p class="glossary-term-section__text">Візуальний концепт допомагає обговорити інформаційну ієрархію. Працюючий фільтр може знадобитися для спостереження за тим, як люди звужують великий масив записів. Проте жоден із цих прототипів сам по собі не підтверджує готовність рішення до впровадження у виробництво (production readiness).</p>
+<p class="glossary-term-section__text">Дослідження інструментів ШІ-прототипування від Nielsen Norman Group (NN/g) показало, що в протестованих сценаріях дизайну вирішальне значення мали контекстні настанови та чітко сформульовані промпти. Розглядайте це як емпіричні дані про конкретні оцінені інструменти й завдання, а не як остаточний універсальний рейтинг усіх продуктів на ринку.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-testing-a-rule-editor">
-<h2 id="section-example-testing-a-rule-editor" class="glossary-term-section__title">Example: testing a rule editor</h2>
-<p class="glossary-term-section__text">Suppose administrators need to define which expenses require approval. A static screen cannot reveal whether they understand how several rules combine.</p>
-<p class="glossary-term-section__text">A designer specifies the rule model, realistic expense examples, validation, and the expected result of conflicting rules. An agent implements a local prototype with editable conditions and a preview of affected expenses.</p>
-<p class="glossary-term-section__text">Participants then try concrete tasks. The team observes whether they can predict the effect of a rule and correct an error. Attractive generated screens are secondary to whether the interaction answers the research question.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: тестування редактора правил</h2>
+<p class="glossary-term-section__text">Припустимо, адміністраторам потрібно налаштувати, які витрати вимагають попереднього погодження керівництва. Статичний макет не дозволяє з'ясувати, чи розуміють користувачі, як поєднуються кілька різних правил.</p>
+<p class="glossary-term-section__text">Дизайнер описує модель правил, реалістичні приклади витрат, логіку валідації та очікувану поведінку у випадку конфлікту правил. ШІ-агент генерує локальний прототип із можливістю редагування умов та інтерактивним переглядом витрат, на які впливають зміни.</p>
+<p class="glossary-term-section__text">Потім учасники тестування виконують практичні завдання. Команда аналізує, чи здатні вони спрогнозувати результат дії правила та виправити допущену помилку. Привабливий вигляд згенерованих екранів є другорядним порівняно з тим, чи дає спроєктована взаємодія відповідь на дослідницьке запитання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-go-into-the-brief">
-<h2 id="section-what-should-go-into-the-brief" class="glossary-term-section__title">What should go into the brief?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має входити до технічного завдання?</h2>
 <ul class="glossary-term-ul">
-<li>The user task and the uncertainty being investigated.</li>
-<li>The relevant objects, states, rules, and sample content.</li>
-<li>Existing components and interaction constraints.</li>
-<li>Loading, empty, error, and recovery behavior relevant to the test.</li>
-<li>What is simulated and what is connected to real systems.</li>
+<li>Користувацьке завдання та невизначеність (гіпотеза), яку досліджує команда.</li>
+<li>Релевантні об'єкти, стани, правила та зразки реалістичного контенту.</li>
+<li>Наявні компоненти системи та обмеження взаємодії.</li>
+<li>Стани завантаження, порожні стани (empty states), сценарії помилок і шляхи відновлення, важливі для тестування.</li>
+<li>Чітке розмежування того, що є симуляцією, а що підключено до реальних систем.</li>
 </ul>
-<p class="glossary-term-section__text">Use representative test data and make simulated outcomes clear to the team. Avoid letting a prototype make consequential changes while it is being explored.</p>
+<p class="glossary-term-section__text">Використовуйте репрезентативні тестові дані та переконайтеся, що команда чітко розуміє, які результати є імітацією. Не допускайте, щоб експериментальний прототип вносив незворотні зміни в робочі системи під час його дослідження.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-review-the-result">
-<h2 id="section-how-do-you-review-the-result" class="glossary-term-section__title">How do you review the result?</h2>
-<p class="glossary-term-section__text">Try the intended task yourself before involving participants. Check that the prototype implements the idea, rather than a plausible substitute. Inspect edge cases that could change the conclusion.</p>
-<p class="glossary-term-section__text">Record limitations alongside findings. A study using simulated latency cannot establish satisfaction with actual production performance. A prototype without screen reader support cannot answer questions about that experience.</p>
-<p class="glossary-term-section__text">If the concept works, decide what to reuse and what to rebuild. Review architecture, security, accessibility, and integration before treating prototype code as a production implementation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як оцінювати отриманий результат?</h2>
+<p class="glossary-term-section__text">Самостійно пройдіть запланований користувацький сценарій перед залученням респондентів. Переконайтеся, що прототип реалізує саме досліджувану ідею, а не її правдоподібний замінник. Перевірте граничні випадки (edge cases), які можуть спотворити висновки дослідження.</p>
+<p class="glossary-term-section__text">Фіксуйте системні обмеження поруч із результатами тестування. Дослідження з імітованою затримкою відповіді не може визначити рівень задоволеності реальною швидкодією в робочому середовищі. Прототип без підтримки скрінрідерів не дає змоги оцінити доступність цього інтерфейсу для незрячих користувачів.</p>
+<p class="glossary-term-section__text">Якщо концепт виявився успішним, визначте, що з коду можна використати повторно, а що необхідно переписати наново. Ретельно перевірте архітектуру, безпеку, доступність та інтеграційні зв'язки, перш ніж переносити прототипний код у продуктове середовище.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-assisted-design.html">AI-assisted Design</a></li>
-<li><a href="/ua/glossary/content-prototyping.html">Content Prototyping</a></li>
-<li><a href="/ua/glossary/design-harness.html">Design Harness</a></li>
-<li><a href="/ua/glossary/product-discovery.html">Product Discovery</a></li>
+<li><a href="/ua/glossary/ai-assisted-design.html">Дизайн за підтримки ШІ (AI-Assisted Design)</a></li>
+<li><a href="/ua/glossary/content-prototyping.html">Контентне прототипування (Content Prototyping)</a></li>
+<li><a href="/ua/glossary/design-harness.html">Дизайн-каркас (Design Harness)</a></li>
+<li><a href="/ua/glossary/product-discovery.html">Продуктове відкриття (Product Discovery)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.nngroup.com/articles/ai-prototyping/" target="_blank" rel="noopener noreferrer">AI Prototyping in Real Design Contexts, NN/g</a></li>
-<li><a href="https://pair.withgoogle.com/chapter/user-needs/" target="_blank" rel="noopener noreferrer">User Needs and Defining Success, Google PAIR</a></li>
+<li><a href="https://www.nngroup.com/articles/ai-prototyping/" target="_blank" rel="noopener noreferrer">ШІ-прототипування в реальних контекстах дизайну (AI Prototyping in Real Design Contexts), NN/g</a></li>
+<li><a href="https://pair.withgoogle.com/chapter/user-needs/" target="_blank" rel="noopener noreferrer">Потреби користувачів та визначення успіху (User Needs and Defining Success), Google PAIR</a></li>
 </ul>
 </section>
 

@@ -384,36 +384,34 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Дрейф контексту (context drift) описує поступову втрату фокусу мовною моделлю або ШІ-агентом на меті користувача, релевантних фактах або попередніх обмеженнях під час тривалої сесії. Термін вживається для аналізу поведінки системи в міру накопичення історії діалогу, знайдених матеріалів і результатів виклику інструментів.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-context-drift-look-like">
-<h2 id="section-what-does-context-drift-look-like" class="glossary-term-section__title">What does context drift look like?</h2>
-<p class="glossary-term-section__text">An assistant may revert to a rejected option, apply a rule to the wrong record, or continue after the goal has changed. Record the specific failure and the information available at that step. A long conversation can expose such problems, while the same symptom can also come from ambiguous instructions, poor retrieval, or an incorrect tool result.</p>
+    <p class="glossary-term-section__text">Дрейф контексту (Context Drift) описує явище, коли мовна модель або ШІ-агент у процесі тривалого діалогу поступово втрачає фокус на первинній меті користувача, релевантних фактах або раніше встановлених обмеженнях. Команди використовують цей термін для аналізу стабільності поведінки протягом сесії взаємодії, особливо в міру накопичення історії листування, доданих через RAG матеріалів і результатів викликів зовнішніх інструментів.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як проявляється дрейф контексту?</h2>
+<p class="glossary-term-section__text">ШІ-асистент може раптово повернутися до раніше відхиленого варіанта, застосувати правило не до того запису або продовжувати попередні дії після того, як користувач змінив кінцеву мету. Фіксуйте конкретний збій та інформацію, яка була безпосередньо доступна моделі на цьому кроці. Тривалий діалог найчастіше оголює такі проблеми, проте подібні симптоми можуть виникати також через неоднозначні інструкції, неякісний пошук у базі знань (retrieval) або помилкові дані з виклику інструмента.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-a-booking-assistant-forgets-a-constraint">
-<h2 id="section-example-a-booking-assistant-forgets-a-constraint" class="glossary-term-section__title">Example: A booking assistant forgets a constraint</h2>
-<p class="glossary-term-section__text">A traveler asks for a refundable flight arriving before noon. After several alternatives and policy lookups, the assistant recommends a cheaper nonrefundable fare. The team checks whether the refundability requirement remained in the model’s context and whether the tool result described that fare correctly.</p>
-<p class="glossary-term-section__text">A useful task state records the selected traveler, dates, constraints, and unresolved questions. Refresh it when the user changes a requirement. When summarizing history, retain the reason an option was rejected.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: асистент бронювання забуває про обмеження</h2>
+<p class="glossary-term-section__text">Мандрівник шукає авіаквиток із можливістю повернення коштів (refundable) та прибуттям до полудня. Після перегляду кількох альтернатив і перевірки умов тарифів асистент раптом рекомендує дешевший квиток без можливості повернення. Команда перевіряє, чи залишилася вимога про повернення коштів у контексті моделі і чи коректно зовнішній інструмент описав умови обраного тарифу.</p>
+<p class="glossary-term-section__text">Структурований стан завдання (task state) фіксує дані обраного пасажира, дати, чинні обмеження та невирішені питання. Оновлюйте цей стан щоразу, коли користувач змінює вимоги. При створенні стислого підсумку історії діалогу (summarization) обов'язково зберігайте причину, з якої той чи інший варіант було відхилено.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-for-drift">
-<h2 id="section-how-do-you-test-for-drift" class="glossary-term-section__title">How do you test for drift?</h2>
-<p class="glossary-term-section__text">Create a multi-turn task with constraints that remain relevant near the end. Check the final recommendation and intermediate actions against those constraints. Compare context-management changes on the same cases, including a changed requirement and conflicting evidence. Summarization and selective retrieval are approaches to evaluate. Measure whether they preserve the facts the task requires.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як тестувати стійкість до дрейфу?</h2>
+<p class="glossary-term-section__text">Створіть багатокроковий сценарій (multi-turn task) з обмеженнями, які залишаються критично важливими ближче до завершення сесії. Перевіряйте фінальну рекомендацію та всі проміжні кроки на відповідність цим обмеженням. Порівнюйте різні стратегії керування контекстом на однакових тестових випадках, включаючи зміну вимог користувача та наявність суперечливих даних. Самаризація та вибіркове вилучення релевантних фрагментів (selective retrieval) — це підходи, ефективність яких варто вимірювати. Оцінюйте, чи зберігають вони всі критичні факти, необхідні для правильного виконання завдання.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-engineering.html">Context Engineering</a></li>
-<li><a href="/ua/glossary/agent-harness.html">Agent Harness</a></li>
-<li><a href="/ua/glossary/prompt-engineering.html">Prompt Engineering</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/context-window.html">Context Window</a></li>
+<li><a href="/ua/glossary/context-engineering.html">Контекстна інженерія (Context Engineering)</a></li>
+<li><a href="/ua/glossary/agent-harness.html">Тестовий каркас агента (Agent Harness)</a></li>
+<li><a href="/ua/glossary/prompt-engineering.html">Промпт-інженерія (Prompt Engineering)</a></li>
+<li><a href="/ua/glossary/context-window.html">Контекстне вікно (Context Window)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective Context Engineering for AI Agents, Anthropic</a></li>
-<li><a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener noreferrer">Lost in the Middle, Liu et al.</a></li>
+<li><a href="https://www.anthropic.com/research/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Anthropic: Ефективна контекстна інженерія для ШІ-агентів (Effective Context Engineering for AI Agents)</a></li>
+<li><a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener noreferrer">Лю та ін.: Загублені посередині (Lost in the Middle, Liu et al.)</a></li>
 </ul>
 </section>
 

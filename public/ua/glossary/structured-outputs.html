@@ -384,73 +384,73 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Структуровані вихідні дані (Structured Outputs) — це відповіді моделі, обмежені строго визначеним форматом або схемою. Вони дозволяють застосунку запитувати чіткі поля та типи даних (наприклад, ідентифікатор бронювання та статус) замість ненадійного парсингу довільного текстового результату.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-does-a-schema-control">
-<h2 id="section-what-does-a-schema-control" class="glossary-term-section__title">What does a schema control?</h2>
-<p class="glossary-term-section__text">A schema can describe properties, required fields, types, and permitted values. The model API determines which schema features it supports and enforces.</p>
-<p class="glossary-term-section__text">For example, an application might require a string <code>reservation_id</code> and a <code>status</code> chosen from <code>confirmed</code>, <code>canceled</code>, or <code>unknown</code>. A possible response is:</p>
+    <p class="glossary-term-section__text">Структуровані виводи (Structured outputs) — це відповіді моделі, суворо обмежені заданим форматом або схемою (schema). Вони дозволяють додатку запитувати чітко визначені поля та типи даних, такі як ідентифікатор бронювання та статус, замість парсингу та інтерпретації довільної текстової відповіді.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що саме контролює схема?</h2>
+<p class="glossary-term-section__text">Схема описує властивості, обов'язкові поля, типи даних та перелік дозволених значень (enum). Безпосередньо API моделі визначає, які саме можливості схем воно підтримує та гарантовано забезпечує на рівні генерації.</p>
+<p class="glossary-term-section__text">Наприклад, додатку може бути потрібне рядкове поле <code>reservation_id</code> та поле <code>status</code>, вибране серед значень <code>confirmed</code>, <code>canceled</code> або <code>unknown</code>. Можлива відповідь:</p>
 <div class="glossary-code-block-wrapper">
 <pre class="glossary-code-block"><code class="language-json">{
   "reservation_id": "R-104",
   "status": "unknown"
 }</code></pre>
 </div>
-<p class="glossary-term-section__text">This is illustrative application data, not evidence that reservation R-104 exists. The schema controls the response's structure. The application still needs to verify the record, source, and current status.</p>
+<p class="glossary-term-section__text">Це лише ілюстративні дані додатку, а не доказ того, що бронювання R-104 дійсно існує. Схема контролює виключно синтаксичну структуру відповіді. Додатку все одно необхідно самостійно перевірити наявність запису, джерело даних та його актуальний статус.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-structured-outputs-vs-json-mode-vs-tool-calling">
-<h2 id="section-structured-outputs-vs-json-mode-vs-tool-calling" class="glossary-term-section__title">Structured outputs vs. JSON mode vs. tool calling</h2>
+<section class="glossary-term-section" aria-labelledby="section-json">
+<h2 id="section-json" class="glossary-term-section__title">Структуровані виводи, режим JSON та виклик інструментів</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Mechanism</th>
-<th>Main purpose</th>
+<th>Механізм</th>
+<th>Основне призначення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>JSON mode</td>
-<td>Request syntactically valid JSON, subject to the API's behavior</td>
+<td>Режим JSON (JSON mode)</td>
+<td>Запит синтаксично коректного JSON без жорсткої фіксації схеми полів, залежно від поведінки API</td>
 </tr>
 <tr>
-<td>Structured outputs</td>
-<td>Constrain the response using a supported schema</td>
+<td>Структуровані виводи (Structured outputs)</td>
+<td>Суворе обмеження відповіді за допомогою підтримуваної схеми (наприклад, JSON Schema)</td>
 </tr>
 <tr>
-<td>Tool or function calling</td>
-<td>Let the model request an application-defined operation</td>
+<td>Виклик інструментів або функцій (Tool / Function calling)</td>
+<td>Надання моделі можливості ініціювати операцію, визначену додатком, передаючи аргументи</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These mechanisms can be combined in a workflow. A model-generated tool argument is still an input to validate, not permission to perform the operation.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/structured-data-for-llms.html">Structured Data for LLMs</a> is a different topic: publishing machine-readable information about web content, such as Schema.org JSON-LD.</p>
+<p class="glossary-term-section__text">Ці механізми можна комбінувати в межах одного робочого процесу. Згенерований моделлю аргумент інструмента залишається вхідними даними, які обов'язково потребують валідації, а не автоматичним дозволом на виконання операції.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/structured-data-for-llms.html">Структуровані дані для LLM (Structured Data for LLMs)</a> — це окрема тема, яка стосується публікації машинозчитуваної інформації про контент вебсторінок, наприклад розмітки Schema.org у форматі JSON-LD.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-turning-an-email-into-a-review-form">
-<h2 id="section-example-turning-an-email-into-a-review-form" class="glossary-term-section__title">Example: turning an email into a review form</h2>
-<p class="glossary-term-section__text">An operations tool extracts a passenger name and requested travel date from an email. The response uses defined fields and represents missing information explicitly.</p>
-<p class="glossary-term-section__text">The interface shows the original passage beside each extracted value. The operator can correct the form before saving. The server checks formats, record ownership, and any business rules independently.</p>
-<p class="glossary-term-section__text">A date can be a valid string and still be wrong for the reservation. A response that fits the schema can also omit an important qualification from the email.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перетворення листа на форму перевірки</h2>
+<p class="glossary-term-section__text">Операційний інструмент вилучає ім'я пасажира та бажану дату подорожі з тексту електронного листа. Відповідь використовує чітко визначені поля та явно фіксує відсутні відомості.</p>
+<p class="glossary-term-section__text">Інтерфейс відображає оригінальний фрагмент тексту поруч із кожним вилученим значенням. Оператор може відкоригувати форму перед її збереженням. Сервер окремо й незалежно перевіряє формати, права власності на запис та діючі бізнес-правила.</p>
+<p class="glossary-term-section__text">Дата може бути коректним рядком формату ISO, але водночас бути помилковою для даного бронювання. Крім того, відповідь, що повністю задовольняє схему, може опустити важливе застереження чи контекст із тексту листа.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-designers-specify">
-<h2 id="section-what-should-designers-specify" class="glossary-term-section__title">What should designers specify?</h2>
-<p class="glossary-term-section__text">Design for missing values, unsupported requests, refusals, incomplete responses, and failed validation. Decide which values can be used directly, which need verification, and what users can inspect or edit.</p>
-<p class="glossary-term-section__text">Test meaning as well as formatting. Include ambiguous source text and contradictory records in the evaluation set. A high schema-pass rate says little about whether users receive the correct information.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що необхідно специфікувати дизайнерам та архітекторам?</h2>
+<p class="glossary-term-section__text">Проєктуйте інтерфейси з розрахунком на відсутні значення, непідтримувані запити, відмови моделі від генерації (refusals), неповні відповіді та збої валідації. Чітко визначте, які значення можна застосовувати автоматично, які потребують підтвердження людиною, а що користувачі можуть переглянути чи відредагувати.</p>
+<p class="glossary-term-section__text">Тестуйте семантичну точність і зміст, а не лише відповідність формату. Включайте неоднозначний вихідний текст і суперечливі записи до тестового набору (evaluation set). Високий відсоток проходження схеми (schema-pass rate) сам по собі майже нічого не говорить про те, чи отримують користувачі коректну та достовірну інформацію.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/tool-calling-function-calling.html">Tool Calling</a></li>
-<li><a href="/ua/glossary/generative-ui.html">Generative UI</a></li>
-<li><a href="/ua/glossary/ai-grounding.html">AI Grounding</a></li>
-<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Evaluation Harness</a></li>
+<li><a href="/ua/glossary/tool-calling-function-calling.html">Виклик інструментів (Tool Calling)</a></li>
+<li><a href="/ua/glossary/generative-ui.html">Генеративний інтерфейс (Generative UI)</a></li>
+<li><a href="/ua/glossary/ai-grounding.html">Заземлення ШІ (AI Grounding)</a></li>
+<li><a href="/ua/glossary/evaluation-harness-ai-evals.html">Тестовий стенд для оцінювання ШІ (Evaluation Harness)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://aistudio.google.com/docs/structured-output" target="_blank" rel="noopener noreferrer">Structured outputs, Google Gemini documentation</a></li>
-<li><a href="https://json-schema.org/understanding-json-schema/reference/object" target="_blank" rel="noopener noreferrer">Objects, Understanding JSON Schema</a></li>
+<li><a href="https://aistudio.google.com/docs/structured-output" target="_blank" rel="noopener noreferrer">Структуровані виводи (Structured outputs), документація Google Gemini</a></li>
+<li><a href="https://json-schema.org/understanding-json-schema/reference/object" target="_blank" rel="noopener noreferrer">Об'єкти (Objects), керівництво Understanding JSON Schema</a></li>
 </ul>
 </section>
 
