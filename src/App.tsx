@@ -43,7 +43,7 @@ export default function App() {
         setSelectedGlossarySlug(null);
       } else if (relativePath.startsWith("/glossary/")) {
         const rawSlug = relativePath.replace("/glossary/", "");
-        const slug = rawSlug.replace(/\.html$/, "").trim();
+        const slug = rawSlug.replace(/\/$/, "").replace(/\.html$/, "").trim();
         if (slug) {
           setCurrentPage("glossary-term");
           setSelectedGlossarySlug(slug);
@@ -126,9 +126,10 @@ export default function App() {
       const termData = getTermBySlug(selectedGlossarySlug);
       if (termData) {
         // If an explicit custom seoTitle exists, use it verbatim with NO automatic suffix
-        title = termData.seoTitle ? termData.seoTitle : `${termData.name} — Lex Konovalov`;
-        description = termData.seoDescription || termData.definition;
-        canonicalUrl = termData.canonicalUrl || `https://lexkonovalov.com/glossary/${termData.slug}.html`;
+        const td = termData as any;
+        title = td.seoTitle ? td.seoTitle : (td.title || `${td.name} — Lex Konovalov`);
+        description = td.seoDescription || td.description || td.definition;
+        canonicalUrl = td.canonicalUrl || `https://lexkonovalov.com/glossary/${td.slug}.html`;
       }
     } else if (currentPage === "case-study" && selectedCaseId) {
       const caseData = portfolioData.caseStudies.find(c => c.id === selectedCaseId);
@@ -219,8 +220,12 @@ export default function App() {
     } else if (page === "glossary") {
       targetPath = "/glossary/";
     } else if (page === "glossary-term" && params?.slug) {
-      const cleanSlug = params.slug.replace(/\.html$/, "");
-      targetPath = `/glossary/${cleanSlug}.html`;
+      const cleanSlug = params.slug.replace(/\.html$/, "").replace(/^\/|\/$/g, "");
+      if (cleanSlug === "ooux") {
+        targetPath = "/glossary/ooux/";
+      } else {
+        targetPath = `/glossary/${cleanSlug}.html`;
+      }
     } else if (page === "daily-thing" && params?.caseId) {
       const cleanId = params.caseId.replace(/\.html$/, "");
       targetPath = `/daily-thing/${cleanId}.html`;

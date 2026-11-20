@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 117-term taxonomy across four foundational product design domains
+// Canonical 129-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -38,6 +38,21 @@ export interface GlossaryTerm {
   sources: string[];
 }
 
+export interface SupportingPage {
+  slug: string;
+  url: string;
+  name: string;
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  contentMarkdown: string;
+  structuredDataGraph: any[];
+  sources: string[];
+  relatedTerms: string[];
+  category?: string;
+  secondaryCategory?: string;
+}
+
 export const GLOSSARY_COLLECTION_NAME = "Product Design Glossary";
 export const GLOSSARY_COLLECTION_ID = "https://lexkonovalov.com/glossary/#terms";
 
@@ -45,7 +60,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "ux-product-architecture",
     "name": "UX & Product Architecture",
-    "count": 34,
+    "count": 46,
     "description": "Information Architecture, Domain Modeling, and Conceptual Integrity for complex systems.",
     "primaryFocus": "Information Architecture, Domain Modeling, Conceptual Integrity",
     "representativeSpecs": "OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling",
@@ -90,21 +105,19 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
-    "purpose": "Prevents fragmented user experiences, disjointed navigation paths, and developer-designer misalignments by establishing shared, entity-based conceptual models prior to visual UI wireframing.",
+    "purpose": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
     "keyConcepts": [
-      "Conceptual objects",
-      "entity integrity",
-      "cognitive mapping",
-      "affordance consistency"
+      "What does OOUX look like in practice?",
+      "How does ORCA relate to OOUX?",
+      "When is OOUX useful?"
     ],
-    "howItWorks": "Designers identify core domain entities, trace their relationships, define their attributes, and map permissible user operations to eliminate procedural silos.",
+    "howItWorks": "Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
       "Domain Context Modeling",
       "Conceptual Schema",
-      "Information Architecture (IA)",
-      "Four UX Fails in OOUX"
+      "Information Architecture (IA)"
     ],
     "seoTitle": "Object-Oriented UX (OOUX) | Product Design Glossary",
     "seoDescription": "Object-Oriented UX (OOUX) defines objects, relationships, attributes, and user actions before screen design. Explore ORCA through a travel booking example.",
@@ -113,7 +126,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Object-Oriented UX, Sophia V. Prater, A List Apart (https://alistapart.com/article/object-oriented-ux/)",
       "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)"
     ],
-    "contentMarkdown": "# Object-Oriented UX (OOUX)\n\nObject-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.\n\n## What does OOUX look like in practice?\n\nConsider a travel operations tool with trips, travelers, and bookings. Modeling the relationship between a trip and its bookings helps the team decide what agents can navigate to from a trip.\n\nThe trip page can list its bookings, with each one opening its details and available actions. An authorized agent can select a booking and cancel it. Its status then updates wherever that booking appears, including the trip page and search results. The object model gives the team a shared basis for navigation, content, and actions.\n\n## How does ORCA relate to OOUX?\n\nOOUX provides the design principles. [ORCA](/glossary/orca-framework.html) is Sophia Prater’s process for applying them through Objects, Relationships, Calls to action, and Attributes. Teams revisit these four elements as they discover requirements and refine the model. [Introducing ORCA, Sophia Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n\n| ORCA element | Design question | Travel operations example |\n|---|---|---|\n| Objects | What things do people work with? | Trip, Traveler, Booking |\n| Relationships | How are those things connected? | A trip includes travelers and bookings. |\n| Calls to action | What can each user role do? | An authorized agent can cancel a booking. |\n| Attributes | What information describes each object? | A booking has a confirmation number and status. |\n\nAn [object map](/glossary/object-mapping.html) records these decisions so the team can use the same model when designing screens, navigation, and flows.\n\n## When is OOUX useful?\n\nOOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.\n\nStart by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it. Teams also use OOUX to diagnose and prevent common interface anti-patterns, described as the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html)—masked, shape-shifting, broken, and isolated objects.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n\n## Sources\n\n- [Object-Oriented UX, Sophia V. Prater, A List Apart](https://alistapart.com/article/object-oriented-ux/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+    "contentMarkdown": "# Object-Oriented UX (OOUX)\n\nObject-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.\n\n## What does OOUX look like in practice?\n\nConsider a travel operations tool with trips, travelers, and bookings. Modeling the relationship between a trip and its bookings helps the team decide what agents can navigate to from a trip.\n\nThe trip page can list its bookings, with each one opening its details and available actions. An authorized agent can select a booking and cancel it. Its status then updates wherever that booking appears, including the trip page and search results. The object model gives the team a shared basis for navigation, content, and actions.\n\n## How does ORCA relate to OOUX?\n\nOOUX provides the design principles. [ORCA](/glossary/orca-framework.html) is Sophia Prater’s process for applying them through Objects, Relationships, Calls to action, and Attributes. Teams revisit these four elements as they discover requirements and refine the model. [Introducing ORCA, Sophia Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n\n| ORCA element | Design question | Travel operations example |\n|---|---|---|\n| Objects | What things do people work with? | Trip, Traveler, Booking |\n| Relationships | How are those things connected? | A trip includes travelers and bookings. |\n| Calls to action | What can each user role do? | An authorized agent can cancel a booking. |\n| Attributes | What information describes each object? | A booking has a confirmation number and status. |\n\nAn [object map](/glossary/object-mapping.html) records these decisions so the team can use the same model when designing screens, navigation, and flows.\n\n## When is OOUX useful?\n\nOOUX is particularly useful when the same objects appear across multiple workflows or when different roles need different actions on an object. For example, a travel agent and an accountant may both work with the same booking, while needing different information and permissions.\n\nStart by examining the things people name in interviews and existing workflows. Use their language to identify candidate objects. Then walk through a task such as “find and cancel a booking.” Check that the model identifies the booking, its connection to the trip, its status, and which roles can cancel it.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n\n## Sources\n\n- [Object-Oriented UX, Sophia V. Prater, A List Apart](https://alistapart.com/article/object-oriented-ux/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -199,36 +212,29 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
-    "purpose": "Deconstructs complex enterprise requirements into unambiguous structural components, ensuring domain models directly inform navigation, relational integrity, and component logic.",
+    "purpose": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
     "keyConcepts": [
-      "Discovery round",
-      "Requirements matrix",
-      "CTA matrices",
-      "Object mapping passes"
+      "What does ORCA stand for?",
+      "How does the ORCA process work?",
+      "An ORCA example in practice",
+      "When should you use ORCA?"
     ],
-    "howItWorks": "Teams extract domain nouns, map bidirectional relationships, define state-dependent operations, and enumerate descriptive metadata across iterative passes.",
+    "howItWorks": "The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.",
     "relatedTerms": [
       "Object-Oriented UX (OOUX)",
       "Object Mapping",
       "Cardinality (UX Architecture)",
-      "State Transition Matrix",
-      "Four UX Fails in OOUX",
-      "Noun Foraging",
-      "Nested Object Matrix",
-      "CTA Matrix",
-      "Object Guide",
-      "Object Prioritization",
-      "ORCA Relationship Requirements (MCSFD)"
+      "State Transition Matrix"
     ],
     "seoTitle": "ORCA Framework in UX | Product Design Glossary",
-    "seoDescription": "ORCA is Sophia Prater’s process for applying Object-Oriented UX (OOUX). Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
+    "seoDescription": "ORCA is Sophia Prater’s OOUX process. Learn its four elements and four rounds, with an example of turning requirements into interface decisions.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/orca-framework.html",
     "sources": [
       "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
       "Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
       "OOUX Masterclass course outline, OOUX.com (https://ooux.com/selfpacedoouxmasterclass)"
     ],
-    "contentMarkdown": "# ORCA Framework\n\nThe ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.\n\n[Object-Oriented UX](/glossary/object-oriented-ux.html) provides the design principles. ORCA provides activities for defining the model and using it to design and test interfaces.\n\n## What does ORCA stand for?\n\nConsider one illustrative object in a support tool, Ticket #1042 about a missing invoice.\n\n| ORCA element | Ticket example |\n|---|---|\n| **Object** | Ticket is the object type. Ticket #1042 is one instance. |\n| **Relationships** | Linked customer — Acme Studio. Assigned agent — none. |\n| **Calls to action** | A supervisor can reopen the ticket after selecting an agent. |\n| **Attributes** | Subject — Missing invoice. Status — Closed. Priority — Normal. |\n\nCustomer and Agent are objects with their own records. The ticket links to those records through relationships. Status and priority describe the ticket as attributes.\n\n## How does the ORCA process work?\n\nPrater’s full ORCA process has 15 steps across four iterative rounds. The four elements are revisited and refined throughout the process.\n\n1. **Discovery.** Identify objects from research through [Noun Foraging](/glossary/noun-foraging.html). Map their relationships with a [Nested Object Matrix](/glossary/nested-object-matrix.html), record actions by object and role in a [CTA Matrix](/glossary/cta-matrix.html), and build an initial [object map](/glossary/object-mapping.html). Capture questions for further research.\n2. **Requirements.** Define relationship rules using [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html), permissions, and required fields. Document object definitions in an [Object Guide](/glossary/object-guide.html) and expand the CTA matrix into user stories with conditions for each action.\n3. **Prioritization.** [Object Prioritization](/glossary/object-prioritization.html) decides what belongs in the release and which information and actions deserve prominence in the interface.\n4. **Representation.** Turn the model into cards, lists, detail views, and a connected prototype. Test whether users recognize the objects, find their connections, and understand the available actions.\n\nThis sequence provides a starting point. The rounds can be adapted to the project. Prater describes moving Prioritization ahead of detailed Requirements when time is limited. [Prioritizing Prioritization for Product Designers, Sophia Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)\n\n## An ORCA example in practice\n\nFor Ticket #1042, the reopening rule connects a user role, the ticket’s status, and its relationship to an agent. These requirements guide who sees the action, when it is available, and what information is needed to complete it.\n\nThe team can prototype the ticket view to test whether supervisors can find the action and understand why they need to assign an agent.\n\n## When should you use ORCA?\n\nUse ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. It helps prevent fragmented systems and common pitfalls like the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html). Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.\n\n## Related terms\n\n- [Object-Oriented UX (OOUX)](/glossary/object-oriented-ux.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n\n## Sources\n\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)\n- [OOUX Masterclass course outline, OOUX.com](https://ooux.com/selfpacedoouxmasterclass)",
+    "contentMarkdown": "# ORCA Framework\n\nThe ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.\n\n[Object-Oriented UX](/glossary/object-oriented-ux.html) provides the design principles. ORCA provides activities for defining the model and using it to design and test interfaces.\n\n## What does ORCA stand for?\n\nConsider one illustrative object in a support tool, Ticket #1042 about a missing invoice.\n\n| ORCA element | Ticket example |\n|---|---|\n| **Object** | Ticket is the object type. Ticket #1042 is one instance. |\n| **Relationships** | Linked customer — Acme Studio. Assigned agent — none. |\n| **Calls to action** | A supervisor can reopen the ticket after selecting an agent. |\n| **Attributes** | Subject — Missing invoice. Status — Closed. Priority — Normal. |\n\nCustomer and Agent are objects with their own records. The ticket links to those records through relationships. Status and priority describe the ticket as attributes.\n\n## How does the ORCA process work?\n\nORCA works through four iterative rounds. Teams revisit and refine Objects, Relationships, Calls to action, and Attributes as the model develops.\n\n1. **Discovery.** Identify objects from research. Map their relationships, record actions by object and role in a [CTA Matrix](/glossary/cta-matrix.html), and build an initial [object map](/glossary/object-mapping.html). Capture questions for further research.\n2. **Requirements.** Define relationship rules, permissions, and required fields. Document object definitions in an [Object Guide](/glossary/object-guide.html) and expand the CTA matrix into [object-oriented user stories](/glossary/object-oriented-user-stories.html). Clarify the rules for the object's [attributes](/glossary/object-attributes-ooux.html).\n3. **Prioritization.** Decide what belongs in the release and which [information](/glossary/attribute-prioritization.html) and [actions](/glossary/cta-prioritization.html) deserve prominence in the interface.\n4. **Representation.** Turn the model into cards, lists, detail views, and a connected prototype. Use a [Shapeshifter Matrix](/glossary/shapeshifter-matrix.html) to examine intentional variants. Test whether users recognize the objects, find their connections, and understand the available actions.\n\nThis sequence provides a starting point. The rounds can be adapted to the project. Prater describes moving Prioritization ahead of detailed Requirements when time is limited. [Prioritizing Prioritization for Product Designers, Sophia Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)\n\n## An ORCA example in practice\n\nFor Ticket #1042, the reopening rule connects a user role, the ticket’s status, and its relationship to an agent. These requirements guide who sees the action, when it is available, and what information is needed to complete it.\n\nThe team can prototype the ticket view to test whether supervisors can find the action and understand why they need to assign an agent.\n\n## When should you use ORCA?\n\nUse ORCA when a team needs to agree on connected objects, role permissions, or business rules before designing screens. Start with one object and a real task. Check the model with users and domain experts, and return to research wherever important questions remain unanswered.\n\n## Related terms\n\n- [Object-Oriented UX (OOUX)](/glossary/object-oriented-ux.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n\n## Sources\n\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [Prioritizing Prioritization for Product Designers, Sophia V. Prater](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)\n- [OOUX Masterclass course outline, OOUX.com](https://ooux.com/selfpacedoouxmasterclass)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -314,14 +320,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
-    "purpose": "Provides a single conceptual source of truth for cross-functional teams, validating information models against real-world user expectations and database schemas.",
+    "purpose": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
     "keyConcepts": [
-      "Entity nodes",
-      "nested attributes",
-      "link cardinality",
-      "state markers."
+      "How do you create an object map?",
+      "Object map example for travel operations",
+      "How does the object map fit into ORCA?"
     ],
-    "howItWorks": "Core entities are mapped on visual canvases using standardized card notation, displaying primary metadata, associated child objects, and contextual actions.",
+    "howItWorks": "Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.",
     "relatedTerms": [
       "ORCA Framework",
       "Conceptual Schema",
@@ -336,7 +341,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
       "OOUX Foundations, Sophia V. Prater (https://ooux.com/offerings/foundations)"
     ],
-    "contentMarkdown": "# Object Mapping\n\nObject mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.\n\n## How do you create an object map?\n\n1. **Find candidate objects.** Look for nouns in interviews, workflows, and support requests through [Noun Foraging](/glossary/noun-foraging.html). Check which things users recognize, refer to repeatedly, and need to distinguish from one another in an [Object Guide](/glossary/object-guide.html). Check which things users recognize, refer to repeatedly, and need to distinguish from one another.\n2. **Describe each object.** Capture the information users need to identify it and make decisions about it. For a booking, that might be its confirmation number and status.\n3. **Map relationships and actions.** Ask what each object connects to, what users need to do with it, and which roles can act. Keep uncertain rules visible for follow-up.\n4. **Walk through a real task.** Try a routine case and an exception. Revise the map when either case exposes missing information, a connection, or an action.\n\nAn object type describes a class of things, such as Booking. Booking B-52 is one instance. Booking status describes the booking. Traveler is a separate object in this example because agents look up travelers, update their details, and view their other trips.\n\n## Object map example for travel operations\n\n| Object type | Useful attributes | Relationships | Example action |\n|---|---|---|---|\n| Trip | Reference, travel dates | Bookings and travelers | Add a booking |\n| Booking | Reference, status, supplier confirmation number when available | One trip | Request cancellation if eligible |\n| Traveler | Name, contact details | Trips they are associated with | Update contact details |\n\nFor an agent handling a cancellation, the map suggests a path from Trip to Booking. A booking summary can show the reference and status so the agent can pick the right record. The [state transition matrix](/glossary/state-transition-matrix.html) specifies what happens after an eligible agent requests cancellation.\n\n## How does the object map fit into ORCA?\n\n[ORCA](/glossary/orca-framework.html) gives teams several ways to investigate an object model. A [Nested Object Matrix](/glossary/nested-object-matrix.html) records relationships between object types. A [CTA Matrix](/glossary/cta-matrix.html) records what each role needs to do with each object. Deciding what belongs in the release relies on [Object Prioritization](/glossary/object-prioritization.html), while interface audits watch out for the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html). The object map organizes attributes by object and builds on the relationships already identified. The example above shows actions alongside those findings for easy reference.\n\nUse the map to decide what belongs in each view. A search result might show the booking reference and status. The detail view can add fare rules and cancellation options while keeping the same reference and status labels.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Content Modeling](/glossary/content-modeling.html)\n\n## Sources\n\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [OOUX Foundations, Sophia V. Prater](https://ooux.com/offerings/foundations)",
+    "contentMarkdown": "# Object Mapping\n\nObject mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.\n\n## How do you create an object map?\n\n1. **Find candidate objects.** Look for nouns in interviews, workflows, and support requests. Check which things users recognize, refer to repeatedly, and need to distinguish from one another.\n2. **Describe each object.** Capture the information users need to identify it and make decisions about it. For a booking, that might be its confirmation number and status.\n3. **Map relationships and actions.** Ask what each object connects to, what users need to do with it, and which roles can act. Keep uncertain rules visible for follow-up.\n4. **Walk through a real task.** Try a routine case and an exception. Revise the map when either case exposes missing information, a connection, or an action.\n\nAn object type describes a class of things, such as Booking. Booking B-52 is one instance. Booking status describes the booking. Traveler is a separate object in this example because agents look up travelers, update their details, and view their other trips.\n\n## Object map example for travel operations\n\n| Object type | Useful attributes | Relationships | Example action |\n|---|---|---|---|\n| Trip | Reference, travel dates | Bookings and travelers | Add a booking |\n| Booking | Reference, status, supplier confirmation number when available | One trip | Request cancellation if eligible |\n| Traveler | Name, contact details | Trips they are associated with | Update contact details |\n\nFor an agent handling a cancellation, the map suggests a path from Trip to Booking. A booking summary can show the reference and status so the agent can pick the right record. The [state transition matrix](/glossary/state-transition-matrix.html) specifies what happens after an eligible agent requests cancellation.\n\n## How does the object map fit into ORCA?\n\n[ORCA](/glossary/orca-framework.html) gives teams several ways to investigate an object model. A nested object matrix records relationships between object types. A call-to-action (CTA) matrix records what each role needs to do with each object. The object map organizes attributes by object and builds on the relationships already identified. The example above shows actions alongside those findings for easy reference.\n\nUse the map to decide what belongs in each view. A search result might show the booking reference and status. The detail view can add fare rules and cancellation options while keeping the same reference and status labels.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Content Modeling](/glossary/content-modeling.html)\n\n## Sources\n\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [OOUX Foundations, Sophia V. Prater](https://ooux.com/offerings/foundations)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -418,20 +423,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Emerging",
     "definition": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
-    "purpose": "Resolves semantic ambiguities across cross-functional products and guarantees that AI reasoning engines and humans share identical contextual boundaries.",
+    "purpose": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
     "keyConcepts": [
-      "Bounded contexts",
-      "semantic boundaries",
-      "context packets",
-      "source of truth rules."
+      "A trip in sales and ticketing",
+      "How do you model a domain context?",
+      "How does this relate to OOUX?"
     ],
-    "howItWorks": "Practitioners delineate domain models into isolated contextual modules, cataloging authoritative terms, data schemas, and agent action boundaries.",
+    "howItWorks": "Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.",
     "relatedTerms": [
       "Object-Oriented UX",
       "Context Engineering",
       "Knowledge Graphs (AI Context)",
-      "Controlled Vocabulary",
-      "Object Guide"
+      "Controlled Vocabulary"
     ],
     "seoTitle": "Domain Context Modeling in UX | Product Design Glossary",
     "seoDescription": "Learn how to map where business terms and rules apply. A travel operations example shows how sales and ticketing use different models for related work.",
@@ -441,7 +444,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Bounded Context, Martin Fowler (https://martinfowler.com/bliki/BoundedContext.html)",
       "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)"
     ],
-    "contentMarkdown": "# Domain Context Modeling\n\nDomain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.\n\nA useful concept from domain-driven design (DDD) is the **bounded context**, the boundary within which a model applies. Within that boundary, the people doing the work and the people building the software can agree on what their terms mean and how the modeled things behave.\n\n## A trip in sales and ticketing\n\nSuppose a travel operations tool serves a sales team that proposes itineraries and a ticketing team that manages supplier bookings. Both teams refer to the same trip, but an accepted offer and a confirmed booking describe different events.\n\n| Question | Sales | Ticketing |\n|---|---|---|\n| What does the team work with? | Trip and Offer, including proposed itineraries and quoted prices | Booking and its supplier reference, status, and fare rules |\n| What decision matters? | Is this the offer the traveler wants to accept? | Is the supplier booking confirmed, and can it be changed? |\n| What should the team own? | The accepted offer and the details agreed with the traveler | The supplier confirmation and booking status |\n\nAt handoff, ticketing receives the accepted itinerary and trip reference. Ticketing links each booking to that trip. When a supplier confirms a booking, sales can see its confirmation status alongside the accepted offer.\n\n## How do you model a domain context?\n\nLook for changes in language, rules, and ownership when you draw a model boundary. The sales and ticketing teams illustrate a possible boundary in this example.\n\n1. **Follow a handoff.** Observe what each team calls the work, what it decides, and what it needs from the other team.\n2. **Document the model and its scope.** Record terms, objects, key relationships, and the rules that apply to them in an [Object Guide](/glossary/object-guide.html). Identify where the same word carries different meanings.\n3. **Agree on what crosses the boundary.** Specify identifiers, status mappings, and which team or system updates each shared fact.\n4. **Test an exception.** Walk through a supplier rejection after a traveler accepts an offer. Check that each team can understand the situation and continue its work.\n\n## How does this relate to OOUX?\n\n[OOUX](/glossary/object-oriented-ux.html) helps a team identify the objects people recognize and work with. Domain context modeling helps the team decide where a particular definition or rule holds. An [object map](/glossary/object-mapping.html) for ticketing can then show Booking in the context of the people who manage it.\n\n## Related terms\n\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n\n## Sources\n\n- [Domain-Driven Design Reference, Eric Evans](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)\n- [Bounded Context, Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)",
+    "contentMarkdown": "# Domain Context Modeling\n\nDomain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.\n\nA useful concept from domain-driven design (DDD) is the **bounded context**, the boundary within which a model applies. Within that boundary, the people doing the work and the people building the software can agree on what their terms mean and how the modeled things behave.\n\n## A trip in sales and ticketing\n\nSuppose a travel operations tool serves a sales team that proposes itineraries and a ticketing team that manages supplier bookings. Both teams refer to the same trip, but an accepted offer and a confirmed booking describe different events.\n\n| Question | Sales | Ticketing |\n|---|---|---|\n| What does the team work with? | Trip and Offer, including proposed itineraries and quoted prices | Booking and its supplier reference, status, and fare rules |\n| What decision matters? | Is this the offer the traveler wants to accept? | Is the supplier booking confirmed, and can it be changed? |\n| What should the team own? | The accepted offer and the details agreed with the traveler | The supplier confirmation and booking status |\n\nAt handoff, ticketing receives the accepted itinerary and trip reference. Ticketing links each booking to that trip. When a supplier confirms a booking, sales can see its confirmation status alongside the accepted offer.\n\n## How do you model a domain context?\n\nLook for changes in language, rules, and ownership when you draw a model boundary. The sales and ticketing teams illustrate a possible boundary in this example.\n\n1. **Follow a handoff.** Observe what each team calls the work, what it decides, and what it needs from the other team.\n2. **Document the model and its scope.** Record terms, objects, key relationships, and the rules that apply to them. Identify where the same word carries different meanings.\n3. **Agree on what crosses the boundary.** Specify identifiers, status mappings, and which team or system updates each shared fact.\n4. **Test an exception.** Walk through a supplier rejection after a traveler accepts an offer. Check that each team can understand the situation and continue its work.\n\n## How does this relate to OOUX?\n\n[OOUX](/glossary/object-oriented-ux.html) helps a team identify the objects people recognize and work with. Domain context modeling helps the team decide where a particular definition or rule holds. An [object map](/glossary/object-mapping.html) for ticketing can then show Booking in the context of the people who manage it.\n\n## Related terms\n\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [Context Engineering](/glossary/context-engineering.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n\n## Sources\n\n- [Domain-Driven Design Reference, Eric Evans](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)\n- [Bounded Context, Martin Fowler](https://martinfowler.com/bliki/BoundedContext.html)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -523,20 +526,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
-    "purpose": "Dictates interface layout structures, container types, pagination behaviors, and relational navigational paths to prevent dead ends and cognitive mismatch.",
+    "purpose": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
     "keyConcepts": [
-      "One-to-one (1 : 1)",
-      "one-to-many (1 : N)",
-      "many-to-many (N : M)",
-      "directional traversal"
+      "What are the types of cardinality?",
+      "Why do minimum and maximum counts matter?",
+      "How does cardinality affect ORCA design decisions?"
     ],
-    "howItWorks": "Designers evaluate entity links during the relationships phase, choosing appropriate navigation controls such as master-detail splits, inline lists, or relational tags.",
+    "howItWorks": "In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.",
     "relatedTerms": [
       "Object Mapping",
-      "Information Architecture",
+      "Information Architecture (IA)",
       "ORCA Framework",
-      "Structural Navigation Model",
-      "Information Architecture (IA)"
+      "Structural Navigation Model"
     ],
     "seoTitle": "Cardinality in UX: Examples | Product Design Glossary",
     "seoDescription": "Learn how one-to-one, one-to-many, and many-to-many relationships shape UX. Use cardinality to design for empty, single, and large sets of records.",
@@ -546,7 +547,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
       "What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)"
     ],
-    "contentMarkdown": "# Cardinality (UX Architecture)\n\nIn UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.\n\n## What are the types of cardinality?\n\nAsk the relationship question in both directions. These examples describe the rules of an illustrative travel operations tool.\n\n| Relationship | Example | What the interface needs to support |\n|---|---|---|\n| One-to-one | A traveler has at most one preferences profile, and each profile belongs to exactly one traveler. | Show preferences when a profile exists and offer a way to create one when it is missing. |\n| One-to-many | A trip can have zero or more bookings, and each booking belongs to exactly one trip. | Provide a way to view and manage multiple bookings from the trip. |\n| Many-to-many | A trip can include multiple travelers, and each traveler can take multiple trips. | Let agents associate an existing traveler with another trip and find the traveler’s trips when needed. |\n\n## Why do minimum and maximum counts matter?\n\n“One-to-many” leaves open whether a trip can exist before its first booking. In the example, the minimum is zero bookings per trip and one trip per booking. A new trip needs a useful empty state, and the booking creation flow needs a trip selection when it starts outside a trip.\n\nDistinguish the maximum the product allows from what people usually see. If most trips have two bookings but group trips can have dozens, test both sizes. Typical volume, tasks, and access rules help determine whether a simple list or a searchable table makes sense.\n\n## How does cardinality affect ORCA design decisions?\n\nORCA teams can first record that Trips and Bookings are related using a [Nested Object Matrix](/glossary/nested-object-matrix.html), then use cardinality and [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html) to clarify the relationship during the Requirements round. Where a many-to-many relationship carries its own attributes, such as reservation status, teams define a [Junction Object](/glossary/junction-object.html). Use the [object map](/glossary/object-mapping.html) to find rules that need more detail.\n\n- Can an agent add the first booking directly from the empty Bookings section?\n- Can an agent move a booking to another trip, and what would need to be checked?\n- Can an agent link a traveler who already appears on another trip, and how should the interface prevent duplicate records?\n\nA relationship can exist in the model even when one role cannot see it or has no reason to navigate in both directions. Decide what each role needs to see and do before turning the relationship into a link.\n\n## Related terms\n\n- [Object Mapping](/glossary/object-mapping.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n\n## Sources\n\n- [Discovery Live: Relationship Discovery, OOUX](https://discoverylive.ooux.com/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)",
+    "contentMarkdown": "# Cardinality (UX Architecture)\n\nIn UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.\n\n## What are the types of cardinality?\n\nAsk the relationship question in both directions. These examples describe the rules of an illustrative travel operations tool.\n\n| Relationship | Example | What the interface needs to support |\n|---|---|---|\n| One-to-one | A traveler has at most one preferences profile, and each profile belongs to exactly one traveler. | Show preferences when a profile exists and offer a way to create one when it is missing. |\n| One-to-many | A trip can have zero or more bookings, and each booking belongs to exactly one trip. | Provide a way to view and manage multiple bookings from the trip. |\n| Many-to-many | A trip can include multiple travelers, and each traveler can take multiple trips. | Let agents associate an existing traveler with another trip and find the traveler’s trips when needed. |\n\n## Why do minimum and maximum counts matter?\n\n“One-to-many” leaves open whether a trip can exist before its first booking. In the example, the minimum is zero bookings per trip and one trip per booking. A new trip needs a useful empty state, and the booking creation flow needs a trip selection when it starts outside a trip.\n\nDistinguish the maximum the product allows from what people usually see. If most trips have two bookings but group trips can have dozens, test both sizes. Typical volume, tasks, and access rules help determine whether a simple list or a searchable table makes sense.\n\n## How does cardinality affect ORCA design decisions?\n\nORCA teams can first record that Trips and Bookings are related, then use cardinality to clarify the relationship during the Requirements round. Use the [object map](/glossary/object-mapping.html) to find rules that need more detail.\n\n- Can an agent add the first booking directly from the empty Bookings section?\n- Can an agent move a booking to another trip, and what would need to be checked?\n- Can an agent link a traveler who already appears on another trip, and how should the interface prevent duplicate records?\n\nA relationship can exist in the model even when one role cannot see it or has no reason to navigate in both directions. Decide what each role needs to see and do before turning the relationship into a link.\n\n## Related terms\n\n- [Object Mapping](/glossary/object-mapping.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n\n## Sources\n\n- [Discovery Live: Relationship Discovery, OOUX](https://discoverylive.ooux.com/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -906,20 +907,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.",
-    "purpose": "Establishes predictable spatial anchors, allowing users to build reliable mental cognitive maps of location, history, and available trajectories within deep applications.",
+    "purpose": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.",
     "keyConcepts": [
-      "Navigational topology",
-      "hub-and-spoke",
-      "hierarchical nesting",
-      "horizontal traversal."
+      "How does structural navigation differ from contextual navigation?",
+      "Navigation example for a travel operations tool",
+      "How do you design and test the model?"
     ],
-    "howItWorks": "Architects select topological paradigms aligned to task types, deploying persistent orientation components such as navigation rails, menus, and relational hyperlinks.",
+    "howItWorks": "A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Wayfinding System",
       "Breadcrumb Hierarchy",
-      "Polyhierarchy",
-      "Information Architecture (IA)"
+      "Polyhierarchy"
     ],
     "seoTitle": "Structural Navigation Model | Product Design Glossary",
     "seoDescription": "Learn how a structural navigation model organizes menus and paths. See how object relationships add contextual links in a travel operations tool.",
@@ -929,7 +928,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)",
       "Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group (https://www.nngroup.com/articles/tree-testing/)"
     ],
-    "contentMarkdown": "# Structural Navigation Model\n\nA structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.\n\n## How does structural navigation differ from contextual navigation?\n\nStructural navigation follows the product's organization. For example, **Trips → Trip details → Bookings** follows a section down to a local view. Contextual navigation connects related information where a user needs it. A link from a trip's traveler list to a Traveler record is a contextual route that can cross sections.\n\nKeep a record’s name and identifying details consistent across entry points. An agent who arrives from search should recognize the same booking they see on a trip.\n\n## Navigation example for a travel operations tool\n\n| Route | Design decision |\n|---|---|\n| Main menu → Trips → Trip details | Trips gives agents a stable starting point for work organized around trips. |\n| Trip details → Bookings | Local navigation keeps a trip's bookings within reach while the agent reviews that trip. |\n| Trip details → Traveler record | A contextual link lets the agent inspect a related traveler and their other trips. |\n| Search → Booking details | A direct entry should show the booking's identity and link to its trip when the user has access. |\n\nThe [object map](/glossary/object-mapping.html) explains which records are related. Use the navigation model to choose which relationships become routes. Use the product's hierarchy to choose the breadcrumb trail. Use a separate return control when agents need to get back to a filtered list.\n\n## How do you design and test the model?\n\n1. **Start with common tasks.** Identify where users begin and which views they need to reach. Use [Object Prioritization](/glossary/object-prioritization.html) to distinguish primary entry points from nested records, and choose main sections and local views that match those tasks.\n2. **Add useful contextual links.** Decide which related records users need nearby. Use [cardinality](/glossary/cardinality-ux-architecture.html) to anticipate how many results a path may expose.\n3. **Plan orientation and return paths.** Check that titles, local navigation, and breadcrumbs make sense on direct entry. For an agent returning from a booking, consider whether the trip's prior list filters should be restored.\n4. **Test the routes separately.** Use tree testing to evaluate labels and hierarchy. Use a prototype to test contextual links and direct entry, where placement and screen context matter.\n\nTest whether an agent can open a booking from search, find its trip, and return to the booking list without losing their place.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Wayfinding System](/glossary/wayfinding-system.html)\n- [Breadcrumb Hierarchy](/glossary/breadcrumb-hierarchy.html)\n- [Polyhierarchy](/glossary/polyhierarchy.html)\n\n## Sources\n\n- [Designing Web Navigation: Types of Navigation Summary, James Kalbach](https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)\n- [Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group](https://www.nngroup.com/articles/tree-testing/)",
+    "contentMarkdown": "# Structural Navigation Model\n\nA structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.\n\n## How does structural navigation differ from contextual navigation?\n\nStructural navigation follows the product's organization. For example, **Trips → Trip details → Bookings** follows a section down to a local view. Contextual navigation connects related information where a user needs it. A link from a trip's traveler list to a Traveler record is a contextual route that can cross sections.\n\nKeep a record’s name and identifying details consistent across entry points. An agent who arrives from search should recognize the same booking they see on a trip.\n\n## Navigation example for a travel operations tool\n\n| Route | Design decision |\n|---|---|\n| Main menu → Trips → Trip details | Trips gives agents a stable starting point for work organized around trips. |\n| Trip details → Bookings | Local navigation keeps a trip's bookings within reach while the agent reviews that trip. |\n| Trip details → Traveler record | A contextual link lets the agent inspect a related traveler and their other trips. |\n| Search → Booking details | A direct entry should show the booking's identity and link to its trip when the user has access. |\n\nThe [object map](/glossary/object-mapping.html) explains which records are related. Use the navigation model to choose which relationships become routes. Use the product's hierarchy to choose the breadcrumb trail. Use a separate return control when agents need to get back to a filtered list.\n\n## How do you design and test the model?\n\n1. **Start with common tasks.** Identify where users begin and which views they need to reach. Choose main sections and local views that match those tasks.\n2. **Add useful contextual links.** Decide which related records users need nearby. Use [cardinality](/glossary/cardinality-ux-architecture.html) to anticipate how many results a path may expose.\n3. **Plan orientation and return paths.** Check that titles, local navigation, and breadcrumbs make sense on direct entry. For an agent returning from a booking, consider whether the trip's prior list filters should be restored.\n4. **Test the routes separately.** Use tree testing to evaluate labels and hierarchy. Use a prototype to test contextual links and direct entry, where placement and screen context matter.\n\nTest whether an agent can open a booking from search, find its trip, and return to the booking list without losing their place.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Wayfinding System](/glossary/wayfinding-system.html)\n- [Breadcrumb Hierarchy](/glossary/breadcrumb-hierarchy.html)\n- [Polyhierarchy](/glossary/polyhierarchy.html)\n\n## Sources\n\n- [Designing Web Navigation: Types of Navigation Summary, James Kalbach](https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)\n- [Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group](https://www.nngroup.com/articles/tree-testing/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -1011,14 +1010,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
-    "purpose": "Precludes unaccounted application states, prevents invalid user actions, and establishes complete interaction logic for complex multi-role workflows.",
+    "purpose": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
     "keyConcepts": [
-      "Finite state machines",
-      "state mutation",
-      "event triggers",
-      "transition guards."
+      "How do you read a state transition matrix?",
+      "Example of a booking state transition matrix",
+      "How does the matrix inform ORCA actions?"
     ],
-    "howItWorks": "Designers construct a two-dimensional grid of current states versus triggering actions, identifying permissible target states and disabling forbidden edge cases.",
+    "howItWorks": "A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.",
     "relatedTerms": [
       "Object-Oriented UX",
       "ORCA Framework",
@@ -1032,7 +1030,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "State Chart XML (SCXML), W3C (https://www.w3.org/TR/scxml/)",
       "Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)"
     ],
-    "contentMarkdown": "# State Transition Matrix\n\nA state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.\n\n## How do you read a state transition matrix?\n\nRows show current states. Columns show events, which can come from a user or an external system. A cell identifies the next state for that combination. When a transition depends on a rule, record the condition, also called a guard.\n\n## Example of a booking state transition matrix\n\nIn this example, an agent submits a booking and waits for the supplier to confirm it. Cancellation also requires a supplier response. While cancellation is pending, the agent can see the request status and cannot submit a second request.\n\n| Current state | Submit booking | Confirm booking | Request cancellation | Accept cancellation | Decline cancellation |\n|---|---|---|---|---|---|\n| Draft | Awaiting confirmation | — | — | — | — |\n| Awaiting confirmation | — | Confirmed | — | — | — |\n| Confirmed | — | — | Cancellation pending | — | — |\n| Cancellation pending | — | — | — | Canceled | Confirmed |\n| Canceled | — | — | — | — | — |\n\nA dash means the event has no valid transition in this example. Confirming the booking and accepting or declining cancellation are supplier events. The booking moves out of Draft once a complete submission succeeds. An agent can request cancellation only when their role and the fare rules allow it. If the supplier declines cancellation, restore Confirmed status and show the reason if available.\n\nThis example covers the confirmation path and two cancellation outcomes. Extend the model for booking rejection, timeouts, and other cases your product supports.\n\n## How does the matrix inform ORCA actions?\n\nThe Calls to Action part of [ORCA](/glossary/orca-framework.html) identifies actions people need, organized initially in a [CTA Matrix](/glossary/cta-matrix.html). The matrix helps specify how those actions behave at each stage of the object's lifecycle. For example, agents can see “Cancellation pending” in the booking list and open the detail view to check when the request was sent.\n\nRecord what users see when an event fails or arrives late. If a booking changed after the agent opened it, refresh its status and explain why the requested action cannot proceed. Use the same rules in list and detail views.\n\nReview the table with design, engineering, and operations. Walk through one routine case, one blocked action, and one delayed response. Add missing transitions or feedback before the workflow is built.\n\n## Related terms\n\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [State Chart XML (SCXML), W3C](https://www.w3.org/TR/scxml/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+    "contentMarkdown": "# State Transition Matrix\n\nA state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.\n\n## How do you read a state transition matrix?\n\nRows show current states. Columns show events, which can come from a user or an external system. A cell identifies the next state for that combination. When a transition depends on a rule, record the condition, also called a guard.\n\n## Example of a booking state transition matrix\n\nIn this example, an agent submits a booking and waits for the supplier to confirm it. Cancellation also requires a supplier response. While cancellation is pending, the agent can see the request status and cannot submit a second request.\n\n| Current state | Submit booking | Confirm booking | Request cancellation | Accept cancellation | Decline cancellation |\n|---|---|---|---|---|---|\n| Draft | Awaiting confirmation | — | — | — | — |\n| Awaiting confirmation | — | Confirmed | — | — | — |\n| Confirmed | — | — | Cancellation pending | — | — |\n| Cancellation pending | — | — | — | Canceled | Confirmed |\n| Canceled | — | — | — | — | — |\n\nA dash means the event has no valid transition in this example. Confirming the booking and accepting or declining cancellation are supplier events. The booking moves out of Draft once a complete submission succeeds. An agent can request cancellation only when their role and the fare rules allow it. If the supplier declines cancellation, restore Confirmed status and show the reason if available.\n\nThis example covers the confirmation path and two cancellation outcomes. Extend the model for booking rejection, timeouts, and other cases your product supports.\n\n## How does the matrix inform ORCA actions?\n\nThe Calls to Action part of [ORCA](/glossary/orca-framework.html) identifies actions people need. The matrix helps specify how those actions behave at each stage of the object's lifecycle. For example, agents can see “Cancellation pending” in the booking list and open the detail view to check when the request was sent.\n\nRecord what users see when an event fails or arrives late. If a booking changed after the agent opened it, refresh its status and explain why the requested action cannot proceed. Use the same rules in list and detail views.\n\nReview the table with design, engineering, and operations. Walk through one routine case, one blocked action, and one delayed response. Add missing transitions or feedback before the workflow is built.\n\n## Related terms\n\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [State Chart XML (SCXML), W3C](https://www.w3.org/TR/scxml/)\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -7176,14 +7174,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.",
-    "purpose": "Identifies core mental model entities from user research and domain materials, preventing premature UI wireframing before objects are defined.",
+    "purpose": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.",
     "keyConcepts": [
-      "SIP test",
-      "Structure Instances Purpose",
-      "Candidate objects",
-      "Entity discovery"
+      "How do you do noun foraging?",
+      "Example from travel operations",
+      "What comes next in ORCA?"
     ],
-    "howItWorks": "Extracts nouns from user transcripts, documentation, and existing interfaces, then filters them through the SIP criteria (Structure, Instances, Purpose) to separate true domain objects from attributes or actions.",
+    "howItWorks": "Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
@@ -7284,21 +7281,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.",
-    "purpose": "Maps bidirectional relationships between domain objects to expose navigational pathways and prevent isolated or dead-end views.",
+    "purpose": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.",
     "keyConcepts": [
-      "Host-target grid",
-      "Bidirectional relationships",
-      "Cardinality mapping",
-      "Nested navigation"
+      "How do you read a Nested Object Matrix?",
+      "A Nested Object Matrix for travel operations",
+      "How do you build the matrix?"
     ],
-    "howItWorks": "Plots object types as columns (hosts) and rows (nested targets), testing each intersection in both directions to establish explicit connection cardinality and user navigation access.",
+    "howItWorks": "A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
       "Noun Foraging",
-      "Cardinality (UX Architecture)",
-      "ORCA Relationship Requirements (MCSFD)",
-      "Junction Object"
+      "Cardinality (UX Architecture)"
     ],
     "seoTitle": "Nested Object Matrix in OOUX | Product Design Glossary",
     "seoDescription": "Build a Nested Object Matrix in ORCA. Use a travel operations example to map relationships in both directions and identify useful navigation paths.",
@@ -7308,7 +7302,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
       "Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)"
     ],
-    "contentMarkdown": "# Nested Object Matrix\n\nA Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.\n\n## How do you read a Nested Object Matrix?\n\nIn Sophia Prater’s convention, the top row contains the **host objects**. Read a cell by starting with the column heading and describing how that host relates to the object type on the left. Use verbs and counts where you know them. To check the reverse direction, swap the row and column. Trip → Booking answers which bookings are on a trip. Booking → Trip answers which trip owns the booking.\n\n## A Nested Object Matrix for travel operations\n\nIn this example, a trip can exist before it has a booking. Each booking belongs to exactly one trip. Travelers may appear on multiple trips.\n\n| Related object ↓ / Host object → | Trip | Booking | Traveler |\n|---|---|---|---|\n| Trip | — | Belongs to exactly one trip | Can be linked to multiple trips |\n| Booking | Has zero or more bookings | — | — |\n| Traveler | Can include multiple travelers | — | — |\n\nA dash marks a cell with no direct relationship in this example. In a working matrix, mark an untested relationship as “To verify” so the team can distinguish it from an empty cell. For example, a booking can lead to travelers through its trip. If the product needs to identify which travelers are covered by a particular booking, investigate that as a separate relationship.\n\n## How do you build the matrix?\n\n1. **List the same object types on both axes.** Start with the shortlist from [noun foraging](/glossary/noun-foraging.html).\n2. **Describe each relevant relationship in plain language.** Put distinct relationships in the same cell when the same object types connect in several ways.\n3. **Check minimums and maximums in both directions.** “Has bookings” leaves open whether the first booking is required. Write the [cardinality](/glossary/cardinality-ux-architecture.html) explicitly when a rule is known. Teams use [ORCA Relationship Requirements (MCSFD)](/glossary/orca-relationship-requirements.html) to detail mechanics, sorting, and filtering, and introduce a [Junction Object](/glossary/junction-object.html) when the connection itself carries data.\n4. **Decide what users need to reach.** Test whether an agent who opens a booking from search can find its trip. Check that the trip is visible to that agent before adding the link.\n\nThe matrix focuses on relationships. The [object map](/glossary/object-mapping.html) builds on those findings to organize the information that describes each object. A [CTA Matrix](/glossary/cta-matrix.html) records what different roles can do with them.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Noun Foraging](/glossary/noun-foraging.html)\n- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)\n\n## Sources\n\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)",
+    "contentMarkdown": "# Nested Object Matrix\n\nA Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.\n\n## How do you read a Nested Object Matrix?\n\nIn Sophia Prater’s convention, the top row contains the **host objects**. Read a cell by starting with the column heading and describing how that host relates to the object type on the left. Use verbs and counts where you know them. To check the reverse direction, swap the row and column. Trip → Booking answers which bookings are on a trip. Booking → Trip answers which trip owns the booking.\n\n## A Nested Object Matrix for travel operations\n\nIn this example, a trip can exist before it has a booking. Each booking belongs to exactly one trip. Travelers may appear on multiple trips.\n\n| Related object ↓ / Host object → | Trip | Booking | Traveler |\n|---|---|---|---|\n| Trip | — | Belongs to exactly one trip | Can be linked to multiple trips |\n| Booking | Has zero or more bookings | — | — |\n| Traveler | Can include multiple travelers | — | — |\n\nA dash marks a cell with no direct relationship in this example. In a working matrix, mark an untested relationship as “To verify” so the team can distinguish it from an empty cell. For example, a booking can lead to travelers through its trip. If the product needs to identify which travelers are covered by a particular booking, investigate that as a separate relationship.\n\n## How do you build the matrix?\n\n1. **List the same object types on both axes.** Start with the shortlist from [noun foraging](/glossary/noun-foraging.html).\n2. **Describe each relevant relationship in plain language.** Put distinct relationships in the same cell when the same object types connect in several ways.\n3. **Check minimums and maximums in both directions.** “Has bookings” leaves open whether the first booking is required. Write the [cardinality](/glossary/cardinality-ux-architecture.html) explicitly when a rule is known.\n4. **Decide what users need to reach.** Test whether an agent who opens a booking from search can find its trip. Check that the trip is visible to that agent before adding the link.\n\nThe matrix focuses on relationships. The [object map](/glossary/object-mapping.html) builds on those findings to organize the information that describes each object. A [CTA Matrix](/glossary/cta-matrix.html) records what different roles can do with them.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Noun Foraging](/glossary/noun-foraging.html)\n- [Cardinality (UX Architecture)](/glossary/cardinality-ux-architecture.html)\n\n## Sources\n\n- [Introducing ORCA, Sophia V. Prater](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [Object-Oriented UX with Sophia Prater, InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)\n- [Object-Oriented UX, Sophia V. Prater](https://alistapart.com/article/object-oriented-ux/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -7397,14 +7391,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.",
-    "purpose": "Connects user roles, objects, and actions systematically, defining CRUD and custom intent calls before designing visual buttons or menus.",
+    "purpose": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.",
     "keyConcepts": [
-      "Role-object actions",
-      "CRUD operations",
-      "Action prerequisites",
-      "State changes"
+      "What goes in a CTA Matrix?",
+      "CTA Matrix example for travel operations",
+      "How do you turn matrix entries into requirements?"
     ],
-    "howItWorks": "Lays out user roles against domain objects to document permitted actions, conditional constraints, and resulting object state transitions.",
+    "howItWorks": "A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
@@ -7504,14 +7497,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.",
-    "purpose": "Establishes domain semantic clarity and disambiguation, eliminating synonymous confusion and defining identity attributes for each entity.",
+    "purpose": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.",
     "keyConcepts": [
-      "Domain glossary",
-      "Disambiguation",
-      "Attribute taxonomy",
-      "Controlled vocabulary"
+      "What should an Object Guide include?",
+      "How does the guide work with other ORCA artifacts?",
+      "How do you keep an Object Guide useful?"
     ],
-    "howItWorks": "Documents each object type with canonical definitions, visual and functional identifiers, differentiating examples, and explicit anti-patterns or exclusions.",
+    "howItWorks": "An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
@@ -7608,14 +7600,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.",
-    "purpose": "Provides a diagnostic framework to audit interfaces for object clarity, preventing disguised, polymorphic, un-actionable, or disconnected entities.",
+    "purpose": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.",
     "keyConcepts": [
-      "Masked objects",
-      "Shape-shifter objects",
-      "Broken objects",
-      "Isolated objects"
+      "How do you spot the four problems?",
+      "How do you run a review?"
     ],
-    "howItWorks": "Audits product screens against four failure modes to ensure objects look like themselves, maintain consistent representation across views, provide accessible actions, and link bidirectionally.",
+    "howItWorks": "The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.",
     "relatedTerms": [
       "Object-Oriented UX (OOUX)",
       "ORCA Framework",
@@ -7710,14 +7700,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.",
-    "purpose": "Aligns system architecture with MVP scope and navigation hierarchy by ranking core domain entities by frequency and business importance.",
+    "purpose": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.",
     "keyConcepts": [
-      "Primary vs secondary objects",
-      "Entry points",
-      "Structural hierarchy",
-      "Scope control"
+      "What are you prioritizing?",
+      "Example of prioritizing objects for a first release",
+      "How do you check your decisions?"
     ],
-    "howItWorks": "Ranks objects based on user task frequency, revenue impact, and dependency ordering to establish top-level navigation versus nested views.",
+    "howItWorks": "Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.",
     "relatedTerms": [
       "ORCA Framework",
       "Object Mapping",
@@ -7817,15 +7806,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.",
-    "purpose": "Transforms abstract connections between objects into concrete UI behavior and data rules through a structured 5-part checklist.",
+    "purpose": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.",
     "keyConcepts": [
-      "Mechanics",
-      "Cardinality",
-      "Sorting",
-      "Filtering",
-      "Dependency (MCSFD)"
+      "What does MCSFD cover?",
+      "How do these rules affect the design?"
     ],
-    "howItWorks": "Applies the MCSFD checklist across every object relationship to define how associations are created, counted, ordered, filtered, and lifecycle-dependent.",
+    "howItWorks": "ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.",
     "relatedTerms": [
       "ORCA Framework",
       "Nested Object Matrix",
@@ -7925,14 +7911,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Proprietary / Framework-Specific",
     "definition": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.",
-    "purpose": "Elevates complex many-to-many associations into first-class objects capable of carrying their own attributes, metadata, and lifecycle states.",
+    "purpose": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.",
     "keyConcepts": [
-      "Associative entity",
-      "Many-to-many relationship",
-      "Relationship metadata",
-      "Attribute ownership"
+      "Example of a junction object",
+      "When is a junction object useful?",
+      "How does it show up in the interface?"
     ],
-    "howItWorks": "Promotes a relational link into a discrete entity (e.g. Booking between Traveler and Trip) when metadata or actions belong to the relationship rather than either endpoint.",
+    "howItWorks": "A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.",
     "relatedTerms": [
       "Object Mapping",
       "Cardinality (UX Architecture)",
@@ -9043,12 +9028,1571 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Keyboard Accessibility",
       "Focus Management"
     ]
+  },
+  {
+    "id": "118",
+    "name": "Object Attributes in OOUX",
+    "slug": "object-attributes-ooux",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.",
+    "purpose": "Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.",
+    "keyConcepts": [
+      "Example: defining Booking attributes",
+      "What should attribute requirements record?"
+    ],
+    "howItWorks": "Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.",
+    "relatedTerms": [
+      "Object Mapping",
+      "Object Guide",
+      "Attribute Prioritization",
+      "Content Modeling"
+    ],
+    "seoTitle": "Object Attributes in OOUX: Core Content and Metadata",
+    "seoDescription": "Learn how OOUX uses core content and metadata, distinguish attributes from related objects, and document field rules with a practical booking example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-attributes-ooux.html",
+    "sources": [
+      "Sophia V. Prater: Object-Oriented UX (https://alistapart.com/article/object-oriented-ux/)",
+      "Sophia V. Prater: Prioritizing Prioritization for Product Designers (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)"
+    ],
+    "contentMarkdown": "# Object Attributes in OOUX\n\nObject attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.\n\nSophia Prater's object-mapping approach distinguishes core content, such as descriptive text and images, from metadata used to organize information through activities such as sorting and filtering. The distinction concerns how information is used; it does not mean metadata is less important.\n\n## Attribute or related object?\n\nAsk whether the concept needs its own identity, information, relationships, or actions.\n\nA booking's status can be an attribute. A Traveler may need a separate record because agents find the same person across trips and update their contact information. The booking can reference that record.\n\nA supplier name alone does not settle whether Supplier needs to be an object in this product. Investigate whether people need to manage suppliers or only recognize a label.\n\n## Example: defining Booking attributes\n\nThe following rules describe an illustrative travel operations product.\n\n| Attribute | Purpose | Rule to clarify |\n|---|---|---|\n| Booking reference | Identify the record across views | Assigned when the booking is created; remains stable. |\n| Status | Understand the current stage and filter a queue | Updated by defined workflow events. |\n| Supplier confirmation number | Look up the supplier's confirmed reservation | Required for this product's Confirmed state; absent while awaiting confirmation. |\n| Service date | Compare and order upcoming work | Define the relevant local date and time zone where time matters. |\n| Internal note | Record operational context | Visible only to permitted staff. |\n\nA required field can depend on state. Requiring a supplier confirmation number when someone first creates a draft would contradict this example's workflow.\n\n## What should attribute requirements record?\n\nDocument the meaning, source, accepted values, required conditions, edit permissions, and handling of missing information. Identify who owns a value when several systems display it.\n\nUse realistic records to test the rules: a draft, a confirmed booking, a long reference, and a record with unavailable data. Make sure “unknown” and “not applicable” are distinguishable when they lead to different decisions.\n\nKeep the object map readable and link to detailed requirements as needed. [Attribute prioritization](/glossary/attribute-prioritization.html) then determines which information deserves prominence in each view.\n\n## Related terms\n\n- [Object Mapping](/glossary/object-mapping.html)\n- [Object Guide](/glossary/object-guide.html)\n- [Attribute Prioritization](/glossary/attribute-prioritization.html)\n- [Content Modeling](/glossary/content-modeling.html)\n\n## Sources\n\n- [Sophia V. Prater: Object-Oriented UX](https://alistapart.com/article/object-oriented-ux/)\n- [Sophia V. Prater: Prioritizing Prioritization for Product Designers](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/object-attributes-ooux.html",
+        "name": "Object Attributes in OOUX: Core Content and Metadata",
+        "description": "Learn how OOUX uses core content and metadata, distinguish attributes from related objects, and document field rules with a practical booking example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://alistapart.com/article/object-oriented-ux/",
+          "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#term",
+        "name": "Object Attributes in OOUX",
+        "termCode": "object-attributes-ooux",
+        "description": "Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.",
+        "url": "https://lexkonovalov.com/glossary/object-attributes-ooux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#webpage"
+        },
+        "alternateName": [
+          "OOUX attributes"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/object-attributes-ooux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Object Attributes in OOUX",
+            "item": "https://lexkonovalov.com/glossary/object-attributes-ooux.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "OOUX attributes"
+    ]
+  },
+  {
+    "id": "119",
+    "name": "Object Inheritance in OOUX",
+    "slug": "object-inheritance-ooux",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.",
+    "purpose": "Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.",
+    "keyConcepts": [
+      "Example: different kinds of Booking",
+      "Subtype, state, attribute, or relationship?",
+      "When is a subtype useful?",
+      "How to validate the model"
+    ],
+    "howItWorks": "Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.",
+    "relatedTerms": [
+      "Object Guide",
+      "Object Attributes in OOUX",
+      "Tree Systems in OOUX",
+      "State Transition Matrix"
+    ],
+    "seoTitle": "Object Inheritance in OOUX: Types, Subtypes, and Examples",
+    "seoDescription": "Understand inheritance in an OOUX model, distinguish subtypes from states and related objects, and assess shared and specialized booking information.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html",
+    "sources": [
+      "OOUX Masterclass: Inheritance (https://ooux.com/selfpacedoouxmasterclass)"
+    ],
+    "contentMarkdown": "# Object Inheritance in OOUX\n\nObject inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.\n\nThis is a conceptual design decision. It does not require a particular programming language, class hierarchy, or database layout.\n\n## Example: different kinds of Booking\n\nAn illustrative travel product treats Flight Booking and Hotel Booking as kinds of Booking.\n\n| Shared information | Flight Booking detail | Hotel Booking detail |\n|---|---|---|\n| Booking reference | Airline booking locator | Property confirmation number. |\n| Current status | References to booked flight segments | Check-in and check-out dates. |\n| Linked trip | Flight-specific fare conditions | Accommodation-specific cancellation conditions. |\n\nThe general type gives the team a place to discuss common identity and behavior. The specialized types capture meaningful differences in information and work.\n\nThe table is a proposed product model. Confirm it against actual tasks and supplier behavior. Similar labels do not guarantee that two types follow the same confirmation or cancellation process.\n\n## Subtype, state, attribute, or relationship?\n\nThese distinctions answer different questions:\n\n- A subtype expresses a more specific kind of thing.\n- A state describes a stage in an object's lifecycle.\n- An attribute describes a property of the object.\n- A relationship connects it to another object.\n\nConfirmed and Canceled can be states of the same Booking rather than separate subtypes. Refundable may be an attribute or a rule derived from fare conditions. Traveler is a related object with its own identity.\n\nA [Tree System](/glossary/tree-systems-ooux.html) connects forms that become more specific in context. Do not assume every parent-child relationship in that pattern is subtype inheritance.\n\n## When is a subtype useful?\n\nInvestigate whether people recognize a stable distinction and whether it changes the object's structure, actions, or rules. Compare representative records and tasks before committing to the split.\n\nIf the difference is a single changeable value, an attribute may describe it adequately. If responsibilities differ but the object remains the same, role-based permissions may be sufficient.\n\n## How to validate the model\n\nAsk users to identify each record and perform equivalent tasks across types. Review shared labels and specialized fields with domain experts.\n\nCheck that shared components accommodate the differences without concealing essential information or making one type behave incorrectly.\n\n## Related terms\n\n- [Object Guide](/glossary/object-guide.html)\n- [Object Attributes in OOUX](/glossary/object-attributes-ooux.html)\n- [Tree Systems in OOUX](/glossary/tree-systems-ooux.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n\n## Sources\n\n- [OOUX Masterclass: Inheritance](https://ooux.com/selfpacedoouxmasterclass)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html",
+        "name": "Object Inheritance in OOUX: Types, Subtypes, and Examples",
+        "description": "Understand inheritance in an OOUX model, distinguish subtypes from states and related objects, and assess shared and specialized booking information.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ooux.com/selfpacedoouxmasterclass"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#term",
+        "name": "Object Inheritance in OOUX",
+        "termCode": "object-inheritance-ooux",
+        "description": "Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.",
+        "url": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Object Inheritance in OOUX",
+            "item": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "name": "Object Representation",
+    "slug": "object-representation-ooux",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.",
+    "purpose": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.",
+    "keyConcepts": [
+      "Start with the user's question",
+      "Example: representing Booking B-52",
+      "Keep meaningful differences visible",
+      "Check behavior and accessibility"
+    ],
+    "howItWorks": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.",
+    "relatedTerms": [
+      "Object Mapping",
+      "Shapeshifter Matrix",
+      "Attribute Prioritization",
+      "CTA Prioritization"
+    ],
+    "seoTitle": "Object Representation in OOUX: From Models to Interface",
+    "seoDescription": "Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-representation-ooux.html",
+    "sources": [
+      "OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails)",
+      "W3C: Understanding Consistent Identification (https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)"
+    ],
+    "contentMarkdown": "# Object Representation\n\nObject representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.\n\nThe object model describes what the object is and how it relates to other things. Representation turns those decisions into something a person can identify and use in a particular context.\n\n## Start with the user's question\n\nBefore choosing a layout, identify what someone needs to recognize, compare, inspect, or change. Use prioritized attributes and actions to decide what the representation should support.\n\nA compact row can be appropriate for scanning many bookings. A detailed view can support investigating one booking. Both need enough identifying information for a person to understand which record they are using.\n\n## Example: representing Booking B-52\n\nSuppose Booking B-52 is Confirmed and belongs to Trip T-104.\n\n| Context | Representation decision |\n|---|---|\n| Search result | Show the booking reference, service date, status, and enough supplier information to choose the match. |\n| Trip booking list | Preserve the same identifying cues while making the trip relationship clear. |\n| Booking detail | Add relevant conditions, history, permitted actions, and a route to the trip. |\n| Cancellation review | Repeat the booking identity and summarize the proposed action and its consequences. |\n\nThe cancellation review should make clear that submitting the request begins a process. In this example, an accepted request first becomes Cancellation pending.\n\n## Keep meaningful differences visible\n\nDistinct object types need recognizable labels. An Offer and a Booking should not become indistinguishable simply because they use the same card component.\n\nVariants of the same object can share a component while showing different detail. Use a [Shapeshifter Matrix](/glossary/shapeshifter-matrix.html) to document those differences and their reasons.\n\nDefine empty, loading, unavailable, and error states. The absence of data must not accidentally communicate a confirmed result.\n\n## Check behavior and accessibility\n\nUse headings, relationships, control labels, and accessible names that communicate the intended meaning. WCAG's Consistent Identification criterion addresses consistent identification of recurring components with the same functionality; it does not require every object view to have an identical layout.\n\nTest recognition across entry points, including search and direct links. Ask users to identify the record, reach a related object, and find an available action. Review both what the representation communicates and what the interaction actually does.\n\n## Related terms\n\n- [Object Mapping](/glossary/object-mapping.html)\n- [Shapeshifter Matrix](/glossary/shapeshifter-matrix.html)\n- [Attribute Prioritization](/glossary/attribute-prioritization.html)\n- [CTA Prioritization](/glossary/cta-prioritization.html)\n\n## Sources\n\n- [OOUX: Designing With ORCA](https://ooux.com/offerings/fourfails)\n- [W3C: Understanding Consistent Identification](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html",
+        "name": "Object Representation in OOUX: From Models to Interface",
+        "description": "Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ooux.com/offerings/fourfails",
+          "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#term",
+        "name": "Object Representation",
+        "termCode": "object-representation-ooux",
+        "description": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.",
+        "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Object Representation",
+            "item": "https://lexkonovalov.com/glossary/object-representation-ooux.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "name": "Object-Oriented User Stories",
+    "slug": "object-oriented-user-stories",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.",
+    "purpose": "Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.",
+    "keyConcepts": [
+      "A practical story structure",
+      "Example: requesting a booking cancellation",
+      "Review the story across entry points"
+    ],
+    "howItWorks": "Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.",
+    "relatedTerms": [
+      "CTA Matrix",
+      "ORCA Framework",
+      "State Transition Matrix",
+      "CTA Prioritization"
+    ],
+    "seoTitle": "Object-Oriented User Stories: ORCA Requirements and Example",
+    "seoDescription": "Turn a CTA Matrix entry into an object-oriented user story with a clear actor, object, motivation, conditions, and testable outcomes in a booking example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html",
+    "sources": [
+      "Sophia Prater: Object-Oriented UX — InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)",
+      "Sophia V. Prater: Prioritizing Prioritization for Product Designers (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)"
+    ],
+    "contentMarkdown": "# Object-Oriented User Stories\n\nObject-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.\n\nThe matrix supplies an initial actor, action, and object. The story adds motivation and conditions so the team can design the behavior and assess whether it works. This is a way to develop requirements, without prescribing one mandatory sentence format.\n\n## A practical story structure\n\nRecord the actor, action, target object, purpose, and conditions. Then describe the result and relevant exceptions.\n\nA short “As a … I want … so that …” sentence can introduce the need. Supporting requirements capture details that would make that sentence difficult to read.\n\n## Example: requesting a booking cancellation\n\nAn illustrative CTA Matrix gives an assigned agent the action Request cancellation on a Booking.\n\nThe story could read:\n\n> As the agent assigned to a trip, I need to request cancellation of an eligible confirmed booking when the traveler changes plans, so I can start the supplier's cancellation process and track its response.\n\nThe team agrees these example conditions and outcomes:\n\n| Case | Expected behavior |\n|---|---|\n| Agent has access; booking is Confirmed and eligible | Review the target booking and submit the cancellation request. |\n| Supplier accepts the request for processing | Show Cancellation pending and a request reference. |\n| Supplier later confirms cancellation | Update the booking to Canceled. |\n| Booking is no longer eligible | Explain the current restriction and offer the appropriate next step. |\n| Cancellation is already pending | Show the existing request instead of creating a duplicate. |\n| Submission times out | Check whether the request exists before offering a retry. |\n\nCancellation pending is an intermediate state. The interface must not describe the booking as canceled before the supplier confirms that outcome.\n\n## Review the story across entry points\n\nTry the action from a booking opened through its trip and through search. Check that both routes identify the same record and apply the same rules.\n\nUse a [state transition matrix](/glossary/state-transition-matrix.html) when the lifecycle needs more detail. Confirm permissions with the implementation team: the service must enforce them when the request runs.\n\nReview stories with the people doing the work. A complete template can still describe an unnecessary action or misunderstand the reason someone needs it.\n\n## Related terms\n\n- [CTA Matrix](/glossary/cta-matrix.html)\n- [ORCA Framework](/glossary/orca-framework.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n- [CTA Prioritization](/glossary/cta-prioritization.html)\n\n## Sources\n\n- [Sophia Prater: Object-Oriented UX — InfoQ interview](https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)\n- [Sophia V. Prater: Prioritizing Prioritization for Product Designers](https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html",
+        "name": "Object-Oriented User Stories: ORCA Requirements and Example",
+        "description": "Turn a CTA Matrix entry into an object-oriented user story with a clear actor, object, motivation, conditions, and testable outcomes in a booking example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/",
+          "https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#term",
+        "name": "Object-Oriented User Stories",
+        "termCode": "object-oriented-user-stories",
+        "description": "Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.",
+        "url": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Object-Oriented User Stories",
+            "item": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "name": "OOUX Prototyping and Testing",
+    "slug": "ooux-prototyping-and-testing",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.",
+    "purpose": "OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.",
+    "keyConcepts": [
+      "Choose the right level of detail",
+      "Example tasks for a booking prototype",
+      "What evidence should you record?",
+      "How to use the results"
+    ],
+    "howItWorks": "OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.",
+    "relatedTerms": [
+      "Object Representation",
+      "Content Prototyping",
+      "Four UX Fails in OOUX",
+      "Structural Navigation Model"
+    ],
+    "seoTitle": "OOUX Prototyping and Testing: Tasks, Examples, and Checks",
+    "seoDescription": "Test whether users recognize objects, navigate relationships, and understand actions in an OOUX prototype, with practical tasks and evidence to record.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html",
+    "sources": [
+      "Sophia V. Prater: OOUX — A Foundation for Interaction Design (https://alistapart.com/article/ooux-a-foundation-for-interaction-design/)",
+      "Nielsen Norman Group: Usability Testing 101 (https://www.nngroup.com/articles/usability-testing-101/)"
+    ],
+    "contentMarkdown": "# OOUX Prototyping and Testing\n\nOOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.\n\nA prototype can start with simple linked records or low-fidelity screens. Add interaction detail when the research question requires it.\n\n## Choose the right level of detail\n\nTo examine structure, connect representative object views and include plausible content. To examine a consequential action, also represent its conditions, review, feedback, and relevant failure states.\n\nA content prototype can test whether records fit the model. A clickable interface can test whether people understand where to go and what to do. Be explicit about which behavior has been simulated.\n\n## Example tasks for a booking prototype\n\nAssume an operations tool contains Trip T-104 and Booking B-52.\n\n| Research question | Task prompt |\n|---|---|\n| Object recognition | “This supplier message refers to B-52. Find the matching record and tell me what it represents.” |\n| Relationship understanding | “Find the trip associated with this booking and identify its travelers.” |\n| Action discovery | “The traveler no longer needs this service. Show what you would do next.” |\n| Outcome understanding | After a submitted request: “What has happened, and what still needs to happen?” |\n\nKeep task wording neutral. Do not name a button or route when discovering that route is part of the question.\n\nInclude a direct entry from search, an empty related list, and an object state that changes available actions. Test with people who perform the relevant work.\n\n## What evidence should you record?\n\nObserve mistaken identities, wrong turns, missing information, action misinterpretations, and recovery attempts. Note the starting conditions, task outcome, and supporting observations.\n\nA participant can successfully reach a page while misunderstanding the record. Follow-up questions help investigate that distinction without teaching the answer during the task.\n\nSeparate an issue in the model from an issue in labels, placement, or prototype limitations. The same wrong turn can have different causes.\n\n## How to use the results\n\nRevise the relevant object definition, relationship, attribute, action requirement, or representation. Retest the affected task and any important dependencies.\n\nAn OOUX-focused study can inform broader usability work. It does not by itself establish production performance, accessibility conformance, or support for untested workflows.\n\n## Related terms\n\n- [Object Representation](/glossary/object-representation-ooux.html)\n- [Content Prototyping](/glossary/content-prototyping.html)\n- [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n\n## Sources\n\n- [Sophia V. Prater: OOUX — A Foundation for Interaction Design](https://alistapart.com/article/ooux-a-foundation-for-interaction-design/)\n- [Nielsen Norman Group: Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html",
+        "name": "OOUX Prototyping and Testing: Tasks, Examples, and Checks",
+        "description": "Test whether users recognize objects, navigate relationships, and understand actions in an OOUX prototype, with practical tasks and evidence to record.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#breadcrumbs"
+        },
+        "citation": [
+          "https://alistapart.com/article/ooux-a-foundation-for-interaction-design/",
+          "https://www.nngroup.com/articles/usability-testing-101/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#term",
+        "name": "OOUX Prototyping and Testing",
+        "termCode": "ooux-prototyping-and-testing",
+        "description": "OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.",
+        "url": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OOUX Prototyping and Testing",
+            "item": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "name": "ORCA Sprint",
+    "slug": "orca-sprint",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.",
+    "purpose": "An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.",
+    "keyConcepts": [
+      "What should you prepare?",
+      "An illustrative five-day agenda",
+      "Example: resolving a booking ambiguity",
+      "How do you know the sprint helped?"
+    ],
+    "howItWorks": "An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.",
+    "relatedTerms": [
+      "ORCA Framework",
+      "Noun Foraging",
+      "Object Mapping",
+      "OOUX Prototyping and Testing"
+    ],
+    "seoTitle": "ORCA Sprint: OOUX Workshop Preparation and Example Agenda",
+    "seoDescription": "Plan an ORCA Sprint with a focused problem, research inputs, cross-functional participants, and concrete outputs, using an illustrative five-day agenda.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/orca-sprint.html",
+    "sources": [
+      "OOUX: ORCA Sprints (https://ooux.com/hi/orca-sprints)",
+      "Sophia V. Prater: Running ORCA Sprints at Autodesk (https://ooux.com/resources/episode034)"
+    ],
+    "contentMarkdown": "# ORCA Sprint\n\nAn ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.\n\nIts purpose is to build shared understanding and useful design artifacts. A sprint can expose questions that require further research or decisions after the workshop.\n\n## What should you prepare?\n\nChoose a bounded problem, such as helping travel agents manage bookings within a trip. Identify the users and outcomes in scope, collect relevant research and existing records, and invite people who can explain the domain and implementation constraints.\n\nPrepare a shared workspace, agree on terminology, and identify who can resolve disputed business rules. Keep assumptions visibly separate from evidence.\n\n## An illustrative five-day agenda\n\nThe agenda below is an example adaptation, not a reproduction of an official ORCA Sprint schedule.\n\n| Day | Focus | Useful output |\n|---|---|---|\n| 1 | Review the problem and identify candidate objects | Shortlist with definitions, evidence, and open questions. |\n| 2 | Explore relationships and user entry points | Nested Object Matrix and initial navigation ideas. |\n| 3 | Map actions by role and inspect attributes | CTA Matrix, object map, and unresolved rule questions. |\n| 4 | Clarify important requirements and prioritize scope | Agreed decisions, deferred work, and reasons. |\n| 5 | Sketch and review a task through the model | Prototype or connected sketches with a validation plan. |\n\nAdjust the sequence when earlier work already answers a question. If evidence is missing, use the workshop to identify how to obtain it.\n\n## Example: resolving a booking ambiguity\n\nSales and ticketing use “confirmed” differently. During the sprint, the team separates an accepted Offer from a supplier-confirmed Booking.\n\nIt records who owns each status, which events change it, and what an agent needs to see at the handoff. The resulting definitions guide the prototype and become questions to validate with users.\n\n## How do you know the sprint helped?\n\nCheck whether the team can explain the objects, trace a representative task, and identify the decisions still outstanding. Assign owners and next steps to unresolved questions.\n\nA completed object map records the workshop's model. Validate it through realistic records and user tasks before treating it as a finished solution. Keep the artifacts current as the product changes.\n\n## Related terms\n\n- [ORCA Framework](/glossary/orca-framework.html)\n- [Noun Foraging](/glossary/noun-foraging.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [OOUX Prototyping and Testing](/glossary/ooux-prototyping-and-testing.html)\n\n## Sources\n\n- [OOUX: ORCA Sprints](https://ooux.com/hi/orca-sprints)\n- [Sophia V. Prater: Running ORCA Sprints at Autodesk](https://ooux.com/resources/episode034)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/orca-sprint.html",
+        "name": "ORCA Sprint: OOUX Workshop Preparation and Example Agenda",
+        "description": "Plan an ORCA Sprint with a focused problem, research inputs, cross-functional participants, and concrete outputs, using an illustrative five-day agenda.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ooux.com/hi/orca-sprints",
+          "https://ooux.com/resources/episode034"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#term",
+        "name": "ORCA Sprint",
+        "termCode": "orca-sprint",
+        "description": "An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.",
+        "url": "https://lexkonovalov.com/glossary/orca-sprint.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/orca-sprint.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ORCA Sprint",
+            "item": "https://lexkonovalov.com/glossary/orca-sprint.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "name": "Relationship Prioritization",
+    "slug": "relationship-prioritization",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.",
+    "purpose": "Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.",
+    "keyConcepts": [
+      "What are you prioritizing?",
+      "Example: managing a travel booking",
+      "How to choose",
+      "How to test it"
+    ],
+    "howItWorks": "Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.",
+    "relatedTerms": [
+      "Nested Object Matrix",
+      "ORCA Relationship Requirements",
+      "Structural Navigation Model",
+      "Object Prioritization"
+    ],
+    "seoTitle": "Relationship Prioritization in ORCA: Scope and Navigation",
+    "seoDescription": "Decide which object relationships need product support and visible navigation, with a travel example that distinguishes data links from user-facing paths.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/relationship-prioritization.html",
+    "sources": [
+      "The UX Level-Up: Relationship Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950)",
+      "OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails)"
+    ],
+    "contentMarkdown": "# Relationship Prioritization\n\nRelationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.\n\nA connection can exist in the data model without needing a visible navigation link in every view. Decide what people need to understand, reach, or manage in each context.\n\n## What are you prioritizing?\n\nA [Nested Object Matrix](/glossary/nested-object-matrix.html) helps discover possible connections. Relationship requirements describe how a connection works, including its mechanics and cardinality.\n\nPrioritization asks which capabilities and paths matter for the intended release. A navigation design then determines how those chosen paths appear.\n\n## Example: managing a travel booking\n\nA first release supports agents working on trips and their bookings.\n\n| Connection | Example decision | User need |\n|---|---|---|\n| Trip to Bookings | Show related bookings and a way to add one | Manage the trip's travel services. |\n| Booking to Trip | Provide a contextual route back to the trip | Understand the record after entering through search. |\n| Trip to Travelers | Show associated travelers | Verify whom the trip concerns. |\n| Traveler to all Trips | Support if cross-trip history is part of the release | Investigate earlier travel without duplicate searches. |\n| Booking to Supplier profile | Defer the profile route if supplier management is out of scope | Retain the supplier information needed for the booking. |\n\nDeferring a supplier profile does not remove the need to identify the supplier. Record where that information comes from and how agents use it.\n\n## How to choose\n\nStart with representative tasks and entry points. Evaluate the need in both directions: a person viewing a Trip may need its Bookings, while someone opening a Booking directly needs its Trip context.\n\nConsider related-record volume, permissions, maintenance cost, and what happens when no related record exists. Document deferred capabilities and the evidence that would make them necessary.\n\nAvoid removing a relationship merely because its interface is inconvenient. A required business connection still needs an appropriate representation.\n\n## How to test it\n\nAsk users to complete a routine task and investigate an exception. Start one task from search or a notification.\n\nObserve whether users find the next relevant record, understand where they arrived, and retain enough context to return. Review the result before adding more links.\n\n## Related terms\n\n- [Nested Object Matrix](/glossary/nested-object-matrix.html)\n- [ORCA Relationship Requirements](/glossary/orca-relationship-requirements.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n- [Object Prioritization](/glossary/object-prioritization.html)\n\n## Sources\n\n- [The UX Level-Up: Relationship Prioritization with Jake Zukowski](https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950)\n- [OOUX: Designing With ORCA](https://ooux.com/offerings/fourfails)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/relationship-prioritization.html",
+        "name": "Relationship Prioritization in ORCA: Scope and Navigation",
+        "description": "Decide which object relationships need product support and visible navigation, with a travel example that distinguishes data links from user-facing paths.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#breadcrumbs"
+        },
+        "citation": [
+          "https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950",
+          "https://ooux.com/offerings/fourfails"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#term",
+        "name": "Relationship Prioritization",
+        "termCode": "relationship-prioritization",
+        "description": "Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.",
+        "url": "https://lexkonovalov.com/glossary/relationship-prioritization.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/relationship-prioritization.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Relationship Prioritization",
+            "item": "https://lexkonovalov.com/glossary/relationship-prioritization.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "name": "Attribute Prioritization",
+    "slug": "attribute-prioritization",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.",
+    "purpose": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.",
+    "keyConcepts": [
+      "Two decisions to separate",
+      "Example: prioritizing Booking information",
+      "How to make the decision",
+      "How to test the result"
+    ],
+    "howItWorks": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.",
+    "relatedTerms": [
+      "Object Attributes in OOUX",
+      "Object Prioritization",
+      "Object Representation",
+      "Progressive Disclosure"
+    ],
+    "seoTitle": "Attribute Prioritization in OOUX: Choosing What to Show",
+    "seoDescription": "Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/attribute-prioritization.html",
+    "sources": [
+      "The UX Level-Up: Attribute Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352)",
+      "Sophia V. Prater: Object-Oriented UX (https://alistapart.com/article/object-oriented-ux/)"
+    ],
+    "contentMarkdown": "# Attribute Prioritization\n\nAttribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.\n\nThe priority depends on the user's task and context. Information needed to choose a record in search can differ from information needed to edit it or resolve an exception.\n\n## Two decisions to separate\n\nFirst decide which attributes the product needs to support its intended work. Then decide how prominently to present the supported attributes in each view.\n\nA supplier confirmation number might be essential data even when a compact queue usually shows only a booking reference, status, and service date. Removing it from that queue does not mean removing it from the model.\n\n## Example: prioritizing Booking information\n\nSuppose an agent scans a queue for bookings awaiting supplier confirmation.\n\n| Attribute | Queue treatment | Detail treatment |\n|---|---|---|\n| Booking reference | Always visible for identification | Same reference in the heading. |\n| Status | Visible and filterable | Include relevant status history. |\n| Service date | Visible to assess urgency | Show complete dates and times as needed. |\n| Supplier confirmation number | Show when relevant to the queue's task | Show when available; explain a meaningful absence. |\n| Internal notes | Avoid displaying a long note in every row | Make permitted notes available for investigation. |\n\nThis is a task-specific example. A queue for reconciling supplier records could need different fields.\n\n## How to make the decision\n\nAsk which attributes help users identify the object, compare candidates, choose an action, or recognize an exception. Use observed tasks and actual records when discussing tradeoffs with stakeholders.\n\nCheck both routine and unusual cases. A rare field may become the most important information during an urgent exception. Decide how users reach it when needed.\n\nRecord the reason for a priority and where it applies. This gives future reviewers a basis for changing the design when the workflow changes.\n\n## How to test the result\n\nGive users a realistic queue and a task such as finding the booking that needs attention next. Observe what they inspect and whether important information forces repeated navigation.\n\nCheck long values, missing data, narrow screens, and keyboard access. Progressive disclosure should keep necessary information discoverable at the moment it matters.\n\n## Related terms\n\n- [Object Attributes in OOUX](/glossary/object-attributes-ooux.html)\n- [Object Prioritization](/glossary/object-prioritization.html)\n- [Object Representation](/glossary/object-representation-ooux.html)\n- [Progressive Disclosure](/glossary/progressive-disclosure.html)\n\n## Sources\n\n- [The UX Level-Up: Attribute Prioritization with Jake Zukowski](https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352)\n- [Sophia V. Prater: Object-Oriented UX](https://alistapart.com/article/object-oriented-ux/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html",
+        "name": "Attribute Prioritization in OOUX: Choosing What to Show",
+        "description": "Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#breadcrumbs"
+        },
+        "citation": [
+          "https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352",
+          "https://alistapart.com/article/object-oriented-ux/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#term",
+        "name": "Attribute Prioritization",
+        "termCode": "attribute-prioritization",
+        "description": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.",
+        "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Attribute Prioritization",
+            "item": "https://lexkonovalov.com/glossary/attribute-prioritization.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "name": "CTA Prioritization",
+    "slug": "cta-prioritization",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.",
+    "purpose": "CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.",
+    "keyConcepts": [
+      "Start with the action's purpose",
+      "Example: actions on a confirmed Booking",
+      "Keep availability and prominence distinct",
+      "Validate the choice"
+    ],
+    "howItWorks": "CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.",
+    "relatedTerms": [
+      "CTA Matrix",
+      "Object-Oriented User Stories",
+      "Attribute Prioritization",
+      "State Transition Matrix"
+    ],
+    "seoTitle": "CTA Prioritization in OOUX: Actions, Prominence, and Context",
+    "seoDescription": "Learn how ORCA prioritizes actions on objects, with a booking example covering task importance, conditional availability, release scope, and clear feedback.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/cta-prioritization.html",
+    "sources": [
+      "The UX Level-Up: CTA Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/079-orca-series-11-ctas-that-align-teams-and-earn/id1531717094?i=1000725166619)",
+      "OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails)"
+    ],
+    "contentMarkdown": "# CTA Prioritization\n\nCTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.\n\nA CTA can become a button, link, menu item, or entry into a longer interaction. Giving an action visual prominence is one implementation decision within that larger assessment.\n\n## Start with the action's purpose\n\nUse the [CTA Matrix](/glossary/cta-matrix.html) to identify candidate actions by object and role. Develop the reason and conditions for each action before deciding its position.\n\nAn action can be important despite being infrequent. For example, resolving an urgent booking issue may matter more in that moment than the queue's most common operation.\n\n## Example: actions on a confirmed Booking\n\nAn illustrative travel operations product supports these actions for an assigned agent:\n\n| Action | Priority decision | Reason |\n|---|---|---|\n| View fare conditions | Easy to find near booking details | Helps the agent assess available changes. |\n| Request cancellation | Clearly available when eligible | Supports a specific task with consequential effects. |\n| Update internal note | Secondary action | Useful supporting work, with lower emphasis in this view. |\n| Export record | Available in a labeled menu | Occasional task that does not need to dominate the page. |\n| Delete booking | Excluded from this release | The agreed workflow preserves booking history. |\n\nThese choices apply to the example's workflow. They do not establish a universal button hierarchy.\n\n## Keep availability and prominence distinct\n\nAn eligible cancellation action can deserve clear placement while still requiring review of the target and consequences. A pending request needs a way to inspect its progress.\n\nIf an action is unavailable, decide whether showing the reason will help the user continue. Apply the underlying permission and eligibility rules when the request executes.\n\nUser goals such as canceling, declining, or leaving a service also need understandable paths. Commercial preference alone is a poor basis for making a legitimate task difficult to find.\n\n## Validate the choice\n\nTest whether users find the action they need, understand its label, and anticipate its result. Include different roles and object states.\n\nReview misclicks and incomplete tasks alongside completion. A prominent control that attracts clicks without producing the intended outcome needs further investigation.\n\n## Related terms\n\n- [CTA Matrix](/glossary/cta-matrix.html)\n- [Object-Oriented User Stories](/glossary/object-oriented-user-stories.html)\n- [Attribute Prioritization](/glossary/attribute-prioritization.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n\n## Sources\n\n- [The UX Level-Up: CTA Prioritization with Jake Zukowski](https://podcasts.apple.com/us/podcast/079-orca-series-11-ctas-that-align-teams-and-earn/id1531717094?i=1000725166619)\n- [OOUX: Designing With ORCA](https://ooux.com/offerings/fourfails)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/cta-prioritization.html",
+        "name": "CTA Prioritization in OOUX: Actions, Prominence, and Context",
+        "description": "Learn how ORCA prioritizes actions on objects, with a booking example covering task importance, conditional availability, release scope, and clear feedback.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#breadcrumbs"
+        },
+        "citation": [
+          "https://podcasts.apple.com/us/podcast/079-orca-series-11-ctas-that-align-teams-and-earn/id1531717094?i=1000725166619",
+          "https://ooux.com/offerings/fourfails"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#term",
+        "name": "CTA Prioritization",
+        "termCode": "cta-prioritization",
+        "description": "CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.",
+        "url": "https://lexkonovalov.com/glossary/cta-prioritization.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/cta-prioritization.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CTA Prioritization",
+            "item": "https://lexkonovalov.com/glossary/cta-prioritization.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "name": "Shapeshifter Matrix",
+    "slug": "shapeshifter-matrix",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.",
+    "purpose": "A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.",
+    "keyConcepts": [
+      "What should the matrix compare?",
+      "Example: Booking B-52 across views",
+      "How to use it",
+      "What should remain consistent?"
+    ],
+    "howItWorks": "A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.",
+    "relatedTerms": [
+      "Four UX Fails in OOUX",
+      "Object Representation",
+      "Interaction Invariant",
+      "Attribute Prioritization"
+    ],
+    "seoTitle": "Shapeshifter Matrix in OOUX: Object Variants and Example",
+    "seoDescription": "Use a Shapeshifter Matrix to compare an object",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html",
+    "sources": [
+      "OOUX Masterclass: Representation Round (https://ooux.com/selfpacedoouxmasterclass)",
+      "OOUX Advanced Certification: Intentional Shapeshifter Matrices (https://ooux.com/advanced)"
+    ],
+    "contentMarkdown": "# Shapeshifter Matrix\n\nA Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.\n\nAn object can legitimately appear as a compact search result, a row in a work queue, and a detailed record. Problems arise when unexplained changes make it difficult to identify the same thing or understand its available actions.\n\n## What should the matrix compare?\n\nStart with the contexts in which the object appears. Record the information shown, relevant role or state, available actions, and the reason for a difference.\n\nThe table below is one lightweight format. It is an illustrative working artifact, rather than a prescribed official template.\n\n## Example: Booking B-52 across views\n\nIn this example, the booking is Awaiting confirmation. An assigned agent can update permitted details; a support reviewer has read access.\n\n| Representation | Identifying information | Actions and rationale |\n|---|---|---|\n| Search result | Booking reference, service date, status | Open the record; enough detail to choose the right match. |\n| Trip booking row | Same reference and status, supplier name | Open details within the trip context. |\n| Agent detail view | Same identity cues, full permitted booking data | Edit eligible fields; manage the booking within the agent's authority. |\n| Reviewer detail view | Same identity cues, permitted review data | Inspect history; editing is unavailable for this role. |\n\nThe role difference changes available actions. It should not make the status mean something different.\n\n## How to use it\n\nChoose one real record and follow it through the views. List differences before deciding which to keep. For each difference, identify the task, permission, or space constraint it serves.\n\nThen check other important states. A canceled booking may need a cancellation date; a draft may lack a supplier confirmation number. Capture these conditions without creating a separate component for every possible combination.\n\n## What should remain consistent?\n\nDefine recognizable labels, reference formatting, status meaning, and the relationship between an action and its result. Layout and detail can vary with context.\n\nTest whether users recognize the booking after moving between views and whether they understand the role-dependent controls. Also check accessible names and keyboard operation in each representation. A consistent screenshot alone cannot establish consistent behavior.\n\n## Related terms\n\n- [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html)\n- [Object Representation](/glossary/object-representation-ooux.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n- [Attribute Prioritization](/glossary/attribute-prioritization.html)\n\n## Sources\n\n- [OOUX Masterclass: Representation Round](https://ooux.com/selfpacedoouxmasterclass)\n- [OOUX Advanced Certification: Intentional Shapeshifter Matrices](https://ooux.com/advanced)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html",
+        "name": "Shapeshifter Matrix in OOUX: Object Variants and Example",
+        "description": "Use a Shapeshifter Matrix to compare an object's views, roles, and states, preserve recognizable cues, and document intentional interface differences.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ooux.com/selfpacedoouxmasterclass",
+          "https://ooux.com/advanced"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#term",
+        "name": "Shapeshifter Matrix",
+        "termCode": "shapeshifter-matrix",
+        "description": "A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.",
+        "url": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Shapeshifter Matrix",
+            "item": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "128",
+    "name": "Tree Systems in OOUX",
+    "slug": "tree-systems-ooux",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.",
+    "purpose": "A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.",
+    "keyConcepts": [
+      "Example: a course and its scheduled sessions",
+      "Where should information belong?",
+      "Tree Systems, hierarchy, and inheritance",
+      "How to check the model"
+    ],
+    "howItWorks": "A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.",
+    "relatedTerms": [
+      "Junction Object",
+      "Object Inheritance in OOUX",
+      "Object Attributes in OOUX",
+      "Conceptual Schema"
+    ],
+    "seoTitle": "Tree Systems in OOUX: Roots, Branches, and Specific Objects",
+    "seoDescription": "Understand OOUX Tree Systems through a course-to-session example, distinguish them from inheritance, and decide where shared and local information belongs.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/tree-systems-ooux.html",
+    "sources": [
+      "Sophia V. Prater: Wrangling UX Complexity with Tree Systems (https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9)",
+      "OOUX Masterclass: Tree Systems (https://ooux.com/selfpacedoouxmasterclass)"
+    ],
+    "contentMarkdown": "# Tree Systems in OOUX\n\nA Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.\n\nThe term comes from the OOUX community. It describes a modeling pattern, with roots and fruit used as explanatory metaphors.\n\n## Example: a course and its scheduled sessions\n\nConsider an illustrative training product:\n\n| Object type | Example instance | Information owned at this level |\n|---|---|---|\n| Course | First Aid Basics | Shared learning objectives and standard description. |\n| Course Offering | First Aid Basics at East Center | Local delivery details and contact information. |\n| Scheduled Session | That offering on June 12 at 10 a.m. | Start time, capacity, and remaining places. |\n\nA learner can read the course description before choosing a location and session. Registering requires a specific Scheduled Session.\n\nEach row describes a different object type with its own instances. A scheduled session is not simply another Course instance. Its structure and available actions differ.\n\n## Where should information belong?\n\nStore shared learning objectives on Course and reference them where needed. Store session capacity on Scheduled Session because it applies to that occurrence.\n\nFor this product, the team might let central staff edit the standard description and local staff manage session capacity. Those permissions are example decisions to validate.\n\nWhen shared information changes, decide how it should appear in existing offerings and historical sessions. Some records may need a snapshot rather than the latest description.\n\n## Tree Systems, hierarchy, and inheritance\n\nA hierarchy alone does not establish a Tree System. A category containing articles, each with comments, does not automatically express increasing specificity of one concept.\n\nInheritance concerns types sharing a common structure or behavior. A Tree System connects contextual forms that can have different information and actions. A [junction object](/glossary/junction-object.html) may participate in the pattern when a connection needs its own attributes.\n\n## How to check the model\n\nAsk users which thing they are viewing, selecting, editing, and registering for. Test two locations and several sessions for the same course.\n\nCheck that an edit to one session's capacity affects the intended record, while shared course information remains consistent wherever the product is meant to reuse it.\n\n## Related terms\n\n- [Junction Object](/glossary/junction-object.html)\n- [Object Inheritance in OOUX](/glossary/object-inheritance-ooux.html)\n- [Object Attributes in OOUX](/glossary/object-attributes-ooux.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n\n## Sources\n\n- [Sophia V. Prater: Wrangling UX Complexity with Tree Systems](https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9)\n- [OOUX Masterclass: Tree Systems](https://ooux.com/selfpacedoouxmasterclass)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/tree-systems-ooux.html",
+        "name": "Tree Systems in OOUX: Roots, Branches, and Specific Objects",
+        "description": "Understand OOUX Tree Systems through a course-to-session example, distinguish them from inheritance, and decide where shared and local information belongs.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9",
+          "https://ooux.com/selfpacedoouxmasterclass"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#term",
+        "name": "Tree Systems in OOUX",
+        "termCode": "tree-systems-ooux",
+        "description": "A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.",
+        "url": "https://lexkonovalov.com/glossary/tree-systems-ooux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#webpage"
+        },
+        "alternateName": [
+          "OOUX tree systems"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/tree-systems-ooux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tree Systems in OOUX",
+            "item": "https://lexkonovalov.com/glossary/tree-systems-ooux.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "OOUX tree systems"
+    ]
+  },
+  {
+    "id": "129",
+    "name": "Content Prototyping",
+    "slug": "content-prototyping",
+    "category": "UX & Product Architecture",
+    "maturity": "Proprietary / Framework-Specific",
+    "definition": "Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.",
+    "purpose": "Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.",
+    "keyConcepts": [
+      "What are you testing?",
+      "Example: populating a travel operations model",
+      "A lightweight process",
+      "Content prototype or interface prototype?"
+    ],
+    "howItWorks": "Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.",
+    "relatedTerms": [
+      "Content Modeling",
+      "Object Mapping",
+      "Object Attributes in OOUX",
+      "OOUX Prototyping and Testing",
+      "AI Prototyping"
+    ],
+    "seoTitle": "Content Prototyping: Test an Object Model with Realistic Data",
+    "seoDescription": "Use content prototyping to test object types, fields, and relationships with realistic records before detailed UI work, including a travel operations example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/content-prototyping.html",
+    "sources": [
+      "OOUX Masterclass: Content Prototyping (https://ooux.com/selfpacedoouxmasterclass)",
+      "Contentful: Content Modeling Basics (https://www.contentful.com/help/content-models/content-modelling-basics/)"
+    ],
+    "contentMarkdown": "# Content Prototyping\n\nContent prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.\n\nIn OOUX, a content prototype can make an object map concrete. A spreadsheet, linked database, or simple content-management setup can be sufficient when it supports the questions being tested.\n\n## What are you testing?\n\nThe model describes types, fields, and connections. A content prototype populates that structure with instances and examines whether people can create, maintain, and use them.\n\nIt can reveal that an apparently simple “status” field contains several different meanings, or that a shared value has been copied into records that need separate ownership.\n\n## Example: populating a travel operations model\n\nAn illustrative prototype contains these records:\n\n| Record | Representative content | Question to test |\n|---|---|---|\n| Trip T-104 | Two travelers and two bookings | Can staff identify the services and people associated with the trip? |\n| Booking B-52 | Confirmed, with a supplier confirmation number | Can staff find the information needed to investigate it? |\n| Booking B-53 | Awaiting confirmation, with no supplier confirmation number yet | Do required-field rules permit this valid state? |\n| Traveler record | A name longer than the usual display examples | Can the same person be recognized across records and views? |\n\nCreate more than one record per type where variation matters. Add an empty trip, several related bookings, and a relevant exception.\n\nUse fictional or appropriately redacted content. Preserve the structural characteristics needed for the test.\n\n## A lightweight process\n\n1. Define the questions the prototype must answer.\n2. Populate fields and references with representative examples.\n3. Ask domain users to create, find, update, and explain records.\n4. Record missing information, ambiguous labels, and failed rules.\n5. Revise the model and repeat the affected task.\n\nKeep unresolved rules visible. A successful demonstration using only ideal records can hide the cases the model most needs to support.\n\n## Content prototype or interface prototype?\n\nA content prototype primarily tests structure, content, and authoring. An interactive prototype can test placement, navigation, and behavior. They can be combined as the design develops.\n\nA structurally valid record does not establish that a finished screen is usable. Use [OOUX prototyping and testing](/glossary/ooux-prototyping-and-testing.html) to examine how people recognize objects and act on them in the interface.\n\n## Related terms\n\n- [Content Modeling](/glossary/content-modeling.html)\n- [Object Mapping](/glossary/object-mapping.html)\n- [Object Attributes in OOUX](/glossary/object-attributes-ooux.html)\n- [OOUX Prototyping and Testing](/glossary/ooux-prototyping-and-testing.html)\n\n- [AI Prototyping](/glossary/ai-prototyping.html)\n\n## Sources\n\n- [OOUX Masterclass: Content Prototyping](https://ooux.com/selfpacedoouxmasterclass)\n- [Contentful: Content Modeling Basics](https://www.contentful.com/help/content-models/content-modelling-basics/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/content-prototyping.html",
+        "name": "Content Prototyping: Test an Object Model with Realistic Data",
+        "description": "Use content prototyping to test object types, fields, and relationships with realistic records before detailed UI work, including a travel operations example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ooux.com/selfpacedoouxmasterclass",
+          "https://www.contentful.com/help/content-models/content-modelling-basics/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#term",
+        "name": "Content Prototyping",
+        "termCode": "content-prototyping",
+        "description": "Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.",
+        "url": "https://lexkonovalov.com/glossary/content-prototyping.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/content-prototyping.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Content Prototyping",
+            "item": "https://lexkonovalov.com/glossary/content-prototyping.html"
+          }
+        ]
+      }
+    ]
   }
 ];
 
-export function getTermBySlug(slug: string): GlossaryTerm | undefined {
-  const normalized = slug.replace(/\.html$/, "").toLowerCase();
-  return glossaryTerms.find((t) => t.slug.toLowerCase() === normalized);
+export const supportingPages: SupportingPage[] = [
+  {
+    "slug": "ooux",
+    "url": "https://lexkonovalov.com/glossary/ooux/",
+    "name": "OOUX and ORCA",
+    "title": "OOUX & ORCA: Glossary, Tools, and Worked Example",
+    "description": "Explore OOUX and ORCA through glossary definitions, modeling tools, practical examples, and a reading path from research to tested interface design.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ooux/",
+    "contentMarkdown": "# OOUX and ORCA\n\nExplore the OOUX and ORCA glossary through the questions a product team needs to answer: what people work with, how those things connect, what users can do, and what information they need.\n\nStart with [Object-Oriented UX](/glossary/object-oriented-ux.html) for the design approach and [ORCA Framework](/glossary/orca-framework.html) for the four iterative rounds. Then follow the [worked booking example](/glossary/ooux-worked-example.html) to see how the pieces fit together.\n\n## Discover the product's structure\n\nUse [Noun Foraging](/glossary/noun-foraging.html) to identify candidate objects from research. Investigate connections with a [Nested Object Matrix](/glossary/nested-object-matrix.html), actions with a [CTA Matrix](/glossary/cta-matrix.html), and information through [Object Mapping](/glossary/object-mapping.html).\n\n[Object Attributes in OOUX](/glossary/object-attributes-ooux.html) explains core content, metadata, and the distinction between a field and a related object.\n\n## Clarify requirements\n\nAn [Object Guide](/glossary/object-guide.html) records what each object means. [ORCA Relationship Requirements](/glossary/orca-relationship-requirements.html) examines how connections work, while [Cardinality](/glossary/cardinality-ux-architecture.html) clarifies permitted counts in both directions.\n\n[Object-Oriented User Stories](/glossary/object-oriented-user-stories.html) develops the reason and conditions for an action. A [State Transition Matrix](/glossary/state-transition-matrix.html) can document the lifecycle behind it.\n\n## Prioritize the release and the experience\n\nThese four activities address related decisions:\n\n| Activity | Question |\n|---|---|\n| [Object Prioritization](/glossary/object-prioritization.html) | Which things need support, and how will users reach them? |\n| [Relationship Prioritization](/glossary/relationship-prioritization.html) | Which connections and navigation paths matter for the task? |\n| [CTA Prioritization](/glossary/cta-prioritization.html) | Which actions need support and prominence in this context? |\n| [Attribute Prioritization](/glossary/attribute-prioritization.html) | Which information helps users identify, compare, and act? |\n\n## Represent and test the model\n\n[Object Representation](/glossary/object-representation-ooux.html) connects the model to cards, lists, and detailed views. A [Shapeshifter Matrix](/glossary/shapeshifter-matrix.html) helps document intentional variants.\n\nUse the [Four UX Fails in OOUX](/glossary/ooux-ux-fails.html) as a diagnostic lens, [Content Prototyping](/glossary/content-prototyping.html) to populate the model, and [OOUX Prototyping and Testing](/glossary/ooux-prototyping-and-testing.html) to observe recognition, navigation, and action understanding.\n\n## Work through more complex models\n\nA [Junction Object](/glossary/junction-object.html) can represent a connection with its own information. [Tree Systems](/glossary/tree-systems-ooux.html) describes related forms that become more specific in context. [Object Inheritance in OOUX](/glossary/object-inheritance-ooux.html) examines general types and meaningful subtypes.\n\nFor surrounding practices, explore [Content Modeling](/glossary/content-modeling.html), [Domain Context Modeling](/glossary/domain-context-modeling.html), and [Structural Navigation Model](/glossary/structural-navigation-model.html).\n\nTo plan collaborative work, see [ORCA Sprint](/glossary/orca-sprint.html). Choose a bounded problem and use the relevant tools; revisit research whenever the model exposes an unanswered question.\n\n## Sources\n\n- [Sophia V. Prater: Introducing ORCA](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+    "structuredDataGraph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://lexkonovalov.com/glossary/ooux/#webpage",
+        "url": "https://lexkonovalov.com/glossary/ooux/",
+        "name": "OOUX & ORCA: Glossary, Tools, and Worked Example",
+        "description": "Explore OOUX and ORCA through glossary definitions, modeling tools, practical examples, and a reading path from research to tested interface design.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ooux/#breadcrumbs"
+        },
+        "citation": [
+          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389"
+        ],
+        "about": [
+          {
+            "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+          },
+          {
+            "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+          }
+        ],
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ooux/#reading-list"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://lexkonovalov.com/glossary/ooux/#reading-list",
+        "name": "OOUX and ORCA reading path",
+        "numberOfItems": 29,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Object-Oriented UX",
+            "url": "https://lexkonovalov.com/glossary/object-oriented-ux.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ORCA Framework",
+            "url": "https://lexkonovalov.com/glossary/orca-framework.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "worked booking example",
+            "url": "https://lexkonovalov.com/glossary/ooux-worked-example.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Noun Foraging",
+            "url": "https://lexkonovalov.com/glossary/noun-foraging.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Nested Object Matrix",
+            "url": "https://lexkonovalov.com/glossary/nested-object-matrix.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "CTA Matrix",
+            "url": "https://lexkonovalov.com/glossary/cta-matrix.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Object Mapping",
+            "url": "https://lexkonovalov.com/glossary/object-mapping.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Object Attributes in OOUX",
+            "url": "https://lexkonovalov.com/glossary/object-attributes-ooux.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Object Guide",
+            "url": "https://lexkonovalov.com/glossary/object-guide.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "ORCA Relationship Requirements",
+            "url": "https://lexkonovalov.com/glossary/orca-relationship-requirements.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Cardinality",
+            "url": "https://lexkonovalov.com/glossary/cardinality-ux-architecture.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Object-Oriented User Stories",
+            "url": "https://lexkonovalov.com/glossary/object-oriented-user-stories.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "State Transition Matrix",
+            "url": "https://lexkonovalov.com/glossary/state-transition-matrix.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Object Prioritization",
+            "url": "https://lexkonovalov.com/glossary/object-prioritization.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "Relationship Prioritization",
+            "url": "https://lexkonovalov.com/glossary/relationship-prioritization.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "name": "CTA Prioritization",
+            "url": "https://lexkonovalov.com/glossary/cta-prioritization.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "name": "Attribute Prioritization",
+            "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "name": "Object Representation",
+            "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "name": "Shapeshifter Matrix",
+            "url": "https://lexkonovalov.com/glossary/shapeshifter-matrix.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "Four UX Fails in OOUX",
+            "url": "https://lexkonovalov.com/glossary/ooux-ux-fails.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "Content Prototyping",
+            "url": "https://lexkonovalov.com/glossary/content-prototyping.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "OOUX Prototyping and Testing",
+            "url": "https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "name": "Junction Object",
+            "url": "https://lexkonovalov.com/glossary/junction-object.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "name": "Tree Systems",
+            "url": "https://lexkonovalov.com/glossary/tree-systems-ooux.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "name": "Object Inheritance in OOUX",
+            "url": "https://lexkonovalov.com/glossary/object-inheritance-ooux.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "name": "Content Modeling",
+            "url": "https://lexkonovalov.com/glossary/content-modeling.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "name": "Domain Context Modeling",
+            "url": "https://lexkonovalov.com/glossary/domain-context-modeling.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "name": "Structural Navigation Model",
+            "url": "https://lexkonovalov.com/glossary/structural-navigation-model.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "name": "ORCA Sprint",
+            "url": "https://lexkonovalov.com/glossary/orca-sprint.html"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ooux/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OOUX and ORCA",
+            "item": "https://lexkonovalov.com/glossary/ooux/"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "Sophia V. Prater: Introducing ORCA (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)"
+    ],
+    "relatedTerms": []
+  },
+  {
+    "slug": "ooux-worked-example",
+    "url": "https://lexkonovalov.com/glossary/ooux-worked-example.html",
+    "name": "OOUX Worked Example: A Booking Workflow",
+    "title": "OOUX Worked Example: From Research to a Booking Interface",
+    "description": "Follow an OOUX and ORCA example from a research note through objects, relationships, actions, attributes, interface decisions, and practical usability tasks.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ooux-worked-example.html",
+    "contentMarkdown": "# OOUX Worked Example: A Booking Workflow\n\nThis illustrative OOUX example follows a travel operations task from a research note to a testable interface. It uses ORCA's Objects, Relationships, Calls-to-Action, and Attributes to make the modeling and design decisions explicit.\n\nThe records and rules are fictional. They show one possible product scope, with assumptions that a real team would need to validate.\n\n## Start with a task and evidence\n\nSuppose a research walkthrough includes this statement:\n\n> I find the trip, check which booking the traveler means, and ask the supplier to cancel it. I need to know whether the request is still waiting or the cancellation is complete.\n\nThe task is to identify the right booking, request an eligible cancellation, and understand the outcome. [Noun Foraging](/glossary/noun-foraging.html) suggests Trip, Booking, Traveler, and Supplier as candidates.\n\nFor this release, the team investigates Trip, Booking, and Traveler as separate record types. It retains supplier identification on a booking and defers a supplier-management workspace. That scope decision would change if operators need to manage supplier records.\n\n## Discovery: build a small model\n\nTrip T-104 has two travelers and two bookings. Booking B-52 is Confirmed; Booking B-53 is Awaiting confirmation.\n\n| Object type | Representative information | Connection or action |\n|---|---|---|\n| Trip | Trip reference and travel dates | Contains bookings and associated travelers. |\n| Booking | Booking reference, status, service date, supplier details | Belongs to one trip; an eligible agent can request cancellation. |\n| Traveler | Identity and permitted contact information | Can be associated with multiple trips. |\n\nThis model allows a trip with no bookings and requires every booking to belong to one trip. A [Nested Object Matrix](/glossary/nested-object-matrix.html) and [CTA Matrix](/glossary/cta-matrix.html) can investigate relationships and actions systematically.\n\nIf eligibility depends on which traveler is covered by a service, the team must model that connection explicitly. Association with the same trip alone does not establish passenger coverage.\n\n## Requirements: make the cancellation rule precise\n\nFor the example, the requesting agent must have access, be assigned to the trip, and act on an eligible confirmed booking.\n\nThe [object-oriented user story](/glossary/object-oriented-user-stories.html) adds the motivation: the traveler has changed plans, and the agent needs to start the supplier's cancellation process.\n\nThe expected sequence is:\n\n1. Show the target booking and relevant conditions for review.\n2. Submit an authorized cancellation request.\n3. When the request is accepted for processing, show Cancellation pending and its reference.\n4. Show Canceled only after the supplier confirms cancellation.\n\nAn already-pending request should remain inspectable. A submission timeout requires checking whether the request exists before retrying. If the supplier declines, show the result and current booking state.\n\nDocument these outcomes in the [State Transition Matrix](/glossary/state-transition-matrix.html). The application enforces the rules at execution.\n\n## Prioritization: decide what the first release needs\n\n| Decision area | Example choice |\n|---|---|\n| Objects | Support Trip, Booking, and Traveler; defer supplier profiles. |\n| Relationships | Show a trip's bookings and a contextual route from a booking back to its trip. |\n| Actions | Make eligible cancellation easy to find and provide access to pending requests. |\n| Attributes | Emphasize booking reference, status, and service date in the work queue. |\n\nThe supplier confirmation number remains important even if a particular compact queue does not always display it. [Attribute Prioritization](/glossary/attribute-prioritization.html) separates required data from prominence in a view.\n\n## Representation: preserve identity across views\n\nA search result and a trip's booking list both identify B-52 with the same reference and status meaning. The detailed record adds relevant conditions, history, and permitted actions.\n\nThe cancellation review repeats the booking identity and proposed operation. Its completion message distinguishes a submitted request from a completed cancellation.\n\nA [Shapeshifter Matrix](/glossary/shapeshifter-matrix.html) records why views differ. The goal is for users to recognize the booking while receiving the detail appropriate to the task.\n\n## Test the model and interface\n\nPopulate a [content prototype](/glossary/content-prototyping.html) with the two bookings, an empty trip, and a record with missing conditional data.\n\nThen ask representative users to find B-52 from a supplier message, identify its trip, respond to a cancellation need, and explain the state after submission. Include direct entry through search.\n\nObserve mistaken identities, wrong routes, missed conditions, and misunderstandings about pending outcomes. These are proposed checks, not reported research findings.\n\nRevise the relevant object definition, relationship, action rule, or representation. The [OOUX and ORCA reading path](/glossary/ooux/) links the methods behind each decision.\n\n## Sources\n\n- [Sophia V. Prater: Introducing ORCA](https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)\n- [Nielsen Norman Group: Usability Testing 101](https://www.nngroup.com/articles/usability-testing-101/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ooux-worked-example.html",
+        "name": "OOUX Worked Example: From Research to a Booking Interface",
+        "description": "Follow an OOUX and ORCA example from a research note through objects, relationships, actions, attributes, interface decisions, and practical usability tasks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#breadcrumbs"
+        },
+        "citation": [
+          "https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389",
+          "https://www.nngroup.com/articles/usability-testing-101/"
+        ],
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#article"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#article",
+        "url": "https://lexkonovalov.com/glossary/ooux-worked-example.html",
+        "headline": "OOUX Worked Example: From Research to a Booking Interface",
+        "description": "Follow an OOUX and ORCA example from a research note through objects, relationships, actions, attributes, interface decisions, and practical usability tasks.",
+        "inLanguage": "en-US",
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#webpage"
+        },
+        "about": [
+          {
+            "@id": "https://lexkonovalov.com/glossary/object-oriented-ux.html#term"
+          },
+          {
+            "@id": "https://lexkonovalov.com/glossary/orca-framework.html#term"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ooux-worked-example.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OOUX and ORCA",
+            "item": "https://lexkonovalov.com/glossary/ooux/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "OOUX Worked Example: A Booking Workflow",
+            "item": "https://lexkonovalov.com/glossary/ooux-worked-example.html"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      "Sophia V. Prater: Introducing ORCA (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)",
+      "Nielsen Norman Group: Usability Testing 101 (https://www.nngroup.com/articles/usability-testing-101/)"
+    ],
+    "relatedTerms": []
+  }
+];
+
+export function getTermBySlug(slug: string): GlossaryTerm | SupportingPage | undefined {
+  const normalized = slug.replace(/\.html$/, "").toLowerCase().replace(/^\/|\/$/g, "");
+  return glossaryTerms.find((t) => t.slug.toLowerCase() === normalized) ||
+         supportingPages.find((p) => p.slug.toLowerCase() === normalized);
 }
 
 export function getTermById(id: string): GlossaryTerm | undefined {

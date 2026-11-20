@@ -124,6 +124,9 @@ export default function GlossaryTerm({ termSlug, onNavigate }: GlossaryTermProps
       e.preventDefault();
       const slug = href.replace("/glossary/", "").replace(".html", "");
       onNavigate?.("glossary-term", { slug });
+    } else if (href.startsWith("/glossary/ooux/") || href === "/glossary/ooux") {
+      e.preventDefault();
+      onNavigate?.("glossary-term", { slug: "ooux" });
     } else if (href === "/glossary/" || href === "/glossary") {
       e.preventDefault();
       onNavigate?.("glossary");

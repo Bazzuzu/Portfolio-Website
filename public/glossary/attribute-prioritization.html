@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Prioritization in OOUX: Choosing What to Show</title>
+  <meta name="description" content="Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/attribute-prioritization.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Attribute Prioritization in OOUX: Choosing What to Show">
+  <meta property="og:description" content="Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/attribute-prioritization.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Attribute Prioritization in OOUX: Choosing What to Show">
+  <meta name="twitter:description" content="Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/attribute-prioritization.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html",
+      "name": "Attribute Prioritization in OOUX: Choosing What to Show",
+      "description": "Prioritize object attributes for search results, lists, and detail views, with a booking example that balances identification, decisions, and task context.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#breadcrumbs"
+      },
+      "citation": [
+        "https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352",
+        "https://alistapart.com/article/object-oriented-ux/"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#term",
+      "name": "Attribute Prioritization",
+      "termCode": "attribute-prioritization",
+      "description": "Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.",
+      "url": "https://lexkonovalov.com/glossary/attribute-prioritization.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/attribute-prioritization.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Attribute Prioritization",
+          "item": "https://lexkonovalov.com/glossary/attribute-prioritization.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Attribute Prioritization</span>
+    </nav>
+    <h1>Attribute Prioritization</h1>
+    <div class="meta-bar">
+      <span>UX &amp; Product Architecture</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.</p>
+<p class="glossary-term-section__text">The priority depends on the user's task and context. Information needed to choose a record in search can differ from information needed to edit it or resolve an exception.</p>
+<section class="glossary-term-section" aria-labelledby="section-two-decisions-to-separate">
+<h2 id="section-two-decisions-to-separate" class="glossary-term-section__title">Two decisions to separate</h2>
+<p class="glossary-term-section__text">First decide which attributes the product needs to support its intended work. Then decide how prominently to present the supported attributes in each view.</p>
+<p class="glossary-term-section__text">A supplier confirmation number might be essential data even when a compact queue usually shows only a booking reference, status, and service date. Removing it from that queue does not mean removing it from the model.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-prioritizing-booking-information">
+<h2 id="section-example-prioritizing-booking-information" class="glossary-term-section__title">Example: prioritizing Booking information</h2>
+<p class="glossary-term-section__text">Suppose an agent scans a queue for bookings awaiting supplier confirmation.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Queue treatment</th>
+<th>Detail treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Booking reference</td>
+<td>Always visible for identification</td>
+<td>Same reference in the heading.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Visible and filterable</td>
+<td>Include relevant status history.</td>
+</tr>
+<tr>
+<td>Service date</td>
+<td>Visible to assess urgency</td>
+<td>Show complete dates and times as needed.</td>
+</tr>
+<tr>
+<td>Supplier confirmation number</td>
+<td>Show when relevant to the queue's task</td>
+<td>Show when available; explain a meaningful absence.</td>
+</tr>
+<tr>
+<td>Internal notes</td>
+<td>Avoid displaying a long note in every row</td>
+<td>Make permitted notes available for investigation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">This is a task-specific example. A queue for reconciling supplier records could need different fields.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-to-make-the-decision">
+<h2 id="section-how-to-make-the-decision" class="glossary-term-section__title">How to make the decision</h2>
+<p class="glossary-term-section__text">Ask which attributes help users identify the object, compare candidates, choose an action, or recognize an exception. Use observed tasks and actual records when discussing tradeoffs with stakeholders.</p>
+<p class="glossary-term-section__text">Check both routine and unusual cases. A rare field may become the most important information during an urgent exception. Decide how users reach it when needed.</p>
+<p class="glossary-term-section__text">Record the reason for a priority and where it applies. This gives future reviewers a basis for changing the design when the workflow changes.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-to-test-the-result">
+<h2 id="section-how-to-test-the-result" class="glossary-term-section__title">How to test the result</h2>
+<p class="glossary-term-section__text">Give users a realistic queue and a task such as finding the booking that needs attention next. Observe what they inspect and whether important information forces repeated navigation.</p>
+<p class="glossary-term-section__text">Check long values, missing data, narrow screens, and keyboard access. Progressive disclosure should keep necessary information discoverable at the moment it matters.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-attributes-ooux.html">Object Attributes in OOUX</a></li>
+<li><a href="/glossary/object-prioritization.html">Object Prioritization</a></li>
+<li><a href="/glossary/object-representation-ooux.html">Object Representation</a></li>
+<li><a href="/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352" target="_blank" rel="noopener noreferrer">The UX Level-Up: Attribute Prioritization with Jake Zukowski</a></li>
+<li><a href="https://alistapart.com/article/object-oriented-ux/" target="_blank" rel="noopener noreferrer">Sophia V. Prater: Object-Oriented UX</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/relationship-prioritization.html" class="glossary-term-nav__item" title="Relationship Prioritization">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/cta-prioritization.html" class="glossary-term-nav__item" title="CTA Prioritization">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>

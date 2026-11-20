@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { glossaryCategories, glossaryTerms } from '../src/data/glossaryData.ts';
+import { glossaryCategories, glossaryTerms, supportingPages } from '../src/data/glossaryData.ts';
 import { renderMarkdownToHtml } from '../src/utils/markdownRenderer.ts';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -796,6 +796,415 @@ ${JSON.stringify(termJsonLd, null, 2)}
 
 console.log(`Generated all ${glossaryTerms.length} static term pages in public/glossary/!`);
 
+// 2.5 Generate Supporting Pages (e.g. /glossary/ooux/index.html and /glossary/ooux-worked-example.html)
+if (supportingPages && supportingPages.length > 0) {
+  supportingPages.forEach((page) => {
+    let outDir = glossaryDir;
+    let outFilename = `${page.slug}.html`;
+
+    if (page.slug === 'ooux') {
+      const oouxDir = path.join(glossaryDir, 'ooux');
+      if (!fs.existsSync(oouxDir)) {
+        fs.mkdirSync(oouxDir, { recursive: true });
+      }
+      outDir = oouxDir;
+      outFilename = 'index.html';
+    }
+
+    const pageJsonLd = {
+      "@context": "https://schema.org",
+      "@graph": page.structuredDataGraph || []
+    };
+
+    const pageTitle = page.title || `${page.name} | Product Design Glossary — Lex Konovalov`;
+    const pageDescription = page.description || '';
+    const canonicalUrl = page.canonicalUrl || (page.slug === 'ooux' ? 'https://lexkonovalov.com/glossary/ooux/' : `https://lexkonovalov.com/glossary/${page.slug}.html`);
+
+    const pageHtml = `<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(pageTitle)}</title>
+  <meta name="description" content="${escapeHtml(pageDescription)}">
+  <link rel="canonical" href="${canonicalUrl}" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${escapeHtml(pageTitle)}">
+  <meta property="og:description" content="${escapeHtml(pageDescription)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(pageTitle)}">
+  <meta name="twitter:description" content="${escapeHtml(pageDescription)}">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?route=glossary-term&slug=${page.slug}');
+    }
+  </script>
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+${JSON.stringify(pageJsonLd, null, 2)}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-canvas: #faf9f6;
+      --color-text-primary: #1c1b18;
+      --color-text-secondary: #5e605c;
+      --color-border-subtle: #e8e6dc;
+      --color-action-primary-default: #3E70A2;
+      --color-action-primary-hover: #D93636;
+      --font-display-family: "Space Grotesk", sans-serif;
+      --font-body-family: "Noto Serif", Georgia, serif;
+    }
+    body {
+      background-color: #faf9f6;
+      color: #1c1b18;
+      font-family: "Noto Serif", Georgia, serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> ${page.slug === 'ooux-worked-example' ? '/ <a href="/glossary/ooux/">Object-Oriented UX (OOUX)</a> ' : ''}/ <span>${escapeHtml(page.name)}</span>
+    </nav>
+    <h1>${escapeHtml(page.name)}</h1>
+    <div class="meta-bar">
+      <span>${escapeHtml(page.category || 'UX & Product Architecture')}</span>
+      ${page.secondaryCategory ? ` &bull; <span>${escapeHtml(page.secondaryCategory)}</span>` : ''}
+    </div>
+  </header>
+
+  <article>
+    ${renderMarkdownToHtml(page.contentMarkdown)}
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      ${page.slug === 'ooux-worked-example' ? `
+      <div class="glossary-term-nav__pill-group">
+        <a href="/glossary/ooux/" class="glossary-term-nav__item" title="Object-Oriented UX (OOUX) Hub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to OOUX Hub</span>
+        </a>
+      </div>
+      ` : ''}
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>`;
+
+    fs.writeFileSync(path.join(outDir, outFilename), pageHtml, 'utf-8');
+    console.log(`Generated supporting page: ${path.join(outDir, outFilename)}`);
+  });
+}
+
 // 3. Generate clean, deduplicated public/sitemap.xml
 const sitemapPath = path.join(publicDir, 'sitemap.xml');
 
@@ -818,52 +1227,24 @@ for (const p of basePages) {
 }
 
 // Add glossary hub
-sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-14</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/</loc>\n    <lastmod>2026-11-20</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+
+// Add supporting pages
+if (supportingPages && supportingPages.length > 0) {
+  supportingPages.forEach((page) => {
+    const loc = page.slug === 'ooux' ? 'https://lexkonovalov.com/glossary/ooux/' : `https://lexkonovalov.com/glossary/${page.slug}.html`;
+    const priority = page.slug === 'ooux' ? '0.9' : '0.8';
+    const changefreq = page.slug === 'ooux' ? 'weekly' : 'monthly';
+    sitemapXml += `  <url>\n    <loc>${loc}</loc>\n    <lastmod>2026-11-20</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>\n`;
+  });
+}
 
 // Add all glossary terms
 glossaryTerms.forEach((term) => {
-  let lastmod = '2026-11-07';
-  if ([
-    'churn-mitigation-architecture', 'feature-flag-strategy', 'b2c-engagement-loops',
-    'lead-capture-mechanics', 'product-market-fit-pmf-engine', 'jobs-to-be-done-jtbd',
-    'product-discovery', 'product-qualified-lead-pql',
-    // Design Systems & Engineering batch 6
-    'design-system', 'design-tokens-format-module-dtcg', 'semantic-tokens',
-    'design-primitives', 'component-libraries', 'figma-variables-modes',
-    'style-dictionary', 'token-resolver-engine', 'composite-design-token',
-    'component-architecture', 'headless-ui-architecture', 'design-system-governance',
-    'design-system-versioning-semver',
-    // Design-to-Code & Accessibility cluster batch 7
-    'design-to-code-workflow', 'visual-regression-testing', 'component-telemetry',
-    'design-engineering', 'designops', 'semantic-html',
-    'aria-accessible-rich-internet-applications', 'structured-data-for-llms',
-    'european-accessibility-act', 'en-301-549', 'ada-web-accessibility',
-    'section-508', 'web-accessibility-audit', 'accessible-forms',
-    'keyboard-accessibility'
-  ].includes(term.slug)) {
-    lastmod = '2026-11-14';
-  } else if ([
-    'conversion-rate-optimization-cro', 'ai-native-design', 'design-tokens',
-    'enterprise-information-architecture', 'conceptual-schema', 'growth-design',
-    'product-led-growth-plg', 'accessibility-wcag', 'enterprise-ux-strategy',
-    'ltv-to-cac-ratio', 'progressive-disclosure',
-    // OOUX batch 2 new & updated terms
-    'ooux-ux-fails', 'object-prioritization', 'orca-relationship-requirements',
-    'junction-object', 'object-guide', 'cta-matrix', 'nested-object-matrix',
-    'noun-foraging', 'structural-navigation-model', 'domain-context-modeling',
-    'state-transition-matrix', 'cardinality-ux-architecture', 'object-mapping',
-    'orca-framework', 'object-oriented-ux',
-    // Growth & Strategy batch
-    'activation-metric', 'checkout-flow-optimization', 'conversion-funnel-architecture',
-    'ab-testing-split-testing', 'time-to-value-ttv',
-    'user-retention', 'continuous-experimentation', 'product-telemetry-analytics',
-    'north-star-metric-nsm'
-  ].includes(term.slug)) {
-    lastmod = '2026-11-13';
-  }
-  sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+  sitemapXml += `  <url>\n    <loc>https://lexkonovalov.com/glossary/${term.slug}.html</loc>\n    <lastmod>2026-11-20</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
 });
 
 sitemapXml += '</urlset>\n';
 fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
-console.log(`Regenerated public/sitemap.xml with ${basePages.length + 1 + glossaryTerms.length} unique URLs!`);
+const totalSitemapUrls = basePages.length + 1 + (supportingPages ? supportingPages.length : 0) + glossaryTerms.length;
+console.log(`Regenerated public/sitemap.xml with ${totalSitemapUrls} unique URLs!`);

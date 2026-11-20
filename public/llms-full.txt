@@ -298,22 +298,24 @@ Bypassed static Figma mocks to directly model dynamic fee calculations. Delivere
 
 ## 6. Architectural Product Design Knowledge System (A Canonical Glossary and Structural Ontology)
 **Index URL:** https://lexkonovalov.com/glossary/
+**Total Canonical Terms:** 129
+**Supporting Pages:** https://lexkonovalov.com/glossary/ooux/, https://lexkonovalov.com/glossary/ooux-worked-example.html
 
 This ontology establishes an authoritative, search-indexable reference bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
 
 ### Domain Categories
 
-#### UX & Product Architecture (25 terms)
+#### UX & Product Architecture (46 terms)
 - **Primary Focus:** Information Architecture, Domain Modeling, Conceptual Integrity
 - **Representative Frameworks:** OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling
 - **Maturity Distribution:** 70% Established, 20% Proprietary, 10% Emerging
 
-#### Design Systems & Engineering (25 terms)
+#### Design Systems & Engineering (31 terms)
 - **Primary Focus:** Token Interoperability, Component Contracts, Accessibility
 - **Representative Frameworks:** W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components
 - **Maturity Distribution:** 75% Established, 25% Emerging
 
-#### Product Strategy & Growth (25 terms)
+#### Product Strategy & Growth (27 terms)
 - **Primary Focus:** Experimentation, Unit Economics, Conversion Architecture
 - **Representative Frameworks:** Continuous Discovery, JTBD, Product-Led Growth, Telemetry
 - **Maturity Distribution:** 80% Established, 20% Emerging
@@ -323,16 +325,30 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Representative Frameworks:** Model Context Protocol (MCP), Agent Skills (SKILL.md), Vercel Generative UI
 - **Maturity Distribution:** 20% Established, 55% Emerging, 25% Coined
 
+### Supporting Knowledge Hubs
+
+#### OOUX and ORCA
+- **URL:** https://lexkonovalov.com/glossary/ooux/
+- **Title:** OOUX & ORCA: Glossary, Tools, and Worked Example
+- **Description:** Explore OOUX and ORCA through glossary definitions, modeling tools, practical examples, and a reading path from research to tested interface design.
+- **Related Terms:** 
+
+#### OOUX Worked Example: A Booking Workflow
+- **URL:** https://lexkonovalov.com/glossary/ooux-worked-example.html
+- **Title:** OOUX Worked Example: From Research to a Booking Interface
+- **Description:** Follow an OOUX and ORCA example from a research note through objects, relationships, actions, attributes, interface decisions, and practical usability tasks.
+- **Related Terms:** 
+
 ### Canonical Terms
 
-#### 001. Object-Oriented UX (OOUX)
+#### 001. Object-Oriented UX
 - **URL:** https://lexkonovalov.com/glossary/object-oriented-ux.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.
-- **Purpose:** Prevents fragmented user experiences, disjointed navigation paths, and developer-designer misalignments by establishing shared, entity-based conceptual models prior to visual UI wireframing.
-- **Key Concepts:** Conceptual objects, entity integrity, cognitive mapping, affordance consistency.
-- **How It Works:** Designers identify core domain entities, trace their relationships, define their attributes, and map permissible user operations to eliminate procedural silos.
+- **Purpose:** Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.
+- **Key Concepts:** What does OOUX look like in practice?, How does ORCA relate to OOUX?, When is OOUX useful?
+- **How It Works:** Object-Oriented UX (OOUX) is a design approach that structures digital products around objects in users’ mental models—the things they recognize and expect to work with, such as trips, travelers, and bookings. Teams define these objects, their relationships, attributes, and available actions before designing screens and flows.
 - **Related Terms:** ORCA Framework, Object Mapping, Domain Context Modeling, Conceptual Schema, Information Architecture (IA)
 - **SEO Title:** Object-Oriented UX (OOUX) | Product Design Glossary
 - **Sources:** Object-Oriented UX, Sophia V. Prater, A List Apart (https://alistapart.com/article/object-oriented-ux/); Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
@@ -342,9 +358,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Proprietary / Framework-Specific
 - **Definition:** The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.
-- **Purpose:** Deconstructs complex enterprise requirements into unambiguous structural components, ensuring domain models directly inform navigation, relational integrity, and component logic.
-- **Key Concepts:** Discovery round, Requirements matrix, CTA matrices, Object mapping passes.
-- **How It Works:** Teams extract domain nouns, map bidirectional relationships, define state-dependent operations, and enumerate descriptive metadata across iterative passes.
+- **Purpose:** The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.
+- **Key Concepts:** What does ORCA stand for?, How does the ORCA process work?, An ORCA example in practice, When should you use ORCA?
+- **How It Works:** The ORCA framework is Sophia Prater’s process for applying Object-Oriented UX (OOUX). ORCA stands for Objects, Relationships, Calls to action (CTAs), and Attributes. Teams use it to turn user research into a model of a product’s objects, their connections, available actions, and information.
 - **Related Terms:** Object-Oriented UX (OOUX), Object Mapping, Cardinality (UX Architecture), State Transition Matrix
 - **SEO Title:** ORCA Framework in UX | Product Design Glossary
 - **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e); OOUX Masterclass course outline, OOUX.com (https://ooux.com/selfpacedoouxmasterclass)
@@ -353,37 +369,37 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/object-mapping.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Object Mapping is the visual diagramming technique used to plot domain entities, structural relationships, metadata schemas, and action affordances in an interconnected matrix before UI prototyping.
-- **Purpose:** Provides a single conceptual source of truth for cross-functional teams, validating information models against real-world user expectations and database schemas.
-- **Key Concepts:** Entity nodes, nested attributes, link cardinality, state markers.
-- **How It Works:** Core entities are mapped on visual canvases using standardized card notation, displaying primary metadata, associated child objects, and contextual actions.
+- **Definition:** Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.
+- **Purpose:** Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.
+- **Key Concepts:** How do you create an object map?, Object map example for travel operations, How does the object map fit into ORCA?
+- **How It Works:** Object mapping is the practice of organizing the things users work with into a shared model of object types, relationships, attributes, and available actions. In Object-Oriented UX (OOUX), an object map helps teams decide what information and actions belong together before designing screens.
 - **Related Terms:** ORCA Framework, Conceptual Schema, Domain Context Modeling, Content Modeling
-- **SEO Title:** Object Mapping in UX: Methods, Diagrams, and Workflows
-- **Sources:** Sophia Prater, Object Mapping Workshop Guide; Abby Covert, How to Make Sense of Any Mess
+- **SEO Title:** Object Mapping in UX | Product Design Glossary
+- **Sources:** Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/); Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); OOUX Foundations, Sophia V. Prater (https://ooux.com/offerings/foundations)
 
 #### 004. Domain Context Modeling
 - **URL:** https://lexkonovalov.com/glossary/domain-context-modeling.html
 - **Category:** UX & Product Architecture (Secondary: AI & Agentic Systems)
 - **Maturity:** Emerging
-- **Definition:** Domain Context Modeling is an architectural practice that defines the bounded semantic contexts, entities, and operational constraints of a business domain to create interoperable mental structures for human users, software systems, and AI agents.
-- **Purpose:** Resolves semantic ambiguities across cross-functional products and guarantees that AI reasoning engines and humans share identical contextual boundaries.
-- **Key Concepts:** Bounded contexts, semantic boundaries, context packets, source of truth rules.
-- **How It Works:** Practitioners delineate domain models into isolated contextual modules, cataloging authoritative terms, data schemas, and agent action boundaries.
+- **Definition:** Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.
+- **Purpose:** Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.
+- **Key Concepts:** A trip in sales and ticketing, How do you model a domain context?, How does this relate to OOUX?
+- **How It Works:** Domain context modeling is the practice of documenting where a business term, object model, or rule applies and how information moves between contexts. It helps product teams design workflows where different groups work with related information but need different meanings, rules, or levels of detail.
 - **Related Terms:** Object-Oriented UX, Context Engineering, Knowledge Graphs (AI Context), Controlled Vocabulary
-- **SEO Title:** Domain Context Modeling: Structuring Meaning for UX & AI
-- **Sources:** Eric Evans, Domain-Driven Design, Addison-Wesley; DomainDrivenUX, Domain Context Modeling Guide (https://www.domaindrivenux.com)
+- **SEO Title:** Domain Context Modeling in UX | Product Design Glossary
+- **Sources:** Domain-Driven Design Reference, Eric Evans (https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf); Bounded Context, Martin Fowler (https://martinfowler.com/bliki/BoundedContext.html); Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)
 
 #### 005. Cardinality (UX Architecture)
 - **URL:** https://lexkonovalov.com/glossary/cardinality-ux-architecture.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** In UX architecture, Cardinality defines the numerical and structural relationships between connected domain objects, specifically classifying whether associations are one-to-one, one-to-many, or many-to-many across user navigation paths.
-- **Purpose:** Dictates interface layout structures, container types, pagination behaviors, and relational navigational paths to prevent dead ends and cognitive mismatch.
-- **Key Concepts:** One-to-one (1 : 1), one-to-many (1 : N), many-to-many (N : M), directional traversal
-- **How It Works:** Designers evaluate entity links during the relationships phase, choosing appropriate navigation controls such as master-detail splits, inline lists, or relational tags.
-- **Related Terms:** Object Mapping, Information Architecture, ORCA Framework, Structural Navigation Model
-- **SEO Title:** Cardinality in UX Architecture: Designing Object Relationships
-- **Sources:** Sophia Prater, Object-Oriented UX: Relationships and Cardinality; Heidi Adkisson, Designing Relational Data Displays
+- **Definition:** In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.
+- **Purpose:** In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.
+- **Key Concepts:** What are the types of cardinality?, Why do minimum and maximum counts matter?, How does cardinality affect ORCA design decisions?
+- **How It Works:** In UX architecture, cardinality describes how many records of one object type can relate to a record of another type. It helps designers support the number of related records users may encounter, from an empty list to a collection they need to search.
+- **Related Terms:** Object Mapping, Information Architecture (IA), ORCA Framework, Structural Navigation Model
+- **SEO Title:** Cardinality in UX: Examples | Product Design Glossary
+- **Sources:** Discovery Live: Relationship Discovery, OOUX (https://discoverylive.ooux.com/); Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)
 
 #### 006. Information Architecture (IA)
 - **URL:** https://lexkonovalov.com/glossary/information-architecture.html
@@ -405,7 +421,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Overcomes internal organizational biases and bloated navigational hierarchies by directly serving search-first, task-oriented user entry behaviors.
 - **Key Concepts:** Inward paths, core task fulfillment, forward paths, business objectives.
 - **How It Works:** Teams map incoming traffic sources (inward paths), define essential user tasks and business objectives for the node, and establish contextually relevant onward routes (forward paths).
-- **Related Terms:** Information Architecture, Wayfinding System, Conversion Funnel Architecture
+- **Related Terms:** Information Architecture, Wayfinding System, Conversion Funnel
 - **SEO Title:** The Core Model: Inside-Out Information Architecture Guide
 - **Sources:** Are Halland, The Core Model: Designing Inside Out for Better Results, A List Apart; TheCoreModel.com (https://www.thecoremodel.com)
 
@@ -473,25 +489,25 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/structural-navigation-model.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A Structural Navigation Model is the formal architectural topology—such as hierarchical trees, hub-and-spoke models, nested matrices, or linear sequences—that governs spatial traversal throughout a software system.
-- **Purpose:** Establishes predictable spatial anchors, allowing users to build reliable mental cognitive maps of location, history, and available trajectories within deep applications.
-- **Key Concepts:** Navigational topology, hub-and-spoke, hierarchical nesting, horizontal traversal.
-- **How It Works:** Architects select topological paradigms aligned to task types, deploying persistent orientation components such as navigation rails, menus, and relational hyperlinks.
-- **Related Terms:** Information Architecture, Wayfinding System, Breadcrumb Hierarchy, Polyhierarchy
-- **SEO Title:** Structural Navigation Models in Product Design & Information Architecture
-- **Sources:** Peter Morville & Louis Rosenfeld, Information Architecture for the World Wide Web, O'Reilly; James Kalbach, Designing Web Navigation, O'Reilly
+- **Definition:** A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.
+- **Purpose:** A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.
+- **Key Concepts:** How does structural navigation differ from contextual navigation?, Navigation example for a travel operations tool, How do you design and test the model?
+- **How It Works:** A structural navigation model describes the main and local paths people use to move through a product's information architecture. It shows how sections and views are organized, what users can reach from each level, and how they can move back to a broader view.
+- **Related Terms:** Information Architecture (IA), Wayfinding System, Breadcrumb Hierarchy, Polyhierarchy
+- **SEO Title:** Structural Navigation Model | Product Design Glossary
+- **Sources:** Designing Web Navigation: Types of Navigation Summary, James Kalbach (https://www.oreilly.com/library/view/designing-web-navigation/9780596528102/ch04s03.html); Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/); Tree Testing: Evaluate Menu Labels and Categories, Nielsen Norman Group (https://www.nngroup.com/articles/tree-testing/)
 
 #### 014. State Transition Matrix
 - **URL:** https://lexkonovalov.com/glossary/state-transition-matrix.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A State Transition Matrix is a formal analytical table documenting all possible operational states of a digital entity (e.g., Draft, Pending, Approved, Archived), mapping them against triggering events and user access permissions.
-- **Purpose:** Precludes unaccounted application states, prevents invalid user actions, and establishes complete interaction logic for complex multi-role workflows.
-- **Key Concepts:** Finite state machines, state mutation, event triggers, transition guards.
-- **How It Works:** Designers construct a two-dimensional grid of current states versus triggering actions, identifying permissible target states and disabling forbidden edge cases.
+- **Definition:** A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.
+- **Purpose:** A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.
+- **Key Concepts:** How do you read a state transition matrix?, Example of a booking state transition matrix, How does the matrix inform ORCA actions?
+- **How It Works:** A state transition matrix is a table that shows which events can trigger a transition from each state and what state follows. UX teams use it to design actions, feedback, and recovery paths for objects such as bookings, tickets, and purchase requests.
 - **Related Terms:** Object-Oriented UX, ORCA Framework, Operational UX, Interaction Invariant
-- **SEO Title:** State Transition Matrices in UX: Documenting Complex Logic
-- **Sources:** David Harel, Statecharts: A Visual Formalism for Complex Systems; Sophia Prater, ORCA CTAs and Object States
+- **SEO Title:** State Transition Matrix in UX | Product Design Glossary
+- **Sources:** State Chart XML (SCXML), W3C (https://www.w3.org/TR/scxml/); Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389)
 
 #### 015. Polyhierarchy
 - **URL:** https://lexkonovalov.com/glossary/polyhierarchy.html
@@ -593,13 +609,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/progressive-disclosure.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Progressive Disclosure is an interaction design principle that defers complex, infrequent, or advanced features to secondary screens or disclosure panels, presenting only essential options initially.
+- **Definition:** Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.
 - **Purpose:** Minimizes upfront cognitive load, avoids intimidating novice users, and streamlines primary task completion without stripping away advanced power features.
 - **Key Concepts:** Cognitive pacing, disclosure toggles, layered complexity, default states.
 - **How It Works:** The interface surfaces only critical path decisions; secondary options are housed behind explicit disclosures (e.g., "Advanced Settings" or accordions) upon user demand.
 - **Related Terms:** Affordance Layering, Semantic Zoom, Task Model, Operational UX
-- **SEO Title:** Progressive Disclosure in UX: Managing Complexity & Cognitive Load
-- **Sources:** Jakob Nielsen, Progressive Disclosure, Nielsen Norman Group; Alan Cooper et al., About Face: The Essentials of Interaction Design
+- **SEO Title:** Progressive Disclosure in UX | Product Design Glossary
+- **Sources:** Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group (https://www.nngroup.com/articles/progressive-disclosure/); Details, GOV.UK Design System (https://design-system.service.gov.uk/components/details/); Disclosure (Show/Hide) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
 
 #### 024. Conceptual Schema
 - **URL:** https://lexkonovalov.com/glossary/conceptual-schema.html
@@ -629,13 +645,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/design-system.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** A Design System is a managed ecosystem of interdependent design foundations, token architectures, production code components, standards, and operational governance models that scale multi-brand digital product development.
-- **Purpose:** Eliminates visual and functional divergence, curtails engineering rework, and ensures consistent quality, accessibility, and brand coherence across multi-platform software suites.
-- **Key Concepts:** Design tokens, component contracts, operational governance, systematic scalability.
-- **How It Works:** Integrates platform-agnostic token specifications with reusable code libraries and design tool libraries via automated deployment pipelines, governed by formal versioning.
-- **Related Terms:** Design Tokens, Component Architecture, DesignOps, Design System Governance
-- **SEO Title:** What is a Design System? Architecture, Scalability & Setup
-- **Sources:** Nathan Curtis, Modular Web Design, New Riders; Alla Kholmatova, Design Systems, Smashing Media
+- **Definition:** A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.
+- **Purpose:** Establishes a single source of truth for design decisions and UI code, accelerating product development velocity and ensuring cross-platform brand and UX cohesion.
+- **Key Concepts:** Foundations and tokens, Component library, UI kit vs design system, Patterns and guidance, System maintenance and contribution
+- **How It Works:** Unifies tokens, reusable components, and interaction guidelines under continuous governance, allowing product teams to compose interfaces reliably while sharing bug fixes and improvements.
+- **Related Terms:** Design Tokens, Component Architecture, DesignOps, Component Libraries, Design System Governance
+- **SEO Title:** What Is a Design System? | Product Design Glossary
+- **Sources:** GOV.UK Design System (https://design-system.service.gov.uk/); Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
 
 #### 027. Design Tokens
 - **URL:** https://lexkonovalov.com/glossary/design-tokens.html
@@ -653,97 +669,97 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/design-tokens-format-module-dtcg.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** The Design Tokens Format Module is the official technical specification produced by the W3C Design Tokens Community Group (DTCG) that defines the standardized JSON schema structure for declaring, typing, and resolving design token data.
-- **Purpose:** Eliminates proprietary tool lock-in by establishing a universal file format interoperable across Figma, Penpot, Style Dictionary, and production build tooling.
-- **Key Concepts:** $value, $type, curly bracket alias syntax {group.token}, composite token types.
-- **How It Works:** The DTCG standard dictates how JSON token trees declare explicit types (e.g., color, dimension, duration) and resolve token aliases via period-separated paths.
+- **Definition:** The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.
+- **Purpose:** Standardizes cross-tool design token exchange syntax, decoupling token definitions from specific platforms, plugins, and proprietary design tool formats.
+- **Key Concepts:** DTCG 2025.10 standard, Token $type and $value, Token reference syntax ({group.token}), Format Module vs Resolver Module, Tool interoperability
+- **How It Works:** Defines a standardized JSON schema where design tokens are structured with explicit types, values, and alias references, enabling deterministic translation into multi-platform styling formats.
 - **Related Terms:** Design Tokens, Style Dictionary, Semantic Tokens, Token Resolver Engine
-- **SEO Title:** DTCG Design Tokens Format Module: The Official W3C Spec
-- **Sources:** W3C Design Tokens Community Group, Design Tokens Format Module Specification 2025.1013; DTCG Community (https://www.w.org/community/design-tokens)
+- **SEO Title:** DTCG Design Tokens Format Module | Product Design Glossary
+- **Sources:** Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/); Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/); Technical reports, DTCG (https://www.designtokens.org/technical-reports/)
 
 #### 029. Semantic Tokens
 - **URL:** https://lexkonovalov.com/glossary/semantic-tokens.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Semantic Tokens (or Alias Tokens) are contextual design tokens whose names communicate intended UI purpose and intent (e.g., surface-danger-subtle) rather than raw literal values (e.g., red-500).
-- **Purpose:** Decouples component implementation from literal brand values, enabling dynamic multi-theme switching, high-contrast modes, and seamless dark-mode re-theming.
-- **Key Concepts:** Intentional naming, alias references, contextual abstraction, theme aliasing.
-- **How It Works:** A semantic token maps its  to an underlying global primitive token alias (e.g., "": "{color.palette.red.500}"), resolving dynamically based on the active theme.
+- **Definition:** A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.
+- **Purpose:** Abstracts raw visual values into purposeful UI roles, enabling scalable theming, dark mode mapping, and brand variation without modifying component code.
+- **Key Concepts:** Role-based token naming, Theme context mapping (Light vs Dark), Semantic token vs token alias, Scope hierarchy, Component-scoped tokens
+- **How It Works:** Maps functional UI intent to underlying primitive palette values or literal definitions, allowing runtime theme switching to alter appearance globally while preserving design integrity.
 - **Related Terms:** Design Tokens, Design Primitives, Figma Variables & Modes, Component Architecture
-- **SEO Title:** Semantic Tokens: Naming Systems, Dark Mode, and Theming Architecture
-- **Sources:** Nathan Curtis, Naming Tokens in Design Systems; W3C DTCG Format Specification
+- **SEO Title:** Semantic Tokens: Naming and Theming | Product Design Glossary
+- **Sources:** Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/); Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/)
 
 #### 030. Design Primitives
 - **URL:** https://lexkonovalov.com/glossary/design-primitives.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Design Primitives (or Global Tokens) are the context-free, foundational scale values that define the raw physical bounds of a design system, including literal color ramps, base typography scales, and absolute spatial units.
-- **Purpose:** Constrains designer choices to mathematically harmonious scales, preventing arbitrary pixel and color choices across products.
-- **Key Concepts:** Literal scales, context-free values, global foundation, mathematical ramps.
-- **How It Works:** Primitives are defined at the root level of a token tree and referenced strictly by intermediate semantic tokens, never consumed directly by production UI components.
+- **Definition:** Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.
+- **Purpose:** Establishes raw, unopinionated foundational values and low-level structural components upon which semantic decisions and complex patterns are assembled.
+- **Key Concepts:** Primitive token vs semantic token, Named scale steps (e.g. space.200), Primitive layout components (Stack, Inline), Scope of base value changes, Foundational scales
+- **How It Works:** Provides immutable, math-driven scales of color palettes, typographic steps, and spacing increments alongside atomic structural components to ensure foundational mathematical harmony.
 - **Related Terms:** Design Tokens, Semantic Tokens, Component Architecture, Atomic Design
-- **SEO Title:** Design Primitives: Building Foundation Scales for Systems
-- **Sources:** Brad Frost, Atomic Design; Nathan Curtis, Tokens in Design Systems
+- **SEO Title:** Design Primitives and Primitive Tokens | Product Design Glossary
+- **Sources:** Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Primitives overview, Atlassian Design System (https://atlassian.design/foundations/spacing/primitives); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
 
 #### 031. Component Architecture
 - **URL:** https://lexkonovalov.com/glossary/component-architecture.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Component Architecture is the structural engineering discipline of designing modular, encapsulated, accessible, and performant user interface code elements with standardized props, interfaces, and state boundaries.
-- **Purpose:** Prevents brittle code repetition, eliminates leaky UI abstractions, and ensures predictable component composition across complex applications.
-- **Key Concepts:** Encapsulation, compositional props, state decoupling, API contracts.
-- **How It Works:** Developers isolate component concerns into headless logic hooks, semantic templates, and tokenized styling layers, enforcing strict TypeScript interfaces.
+- **Definition:** Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.
+- **Purpose:** Establishes modular component boundaries, public APIs, and state management patterns to ensure UI components remain decoupled, testable, and composable.
+- **Key Concepts:** Public API contract, Controlled vs uncontrolled state, Component composition & slots, Responsibility boundaries, Variant explosion prevention
+- **How It Works:** Divides interface layouts into hierarchical, single-responsibility components with explicitly typed props, event handlers, and slot projections.
 - **Related Terms:** Component Libraries, Headless UI Architecture, Web Components, Semantic HTML
-- **SEO Title:** UI Component Architecture: Scalable Component Engineering
-- **Sources:** Dan Abramov, Presentational and Container Components; Addy Osmani, Learning JavaScript Design Patterns
+- **SEO Title:** UI Component Architecture | Product Design Glossary
+- **Sources:** Sharing State Between Components, React (https://react.dev/learn/sharing-state-between-components); Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog); Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 #### 032. Component Libraries
 - **URL:** https://lexkonovalov.com/glossary/component-libraries.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A Component Library is a centralized, versioned repository of tested, production-ready frontend code components that implement a design system’s visual and interaction patterns.
-- **Purpose:** Accelerates feature engineering velocity while ensuring systemic UI consistency, cross-browser support, and automated accessibility compliance across applications.
-- **Key Concepts:** Centralized package, version control, automated test coverage, visual documentation.
-- **How It Works:** Components are authored as independent packages, documented in interactive sandboxes, and published to private package managers.
+- **Definition:** A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.
+- **Purpose:** Provides modular, production-ready UI building blocks that reduce code duplication, increase development speed, and enforce visual consistency across applications.
+- **Key Concepts:** Reusable UI components, Component API & options, Component states (default, hover, focus, disabled), Storybook documentation, Shared component criteria
+- **How It Works:** Packages tested, accessible frontend components with clear properties, variants, and documentation for consumption across multiple digital products and microfrontends.
 - **Related Terms:** Component Architecture, Design System, Headless UI Architecture, DesignOps
-- **SEO Title:** Building Scalable Component Libraries: Best Practices Guide
-- **Sources:** Storybook.js Documentation; Brad Frost, Atomic Design
+- **SEO Title:** UI Component Libraries | Product Design Glossary
+- **Sources:** Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/); What’s a story?, Storybook documentation (https://storybook.js.org/docs/get-started/whats-a-story); GOV.UK Design System (https://design-system.service.gov.uk/)
 
 #### 033. Design System Governance
 - **URL:** https://lexkonovalov.com/glossary/design-system-governance.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Design System Governance encompasses the organizational workflows, decision rights, deprecation policies, contribution pipelines, and review criteria that manage changes to a system over time.
-- **Purpose:** Prevents design system decay, unvetted component fragmentation, and organizational gridlock by balancing centralized system stability with federated product team contributions.
-- **Key Concepts:** Contribution models, RFC processes, deprecation lifecycles, version contracts.
-- **How It Works:** Teams establish cross-functional review boards that evaluate component proposals against strict acceptance criteria, including automated test coverage and multi-brand parity.
+- **Definition:** Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.
+- **Purpose:** Establishes clear contribution criteria, review workflows, and ownership models so shared systems evolve sustainably without fragmentation or bottlenecks.
+- **Key Concepts:** Contribution criteria, Decision ownership, Proposal review workflow, Adoption & migration support, Lightweight governance
+- **How It Works:** Routes component proposals through multi-disciplinary review gates, evaluating shared need and accessibility before approving contributions into canonical libraries.
 - **Related Terms:** DesignOps, Design System, Design System Versioning & SemVer, Component Architecture
-- **SEO Title:** Design System Governance: Workflows, RFCs & Contribution Models
-- **Sources:** Nathan Curtis, Team Models for Design Systems; Jina Anne, Governing Enterprise Systems
+- **SEO Title:** Design System Governance | Product Design Glossary
+- **Sources:** Propose a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/propose-a-component-or-pattern/); Develop a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/develop-a-component-or-pattern/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
 
 #### 034. Design Engineering
 - **URL:** https://lexkonovalov.com/glossary/design-engineering.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Design Engineering is a specialized hybrid practice operating at the boundary of interaction design and frontend software engineering, building prototypes, design tooling, token pipelines, and UI runtimes.
-- **Purpose:** Eliminates fidelity loss between design intent and production implementation, accelerating product innovation through rapid, code-level interaction prototyping.
-- **Key Concepts:** Design-to-code pipelines, high-fidelity code prototyping, UI performance, token toolchains.
-- **How It Works:** Design engineers construct custom plugins, maintain token build processes, build complex animations, and contribute directly to production component architectures.
+- **Definition:** Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.
+- **Purpose:** Connects aesthetic intent and technical implementation by building production-grade UI components, interactive prototypes, and design system tooling directly in code.
+- **Key Concepts:** In-browser prototyping, production component authoring, design systems tooling, interaction fidelity, accessibility ergonomics
+- **How It Works:** Design engineers operate at the intersection of design tools and codebases, implementing interactive states, token pipelines, and robust UI primitives with production-grade engineering standards.
 - **Related Terms:** Design-to-Code Workflow, Design Tokens, Component Architecture, DesignOps
-- **SEO Title:** What is Design Engineering? Role, Skills, and Tooling
-- **Sources:** Maggie Appleton, The Ambient Medium: Design Engineering; Brad Frost, The Design Engineer
+- **SEO Title:** Design Engineering: What Design Engineers Do | Product Design Glossary
+- **Sources:** Design Engineering at Vercel, Vercel (https://vercel.com/blog/design-engineering-at-vercel); Design Engineer Principles, Vercel (https://vercel.com/design/engineer)
 
 #### 035. Design-to-Code Workflow
 - **URL:** https://lexkonovalov.com/glossary/design-to-code-workflow.html
 - **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
 - **Maturity:** Emerging
-- **Definition:** The Design-to-Code Workflow is the automated continuous integration pipeline that parses design artifacts, extracts layout constraints and design tokens, and converts them into production-ready frontend code.
-- **Purpose:** Eradicates manual, error-prone design handoffs, reducing developer translation time and eliminating visual regressions between canvas and browser.
-- **Key Concepts:** Token synchronization, AST transformations, headless rendering, automated PR generation.
-- **How It Works:** Changes in design tools trigger webhooks that export vector schemas into token parsers and AST generators, pushing automated code updates directly to Git repositories.
-- **Related Terms:** Design Tokens, Style Dictionary, Design Engineering, Vibe Coding
-- **SEO Title:** Modern Design-to-Code: Automated Workflows & Toolchains
-- **Sources:** W3C DTCG Tools Pipeline; Penpot Developer Integrations
+- **Definition:** A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.
+- **Purpose:** Bridges the gap between Figma design assets and multi-platform production code through automated token extraction, component mapping, and rapid preview verification.
+- **Key Concepts:** Figma Code Connect, design tokens pipeline, component mapping, visual preview verification, automated regression checks
+- **How It Works:** Maps Figma component variants directly to production code components, compiles design tokens into platform styling artifacts, and generates interactive previews for design review.
+- **Related Terms:** Design Tokens, Style Dictionary, Design Engineering, Vibe Coding, Visual Regression Testing
+- **SEO Title:** Design-to-Code Workflow: From Figma to Production | Product Design Glossary
+- **Sources:** Figma Code Connect, Figma Developer Docs (https://developers.figma.com/docs/code-connect/); Use Code Snippets in Dev Mode, Figma (https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/); Configuration, Style Dictionary (https://styledictionary.com/reference/config/)
 
 #### 036. Atomic Design
 - **URL:** https://lexkonovalov.com/glossary/atomic-design.html
@@ -760,26 +776,26 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 #### 037. Figma Variables & Modes
 - **URL:** https://lexkonovalov.com/glossary/figma-variables-modes.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
-- **Maturity:** Proprietary / Framework-Specific
-- **Definition:** Figma Variables & Modes is a native canvas data-binding architecture that stores reusable values (Colors, Numbers, Strings, Booleans) and enables instant contextual switching (e.g., Light/Dark themes, Spacing densities) across design frames.
-- **Purpose:** Bridges design tool canvas states with production CSS variables and token aliasing structures, reducing artboard bloat across responsive and themed designs.
-- **Key Concepts:** Variable types, variable collections, contextual modes, token scoping.
-- **How It Works:** Designers assign variables to layer properties; when frames are switched to different modes, the canvas re-resolves all underlying variable values dynamically.
+- **Maturity:** Established
+- **Definition:** Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.
+- **Purpose:** Enables native design token management, mode switching (light/dark, responsive density, multi-brand theming), and alias resolution directly within Figma design files.
+- **Key Concepts:** Variable types (color, number, string, boolean), Collections and Modes, Variable alias binding, Mode inheritance and overrides, DTCG JSON token import/export
+- **How It Works:** Binds UI layer fills, strokes, dimensions, and text to variable aliases organized into collections, allowing parent frame mode toggles to cascade across nested child layers.
 - **Related Terms:** Semantic Tokens, Design Tokens, Design-to-Code Workflow, Design Tokens Format Module (DTCG)
-- **SEO Title:** Figma Variables & Modes: Theming Architecture for Systems
-- **Sources:** Figma Schema Architecture Guides; W3C DTCG Figma Plugin Guides
+- **SEO Title:** Figma Variables and Modes | Product Design Glossary
+- **Sources:** Overview of variables, collections, and modes, Figma (https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes); Modes for variables, Figma (https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)
 
 #### 038. Semantic HTML
 - **URL:** https://lexkonovalov.com/glossary/semantic-html.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Semantic HTML is the foundational standard of using native markup elements according to their intrinsic linguistic and structural meaning (e.g., <main>, <nav>, <article>, <button>) rather than generic non-semantic containers (<div>, <span>).
-- **Purpose:** Guarantees native digital accessibility, screen-reader navigation, machine comprehension, search engine indexing, and keyboard interoperability across web browsers.
-- **Key Concepts:** Native semantics, accessibility tree mapping, document outline, interactive defaults.
-- **How It Works:** Browsers parse semantic tags to construct the accessibility tree and establish default keyboard focus paths without requiring auxiliary JavaScript.
-- **Related Terms:** Accessibility and WCAG, ARIA, Web Components, Structured Data for LLMs
-- **SEO Title:** Semantic HTML Guide: Accessibility, Architecture, and SEO
-- **Sources:** W3C HTML Specification; WHATWG HTML Living Standard
+- **Definition:** Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.
+- **Purpose:** Provides built-in keyboard navigation, native accessibility tree roles, search crawlability, and machine-actionable structure for assistive technologies and autonomous AI agents.
+- **Key Concepts:** WHATWG living standard, accessibility tree mapping, native interactive controls, form labeling ergonomics, AI agent browser execution
+- **How It Works:** Employs native semantic tags (<article>, <nav>, <button>, <input>) rather than unstyled div/span containers, giving browsers and assistive clients default behaviors and explicit roles.
+- **Related Terms:** Accessibility and WCAG, ARIA (Accessible Rich Internet Applications), Web Components, Structured Data for LLMs
+- **SEO Title:** Semantic HTML: Accessibility and AI Agents | Product Design Glossary
+- **Sources:** Sections, WHATWG HTML Living Standard (https://html.spec.whatwg.org/multipage/sections.html); Forms, WHATWG HTML Living Standard (https://html.spec.whatwg.org/multipage/forms.html); Labeling Controls, W3C WAI (https://www.w3.org/WAI/tutorials/forms/labels/); WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md); AI Features and Your Website, Google Search Central (https://developers.google.com/search/docs/appearance/ai-features)
 
 #### 039. Accessibility and WCAG
 - **URL:** https://lexkonovalov.com/glossary/accessibility-wcag.html
@@ -797,13 +813,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** WAI-ARIA (Accessible Rich Internet Applications) is a W3C specification providing semantic roles, states, and properties that extend HTML to communicate interactive component behaviors to assistive technologies.
-- **Purpose:** Bridges accessibility gaps in complex, dynamic, custom user interface widgets (e.g., tree grids, custom modals, tabs) where native HTML elements do not exist.
-- **Key Concepts:** Roles, states, properties, live regions, accessibility tree binding.
-- **How It Works:** Developers apply ARIA attributes (e.g., role="dialog", aria-expanded="false") to DOM elements, programmatically mutating their state during runtime user interactions.
+- **Definition:** WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.
+- **Purpose:** Bridges interactive accessibility gaps in complex dynamic web widgets by communicating programmatic roles, states, and relations to accessibility APIs.
+- **Key Concepts:** WAI-ARIA 1.2 specification, roles, states, and properties, first rule of ARIA (prefer native HTML), ARIA authoring practices (APG), ARIA snapshots in testing
+- **How It Works:** Applies aria-* attributes and role markers to DOM elements to communicate dynamic state (expanded, selected, busy) and relational bindings (labelledby, controls) without altering visual styles.
 - **Related Terms:** Semantic HTML, Accessibility and WCAG, Component Architecture, Headless UI Architecture
-- **SEO Title:** WAI-ARIA Basics: Roles, States, and Attributes for Web UX
-- **Sources:** W3C WAI, Accessible Rich Internet Applications (WAI-ARIA) 1.2 Specification; MDN Web Docs, ARIA Authoring Practices Guide (APG)
+- **SEO Title:** What Is ARIA? Roles, States, and Properties | Product Design Glossary
+- **Sources:** WAI-ARIA 1.2, W3C (https://www.w3.org/TR/wai-aria-1.2/); Read Me First, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/); Disclosure Pattern, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/); ARIA Snapshots, Playwright (https://playwright.dev/docs/aria-snapshots); WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md)
 
 #### 041. Web Components
 - **URL:** https://lexkonovalov.com/glossary/web-components.html
@@ -821,61 +837,61 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/designops.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** DesignOps (Design Operations) is the management framework and operational infrastructure that optimizes design team workflows, tooling pipelines, governance, budgets, and cross-functional collaboration.
-- **Purpose:** Scales design craft, reduces organizational friction, and measures design value within enterprise environments, freeing product designers to focus on core UX challenges.
-- **Key Concepts:** Workflow orchestration, tooling optimization, team capability matrices, design telemetry.
-- **How It Works:** DesignOps leads establish structured hiring, tooling procurement, cross-functional rituals, automated QA handoffs, and performance metrics across product design organizations.
-- **Related Terms:** Design System Governance, Design Engineering, Continuous Experimentation
-- **SEO Title:** What is DesignOps? Scaling Design Workflows and Infrastructure
-- **Sources:** Dave Malouf et al., DesignOps Handbook, InVision; Meredith Black, DesignOps 101, Nielsen Norman Group
+- **Definition:** DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.
+- **Purpose:** Scales design impact, reduces operational friction, clarifies decision governance, and streamlines cross-functional delivery across expanding product organizations.
+- **Key Concepts:** Design onboarding & tooling, ways of working & review cadence, governance & adoption coordination, knowledge sharing, cross-functional alignment
+- **How It Works:** Establishes standardized design reviews, maintains centralized documentation, coordinates design system migrations across product squads, and optimizes design tooling.
+- **Related Terms:** Design System Governance, Design Engineering, Continuous Experimentation, Component Telemetry
+- **SEO Title:** What Is DesignOps? Design Operations in Practice | Product Design Glossary
+- **Sources:** DesignOps 101, Nielsen Norman Group (https://www.nngroup.com/articles/design-operations-101/)
 
 #### 043. Style Dictionary
 - **URL:** https://lexkonovalov.com/glossary/style-dictionary.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Style Dictionary is an open-source, automated build system that parses design tokens defined in JSON/YAML and transforms them into platform-specific asset formats for Web, iOS, Android, and Flutter.
-- **Purpose:** Eliminates manual translation of design values across tech stacks, ensuring cross-platform token synchronization from a single upstream codebase.
-- **Key Concepts:** Transform groups, formatters, build actions, platform targets.
-- **How It Works:** Configured pipelines ingest raw design token files, execute type-specific transforms (e.g., converting hex colors to Swift UIColor), and output ready-to-consume build artifacts.
+- **Definition:** Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.
+- **Purpose:** Automates the deterministic translation of platform-agnostic design tokens into native iOS, Android, web, and design tool artifacts from a single source of truth.
+- **Key Concepts:** Token compilation build, Transforms and transform groups, Formats (css/variables, json, etc.), DTCG input support, Platform targets (web, ios, android)
+- **How It Works:** Parses hierarchical token definitions, resolves alias references, executes platform-specific transforms, and formats code files for automated downstream consumption.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Design Engineering, Design-to-Code Workflow
-- **SEO Title:** Style Dictionary: Multi-Platform Design Token Compilation
-- **Sources:** Amazon Open Source, Style Dictionary Documentation (https://amzn.github.io/style-dictionary); W3C DTCG Tooling Guides
+- **SEO Title:** Style Dictionary for Design Tokens | Product Design Glossary
+- **Sources:** Configuration, Style Dictionary (https://styledictionary.com/reference/config/); Built-in formats, Style Dictionary (https://styledictionary.com/reference/hooks/formats/predefined/); DTCG support, Style Dictionary (https://styledictionary.com/info/dtcg/); Using the CLI, Style Dictionary (https://styledictionary.com/getting-started/using_the_cli/); Built-in transforms, Style Dictionary (https://styledictionary.com/reference/hooks/transforms/predefined/)
 
 #### 044. Token Resolver Engine
 - **URL:** https://lexkonovalov.com/glossary/token-resolver-engine.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
-- **Maturity:** Emerging
-- **Definition:** A Token Resolver Engine is an algorithmic compilation tool that traverses recursive token alias graphs, resolves nested dependencies, evaluates conditional expressions, and outputs normalized concrete values.
-- **Purpose:** Manages multi-tier token hierarchies and complex multi-brand theming layers without cyclic dependency crashes or run-time calculation overhead.
-- **Key Concepts:** Alias resolution, dependency graphing, cyclic reference detection, AST evaluation.
-- **How It Works:** Evaluates token tree nodes sequentially, replacing alias references ({color.brand.primary}) with resolved values from parent collections while throwing errors on circular references.
+- **Maturity:** Established
+- **Definition:** A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.
+- **Purpose:** Resolves nested token alias references, contextual theme overrides, and mode inheritance rules deterministically according to DTCG resolution order specifications.
+- **Key Concepts:** Resolution order precedence, Context modifiers (theme, density, brand), Winning reference selection, Circular reference prevention, DTCG Resolver Module 2025.10
+- **How It Works:** Applies cascading token sets in a declared sequence where subsequent modifiers override preceding values, traversing reference graphs until concrete primitives are resolved.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Style Dictionary, Semantic Tokens
-- **SEO Title:** Token Resolver Engines: Resolving Complex Design Token Trees
-- **Sources:** W3C DTCG Resolver Module Specification; Styleframe DTCG Engine
+- **SEO Title:** Design Token Resolution and Theming | Product Design Glossary
+- **Sources:** Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
 
 #### 045. Headless UI Architecture
 - **URL:** https://lexkonovalov.com/glossary/headless-ui-architecture.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Headless UI Architecture is a frontend development paradigm that completely separates a component’s logic, accessibility attributes, state machines, and keyboard interactions from its visual presentation styles.
-- **Purpose:** Maximizes design freedom and UI reusability by delivering battle-tested accessible behavior without opinionated CSS, preventing styling conflicts in component libraries.
-- **Key Concepts:** Unstyled components, logic hooks, state machines, full styling decoupling.
-- **How It Works:** Components provide accessibility attributes and event listeners via hooks or headless components, leaving style implementation to modern utility CSS or token engines.
-- **Related Terms:** Component Architecture, Accessibility and WCAG, Semantic HTML, ARIA
-- **SEO Title:** Headless UI Architecture: Logic-First Component Engineering
-- **Sources:** Radix UI Documentation; Floating UI Specifications; Kent C. Dodds, Inversion of Control
+- **Definition:** Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.
+- **Purpose:** Delivers robust, fully accessible keyboard navigation and WAI-ARIA states without imposing visual opinions or styling lock-in.
+- **Key Concepts:** Unstyled components & hooks, Accessibility semantics & focus management, Keyboard choreography (Tab, Shift+Tab, Escape), Separation of behavior and presentation, Integration testing in context
+- **How It Works:** Implements complex state machines, ARIA roles, and keyboard focus traps in headless hooks or unstyled render components, leaving CSS presentation entirely to the consuming application.
+- **Related Terms:** Component Architecture, Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications)
+- **SEO Title:** Headless UI Architecture | Product Design Glossary
+- **Sources:** Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog); Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/); Modal, React Aria (https://react-aria.adobe.com/Modal)
 
 #### 046. Composite Design Token
 - **URL:** https://lexkonovalov.com/glossary/composite-design-token.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A Composite Design Token is an advanced token type whose  is composed of an object containing multiple coordinated properties that define a single cohesive visual concept (e.g., Typography, Shadows, Borders).
-- **Purpose:** Encapsulates interdependent design decisions into cohesive, reusable design units, preventing designers from applying mismatched font sizes, line heights, or blur radii.
-- **Key Concepts:** Multi-property values, typography bundles, elevation matrices, structural groupings.
-- **How It Works:** Defined in DTCG JSON schemas as a single node containing required child keys (e.g., fontFamily, fontSize, lineHeight), resolved together during platform transforms.
+- **Definition:** A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.
+- **Purpose:** Encapsulates multi-property design decisions (such as shadows, typography, and borders) into a single cohesive, type-safe token unit.
+- **Key Concepts:** Composite token vs token group, Multi-property $value object, Shadow composite structure (color, offsets, blur, spread), Composite type validation, Cross-platform output compilation
+- **How It Works:** Groups tightly-coupled properties into a single semantic token object, ensuring dependent values resolve simultaneously when consumed by design components or code.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Semantic Tokens, Design Primitives
-- **SEO Title:** Composite Design Tokens: Managing Typography, Shadows, and Borders
-- **Sources:** W3C Design Tokens Community Group Format Specification 2025.1013; designtokens.org
+- **SEO Title:** Composite Design Tokens | Product Design Glossary
+- **Sources:** Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
 
 #### 047. Fluid Typography & Spacing System
 - **URL:** https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html
@@ -893,37 +909,37 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/component-telemetry.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Emerging
-- **Definition:** Component Telemetry is the systematic instrumenting of design system code components to track automated runtime metrics, including production usage counts, error boundaries, prop combinations, and user interaction patterns.
-- **Purpose:** Replaces anecdotal design system feedback with hard quantitative data, revealing which components are adopted, misused, or ripe for deprecation across applications.
-- **Key Concepts:** Runtime logging, adoption tracking, prop monitoring, deprecation indicators.
-- **How It Works:** Lightweight analytics triggers embedded directly in component source files dispatch anonymized telemetry payloads to monitoring dashboards when components mount or error.
-- **Related Terms:** DesignOps, Design System Governance, Product Telemetry & Analytics, Continuous Experimentation
-- **SEO Title:** Component Telemetry: Tracking Design System Adoption in Production
-- **Sources:** Cristiano Rastelli, Measuring Design System Adoption; Omlet.dev Component Analytics
+- **Definition:** Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.
+- **Purpose:** Informs design system roadmaps, adoption metrics, and safe deprecation lifecycles through automated static code analysis and runtime interaction monitoring.
+- **Key Concepts:** Static code inventory, runtime usage tracking, prop distribution metrics, interaction & error telemetry, safe deprecation planning
+- **How It Works:** Pairs build-time AST scanners (like Omlet) with runtime event instrumentation (OpenTelemetry) to track production component usage, error rates, and prop combinations across repositories.
+- **Related Terms:** DesignOps, Design System Governance, Product Telemetry & Analytics, Continuous Experimentation, Design System Versioning & SemVer
+- **SEO Title:** Component Telemetry: Design System Usage | Product Design Glossary
+- **Sources:** Component Usage Across Code Repositories, Omlet (https://omlet.dev/); Semantic Conventions for Events, OpenTelemetry (https://opentelemetry.io/docs/specs/semconv/general/events/)
 
 #### 049. Visual Regression Testing
 - **URL:** https://lexkonovalov.com/glossary/visual-regression-testing.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Visual Regression Testing is an automated quality assurance methodology that captures pixel screenshots of UI components across code branches and compares them against baseline snapshots to catch unintended visual changes.
-- **Purpose:** Prevents accidental CSS regressions, layout breaks, and cross-browser visual defects before code merges into production design systems.
-- **Key Concepts:** Pixel diffing, baseline snapshots, threshold configurations, headless browser automation.
-- **How It Works:** Automated CI pipelines deploy headless browsers, render components across viewports, take screenshots, and calculate differential image deltas against master baselines.
+- **Definition:** Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.
+- **Purpose:** Prevents unintended styling regressions, clipping, layout shifts, and visual breakage across multi-platform releases through automated pixel-diff and DOM-capture baselines.
+- **Key Concepts:** Baseline screenshots, pixel diffing, capture environment stability, component state coverage, interaction testing complement
+- **How It Works:** Renders components in isolated test runners (e.g. Playwright, Storybook), captures viewport snapshots against approved golden images, and flags visual deviations for human approval.
 - **Related Terms:** Component Architecture, Design Engineering, Design-to-Code Workflow
-- **SEO Title:** Visual Regression Testing: Automating UI Design System QA
-- **Sources:** Playwright Visual Comparisons (https://playwright.dev); Percy.io by BrowserStack; Chromatic by Storybook
+- **SEO Title:** Visual Regression Testing: UI Baselines | Product Design Glossary
+- **Sources:** Visual Comparisons, Playwright (https://playwright.dev/docs/test-snapshots); Visual Tests, Storybook (https://storybook.js.org/docs/writing-tests/visual-testing)
 
 #### 050. Design System Versioning & SemVer
 - **URL:** https://lexkonovalov.com/glossary/design-system-versioning-semver.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Design System Versioning is the application of Semantic Versioning (SemVer: MAJOR.MINOR.PATCH) to both component code packages and design libraries to clearly communicate the structural impact of updates.
-- **Purpose:** Prevents breaking changes from corrupting consumer codebases, providing product teams with clear upgrade paths and risk assessments for design system dependencies.
-- **Key Concepts:** Breaking changes (MAJOR), backward-compatible enhancements (MINOR), bug fixes (PATCH), deprecation windows.
-- **How It Works:** Token or prop removals trigger MAJOR version increments; new components trigger MINOR updates; token color value tweaks trigger PATCH releases.
+- **Definition:** Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.
+- **Purpose:** Governs package releases and migration paths across consuming codebases, communicating backward-compatible vs breaking structural changes transparently.
+- **Key Concepts:** Semantic Versioning (MAJOR.MINOR.PATCH), Public API compatibility contract, Breaking change deprecation window, Design file and code release alignment, Migration guides & release notes
+- **How It Works:** Increments PATCH for backward-compatible bug fixes, MINOR for new backward-compatible capabilities, and MAJOR for breaking public contract modifications.
 - **Related Terms:** Design System Governance, Component Architecture, DesignOps
-- **SEO Title:** Semantic Versioning for Design Systems: Managing Breaking Changes
-- **Sources:** Tom Preston-Werner, Semantic Versioning 2.0.0; Nathan Curtis, Versioning Design Systems. Category 03 — AI & Agentic Systems The emergence of Large Language Models (LLMs) and autonomous agents has shifted product design from deterministic user interface flows to probabilistic, intent-driven systems. Designers are no longer merely sculpting static visual containers; they are building Agent Harnesses, curating domain contexts, and architecting real-time generative interfaces. Through standard protocols like the Model Context Protocol (MCP) and agent capabilities like Agent Skills, systems negotiate contextual resources, execute tool calls, and generate dynamic UI components during active user inference
+- **SEO Title:** Design System Versioning and SemVer | Product Design Glossary
+- **Sources:** Semantic Versioning 2.0.0 (https://semver.org/)
 
 #### 051. Agentic AI
 - **URL:** https://lexkonovalov.com/glossary/agentic-ai.html
@@ -1097,13 +1113,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/structured-data-for-llms.html
 - **Category:** AI & Agentic Systems (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Structured Data for LLMs refers to machine-readable semantic data schemas (e.g., JSON-LD, Schema.org, standard Markdown tables) optimized for deterministic extraction and reasoning by language models.
-- **Purpose:** Guarantees accurate entity extraction by search engine crawlers and LLMs, minimizing synthesis distortion and powering Generative Engine Optimization (GEO).
-- **Key Concepts:** Semantic markup, JSON-LD, knowledge graphs, schema normalization.
-- **How It Works:** Product architectures serialize complex relational models into validated semantic trees, embedded in HTML <head> tags or exposed via dedicated API endpoints.
-- **Related Terms:** llms.txt Proposal, Content Modeling, Knowledge Graphs (AI Context), Controlled Vocabulary
-- **SEO Title:** Structured Data for LLMs: Optimizing for GEO and AI Crawlers
-- **Sources:** Schema.org Consortium; W3C RDF / JSON-LD Recommendations; Google Search Central
+- **Definition:** Structured data for LLMs is a broad term for publishing information in a machine-readable format that an AI system or its retrieval tools can use. On the web, one approach is to describe a page’s entities and relationships with the Schema.org vocabulary in JSON-LD.
+- **Purpose:** Enhances semantic discoverability, unambiguous entity disambiguation, and structured grounding for search engine generative overviews and LLM retrieval-augmented agents.
+- **Key Concepts:** JSON-LD 1.1 formatting, Schema.org vocabularies (DefinedTerm, etc.), entity relationship graphs, semantic HTML vs structured data, AI Overviews indexing eligibility
+- **How It Works:** Injects machine-readable JSON-LD graph objects into HTML documents, enabling web scrapers, semantic search engines, and LLM context pipelines to parse entity hierarchies directly.
+- **Related Terms:** llms.txt Proposal, Content Modeling, Knowledge Graphs (AI Context), Controlled Vocabulary, Semantic HTML
+- **SEO Title:** Structured Data for LLMs and Schema.org | Product Design Glossary
+- **Sources:** Getting Started with Schema.org, Schema.org (https://schema.org/docs/gs.html); DefinedTerm, Schema.org (https://schema.org/DefinedTerm); JSON-LD 1.1, W3C (https://www.w3.org/TR/json-ld11/); Introduction to Structured Data, Google Search Central (https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data); AI Features and Your Website, Google Search Central (https://developers.google.com/search/docs/appearance/ai-features)
 
 #### 066. llms.txt Proposal
 - **URL:** https://lexkonovalov.com/glossary/llms-txt-proposal.html
@@ -1233,7 +1249,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Increases revenue generation efficiency and customer acquisition ROI without requiring additional marketing or acquisition spend.
 - **Key Concepts:** Conversion rate formula, baseline analytics, heuristic evaluation, iterative testing.
 - **How It Works:** Formulated as Conversion Rate = (Conversions / Total Visitors) * 100. Teams isolate funnel friction, formulate behavioral hypotheses, and validate variations using controlled A/B testing.
-- **Related Terms:** A/B Testing (Split Testing), Conversion Funnel Architecture, Checkout Flow Optimization, Growth Design
+- **Related Terms:** A/B Testing (Split Testing), Conversion Funnel, Checkout Flow Optimization, Growth Design
 - **SEO Title:** Conversion Rate Optimization (CRO) | Product Design Glossary
 - **Sources:** Conversion rate optimization, Optimizely (https://www.optimizely.com/optimization-glossary/conversion-rate-optimization); Analytics dimensions and metrics, Google Analytics (https://support.google.com/analytics/table/13948007?hl=en); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
@@ -1241,85 +1257,85 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/ab-testing-split-testing.html
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A/B Testing (or Split Testing) is a controlled empirical experimentation method where two or more variants of a user experience are served randomly to concurrent user segments to determine which drives a statistically significant improvement in target metrics.
+- **Definition:** A/B testing is a controlled experiment that randomly assigns eligible participants to different versions of a product experience and compares predefined outcomes. A well-run test helps estimate the effect of a change for the audience and conditions tested.
 - **Purpose:** Replaces internal stakeholder opinions with empirical behavioral evidence, mitigating financial and operational risks when deploying new product designs.
 - **Key Concepts:** Control vs. variant, statistical significance (p-value), sample size power, minimum detectable effect (MDE)
 - **How It Works:** Traffic is split randomly by experimentation routing engines; user interactions are tracked, and statistical hypothesis tests evaluate metric differentials.
 - **Related Terms:** Continuous Experimentation, Conversion Rate Optimization (CRO), Feature Flag Strategy, Product Telemetry & Analytics
-- **SEO Title:** A/B Testing Guide for Product Designers: Statistical Rigor in UX
-- **Sources:** Ron Kohavi, Diane Tang, & Ya Xu, Trustworthy Online Controlled Experiments, Cambridge University Press; Optimizely Engineering
+- **SEO Title:** A/B Testing in UX | Product Design Glossary
+- **Sources:** Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/); Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research (https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/)
 
 #### 078. Continuous Experimentation
 - **URL:** https://lexkonovalov.com/glossary/continuous-experimentation.html
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Continuous Experimentation is the organizational capability to iteratively deploy, measure, and learn from dozens of concurrent micro-experiments embedded directly into daily production sprint cycles.
+- **Definition:** Continuous experimentation is a product team’s practice of repeatedly testing hypotheses, making decisions from the evidence, and using the results to improve what it tests next. It connects experiments to regular product work through a shared process and a record of what the team learned.
 - **Purpose:** Transforms product development from risky, large-batch feature deployments into an agile, hypothesis-driven scientific discovery process.
 - **Key Concepts:** High test velocity, experimentation culture, feature flag decoupling, institutional learning.
 - **How It Works:** Product teams deploy features behind feature toggles, measuring immediate telemetry to determine whether variations are scaled globally, adjusted, or rolled back.
 - **Related Terms:** A/B Testing (Split Testing), Product Discovery, Feature Flag Strategy, Growth Design
-- **SEO Title:** Continuous Experimentation: Building High-Velocity Growth Teams
-- **Sources:** Stefan Thomke, Experimentation Works: The Surprising Power of Business Experiments, Harvard Business Review Press
+- **SEO Title:** Continuous Experimentation | Product Design Glossary
+- **Sources:** Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/); Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/)
 
-#### 079. Conversion Funnel Architecture
+#### 079. Conversion Funnel
 - **URL:** https://lexkonovalov.com/glossary/conversion-funnel-architecture.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Conversion Funnel Architecture is the deliberate structural sequencing of user steps—from initial acquisition through consideration, activation, and final transaction—engineered to minimize cognitive drop-off.
+- **Definition:** A conversion funnel is a model for measuring how many eligible users or accounts complete a defined sequence of steps toward an outcome. It shows completion and drop-off between milestones, such as viewing travel results, requesting a quote, and completing a booking.
 - **Purpose:** Visualizes and quantifies user friction across critical journey steps, highlighting operational bottlenecks that depress customer throughput.
 - **Key Concepts:** Step drop-off rates, funnel leakage, cognitive momentum, activation thresholds.
 - **How It Works:** Designers map required user actions into discrete, measurable milestones, analyzing drop-off telemetry at each transition to optimize page transitions and forms.
 - **Related Terms:** Conversion Rate Optimization (CRO), Checkout Flow Optimization, Time-to-Value (TTV)
-- **SEO Title:** Conversion Funnel Architecture: Mapping & Optimizing UX Drop-Off
-- **Sources:** Brian Balfour, Growth Loops and Funnels; Reforge Growth Series
+- **SEO Title:** Conversion Funnel: Steps and Drop-Off | Product Design Glossary
+- **Sources:** Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en); How Amplitude computes conversions through funnels, Amplitude Docs (https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions)
 
-#### 080. Lead Capture Mechanics
+#### 080. Lead Capture
 - **URL:** https://lexkonovalov.com/glossary/lead-capture-mechanics.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Lead Capture Mechanics encompass the strategic interaction patterns, forms, value exchanges, and progressive profiling techniques designed to capture prospective customer information.
-- **Purpose:** Maximizes top-of-funnel customer acquisition by offering compelling value propositions in exchange for contact information without introducing excessive form friction.
-- **Key Concepts:** Progressive profiling, value exchange, form micro-copy, frictionless authentication.
-- **How It Works:** Surfaces minimal input fields during initial user touchpoints, gathering secondary qualifying attributes dynamically over subsequent user sessions.
-- **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel Architecture, Progressive Disclosure
-- **SEO Title:** Lead Capture Mechanics: Designing High-Converting Forms & UX
-- **Sources:** Luke Wroblewski, Web Form Design: Filling in the Blanks, Rosenfeld Media; CXL Institute
+- **Definition:** Lead capture is the process of collecting information from a prospective customer so a business can respond to their interest. In product design, it includes the offer, the form or interaction used to collect the information, and what happens after submission.
+- **Purpose:** Balances user effort and friction against sales readiness, capturing high-intent prospective buyers and qualifying them for suitable follow-up.
+- **Key Concepts:** Offer value exchange, Request conversion, Qualified lead rate, Progressive disclosure in forms, Error prevention and feedback
+- **How It Works:** Designs progressive, accessible form experiences that preserve user context from upstream interactions, asks only for necessary qualification fields, and delivers immediate confirmation and expectations.
+- **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel, Progressive Disclosure, Checkout Flow Optimization
+- **SEO Title:** Lead Capture Forms: Design and Metrics | Product Design Glossary
+- **Sources:** Question pages, GOV.UK Design System (https://design-system.service.gov.uk/patterns/question-pages/); Funnel exploration, Google Analytics Help (https://support.google.com/analytics/answer/9327974?hl=en); How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages)
 
 #### 081. Checkout Flow Optimization
 - **URL:** https://lexkonovalov.com/glossary/checkout-flow-optimization.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Checkout Flow Optimization is the specialized UX practice of refining the final transactional, payment, and booking pathways of digital products to eliminate cart abandonment.
+- **Definition:** Checkout flow optimization is the practice of making it easier for customers to review an order, provide required information, pay, and understand the outcome. It addresses avoidable friction from checkout entry through confirmation.
 - **Purpose:** Protects bottom-of-the-funnel revenue realization by removing unexpected costs, cognitive distractions, payment friction, and form validation hurdles.
 - **Key Concepts:** Frictionless payments, single-page vs. multi-step checkout, trust signals, inline form recovery.
 - **How It Works:** Designers implement guest checkouts, native mobile wallet integrations, explicit cost breakdowns, and real-time input error handling.
-- **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel Architecture, Operational UX
-- **SEO Title:** Checkout Flow Optimization: Eliminating Transactional Cart Friction
-- **Sources:** Baymard Institute, E-Commerce Checkout Usability Studies; Stripe Checkout Architecture
+- **Related Terms:** Conversion Rate Optimization (CRO), Conversion Funnel, Operational UX
+- **SEO Title:** Checkout Flow Optimization | Product Design Glossary
+- **Sources:** Cart and Checkout Usability Research, Baymard Institute (https://baymard.com/research/checkout-usability); How to Improve Validation Errors, Baymard Institute (https://baymard.com/research-articles/adaptive-validation-error-messages); Payment UX, Baymard Institute (https://baymard.com/blog/payment-ux); How PaymentIntents work, Stripe documentation (https://docs.stripe.com/payments/paymentintents/lifecycle)
 
 #### 082. Product Discovery
 - **URL:** https://lexkonovalov.com/glossary/product-discovery.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Product Discovery is the continuous, collaborative process of conducting user research, prototyping, and testing to determine what to build, validating value, usability, feasibility, and business viability before engineering commits code.
-- **Purpose:** Prevents engineering teams from building features that users do not need, do not understand, or refuse to pay for, eliminating product waste.
-- **Key Concepts:** Dual-track agile, continuous interviews, assumption testing, prototype validation.
-- **How It Works:** Product triads (Design, Engineering, Product Management) continuously test business and user assumptions using quick experiments running parallel to delivery sprints.
+- **Definition:** Product discovery is the work of reducing uncertainty about which customer problems to address and which solutions are worth pursuing. Teams use research, prototypes, and assumption tests to make decisions before committing substantial delivery effort. Discovery can continue as the product is built and used.
+- **Purpose:** Mitigates value, usability, feasibility, and business viability risks through continuous customer contact, assumption testing, and rapid prototyping.
+- **Key Concepts:** Four product risks (Value, Usability, Feasibility, Viability), Continuous discovery habits, Assumption testing, Discovery vs delivery, Generative research
+- **How It Works:** Engages cross-functional product trios in weekly customer interviews and rapid prototype evaluations to test critical assumptions before committing engineering resources.
 - **Related Terms:** Jobs to Be Done (JTBD), Continuous Experimentation, Mental Model Mapping, Product Strategy Canvas
-- **SEO Title:** Product Discovery Guide: Continuous Discovery Habits for Teams
-- **Sources:** Teresa Torres, Continuous Discovery Habits, Product Talk LLC; Marty Cagan, Inspired: How to Create Tech Products Customers Love, Wiley
+- **SEO Title:** Product Discovery in UX | Product Design Glossary
+- **Sources:** Continuous Discovery Habits, Teresa Torres (https://www.producttalk.org/continuous-discovery-habits/); The Four Big Risks, Marty Cagan, Silicon Valley Product Group (https://www.svpg.com/four-big-risks/)
 
 #### 083. Jobs to Be Done (JTBD)
 - **URL:** https://lexkonovalov.com/glossary/jobs-to-be-done-jtbd.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Jobs to Be Done (JTBD) is a strategic innovation framework asserting that customers do not buy products; they "hire" products to make progress within specific circumstances and accomplish functional, emotional, or social jobs.
-- **Purpose:** Focuses innovation on underlying human motivations and desired progress rather than shallow demographic attributes or surface feature requests.
-- **Key Concepts:** Core job, functional/emotional progress, pushing/pulling forces, anxiety/habit friction.
-- **How It Works:** Researchers interview users to uncover the catalyst events, emotional anxieties, and progress goals that trigger switching from an old solution to a new product.
+- **Definition:** Jobs to Be Done (JTBD) is a way to understand why people choose a product or another solution in a particular situation. The job is the progress they seek. It can have functional, emotional, and social dimensions.
+- **Purpose:** Shifts product focus from surface demographics to the underlying progress and context that motivates users to hire or fire solutions.
+- **Key Concepts:** Functional dimension, Emotional dimension, Social dimension, Forces of progress (push, pull, inertia, anxiety), Hiring and firing alternatives
+- **How It Works:** Investigates past customer switching moments through timeline interviews, identifying the specific triggering circumstances, trade-offs, and progress sought.
 - **Related Terms:** Mental Model Mapping, Product Discovery, Value Proposition Canvas, Product Strategy Canvas
-- **SEO Title:** The Jobs to Be Done (JTBD) Framework: A Guide for Product UX
-- **Sources:** Clayton Christensen, Competing Against Time, Harvard Business Review Press; Bob Moesta, Demand-Side Sales 101
+- **SEO Title:** Jobs to Be Done (JTBD) in UX | Product Design Glossary
+- **Sources:** Jobs to Be Done Theory, Christensen Institute (https://www.christenseninstitute.org/theory/jobs-to-be-done/); The Jobs to Be Done Shaping Curriculum Decisions, Christensen Institute (https://www.christenseninstitute.org/wp-content/uploads/2021/04/Curriculum-Conundrum-4.20-update.pdf)
 
 #### 084. Product-Led Growth (PLG)
 - **URL:** https://lexkonovalov.com/glossary/product-led-growth-plg.html
@@ -1337,13 +1353,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/north-star-metric-nsm.html
 - **Category:** Product Strategy & Growth (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** A North Star Metric (NSM) is the single key metric that best captures the core customer value delivered by a product, serving as the unifying focal point for company-wide strategic growth and product development.
+- **Definition:** A North Star Metric (NSM) is a primary product metric that tracks a measurable sign of the value customers get from a product. Teams use it to align priorities and choose input metrics they can influence. Teams check whether changes in the metric are associated with durable business outcomes, such as customer retention or revenue.
 - **Purpose:** Unifies cross-functional teams around a common goal, prevents conflicting departmental priorities, and ensures product decisions tie directly to sustained customer value.
 - **Key Concepts:** Core value capture, leading growth indicator, input metrics tree, team alignment.
 - **How It Works:** Leadership identifies the quantitative signal that reflects recurring customer success (e.g., "Nights Booked" for Airbnb), decomposing it into localized tactical input levers.
-- **Related Terms:** Product Strategy Canvas, Product Telemetry & Analytics, Activation Metric
-- **SEO Title:** The North Star Metric Guide: Identifying Your Core Product Driver
-- **Sources:** Sean Ellis, Hacking Growth, Currency; John Cutler, The North Star Playbook, Amplitude
+- **Related Terms:** Product Strategy Canvas, Product Telemetry & Analytics, Activation Metric, User Retention
+- **SEO Title:** North Star Metric: Examples and Inputs | Product Design Glossary
+- **Sources:** About the North Star Framework, Amplitude (https://www.amplitude.com/books/north-star/about-north-star-framework); Defining Your North Star, Amplitude (https://amplitude.com/books/north-star/defining-your-North-Star)
 
 #### 086. Product Strategy Canvas
 - **URL:** https://lexkonovalov.com/glossary/product-strategy-canvas.html
@@ -1353,7 +1369,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Aligns executive leadership and delivery squads around a defensible product thesis, preventing feature-factory execution divorced from business strategy.
 - **Key Concepts:** Strategic positioning, competitive defensibility, target segment prioritization, outcome mapping.
 - **How It Works:** Teams articulate user problems, market alternatives, unique capabilities, and business levers, reviewing the canvas quarterly to steer roadmap priorities.
-- **Related Terms:** Value Proposition Canvas, North Star Metric (NSM), Product Discovery, Product-Market Fit (PMF) Engine
+- **Related Terms:** Value Proposition Canvas, North Star Metric (NSM), Product Discovery, Product–Market Fit (PMF)
 - **SEO Title:** Product Strategy Canvas: Modern Strategic Frameworks for Design
 - **Sources:** Melissa Perri, Escaping the Build Trap, O'Reilly; Roman Pichler, Strategize: Product Strategy and Roadmapping
 
@@ -1365,7 +1381,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Breaks down corporate organizational silos, exposing broken cross-channel transitions, redundant steps, and emotional friction across customer interactions.
 - **Key Concepts:** Lifecycle stages, cross-channel touchpoints, emotional curves, opportunity horizons.
 - **How It Works:** Synthesizes customer interviews, clickstream analytics, and support logs into a horizontal chronological timeline displaying what users do, feel, and think across every stage.
-- **Related Terms:** Service Blueprinting, Mental Model Mapping, Conversion Funnel Architecture
+- **Related Terms:** Service Blueprinting, Mental Model Mapping, Conversion Funnel
 - **SEO Title:** Customer Journey Mapping: UX Research Methods & Blueprints
 - **Sources:** Jim Kalbach, Mapping Experiences, O'Reilly; Nielsen Norman Group, Customer Journey Mapping 101
 
@@ -1373,13 +1389,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/enterprise-ux-strategy.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Enterprise UX Strategy is the deliberate architectural alignment of enterprise software design with complex corporate workflows, employee productivity, regulatory governance, and business change management.
+- **Definition:** Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.
 - **Purpose:** Eliminates the massive hidden costs of corporate training, workplace operational fatigue, and high employee error rates typical of legacy enterprise software.
 - **Key Concepts:** Total cost of ownership (TCO), employee productivity ROI, change management, operational safety.
 - **How It Works:** Enterprise designers engage deep corporate stakeholders, audit regulatory obligations, and map multi-user authorization matrices to construct modern, consumer-grade workflows.
 - **Related Terms:** Operational UX, Enterprise Information Architecture, B2B SaaS Interaction Model
-- **SEO Title:** Enterprise UX Strategy: Transforming Complex Enterprise Software
-- **Sources:** Jesse James Garrett, The Elements of User Experience; Nielsen Norman Group Enterprise UX Reports
+- **SEO Title:** Enterprise UX Strategy | Product Design Glossary
+- **Sources:** UX Strategy: Definition and Components, Nielsen Norman Group (https://www.nngroup.com/articles/ux-strategy/); Complex Application Design: A 5-Layer Framework, Nielsen Norman Group (https://www.nngroup.com/articles/complex-application-design-framework/)
 
 #### 089. B2B SaaS Interaction Model
 - **URL:** https://lexkonovalov.com/glossary/b2b-saas-interaction-model.html
@@ -1397,25 +1413,25 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/b2c-engagement-loops.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** B2C Engagement Loops are closed-system behavioral loops where user action generates a reinvestment, which compounds system value and produces a contextual trigger that re-engages the user back into the product.
-- **Purpose:** Drives organic customer retention, viral network effects, and sustained platform usage without relying exclusively on expensive paid push notifications or advertising.
-- **Key Concepts:** Trigger, action, variable investment, compounding feedback.
-- **How It Works:** Users perform an action (e.g., posting content); the platform rewards them (e.g., social validation); this investment creates a new external trigger that pulls them back into the loop.
-- **Related Terms:** Product-Led Growth (PLG), Conversion Funnel Architecture, Growth Design
-- **SEO Title:** B2C Engagement Loops: Behavioral UX Retention Models
-- **Sources:** Nir Eyal, Hooked: How to Build Habit-Forming Products, Portfolio; Brian Balfour, Growth Loops
+- **Definition:** A B2C engagement loop is a recurring cycle in a consumer product where an action and its outcome create a reason for the user to return and act again. The loop works when each return helps the person make progress on something they care about.
+- **Purpose:** Drives organic retention and repeat engagement by reinforcing customer progress through intrinsic triggers, useful updates, and compounding utility.
+- **Key Concepts:** Engagement loop vs growth loop, Trigger and action, Price watch cycle, Return condition, Notification controls
+- **How It Works:** Captures initial user intent into a stateful watch or preference, automatically monitoring state changes to trigger contextually relevant, valuable alerts that prompt return visits and progress.
+- **Related Terms:** Product-Led Growth (PLG), Conversion Funnel, Growth Design, User Retention
+- **SEO Title:** B2C Engagement Loops: Example and Metrics | Product Design Glossary
+- **Sources:** Growth Loops are the New Funnels, Reforge (https://www.reforge.com/blog/growth-loops); Hooked Model, Nir Eyal (https://www.nirandfar.com/wp-content/uploads/2025/02/Hooked_Model_Canvas_Nir_Eyal.pdf)
 
 #### 091. Product Telemetry & Analytics
 - **URL:** https://lexkonovalov.com/glossary/product-telemetry-analytics.html
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Product Telemetry & Analytics is the technical framework of capturing, ingesting, and analyzing behavioral events, feature interactions, performance logs, and user flows across client-side applications.
+- **Definition:** Product telemetry is the data a product records about actions and system behavior. Product analytics uses that data to answer questions about how people use the product and where they reach or miss important outcomes. Data can come from the interface, backend services, or both.
 - **Purpose:** Provides objective, real-time behavioral evidence of how software is utilized in the wild, identifying drop-off friction and validating feature success against business targets.
 - **Key Concepts:** Event tracking plans, cohort analysis, conversion funnels, retention matrices.
 - **How It Works:** Engineers implement client-side event tracking schemas, piping clickstream payloads to data warehouses for cross-sectional user cohort analysis.
-- **Related Terms:** Component Telemetry, Continuous Experimentation, A/B Testing (Split Testing)
-- **SEO Title:** Product Telemetry & Event Analytics for UX Product Designers
-- **Sources:** Mixpanel Product Analytics Guides; Amplitude Behavioral Analytics Playbook
+- **Related Terms:** Component Telemetry, Continuous Experimentation, A/B Testing (Split Testing), Activation Metric
+- **SEO Title:** Product Telemetry and Analytics | Product Design Glossary
+- **Sources:** Plan your implementation, Amplitude Docs (https://amplitude.com/docs/get-started/plan-your-implementation); User properties and event properties, Amplitude Docs (https://www.amplitude.com/docs/data/user-properties-and-events)
 
 #### 092. Growth Design
 - **URL:** https://lexkonovalov.com/glossary/growth-design.html
@@ -1425,7 +1441,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Unifies design quality with aggressive business scalability, proving that UX decisions directly drive quantitative commercial outcomes.
 - **Key Concepts:** Behavioral economics, psychological friction removal, experimentation velocity, metric accountability.
 - **How It Works:** Growth designers formulate quantitative hypotheses, build targeted micro-interactions (e.g., onboarding personalization, referral prompts), and iterate via rapid A/B experiments.
-- **Related Terms:** Conversion Rate Optimization (CRO), Product-Led Growth (PLG), Continuous Experimentation, Jobs to Be Done (JTBD)
+- **Related Terms:** Conversion Rate Optimization (CRO), Product-Led Growth (PLG), Continuous Experimentation, Jobs to Be Done (JTBD), User Retention
 - **SEO Title:** Growth Design: Meaning & Example | Product Design Glossary
 - **Sources:** Practicing Growth Design, Lex Roman / Amplitude (https://amplitude.com/blog/practicing-growth-design); A Primer on Growth Design, Chetana Deorah and Lex Roman (https://speakerdeck.com/chetanadeorah/a-primer-on-growth-design); Primary metrics, secondary metrics, and monitoring goals, Optimizely (https://docs.optimizely.com/experimentation-strategy/docs/primary-metrics-secondary-metrics-and-monitoring-goals)
 
@@ -1441,77 +1457,77 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **SEO Title:** Design Strategy Alignment: Connecting Product Craft to Business OKRs
 - **Sources:** Richard Rumelt, Good Strategy Bad Strategy, Crown Business; Jesse James Garrett, The Elements of User Experience
 
-#### 094. Product-Market Fit (PMF) Engine
+#### 094. Product–Market Fit (PMF)
 - **URL:** https://lexkonovalov.com/glossary/product-market-fit-pmf-engine.html
-- **Category:** Product Strategy & Growth (Secondary: Product Strategy & Growth)
+- **Category:** Product Strategy & Growth
 - **Maturity:** Established
-- **Definition:** The Product-Market Fit (PMF) Engine is a structured operational framework that measures, scores, and refines a product's value proposition against target market segments until organic, exponential retention occurs.
-- **Purpose:** Prevents startups and new enterprise ventures from prematurely burning capital scaling marketing before the core product experience proves sustainable retention.
-- **Key Concepts:** The Sean Ellis 40% test, cohort retention flattening, Net Promoter validation, viral coefficients.
-- **How It Works:** Surveys users on how disappointed they would be if the product disappeared; if >= 40% answer "very disappointed," the team doubles down on the specific features those users love.
-- **Related Terms:** Jobs to Be Done (JTBD), North Star Metric (NSM), Product Discovery, Churn Mitigation Architecture
-- **SEO Title:** The Product-Market Fit Engine: Measuring and Achieving PMF
-- **Sources:** Rahul Vohra, How Superhuman Built an Engine to Find Product Market Fit, First Round Review; Marc Andreessen, The Only Thing That Matters
+- **Definition:** Product–market fit (PMF) is the degree to which a product meets meaningful demand in a specific market. Teams assess it by looking for evidence that a defined group chooses the product, gets value when the need arises, and shows demand that can sustain the business.
+- **Purpose:** Identifies and validates the core segment where exponential organic retention, word-of-mouth adoption, and sustainable commercial willingness-to-pay converge.
+- **Key Concepts:** Cohort retention flattening, Sean Ellis 40% benchmark, Segment-specific fit, Commercial demand evidence, Superhuman PMF engine
+- **How It Works:** Surveys target users on emotional disappointment upon product withdrawal while correlating responses with usage data and recurring renewal patterns across narrow customer profiles.
+- **Related Terms:** Jobs to Be Done (JTBD), North Star Metric (NSM), Product Discovery, Churn Mitigation
+- **SEO Title:** Product–Market Fit (PMF) | Product Design Glossary
+- **Sources:** The Only Thing That Matters, Marc Andreessen (https://web.stanford.edu/class/ee204/ProductMarketFit.html); How Superhuman Built an Engine to Find Product Market Fit, Rahul Vohra (https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/); Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build)
 
 #### 095. LTV to CAC Ratio
 - **URL:** https://lexkonovalov.com/glossary/ltv-to-cac-ratio.html
-- **Category:** Product Strategy & Growth (Secondary: Product Strategy & Growth)
+- **Category:** Product Strategy & Growth
 - **Maturity:** Established
-- **Definition:** The LTV to CAC Ratio is a financial unit economics metric comparing the total lifetime revenue value generated by a customer against the total cost incurred to acquire them.
+- **Definition:** The LTV to CAC ratio compares customer lifetime value (LTV) with customer acquisition cost (CAC). In the gross-margin-adjusted SaaS calculation used here, LTV represents expected lifetime gross profit, rather than revenue alone.
 - **Purpose:** Evaluates the long-term commercial sustainability and marketing efficiency of a software product, directly steering product investment decisions.
 - **Key Concepts:** Unit economics, payback period, churn mitigation, customer acquisition spend.
 - **How It Works:** Calculated as Ratio = Lifetime Value (LTV) / Customer Acquisition Cost (CAC), where LTV = (Average Revenue Per User (ARPU) * Gross Margin) / Churn Rate. A healthy benchmark for SaaS is generally considered 3 : 1 or higher.
-- **Related Terms:** Churn Mitigation Architecture, Product-Led Growth (PLG), Activation Metric
-- **SEO Title:** LTV to CAC Ratio in SaaS: Calculating Product Unit Economics
-- **Sources:** David Skok, SaaS Metrics 2.0: A Guide to Measuring and Improving What Matters, For Entrepreneurs
+- **Related Terms:** Churn Mitigation, Product-Led Growth (PLG), Activation Metric
+- **SEO Title:** LTV:CAC Ratio: Formula & Example | Product Design Glossary
+- **Sources:** SaaS Metrics 2.0: Detailed Definitions, David Skok (https://www.forentrepreneurs.com/saas-metrics-2-definitions/); SaaS Metrics 2.0, David Skok (https://www.forentrepreneurs.com/saas-metrics-2/); What is the CAC payback period?, Stripe (https://stripe.com/resources/more/what-is-the-cac-payback-period); CAC in SaaS, Stripe (https://stripe.com/resources/more/cac-in-saas)
 
 #### 096. Activation Metric
 - **URL:** https://lexkonovalov.com/glossary/activation-metric.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** An Activation Metric is the precise behavioral milestone that indicates a new user has experienced the core value proposition of a product ("Aha! moment") within a specific timeframe.
+- **Definition:** An activation metric measures whether new users or accounts reach a milestone that indicates initial product value. An activation event records the behavior used to identify that milestone. The activation rate is the percentage of eligible new users or accounts that reach it within a specified time window.
 - **Purpose:** Serves as the primary operational target for product onboarding teams, directly correlating with sustained long-term user retention.
 - **Key Concepts:** "Aha! moment", early behavioral threshold, onboarding milestone, retention correlation.
 - **How It Works:** Data teams correlate early user actions with 90-day retention curves, discovering leading indicators (e.g., Slack's "2,000 messages sent" or Facebook's "7 friends in 10 days").
-- **Related Terms:** Time-to-Value (TTV), Product-Led Growth (PLG), Conversion Funnel Architecture, Product Telemetry & Analytics
-- **SEO Title:** The Activation Metric: Defining the "Aha! Moment" in Onboarding
-- **Sources:** Chamath Palihapitiya, How We Put Facebook on the Path to 1 Billion Users; Reforge Retention Series
+- **Related Terms:** Time-to-Value (TTV), Product-Led Growth (PLG), Conversion Funnel, Product Telemetry & Analytics, User Retention
+- **SEO Title:** Activation Metric and Rate | Product Design Glossary
+- **Sources:** Mastering Engagement Playbook, Amplitude (https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf); How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation); Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention)
 
 #### 097. Time-to-Value (TTV)
 - **URL:** https://lexkonovalov.com/glossary/time-to-value-ttv.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Time-to-Value (TTV) measures the elapsed duration—in steps, clicks, or minutes—from a user's initial account creation to their first realization of tangible product value.
+- **Definition:** Time to value (TTV) is the elapsed time between a defined starting point and the first meaningful outcome a user or account gets from a product. Teams measure it in units of time, such as minutes, hours, or days.
 - **Purpose:** Reduces early abandonment by eliminating friction, unnecessary setup steps, and cognitive hurdles during onboarding.
 - **Key Concepts:** Friction reduction, progressive onboarding, immediate utility, deferred setup.
 - **How It Works:** Designers streamline first-run wizards, defer registration forms, provide interactive templates, and utilize sample data so users experience core value immediately.
 - **Related Terms:** Activation Metric, Product-Led Growth (PLG), Progressive Disclosure
-- **SEO Title:** Time-to-Value (TTV) in UX: Accelerating User Onboarding
-- **Sources:** Wes Bush, The Product-Led Playbook; Samuel Hulick, UserOnboard: The Elements of User Onboarding
+- **SEO Title:** Time to Value (TTV) | Product Design Glossary
+- **Sources:** Time to Value, Amplitude (https://amplitude.com/blog/time-to-value-drives-user-retention); How Amplitude calculates retention (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation)
 
-#### 098. Churn Mitigation Architecture
+#### 098. Churn Mitigation
 - **URL:** https://lexkonovalov.com/glossary/churn-mitigation-architecture.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Churn Mitigation Architecture is the deliberate system of product signals, automated health checks, offboarding flows, and value-recovery loops designed to retain at-risk customers.
-- **Purpose:** Protects recurring subscription revenue by identifying customer disengagement early and resolving dissatisfaction before account cancellation.
-- **Key Concepts:** Predictive health scores, offboarding surveys, pause/downgrade options, exit feedback loops.
-- **How It Works:** Telemetry algorithms detect drops in user logins or feature usage, triggering contextual re-engagement interventions, self-serve account pauses, or targeted customer success outreach.
-- **Related Terms:** Product Telemetry & Analytics, LTV to CAC Ratio, Activation Metric
-- **SEO Title:** Churn Mitigation Architecture: Retaining SaaS Customers with UX
-- **Sources:** Lincoln Murphy, Customer Success: How Innovative Companies Are Reducing Churn, Wiley; Zuora Subscription Index
+- **Definition:** Churn mitigation is the work of reducing avoidable customer loss. In a subscription product, it includes addressing problems that lead customers to leave and helping them recover from billing issues that could end a subscription unintentionally.
+- **Purpose:** Protects recurring revenue and customer lifetime value by detecting, preventing, and recovering from both voluntary cancellations and involuntary payment failures.
+- **Key Concepts:** Voluntary churn, Involuntary churn, Smart retries, Usage drop signal, Retention recovery window
+- **How It Works:** Differentiates voluntary from involuntary loss, deploying automated dunning and retries for billing issues, while analyzing behavioral drops to provide targeted retention interventions, pauses, or downgrades.
+- **Related Terms:** Product Telemetry & Analytics, LTV to CAC Ratio, Activation Metric, User Retention
+- **SEO Title:** Churn Mitigation in SaaS | Product Design Glossary
+- **Sources:** Customer churn, Stripe (https://stripe.com/resources/more/customer-churn-101-what-it-is-why-it-happens-and-what-businesses-can-do-about-it); Automate payment retries, Stripe Docs (https://docs.stripe.com/billing/revenue-recovery/smart-retries)
 
 #### 099. Feature Flag Strategy
 - **URL:** https://lexkonovalov.com/glossary/feature-flag-strategy.html
 - **Category:** Product Strategy & Growth (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A Feature Flag Strategy is an engineering and product methodology that decouples code deployment from feature release using conditional runtime switches managed via software toggles.
-- **Purpose:** Enables progressive rollouts, dark launches, and targeted user group testing while allowing instant rollbacks of problematic code without redeploying software.
-- **Key Concepts:** Dark launching, progressive rollouts, kill switches, targeted canary deployments.
-- **How It Works:** Code is wrapped in conditional statements querying a centralized flag management engine, dynamically enabling UI changes for specific user percentages or enterprise accounts.
+- **Definition:** A feature flag strategy defines how a team uses configurable switches to control which users or accounts get a feature. Flags let teams deploy code separately from exposing it. A strategy covers who gets access, how the team checks the release, what happens when a flag is turned off, and when the team can remove it.
+- **Purpose:** Decouples code deployment from feature release, enabling progressive delivery, granular audience segmentation, rapid kill-switches, and trustworthy A/B experimentation.
+- **Key Concepts:** Staged rollout, A/B test toggles, Operational kill-switch, Fallback behavior, Flag cleanup lifecycle
+- **How It Works:** Runtime evaluations check user or account attributes against targeted rule configurations, serving experimental or baseline variants while telemetry monitors errors and business metrics before general availability.
 - **Related Terms:** Continuous Experimentation, A/B Testing (Split Testing), Design Engineering, DesignOps
-- **SEO Title:** Feature Flag Strategy: Progressive Rollouts and Canary Testing
-- **Sources:** Martin Fowler, Feature Toggles (Feature Flags); Pete Hodgson, Exploring Feature Branching and Toggles
+- **SEO Title:** Feature Flags: Rollouts and A/B Tests | Product Design Glossary
+- **Sources:** Feature Toggles, Pete Hodgson (https://martinfowler.com/articles/feature-toggles.html); Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/); Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research (https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/)
 
 #### 100. Value Proposition Canvas
 - **URL:** https://lexkonovalov.com/glossary/value-proposition-canvas.html
@@ -1521,6 +1537,355 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Purpose:** Ensures structural alignment between product feature development and genuine user needs, preventing companies from launching unviable products.
 - **Key Concepts:** Customer profile, value map, pain relievers, gain creators, solution fit.
 - **How It Works:** Cross-functional squads map validated customer pains and jobs on the right canvas side, ensuring every proposed product capability on the left directly alleviates an identified pain or unlocks a gain.
-- **Related Terms:** Jobs to Be Done (JTBD), Product Discovery, Product Strategy Canvas, Product-Market Fit (PMF) Engine
+- **Related Terms:** Jobs to Be Done (JTBD), Product Discovery, Product Strategy Canvas, Product–Market Fit (PMF)
 - **SEO Title:** The Value Proposition Canvas: Designing User-Centered Products
 - **Sources:** Alexander Osterwalder et al., Value Proposition Design, Wiley; Strategyzer Methodology
+
+#### 101. Noun Foraging
+- **URL:** https://lexkonovalov.com/glossary/noun-foraging.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.
+- **Purpose:** Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.
+- **Key Concepts:** How do you do noun foraging?, Example from travel operations, What comes next in ORCA?
+- **How It Works:** Noun foraging is a discovery activity in Object-Oriented UX (OOUX) that uses nouns from research to identify candidate objects. The goal is to find the things people recognize and work with, such as trips, bookings, and travelers.
+- **Related Terms:** ORCA Framework, Object Mapping, Nested Object Matrix, Object Guide
+- **SEO Title:** Noun Foraging in OOUX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/); Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)
+
+#### 102. Nested Object Matrix
+- **URL:** https://lexkonovalov.com/glossary/nested-object-matrix.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.
+- **Purpose:** A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.
+- **Key Concepts:** How do you read a Nested Object Matrix?, A Nested Object Matrix for travel operations, How do you build the matrix?
+- **How It Works:** A Nested Object Matrix (NOM) is an ORCA grid that lists the same object types across its columns and down its rows. Each intersection describes how instances of one type relate to instances of the other. Teams use it to investigate relationships and identify where users may need access to related records.
+- **Related Terms:** ORCA Framework, Object Mapping, Noun Foraging, Cardinality (UX Architecture)
+- **SEO Title:** Nested Object Matrix in OOUX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/); Object-Oriented UX, Sophia V. Prater (https://alistapart.com/article/object-oriented-ux/)
+
+#### 103. CTA Matrix
+- **URL:** https://lexkonovalov.com/glossary/cta-matrix.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.
+- **Purpose:** A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.
+- **Key Concepts:** What goes in a CTA Matrix?, CTA Matrix example for travel operations, How do you turn matrix entries into requirements?
+- **How It Works:** A CTA Matrix, or call-to-action matrix, is an ORCA grid that maps user roles to object types and records the actions each role needs to take on each object. It gives teams a starting point for defining permissions, conditions, and interaction requirements before placing controls on screens.
+- **Related Terms:** ORCA Framework, Object Mapping, Nested Object Matrix, State Transition Matrix
+- **SEO Title:** CTA Matrix in OOUX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+
+#### 104. Object Guide
+- **URL:** https://lexkonovalov.com/glossary/object-guide.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.
+- **Purpose:** An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.
+- **Key Concepts:** What should an Object Guide include?, How does the guide work with other ORCA artifacts?, How do you keep an Object Guide useful?
+- **How It Works:** An Object Guide is a structured glossary of the objects in an Object-Oriented UX (OOUX) model. It records what each object means, how people recognize it, and which distinctions the team needs to preserve in product language and requirements. In ORCA, teams develop the guide during the Requirements round.
+- **Related Terms:** ORCA Framework, Object Mapping, Noun Foraging, CTA Matrix
+- **SEO Title:** Object Guide in OOUX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e); Object-Oriented UX with Sophia Prater, InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+
+#### 105. Four UX Fails in OOUX
+- **URL:** https://lexkonovalov.com/glossary/ooux-ux-fails.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.
+- **Purpose:** The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.
+- **Key Concepts:** How do you spot the four problems?, How do you run a review?
+- **How It Works:** The four UX fails in Object-Oriented UX (OOUX) are masked, shape-shifting, broken, and isolated objects. Sophia Prater uses these patterns to diagnose why people may struggle to recognize objects, understand them across views, find their actions, or reach related records.
+- **Related Terms:** Object-Oriented UX (OOUX), ORCA Framework, Object Mapping, Structural Navigation Model
+- **SEO Title:** Four UX Fails in OOUX | Product Design Glossary
+- **Sources:** The Life-changing Magic of OOUX Tidying Up, Sophia V. Prater (https://speakerdeck.com/sophiavux/the-life-changing-magic-of-ooux-tidying-up); Designing With ORCA, OOUX (https://ooux.com/offerings/fourfails)
+
+#### 106. Object Prioritization
+- **URL:** https://lexkonovalov.com/glossary/object-prioritization.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.
+- **Purpose:** Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.
+- **Key Concepts:** What are you prioritizing?, Example of prioritizing objects for a first release, How do you check your decisions?
+- **How It Works:** Object prioritization is the ORCA activity of deciding which objects a release needs and how prominently people should encounter them. It helps teams narrow the scope of an object model and choose how users enter it before designing menus and screens.
+- **Related Terms:** ORCA Framework, Object Mapping, Object Guide, Structural Navigation Model
+- **SEO Title:** Object Prioritization in OOUX | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e); Designing With ORCA, OOUX (https://ooux.com/offerings/fourfails)
+
+#### 107. ORCA Relationship Requirements
+- **URL:** https://lexkonovalov.com/glossary/orca-relationship-requirements.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.
+- **Purpose:** ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.
+- **Key Concepts:** What does MCSFD cover?, How do these rules affect the design?
+- **How It Works:** ORCA relationship requirements describe how a connection between objects works in a product. Sophia Prater uses MCSFD as a checklist for five decisions: mechanics, cardinality, sorting, filtering, and dependency. Teams use it to turn a relationship they discovered into rules they can design and test.
+- **Related Terms:** ORCA Framework, Nested Object Matrix, Cardinality (UX Architecture), Junction Object
+- **SEO Title:** ORCA Relationship Requirements (MCSFD) | Product Design Glossary
+- **Sources:** Introducing ORCA, Sophia V. Prater (https://medium.com/design-bootcamp/introducing-orca-the-third-diamond-in-your-ux-process-23a1babb0389); Object-Oriented UX with Sophia Prater, InfoQ (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/); Prioritizing Prioritization for Product Designers, Sophia V. Prater (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+
+#### 108. Junction Object
+- **URL:** https://lexkonovalov.com/glossary/junction-object.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.
+- **Purpose:** A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.
+- **Key Concepts:** Example of a junction object, When is a junction object useful?, How does it show up in the interface?
+- **How It Works:** A junction object represents a relationship as an object in its own right. It is useful when the connection itself carries information that matters to users. In Object-Oriented UX (OOUX), it gives that information a clear place in the model and helps teams decide where people should see or change it.
+- **Related Terms:** Object Mapping, Cardinality (UX Architecture), Nested Object Matrix, ORCA Relationship Requirements
+- **SEO Title:** Junction Objects in OOUX | Product Design Glossary
+- **Sources:** Object-Oriented UX: The Backbone of the Design Process, Sophia Prater interview (https://itx.com/podcast/166-sophia-prater-on-object-oriented-ux-the-backbone-of-the-design-process/); Object-Oriented UX with Sophia Prater, InfoQ (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/)
+
+#### 109. User Retention
+- **URL:** https://lexkonovalov.com/glossary/user-retention.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** User retention measures how many people in a starting group return to use a product over time. A retention rate uses a defined group, a return behavior, and a time window. For a product used by teams, the same approach can measure retention at the account level.
+- **Purpose:** Measures sustained product engagement and value delivery over time, distinguishing one-time activation from habitual, long-term adoption.
+- **Key Concepts:** Cohort analysis, Return condition, Time window, Account-level retention, Retention curve
+- **How It Works:** Tracks a defined cohort of users or accounts from a shared starting milestone, evaluating the percentage that executes a meaningful qualifying return event within designated subsequent time windows.
+- **Related Terms:** Activation Metric, Time-to-Value (TTV), North Star Metric (NSM), Churn Mitigation
+- **SEO Title:** User Retention: Definition and Formula | Product Design Glossary
+- **Sources:** Build a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build); How the Retention Analysis chart calculates retention, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation); How time works in a retention analysis, Amplitude Docs (https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time)
+
+#### 110. Product-Qualified Lead (PQL)
+- **URL:** https://lexkonovalov.com/glossary/product-qualified-lead-pql.html
+- **Category:** Product Strategy & Growth
+- **Maturity:** Established
+- **Definition:** A product-qualified lead (PQL) is a prospective buyer whose product use provides evidence that they may be ready to purchase. Teams combine usage with customer fit and intent to decide whether to offer help, route the lead to sales, or keep the experience self-service.
+- **Purpose:** Bridges self-serve product adoption and sales-assisted expansion by identifying accounts whose organic usage and commercial fit warrant high-touch engagement.
+- **Key Concepts:** PQL vs MQL vs Activation, Usage threshold signal, Product-qualified account (PQA), Intent triggers, Product-led sales (PLS)
+- **How It Works:** Evaluates live telemetry against predefined behavioral milestones, combining usage volume with firmographic fit and explicit feature intent to alert go-to-market teams.
+- **Related Terms:** Product-Led Growth (PLG), Activation Metric, Lead Capture, Product Telemetry & Analytics
+- **SEO Title:** Product-Qualified Lead (PQL) | Product Design Glossary
+- **Sources:** How to Define PQLs, ProductLed (https://productled.com/blog/how-to-define-pqls); Product Qualified Leads in Freemium, OpenView (https://openviewpartners.com/blog/freemium-startup-product-qualified-leads/); Product-Led Sales AMA with Kyle Poyar, Pocus (https://www.pocus.com/blog/product-led-sales-pls-ama-kyle-poyar-openview-pls-benchmarks)
+
+#### 111. European Accessibility Act (EAA)
+- **URL:** https://lexkonovalov.com/glossary/european-accessibility-act.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.
+- **Purpose:** Harmonizes accessibility standards across EU member states to remove cross-border market barriers and guarantee accessible digital commerce and public services for consumers with disabilities.
+- **Key Concepts:** Directive (EU) 2019/882, presumption of conformity, consumer e-commerce scope, microenterprise exemption, Annex I functional requirements
+- **How It Works:** Directs member states to enact national laws enforcing accessibility for covered consumer-facing digital services, referencing European harmonized standards (such as EN 301 549) to presume conformity.
+- **Related Terms:** Accessibility and WCAG, EN 301 549, Web Accessibility Audit, ADA Web Accessibility
+- **SEO Title:** European Accessibility Act (EAA) for Digital Products
+- **Sources:** Directive (EU) 2019/882, EUR-Lex (https://eur-lex.europa.eu/eli/dir/2019/882/oj?uri=CELEX%3A32019L0882); Accessibility Requirements for Products and Services, Your Europe (https://europa.eu/youreurope/business/selling-in-eu/selling-goods-services/accessibility/indexamp_en.htm); European Accessibility Act, Council of the European Union (https://www.consilium.europa.eu/en/policies/accessibility-goods-services/)
+
+#### 112. EN 301 549
+- **URL:** https://lexkonovalov.com/glossary/en-301-549.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.
+- **Purpose:** Provides European public procurement and regulatory bodies with a unified, harmonized technical specification for ICT accessibility across hardware, software, documents, and web interfaces.
+- **Key Concepts:** ETSI standard, harmonized European standard, WCAG alignment, v3.2.1 vs v4.1.1, non-web ICT clauses
+- **How It Works:** Maps technical criteria across digital channels; Clause 9 evaluates web content against WCAG success criteria, while Clauses 10 and 11 evaluate non-web documents and software interfaces.
+- **Related Terms:** Accessibility and WCAG, European Accessibility Act (EAA), Web Accessibility Audit, Section 508
+- **SEO Title:** EN 301 549: EU Accessibility Standard and WCAG
+- **Sources:** EN 301 549 V3.2.1, ETSI (https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf); EN 301 549 V4.1.1, ETSI (https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf); Web Accessibility Directive, European Commission (https://digital-strategy.ec.europa.eu/en/policies/web-accessibility); Harmonized Standards for the Web Accessibility Directive, European Commission (https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/accessibility-websites-and-mobile-applications_en); EN 301 549 Version Update, AccessibleEU (https://accessible-eu-centre.ec.europa.eu/content-corner/news/european-accessibility-standard-en-301-549-has-been-updated-2026-09-07_en); European Accessibility Act, EUR-Lex (https://eur-lex.europa.eu/eli/dir/2019/882/oj?uri=CELEX%3A32019L0882)
+
+#### 113. ADA Web Accessibility
+- **URL:** https://lexkonovalov.com/glossary/ada-web-accessibility.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.
+- **Purpose:** Ensures equal access to digital public services and private commercial websites under United States civil rights law.
+- **Key Concepts:** ADA Title II vs Title III, DOJ web accessibility rule, WCAG 2.1 AA benchmark, public accommodation, compliance deadlines
+- **How It Works:** Enforces accessibility compliance through federal rulemaking and court interpretations; Title II mandates WCAG 2.1 AA compliance by 2027/2028, while Title III applies WCAG principles to public accommodations.
+- **Related Terms:** Accessibility and WCAG, Section 508, Web Accessibility Audit, European Accessibility Act (EAA)
+- **SEO Title:** ADA Web Accessibility: Title II, Title III, and WCAG
+- **Sources:** Guidance on Web Accessibility and the ADA, U.S. Department of Justice (https://www.ada.gov/resources/web-guidance/); ADA Title III Regulations, U.S. Department of Justice (https://www.ada.gov/law-and-regs/regulations/title-iii-regulations/); 28 CFR § 35.200, Electronic Code of Federal Regulations (https://www.ecfr.gov/current/title-28/chapter-I/part-35/subpart-H/section-35.200); 2026 Interim Final Rule Extending Compliance Dates, Federal Register (https://www.govinfo.gov/content/pkg/FR-2026-04-20/pdf/2026-07663.pdf); Title II Small Entity Compliance Guide, U.S. Department of Justice (https://www.ada.gov/resources/small-entity-compliance-guide/)
+
+#### 114. Section 508
+- **URL:** https://lexkonovalov.com/glossary/section-508.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.
+- **Purpose:** Regulates federal procurement and technology deployment in the United States to ensure all federal employees and public citizens with disabilities have comparable access to ICT.
+- **Key Concepts:** Rehabilitation Act, Revised 508 Standards, WCAG 2.0 AA incorporation, VPAT template, Accessibility Conformance Report (ACR)
+- **How It Works:** Requires federal agencies and prospective vendors to document compliance via ACRs (built on VPATs), incorporating WCAG 2.0 Level AA for digital and software interfaces.
+- **Related Terms:** Accessibility and WCAG, ADA Web Accessibility, EN 301 549, Web Accessibility Audit
+- **SEO Title:** Section 508 Accessibility: Federal ICT and WCAG
+- **Sources:** Revised Section 508 Standards, U.S. Access Board (https://www.access-board.gov/ict/); Accessibility Conformance Reports, General Services Administration (https://www.section508.gov/sell/acr/)
+
+#### 115. Web Accessibility Audit
+- **URL:** https://lexkonovalov.com/glossary/web-accessibility-audit.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.
+- **Purpose:** Systematically evaluates digital products against accessibility standards (e.g. WCAG 2.2 AA) to document barriers, determine legal conformance, and prioritize remediation.
+- **Key Concepts:** WCAG-EM methodology, representative sampling, automated scanning vs manual evaluation, assistive technology testing, reproducible findings
+- **How It Works:** Scopes critical user paths, combines automated rule checking with keyboard/screen-reader testing, and produces structured issue reports linked to specific success criteria.
+- **Related Terms:** Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications), EN 301 549, ADA Web Accessibility
+- **SEO Title:** Web Accessibility Audit: How to Test and Report Findings
+- **Sources:** Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/); WCAG Evaluation Methodology (WCAG-EM), W3C WAI (https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/); Involving Users in Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/involving-users/); WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/); Understanding No Keyboard Trap, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
+
+#### 116. Accessible Forms
+- **URL:** https://lexkonovalov.com/glossary/accessible-forms.html
+- **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
+- **Maturity:** Established
+- **Definition:** An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.
+- **Purpose:** Prevents abandonment, user frustration, and input errors by ensuring forms are operable via keyboard, screen reader, and voice input.
+- **Key Concepts:** Explicit label association, fieldset and legend, inline error description, WCAG 3.3.7 redundant entry, status messages (aria-live)
+- **How It Works:** Pairs form inputs with programmatic labels via for/id attributes, describes constraints and errors using aria-describedby, and retains user input across validation failures.
+- **Related Terms:** Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications), Keyboard Accessibility & Focus Management, Web Accessibility Audit, Lead Capture Mechanics
+- **SEO Title:** Accessible Forms: Labels, Errors, and Validation
+- **Sources:** Labeling Controls, W3C WAI (https://www.w3.org/WAI/tutorials/forms/labels/); Validating Input, W3C WAI (https://www.w3.org/WAI/tutorials/forms/validation/); User Notification, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/); Understanding Error Suggestion, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html); Understanding Status Messages, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html); Understanding Redundant Entry, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html)
+
+#### 117. Keyboard Accessibility & Focus Management
+- **URL:** https://lexkonovalov.com/glossary/keyboard-accessibility.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.
+- **Purpose:** Ensures complete digital operability without a pointing device, enabling users with motor, cognitive, and visual disabilities to interact predictably.
+- **Key Concepts:** WCAG 2.1.1 Keyboard, 2.1.2 No Keyboard Trap, 2.4.3 Focus Order, 2.4.7 Focus Visible, 2.4.11 Focus Not Obscured, focus trapping and restoration
+- **How It Works:** Maintains a logical DOM order, captures focus within active modal dialogs, restores focus to triggering elements upon dismissal, and guarantees non-obscured visible focus indicators.
+- **Related Terms:** Accessibility and WCAG, Accessible Forms, WCAG Color Contrast, ARIA (Accessible Rich Internet Applications), Headless UI Architecture, Web Accessibility Audit
+- **SEO Title:** Keyboard Accessibility & Focus Management | WCAG
+- **Sources:** Understanding Keyboard, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html); Understanding No Keyboard Trap, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html); Understanding Focus Order, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html); Understanding Focus Visible, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html); Understanding Focus Not Obscured (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html); Modal Dialog Pattern, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
+
+#### 118. Object Attributes in OOUX
+- **URL:** https://lexkonovalov.com/glossary/object-attributes-ooux.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.
+- **Purpose:** Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.
+- **Key Concepts:** Example: defining Booking attributes, What should attribute requirements record?
+- **How It Works:** Object attributes in Object-Oriented UX (OOUX) are the content and data that describe an object and help people identify, understand, or work with its instances. Examples include a booking reference, status, service date, and description.
+- **Related Terms:** Object Mapping, Object Guide, Attribute Prioritization, Content Modeling
+- **SEO Title:** Object Attributes in OOUX: Core Content and Metadata
+- **Sources:** Sophia V. Prater: Object-Oriented UX (https://alistapart.com/article/object-oriented-ux/); Sophia V. Prater: Prioritizing Prioritization for Product Designers (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+
+#### 119. Object Inheritance in OOUX
+- **URL:** https://lexkonovalov.com/glossary/object-inheritance-ooux.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.
+- **Purpose:** Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.
+- **Key Concepts:** Example: different kinds of Booking, Subtype, state, attribute, or relationship?, When is a subtype useful?, How to validate the model
+- **How It Works:** Object inheritance in OOUX models shared structure or capabilities in a general object type and more specific subtypes. It helps teams reason about what related types have in common and which distinctions users need the product to preserve.
+- **Related Terms:** Object Guide, Object Attributes in OOUX, Tree Systems in OOUX, State Transition Matrix
+- **SEO Title:** Object Inheritance in OOUX: Types, Subtypes, and Examples
+- **Sources:** OOUX Masterclass: Inheritance (https://ooux.com/selfpacedoouxmasterclass)
+
+#### 120. Object Representation
+- **URL:** https://lexkonovalov.com/glossary/object-representation-ooux.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.
+- **Purpose:** Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.
+- **Key Concepts:** Start with the user's question, Example: representing Booking B-52, Keep meaningful differences visible, Check behavior and accessibility
+- **How It Works:** Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.
+- **Related Terms:** Object Mapping, Shapeshifter Matrix, Attribute Prioritization, CTA Prioritization
+- **SEO Title:** Object Representation in OOUX: From Models to Interface
+- **Sources:** OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails); W3C: Understanding Consistent Identification (https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)
+
+#### 121. Object-Oriented User Stories
+- **URL:** https://lexkonovalov.com/glossary/object-oriented-user-stories.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.
+- **Purpose:** Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.
+- **Key Concepts:** A practical story structure, Example: requesting a booking cancellation, Review the story across entry points
+- **How It Works:** Object-oriented user stories describe what a particular actor needs to do to an object, why the action matters, and when it is appropriate. In ORCA, teams develop them from CTA Matrix entries during the Requirements round.
+- **Related Terms:** CTA Matrix, ORCA Framework, State Transition Matrix, CTA Prioritization
+- **SEO Title:** Object-Oriented User Stories: ORCA Requirements and Example
+- **Sources:** Sophia Prater: Object-Oriented UX — InfoQ interview (https://www.infoq.com/podcasts/object-oriented-ux-sophia-prater/); Sophia V. Prater: Prioritizing Prioritization for Product Designers (https://sophiavux.medium.com/prioritizing-prioritization-for-product-designers-91e78a28f62e)
+
+#### 122. OOUX Prototyping and Testing
+- **URL:** https://lexkonovalov.com/glossary/ooux-prototyping-and-testing.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.
+- **Purpose:** OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.
+- **Key Concepts:** Choose the right level of detail, Example tasks for a booking prototype, What evidence should you record?, How to use the results
+- **How It Works:** OOUX prototyping and testing evaluates whether people can recognize a product's objects, understand their connections, and find the actions needed for a task. It uses a representation of the proposed product to investigate the assumptions in its object model and interface.
+- **Related Terms:** Object Representation, Content Prototyping, Four UX Fails in OOUX, Structural Navigation Model
+- **SEO Title:** OOUX Prototyping and Testing: Tasks, Examples, and Checks
+- **Sources:** Sophia V. Prater: OOUX — A Foundation for Interaction Design (https://alistapart.com/article/ooux-a-foundation-for-interaction-design/); Nielsen Norman Group: Usability Testing 101 (https://www.nngroup.com/articles/usability-testing-101/)
+
+#### 123. ORCA Sprint
+- **URL:** https://lexkonovalov.com/glossary/orca-sprint.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.
+- **Purpose:** An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.
+- **Key Concepts:** What should you prepare?, An illustrative five-day agenda, Example: resolving a booking ambiguity, How do you know the sprint helped?
+- **How It Works:** An ORCA Sprint is a focused, collaborative workshop format that applies OOUX's Objects, Relationships, Calls-to-Action, and Attributes to a defined design problem. OOUX describes a one-week format involving designers, developers, domain experts, business stakeholders, and content practitioners.
+- **Related Terms:** ORCA Framework, Noun Foraging, Object Mapping, OOUX Prototyping and Testing
+- **SEO Title:** ORCA Sprint: OOUX Workshop Preparation and Example Agenda
+- **Sources:** OOUX: ORCA Sprints (https://ooux.com/hi/orca-sprints); Sophia V. Prater: Running ORCA Sprints at Autodesk (https://ooux.com/resources/episode034)
+
+#### 124. Relationship Prioritization
+- **URL:** https://lexkonovalov.com/glossary/relationship-prioritization.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.
+- **Purpose:** Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.
+- **Key Concepts:** What are you prioritizing?, Example: managing a travel booking, How to choose, How to test it
+- **How It Works:** Relationship prioritization is the ORCA activity of deciding which connections between objects deserve support in the product and prominence in its interface. It helps teams turn a relationship model into a manageable scope and useful paths through information.
+- **Related Terms:** Nested Object Matrix, ORCA Relationship Requirements, Structural Navigation Model, Object Prioritization
+- **SEO Title:** Relationship Prioritization in ORCA: Scope and Navigation
+- **Sources:** The UX Level-Up: Relationship Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/077-orca-series-10-from-inheriting-strategy-to-shaping/id1531717094?i=1000723486950); OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails)
+
+#### 125. Attribute Prioritization
+- **URL:** https://lexkonovalov.com/glossary/attribute-prioritization.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.
+- **Purpose:** Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.
+- **Key Concepts:** Two decisions to separate, Example: prioritizing Booking information, How to make the decision, How to test the result
+- **How It Works:** Attribute prioritization is the ORCA activity of deciding which information about an object matters most for a release and for the views people use. It helps teams choose what to show prominently, what to reveal in detail, and what can wait.
+- **Related Terms:** Object Attributes in OOUX, Object Prioritization, Object Representation, Progressive Disclosure
+- **SEO Title:** Attribute Prioritization in OOUX: Choosing What to Show
+- **Sources:** The UX Level-Up: Attribute Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/082-orca-series-12-building-trust-through-attributes/id1531717094?i=1000733396352); Sophia V. Prater: Object-Oriented UX (https://alistapart.com/article/object-oriented-ux/)
+
+#### 126. CTA Prioritization
+- **URL:** https://lexkonovalov.com/glossary/cta-prioritization.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.
+- **Purpose:** CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.
+- **Key Concepts:** Start with the action's purpose, Example: actions on a confirmed Booking, Keep availability and prominence distinct, Validate the choice
+- **How It Works:** CTA prioritization is the ORCA activity of deciding which actions on an object the product should support and how prominently to present them. It connects release scope and interface emphasis to user needs, business goals, and the context in which an action becomes relevant.
+- **Related Terms:** CTA Matrix, Object-Oriented User Stories, Attribute Prioritization, State Transition Matrix
+- **SEO Title:** CTA Prioritization in OOUX: Actions, Prominence, and Context
+- **Sources:** The UX Level-Up: CTA Prioritization with Jake Zukowski (https://podcasts.apple.com/us/podcast/079-orca-series-11-ctas-that-align-teams-and-earn/id1531717094?i=1000725166619); OOUX: Designing With ORCA (https://ooux.com/offerings/fourfails)
+
+#### 127. Shapeshifter Matrix
+- **URL:** https://lexkonovalov.com/glossary/shapeshifter-matrix.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.
+- **Purpose:** A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.
+- **Key Concepts:** What should the matrix compare?, Example: Booking B-52 across views, How to use it, What should remain consistent?
+- **How It Works:** A Shapeshifter Matrix is an OOUX tool for examining the different representations and variants of an object. It helps teams make differences intentional while preserving the cues people need to recognize the object across an interface.
+- **Related Terms:** Four UX Fails in OOUX, Object Representation, Interaction Invariant, Attribute Prioritization
+- **SEO Title:** Shapeshifter Matrix in OOUX: Object Variants and Example
+- **Sources:** OOUX Masterclass: Representation Round (https://ooux.com/selfpacedoouxmasterclass); OOUX Advanced Certification: Intentional Shapeshifter Matrices (https://ooux.com/advanced)
+
+#### 128. Tree Systems in OOUX
+- **URL:** https://lexkonovalov.com/glossary/tree-systems-ooux.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.
+- **Purpose:** A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.
+- **Key Concepts:** Example: a course and its scheduled sessions, Where should information belong?, Tree Systems, hierarchy, and inheritance, How to check the model
+- **How It Works:** A Tree System in OOUX is a pattern of related object types that move from a general concept toward more specific, contextual forms. It includes a root, a more specific “fruit” object, and sometimes intermediate “branch” objects.
+- **Related Terms:** Junction Object, Object Inheritance in OOUX, Object Attributes in OOUX, Conceptual Schema
+- **SEO Title:** Tree Systems in OOUX: Roots, Branches, and Specific Objects
+- **Sources:** Sophia V. Prater: Wrangling UX Complexity with Tree Systems (https://sophiavux.medium.com/wrangling-ux-complexity-with-tree-systems-47447cf568d9); OOUX Masterclass: Tree Systems (https://ooux.com/selfpacedoouxmasterclass)
+
+#### 129. Content Prototyping
+- **URL:** https://lexkonovalov.com/glossary/content-prototyping.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Proprietary / Framework-Specific
+- **Definition:** Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.
+- **Purpose:** Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.
+- **Key Concepts:** What are you testing?, Example: populating a travel operations model, A lightweight process, Content prototype or interface prototype?
+- **How It Works:** Content prototyping tests a proposed content or object model by creating representative records and using them in realistic tasks. It helps teams discover missing fields, unclear relationships, and awkward authoring rules before investing in detailed interface design.
+- **Related Terms:** Content Modeling, Object Mapping, Object Attributes in OOUX, OOUX Prototyping and Testing, AI Prototyping
+- **SEO Title:** Content Prototyping: Test an Object Model with Realistic Data
+- **Sources:** OOUX Masterclass: Content Prototyping (https://ooux.com/selfpacedoouxmasterclass); Contentful: Content Modeling Basics (https://www.contentful.com/help/content-models/content-modelling-basics/)
+

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Representation in OOUX: From Models to Interface</title>
+  <meta name="description" content="Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.">
+  <link rel="canonical" href="https://lexkonovalov.com/glossary/object-representation-ooux.html" />
+  <meta name="author" content="Oleksandr Konovalov">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Object Representation in OOUX: From Models to Interface">
+  <meta property="og:description" content="Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.">
+  <meta property="og:url" content="https://lexkonovalov.com/glossary/object-representation-ooux.html">
+  <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lex Konovalov — Portfolio">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Object Representation in OOUX: From Models to Interface">
+  <meta name="twitter:description" content="Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.">
+  <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
+  
+  <!-- Crawler detection redirect -->
+  <script>
+    const isCrawler = /bot|google|baidu|bing|yandex|crawler|spider|robot|crawling|perplexity|claude|chatgpt|anthropic|cohere|meta-external|facebookexternalhit|gptbot|bytespider|applebot/i.test(navigator.userAgent);
+    if (!isCrawler) {
+      window.location.replace('/?p=/glossary/object-representation-ooux.html');
+    }
+  </script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html",
+      "name": "Object Representation in OOUX: From Models to Interface",
+      "description": "Translate an OOUX object model into recognizable cards, rows, and detail views, with a booking example and checks for actions, labels, and accessibility.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#breadcrumbs"
+      },
+      "citation": [
+        "https://ooux.com/offerings/fourfails",
+        "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html"
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#term",
+      "name": "Object Representation",
+      "termCode": "object-representation-ooux",
+      "description": "Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.",
+      "url": "https://lexkonovalov.com/glossary/object-representation-ooux.html",
+      "inDefinedTermSet": {
+        "@id": "https://lexkonovalov.com/glossary/#terms"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexkonovalov.com/glossary/object-representation-ooux.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexkonovalov.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Design Glossary",
+          "item": "https://lexkonovalov.com/glossary/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Object Representation",
+          "item": "https://lexkonovalov.com/glossary/object-representation-ooux.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1c1b18;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+      background-color: #faf9f6;
+    }
+    header {
+      text-align: left;
+      margin-bottom: 32px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+    nav.breadcrumbs {
+      font-size: 0.875rem;
+      color: #5e605c;
+      margin-bottom: 16px;
+    }
+    nav.breadcrumbs a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    nav.breadcrumbs a:hover {
+      color: #D93636;
+    }
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .meta-bar {
+      font-size: 0.875rem;
+      color: #5e605c;
+      font-weight: 500;
+    }
+    section.glossary-term-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    h2.glossary-term-section__title {
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+      font-family: "Space Grotesk", sans-serif;
+      color: #1c1b18;
+    }
+    p.glossary-term-section__text {
+      margin: 0 0 16px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.1rem;
+      color: #1c1b18;
+      line-height: 1.7;
+    }
+    p.glossary-term-section__text:last-child {
+      margin-bottom: 0;
+    }
+    p.glossary-term-section__text a,
+    .glossary-term-ol a,
+    .glossary-term-ul a {
+      color: #3E70A2;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    p.glossary-term-section__text a:hover,
+    .glossary-term-ol a:hover,
+    .glossary-term-ul a:hover {
+      color: #D93636;
+    }
+    /* Semantic table with responsive horizontal scrolling container */
+    .glossary-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .glossary-table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .glossary-table th {
+      background: #f4f2ec;
+      color: #1c1b18;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      white-space: nowrap;
+    }
+    .glossary-table td {
+      color: #1c1b18;
+      padding: 12px 16px;
+      border-bottom: 1px solid #e8e6dc;
+      vertical-align: top;
+    }
+    .glossary-table tr:last-child td {
+      border-bottom: none;
+    }
+    .glossary-table tr:hover td {
+      background: #faf9f6;
+    }
+    /* Code Blocks and Inline Code */
+    .glossary-code-block-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      border: 1px solid #e8e6dc;
+      border-radius: 8px;
+      background: #f4f2ec;
+      padding: 16px 20px;
+    }
+    .glossary-code-block {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #1c1b18;
+      white-space: pre;
+    }
+    .glossary-code-block code {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .glossary-term-section__text code,
+    .glossary-table td code,
+    .glossary-term-ul code,
+    .glossary-term-ol code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #1c1b18;
+    }
+    .glossary-term-ol {
+      margin: 0 0 24px;
+      padding-left: 24px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .glossary-term-ol li {
+      margin-bottom: 12px;
+    }
+    .glossary-term-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .glossary-term-ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+      font-size: 1.05rem;
+    }
+    .glossary-term-ul li::before {
+      content: "•";
+      color: #3E70A2;
+      font-weight: bold;
+    }
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .concept-tag {
+      background: #f4f2ec;
+      border: 1px solid #e8e6dc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #d0cdc2;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5e605c;
+    }
+    footer a {
+      color: #5e605c;
+      text-decoration: none;
+    }
+    .glossary-term-nav {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid #e8e6dc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .glossary-term-nav__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+      padding: 0 24px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__btn:hover {
+      background: #f4f2ec;
+      color: #D93636;
+      border-color: #d0cdc2;
+    }
+    .glossary-term-nav__pill-group {
+      display: inline-flex;
+      align-items: center;
+      height: 52px;
+      background: #ffffff;
+      border: 1px solid #e8e6dc;
+      border-radius: 9999px;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+    .glossary-term-nav__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 16px;
+      color: #1c1b18;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      transition: color 0.15s ease;
+    }
+    .glossary-term-nav__item:hover:not(.glossary-term-nav__item--disabled) {
+      color: #D93636;
+    }
+    .glossary-term-nav__item--disabled {
+      color: #a09e97;
+      opacity: 0.35;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .glossary-term-nav__divider {
+      width: 1px;
+      height: 20px;
+      background-color: #e8e6dc;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .glossary-term-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .glossary-term-nav__btn {
+        justify-content: center;
+        width: 100%;
+      }
+      .glossary-term-nav__pill-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .glossary-term-nav__item {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/glossary/">Product Design Glossary</a> / <span>Object Representation</span>
+    </nav>
+    <h1>Object Representation</h1>
+    <div class="meta-bar">
+      <span>UX &amp; Product Architecture</span>
+      
+    </div>
+  </header>
+
+  <article>
+    <p class="glossary-term-section__text">Object representation in OOUX is the way an interface makes an object recognizable and usable through its information, visual treatment, relationships, and actions. Examples include a booking row, a traveler card, and a detailed trip view.</p>
+<p class="glossary-term-section__text">The object model describes what the object is and how it relates to other things. Representation turns those decisions into something a person can identify and use in a particular context.</p>
+<section class="glossary-term-section" aria-labelledby="section-start-with-the-user-s-question">
+<h2 id="section-start-with-the-user-s-question" class="glossary-term-section__title">Start with the user's question</h2>
+<p class="glossary-term-section__text">Before choosing a layout, identify what someone needs to recognize, compare, inspect, or change. Use prioritized attributes and actions to decide what the representation should support.</p>
+<p class="glossary-term-section__text">A compact row can be appropriate for scanning many bookings. A detailed view can support investigating one booking. Both need enough identifying information for a person to understand which record they are using.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-representing-booking-b-52">
+<h2 id="section-example-representing-booking-b-52" class="glossary-term-section__title">Example: representing Booking B-52</h2>
+<p class="glossary-term-section__text">Suppose Booking B-52 is Confirmed and belongs to Trip T-104.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Context</th>
+<th>Representation decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search result</td>
+<td>Show the booking reference, service date, status, and enough supplier information to choose the match.</td>
+</tr>
+<tr>
+<td>Trip booking list</td>
+<td>Preserve the same identifying cues while making the trip relationship clear.</td>
+</tr>
+<tr>
+<td>Booking detail</td>
+<td>Add relevant conditions, history, permitted actions, and a route to the trip.</td>
+</tr>
+<tr>
+<td>Cancellation review</td>
+<td>Repeat the booking identity and summarize the proposed action and its consequences.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The cancellation review should make clear that submitting the request begins a process. In this example, an accepted request first becomes Cancellation pending.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-keep-meaningful-differences-visible">
+<h2 id="section-keep-meaningful-differences-visible" class="glossary-term-section__title">Keep meaningful differences visible</h2>
+<p class="glossary-term-section__text">Distinct object types need recognizable labels. An Offer and a Booking should not become indistinguishable simply because they use the same card component.</p>
+<p class="glossary-term-section__text">Variants of the same object can share a component while showing different detail. Use a <a href="/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a> to document those differences and their reasons.</p>
+<p class="glossary-term-section__text">Define empty, loading, unavailable, and error states. The absence of data must not accidentally communicate a confirmed result.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-check-behavior-and-accessibility">
+<h2 id="section-check-behavior-and-accessibility" class="glossary-term-section__title">Check behavior and accessibility</h2>
+<p class="glossary-term-section__text">Use headings, relationships, control labels, and accessible names that communicate the intended meaning. WCAG's Consistent Identification criterion addresses consistent identification of recurring components with the same functionality; it does not require every object view to have an identical layout.</p>
+<p class="glossary-term-section__text">Test recognition across entry points, including search and direct links. Ask users to identify the record, reach a related object, and find an available action. Review both what the representation communicates and what the interaction actually does.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-mapping.html">Object Mapping</a></li>
+<li><a href="/glossary/shapeshifter-matrix.html">Shapeshifter Matrix</a></li>
+<li><a href="/glossary/attribute-prioritization.html">Attribute Prioritization</a></li>
+<li><a href="/glossary/cta-prioritization.html">CTA Prioritization</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://ooux.com/offerings/fourfails" target="_blank" rel="noopener noreferrer">OOUX: Designing With ORCA</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Consistent Identification</a></li>
+</ul>
+</section>
+
+
+    <nav class="glossary-term-nav" aria-label="Glossary Navigation">
+      <a href="/glossary/" class="glossary-term-nav__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Back to Glossary</span>
+      </a>
+      <div class="glossary-term-nav__pill-group">
+        
+          <a href="/glossary/object-inheritance-ooux.html" class="glossary-term-nav__item" title="Object Inheritance in OOUX">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Previous</span>
+          </a>
+        
+        <span class="glossary-term-nav__divider" aria-hidden="true"></span>
+        
+          <a href="/glossary/object-oriented-user-stories.html" class="glossary-term-nav__item" title="Object-Oriented User Stories">
+            <span>Next</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        
+      </div>
+    </nav>
+  </article>
+
+  <footer>
+    <div>&copy; Lex Konovalov / 2026</div>
+    <div>
+      <a href="https://drive.google.com/file/d/1FhjXjKfXXz1LNfjsxeG2QOKaDGeAD1hk/view?usp=sharing">CV</a> /
+      <a href="mailto:lex.konovalov@gmail.com">lex.konovalov@gmail.com</a> /
+      <a href="https://www.linkedin.com/in/lex-konovalov/">LinkedIn</a> /
+      <a href="/glossary/">Glossary</a>
+    </div>
+  </footer>
+</body>
+</html>
