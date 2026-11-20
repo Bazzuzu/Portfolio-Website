@@ -62,7 +62,11 @@
         "https://www.w3.org/WAI/test-evaluate/",
         "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
         "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
-        "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+        "https://github.com/web-arena-x/webarena/blob/main/resources/README.md",
+        "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
       ]
     },
     {
@@ -442,7 +446,7 @@
 <tbody>
 <tr>
 <td>Perceivable</td>
-<td>Provide information people can perceive, such as text alternatives for meaningful images and captions for video.</td>
+<td>Provide information people can perceive, such as <a href="/glossary/alt-text.html">alt text</a> for meaningful images and captions for video.</td>
 </tr>
 <tr>
 <td>Operable</td>
@@ -462,26 +466,98 @@
 </section>
 <section class="glossary-term-section" aria-labelledby="section-what-do-a-aa-and-aaa-mean">
 <h2 id="section-what-do-a-aa-and-aaa-mean" class="glossary-term-section__title">What do A, AA, and AAA mean?</h2>
-<p class="glossary-term-section__text">These are cumulative conformance levels. <strong>A</strong> covers Level A criteria; <strong>AA</strong> includes A and AA; <strong>AAA</strong> includes all three levels. A conformance claim records the version, level, scope, date, and technologies relied upon. It applies to full pages and complete processes, such as every step of checkout.</p>
-<p class="glossary-term-section__text">WCAG 2.2 is a W3C Recommendation. WCAG 3 remains a draft. WCAG conformance does not establish compliance with every applicable accessibility law.</p>
+<p class="glossary-term-section__text">These are cumulative conformance levels. <strong>A</strong> covers Level A criteria. <strong>AA</strong> includes A and AA. <strong>AAA</strong> includes all three levels. A conformance claim records the version, level, scope, date, and technologies relied upon. Conformance applies to full pages. When a page is part of a process, such as checkout, every step in that process must conform at the claimed level.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-wcag-2-0-2-1-and-2-2-differ">
+<h2 id="section-how-do-wcag-2-0-2-1-and-2-2-differ" class="glossary-term-section__title">How do WCAG 2.0, 2.1, and 2.2 differ?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Version</th>
+<th>What it adds or establishes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WCAG 2.0</strong></td>
+<td>The original WCAG 2 baseline, covering areas such as text alternatives, keyboard access, and text contrast.</td>
+</tr>
+<tr>
+<td><strong>WCAG 2.1</strong></td>
+<td>Adds criteria for mobile use, low vision, and other access needs, including reflow, non-text contrast, and status messages.</td>
+</tr>
+<tr>
+<td><strong>WCAG 2.2</strong></td>
+<td>Adds criteria for focus obscured by overlapping content, minimum pointer target size, alternatives to dragging, and accessible authentication, among others. It removes criterion 4.1.1 Parsing.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">WCAG 2.2 is a W3C Recommendation. WCAG 3 remains a working draft. Record the WCAG version your team targets and the version required by any applicable regulation or contract. If you report against WCAG 2.0 or 2.1, account for their published treatment of 4.1.1 and any reporting requirements.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-wcag-relate-to-accessibility-requirements-in-the-eu-and-u-s">
+<h2 id="section-how-does-wcag-relate-to-accessibility-requirements-in-the-eu-and-u-s" class="glossary-term-section__title">How does WCAG relate to accessibility requirements in the EU and U.S.?</h2>
+<p class="glossary-term-section__text">Start with the organization, service, and market. Then identify the applicable rule or contract and the technical version it references.</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Product or organization</th>
+<th>Where to start</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer e-commerce or another covered service in the EU</td>
+<td><a href="/glossary/european-accessibility-act.html">European Accessibility Act</a> and the applicable national law.</td>
+</tr>
+<tr>
+<td>An EU public sector website or mobile app</td>
+<td>The Web Accessibility Directive and its referenced edition of <a href="/glossary/en-301-549.html">EN 301 549</a>.</td>
+</tr>
+<tr>
+<td>A U.S. state or local government, or a U.S. business covered by the ADA</td>
+<td><a href="/glossary/ada-web-accessibility.html">ADA Web Accessibility</a>. The Title II web rule references WCAG 2.1 AA. Review Title III separately for covered businesses.</td>
+</tr>
+<tr>
+<td>ICT developed, used, or procured by a U.S. federal agency</td>
+<td><a href="/glossary/section-508.html">Section 508</a> and the applicable federal ICT requirements.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-which-wcag-2-2-checks-matter-in-everyday-design">
 <h2 id="section-which-wcag-2-2-checks-matter-in-everyday-design" class="glossary-term-section__title">Which WCAG 2.2 checks matter in everyday design?</h2>
 <p class="glossary-term-section__text">These examples are a starting point, not a complete audit:</p>
 <ul class="glossary-term-ul">
-<li><strong>Text contrast, 1.4.3 (AA):</strong> Most text needs a contrast ratio of at least 4.5:1 against its background. Large-scale text needs 3:1: at least 18 pt, or 14 pt bold. The criterion includes exceptions, such as logos and inactive controls. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Contrast (Minimum)</a></li>
-<li><strong>Target size, 2.5.8 (AA):</strong> Pointer targets must be at least 24 × 24 CSS pixels unless an exception applies. These include sufficient spacing and inline links. <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank" rel="noopener noreferrer">Target Size (Minimum)</a></li>
-<li><strong>Focus visibility:</strong> Keyboard focus must be visible under 2.4.7 (AA). Under 2.4.11 (AA), a focused component must not be entirely hidden by author-created content, such as a sticky banner. The separate Focus Appearance criterion, 2.4.13, is AAA. <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html" target="_blank" rel="noopener noreferrer">Focus Not Obscured (Minimum)</a></li>
+<li><strong>Text contrast, 1.4.3 (AA):</strong> Most text needs a contrast ratio of at least 4.5:1 against its background. Large-scale text needs 3:1: at least 18 pt, or 14 pt bold. The criterion includes exceptions, such as logos and inactive controls. See <a href="/glossary/wcag-color-contrast.html">WCAG Color Contrast</a> for control colors and examples across themes. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">Contrast (Minimum)</a></li>
+<li><strong>Target size, 2.5.8 (AA):</strong> Pointer targets must be at least 24 × 24 CSS pixels unless an exception applies. See <a href="/glossary/touch-target-size.html">Touch Target Size</a> for the spacing test and a table example. <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html" target="_blank" rel="noopener noreferrer">Target Size (Minimum)</a></li>
+<li><strong>Focus visibility:</strong> Keyboard focus must be visible under 2.4.7 (AA). Under 2.4.11 (AA), a focused component must not be entirely hidden by author-created content, such as a sticky banner. The separate Focus Appearance criterion, 2.4.13, is AAA. See <a href="/glossary/keyboard-accessibility.html">Keyboard Accessibility & Focus Management</a> for a dialog example. <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html" target="_blank" rel="noopener noreferrer">Focus Not Obscured (Minimum)</a></li>
+<li><strong>Accessible authentication, 3.3.8 (AA):</strong> If an authentication step asks users to do something like remember or transcribe information, provide an alternative or a mechanism that helps them complete it, unless another specified exception applies. Supporting password managers and paste can help users complete a password step. <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html" target="_blank" rel="noopener noreferrer">Accessible Authentication (Minimum)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-an-accessible-form-example">
 <h2 id="section-an-accessible-form-example" class="glossary-term-section__title">An accessible form example</h2>
 <p class="glossary-term-section__text">Consider a quote-request form with an email field. A persistent label is programmatically associated with the field. Keyboard users can reach it and see focus. If the address is incomplete, the form displays “Enter an email address in the format name@example.com” and programmatically associates that message with the field.</p>
 <p class="glossary-term-section__text">The error message explains the problem without relying on color alone. Previously entered values remain available, and the submission confirmation is perceivable with assistive technology. Test the full submission flow, including errors and confirmation.</p>
+<p class="glossary-term-section__text">See <a href="/glossary/accessible-forms.html">Accessible Forms</a> for more on labeling fields, correcting errors, and checking submission feedback.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-how-should-teams-test-accessibility">
 <h2 id="section-how-should-teams-test-accessibility" class="glossary-term-section__title">How should teams test accessibility?</h2>
-<p class="glossary-term-section__text">Combine automated checks with manual keyboard, zoom, and screen-reader testing. Include people with disabilities in usability research, and evaluate complete tasks as well as individual components. Automated tools can identify some failures; a clean scan does not prove WCAG conformance.</p>
+<p class="glossary-term-section__text">Combine automated checks with manual keyboard and screen reader testing. Check <a href="/glossary/zoom-text-resize-reflow.html">text resizing and reflow</a> as users enlarge content. Include people with disabilities in usability research, and evaluate complete tasks as well as individual components. For a documented <a href="/glossary/web-accessibility-audit.html">web accessibility audit</a>, record the evaluation scope, evidence, and retest results.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-make-an-ai-interface-accessible">
+<h2 id="section-how-do-you-make-an-ai-interface-accessible" class="glossary-term-section__title">How do you make an AI interface accessible?</h2>
+<p class="glossary-term-section__text">Use semantic headings, named controls, and a logical reading and focus order for generated content. A chat response containing a table or form needs the same accessible structure as other web content. Shared components help only when their configuration and surrounding task also work.</p>
+<p class="glossary-term-section__text">For streaming responses, test how content updates are announced. Avoid repeatedly announcing an entire growing answer or moving focus with every update. Provide a clear way to stop generation and return to the relevant content.</p>
+<p class="glossary-term-section__text"><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">WCAG status-message guidance</a> applies to qualifying updates such as waiting or completion messages; it does not make every generated paragraph a status message. Test the actual experience with keyboard and assistive technology, including interruptions and errors.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-web-accessibility-relate-to-ai-browser-agents">
+<h2 id="section-how-does-web-accessibility-relate-to-ai-browser-agents" class="glossary-term-section__title">How does web accessibility relate to AI browser agents?</h2>
+<p class="glossary-term-section__text">WCAG addresses access for people with disabilities. Some AI browser agents also inspect the accessibility tree, where they can encounter the same field names, button roles, and control states used by assistive technology. <a href="/glossary/semantic-html.html">Semantic HTML</a> provides the underlying structure, and <a href="/glossary/aria-accessible-rich-internet-applications.html">ARIA</a> can describe states that a custom control needs to expose.</p>
+<p class="glossary-term-section__text">For the quote form, test whether a specific agent can find the email field, recover from an invalid address, and recognize a successful submission in a test environment. Record that result separately from human usability and WCAG conformance.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-related-terms">
 <h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
@@ -490,6 +566,7 @@
 <li><a href="/glossary/aria-accessible-rich-internet-applications.html">ARIA (Accessible Rich Internet Applications)</a></li>
 <li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
 <li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-sources">
@@ -501,6 +578,9 @@
 <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG 2 Overview, W3C WAI</a></li>
 <li><a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">User Notification: Forms Tutorial, W3C WAI</a></li>
 <li><a href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Evaluating Web Accessibility, W3C WAI</a></li>
+<li><a href="https://github.com/web-arena-x/webarena/blob/main/resources/README.md" target="_blank" rel="noopener noreferrer">WebArena Agent Execution Traces</a></li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/" target="_blank" rel="noopener noreferrer">What’s New in WCAG 2.2, W3C WAI</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">Understanding Status Messages, W3C WAI</a></li>
 </ul>
 </section>
 

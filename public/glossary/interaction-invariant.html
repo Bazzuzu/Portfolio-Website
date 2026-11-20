@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interaction Invariants in Product Design: Designing Predictable UX</title>
-  <meta name="description" content="An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.">
+  <title>Interaction Invariants: Defining Consistent UI Behavior</title>
+  <meta name="description" content="Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/interaction-invariant.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Interaction Invariants in Product Design: Designing Predictable UX">
-  <meta property="og:description" content="An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.">
+  <meta property="og:title" content="Interaction Invariants: Defining Consistent UI Behavior">
+  <meta property="og:description" content="Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/interaction-invariant.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Interaction Invariants in Product Design: Designing Predictable UX">
-  <meta name="twitter:description" content="An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.">
+  <meta name="twitter:title" content="Interaction Invariants: Defining Consistent UI Behavior">
+  <meta name="twitter:description" content="Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/interaction-invariant.html",
+      "name": "Interaction Invariants: Defining Consistent UI Behavior",
+      "description": "Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.nngroup.com/articles/consistency-and-standards/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#term",
       "name": "Interaction Invariant",
       "termCode": "interaction-invariant",
-      "description": "An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.",
+      "description": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.",
+      "url": "https://lexkonovalov.com/glossary/interaction-invariant.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/interaction-invariant.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,38 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.</p>
-      </section>
+    <p class="glossary-term-section__text">An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-selection-survives-sorting">
+<h2 id="section-example-selection-survives-sorting" class="glossary-term-section__title">Example: Selection survives sorting</h2>
+<p class="glossary-term-section__text">An operations table lets users select bookings and then sort the list. The team defines a rule that selected booking IDs stay selected when their rows move. The bulk-action count and affected records must reflect that same selection.</p>
+<p class="glossary-term-section__text">This rule needs decisions at its boundaries. The team should specify what happens when filtering hides a selected record, the user changes pages, or permissions change. Those cases may use different behavior, but the interface must make the resulting scope understandable.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-document-the-rule">
+<h2 id="section-how-do-you-document-the-rule" class="glossary-term-section__title">How do you document the rule?</h2>
+<p class="glossary-term-section__text">State the user expectation, the contexts it covers, and the observable result. For example, record that sorting preserves selected booking IDs and that a bulk action previews the selected records it will affect.</p>
+<p class="glossary-term-section__text">Connect the rule to component specifications and product requirements. Labels should identify recurring actions consistently, and state indicators should agree with the action’s actual effect.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-test-it">
+<h2 id="section-how-do-you-test-it" class="glossary-term-section__title">How do you test it?</h2>
+<p class="glossary-term-section__text">Start with a small known set of records. Select two, change the sort order, and inspect both the visible count and the records supplied to the action. Then test the defined boundary cases. A stable visual position alone cannot establish which records the operation targets.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/mental-model-mapping.html">Mental Model Mapping</a></li>
+<li><a href="/glossary/design-system-governance.html">Design System Governance</a></li>
+<li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.nngroup.com/articles/consistency-and-standards/" target="_blank" rel="noopener noreferrer">Consistency and Standards, Nielsen Norman Group</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html" target="_blank" rel="noopener noreferrer">Consistent Identification, W3C WAI</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Fosters strong muscle memory and deep psychological trust, allowing users to safely predict system responses without mental recalculation.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Behavioral constancy</span><span class="concept-tag">operational determinism</span><span class="concept-tag">cognitive consistency</span><span class="concept-tag">platform invariants</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers codify universal interaction rules—such as uniform escape actions, persistent filtering logic, or standard keyboard bindings—that components cannot override.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/mental-model-mapping.html">Mental Model Mapping</a></li><li><a href="/glossary/design-system-governance.html">Design System Governance</a></li><li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Daniel Rosenberg, UX Magic, IDF</li><li>Bruce Tognazzini, First Principles of Interaction Design</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

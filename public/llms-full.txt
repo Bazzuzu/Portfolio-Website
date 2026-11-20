@@ -298,7 +298,7 @@ Bypassed static Figma mocks to directly model dynamic fee calculations. Delivere
 
 ## 6. Architectural Product Design Knowledge System (A Canonical Glossary and Structural Ontology)
 **Index URL:** https://lexkonovalov.com/glossary/
-**Total Canonical Terms:** 142
+**Total Canonical Terms:** 151
 **Supporting Pages:** https://lexkonovalov.com/glossary/ooux/, https://lexkonovalov.com/glossary/ooux-worked-example.html
 
 This ontology establishes an authoritative, search-indexable reference bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
@@ -310,7 +310,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Representative Frameworks:** OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling
 - **Maturity Distribution:** 70% Established, 20% Proprietary, 10% Emerging
 
-#### Design Systems & Engineering (41 terms)
+#### Design Systems & Engineering (50 terms)
 - **Primary Focus:** Token Interoperability, Component Contracts, Accessibility
 - **Representative Frameworks:** W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components
 - **Maturity Distribution:** 75% Established, 25% Emerging
@@ -633,13 +633,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/interaction-invariant.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.
-- **Purpose:** Fosters strong muscle memory and deep psychological trust, allowing users to safely predict system responses without mental recalculation.
-- **Key Concepts:** Behavioral constancy, operational determinism, cognitive consistency, platform invariants
-- **How It Works:** Designers codify universal interaction rules—such as uniform escape actions, persistent filtering logic, or standard keyboard bindings—that components cannot override.
+- **Definition:** An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.
+- **Purpose:** An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.
+- **Key Concepts:** Example: Selection survives sorting, How do you document the rule?, How do you test it?
+- **How It Works:** An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.
 - **Related Terms:** Operational UX, Mental Model Mapping, Design System Governance, Design Primitives
-- **SEO Title:** Interaction Invariants in Product Design: Designing Predictable UX
-- **Sources:** Daniel Rosenberg, UX Magic, IDF; Bruce Tognazzini, First Principles of Interaction Design
+- **SEO Title:** Interaction Invariants: Defining Consistent UI Behavior
+- **Sources:** Consistency and Standards, Nielsen Norman Group (https://www.nngroup.com/articles/consistency-and-standards/); Consistent Identification, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)
 
 #### 026. Design System
 - **URL:** https://lexkonovalov.com/glossary/design-system.html
@@ -706,9 +706,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.
-- **Purpose:** Establishes modular component boundaries, public APIs, and state management patterns to ensure UI components remain decoupled, testable, and composable.
-- **Key Concepts:** Public API contract, Controlled vs uncontrolled state, Component composition & slots, Responsibility boundaries, Variant explosion prevention
-- **How It Works:** Divides interface layouts into hierarchical, single-responsibility components with explicitly typed props, event handlers, and slot projections.
+- **Purpose:** Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.
+- **Key Concepts:** What belongs in a component’s public API?, Example of a shared dialog, When should you add a variant or a separate component?
+- **How It Works:** Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.
 - **Related Terms:** Component Libraries, Headless UI Architecture, Web Components, Semantic HTML
 - **SEO Title:** UI Component Architecture | Product Design Glossary
 - **Sources:** Sharing State Between Components, React (https://react.dev/learn/sharing-state-between-components); Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog); Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
@@ -718,10 +718,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.
-- **Purpose:** Provides modular, production-ready UI building blocks that reduce code duplication, increase development speed, and enforce visual consistency across applications.
-- **Key Concepts:** Reusable UI components, Component API & options, Component states (default, hover, focus, disabled), Storybook documentation, Shared component criteria
-- **How It Works:** Packages tested, accessible frontend components with clear properties, variants, and documentation for consumption across multiple digital products and microfrontends.
-- **Related Terms:** Component Architecture, Design System, Headless UI Architecture, DesignOps
+- **Purpose:** A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.
+- **Key Concepts:** What belongs in a component library?, Example of documenting a shared button, When should a pattern become a shared component?
+- **How It Works:** A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.
+- **Related Terms:** Component Architecture, Design System, Headless UI Architecture, DesignOps, Design System Documentation, Pattern Library
 - **SEO Title:** UI Component Libraries | Product Design Glossary
 - **Sources:** Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/); What’s a story?, Storybook documentation (https://storybook.js.org/docs/get-started/whats-a-story); GOV.UK Design System (https://design-system.service.gov.uk/)
 
@@ -742,9 +742,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.
-- **Purpose:** Connects aesthetic intent and technical implementation by building production-grade UI components, interactive prototypes, and design system tooling directly in code.
-- **Key Concepts:** In-browser prototyping, production component authoring, design systems tooling, interaction fidelity, accessibility ergonomics
-- **How It Works:** Design engineers operate at the intersection of design tools and codebases, implementing interactive states, token pipelines, and robust UI primitives with production-grade engineering standards.
+- **Purpose:** Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.
+- **Key Concepts:** What does a design engineer do?, Example: Designing a booking-change dialog in the browser, How does it relate to a design-to-code workflow?
+- **How It Works:** Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.
 - **Related Terms:** Design-to-Code Workflow, Design Tokens, Component Architecture, DesignOps
 - **SEO Title:** Design Engineering: What Design Engineers Do | Product Design Glossary
 - **Sources:** Design Engineering at Vercel, Vercel (https://vercel.com/blog/design-engineering-at-vercel); Design Engineer Principles, Vercel (https://vercel.com/design/engineer)
@@ -765,13 +765,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/atomic-design.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.
-- **Purpose:** Offers an intuitive mental framework for visualizing UI composition, promoting modular consistency and code reusability from basic HTML elements up to complete views.
-- **Key Concepts:** Atoms, molecules, organisms, templates, structural composition.
-- **How It Works:** Designers craft elemental atoms (inputs, labels), combine them into functional molecules (search bars), nest them into organisms (headers), and assemble them into templates and concrete pages.
+- **Definition:** Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.
+- **Purpose:** Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.
+- **Key Concepts:** What do the five stages mean?, How does Atomic Design help in practice?
+- **How It Works:** Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.
 - **Related Terms:** Component Architecture, Design Primitives, Component Libraries, Design System
-- **SEO Title:** Atomic Design Methodology: Atoms to Pages Explained
-- **Sources:** Brad Frost, Atomic Design, Book Apart; Dan Mall, Design That Scales
+- **SEO Title:** Atomic Design: Atoms, Molecules, Organisms, and Pages
+- **Sources:** Atomic Design Methodology, Brad Frost (https://atomicdesign.bradfrost.com/chapter-2/); Tools of the Trade, Brad Frost (https://atomicdesign.bradfrost.com/chapter-3/)
 
 #### 037. Figma Variables & Modes
 - **URL:** https://lexkonovalov.com/glossary/figma-variables-modes.html
@@ -790,9 +790,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.
-- **Purpose:** Provides built-in keyboard navigation, native accessibility tree roles, search crawlability, and machine-actionable structure for assistive technologies and autonomous AI agents.
-- **Key Concepts:** WHATWG living standard, accessibility tree mapping, native interactive controls, form labeling ergonomics, AI agent browser execution
-- **How It Works:** Employs native semantic tags (<article>, <nav>, <button>, <input>) rather than unstyled div/span containers, giving browsers and assistive clients default behaviors and explicit roles.
+- **Purpose:** Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.
+- **Key Concepts:** How does semantic HTML support accessibility?, Example: A quote request, How does this help AI browser agents?
+- **How It Works:** Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.
 - **Related Terms:** Accessibility and WCAG, ARIA (Accessible Rich Internet Applications), Web Components, Structured Data for LLMs
 - **SEO Title:** Semantic HTML: Accessibility and AI Agents | Product Design Glossary
 - **Sources:** Sections, WHATWG HTML Living Standard (https://html.spec.whatwg.org/multipage/sections.html); Forms, WHATWG HTML Living Standard (https://html.spec.whatwg.org/multipage/forms.html); Labeling Controls, W3C WAI (https://www.w3.org/WAI/tutorials/forms/labels/); WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md); AI Features and Your Website, Google Search Central (https://developers.google.com/search/docs/appearance/ai-features)
@@ -802,21 +802,21 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.
-- **Purpose:** Eliminates barriers that prevent individuals with visual, auditory, motor, or cognitive disabilities from accessing digital products, while fulfilling legal compliance obligations.
-- **Key Concepts:** POUR principles, conformance levels (A, AA, AAA), contrast ratios, non-text content.
-- **How It Works:** Teams implement specific technical criteria (e.g., WCAG 2.2 focus appearance, target sizes, dynamic contrast ratios), validating compliance through manual testing and automated audits.
-- **Related Terms:** Semantic HTML, ARIA (Accessible Rich Internet Applications), Component Architecture, Design System
+- **Purpose:** Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.
+- **Key Concepts:** What are the four WCAG principles?, What do A, AA, and AAA mean?, How do WCAG 2.0, 2.1, and 2.2 differ?, How does WCAG relate to accessibility requirements in the EU and U.S.?, Which WCAG 2.2 checks matter in everyday design?
+- **How It Works:** Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.
+- **Related Terms:** Semantic HTML, ARIA (Accessible Rich Internet Applications), Component Architecture, Design System, Design System Governance
 - **SEO Title:** Accessibility & WCAG 2.2 | Product Design Glossary
-- **Sources:** Introduction to Web Accessibility, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-intro/); Accessibility Principles, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-principles/); WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/); WCAG 2 Overview, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/); User Notification: Forms Tutorial, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/); Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)
+- **Sources:** Introduction to Web Accessibility, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-intro/); Accessibility Principles, W3C WAI (https://www.w3.org/WAI/fundamentals/accessibility-principles/); WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/); WCAG 2 Overview, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/); User Notification: Forms Tutorial, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/); Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/); WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md); What’s New in WCAG 2.2, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/); Understanding Status Messages, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
 
 #### 040. ARIA (Accessible Rich Internet Applications)
 - **URL:** https://lexkonovalov.com/glossary/aria-accessible-rich-internet-applications.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.
-- **Purpose:** Bridges interactive accessibility gaps in complex dynamic web widgets by communicating programmatic roles, states, and relations to accessibility APIs.
-- **Key Concepts:** WAI-ARIA 1.2 specification, roles, states, and properties, first rule of ARIA (prefer native HTML), ARIA authoring practices (APG), ARIA snapshots in testing
-- **How It Works:** Applies aria-* attributes and role markers to DOM elements to communicate dynamic state (expanded, selected, busy) and relational bindings (labelledby, controls) without altering visual styles.
+- **Purpose:** WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.
+- **Key Concepts:** What do ARIA roles, states, and properties do?, Example: A fare-rules disclosure, How do you test the result?
+- **How It Works:** WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.
 - **Related Terms:** Semantic HTML, Accessibility and WCAG, Component Architecture, Headless UI Architecture
 - **SEO Title:** What Is ARIA? Roles, States, and Properties | Product Design Glossary
 - **Sources:** WAI-ARIA 1.2, W3C (https://www.w3.org/TR/wai-aria-1.2/); Read Me First, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/); Disclosure Pattern, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/); ARIA Snapshots, Playwright (https://playwright.dev/docs/aria-snapshots); WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md)
@@ -825,13 +825,13 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/web-components.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.
-- **Purpose:** Enables the construction of enterprise design system libraries that function seamlessly across any JavaScript frontend framework (React, Vue, Angular, or vanilla JS) without vendor lock-in.
-- **Key Concepts:** Custom elements, Shadow DOM encapsulation, HTML templates, framework agnosticism.
-- **How It Works:** Developers define custom HTML tags via the customElements.define browser API, encapsulating internal CSS and DOM trees within an isolated Shadow Root.
+- **Definition:** Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.
+- **Purpose:** Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.
+- **Key Concepts:** Main building blocks, Example: a shared booking-status element, Design-system checks
+- **How It Works:** Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.
 - **Related Terms:** Component Architecture, Design System, Semantic HTML, Headless UI Architecture
-- **SEO Title:** Web Components in Enterprise Design Systems: Complete Guide
-- **Sources:** W3C Custom Elements Specification; W3C Shadow DOM Specification; MDN Web Components
+- **SEO Title:** Web Components: Definition, Building Blocks, and UX Checks
+- **Sources:** MDN: Web Components (https://developer.mozilla.org/en-US/docs/Web/API/Web_components); WHATWG: Custom Elements (https://html.spec.whatwg.org/multipage/custom-elements.html)
 
 #### 042. DesignOps
 - **URL:** https://lexkonovalov.com/glossary/designops.html
@@ -874,10 +874,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.
-- **Purpose:** Delivers robust, fully accessible keyboard navigation and WAI-ARIA states without imposing visual opinions or styling lock-in.
-- **Key Concepts:** Unstyled components & hooks, Accessibility semantics & focus management, Keyboard choreography (Tab, Shift+Tab, Escape), Separation of behavior and presentation, Integration testing in context
-- **How It Works:** Implements complex state machines, ARIA roles, and keyboard focus traps in headless hooks or unstyled render components, leaving CSS presentation entirely to the consuming application.
-- **Related Terms:** Component Architecture, Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications)
+- **Purpose:** Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.
+- **Key Concepts:** What does a headless component provide?, Example of a headless modal dialog, When should you choose headless UI?
+- **How It Works:** Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.
+- **Related Terms:** Component Architecture, Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications), shadcn/ui
 - **SEO Title:** Headless UI Architecture | Product Design Glossary
 - **Sources:** Dialog, Radix Primitives (https://www.radix-ui.com/primitives/docs/components/dialog); Dialog (Modal) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/); Modal, React Aria (https://react-aria.adobe.com/Modal)
 
@@ -897,23 +897,23 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** A Fluid Typography & Spacing System uses mathematical clamp functions (e.g., CSS clamp()) to smoothly scale typography and layout spacing proportionally between defined viewport bounds without abrupt breakpoint jumps.
-- **Purpose:** Eliminates jarring breakpoint transitions, provides seamless readability across arbitrary screen sizes, and reduces the complexity of managing dozens of responsive media queries.
-- **Key Concepts:** CSS clamp(), viewport-based scaling, ideal rate of change, minimum/maximum bounds.
-- **How It Works:** Uses linear interpolation equations (size = min + slope * (viewport - min_width)) bounded by clamp limits, dynamically scaling values directly in browser engines.
+- **Definition:** A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.
+- **Purpose:** A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.
+- **Key Concepts:** A CSS example, What to test
+- **How It Works:** A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.
 - **Related Terms:** Design Primitives, Component Architecture, Design Tokens
-- **SEO Title:** Fluid Typography & Spacing Systems: Modern CSS Clamp Architecture
-- **Sources:** Utopia.fyi Responsive Systems; Tim Brown, Flexible Typesetting, A Book Apart
+- **SEO Title:** Fluid Typography and Spacing: CSS clamp() and UX Checks
+- **Sources:** MDN: CSS clamp() (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp); W3C: Understanding Resize Text (https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html); W3C: Understanding Reflow (https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 
 #### 048. Component Telemetry
 - **URL:** https://lexkonovalov.com/glossary/component-telemetry.html
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Emerging
 - **Definition:** Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.
-- **Purpose:** Informs design system roadmaps, adoption metrics, and safe deprecation lifecycles through automated static code analysis and runtime interaction monitoring.
-- **Key Concepts:** Static code inventory, runtime usage tracking, prop distribution metrics, interaction & error telemetry, safe deprecation planning
-- **How It Works:** Pairs build-time AST scanners (like Omlet) with runtime event instrumentation (OpenTelemetry) to track production component usage, error rates, and prop combinations across repositories.
-- **Related Terms:** DesignOps, Design System Governance, Product Telemetry & Analytics, Continuous Experimentation, Design System Versioning & SemVer
+- **Purpose:** Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.
+- **Key Concepts:** What can you measure?, Example: Removing a deprecated Dialog prop
+- **How It Works:** Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.
+- **Related Terms:** DesignOps, Design System Governance, Product Telemetry & Analytics, Continuous Experimentation, Design System Versioning (SemVer), Design System Adoption, Design System Metrics
 - **SEO Title:** Component Telemetry: Design System Usage | Product Design Glossary
 - **Sources:** Component Usage Across Code Repositories, Omlet (https://omlet.dev/); Semantic Conventions for Events, OpenTelemetry (https://opentelemetry.io/docs/specs/semconv/general/events/)
 
@@ -922,10 +922,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.
-- **Purpose:** Prevents unintended styling regressions, clipping, layout shifts, and visual breakage across multi-platform releases through automated pixel-diff and DOM-capture baselines.
-- **Key Concepts:** Baseline screenshots, pixel diffing, capture environment stability, component state coverage, interaction testing complement
-- **How It Works:** Renders components in isolated test runners (e.g. Playwright, Storybook), captures viewport snapshots against approved golden images, and flags visual deviations for human approval.
-- **Related Terms:** Component Architecture, Design Engineering, Design-to-Code Workflow
+- **Purpose:** Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.
+- **Key Concepts:** How does visual regression testing work?, Example: A booking-change dialog on mobile, What should you test alongside screenshots?
+- **How It Works:** Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.
+- **Related Terms:** Component Architecture, Design Engineering, Design-to-Code Workflow, Design QA
 - **SEO Title:** Visual Regression Testing: UI Baselines | Product Design Glossary
 - **Sources:** Visual Comparisons, Playwright (https://playwright.dev/docs/test-snapshots); Visual Tests, Storybook (https://storybook.js.org/docs/writing-tests/visual-testing)
 
@@ -1666,9 +1666,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.
-- **Purpose:** Harmonizes accessibility standards across EU member states to remove cross-border market barriers and guarantee accessible digital commerce and public services for consumers with disabilities.
-- **Key Concepts:** Directive (EU) 2019/882, presumption of conformity, consumer e-commerce scope, microenterprise exemption, Annex I functional requirements
-- **How It Works:** Directs member states to enact national laws enforcing accessibility for covered consumer-facing digital services, referencing European harmonized standards (such as EN 301 549) to presume conformity.
+- **Purpose:** The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.
+- **Key Concepts:** Which websites and apps does the EAA cover?, What should a product team check in checkout?, How does the EAA relate to WCAG and EN 301 549?
+- **How It Works:** The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.
 - **Related Terms:** Accessibility and WCAG, EN 301 549, Web Accessibility Audit, ADA Web Accessibility
 - **SEO Title:** European Accessibility Act (EAA) for Digital Products
 - **Sources:** Directive (EU) 2019/882, EUR-Lex (https://eur-lex.europa.eu/eli/dir/2019/882/oj?uri=CELEX%3A32019L0882); Accessibility Requirements for Products and Services, Your Europe (https://europa.eu/youreurope/business/selling-in-eu/selling-goods-services/accessibility/indexamp_en.htm); European Accessibility Act, Council of the European Union (https://www.consilium.europa.eu/en/policies/accessibility-goods-services/)
@@ -1678,9 +1678,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.
-- **Purpose:** Provides European public procurement and regulatory bodies with a unified, harmonized technical specification for ICT accessibility across hardware, software, documents, and web interfaces.
-- **Key Concepts:** ETSI standard, harmonized European standard, WCAG alignment, v3.2.1 vs v4.1.1, non-web ICT clauses
-- **How It Works:** Maps technical criteria across digital channels; Clause 9 evaluates web content against WCAG success criteria, while Clauses 10 and 11 evaluate non-web documents and software interfaces.
+- **Purpose:** EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.
+- **Key Concepts:** How does EN 301 549 relate to WCAG?, Which version of EN 301 549 applies?
+- **How It Works:** EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.
 - **Related Terms:** Accessibility and WCAG, European Accessibility Act (EAA), Web Accessibility Audit, Section 508
 - **SEO Title:** EN 301 549: EU Accessibility Standard and WCAG
 - **Sources:** EN 301 549 V3.2.1, ETSI (https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf); EN 301 549 V4.1.1, ETSI (https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf); Web Accessibility Directive, European Commission (https://digital-strategy.ec.europa.eu/en/policies/web-accessibility); Harmonized Standards for the Web Accessibility Directive, European Commission (https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/accessibility-websites-and-mobile-applications_en); EN 301 549 Version Update, AccessibleEU (https://accessible-eu-centre.ec.europa.eu/content-corner/news/european-accessibility-standard-en-301-549-has-been-updated-2026-09-07_en); European Accessibility Act, EUR-Lex (https://eur-lex.europa.eu/eli/dir/2019/882/oj?uri=CELEX%3A32019L0882)
@@ -1690,9 +1690,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.
-- **Purpose:** Ensures equal access to digital public services and private commercial websites under United States civil rights law.
-- **Key Concepts:** ADA Title II vs Title III, DOJ web accessibility rule, WCAG 2.1 AA benchmark, public accommodation, compliance deadlines
-- **How It Works:** Enforces accessibility compliance through federal rulemaking and court interpretations; Title II mandates WCAG 2.1 AA compliance by 2027/2028, while Title III applies WCAG principles to public accommodations.
+- **Purpose:** ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.
+- **Key Concepts:** How do Title II and Title III differ?, What are the ADA Title II web rule deadlines?, What should a product team do?
+- **How It Works:** ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.
 - **Related Terms:** Accessibility and WCAG, Section 508, Web Accessibility Audit, European Accessibility Act (EAA)
 - **SEO Title:** ADA Web Accessibility: Title II, Title III, and WCAG
 - **Sources:** Guidance on Web Accessibility and the ADA, U.S. Department of Justice (https://www.ada.gov/resources/web-guidance/); ADA Title III Regulations, U.S. Department of Justice (https://www.ada.gov/law-and-regs/regulations/title-iii-regulations/); 28 CFR § 35.200, Electronic Code of Federal Regulations (https://www.ecfr.gov/current/title-28/chapter-I/part-35/subpart-H/section-35.200); 2026 Interim Final Rule Extending Compliance Dates, Federal Register (https://www.govinfo.gov/content/pkg/FR-2026-04-20/pdf/2026-07663.pdf); Title II Small Entity Compliance Guide, U.S. Department of Justice (https://www.ada.gov/resources/small-entity-compliance-guide/)
@@ -1702,9 +1702,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.
-- **Purpose:** Regulates federal procurement and technology deployment in the United States to ensure all federal employees and public citizens with disabilities have comparable access to ICT.
-- **Key Concepts:** Rehabilitation Act, Revised 508 Standards, WCAG 2.0 AA incorporation, VPAT template, Accessibility Conformance Report (ACR)
-- **How It Works:** Requires federal agencies and prospective vendors to document compliance via ACRs (built on VPATs), incorporating WCAG 2.0 Level AA for digital and software interfaces.
+- **Purpose:** Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.
+- **Key Concepts:** Which WCAG version does Section 508 use?, What are VPATs and ACRs?, Example: A SaaS tool for a federal agency
+- **How It Works:** Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.
 - **Related Terms:** Accessibility and WCAG, ADA Web Accessibility, EN 301 549, Web Accessibility Audit
 - **SEO Title:** Section 508 Accessibility: Federal ICT and WCAG
 - **Sources:** Revised Section 508 Standards, U.S. Access Board (https://www.access-board.gov/ict/); Accessibility Conformance Reports, General Services Administration (https://www.section508.gov/sell/acr/)
@@ -1714,9 +1714,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.
-- **Purpose:** Systematically evaluates digital products against accessibility standards (e.g. WCAG 2.2 AA) to document barriers, determine legal conformance, and prioritize remediation.
-- **Key Concepts:** WCAG-EM methodology, representative sampling, automated scanning vs manual evaluation, assistive technology testing, reproducible findings
-- **How It Works:** Scopes critical user paths, combines automated rule checking with keyboard/screen-reader testing, and produces structured issue reports linked to specific success criteria.
+- **Purpose:** A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.
+- **Key Concepts:** How do you run a web accessibility audit?, Example: A keyboard trap during checkout
+- **How It Works:** A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.
 - **Related Terms:** Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications), EN 301 549, ADA Web Accessibility
 - **SEO Title:** Web Accessibility Audit: How to Test and Report Findings
 - **Sources:** Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/); WCAG Evaluation Methodology (WCAG-EM), W3C WAI (https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/); Involving Users in Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/involving-users/); WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/); Understanding No Keyboard Trap, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
@@ -1726,9 +1726,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.
-- **Purpose:** Prevents abandonment, user frustration, and input errors by ensuring forms are operable via keyboard, screen reader, and voice input.
-- **Key Concepts:** Explicit label association, fieldset and legend, inline error description, WCAG 3.3.7 redundant entry, status messages (aria-live)
-- **How It Works:** Pairs form inputs with programmatic labels via for/id attributes, describes constraints and errors using aria-describedby, and retains user input across validation failures.
+- **Purpose:** An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.
+- **Key Concepts:** What makes a form accessible?, Example: An email error in a quote request, How do you test an accessible form?
+- **How It Works:** An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.
 - **Related Terms:** Accessibility and WCAG, Semantic HTML, ARIA (Accessible Rich Internet Applications), Keyboard Accessibility & Focus Management, Web Accessibility Audit, Lead Capture Mechanics
 - **SEO Title:** Accessible Forms: Labels, Errors, and Validation
 - **Sources:** Labeling Controls, W3C WAI (https://www.w3.org/WAI/tutorials/forms/labels/); Validating Input, W3C WAI (https://www.w3.org/WAI/tutorials/forms/validation/); User Notification, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/); Understanding Error Suggestion, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html); Understanding Status Messages, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html); Understanding Redundant Entry, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html)
@@ -1738,9 +1738,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.
-- **Purpose:** Ensures complete digital operability without a pointing device, enabling users with motor, cognitive, and visual disabilities to interact predictably.
-- **Key Concepts:** WCAG 2.1.1 Keyboard, 2.1.2 No Keyboard Trap, 2.4.3 Focus Order, 2.4.7 Focus Visible, 2.4.11 Focus Not Obscured, focus trapping and restoration
-- **How It Works:** Maintains a logical DOM order, captures focus within active modal dialogs, restores focus to triggering elements upon dismissal, and guarantees non-obscured visible focus indicators.
+- **Purpose:** Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.
+- **Key Concepts:** What should you test?, Example: A booking-change dialog, Where should teams start?
+- **How It Works:** Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.
 - **Related Terms:** Accessibility and WCAG, Accessible Forms, WCAG Color Contrast, ARIA (Accessible Rich Internet Applications), Headless UI Architecture, Web Accessibility Audit
 - **SEO Title:** Keyboard Accessibility & Focus Management | WCAG
 - **Sources:** Understanding Keyboard, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html); Understanding No Keyboard Trap, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html); Understanding Focus Order, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html); Understanding Focus Visible, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html); Understanding Focus Not Obscured (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html); Modal Dialog Pattern, W3C ARIA Authoring Practices Guide (https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
@@ -2044,4 +2044,112 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Related Terms:** Component Libraries, Component Architecture, Design System Documentation, Design System Governance
 - **SEO Title:** Pattern Library vs. Component Library | Product Design Glossary
 - **Sources:** Patterns, GOV.UK Design System (https://design-system.service.gov.uk/patterns/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
+
+#### 143. AI-ready Design System
+- **URL:** https://lexkonovalov.com/glossary/ai-ready-design-system.html
+- **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.
+- **Purpose:** An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.
+- **Key Concepts:** What does an agent need from a design system?, Example: generating a filter panel, Which tools can provide the context?, How is this different from a design harness?
+- **How It Works:** An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.
+- **Related Terms:** Design Harness, Design System Documentation, Figma MCP Server, Evaluation Harness, shadcn/ui
+- **SEO Title:** What Makes a Design System AI-ready? | Product Design Glossary
+- **Sources:** Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/); Manifests, Storybook (https://storybook.js.org/docs/ai/manifests)
+
+#### 144. Alt Text
+- **URL:** https://lexkonovalov.com/glossary/alt-text.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.
+- **Purpose:** Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.
+- **Key Concepts:** What should alt text say?, Example: Three images on a hotel page
+- **How It Works:** Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.
+- **Related Terms:** Accessibility and WCAG, Semantic HTML, Content Modeling, Web Accessibility Audit
+- **SEO Title:** Alt Text for Images: WCAG Examples for Websites
+- **Sources:** Understanding Non-text Content, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html); An alt Decision Tree, W3C WAI (https://www.w3.org/WAI/tutorials/images/decision-tree/); Decorative Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/decorative/); Functional Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/functional/); Complex Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/complex/)
+
+#### 145. Design Debt
+- **URL:** https://lexkonovalov.com/glossary/design-debt.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.
+- **Purpose:** Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.
+- **Key Concepts:** What counts as design debt?, Design debt vs. technical debt, Example: inconsistent validation, How do you prioritize design debt?
+- **How It Works:** Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.
+- **Related Terms:** Design System Audit, Design QA, Design System Governance, Component Architecture
+- **SEO Title:** Design Debt: Meaning and Prioritization | Product Design Glossary
+- **Sources:** Technical Debt Quadrant, Martin Fowler (https://martinfowler.com/bliki/TechnicalDebtQuadrant.html); The Custodial Era of UX: Cleaning Up After AI, NN/g (https://www.nngroup.com/articles/ai-ux-debt/)
+
+#### 146. Design QA
+- **URL:** https://lexkonovalov.com/glossary/design-qa.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.
+- **Purpose:** Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.
+- **Key Concepts:** What does design QA cover?, Example: reviewing a request form, Design QA vs. software QA vs. design critique, Which checks can be automated?
+- **How It Works:** Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.
+- **Related Terms:** Visual Regression Testing, Storybook, Web Accessibility Audit, Design-to-Code Workflow
+- **SEO Title:** Design QA: Checking the Implemented Experience | Product Design Glossary
+- **Sources:** How to test UIs with Storybook (https://storybook.js.org/docs/writing-tests); Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)
+
+#### 147. shadcn/ui
+- **URL:** https://lexkonovalov.com/glossary/shadcn-ui.html
+- **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.
+- **Purpose:** shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.
+- **Key Concepts:** How does the component approach work?, What is a shadcn registry?, How does it work with AI tools?, Example: building a settings dialog, Is shadcn/ui a complete design system?
+- **How It Works:** shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.
+- **Related Terms:** Component Libraries, AI-ready Design System, Headless UI Architecture, Model Context Protocol
+- **SEO Title:** What Is shadcn/ui? Components and Registries | Product Design Glossary
+- **Sources:** Introduction, shadcn/ui (https://ui.shadcn.com/docs); Registry, shadcn/ui (https://ui.shadcn.com/docs/registry); MCP server, shadcn/ui (https://ui.shadcn.com/docs/mcp)
+
+#### 148. Storybook
+- **URL:** https://lexkonovalov.com/glossary/storybook.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.
+- **Purpose:** Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.
+- **Key Concepts:** What is a story in Storybook?, How does Storybook support a design system?, What are Storybook MCP and component manifests?, Example: reviewing an AI-generated field
+- **How It Works:** Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.
+- **Related Terms:** Design System Documentation, Component Libraries, Visual Regression Testing, Model Context Protocol
+- **SEO Title:** Storybook: UI Components and Stories | Product Design Glossary
+- **Sources:** Why Storybook?, Storybook (https://storybook.js.org/docs/get-started/why-storybook); Using Storybook with AI (https://storybook.js.org/docs/ai); Manifests, Storybook (https://storybook.js.org/docs/ai/manifests)
+
+#### 149. Touch Target Size
+- **URL:** https://lexkonovalov.com/glossary/touch-target-size.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.
+- **Purpose:** Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.
+- **Key Concepts:** What target size does WCAG require?, Example: Edit and delete buttons in a table
+- **How It Works:** Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.
+- **Related Terms:** Accessibility and WCAG, Keyboard Accessibility & Focus Management, Zoom, Text Resize & Reflow, Design System, Web Accessibility Audit
+- **SEO Title:** Touch Target Size: WCAG Minimums and Spacing
+- **Sources:** Understanding Target Size (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html); Understanding Target Size (Enhanced), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
+
+#### 150. WCAG Color Contrast
+- **URL:** https://lexkonovalov.com/glossary/wcag-color-contrast.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.
+- **Purpose:** WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.
+- **Key Concepts:** What are the WCAG AA contrast ratios?, Example: Testing a semantic token in two themes
+- **How It Works:** WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.
+- **Related Terms:** Accessibility and WCAG, Keyboard Accessibility & Focus Management, Design Tokens, Semantic Tokens, Web Accessibility Audit
+- **SEO Title:** WCAG Color Contrast: Text, Icons, and UI Controls
+- **Sources:** Understanding Contrast (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html); Understanding Non-text Contrast, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html); Understanding Use of Color, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)
+
+#### 151. Zoom, Text Resize & Reflow
+- **URL:** https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.
+- **Purpose:** Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.
+- **Key Concepts:** What are the two WCAG checks?, Example: A booking form with a fare table, How do you test reflow?
+- **How It Works:** Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.
+- **Related Terms:** Accessibility and WCAG, Accessible Forms, Keyboard Accessibility & Focus Management, Touch Target Size, Fluid Typography & Spacing System, Web Accessibility Audit
+- **SEO Title:** WCAG Zoom, Text Resize & Reflow: 200% and 320 CSS px
+- **Sources:** Understanding Resize Text, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html); Understanding Reflow, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 

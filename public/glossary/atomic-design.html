@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atomic Design Methodology: Atoms to Pages Explained</title>
-  <meta name="description" content="Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.">
+  <title>Atomic Design: Atoms, Molecules, Organisms, and Pages</title>
+  <meta name="description" content="Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/atomic-design.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Atomic Design Methodology: Atoms to Pages Explained">
-  <meta property="og:description" content="Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.">
+  <meta property="og:title" content="Atomic Design: Atoms, Molecules, Organisms, and Pages">
+  <meta property="og:description" content="Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/atomic-design.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Atomic Design Methodology: Atoms to Pages Explained">
-  <meta name="twitter:description" content="Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.">
+  <meta name="twitter:title" content="Atomic Design: Atoms, Molecules, Organisms, and Pages">
+  <meta name="twitter:description" content="Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/atomic-design.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/atomic-design.html",
+      "name": "Atomic Design: Atoms, Molecules, Organisms, and Pages",
+      "description": "Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#breadcrumbs"
+      },
+      "citation": [
+        "https://atomicdesign.bradfrost.com/chapter-2/",
+        "https://atomicdesign.bradfrost.com/chapter-3/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/atomic-design.html#term",
       "name": "Atomic Design",
       "termCode": "atomic-design",
-      "description": "Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.",
+      "description": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.",
+      "url": "https://lexkonovalov.com/glossary/atomic-design.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/atomic-design.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,65 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.</p>
-      </section>
+    <p class="glossary-term-section__text">Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-do-the-five-stages-mean">
+<h2 id="section-what-do-the-five-stages-mean" class="glossary-term-section__title">What do the five stages mean?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Stage</th>
+<th>Flight-search example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atoms</td>
+<td>A label, input, and button.</td>
+</tr>
+<tr>
+<td>Molecules</td>
+<td>A labeled destination field with supporting text.</td>
+</tr>
+<tr>
+<td>Organisms</td>
+<td>A search form combining route, dates, travelers, and actions.</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>The structural arrangement of search, results, and supporting content.</td>
+</tr>
+<tr>
+<td>Pages</td>
+<td>That arrangement populated with actual content and states.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The stages support thinking across levels of detail. Teams can move between the search form and a populated results page as they learn what the interface requires.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-atomic-design-help-in-practice">
+<h2 id="section-how-does-atomic-design-help-in-practice" class="glossary-term-section__title">How does Atomic Design help in practice?</h2>
+<p class="glossary-term-section__text">A team can reuse a destination field while examining how it fits inside different search forms. The populated page exposes constraints that isolated components may miss, such as long airport names, a missing date, or an empty result set.</p>
+<p class="glossary-term-section__text">Use the method alongside component APIs, accessibility requirements, tokens, and maintenance decisions. Define names and boundaries that your team can understand, and review real product states before deciding that a reusable piece is complete.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/design-primitives.html">Design Primitives</a></li>
+<li><a href="/glossary/component-libraries.html">Component Libraries</a></li>
+<li><a href="/glossary/design-system.html">Design System</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://atomicdesign.bradfrost.com/chapter-2/" target="_blank" rel="noopener noreferrer">Atomic Design Methodology, Brad Frost</a></li>
+<li><a href="https://atomicdesign.bradfrost.com/chapter-3/" target="_blank" rel="noopener noreferrer">Tools of the Trade, Brad Frost</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Offers an intuitive mental framework for visualizing UI composition, promoting modular consistency and code reusability from basic HTML elements up to complete views.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Atoms</span><span class="concept-tag">molecules</span><span class="concept-tag">organisms</span><span class="concept-tag">templates</span><span class="concept-tag">structural composition.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers craft elemental atoms (inputs, labels), combine them into functional molecules (search bars), nest them into organisms (headers), and assemble them into templates and concrete pages.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/design-primitives.html">Design Primitives</a></li><li><a href="/glossary/component-libraries.html">Component Libraries</a></li><li><a href="/glossary/design-system.html">Design System</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Brad Frost, Atomic Design, Book Apart</li><li>Dan Mall, Design That Scales</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

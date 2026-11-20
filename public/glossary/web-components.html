@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Components in Enterprise Design Systems: Complete Guide</title>
-  <meta name="description" content="Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.">
+  <title>Web Components: Definition, Building Blocks, and UX Checks</title>
+  <meta name="description" content="Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/web-components.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Web Components in Enterprise Design Systems: Complete Guide">
-  <meta property="og:description" content="Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.">
+  <meta property="og:title" content="Web Components: Definition, Building Blocks, and UX Checks">
+  <meta property="og:description" content="Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/web-components.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Web Components in Enterprise Design Systems: Complete Guide">
-  <meta name="twitter:description" content="Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.">
+  <meta name="twitter:title" content="Web Components: Definition, Building Blocks, and UX Checks">
+  <meta name="twitter:description" content="Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/web-components.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/web-components.html",
+      "name": "Web Components: Definition, Building Blocks, and UX Checks",
+      "description": "Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#breadcrumbs"
+      },
+      "citation": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/Web_components",
+        "https://html.spec.whatwg.org/multipage/custom-elements.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/web-components.html#term",
       "name": "Web Components",
       "termCode": "web-components",
-      "description": "Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.",
+      "description": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.",
+      "url": "https://lexkonovalov.com/glossary/web-components.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/web-components.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,46 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.</p>
-      </section>
+    <p class="glossary-term-section__text">Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.</p>
+<p class="glossary-term-section__text">They can support a shared component library across applications. The integration still needs testing with each application's framework, rendering approach, and accessibility requirements.</p>
+<section class="glossary-term-section" aria-labelledby="section-main-building-blocks">
+<h2 id="section-main-building-blocks" class="glossary-term-section__title">Main building blocks</h2>
+<ul class="glossary-term-ul">
+<li>Custom elements define new HTML elements and their lifecycle behavior.</li>
+<li>Shadow DOM can provide a separate internal DOM tree and style encapsulation.</li>
+<li>HTML templates provide reusable markup, while slots allow content to be inserted into a component's Shadow DOM.</li>
+</ul>
+<p class="glossary-term-section__text">A custom element does not have to use every technology in this group. For example, using Shadow DOM is an implementation choice.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-shared-booking-status-element">
+<h2 id="section-example-a-shared-booking-status-element" class="glossary-term-section__title">Example: a shared booking-status element</h2>
+<p class="glossary-term-section__text">A design system could expose a booking-status element that accepts a defined status value and renders the approved label and visual treatment.</p>
+<p class="glossary-term-section__text">Its contract should document accepted values, updates, accessible output, and theming. If the status is unknown, the element should display an appropriate fallback rather than imply that the booking is confirmed.</p>
+<p class="glossary-term-section__text">For interactive components, the contract also needs events, focus behavior, keyboard operation, and disabled states.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-design-system-checks">
+<h2 id="section-design-system-checks" class="glossary-term-section__title">Design-system checks</h2>
+<p class="glossary-term-section__text">Verify accessible names, roles, and states in the assembled page. A custom element name does not automatically provide the semantics of a native button or form control.</p>
+<p class="glossary-term-section__text">Test forms, focus movement, styling hooks, and event handling in consuming applications. Prefer native HTML behavior where it meets the requirement, and document additional behavior where custom implementation is necessary.</p>
+<p class="glossary-term-section__text">Encapsulation can help manage component internals, but it does not remove integration or maintenance work.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/component-architecture.html">Component Architecture</a></li>
+<li><a href="/glossary/design-system.html">Design System</a></li>
+<li><a href="/glossary/semantic-html.html">Semantic HTML</a></li>
+<li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank" rel="noopener noreferrer">MDN: Web Components</a></li>
+<li><a href="https://html.spec.whatwg.org/multipage/custom-elements.html" target="_blank" rel="noopener noreferrer">WHATWG: Custom Elements</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables the construction of enterprise design system libraries that function seamlessly across any JavaScript frontend framework (React, Vue, Angular, or vanilla JS) without vendor lock-in.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Custom elements</span><span class="concept-tag">Shadow DOM encapsulation</span><span class="concept-tag">HTML templates</span><span class="concept-tag">framework agnosticism.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Developers define custom HTML tags via the customElements.define browser API, encapsulating internal CSS and DOM trees within an isolated Shadow Root.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/component-architecture.html">Component Architecture</a></li><li><a href="/glossary/design-system.html">Design System</a></li><li><a href="/glossary/semantic-html.html">Semantic HTML</a></li><li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>W3C Custom Elements Specification</li><li>W3C Shadow DOM Specification</li><li>MDN Web Components</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

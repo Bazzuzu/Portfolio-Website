@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 142-term taxonomy across four foundational product design domains
+// Canonical 151-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -69,7 +69,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "design-systems-engineering",
     "name": "Design Systems & Engineering",
-    "count": 41,
+    "count": 50,
     "description": "Deterministic contracts between design tools and multi-platform production code repositories.",
     "primaryFocus": "Token Interoperability, Component Contracts, Accessibility",
     "representativeSpecs": "W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components",
@@ -2593,25 +2593,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "An Interaction Invariant is a foundational interaction rule, gesture, or behavioral principle that remains completely uniform across every system state, module, and platform within a software suite.",
-    "purpose": "Fosters strong muscle memory and deep psychological trust, allowing users to safely predict system responses without mental recalculation.",
+    "definition": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.",
+    "purpose": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.",
     "keyConcepts": [
-      "Behavioral constancy",
-      "operational determinism",
-      "cognitive consistency",
-      "platform invariants"
+      "Example: Selection survives sorting",
+      "How do you document the rule?",
+      "How do you test it?"
     ],
-    "howItWorks": "Designers codify universal interaction rules—such as uniform escape actions, persistent filtering logic, or standard keyboard bindings—that components cannot override.",
+    "howItWorks": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.",
     "relatedTerms": [
       "Operational UX",
       "Mental Model Mapping",
       "Design System Governance",
       "Design Primitives"
     ],
-    "seoTitle": "Interaction Invariants in Product Design: Designing Predictable UX",
+    "seoTitle": "Interaction Invariants: Defining Consistent UI Behavior",
     "sources": [
-      "Daniel Rosenberg, UX Magic, IDF",
-      "Bruce Tognazzini, First Principles of Interaction Design"
+      "Consistency and Standards, Nielsen Norman Group (https://www.nngroup.com/articles/consistency-and-standards/)",
+      "Consistent Identification, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)"
+    ],
+    "seoDescription": "Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/interaction-invariant.html",
+    "contentMarkdown": "# Interaction Invariant\n\nAn interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.\n\n## Example: Selection survives sorting\n\nAn operations table lets users select bookings and then sort the list. The team defines a rule that selected booking IDs stay selected when their rows move. The bulk-action count and affected records must reflect that same selection.\n\nThis rule needs decisions at its boundaries. The team should specify what happens when filtering hides a selected record, the user changes pages, or permissions change. Those cases may use different behavior, but the interface must make the resulting scope understandable.\n\n## How do you document the rule?\n\nState the user expectation, the contexts it covers, and the observable result. For example, record that sorting preserves selected booking IDs and that a bulk action previews the selected records it will affect.\n\nConnect the rule to component specifications and product requirements. Labels should identify recurring actions consistently, and state indicators should agree with the action’s actual effect.\n\n## How do you test it?\n\nStart with a small known set of records. Select two, change the sort order, and inspect both the visible count and the records supplied to the action. Then test the defined boundary cases. A stable visual position alone cannot establish which records the operation targets.\n\n## Related terms\n\n- [Operational UX](/glossary/operational-ux.html)\n- [Mental Model Mapping](/glossary/mental-model-mapping.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Design Primitives](/glossary/design-primitives.html)\n\n## Sources\n\n- [Consistency and Standards, Nielsen Norman Group](https://www.nngroup.com/articles/consistency-and-standards/)\n- [Consistent Identification, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/interaction-invariant.html",
+        "name": "Interaction Invariants: Defining Consistent UI Behavior",
+        "description": "Learn how to specify an interaction rule that stays consistent across interface states, with a table-selection example and practical checks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/consistency-and-standards/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#term",
+        "name": "Interaction Invariant",
+        "termCode": "interaction-invariant",
+        "description": "An interaction invariant is a behavior rule a team deliberately keeps stable across a defined set of interface states or contexts. It provides a way to make consistency explicit, including the scope in which users can rely on the rule.",
+        "url": "https://lexkonovalov.com/glossary/interaction-invariant.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/interaction-invariant.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Interaction Invariant",
+            "item": "https://lexkonovalov.com/glossary/interaction-invariant.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -3159,15 +3232,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
-    "purpose": "Establishes modular component boundaries, public APIs, and state management patterns to ensure UI components remain decoupled, testable, and composable.",
+    "purpose": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
     "keyConcepts": [
-      "Public API contract",
-      "Controlled vs uncontrolled state",
-      "Component composition & slots",
-      "Responsibility boundaries",
-      "Variant explosion prevention"
+      "What belongs in a component’s public API?",
+      "Example of a shared dialog",
+      "When should you add a variant or a separate component?"
     ],
-    "howItWorks": "Divides interface layouts into hierarchical, single-responsibility components with explicitly typed props, event handlers, and slot projections.",
+    "howItWorks": "Component architecture is how a user interface is divided into components and how those components share data, state, and behavior. In a design system, it defines what a reusable component owns, what its consumers can configure, and how it fits into a larger interaction.",
     "relatedTerms": [
       "Component Libraries",
       "Headless UI Architecture",
@@ -3264,20 +3335,20 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
-    "purpose": "Provides modular, production-ready UI building blocks that reduce code duplication, increase development speed, and enforce visual consistency across applications.",
+    "purpose": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
     "keyConcepts": [
-      "Reusable UI components",
-      "Component API & options",
-      "Component states (default, hover, focus, disabled)",
-      "Storybook documentation",
-      "Shared component criteria"
+      "What belongs in a component library?",
+      "Example of documenting a shared button",
+      "When should a pattern become a shared component?"
     ],
-    "howItWorks": "Packages tested, accessible frontend components with clear properties, variants, and documentation for consumption across multiple digital products and microfrontends.",
+    "howItWorks": "A UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.",
     "relatedTerms": [
       "Component Architecture",
       "Design System",
       "Headless UI Architecture",
-      "DesignOps"
+      "DesignOps",
+      "Design System Documentation",
+      "Pattern Library"
     ],
     "seoTitle": "UI Component Libraries | Product Design Glossary",
     "sources": [
@@ -3367,7 +3438,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Component Libraries\n\nA UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.\n\n## What belongs in a component library?\n\nA useful entry describes the supported options, states, and behavior. For a button, document options such as label and emphasis, plus states such as focus and disabled. Include usage guidance where a choice affects the task, such as using a link for navigation and a button to submit a form.\n\nA library can expose styled components or behavior that teams style themselves. The [design system](/glossary/design-system.html) covers the broader decisions about foundations, patterns, and maintenance. Storybook is one way to document and exercise library components. A story shows a rendered example of a component in a specified state.\n\n## Example of documenting a shared button\n\n| What to document | Example |\n|---|---|\n| Options | A text label and supported emphasis variants |\n| Behavior | Responds to pointer and keyboard activation when enabled |\n| Examples | Default, keyboard focus, a long label, and disabled |\n| Integration | How a form uses the button and shows feedback during submission |\n\nUse an isolated example to check supported states and a product screen to check the whole interaction. A checkout flow, for example, still needs to explain a pending submission and handle errors. Reusing the same button gives teams a shared control. The flow determines what the action does and what feedback users receive.\n\n## When should a pattern become a shared component?\n\nStart with an interaction that repeats across real screens. Compare how teams use it and decide which differences matter. If two teams need the same behavior and differ only in emphasis, a supported variant may be enough. If one needs a different workflow, keep that workflow in the product and reuse the smaller component where it fits.\n\nDocument who maintains the component and how consumers adopt fixes. When you change a supported option or state, test a representative screen that uses the component before releasing the change.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System](/glossary/design-system.html)\n- [Headless UI Architecture](/glossary/headless-ui-architecture.html)\n- [DesignOps](/glossary/designops.html)\n\n## Sources\n\n- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)\n- [What’s a story?, Storybook documentation](https://storybook.js.org/docs/get-started/whats-a-story)\n- [GOV.UK Design System](https://design-system.service.gov.uk/)"
+    "contentMarkdown": "# Component Libraries\n\nA UI component library is a collection of reusable interface components, such as buttons, text inputs, and dialogs. In software, it provides implementations teams can use across screens or products. Usage guidance and rendered examples help consumers choose and configure them.\n\n## What belongs in a component library?\n\nA useful entry describes the supported options, states, and behavior. For a button, document options such as label and emphasis, plus states such as focus and disabled. Include usage guidance where a choice affects the task, such as using a link for navigation and a button to submit a form.\n\nA library can expose styled components or behavior that teams style themselves. The [design system](/glossary/design-system.html) covers the broader decisions about foundations, patterns, and maintenance. [Storybook](/glossary/storybook.html) is one way to document and exercise library components. A story shows a rendered example of a component in a specified state.\n\n## Example of documenting a shared button\n\n| What to document | Example |\n|---|---|\n| Options | A text label and supported emphasis variants |\n| Behavior | Responds to pointer and keyboard activation when enabled |\n| Examples | Default, keyboard focus, a long label, and disabled |\n| Integration | How a form uses the button and shows feedback during submission |\n\nUse an isolated example to check supported states and a product screen to check the whole interaction. A checkout flow, for example, still needs to explain a pending submission and handle errors. Reusing the same button gives teams a shared control. The flow determines what the action does and what feedback users receive.\n\n## When should a pattern become a shared component?\n\nStart with an interaction that repeats across real screens. Compare how teams use it and decide which differences matter. If two teams need the same behavior and differ only in emphasis, a supported variant may be enough. If one needs a different workflow, keep that workflow in the product and reuse the smaller component where it fits.\n\nDocument who maintains the component and how consumers adopt fixes. When you change a supported option or state, test a representative screen that uses the component before releasing the change.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System](/glossary/design-system.html)\n- [Headless UI Architecture](/glossary/headless-ui-architecture.html)\n- [DesignOps](/glossary/designops.html)\n\n- [Design System Documentation](/glossary/design-system-documentation.html)\n\n- [Pattern Library](/glossary/pattern-library.html)\n\n## Sources\n\n- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)\n- [What’s a story?, Storybook documentation](https://storybook.js.org/docs/get-started/whats-a-story)\n- [GOV.UK Design System](https://design-system.service.gov.uk/)"
   },
   {
     "id": "033",
@@ -3485,15 +3556,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.",
-    "purpose": "Connects aesthetic intent and technical implementation by building production-grade UI components, interactive prototypes, and design system tooling directly in code.",
+    "purpose": "Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.",
     "keyConcepts": [
-      "In-browser prototyping",
-      "production component authoring",
-      "design systems tooling",
-      "interaction fidelity",
-      "accessibility ergonomics"
+      "What does a design engineer do?",
+      "Example: Designing a booking-change dialog in the browser",
+      "How does it relate to a design-to-code workflow?"
     ],
-    "howItWorks": "Design engineers operate at the intersection of design tools and codebases, implementing interactive states, token pipelines, and robust UI primitives with production-grade engineering standards.",
+    "howItWorks": "Design engineering is the practice of designing and building user interfaces through both interaction design and front-end development. It uses code to explore how an interface behaves and to carry design decisions into production.",
     "relatedTerms": [
       "Design-to-Code Workflow",
       "Design Tokens",
@@ -3692,26 +3761,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Atomic Design is a mental methodology for building user interface systems composed of five distinct, hierarchically nested stages: Atoms, Molecules, Organisms, Templates, and Pages.",
-    "purpose": "Offers an intuitive mental framework for visualizing UI composition, promoting modular consistency and code reusability from basic HTML elements up to complete views.",
+    "definition": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.",
+    "purpose": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.",
     "keyConcepts": [
-      "Atoms",
-      "molecules",
-      "organisms",
-      "templates",
-      "structural composition."
+      "What do the five stages mean?",
+      "How does Atomic Design help in practice?"
     ],
-    "howItWorks": "Designers craft elemental atoms (inputs, labels), combine them into functional molecules (search bars), nest them into organisms (headers), and assemble them into templates and concrete pages.",
+    "howItWorks": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.",
     "relatedTerms": [
       "Component Architecture",
       "Design Primitives",
       "Component Libraries",
       "Design System"
     ],
-    "seoTitle": "Atomic Design Methodology: Atoms to Pages Explained",
+    "seoTitle": "Atomic Design: Atoms, Molecules, Organisms, and Pages",
     "sources": [
-      "Brad Frost, Atomic Design, Book Apart",
-      "Dan Mall, Design That Scales"
+      "Atomic Design Methodology, Brad Frost (https://atomicdesign.bradfrost.com/chapter-2/)",
+      "Tools of the Trade, Brad Frost (https://atomicdesign.bradfrost.com/chapter-3/)"
+    ],
+    "seoDescription": "Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/atomic-design.html",
+    "contentMarkdown": "# Atomic Design\n\nAtomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.\n\n## What do the five stages mean?\n\n| Stage | Flight-search example |\n|---|---|\n| Atoms | A label, input, and button. |\n| Molecules | A labeled destination field with supporting text. |\n| Organisms | A search form combining route, dates, travelers, and actions. |\n| Templates | The structural arrangement of search, results, and supporting content. |\n| Pages | That arrangement populated with actual content and states. |\n\nThe stages support thinking across levels of detail. Teams can move between the search form and a populated results page as they learn what the interface requires.\n\n## How does Atomic Design help in practice?\n\nA team can reuse a destination field while examining how it fits inside different search forms. The populated page exposes constraints that isolated components may miss, such as long airport names, a missing date, or an empty result set.\n\nUse the method alongside component APIs, accessibility requirements, tokens, and maintenance decisions. Define names and boundaries that your team can understand, and review real product states before deciding that a reusable piece is complete.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design Primitives](/glossary/design-primitives.html)\n- [Component Libraries](/glossary/component-libraries.html)\n- [Design System](/glossary/design-system.html)\n\n## Sources\n\n- [Atomic Design Methodology, Brad Frost](https://atomicdesign.bradfrost.com/chapter-2/)\n- [Tools of the Trade, Brad Frost](https://atomicdesign.bradfrost.com/chapter-3/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/atomic-design.html",
+        "name": "Atomic Design: Atoms, Molecules, Organisms, and Pages",
+        "description": "Understand Brad Frost’s five-stage Atomic Design method, with a flight-search example showing how reusable elements become real interface states.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/atomic-design.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/atomic-design.html#breadcrumbs"
+        },
+        "citation": [
+          "https://atomicdesign.bradfrost.com/chapter-2/",
+          "https://atomicdesign.bradfrost.com/chapter-3/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#term",
+        "name": "Atomic Design",
+        "termCode": "atomic-design",
+        "description": "Atomic Design is Brad Frost’s method for thinking about interfaces through five connected stages: atoms, molecules, organisms, templates, and pages. It helps teams work with reusable pieces while checking how those pieces behave in a complete interface.",
+        "url": "https://lexkonovalov.com/glossary/atomic-design.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/atomic-design.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/atomic-design.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Atomic Design",
+            "item": "https://lexkonovalov.com/glossary/atomic-design.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -3824,15 +3964,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.",
-    "purpose": "Provides built-in keyboard navigation, native accessibility tree roles, search crawlability, and machine-actionable structure for assistive technologies and autonomous AI agents.",
+    "purpose": "Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.",
     "keyConcepts": [
-      "WHATWG living standard",
-      "accessibility tree mapping",
-      "native interactive controls",
-      "form labeling ergonomics",
-      "AI agent browser execution"
+      "How does semantic HTML support accessibility?",
+      "Example: A quote request",
+      "How does this help AI browser agents?"
     ],
-    "howItWorks": "Employs native semantic tags (<article>, <nav>, <button>, <input>) rather than unstyled div/span containers, giving browsers and assistive clients default behaviors and explicit roles.",
+    "howItWorks": "Semantic HTML means choosing HTML elements that describe the purpose of content and controls. Elements such as headings, links, buttons, and form labels give browsers information about a page’s structure and how people can interact with it.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "ARIA (Accessible Rich Internet Applications)",
@@ -3936,21 +4074,21 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
-    "purpose": "Eliminates barriers that prevent individuals with visual, auditory, motor, or cognitive disabilities from accessing digital products, while fulfilling legal compliance obligations.",
+    "purpose": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
     "keyConcepts": [
-      "POUR principles",
-      "conformance levels (A",
-      "AA",
-      "AAA)",
-      "contrast ratios",
-      "non-text content."
+      "What are the four WCAG principles?",
+      "What do A, AA, and AAA mean?",
+      "How do WCAG 2.0, 2.1, and 2.2 differ?",
+      "How does WCAG relate to accessibility requirements in the EU and U.S.?",
+      "Which WCAG 2.2 checks matter in everyday design?"
     ],
-    "howItWorks": "Teams implement specific technical criteria (e.g., WCAG 2.2 focus appearance, target sizes, dynamic contrast ratios), validating compliance through manual testing and automated audits.",
+    "howItWorks": "Web accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.",
     "relatedTerms": [
       "Semantic HTML",
       "ARIA (Accessible Rich Internet Applications)",
       "Component Architecture",
-      "Design System"
+      "Design System",
+      "Design System Governance"
     ],
     "seoTitle": "Accessibility & WCAG 2.2 | Product Design Glossary",
     "seoDescription": "Understand WCAG 2.2, the POUR principles, A/AA/AAA levels, and practical checks for contrast, keyboard focus, target size, and accessible forms.",
@@ -3961,9 +4099,12 @@ export const glossaryTerms: GlossaryTerm[] = [
       "WCAG 2.2 Recommendation, W3C (https://www.w3.org/TR/WCAG22/)",
       "WCAG 2 Overview, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/)",
       "User Notification: Forms Tutorial, W3C WAI (https://www.w3.org/WAI/tutorials/forms/notifications/)",
-      "Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)"
+      "Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)",
+      "WebArena Agent Execution Traces (https://github.com/web-arena-x/webarena/blob/main/resources/README.md)",
+      "What’s New in WCAG 2.2, W3C WAI (https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/)",
+      "Understanding Status Messages, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)"
     ],
-    "contentMarkdown": "# Accessibility and WCAG\n\nWeb accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.\n\nAccessibility addresses visual, auditory, motor, cognitive, and other access needs. WCAG provides a technical baseline; usability testing with people with disabilities helps teams understand barriers in real tasks.\n\n## What are the four WCAG principles?\n\nWCAG organizes its requirements under four principles, often abbreviated **POUR**:\n\n| Principle | What it means in practice |\n|---|---|\n| Perceivable | Provide information people can perceive, such as text alternatives for meaningful images and captions for video. |\n| Operable | Make controls usable with different input methods, including a keyboard. |\n| Understandable | Use clear instructions, predictable behavior, and helpful error messages. |\n| Robust | Expose content and controls so browsers and assistive technologies can interpret them. |\n\n## What do A, AA, and AAA mean?\n\nThese are cumulative conformance levels. **A** covers Level A criteria; **AA** includes A and AA; **AAA** includes all three levels. A conformance claim records the version, level, scope, date, and technologies relied upon. It applies to full pages and complete processes, such as every step of checkout.\n\nWCAG 2.2 is a W3C Recommendation. WCAG 3 remains a draft. WCAG conformance does not establish compliance with every applicable accessibility law.\n\n## Which WCAG 2.2 checks matter in everyday design?\n\nThese examples are a starting point, not a complete audit:\n\n- **Text contrast, 1.4.3 (AA):** Most text needs a contrast ratio of at least 4.5:1 against its background. Large-scale text needs 3:1: at least 18 pt, or 14 pt bold. The criterion includes exceptions, such as logos and inactive controls. [Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)\n- **Target size, 2.5.8 (AA):** Pointer targets must be at least 24 × 24 CSS pixels unless an exception applies. These include sufficient spacing and inline links. [Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)\n- **Focus visibility:** Keyboard focus must be visible under 2.4.7 (AA). Under 2.4.11 (AA), a focused component must not be entirely hidden by author-created content, such as a sticky banner. The separate Focus Appearance criterion, 2.4.13, is AAA. [Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)\n\n## An accessible form example\n\nConsider a quote-request form with an email field. A persistent label is programmatically associated with the field. Keyboard users can reach it and see focus. If the address is incomplete, the form displays “Enter an email address in the format name@example.com” and programmatically associates that message with the field.\n\nThe error message explains the problem without relying on color alone. Previously entered values remain available, and the submission confirmation is perceivable with assistive technology. Test the full submission flow, including errors and confirmation.\n\n## How should teams test accessibility?\n\nCombine automated checks with manual keyboard, zoom, and screen-reader testing. Include people with disabilities in usability research, and evaluate complete tasks as well as individual components. Automated tools can identify some failures; a clean scan does not prove WCAG conformance.\n\n## Related terms\n\n- [Semantic HTML](/glossary/semantic-html.html)\n- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System](/glossary/design-system.html)\n\n## Sources\n\n- [Introduction to Web Accessibility, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-intro/)\n- [Accessibility Principles, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-principles/)\n- [WCAG 2.2 Recommendation, W3C](https://www.w3.org/TR/WCAG22/)\n- [WCAG 2 Overview, W3C WAI](https://www.w3.org/WAI/standards-guidelines/wcag/)\n- [User Notification: Forms Tutorial, W3C WAI](https://www.w3.org/WAI/tutorials/forms/notifications/)\n- [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)",
+    "contentMarkdown": "# Accessibility and WCAG\n\nWeb accessibility means designing and building websites and tools that people with disabilities can use. The Web Content Accessibility Guidelines (WCAG), developed through the W3C Web Accessibility Initiative, provide testable requirements for making web content more accessible.\n\nAccessibility addresses visual, auditory, motor, cognitive, and other access needs. WCAG provides a technical baseline; usability testing with people with disabilities helps teams understand barriers in real tasks.\n\n## What are the four WCAG principles?\n\nWCAG organizes its requirements under four principles, often abbreviated **POUR**:\n\n| Principle | What it means in practice |\n|---|---|\n| Perceivable | Provide information people can perceive, such as [alt text](/glossary/alt-text.html) for meaningful images and captions for video. |\n| Operable | Make controls usable with different input methods, including a keyboard. |\n| Understandable | Use clear instructions, predictable behavior, and helpful error messages. |\n| Robust | Expose content and controls so browsers and assistive technologies can interpret them. |\n\n## What do A, AA, and AAA mean?\n\nThese are cumulative conformance levels. **A** covers Level A criteria. **AA** includes A and AA. **AAA** includes all three levels. A conformance claim records the version, level, scope, date, and technologies relied upon. Conformance applies to full pages. When a page is part of a process, such as checkout, every step in that process must conform at the claimed level.\n\n## How do WCAG 2.0, 2.1, and 2.2 differ?\n\n| Version | What it adds or establishes |\n|---|---|\n| **WCAG 2.0** | The original WCAG 2 baseline, covering areas such as text alternatives, keyboard access, and text contrast. |\n| **WCAG 2.1** | Adds criteria for mobile use, low vision, and other access needs, including reflow, non-text contrast, and status messages. |\n| **WCAG 2.2** | Adds criteria for focus obscured by overlapping content, minimum pointer target size, alternatives to dragging, and accessible authentication, among others. It removes criterion 4.1.1 Parsing. |\n\nWCAG 2.2 is a W3C Recommendation. WCAG 3 remains a working draft. Record the WCAG version your team targets and the version required by any applicable regulation or contract. If you report against WCAG 2.0 or 2.1, account for their published treatment of 4.1.1 and any reporting requirements.\n\n## How does WCAG relate to accessibility requirements in the EU and U.S.?\n\nStart with the organization, service, and market. Then identify the applicable rule or contract and the technical version it references.\n\n| Product or organization | Where to start |\n|---|---|\n| Consumer e-commerce or another covered service in the EU | [European Accessibility Act](/glossary/european-accessibility-act.html) and the applicable national law. |\n| An EU public sector website or mobile app | The Web Accessibility Directive and its referenced edition of [EN 301 549](/glossary/en-301-549.html). |\n| A U.S. state or local government, or a U.S. business covered by the ADA | [ADA Web Accessibility](/glossary/ada-web-accessibility.html). The Title II web rule references WCAG 2.1 AA. Review Title III separately for covered businesses. |\n| ICT developed, used, or procured by a U.S. federal agency | [Section 508](/glossary/section-508.html) and the applicable federal ICT requirements. |\n\n## Which WCAG 2.2 checks matter in everyday design?\n\nThese examples are a starting point, not a complete audit:\n\n- **Text contrast, 1.4.3 (AA):** Most text needs a contrast ratio of at least 4.5:1 against its background. Large-scale text needs 3:1: at least 18 pt, or 14 pt bold. The criterion includes exceptions, such as logos and inactive controls. See [WCAG Color Contrast](/glossary/wcag-color-contrast.html) for control colors and examples across themes. [Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)\n- **Target size, 2.5.8 (AA):** Pointer targets must be at least 24 × 24 CSS pixels unless an exception applies. See [Touch Target Size](/glossary/touch-target-size.html) for the spacing test and a table example. [Target Size (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)\n- **Focus visibility:** Keyboard focus must be visible under 2.4.7 (AA). Under 2.4.11 (AA), a focused component must not be entirely hidden by author-created content, such as a sticky banner. The separate Focus Appearance criterion, 2.4.13, is AAA. See [Keyboard Accessibility & Focus Management](/glossary/keyboard-accessibility.html) for a dialog example. [Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)\n- **Accessible authentication, 3.3.8 (AA):** If an authentication step asks users to do something like remember or transcribe information, provide an alternative or a mechanism that helps them complete it, unless another specified exception applies. Supporting password managers and paste can help users complete a password step. [Accessible Authentication (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html)\n\n## An accessible form example\n\nConsider a quote-request form with an email field. A persistent label is programmatically associated with the field. Keyboard users can reach it and see focus. If the address is incomplete, the form displays “Enter an email address in the format name@example.com” and programmatically associates that message with the field.\n\nThe error message explains the problem without relying on color alone. Previously entered values remain available, and the submission confirmation is perceivable with assistive technology. Test the full submission flow, including errors and confirmation.\n\nSee [Accessible Forms](/glossary/accessible-forms.html) for more on labeling fields, correcting errors, and checking submission feedback.\n\n## How should teams test accessibility?\n\nCombine automated checks with manual keyboard and screen reader testing. Check [text resizing and reflow](/glossary/zoom-text-resize-reflow.html) as users enlarge content. Include people with disabilities in usability research, and evaluate complete tasks as well as individual components. For a documented [web accessibility audit](/glossary/web-accessibility-audit.html), record the evaluation scope, evidence, and retest results.\n\n## How do you make an AI interface accessible?\n\nUse semantic headings, named controls, and a logical reading and focus order for generated content. A chat response containing a table or form needs the same accessible structure as other web content. Shared components help only when their configuration and surrounding task also work.\n\nFor streaming responses, test how content updates are announced. Avoid repeatedly announcing an entire growing answer or moving focus with every update. Provide a clear way to stop generation and return to the relevant content.\n\n[WCAG status-message guidance](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) applies to qualifying updates such as waiting or completion messages; it does not make every generated paragraph a status message. Test the actual experience with keyboard and assistive technology, including interruptions and errors.\n\n## How does web accessibility relate to AI browser agents?\n\nWCAG addresses access for people with disabilities. Some AI browser agents also inspect the accessibility tree, where they can encounter the same field names, button roles, and control states used by assistive technology. [Semantic HTML](/glossary/semantic-html.html) provides the underlying structure, and [ARIA](/glossary/aria-accessible-rich-internet-applications.html) can describe states that a custom control needs to expose.\n\nFor the quote form, test whether a specific agent can find the email field, recover from an invalid address, and recognize a successful submission in a test environment. Record that result separately from human usability and WCAG conformance.\n\n## Related terms\n\n- [Semantic HTML](/glossary/semantic-html.html)\n- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System](/glossary/design-system.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n## Sources\n\n- [Introduction to Web Accessibility, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-intro/)\n- [Accessibility Principles, W3C WAI](https://www.w3.org/WAI/fundamentals/accessibility-principles/)\n- [WCAG 2.2 Recommendation, W3C](https://www.w3.org/TR/WCAG22/)\n- [WCAG 2 Overview, W3C WAI](https://www.w3.org/WAI/standards-guidelines/wcag/)\n- [User Notification: Forms Tutorial, W3C WAI](https://www.w3.org/WAI/tutorials/forms/notifications/)\n- [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)\n- [WebArena Agent Execution Traces](https://github.com/web-arena-x/webarena/blob/main/resources/README.md)\n- [What’s New in WCAG 2.2, W3C WAI](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/)\n- [Understanding Status Messages, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -3990,7 +4131,11 @@ export const glossaryTerms: GlossaryTerm[] = [
           "https://www.w3.org/WAI/test-evaluate/",
           "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
           "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
-          "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html"
+          "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+          "https://github.com/web-arena-x/webarena/blob/main/resources/README.md",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html"
         ]
       },
       {
@@ -4054,15 +4199,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.",
-    "purpose": "Bridges interactive accessibility gaps in complex dynamic web widgets by communicating programmatic roles, states, and relations to accessibility APIs.",
+    "purpose": "WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.",
     "keyConcepts": [
-      "WAI-ARIA 1.2 specification",
-      "roles, states, and properties",
-      "first rule of ARIA (prefer native HTML)",
-      "ARIA authoring practices (APG)",
-      "ARIA snapshots in testing"
+      "What do ARIA roles, states, and properties do?",
+      "Example: A fare-rules disclosure",
+      "How do you test the result?"
     ],
-    "howItWorks": "Applies aria-* attributes and role markers to DOM elements to communicate dynamic state (expanded, selected, busy) and relational bindings (labelledby, controls) without altering visual styles.",
+    "howItWorks": "WAI-ARIA is a W3C specification for exposing the roles, states, and properties of interface elements to assistive technology. It can describe information that native HTML alone does not express, such as whether a custom disclosure is expanded.",
     "relatedTerms": [
       "Semantic HTML",
       "Accessibility and WCAG",
@@ -4170,26 +4313,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Web Components are a suite of native browser W3C standards—comprising Custom Elements, Shadow DOM, and HTML Templates—that allow developers to create modular, framework-agnostic UI widgets.",
-    "purpose": "Enables the construction of enterprise design system libraries that function seamlessly across any JavaScript frontend framework (React, Vue, Angular, or vanilla JS) without vendor lock-in.",
+    "definition": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.",
+    "purpose": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.",
     "keyConcepts": [
-      "Custom elements",
-      "Shadow DOM encapsulation",
-      "HTML templates",
-      "framework agnosticism."
+      "Main building blocks",
+      "Example: a shared booking-status element",
+      "Design-system checks"
     ],
-    "howItWorks": "Developers define custom HTML tags via the customElements.define browser API, encapsulating internal CSS and DOM trees within an isolated Shadow Root.",
+    "howItWorks": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.",
     "relatedTerms": [
       "Component Architecture",
       "Design System",
       "Semantic HTML",
       "Headless UI Architecture"
     ],
-    "seoTitle": "Web Components in Enterprise Design Systems: Complete Guide",
+    "seoTitle": "Web Components: Definition, Building Blocks, and UX Checks",
     "sources": [
-      "W3C Custom Elements Specification",
-      "W3C Shadow DOM Specification",
-      "MDN Web Components"
+      "MDN: Web Components (https://developer.mozilla.org/en-US/docs/Web/API/Web_components)",
+      "WHATWG: Custom Elements (https://html.spec.whatwg.org/multipage/custom-elements.html)"
+    ],
+    "seoDescription": "Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/web-components.html",
+    "contentMarkdown": "# Web Components\n\nWeb Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.\n\nThey can support a shared component library across applications. The integration still needs testing with each application's framework, rendering approach, and accessibility requirements.\n\n## Main building blocks\n\n- Custom elements define new HTML elements and their lifecycle behavior.\n- Shadow DOM can provide a separate internal DOM tree and style encapsulation.\n- HTML templates provide reusable markup, while slots allow content to be inserted into a component's Shadow DOM.\n\nA custom element does not have to use every technology in this group. For example, using Shadow DOM is an implementation choice.\n\n## Example: a shared booking-status element\n\nA design system could expose a booking-status element that accepts a defined status value and renders the approved label and visual treatment.\n\nIts contract should document accepted values, updates, accessible output, and theming. If the status is unknown, the element should display an appropriate fallback rather than imply that the booking is confirmed.\n\nFor interactive components, the contract also needs events, focus behavior, keyboard operation, and disabled states.\n\n## Design-system checks\n\nVerify accessible names, roles, and states in the assembled page. A custom element name does not automatically provide the semantics of a native button or form control.\n\nTest forms, focus movement, styling hooks, and event handling in consuming applications. Prefer native HTML behavior where it meets the requirement, and document additional behavior where custom implementation is necessary.\n\nEncapsulation can help manage component internals, but it does not remove integration or maintenance work.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System](/glossary/design-system.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n- [Headless UI Architecture](/glossary/headless-ui-architecture.html)\n\n## Sources\n\n- [MDN: Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)\n- [WHATWG: Custom Elements](https://html.spec.whatwg.org/multipage/custom-elements.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/web-components.html",
+        "name": "Web Components: Definition, Building Blocks, and UX Checks",
+        "description": "Understand Web Components, custom elements, Shadow DOM, and templates, with a design-system example and checks for accessibility and framework integration.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/web-components.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/web-components.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developer.mozilla.org/en-US/docs/Web/API/Web_components",
+          "https://html.spec.whatwg.org/multipage/custom-elements.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#term",
+        "name": "Web Components",
+        "termCode": "web-components",
+        "description": "Web Components are web platform technologies for building reusable custom interface elements with encapsulated behavior and, when needed, internal markup and styles. They let developers define elements that can be used in HTML alongside built-in elements.",
+        "url": "https://lexkonovalov.com/glossary/web-components.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/web-components.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/web-components.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Web Components",
+            "item": "https://lexkonovalov.com/glossary/web-components.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -4519,20 +4734,19 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
-    "purpose": "Delivers robust, fully accessible keyboard navigation and WAI-ARIA states without imposing visual opinions or styling lock-in.",
+    "purpose": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
     "keyConcepts": [
-      "Unstyled components & hooks",
-      "Accessibility semantics & focus management",
-      "Keyboard choreography (Tab, Shift+Tab, Escape)",
-      "Separation of behavior and presentation",
-      "Integration testing in context"
+      "What does a headless component provide?",
+      "Example of a headless modal dialog",
+      "When should you choose headless UI?"
     ],
-    "howItWorks": "Implements complex state machines, ARIA roles, and keyboard focus traps in headless hooks or unstyled render components, leaving CSS presentation entirely to the consuming application.",
+    "howItWorks": "Headless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.",
     "relatedTerms": [
       "Component Architecture",
       "Accessibility and WCAG",
       "Semantic HTML",
-      "ARIA (Accessible Rich Internet Applications)"
+      "ARIA (Accessible Rich Internet Applications)",
+      "shadcn/ui"
     ],
     "seoTitle": "Headless UI Architecture | Product Design Glossary",
     "sources": [
@@ -4614,7 +4828,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Headless UI Architecture\n\nHeadless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.\n\n## What does a headless component provide?\n\nLibraries expose behavior in different ways. An unstyled component can render elements and connect their behavior. A hook can expose state and interaction properties for the elements the application renders. Check what the library renders and which properties you must pass to your own elements.\n\n## Example of a headless modal dialog\n\nA travel team uses a dialog primitive to review a booking change. Radix Dialog, for example, provides modal focus handling, Escape dismissal, and parts for a title and description. The team supplies the title, fare details, buttons, and visible focus treatment. The booking request and error recovery remain part of the product workflow.\n\n| Layer | What to verify |\n|---|---|\n| Behavior | Focus moves inside when the modal opens, Tab and Shift+Tab stay inside, and Escape closes it. |\n| Content | The dialog has an accessible name, and the text explains what the user is reviewing. |\n| Presentation | The contrast and focus indicator work in the actual theme. Longer text and zoom leave the content usable. |\n| Integration | Closing usually returns focus to the trigger. If the trigger is gone, focus moves to a logical next element. A failed booking change gets clear feedback. |\n\nA primitive can help implement an accessible pattern. Test the result in context because labels, styling, and the surrounding flow affect whether it works for users.\n\n## When should you choose headless UI?\n\nUse a headless approach when products need to share an interaction but require different visual treatments. It can also help a design system build its own styled wrapper around behavior it trusts. If teams already agree on the appearance and need a ready-to-use control, a styled component library can require less integration work. Compare the effort to implement and test the complete experience in a representative screen.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)\n\n## Sources\n\n- [Dialog, Radix Primitives](https://www.radix-ui.com/primitives/docs/components/dialog)\n- [Dialog (Modal) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)\n- [Modal, React Aria](https://react-aria.adobe.com/Modal)"
+    "contentMarkdown": "# Headless UI Architecture\n\nHeadless UI architecture separates reusable interface behavior from the visual design that makes it look and feel like part of a product. A headless component can provide state, keyboard interactions, and accessibility semantics while the consuming team supplies styling and integrates it into the workflow.\n\n## What does a headless component provide?\n\nLibraries expose behavior in different ways. An unstyled component can render elements and connect their behavior. A hook can expose state and interaction properties for the elements the application renders. Check what the library renders and which properties you must pass to your own elements.\n\n## Example of a headless modal dialog\n\nA travel team uses a dialog primitive to review a booking change. Radix Dialog, for example, provides modal focus handling, Escape dismissal, and parts for a title and description. The team supplies the title, fare details, buttons, and visible focus treatment. The booking request and error recovery remain part of the product workflow.\n\n| Layer | What to verify |\n|---|---|\n| Behavior | Focus moves inside when the modal opens, Tab and Shift+Tab stay inside, and Escape closes it. |\n| Content | The dialog has an accessible name, and the text explains what the user is reviewing. |\n| Presentation | The contrast and focus indicator work in the actual theme. Longer text and zoom leave the content usable. |\n| Integration | Closing usually returns focus to the trigger. If the trigger is gone, focus moves to a logical next element. A failed booking change gets clear feedback. |\n\nA primitive can help implement an accessible pattern. Test the result in context because labels, styling, and the surrounding flow affect whether it works for users.\n\n## When should you choose headless UI?\n\nUse a headless approach when products need to share an interaction but require different visual treatments. It can also help a design system build its own styled wrapper around behavior it trusts. If teams already agree on the appearance and need a ready-to-use control, a styled component library can require less integration work. Compare the effort to implement and test the complete experience in a representative screen.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n- [ARIA (Accessible Rich Internet Applications)](/glossary/aria-accessible-rich-internet-applications.html)\n\n- [shadcn/ui](/glossary/shadcn-ui.html)\n\n## Sources\n\n- [Dialog, Radix Primitives](https://www.radix-ui.com/primitives/docs/components/dialog)\n- [Dialog (Modal) Pattern, W3C WAI](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)\n- [Modal, React Aria](https://react-aria.adobe.com/Modal)"
   },
   {
     "id": "046",
@@ -4728,24 +4942,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Design Systems & Engineering",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "A Fluid Typography & Spacing System uses mathematical clamp functions (e.g., CSS clamp()) to smoothly scale typography and layout spacing proportionally between defined viewport bounds without abrupt breakpoint jumps.",
-    "purpose": "Eliminates jarring breakpoint transitions, provides seamless readability across arbitrary screen sizes, and reduces the complexity of managing dozens of responsive media queries.",
+    "definition": "A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.",
+    "purpose": "A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.",
     "keyConcepts": [
-      "CSS clamp()",
-      "viewport-based scaling",
-      "ideal rate of change",
-      "minimum/maximum bounds."
+      "A CSS example",
+      "What to test"
     ],
-    "howItWorks": "Uses linear interpolation equations (size = min + slope * (viewport - min_width)) bounded by clamp limits, dynamically scaling values directly in browser engines.",
+    "howItWorks": "A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.",
     "relatedTerms": [
       "Design Primitives",
       "Component Architecture",
       "Design Tokens"
     ],
-    "seoTitle": "Fluid Typography & Spacing Systems: Modern CSS Clamp Architecture",
+    "seoTitle": "Fluid Typography and Spacing: CSS clamp() and UX Checks",
     "sources": [
-      "Utopia.fyi Responsive Systems",
-      "Tim Brown, Flexible Typesetting, A Book Apart"
+      "MDN: CSS clamp() (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp)",
+      "W3C: Understanding Resize Text (https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)",
+      "W3C: Understanding Reflow (https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)"
+    ],
+    "seoDescription": "Learn how fluid typography and spacing scale between limits, with a CSS clamp() example and practical checks for text resizing, reflow, and readability.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html",
+    "contentMarkdown": "# Fluid Typography & Spacing System\n\nA fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.\n\nFluid values can coexist with breakpoints. A layout may change its structure at a breakpoint while selected sizes adjust continuously between minimum and maximum values.\n\n## A CSS example\n\nCSS clamp() accepts a minimum, a preferred value, and a maximum:\n\n```css\n:root {\n  --text-heading: clamp(2rem, calc(1rem + 3vw), 4rem);\n  --space-section: clamp(0.75rem, calc(0.5rem + 1vw), 1.5rem);\n}\n\nh1 {\n  font-size: var(--text-heading);\n}\n\nsection {\n  padding-block: var(--space-section);\n}\n```\n\nHere, the viewport contribution changes with screen width, while the rem values relate to the root font size. These values are an illustration to test in context, not a universal scale.\n\n## What to test\n\nInspect intermediate widths as well as the endpoints. Check long headings, translated labels, narrow controls, and realistic content.\n\nUse relative units thoughtfully and test browser zoom and user font settings. Combining rem with a viewport unit does not automatically ensure accessible text resizing.\n\nWCAG 2.2's Resize Text criterion generally requires text to resize to 200% without loss of content or functionality, subject to its exceptions. Reflow is a separate requirement with defined viewport conditions and exceptions for content needing a two-dimensional layout.\n\nKeep line length, line height, focus indicators, and target sizes usable as the layout changes. Avoid allowing a fluid scale to make essential text or controls too small.\n\n## Related terms\n\n- [Design Primitives](/glossary/design-primitives.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design Tokens](/glossary/design-tokens.html)\n\n## Sources\n\n- [MDN: CSS clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp)\n- [W3C: Understanding Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)\n- [W3C: Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html",
+        "name": "Fluid Typography and Spacing: CSS clamp() and UX Checks",
+        "description": "Learn how fluid typography and spacing scale between limits, with a CSS clamp() example and practical checks for text resizing, reflow, and readability.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp",
+          "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#term",
+        "name": "Fluid Typography & Spacing System",
+        "termCode": "fluid-typography-spacing-system",
+        "description": "A fluid typography and spacing system scales text sizes and layout spacing smoothly within defined limits as the available viewport or container size changes. It uses a coordinated set of rules rather than unrelated values for each screen width.",
+        "url": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Fluid Typography & Spacing System",
+            "item": "https://lexkonovalov.com/glossary/fluid-typography-spacing-system.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -4756,21 +5044,20 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Emerging",
     "definition": "Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.",
-    "purpose": "Informs design system roadmaps, adoption metrics, and safe deprecation lifecycles through automated static code analysis and runtime interaction monitoring.",
+    "purpose": "Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.",
     "keyConcepts": [
-      "Static code inventory",
-      "runtime usage tracking",
-      "prop distribution metrics",
-      "interaction & error telemetry",
-      "safe deprecation planning"
+      "What can you measure?",
+      "Example: Removing a deprecated Dialog prop"
     ],
-    "howItWorks": "Pairs build-time AST scanners (like Omlet) with runtime event instrumentation (OpenTelemetry) to track production component usage, error rates, and prop combinations across repositories.",
+    "howItWorks": "Component telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.",
     "relatedTerms": [
       "DesignOps",
       "Design System Governance",
       "Product Telemetry & Analytics",
       "Continuous Experimentation",
-      "Design System Versioning & SemVer"
+      "Design System Versioning (SemVer)",
+      "Design System Adoption",
+      "Design System Metrics"
     ],
     "seoTitle": "Component Telemetry: Design System Usage | Product Design Glossary",
     "sources": [
@@ -4779,7 +5066,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     "seoDescription": "Understand component telemetry for design systems, from runtime usage and error events to code inventory and planning a component deprecation.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/component-telemetry.html",
-    "contentMarkdown": "# Component Telemetry\n\nComponent telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.\n\n## What can you measure?\n\n| Signal | Question it answers |\n|---|---|\n| Static code and dependency inventory | Which repositories reference a component, pass a particular prop, or depend on a package version? |\n| Runtime usage | In which instrumented apps did the component open or appear during the measurement period? |\n| Runtime interaction or error events | What happened after the component opened, such as a confirmation click or submission failure? |\n\nA code reference shows where to investigate. A runtime event shows that the instrumented behavior was observed. An error rate also needs a relevant denominator, such as failed submissions out of all recorded attempts. Define the event and the coverage before comparing products. For example, count apps that recorded at least one dialog open out of apps that report that event, and state the date range.\n\n## Example: Removing a deprecated Dialog prop\n\nA design system team wants to remove a legacy Dialog prop. A code scan identifies repositories that still pass it. An event recorded when the dialog opens shows which instrumented products serve that configuration. The team uses both results to contact owners, prioritize migrations, and investigate gaps before scheduling removal.\n\nKeep the payload tied to the decision. For this migration, a component identifier, package version, variant or legacy flag, and product identifier can be enough. Leave booking IDs, form input, and dialog content out of the event. Record what is instrumented so that an absence of events can be interpreted correctly.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Design System Versioning (SemVer)](/glossary/design-system-versioning-semver.html)\n\n## Sources\n\n- [Component Usage Across Code Repositories, Omlet](https://omlet.dev/)\n- [Semantic Conventions for Events, OpenTelemetry](https://opentelemetry.io/docs/specs/semconv/general/events/)",
+    "contentMarkdown": "# Component Telemetry\n\nComponent telemetry is data collected while design system components run in a product. Teams use it to observe where components appear, which versions or variants are in use, and what happens when people interact with them.\n\n## What can you measure?\n\n| Signal | Question it answers |\n|---|---|\n| Static code and dependency inventory | Which repositories reference a component, pass a particular prop, or depend on a package version? |\n| Runtime usage | In which instrumented apps did the component open or appear during the measurement period? |\n| Runtime interaction or error events | What happened after the component opened, such as a confirmation click or submission failure? |\n\nA code reference shows where to investigate. A runtime event shows that the instrumented behavior was observed. An error rate also needs a relevant denominator, such as failed submissions out of all recorded attempts. Define the event and the coverage before comparing products. For example, count apps that recorded at least one dialog open out of apps that report that event, and state the date range.\n\n## Example: Removing a deprecated Dialog prop\n\nA design system team wants to remove a legacy Dialog prop. A code scan identifies repositories that still pass it. An event recorded when the dialog opens shows which instrumented products serve that configuration. The team uses both results to contact owners, prioritize migrations, and investigate gaps before scheduling removal.\n\nKeep the payload tied to the decision. For this migration, a component identifier, package version, variant or legacy flag, and product identifier can be enough. Leave booking IDs, form input, and dialog content out of the event. Record what is instrumented so that an absence of events can be interpreted correctly.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Product Telemetry & Analytics](/glossary/product-telemetry-analytics.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Design System Versioning (SemVer)](/glossary/design-system-versioning-semver.html)\n\n- [Design System Adoption](/glossary/design-system-adoption.html)\n\n- [Design System Metrics](/glossary/design-system-metrics.html)\n\n## Sources\n\n- [Component Usage Across Code Repositories, Omlet](https://omlet.dev/)\n- [Semantic Conventions for Events, OpenTelemetry](https://opentelemetry.io/docs/specs/semconv/general/events/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -4860,19 +5147,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.",
-    "purpose": "Prevents unintended styling regressions, clipping, layout shifts, and visual breakage across multi-platform releases through automated pixel-diff and DOM-capture baselines.",
+    "purpose": "Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.",
     "keyConcepts": [
-      "Baseline screenshots",
-      "pixel diffing",
-      "capture environment stability",
-      "component state coverage",
-      "interaction testing complement"
+      "How does visual regression testing work?",
+      "Example: A booking-change dialog on mobile",
+      "What should you test alongside screenshots?"
     ],
-    "howItWorks": "Renders components in isolated test runners (e.g. Playwright, Storybook), captures viewport snapshots against approved golden images, and flags visual deviations for human approval.",
+    "howItWorks": "Visual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.",
     "relatedTerms": [
       "Component Architecture",
       "Design Engineering",
-      "Design-to-Code Workflow"
+      "Design-to-Code Workflow",
+      "Design QA"
     ],
     "seoTitle": "Visual Regression Testing: UI Baselines | Product Design Glossary",
     "sources": [
@@ -4881,7 +5167,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     "seoDescription": "Learn how visual regression testing compares UI screenshots with approved baselines to catch unintended changes in layout, styling, and component states.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/visual-regression-testing.html",
-    "contentMarkdown": "# Visual Regression Testing\n\nVisual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.\n\n## How does visual regression testing work?\n\n1. **Choose a state and approve a baseline.** Capture an intentionally rendered page or component at a specific viewport, with representative content.\n2. **Keep the capture environment stable.** Use consistent browser, operating system, fonts, viewport, and test data. Control animations and other changing content where practical.\n3. **Review the differences.** Inspect the baseline, new screenshot, and diff. Fix unintended changes and update the baseline only after approving the new appearance.\n\n## Example: A booking-change dialog on mobile\n\nCapture the open dialog at a mobile viewport with a long fare description and both action buttons visible. A change to a shared spacing token pushes the confirmation button below the visible area. The diff flags the layout shift. The reviewer opens the preview to check whether the action remains reachable and whether the new layout is acceptable.\n\n## What should you test alongside screenshots?\n\nUse interaction tests to check whether the dialog opens, the right button submits, and focus returns to the trigger when it closes. A screenshot can show the dialog at one moment. Keyboard and assistive technology checks cover behavior a screenshot cannot capture.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n\n## Sources\n\n- [Visual Comparisons, Playwright](https://playwright.dev/docs/test-snapshots)\n- [Visual Tests, Storybook](https://storybook.js.org/docs/writing-tests/visual-testing)",
+    "contentMarkdown": "# Visual Regression Testing\n\nVisual regression testing compares screenshots of a user interface with approved reference images, called baselines, to flag unexpected changes in appearance. It can catch changes in spacing, layout, typography, and component states after a code update.\n\n## How does visual regression testing work?\n\n1. **Choose a state and approve a baseline.** Capture an intentionally rendered page or component at a specific viewport, with representative content.\n2. **Keep the capture environment stable.** Use consistent browser, operating system, fonts, viewport, and test data. Control animations and other changing content where practical.\n3. **Review the differences.** Inspect the baseline, new screenshot, and diff. Fix unintended changes and update the baseline only after approving the new appearance.\n\n## Example: A booking-change dialog on mobile\n\nCapture the open dialog at a mobile viewport with a long fare description and both action buttons visible. A change to a shared spacing token pushes the confirmation button below the visible area. The diff flags the layout shift. The reviewer opens the preview to check whether the action remains reachable and whether the new layout is acceptable.\n\n## What should you test alongside screenshots?\n\nUse interaction tests to check whether the dialog opens, the right button submits, and focus returns to the trigger when it closes. A screenshot can show the dialog at one moment. Keyboard and assistive technology checks cover behavior a screenshot cannot capture.\n\n## Related terms\n\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n\n- [Design QA](/glossary/design-qa.html)\n\n## Sources\n\n- [Visual Comparisons, Playwright](https://playwright.dev/docs/test-snapshots)\n- [Visual Tests, Storybook](https://storybook.js.org/docs/writing-tests/visual-testing)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -9360,15 +9646,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.",
-    "purpose": "Harmonizes accessibility standards across EU member states to remove cross-border market barriers and guarantee accessible digital commerce and public services for consumers with disabilities.",
+    "purpose": "The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.",
     "keyConcepts": [
-      "Directive (EU) 2019/882",
-      "presumption of conformity",
-      "consumer e-commerce scope",
-      "microenterprise exemption",
-      "Annex I functional requirements"
+      "Which websites and apps does the EAA cover?",
+      "What should a product team check in checkout?",
+      "How does the EAA relate to WCAG and EN 301 549?"
     ],
-    "howItWorks": "Directs member states to enact national laws enforcing accessibility for covered consumer-facing digital services, referencing European harmonized standards (such as EN 301 549) to presume conformity.",
+    "howItWorks": "The European Accessibility Act (EAA) is an EU directive that sets accessibility requirements for certain products and services sold or provided in the EU. It covers consumer e-commerce, consumer banking, e-books, and specified digital aspects of passenger transport, among other services. The directive sets June 28, 2025, as the start date for applying national measures, with transition provisions for some cases.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "EN 301 549",
@@ -9473,15 +9757,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.",
-    "purpose": "Provides European public procurement and regulatory bodies with a unified, harmonized technical specification for ICT accessibility across hardware, software, documents, and web interfaces.",
+    "purpose": "EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.",
     "keyConcepts": [
-      "ETSI standard",
-      "harmonized European standard",
-      "WCAG alignment",
-      "v3.2.1 vs v4.1.1",
-      "non-web ICT clauses"
+      "How does EN 301 549 relate to WCAG?",
+      "Which version of EN 301 549 applies?"
     ],
-    "howItWorks": "Maps technical criteria across digital channels; Clause 9 evaluates web content against WCAG success criteria, while Clauses 10 and 11 evaluate non-web documents and software interfaces.",
+    "howItWorks": "EN 301 549 is a European technical standard for accessibility in information and communication technology (ICT). It covers web content, non-web documents, software, hardware, and services. Its web requirements draw on WCAG, and its other clauses address accessibility needs specific to different products and services.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "European Accessibility Act (EAA)",
@@ -9584,15 +9865,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.",
-    "purpose": "Ensures equal access to digital public services and private commercial websites under United States civil rights law.",
+    "purpose": "ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.",
     "keyConcepts": [
-      "ADA Title II vs Title III",
-      "DOJ web accessibility rule",
-      "WCAG 2.1 AA benchmark",
-      "public accommodation",
-      "compliance deadlines"
+      "How do Title II and Title III differ?",
+      "What are the ADA Title II web rule deadlines?",
+      "What should a product team do?"
     ],
-    "howItWorks": "Enforces accessibility compliance through federal rulemaking and court interpretations; Title II mandates WCAG 2.1 AA compliance by 2027/2028, while Title III applies WCAG principles to public accommodations.",
+    "howItWorks": "ADA web accessibility refers to providing people with disabilities access to online services under the Americans with Disabilities Act. Title II applies to U.S. state and local government entities. Title III applies to businesses and nonprofits that qualify as places of public accommodation.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "Section 508",
@@ -9699,15 +9978,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.",
-    "purpose": "Regulates federal procurement and technology deployment in the United States to ensure all federal employees and public citizens with disabilities have comparable access to ICT.",
+    "purpose": "Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.",
     "keyConcepts": [
-      "Rehabilitation Act",
-      "Revised 508 Standards",
-      "WCAG 2.0 AA incorporation",
-      "VPAT template",
-      "Accessibility Conformance Report (ACR)"
+      "Which WCAG version does Section 508 use?",
+      "What are VPATs and ACRs?",
+      "Example: A SaaS tool for a federal agency"
     ],
-    "howItWorks": "Requires federal agencies and prospective vendors to document compliance via ACRs (built on VPATs), incorporating WCAG 2.0 Level AA for digital and software interfaces.",
+    "howItWorks": "Section 508 of the Rehabilitation Act requires U.S. federal agencies to make covered information and communication technology (ICT) accessible when they develop, procure, maintain, or use it. The Revised Section 508 Standards cover areas such as websites, electronic documents, software, hardware, and support documentation.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "ADA Web Accessibility",
@@ -9810,15 +10087,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.",
-    "purpose": "Systematically evaluates digital products against accessibility standards (e.g. WCAG 2.2 AA) to document barriers, determine legal conformance, and prioritize remediation.",
+    "purpose": "A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.",
     "keyConcepts": [
-      "WCAG-EM methodology",
-      "representative sampling",
-      "automated scanning vs manual evaluation",
-      "assistive technology testing",
-      "reproducible findings"
+      "How do you run a web accessibility audit?",
+      "Example: A keyboard trap during checkout"
     ],
-    "howItWorks": "Scopes critical user paths, combines automated rule checking with keyboard/screen-reader testing, and produces structured issue reports linked to specific success criteria.",
+    "howItWorks": "A web accessibility audit is a documented evaluation of a website or web app against a defined accessibility standard and scope. It identifies barriers, records how they were found, and gives teams evidence they can use to prioritize fixes and verify changes.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "Semantic HTML",
@@ -9928,15 +10202,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.",
-    "purpose": "Prevents abandonment, user frustration, and input errors by ensuring forms are operable via keyboard, screen reader, and voice input.",
+    "purpose": "An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.",
     "keyConcepts": [
-      "Explicit label association",
-      "fieldset and legend",
-      "inline error description",
-      "WCAG 3.3.7 redundant entry",
-      "status messages (aria-live)"
+      "What makes a form accessible?",
+      "Example: An email error in a quote request",
+      "How do you test an accessible form?"
     ],
-    "howItWorks": "Pairs form inputs with programmatic labels via for/id attributes, describes constraints and errors using aria-describedby, and retains user input across validation failures.",
+    "howItWorks": "An accessible form lets people identify fields, enter information, correct mistakes, and complete submission using their preferred input method or assistive technology. It uses clear labels, predictable controls, and feedback users can find and understand.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "Semantic HTML",
@@ -10047,16 +10319,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.",
-    "purpose": "Ensures complete digital operability without a pointing device, enabling users with motor, cognitive, and visual disabilities to interact predictably.",
+    "purpose": "Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.",
     "keyConcepts": [
-      "WCAG 2.1.1 Keyboard",
-      "2.1.2 No Keyboard Trap",
-      "2.4.3 Focus Order",
-      "2.4.7 Focus Visible",
-      "2.4.11 Focus Not Obscured",
-      "focus trapping and restoration"
+      "What should you test?",
+      "Example: A booking-change dialog",
+      "Where should teams start?"
     ],
-    "howItWorks": "Maintains a logical DOM order, captures focus within active modal dialogs, restores focus to triggering elements upon dismissal, and guarantees non-obscured visible focus indicators.",
+    "howItWorks": "Keyboard accessibility lets people navigate and operate an interface through a keyboard interface. Focus management determines which element receives keyboard input as people move through the page, open a dialog, or return to their task.",
     "relatedTerms": [
       "Accessibility and WCAG",
       "Accessible Forms",
@@ -12707,6 +12976,963 @@ export const glossaryTerms: GlossaryTerm[] = [
           }
         ]
       }
+    ]
+  },
+  {
+    "id": "143",
+    "name": "AI-ready Design System",
+    "slug": "ai-ready-design-system",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.",
+    "purpose": "An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.",
+    "keyConcepts": [
+      "What does an agent need from a design system?",
+      "Example: generating a filter panel",
+      "Which tools can provide the context?",
+      "How is this different from a design harness?"
+    ],
+    "howItWorks": "An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.",
+    "relatedTerms": [
+      "Design Harness",
+      "Design System Documentation",
+      "Figma MCP Server",
+      "Evaluation Harness",
+      "shadcn/ui"
+    ],
+    "seoTitle": "What Makes a Design System AI-ready? | Product Design Glossary",
+    "seoDescription": "Learn how to prepare components, tokens, documentation, and checks so AI agents can use a design system and produce work that teams can verify.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/ai-ready-design-system.html",
+    "sources": [
+      "Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/)",
+      "Manifests, Storybook (https://storybook.js.org/docs/ai/manifests)"
+    ],
+    "contentMarkdown": "# AI-ready Design System\n\nAn AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.\n\n## What does an agent need from a design system?\n\nAn agent needs reliable implementation context, not simply a screenshot of the intended style.\n\n| Need | Useful system material |\n|---|---|\n| Find an existing component | Catalog, package location, and import example |\n| Use it correctly | Supported API, states, and working examples |\n| Follow visual decisions | Token roles, themes, and explicit exceptions |\n| Build a complete interaction | Pattern guidance, content rules, and accessibility expectations |\n| Check the result | Relevant tests, review criteria, and a route for unresolved gaps |\n\nKeep these references aligned with the actual component version. Exposing outdated guidance through a tool makes it easier to retrieve, not more accurate.\n\n## Example: generating a filter panel\n\nA task asks an agent to build filters for an operations table. The system provides the real select and date-range components, their supported properties, the filter behavior, and examples with long labels.\n\nThe acceptance criteria include clearing filters, preserving entered values after an error, and keyboard operation. If the available date component cannot represent the required range, the agent records that gap instead of inventing a property.\n\nReview the panel in the table workflow, not only as an isolated visual.\n\n## Which tools can provide the context?\n\n[Figma Code Connect](/glossary/figma-code-connect.html) can connect design components to code references. [Storybook](/glossary/storybook.html) can expose component examples and, through configured AI features, structured component documentation.\n\nAn MCP integration is a delivery mechanism. It does not determine whether the underlying content is complete or whether the output meets product requirements.\n\nChoose the smallest useful workflow first. A maintained component guide and examples may be enough to test the approach before adding more integration work.\n\n## How is this different from a design harness?\n\nAI readiness describes the condition of the system's context and verification support. A [design harness](/glossary/design-harness.html) is the task environment that assembles references, constraints, and checks for implementation.\n\nEvaluate readiness with representative tasks. Inspect component selection, supported API use, behavior, and the amount of correction required. Do not infer success from a visually plausible generated screen.\n\n## Related terms\n\n- [Design Harness](/glossary/design-harness.html)\n- [Design System Documentation](/glossary/design-system-documentation.html)\n- [Figma MCP Server](/glossary/figma-mcp-server.html)\n- [Evaluation Harness](/glossary/evaluation-harness-ai-evals.html)\n\n- [shadcn/ui](/glossary/shadcn-ui.html)\n\n## Sources\n\n- [Code Connect introduction, Figma](https://developers.figma.com/docs/code-connect/)\n- [Manifests, Storybook](https://storybook.js.org/docs/ai/manifests)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/ai-ready-design-system.html",
+        "name": "What Makes a Design System AI-ready? | Product Design Glossary",
+        "description": "Learn how to prepare components, tokens, documentation, and checks so AI agents can use a design system and produce work that teams can verify.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.figma.com/docs/code-connect/",
+          "https://storybook.js.org/docs/ai/manifests"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#term",
+        "name": "AI-ready Design System",
+        "termCode": "ai-ready-design-system",
+        "description": "An AI-ready design system makes its supported components, design decisions, and usage rules accessible to AI tools, with a way to check the resulting work. Here, AI-ready describes a preparation goal rather than a particular product or file format.",
+        "url": "https://lexkonovalov.com/glossary/ai-ready-design-system.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/ai-ready-design-system.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI-ready Design System",
+            "item": "https://lexkonovalov.com/glossary/ai-ready-design-system.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "144",
+    "name": "Alt Text",
+    "slug": "alt-text",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.",
+    "purpose": "Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.",
+    "keyConcepts": [
+      "What should alt text say?",
+      "Example: Three images on a hotel page"
+    ],
+    "howItWorks": "Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.",
+    "relatedTerms": [
+      "Accessibility and WCAG",
+      "Semantic HTML",
+      "Content Modeling",
+      "Web Accessibility Audit"
+    ],
+    "seoTitle": "Alt Text for Images: WCAG Examples for Websites",
+    "seoDescription": "Learn when to write alt text, when to use an empty alt attribute, and how to handle image links, decorative photos, and charts.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/alt-text.html",
+    "sources": [
+      "Understanding Non-text Content, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)",
+      "An alt Decision Tree, W3C WAI (https://www.w3.org/WAI/tutorials/images/decision-tree/)",
+      "Decorative Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/decorative/)",
+      "Functional Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/functional/)",
+      "Complex Images, W3C WAI (https://www.w3.org/WAI/tutorials/images/complex/)"
+    ],
+    "contentMarkdown": "# Alt Text\n\nAlt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.\n\n## What should alt text say?\n\n| Image purpose | Text alternative |\n|---|---|\n| **Informative** | Convey the detail the image adds to the page. Describe the information someone would miss if the image were unavailable. |\n| **Decorative or fully repeated in nearby text** | Use an empty attribute, `alt=\"\"`, for an HTML image that adds no information or action. Screen readers can skip it. |\n| **The only content in a link or button** | Name the destination or action. An image that opens a booking should help name the link “View booking.” |\n| **Complex, such as a chart or map** | Identify the image in the short alternative and provide its essential details in nearby text, a linked description, or a data table. Pick the format that preserves the information people need. |\n\n## Example: Three images on a hotel page\n\nAn atmospheric lobby photo beside an overview may be decorative. A photo that documents the accessible entrance could use “Step-free entrance with automatic sliding doors” if that is what the photo shows and the detail is missing from the text. A thumbnail that is the only content of a link to the full gallery could use “View hotel photos.”\n\nWrite the alternative for the role the image plays on each page. If an image sits beside visible text within the same link and adds no useful information, use `alt=\"\"` and let the text name the link. Keep the empty attribute in the HTML. If it is omitted, some screen readers may announce the file name. When reviewing the page, check what a screen reader announces and whether someone can still complete the task with the image unavailable.\n\n## Related terms\n\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Semantic HTML](/glossary/semantic-html.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n\n## Sources\n\n- [Understanding Non-text Content, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)\n- [An alt Decision Tree, W3C WAI](https://www.w3.org/WAI/tutorials/images/decision-tree/)\n- [Decorative Images, W3C WAI](https://www.w3.org/WAI/tutorials/images/decorative/)\n- [Functional Images, W3C WAI](https://www.w3.org/WAI/tutorials/images/functional/)\n- [Complex Images, W3C WAI](https://www.w3.org/WAI/tutorials/images/complex/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/alt-text.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/alt-text.html",
+        "name": "Alt Text for Images: WCAG Examples for Websites",
+        "description": "Learn when to write alt text, when to use an empty alt attribute, and how to handle image links, decorative photos, and charts.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/alt-text.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/alt-text.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+          "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+          "https://www.w3.org/WAI/tutorials/images/decorative/",
+          "https://www.w3.org/WAI/tutorials/images/functional/",
+          "https://www.w3.org/WAI/tutorials/images/complex/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/alt-text.html#term",
+        "name": "Alt Text",
+        "termCode": "alt-text",
+        "description": "Alt text is a short text alternative for an image, usually provided through the HTML `alt` attribute. It conveys the image’s purpose or information in context so people can understand or use the content without seeing the image.",
+        "url": "https://lexkonovalov.com/glossary/alt-text.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/alt-text.html#webpage"
+        },
+        "alternateName": [
+          "Alternative Text",
+          "Image Alt Text"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/alt-text.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Alt Text",
+            "item": "https://lexkonovalov.com/glossary/alt-text.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Alternative Text",
+      "Image Alt Text"
+    ]
+  },
+  {
+    "id": "145",
+    "name": "Design Debt",
+    "slug": "design-debt",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.",
+    "purpose": "Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.",
+    "keyConcepts": [
+      "What counts as design debt?",
+      "Design debt vs. technical debt",
+      "Example: inconsistent validation",
+      "How do you prioritize design debt?"
+    ],
+    "howItWorks": "Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.",
+    "relatedTerms": [
+      "Design System Audit",
+      "Design QA",
+      "Design System Governance",
+      "Component Architecture"
+    ],
+    "seoTitle": "Design Debt: Meaning and Prioritization | Product Design Glossary",
+    "seoDescription": "Understand design debt, how it differs from ordinary unfinished work, and how to prioritize recurring usability, consistency, and maintenance problems.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-debt.html",
+    "sources": [
+      "Technical Debt Quadrant, Martin Fowler (https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)",
+      "The Custodial Era of UX: Cleaning Up After AI, NN/g (https://www.nngroup.com/articles/ai-ux-debt/)"
+    ],
+    "contentMarkdown": "# Design Debt\n\nDesign debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.\n\n## What counts as design debt?\n\nExamples include inconsistent validation across similar forms, duplicate patterns with unclear ownership, or interaction rules that repeatedly cause confusion.\n\nThe debt metaphor is useful when an unresolved issue creates continuing cost or makes future changes more difficult. Not every unbuilt idea or visual preference belongs in a debt backlog.\n\nA design can also become unsuitable as users, tasks, or constraints change. Record what is now failing rather than assuming the original decision was careless.\n\n## Design debt vs. technical debt\n\nTechnical debt concerns implementation choices and their effect on future development. Design debt focuses on interaction, information, content, and shared design decisions.\n\nThey can overlap. A duplicated form pattern may create both confusing behavior for users and repeated maintenance work for engineers. Resolving one side does not automatically fix the other.\n\nMartin Fowler's technical-debt discussion distinguishes deliberate and inadvertent choices. That distinction can also help teams discuss the context of a design shortcut without treating every issue as individual failure.\n\n## Example: inconsistent validation\n\nSuppose three quote forms validate phone numbers differently. Users receive conflicting instructions, support answers the same questions repeatedly, and each rule change requires separate work.\n\nThe team investigates the actual requirements. It agrees on shared behavior, updates the component and guidance, and migrates the affected forms.\n\nThe useful result is consistent, appropriate validation. Making every error message look identical without resolving the underlying rules would leave much of the problem in place.\n\n## How do you prioritize design debt?\n\nRecord the affected task, evidence, recurring cost, scope, owner, and a concrete remedy. Consider user impact, frequency, dependencies, and effort.\n\nSeparate a verified problem from a hypothesis that needs research. Prefer solving a shared cause over repeatedly correcting its symptoms when the evidence supports that scope.\n\nCheck the result after remediation. Count fewer repeated defects or observe improved task performance using a consistent method. A shrinking issue list alone does not establish that the most consequential problems were resolved.\n\n## Related terms\n\n- [Design System Audit](/glossary/design-system-audit.html)\n- [Design QA](/glossary/design-qa.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Component Architecture](/glossary/component-architecture.html)\n\n## Sources\n\n- [Technical Debt Quadrant, Martin Fowler](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)\n- [The Custodial Era of UX: Cleaning Up After AI, NN/g](https://www.nngroup.com/articles/ai-ux-debt/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-debt.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-debt.html",
+        "name": "Design Debt: Meaning and Prioritization | Product Design Glossary",
+        "description": "Understand design debt, how it differs from ordinary unfinished work, and how to prioritize recurring usability, consistency, and maintenance problems.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-debt.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-debt.html#breadcrumbs"
+        },
+        "citation": [
+          "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html",
+          "https://www.nngroup.com/articles/ai-ux-debt/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-debt.html#term",
+        "name": "Design Debt",
+        "termCode": "design-debt",
+        "description": "Design debt is the accumulated burden of unresolved design decisions and problems that make a product harder to use, change, or maintain. It can result from deliberate shortcuts, inconsistent implementations, or assumptions that were never revisited.",
+        "url": "https://lexkonovalov.com/glossary/design-debt.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-debt.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-debt.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design Debt",
+            "item": "https://lexkonovalov.com/glossary/design-debt.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "146",
+    "name": "Design QA",
+    "slug": "design-qa",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.",
+    "purpose": "Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.",
+    "keyConcepts": [
+      "What does design QA cover?",
+      "Example: reviewing a request form",
+      "Design QA vs. software QA vs. design critique",
+      "Which checks can be automated?"
+    ],
+    "howItWorks": "Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.",
+    "relatedTerms": [
+      "Visual Regression Testing",
+      "Storybook",
+      "Web Accessibility Audit",
+      "Design-to-Code Workflow"
+    ],
+    "seoTitle": "Design QA: Checking the Implemented Experience | Product Design Glossary",
+    "seoDescription": "Learn what design QA checks, how it fits software quality assurance, and how to review behavior, content, accessibility, and layout in a working product.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-qa.html",
+    "sources": [
+      "How to test UIs with Storybook (https://storybook.js.org/docs/writing-tests)",
+      "Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)"
+    ],
+    "contentMarkdown": "# Design QA\n\nDesign QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.\n\n## What does design QA cover?\n\nA useful review considers the task, not only how closely a screenshot resembles a design file.\n\n| Area | Example check |\n|---|---|\n| Information and content | Correct labels, values, hierarchy, and error instructions |\n| Interaction | Validation, loading, cancellation, success, and failure |\n| Responsive layout | Long content, narrow views, zoom, and overflow |\n| Accessibility | Keyboard operation, focus, semantics, and perceivable feedback |\n| Shared system use | Correct components, tokens, variants, and intentional exceptions |\n\nDefine the acceptance criteria before implementation where possible. Resolve unclear requirements rather than treating every difference as a defect.\n\n## Example: reviewing a request form\n\nSuppose the design shows a quote-request form and confirmation. In the working preview, the reviewer enters a long name, submits an invalid email address, and tests a delayed response.\n\nThe field labels remain visible, the error identifies the problem, entered values are retained, and the completion message reflects the actual result. The reviewer also checks keyboard access and the mobile layout.\n\nIf the button looks correct but submits the request twice, visual approval is insufficient. Record the behavior, reproduction steps, expected result, and affected environment.\n\n## Design QA vs. software QA vs. design critique\n\nSoftware QA covers broader product quality, including areas such as functional correctness and integration. Design QA contributes experience-specific criteria and review.\n\nA [design critique](/glossary/design-critique.html) examines a design proposal and its reasoning. Design QA checks what was implemented. Either can reveal that the intended design itself needs revision.\n\nKeep responsibility collaborative. A designer can identify a discrepancy without being the sole owner of every test or fix.\n\n## Which checks can be automated?\n\n[Visual regression testing](/glossary/visual-regression-testing.html) can flag appearance changes. Interaction and accessibility tooling can test configured cases. Storybook provides ways to build checks around component stories.\n\nThese methods need appropriate coverage and review. Automated accessibility tools cannot establish full accessibility on their own, and component tests do not exercise every product workflow.\n\nRetest the specific issue after a fix and check the surrounding task when it may be affected. Record accepted exceptions so the same intentional decision is not repeatedly reported as a defect.\n\n## Related terms\n\n- [Visual Regression Testing](/glossary/visual-regression-testing.html)\n- [Storybook](/glossary/storybook.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n\n## Sources\n\n- [How to test UIs with Storybook](https://storybook.js.org/docs/writing-tests)\n- [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-qa.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-qa.html",
+        "name": "Design QA: Checking the Implemented Experience | Product Design Glossary",
+        "description": "Learn what design QA checks, how it fits software quality assurance, and how to review behavior, content, accessibility, and layout in a working product.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-qa.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-qa.html#breadcrumbs"
+        },
+        "citation": [
+          "https://storybook.js.org/docs/writing-tests",
+          "https://www.w3.org/WAI/test-evaluate/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-qa.html#term",
+        "name": "Design QA",
+        "termCode": "design-qa",
+        "description": "Design QA is the review of an implemented interface against its intended design and experience requirements. It checks whether the working product presents information and behaves as expected across relevant states, content, devices, and input methods.",
+        "url": "https://lexkonovalov.com/glossary/design-qa.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-qa.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-qa.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design QA",
+            "item": "https://lexkonovalov.com/glossary/design-qa.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "147",
+    "name": "shadcn/ui",
+    "slug": "shadcn-ui",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.",
+    "purpose": "shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.",
+    "keyConcepts": [
+      "How does the component approach work?",
+      "What is a shadcn registry?",
+      "How does it work with AI tools?",
+      "Example: building a settings dialog",
+      "Is shadcn/ui a complete design system?"
+    ],
+    "howItWorks": "shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.",
+    "relatedTerms": [
+      "Component Libraries",
+      "AI-ready Design System",
+      "Headless UI Architecture",
+      "Model Context Protocol"
+    ],
+    "seoTitle": "What Is shadcn/ui? Components and Registries | Product Design Glossary",
+    "seoDescription": "Understand shadcn/ui",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/shadcn-ui.html",
+    "sources": [
+      "Introduction, shadcn/ui (https://ui.shadcn.com/docs)",
+      "Registry, shadcn/ui (https://ui.shadcn.com/docs/registry)",
+      "MCP server, shadcn/ui (https://ui.shadcn.com/docs/mcp)"
+    ],
+    "contentMarkdown": "# shadcn/ui\n\nshadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.\n\n## How does the component approach work?\n\nThe project supplies component source that becomes part of the consuming codebase. Teams can inspect and modify that implementation for their own requirements.\n\nThis changes the maintenance responsibility. A local customization needs review when upstream behavior, dependencies, or project requirements change. Adding a component is not the same as delegating all future maintenance to a package publisher.\n\nThe component may still depend on other libraries. Inspect the actual dependencies and implementation selected for the project.\n\n## What is a shadcn registry?\n\nA registry describes distributable items and the files and dependencies they need. It can provide components, larger blocks, and other project material.\n\nAn organization can use a registry to distribute its own approved implementations. The registry is a distribution mechanism; it does not establish that every item meets the organization's design, security, or accessibility requirements.\n\n## How does it work with AI tools?\n\nThe shadcn MCP server lets a connected assistant browse, search, and install items from configured registries. This can help an agent find an existing implementation instead of inventing a new component.\n\nSpecify which registry and project conventions to use. Review the actual files and dependency changes before accepting a generated implementation. Natural-language installation does not remove that responsibility.\n\n## Example: building a settings dialog\n\nSuppose a team adds a dialog and form fields, then adapts their styling to the product's tokens. It checks labels, focus behavior, validation, saving, and failure recovery in the settings task.\n\nIf the team later changes the dialog's behavior locally, it records that decision and reviews future updates against it. Visual similarity to another shadcn-based interface does not establish equivalent behavior.\n\n## Is shadcn/ui a complete design system?\n\nIt can be a foundation for a team's [component library](/glossary/component-libraries.html). A complete [design system](/glossary/design-system.html) also needs product-specific decisions, patterns, content guidance, ownership, and a way to manage changes.\n\nUse the official documentation for installation and the current supported options. Evaluate the components in the actual product context, including any modifications made by people or AI agents.\n\n## Related terms\n\n- [Component Libraries](/glossary/component-libraries.html)\n- [AI-ready Design System](/glossary/ai-ready-design-system.html)\n- [Headless UI Architecture](/glossary/headless-ui-architecture.html)\n- [Model Context Protocol](/glossary/model-context-protocol-mcp.html)\n\n## Sources\n\n- [Introduction, shadcn/ui](https://ui.shadcn.com/docs)\n- [Registry, shadcn/ui](https://ui.shadcn.com/docs/registry)\n- [MCP server, shadcn/ui](https://ui.shadcn.com/docs/mcp)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/shadcn-ui.html",
+        "name": "What Is shadcn/ui? Components and Registries | Product Design Glossary",
+        "description": "Understand shadcn/ui's editable component code, registries, and MCP integration, plus the maintenance decisions a product team still needs to make.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#breadcrumbs"
+        },
+        "citation": [
+          "https://ui.shadcn.com/docs",
+          "https://ui.shadcn.com/docs/registry",
+          "https://ui.shadcn.com/docs/mcp"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#term",
+        "name": "shadcn/ui",
+        "termCode": "shadcn-ui",
+        "description": "shadcn/ui provides open-source UI components and tooling for distributing component code that teams can add to their projects and customize. The editable implementations become part of the consuming codebase.",
+        "url": "https://lexkonovalov.com/glossary/shadcn-ui.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/shadcn-ui.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "shadcn/ui",
+            "item": "https://lexkonovalov.com/glossary/shadcn-ui.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "148",
+    "name": "Storybook",
+    "slug": "storybook",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.",
+    "purpose": "Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.",
+    "keyConcepts": [
+      "What is a story in Storybook?",
+      "How does Storybook support a design system?",
+      "What are Storybook MCP and component manifests?",
+      "Example: reviewing an AI-generated field"
+    ],
+    "howItWorks": "Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.",
+    "relatedTerms": [
+      "Design System Documentation",
+      "Component Libraries",
+      "Visual Regression Testing",
+      "Model Context Protocol"
+    ],
+    "seoTitle": "Storybook: UI Components and Stories | Product Design Glossary",
+    "seoDescription": "Understand Storybook, stories, component documentation, and UI testing. See how its MCP server and manifests can provide context to AI agents.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/storybook.html",
+    "sources": [
+      "Why Storybook?, Storybook (https://storybook.js.org/docs/get-started/why-storybook)",
+      "Using Storybook with AI (https://storybook.js.org/docs/ai)",
+      "Manifests, Storybook (https://storybook.js.org/docs/ai/manifests)"
+    ],
+    "contentMarkdown": "# Storybook\n\nStorybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.\n\n## What is a story in Storybook?\n\nA story describes a component example with the inputs and context it needs. Teams can inspect that example without navigating through the entire application.\n\nFor a reservation card, useful stories might show a confirmed booking, a canceled booking, a long passenger name, and a missing image. Each example makes a state available for discussion and testing.\n\nIsolation has limits. A card can work in Storybook while its surrounding page has an incorrect reading order or retrieves the wrong reservation. Test complete tasks in the application as well.\n\n## How does Storybook support a design system?\n\n| Use | What the team gets |\n|---|---|\n| Component development | A place to inspect states and adjust inputs |\n| Documentation | Rendered examples with API and usage information |\n| Testing | Stories that can support interaction, accessibility, and visual checks |\n| Review | A shared view of the implemented component |\n\nThe required testing configuration depends on the project. A story's existence does not establish that its interactions or accessibility have been tested.\n\nStorybook can document a [component library](/glossary/component-libraries.html). A [design system](/glossary/design-system.html) also needs shared decisions, usage guidance, ownership, and a way to manage changes.\n\n## What are Storybook MCP and component manifests?\n\nStorybook's AI features let a connected agent access component documentation and work with stories and tests. Its MCP server is one route for that interaction.\n\nA component manifest provides structured information about documented components, including their APIs and examples. A documentation manifest describes documentation content. These are Storybook features, not a universal design system manifest standard.\n\nThe AI capabilities are in preview in the documentation checked in November 2026. Component manifests require configuration, and generation differs by framework. Follow the current official guides rather than assuming every existing Storybook exposes this context.\n\n## Example: reviewing an AI-generated field\n\nAn agent is asked to add a date field to a booking form. It retrieves the supported component API and examines stories for invalid and unavailable dates. The team reviews the implementation with keyboard input, realistic values, and a failed submission.\n\nThe useful outcome is a field that follows the real component contract and works in the task. A convincing preview alone does not establish either result.\n\n## Related terms\n\n- [Design System Documentation](/glossary/design-system-documentation.html)\n- [Component Libraries](/glossary/component-libraries.html)\n- [Visual Regression Testing](/glossary/visual-regression-testing.html)\n- [Model Context Protocol](/glossary/model-context-protocol-mcp.html)\n\n## Sources\n\n- [Why Storybook?, Storybook](https://storybook.js.org/docs/get-started/why-storybook)\n- [Using Storybook with AI](https://storybook.js.org/docs/ai)\n- [Manifests, Storybook](https://storybook.js.org/docs/ai/manifests)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/storybook.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/storybook.html",
+        "name": "Storybook: UI Components and Stories | Product Design Glossary",
+        "description": "Understand Storybook, stories, component documentation, and UI testing. See how its MCP server and manifests can provide context to AI agents.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/storybook.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/storybook.html#breadcrumbs"
+        },
+        "citation": [
+          "https://storybook.js.org/docs/get-started/why-storybook",
+          "https://storybook.js.org/docs/ai",
+          "https://storybook.js.org/docs/ai/manifests"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/storybook.html#term",
+        "name": "Storybook",
+        "termCode": "storybook",
+        "description": "Storybook is a frontend tool for developing, documenting, and testing UI components in isolation. A story captures a rendered component in a particular state, such as a form field with a validation error.",
+        "url": "https://lexkonovalov.com/glossary/storybook.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/storybook.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/storybook.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Storybook",
+            "item": "https://lexkonovalov.com/glossary/storybook.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "149",
+    "name": "Touch Target Size",
+    "slug": "touch-target-size",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.",
+    "purpose": "Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.",
+    "keyConcepts": [
+      "What target size does WCAG require?",
+      "Example: Edit and delete buttons in a table"
+    ],
+    "howItWorks": "Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.",
+    "relatedTerms": [
+      "Accessibility and WCAG",
+      "Keyboard Accessibility & Focus Management",
+      "Zoom, Text Resize & Reflow",
+      "Design System",
+      "Web Accessibility Audit"
+    ],
+    "seoTitle": "Touch Target Size: WCAG Minimums and Spacing",
+    "seoDescription": "Learn the WCAG 2.2 minimum target size, when spacing counts, and how to measure the clickable area of small icon buttons in dense interfaces.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/touch-target-size.html",
+    "sources": [
+      "Understanding Target Size (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)",
+      "Understanding Target Size (Enhanced), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)"
+    ],
+    "contentMarkdown": "# Touch Target Size\n\nTouch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.\n\n## What target size does WCAG require?\n\n| WCAG criterion | Minimum target size |\n|---|---|\n| **2.5.8 Target Size (Minimum), Level AA** | **24 × 24 CSS pixels**, unless an exception applies. |\n| **2.5.5 Target Size (Enhanced), Level AAA** | **44 × 44 CSS pixels**, with its own exceptions. |\n\nFor the AA spacing exception, place an imaginary circle 24 CSS pixels in diameter at the center of each undersized target’s bounding box. Each circle must avoid overlapping another target or the circle around another undersized target. There are separate exceptions for inline targets, a qualifying equivalent control on the same page, targets sized by the browser without author modification, and essential presentation.\n\n## Example: Edit and delete buttons in a table\n\nA booking table has two 16 × 16 CSS-pixel icon buttons on the same row. Their centers are 20 CSS pixels apart, so their 24-pixel circles overlap. The pair fails the spacing check. Moving their centers to 28 CSS pixels apart clears that overlap for the pair. Check other row actions and nearby targets too.\n\nAnother option is to keep each icon at 16 × 16 CSS pixels and add 4 CSS pixels of padding on each side of its button to create a 24 × 24 target. Keep the resulting hit areas separate. In a narrow layout, test the rendered controls with both touch and a mouse so you can tell which action each area triggers.\n\n## Related terms\n\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Keyboard Accessibility & Focus Management](/glossary/keyboard-accessibility.html)\n- [Zoom, Text Resize & Reflow](/glossary/zoom-text-resize-reflow.html)\n- [Design System](/glossary/design-system.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n\n## Sources\n\n- [Understanding Target Size (Minimum), W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)\n- [Understanding Target Size (Enhanced), W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/touch-target-size.html",
+        "name": "Touch Target Size: WCAG Minimums and Spacing",
+        "description": "Learn the WCAG 2.2 minimum target size, when spacing counts, and how to measure the clickable area of small icon buttons in dense interfaces.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#term",
+        "name": "Touch Target Size",
+        "termCode": "touch-target-size",
+        "description": "Touch target size is the width and height of the area that responds when someone taps or clicks a control. WCAG 2.2 applies its target-size criteria to pointer inputs, including touch and mouse. Measure the interactive area of the control, including any padding that can receive input.",
+        "url": "https://lexkonovalov.com/glossary/touch-target-size.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#webpage"
+        },
+        "alternateName": [
+          "Pointer Target Size",
+          "Target Size"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/touch-target-size.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Touch Target Size",
+            "item": "https://lexkonovalov.com/glossary/touch-target-size.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Pointer Target Size",
+      "Target Size"
+    ]
+  },
+  {
+    "id": "150",
+    "name": "WCAG Color Contrast",
+    "slug": "wcag-color-contrast",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.",
+    "purpose": "WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.",
+    "keyConcepts": [
+      "What are the WCAG AA contrast ratios?",
+      "Example: Testing a semantic token in two themes"
+    ],
+    "howItWorks": "WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.",
+    "relatedTerms": [
+      "Accessibility and WCAG",
+      "Keyboard Accessibility & Focus Management",
+      "Design Tokens",
+      "Semantic Tokens",
+      "Web Accessibility Audit"
+    ],
+    "seoTitle": "WCAG Color Contrast: Text, Icons, and UI Controls",
+    "seoDescription": "Learn WCAG AA contrast ratios for text and interface elements, and see how to test design token pairs across light and dark themes.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/wcag-color-contrast.html",
+    "sources": [
+      "Understanding Contrast (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)",
+      "Understanding Non-text Contrast, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)",
+      "Understanding Use of Color, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)"
+    ],
+    "contentMarkdown": "# WCAG Color Contrast\n\nWCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.\n\n## What are the WCAG AA contrast ratios?\n\n| What you are checking | Minimum contrast |\n|---|---|\n| Standard text and images of text | **4.5:1** against the background under criterion 1.4.3. |\n| Large text and images of large text | **3:1** under 1.4.3. Large text is at least 18 pt regular or 14 pt bold, approximately 24 CSS px or 18.7 CSS px, respectively. |\n| Visual cues needed to identify a control or state, and parts of graphics needed to understand the content | **3:1** against adjacent colors under criterion 1.4.11, subject to its exceptions. |\n\nTest the rendered foreground against the background it appears on. Placeholder text is subject to the text-contrast requirement. An icon that repeats a visible label may be decorative. For an icon-only button, check the visible icon against its background and give the button an accessible name. Keep a text or shape cue where color alone would convey an error or state.\n\n## Example: Testing a semantic token in two themes\n\nA design system uses `text.secondary` for normal-size text. On a white surface, `#596579` gives a contrast ratio of about **5.90:1**. The same token value on a dark surface, `#171C24`, gives about **2.90:1**, below the 4.5:1 minimum for standard text. Using `#AAB5C5` for `text.secondary` on that dark surface gives about **8.25:1**.\n\nDocument which foreground and surface tokens can be paired in each theme. Test those pairs in the components that use them, including relevant states such as errors, selection, and focus. For transparency or gradients, check the actual backgrounds the content can appear against. Use the unrounded ratio for a pass or fail decision.\n\n## Related terms\n\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Keyboard Accessibility & Focus Management](/glossary/keyboard-accessibility.html)\n- [Design Tokens](/glossary/design-tokens.html)\n- [Semantic Tokens](/glossary/semantic-tokens.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n\n## Sources\n\n- [Understanding Contrast (Minimum), W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)\n- [Understanding Non-text Contrast, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)\n- [Understanding Use of Color, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/wcag-color-contrast.html",
+        "name": "WCAG Color Contrast: Text, Icons, and UI Controls",
+        "description": "Learn WCAG AA contrast ratios for text and interface elements, and see how to test design token pairs across light and dark themes.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#term",
+        "name": "WCAG Color Contrast",
+        "termCode": "wcag-color-contrast",
+        "description": "WCAG color contrast measures the difference in relative luminance between two colors. WCAG uses contrast ratios to set minimums for text and for visual information people need to identify interface controls, states, and graphics.",
+        "url": "https://lexkonovalov.com/glossary/wcag-color-contrast.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#webpage"
+        },
+        "alternateName": [
+          "Color Contrast"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/wcag-color-contrast.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "WCAG Color Contrast",
+            "item": "https://lexkonovalov.com/glossary/wcag-color-contrast.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Color Contrast"
+    ]
+  },
+  {
+    "id": "151",
+    "name": "Zoom, Text Resize & Reflow",
+    "slug": "zoom-text-resize-reflow",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.",
+    "purpose": "Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.",
+    "keyConcepts": [
+      "What are the two WCAG checks?",
+      "Example: A booking form with a fare table",
+      "How do you test reflow?"
+    ],
+    "howItWorks": "Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.",
+    "relatedTerms": [
+      "Accessibility and WCAG",
+      "Accessible Forms",
+      "Keyboard Accessibility & Focus Management",
+      "Touch Target Size",
+      "Fluid Typography & Spacing System",
+      "Web Accessibility Audit"
+    ],
+    "seoTitle": "WCAG Zoom, Text Resize & Reflow: 200% and 320 CSS px",
+    "seoDescription": "Learn how to test WCAG text resizing to 200% and reflow at 320 CSS pixels, with examples for checkout, sticky controls, and data tables.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html",
+    "sources": [
+      "Understanding Resize Text, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)",
+      "Understanding Reflow, W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)"
+    ],
+    "contentMarkdown": "# Zoom, Text Resize & Reflow\n\nPage zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.\n\n## What are the two WCAG checks?\n\n| WCAG criterion | What to verify |\n|---|---|\n| **1.4.4 Resize Text, Level AA** | Text can be enlarged up to **200%** without loss of content or functionality and without requiring assistive technology. Captions and images of text are exceptions. Browser zoom is one way to provide text resizing. |\n| **1.4.10 Reflow, Level AA** | Vertically scrolling content works at a width equivalent to **320 CSS pixels**, without loss of information or functionality or the need to scroll in two directions. For content designed to scroll horizontally, the corresponding height is **256 CSS pixels**. Parts that require a two-dimensional layout for use or meaning are excepted. |\n\n## Example: A booking form with a fare table\n\nAt 200% text enlargement, check that field labels and validation errors remain readable and that users can activate the Continue button. At a 320 CSS-pixel width, let the form fields stack and keep the Continue button reachable. If a sticky bar covers errors or makes the remaining viewport too small, let the bar scroll with the form at that layout.\n\nIf the fare table needs row and column relationships to make sense, it can scroll within its own region. Keep surrounding content within the page width and let text within individual cells wrap where it can.\n\n## How do you test reflow?\n\nStart with a desktop browser viewport 1,280 CSS pixels wide and zoom to 400% to reach the equivalent of 320 CSS pixels. Check the actual viewport and complete the task, including error recovery. For the separate resize-text check, verify that text can reach twice its original size. If a responsive breakpoint reduces the base font size at higher zoom, compare the resulting visual size with the original.\n\n## Related terms\n\n- [Accessibility and WCAG](/glossary/accessibility-wcag.html)\n- [Accessible Forms](/glossary/accessible-forms.html)\n- [Keyboard Accessibility & Focus Management](/glossary/keyboard-accessibility.html)\n- [Touch Target Size](/glossary/touch-target-size.html)\n- [Fluid Typography & Spacing System](/glossary/fluid-typography-spacing-system.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n\n## Sources\n\n- [Understanding Resize Text, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)\n- [Understanding Reflow, W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html",
+        "name": "WCAG Zoom, Text Resize & Reflow: 200% and 320 CSS px",
+        "description": "Learn how to test WCAG text resizing to 200% and reflow at 320 CSS pixels, with examples for checkout, sticky controls, and data tables.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+          "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#term",
+        "name": "Zoom, Text Resize & Reflow",
+        "termCode": "zoom-text-resize-reflow",
+        "description": "Page zoom enlarges the rendered page. Text resizing lets people make the text larger. Reflow is how content rearranges to fit the available space so people can read and interact without scrolling in two directions.",
+        "url": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#webpage"
+        },
+        "alternateName": [
+          "WCAG Reflow",
+          "Text Resize and Reflow"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Zoom, Text Resize & Reflow",
+            "item": "https://lexkonovalov.com/glossary/zoom-text-resize-reflow.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "WCAG Reflow",
+      "Text Resize and Reflow"
     ]
   }
 ];
