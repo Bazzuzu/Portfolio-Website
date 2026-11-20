@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Breadcrumb Hierarchy in UX: Structural Patterns &amp; SEO Best Practices</title>
-  <meta name="description" content="A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page&#039;s structural position within a website&#039;s architectural hierarchy, allowing single-click upward traversal.">
+  <title>Breadcrumb Hierarchy: Location, Navigation, and Markup</title>
+  <meta name="description" content="Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Breadcrumb Hierarchy in UX: Structural Patterns &amp; SEO Best Practices">
-  <meta property="og:description" content="A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page&#039;s structural position within a website&#039;s architectural hierarchy, allowing single-click upward traversal.">
+  <meta property="og:title" content="Breadcrumb Hierarchy: Location, Navigation, and Markup">
+  <meta property="og:description" content="Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Breadcrumb Hierarchy in UX: Structural Patterns &amp; SEO Best Practices">
-  <meta name="twitter:description" content="A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page&#039;s structural position within a website&#039;s architectural hierarchy, allowing single-click upward traversal.">
+  <meta name="twitter:title" content="Breadcrumb Hierarchy: Location, Navigation, and Markup">
+  <meta name="twitter:description" content="Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html",
+      "name": "Breadcrumb Hierarchy: Location, Navigation, and Markup",
+      "description": "Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#breadcrumbs"
+      },
+      "citation": [
+        "https://design-system.service.gov.uk/components/breadcrumbs/",
+        "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#term",
       "name": "Breadcrumb Hierarchy",
       "termCode": "breadcrumb-hierarchy",
-      "description": "A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page's structural position within a website's architectural hierarchy, allowing single-click upward traversal.",
+      "description": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.",
+      "url": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,37 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page&#039;s structural position within a website&#039;s architectural hierarchy, allowing single-click upward traversal.</p>
-      </section>
+    <p class="glossary-term-section__text">A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-an-invoice-inside-a-booking">
+<h2 id="section-example-an-invoice-inside-a-booking" class="glossary-term-section__title">Example: An invoice inside a booking</h2>
+<p class="glossary-term-section__text">An invoice page may sit under Bookings, then Booking #1042, then Invoices. The page heading identifies the current invoice, and the breadcrumb offers links to its parent locations.</p>
+<p class="glossary-term-section__text">Someone arriving from search or a notification can understand which booking contains the document. A separate return-to-results action can restore a previously filtered booking list when that task context is available.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-should-you-design-the-trail">
+<h2 id="section-how-should-you-design-the-trail" class="glossary-term-section__title">How should you design the trail?</h2>
+<p class="glossary-term-section__text">Choose a meaningful parent structure and use labels people recognize. Keep the trail consistent with the information architecture, including when a record can be found through several routes. Test the layout on narrow screens and ensure links have understandable accessible names.</p>
+<p class="glossary-term-section__text">For a linear process such as checkout, describe progress with the process’s steps. A breadcrumb answers a question about structural location.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-does-breadcrumb-markup-relate-to-navigation">
+<h2 id="section-how-does-breadcrumb-markup-relate-to-navigation" class="glossary-term-section__title">How does breadcrumb markup relate to navigation?</h2>
+<p class="glossary-term-section__text">Schema.org BreadcrumbList can describe the hierarchy in structured data. Its labels and destinations should agree with the visible navigation and the page’s actual place. Google documents the required properties and testing process for its breadcrumb feature. Validate the generated page and review the visible trail as part of the same publishing check.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/structural-navigation-model.html">Structural Navigation Model</a></li>
+<li><a href="/glossary/wayfinding-system.html">Wayfinding System</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://design-system.service.gov.uk/components/breadcrumbs/" target="_blank" rel="noopener noreferrer">Breadcrumbs, GOV.UK Design System</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb" target="_blank" rel="noopener noreferrer">Breadcrumb Structured Data, Google Search Central</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Grounds users arriving via deep external links, reinforces information architecture, and provides search engine crawlers with semantic structural hierarchy.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Location breadcrumbs</span><span class="concept-tag">attribute breadcrumbs</span><span class="concept-tag">path breadcrumbs</span><span class="concept-tag">schema markup.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The application dynamically evaluates the node&#039;s lineage in the structural taxonomy and renders an inline, serialized list of hyperlinked parent categories.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/structural-navigation-model.html">Structural Navigation Model</a></li><li><a href="/glossary/wayfinding-system.html">Wayfinding System</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Jakob Nielsen, Breadcrumb Navigation: Increasingly Useful, Nielsen Norman Group</li><li>W3C WAI, Breadcrumb Pattern</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

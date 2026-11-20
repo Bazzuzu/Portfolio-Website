@@ -298,14 +298,14 @@ Bypassed static Figma mocks to directly model dynamic fee calculations. Delivere
 
 ## 6. Architectural Product Design Knowledge System (A Canonical Glossary and Structural Ontology)
 **Index URL:** https://lexkonovalov.com/glossary/
-**Total Canonical Terms:** 129
+**Total Canonical Terms:** 132
 **Supporting Pages:** https://lexkonovalov.com/glossary/ooux/, https://lexkonovalov.com/glossary/ooux-worked-example.html
 
 This ontology establishes an authoritative, search-indexable reference bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
 
 ### Domain Categories
 
-#### UX & Product Architecture (46 terms)
+#### UX & Product Architecture (49 terms)
 - **Primary Focus:** Information Architecture, Domain Modeling, Conceptual Integrity
 - **Representative Frameworks:** OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling
 - **Maturity Distribution:** 70% Established, 20% Proprietary, 10% Emerging
@@ -405,34 +405,34 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/information-architecture.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Information Architecture (IA) is the structural discipline of organizing, structuring, labeling, and classifying digital content and functionality to support findability, intuitive wayfinding, and cognitive comprehension across digital ecosystems.
-- **Purpose:** Bridges business content objectives with human search behaviors, minimizing cognitive friction and information overload in large data repositories.
-- **Key Concepts:** Taxonomy, ontology, labeling systems, search system mechanics, wayfinding.
-- **How It Works:** Evaluates user search patterns, content inventories, and domain contexts to construct coherent structural navigation hierarchies and associative metadata webs.
-- **Related Terms:** Core Model, Polyhierarchy, Wayfinding System, Controlled Vocabulary
-- **SEO Title:** What is Information Architecture? Modern IA Principles
-- **Sources:** Louis Rosenfeld, Peter Morville, & Jorge Arango, Information Architecture for the Web and Beyond, O'Reilly; Abby Covert, How to Make Sense of Any Mess
+- **Definition:** Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.
+- **Purpose:** Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.
+- **Key Concepts:** What does information architecture include?, Example: Finding an invoice, How do you evaluate information architecture?
+- **How It Works:** Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.
+- **Related Terms:** Enterprise Information Architecture, Wayfinding System, Content Modeling, Controlled Vocabulary, Structural Navigation Model
+- **SEO Title:** Information Architecture (IA): Definition and Examples
+- **Sources:** The Difference Between IA and Navigation, Nielsen Norman Group (https://www.nngroup.com/articles/ia-vs-navigation/); Card Sorting vs. Tree Testing, Nielsen Norman Group (https://www.nngroup.com/articles/card-sorting-tree-testing-differences/); Tree Testing, Nielsen Norman Group (https://www.nngroup.com/articles/tree-testing/)
 
 #### 007. Core Model
 - **URL:** https://lexkonovalov.com/glossary/core-model.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Proprietary / Framework-Specific
-- **Definition:** The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.
-- **Purpose:** Overcomes internal organizational biases and bloated navigational hierarchies by directly serving search-first, task-oriented user entry behaviors.
-- **Key Concepts:** Inward paths, core task fulfillment, forward paths, business objectives.
-- **How It Works:** Teams map incoming traffic sources (inward paths), define essential user tasks and business objectives for the node, and establish contextually relevant onward routes (forward paths).
-- **Related Terms:** Information Architecture, Wayfinding System, Conversion Funnel
-- **SEO Title:** The Core Model: Inside-Out Information Architecture Guide
-- **Sources:** Are Halland, The Core Model: Designing Inside Out for Better Results, A List Apart; TheCoreModel.com (https://www.thecoremodel.com)
+- **Definition:** The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.
+- **Purpose:** The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.
+- **Key Concepts:** What does a core model contain?, Example: A hotel room detail page, How do you use the Core Model?
+- **How It Works:** The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.
+- **Related Terms:** Information Architecture (IA), Wayfinding System, Conversion Funnel, Jobs to Be Done (JTBD)
+- **SEO Title:** The Core Model: User Tasks, Content, and Forward Paths
+- **Sources:** The Core Model, Are Halland (https://www.thecoremodel.com/); The Core Model: Designing Inside Out for Better Results, Ida Aalen / A List Apart (https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/); JTBD and the Core Model, Are Halland (https://www.thecoremodel.com/jtbd/)
 
 #### 008. Enterprise Information Architecture
 - **URL:** https://lexkonovalov.com/glossary/enterprise-information-architecture.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.
-- **Purpose:** Prevents operational silos, fractured data views, and enterprise friction by harmonizing disparate business software suites under coherent navigation and semantic models.
-- **Key Concepts:** Multi-tenancy, unified metadata models, access-level scoping, distributed ontologies.
-- **How It Works:** Integrates corporate domain schemas with role-based access models, deploying centralized taxonomies and modular interaction patterns across business suites.
+- **Purpose:** Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.
+- **Key Concepts:** What does enterprise information architecture include?, An enterprise IA example: expense claims, How do you start?, How is enterprise IA different from a sitemap?
+- **How It Works:** Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.
 - **Related Terms:** Information Architecture (IA), Domain Context Modeling, Controlled Vocabulary, Operational UX
 - **SEO Title:** Enterprise Information Architecture | Product Design Glossary
 - **Sources:** Introduction to SharePoint information architecture, Microsoft (https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience); Intranet Information Architecture (IA) Trends, Nielsen Norman Group (https://www.nngroup.com/articles/intranet-information-architecture-ia/); Information architecture consulting, Peter Morville / Semantic Studios (https://semanticstudios.com/consulting/)
@@ -441,49 +441,49 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/mental-model-mapping.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Mental Model Mapping is the research practice of systematically diagramming a user's internal cognitive beliefs, situational reasoning, and workflows relative to a real-world task, independent of technological constraints.
-- **Purpose:** Identifies systemic disconnects between how users believe a system functions and the underlying system mechanics, guiding intentional interaction architectures.
-- **Key Concepts:** Cognitive schema, task space mapping, conceptual gap analysis, behavioral patterns.
-- **How It Works:** Qualitative behavioral research is synthesized into affinity matrices showing user motivations, contrasted against existing technological touchpoints to discover missing capabilities.
-- **Related Terms:** Information Architecture, Jobs to Be Done (JTBD), Task Model, Conceptual Schema
-- **SEO Title:** Mental Model Mapping: Aligning UX with User Cognition
-- **Sources:** Indi Young, Mental Models: Aligning Design Strategy with Human Behavior, Rosenfeld Media; Don Norman, The Design of Everyday Things
+- **Definition:** Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.
+- **Purpose:** Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.
+- **Key Concepts:** How to build a useful map, Example: planning a family trip, Keep the evidence visible
+- **How It Works:** Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.
+- **Related Terms:** Information Architecture (IA), Jobs to Be Done (JTBD), Task Model, Conceptual Schema
+- **SEO Title:** Mental Model Mapping: Definition, Research, and Example
+- **Sources:** Nielsen Norman Group: Mental Models (https://www.nngroup.com/articles/mental-models/); Indi Young: Moviegoer Mental Model Diagram (https://indiyoung.com/examples-mmd-moviegoer/)
 
 #### 010. Content Modeling
 - **URL:** https://lexkonovalov.com/glossary/content-modeling.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.
-- **Purpose:** Enables modular content reuse, headless content delivery across multi-platform surfaces, and consistent information parsing for search engines and language models.
-- **Key Concepts:** Content types, structural attributes, presentation agnosticism, relational references.
-- **How It Works:** Content strategists and architects dissect editorial requirements into typed models, defining character constraints, validation rules, and inter-entity associations in headless CMS engines.
-- **Related Terms:** Object Mapping, Structured Data for LLMs, Headless UI Architecture
-- **SEO Title:** Content Modeling Guide: Structuring Headless Content
-- **Sources:** Rachel Lovinger, Nimble: A Thinking Person's Guide to Content Modeling, A List Apart; Carrie Hane & Mike Atherton, Designing Connected Content, New Riders
+- **Definition:** Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.
+- **Purpose:** Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.
+- **Key Concepts:** What does a content model include?, Example: Reusing room content on a hotel site, How do you develop a content model?
+- **How It Works:** Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.
+- **Related Terms:** Object Mapping, Structured Data for LLMs, Headless UI Architecture, Information Architecture (IA)
+- **SEO Title:** Content Modeling: Types, Fields, and Reusable Content
+- **Sources:** Content Modeling Basics, Contentful (https://www.contentful.com/help/content-models/content-modelling-basics/); References, Contentful (https://www.contentful.com/help/references/); Available Validations, Contentful (https://www.contentful.com/help/fields/available-validations/)
 
 #### 011. Operational UX
 - **URL:** https://lexkonovalov.com/glossary/operational-ux.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Coined / Interpretive
-- **Definition:** Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.
-- **Purpose:** Eliminates operational fatigue, prevents catastrophic human error, and optimizes workflow latency for workforce operators processing high volumes of transactions under time pressure.
-- **Key Concepts:** Cognitive throughput, situational awareness, dense spatial utilization, keyboard orchestration.
-- **How It Works:** Interfaces are engineered with compact information density, deterministic keyboard shortcuts, explicit system state indicators, and inline validation to maximize operational velocity.
+- **Definition:** Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.
+- **Purpose:** Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.
+- **Key Concepts:** Example: processing a booking queue, What to evaluate
+- **How It Works:** Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.
 - **Related Terms:** Enterprise Information Architecture, State Transition Matrix, Semantic Zoom, Interaction Invariant
-- **SEO Title:** Operational UX: Designing High-Density Mission-Critical Systems
-- **Sources:** Daniel Rosenberg, UX Magic, Interaction Design Foundation; Nielsen Norman Group, Enterprise Software Design Principles
+- **SEO Title:** Operational UX: Designing Reliable Workflows in B2B Tools
+- **Sources:** Nielsen Norman Group: Design Guidelines for Complex Applications (https://www.nngroup.com/articles/complex-application-design/); W3C: Grid Pattern (https://www.w3.org/WAI/ARIA/apg/patterns/grid/)
 
 #### 012. Service Blueprinting
 - **URL:** https://lexkonovalov.com/glossary/service-blueprinting.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Service Blueprinting is an operational diagramming methodology that visualizes end-to-end service delivery processes, mapping customer touchpoints against frontstage employee actions, backstage operational workflows, and internal support systems.
-- **Purpose:** Uncovers cross-departmental bottlenecks, system failures, and hidden technical dependencies that disrupt customer-facing interactions.
-- **Key Concepts:** Line of visibility, frontstage interactions, backstage operations, support processes.
-- **How It Works:** Cross-functional workflows are chronologically mapped on vertical swimlanes across the line of customer interaction, exposing technological triggers and operational friction.
-- **Related Terms:** Customer Journey Mapping, Operational UX, Information Architecture
-- **SEO Title:** What is a Service Blueprint? Components & Blueprinting Methods
-- **Sources:** G. Lynn Shostack, Designing Services That Deliver, Harvard Business Review; Jim Kalbach, Mapping Experiences, O'Reilly
+- **Definition:** Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.
+- **Purpose:** Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.
+- **Key Concepts:** What does a service blueprint include?, Example: Changing a flight, How do you use a blueprint?
+- **How It Works:** Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.
+- **Related Terms:** Customer Journey Mapping, Operational UX, Information Architecture (IA)
+- **SEO Title:** Service Blueprinting: Components and a Practical Example
+- **Sources:** Service Blueprints: Definition, Nielsen Norman Group (https://www.nngroup.com/articles/service-blueprints-definition/); Service Blueprinting FAQ, Nielsen Norman Group (https://www.nngroup.com/articles/service-blueprinting-faq/)
 
 #### 013. Structural Navigation Model
 - **URL:** https://lexkonovalov.com/glossary/structural-navigation-model.html
@@ -513,106 +513,106 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/polyhierarchy.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.
-- **Purpose:** Accommodates divergent user mental models and alternate discovery paths, preventing search failures caused by rigid, singular classification silos.
-- **Key Concepts:** Multiple inheritance, canonical indexing, taxonomy nodes, relational routing.
-- **How It Works:** The database assigns multiple categorical parent references to an entity while enforcing canonical URI references to avoid SEO duplication penalties.
-- **Related Terms:** Information Architecture, Faceted Classification, Core Model, Controlled Vocabulary
-- **SEO Title:** Polyhierarchy in Information Architecture: UX Classification Patterns
-- **Sources:** Karl Fast & Peter Morville, Information Architecture, O'Reilly; ISO 25964 Thesauri and Interoperability with Other Vocabularies
+- **Definition:** A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.
+- **Purpose:** A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.
+- **Key Concepts:** Polyhierarchy and faceted classification, Example: two routes to one resource, What to check
+- **How It Works:** A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.
+- **Related Terms:** Information Architecture (IA), Faceted Classification, Core Model, Controlled Vocabulary
+- **SEO Title:** Polyhierarchy: Definition, Navigation Example, and Tradeoffs
+- **Sources:** W3C: SKOS Primer — Semantic Relationships (https://www.w3.org/TR/skos-primer/); W3C: SKOS Reference — Semantic Relations (https://www.w3.org/TR/skos-reference/)
 
 #### 016. Controlled Vocabulary
 - **URL:** https://lexkonovalov.com/glossary/controlled-vocabulary.html
 - **Category:** UX & Product Architecture (Secondary: AI & Agentic Systems)
 - **Maturity:** Established
-- **Definition:** A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.
-- **Purpose:** Eliminates lexical fragmentation, prevents synonymous confusion across disparate teams, and supports deterministic entity parsing for search algorithms and AI systems.
-- **Key Concepts:** Term normalization, synonym rings, preferred labels, semantic precision.
-- **How It Works:** Information architects define standard terminology registries, mapping colloquially used variants and synonyms back to a standardized canonical entity.
-- **Related Terms:** Information Architecture, Domain Context Modeling, Structured Data for LLMs
-- **SEO Title:** Controlled Vocabularies in Product UX & Search Architecture
-- **Sources:** ANSI/NISO Z.19 Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies; Amy Warner, Lexical Analysis for IA
+- **Definition:** A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.
+- **Purpose:** A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.
+- **Key Concepts:** Example: booking statuses, How to keep it useful
+- **How It Works:** A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.
+- **Related Terms:** Information Architecture (IA), Domain Context Modeling, Structured Data for LLMs
+- **SEO Title:** Controlled Vocabulary: Definition and Product Design Example
+- **Sources:** W3C: SKOS Primer (https://www.w3.org/TR/skos-primer/); W3C: SKOS Reference (https://www.w3.org/TR/skos-reference/)
 
 #### 017. Faceted Classification
 - **URL:** https://lexkonovalov.com/glossary/faceted-classification.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.
-- **Purpose:** Powers high-precision discovery in vast, multi-attribute enterprise catalogs and e-commerce inventories without forcing users down rigid navigational paths.
-- **Key Concepts:** Orthogonal facets, parametric filtering, attribute aggregation, dynamic counts.
-- **How It Works:** Content attributes are indexed along independent dimensions (e.g., Price, Dimension, Material), allowing real-time parametric queries to filter active datasets.
-- **Related Terms:** Information Architecture, Polyhierarchy, Content Modeling
-- **SEO Title:** Faceted Classification: Designing Advanced UX Filter Architectures
-- **Sources:** S. R. Ranganathan, The Colon Classification; Daniel Tunkelang, Faceted Search, Morgan & Claypool
+- **Definition:** Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.
+- **Purpose:** Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.
+- **Key Concepts:** How do facets work?, Example: Narrowing flight results, What should teams model and test?
+- **How It Works:** Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.
+- **Related Terms:** Information Architecture (IA), Polyhierarchy, Content Modeling
+- **SEO Title:** Faceted Classification: Categories, Filters, and Examples
+- **Sources:** Filters vs. Facets, Nielsen Norman Group (https://www.nngroup.com/articles/filters-vs-facets/); Faceting, Algolia (https://www.algolia.com/doc/guides/managing-results/refine-results/faceting)
 
 #### 018. Task Model
 - **URL:** https://lexkonovalov.com/glossary/task-model.html
 - **Category:** UX & Product Architecture (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
-- **Definition:** A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.
-- **Purpose:** Identifies cognitive burden, redundant confirmation loops, and procedural friction points within digital processes before writing software requirements.
-- **Key Concepts:** Hierarchical task analysis, cognitive triggers, preconditions, operational dependencies.
-- **How It Works:** Designers dissect goals into sub-tasks, charting preconditions, required system inputs, decision forks, and final success criteria.
+- **Definition:** A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.
+- **Purpose:** A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.
+- **Key Concepts:** Example: approving an invoice, How to build one
+- **How It Works:** A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.
 - **Related Terms:** Jobs to Be Done (JTBD), Mental Model Mapping, Service Blueprinting
-- **SEO Title:** Task Modeling in Product Design: Methods & Hierarchical Analysis
-- **Sources:** Dan Diaper & Neville Stanton, The Handbook of Task Analysis for Human-Computer Interaction; Don Norman, The Design of Everyday Things
+- **SEO Title:** Task Model in UX: Definition, Steps, and Example
+- **Sources:** Nielsen Norman Group: Task Analysis (https://www.nngroup.com/articles/task-analysis/); W3C: Task Models (https://www.w3.org/TR/task-models/)
 
 #### 019. Wayfinding System
 - **URL:** https://lexkonovalov.com/glossary/wayfinding-system.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A Wayfinding System encompasses the perceptual cues, navigational milestones, spatial signposts, and contextual indicators that inform users of their location, orientation, and available movement paths.
-- **Purpose:** Prevents spatial disorientation in deep, complex multi-page software, reducing anxiety and supporting fluid task progression.
-- **Key Concepts:** Orientation cues, spatial landmarks, environmental feedback, progressive routing.
-- **How It Works:** Designers combine persistent contextual anchors—such as active page highlights, structural breadcrumbs, headers, and visual progress rails—to orient users.
-- **Related Terms:** Information Architecture, Breadcrumb Hierarchy, Structural Navigation Model, Semantic Zoom
-- **SEO Title:** Digital Wayfinding Systems: Principles of Spatial UX Navigation
-- **Sources:** Kevin Lynch, The Image of the City; Per Mollerup, Wayshowing > Wayfinding: Basic Codes for Designing Effective Wayfinding
+- **Definition:** A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.
+- **Purpose:** A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.
+- **Key Concepts:** What does digital wayfinding include?, Example: Returning from an invoice to a booking list, How do you test a wayfinding system?
+- **How It Works:** A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.
+- **Related Terms:** Information Architecture (IA), Breadcrumb Hierarchy, Structural Navigation Model, Semantic Zoom
+- **SEO Title:** Wayfinding in UX: Navigation and Orientation Cues
+- **Sources:** Breadcrumbs, GOV.UK Design System (https://design-system.service.gov.uk/components/breadcrumbs/); Navigate a Service, GOV.UK Design System (https://design-system.service.gov.uk/patterns/navigate-a-service/); The Difference Between IA and Navigation, Nielsen Norman Group (https://www.nngroup.com/articles/ia-vs-navigation/)
 
 #### 020. Semantic Zoom
 - **URL:** https://lexkonovalov.com/glossary/semantic-zoom.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.
-- **Purpose:** Enables users to transition smoothly between macro-level structural overviews and micro-level operational details without losing global context.
-- **Key Concepts:** Information granularity, level of detail (LoD), spatial zooming, contextual morphing.
-- **How It Works:** When a user zooms in on a UI canvas or table, low-fidelity abstract aggregates dynamically morph into high-density detail views with contextual actions.
+- **Definition:** Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.
+- **Purpose:** Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.
+- **Key Concepts:** Example: a hotel planning board, When it helps, Accessibility checks
+- **How It Works:** Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.
 - **Related Terms:** Operational UX, Progressive Disclosure, Affordance Layering, Interaction Invariant
-- **SEO Title:** Semantic Zoom in UX: Designing Multi-Scale Interface Systems
-- **Sources:** Benjamin B. Bederson, PhotoMesa: A Zoomable Image Browser, ACM; Daniel Rosenberg, UX Magic
+- **SEO Title:** Semantic Zoom: Definition, UX Example, and Accessibility
+- **Sources:** Microsoft: Semantic Zoom (https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom); W3C: Understanding Keyboard (https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)
 
 #### 021. Breadcrumb Hierarchy
 - **URL:** https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page's structural position within a website's architectural hierarchy, allowing single-click upward traversal.
-- **Purpose:** Grounds users arriving via deep external links, reinforces information architecture, and provides search engine crawlers with semantic structural hierarchy.
-- **Key Concepts:** Location breadcrumbs, attribute breadcrumbs, path breadcrumbs, schema markup.
-- **How It Works:** The application dynamically evaluates the node's lineage in the structural taxonomy and renders an inline, serialized list of hyperlinked parent categories.
-- **Related Terms:** Information Architecture, Structural Navigation Model, Wayfinding System
-- **SEO Title:** Breadcrumb Hierarchy in UX: Structural Patterns & SEO Best Practices
-- **Sources:** Jakob Nielsen, Breadcrumb Navigation: Increasingly Useful, Nielsen Norman Group; W3C WAI, Breadcrumb Pattern
+- **Definition:** A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.
+- **Purpose:** A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.
+- **Key Concepts:** Example: An invoice inside a booking, How should you design the trail?, How does breadcrumb markup relate to navigation?
+- **How It Works:** A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.
+- **Related Terms:** Information Architecture (IA), Structural Navigation Model, Wayfinding System
+- **SEO Title:** Breadcrumb Hierarchy: Location, Navigation, and Markup
+- **Sources:** Breadcrumbs, GOV.UK Design System (https://design-system.service.gov.uk/components/breadcrumbs/); Breadcrumb Structured Data, Google Search Central (https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
 
 #### 022. Affordance Layering
 - **URL:** https://lexkonovalov.com/glossary/affordance-layering.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
-- **Definition:** Affordance Layering is the intentional sequencing of visual, physical, and cognitive interaction signifiers based on user proximity, pointer focus, or operational state.
-- **Purpose:** Eliminates visual noise in high-density enterprise software by displaying secondary and tertiary action controls only when contextually relevant.
-- **Key Concepts:** Perceived affordance, progressive visibility, interaction triggers, focus reveal.
-- **How It Works:** Primary affordances remain permanently visible; secondary tools appear on pointer hover, row selection, or focus transitions, reducing cognitive clutter.
+- **Definition:** Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.
+- **Purpose:** Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.
+- **Key Concepts:** Example: an operations table, Accessibility and usability checks
+- **How It Works:** Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.
 - **Related Terms:** Progressive Disclosure, Operational UX, Interaction Invariant
-- **SEO Title:** Affordance Layering: Reducing Cognitive Noise in Enterprise UX
-- **Sources:** James J. Gibson, The Ecological Approach to Visual Perception; Don Norman, Signifiers, Not Affordances, ACM Interactions
+- **SEO Title:** Affordance Layering: Meaning and a Practical UX Example
+- **Sources:** Don Norman: Signifiers, Not Affordances (https://jnd.org/signifiers-not-affordances/); W3C: Understanding Content on Hover or Focus (https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)
 
 #### 023. Progressive Disclosure
 - **URL:** https://lexkonovalov.com/glossary/progressive-disclosure.html
 - **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
 - **Maturity:** Established
 - **Definition:** Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.
-- **Purpose:** Minimizes upfront cognitive load, avoids intimidating novice users, and streamlines primary task completion without stripping away advanced power features.
-- **Key Concepts:** Cognitive pacing, disclosure toggles, layered complexity, default states.
-- **How It Works:** The interface surfaces only critical path decisions; secondary options are housed behind explicit disclosures (e.g., "Advanced Settings" or accordions) upon user demand.
+- **Purpose:** Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.
+- **Key Concepts:** How does progressive disclosure work?, Example: exporting a report, What should stay visible?, Progressive disclosure vs. staged disclosure
+- **How It Works:** Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.
 - **Related Terms:** Affordance Layering, Semantic Zoom, Task Model, Operational UX
 - **SEO Title:** Progressive Disclosure in UX | Product Design Glossary
 - **Sources:** Progressive Disclosure, Jakob Nielsen, Nielsen Norman Group (https://www.nngroup.com/articles/progressive-disclosure/); Details, GOV.UK Design System (https://design-system.service.gov.uk/components/details/); Disclosure (Show/Hide) Pattern, W3C WAI (https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
@@ -622,9 +622,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** UX & Product Architecture (Secondary: AI & Agentic Systems)
 - **Maturity:** Established
 - **Definition:** A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.
-- **Purpose:** Ensures structural alignment between backend relational databases, frontend UI components, and user mental representations, eliminating architectural technical debt.
-- **Key Concepts:** Semantic modeling, entity integrity, abstraction layers, domain primitives.
-- **How It Works:** System architects and designers model core domain entities and relational constraints, standardizing systemic rules before API and interface definition.
+- **Purpose:** A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.
+- **Key Concepts:** What does a conceptual schema contain?, A conceptual schema example: hotel reservations, Conceptual, logical, and physical models, How does this help UX work?
+- **How It Works:** A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.
 - **Related Terms:** Domain Context Modeling, Object-Oriented UX, Content Modeling, Knowledge Graphs (AI Context)
 - **SEO Title:** Conceptual Schema: Meaning & Example | Product Design Glossary
 - **Sources:** Database architecture: the conceptual schema, University of Cape Town (https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html); What Is Data Modeling?, IBM (https://www.ibm.com/think/topics/data-modeling); What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)
@@ -1377,22 +1377,22 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **URL:** https://lexkonovalov.com/glossary/customer-journey-mapping.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
-- **Definition:** Customer Journey Mapping is the research-based visualization of the sequential phases, touchpoints, emotional states, pain points, and expectations a user experiences while pursuing a goal across an organization.
-- **Purpose:** Breaks down corporate organizational silos, exposing broken cross-channel transitions, redundant steps, and emotional friction across customer interactions.
-- **Key Concepts:** Lifecycle stages, cross-channel touchpoints, emotional curves, opportunity horizons.
-- **How It Works:** Synthesizes customer interviews, clickstream analytics, and support logs into a horizontal chronological timeline displaying what users do, feel, and think across every stage.
+- **Definition:** Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.
+- **Purpose:** Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.
+- **Key Concepts:** How do you create a customer journey map?, Example: A traveler changes a flight, How do AI agents affect the journey?
+- **How It Works:** Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.
 - **Related Terms:** Service Blueprinting, Mental Model Mapping, Conversion Funnel
-- **SEO Title:** Customer Journey Mapping: UX Research Methods & Blueprints
-- **Sources:** Jim Kalbach, Mapping Experiences, O'Reilly; Nielsen Norman Group, Customer Journey Mapping 101
+- **SEO Title:** Customer Journey Mapping: Steps and a UX Example
+- **Sources:** Journey Mapping 101, Nielsen Norman Group (https://www.nngroup.com/articles/journey-mapping-101/); UX Maps: Glossary, Nielsen Norman Group (https://www.nngroup.com/articles/ux-maps-glossary/)
 
 #### 088. Enterprise UX Strategy
 - **URL:** https://lexkonovalov.com/glossary/enterprise-ux-strategy.html
 - **Category:** Product Strategy & Growth (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.
-- **Purpose:** Eliminates the massive hidden costs of corporate training, workplace operational fatigue, and high employee error rates typical of legacy enterprise software.
-- **Key Concepts:** Total cost of ownership (TCO), employee productivity ROI, change management, operational safety.
-- **How It Works:** Enterprise designers engage deep corporate stakeholders, audit regulatory obligations, and map multi-user authorization matrices to construct modern, consumer-grade workflows.
+- **Purpose:** Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.
+- **Key Concepts:** What makes enterprise UX strategy different?, What should the strategy include?, Example: improving purchase approvals, How is it different from information architecture?
+- **How It Works:** Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.
 - **Related Terms:** Operational UX, Enterprise Information Architecture, B2B SaaS Interaction Model
 - **SEO Title:** Enterprise UX Strategy | Product Design Glossary
 - **Sources:** UX Strategy: Definition and Components, Nielsen Norman Group (https://www.nngroup.com/articles/ux-strategy/); Complex Application Design: A 5-Layer Framework, Nielsen Norman Group (https://www.nngroup.com/articles/complex-application-design-framework/)
@@ -1888,4 +1888,40 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Related Terms:** Content Modeling, Object Mapping, Object Attributes in OOUX, OOUX Prototyping and Testing, AI Prototyping
 - **SEO Title:** Content Prototyping: Test an Object Model with Realistic Data
 - **Sources:** OOUX Masterclass: Content Prototyping (https://ooux.com/selfpacedoouxmasterclass); Contentful: Content Modeling Basics (https://www.contentful.com/help/content-models/content-modelling-basics/)
+
+#### 130. Conversational UX
+- **URL:** https://lexkonovalov.com/glossary/conversational-ux.html
+- **Category:** UX & Product Architecture (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.
+- **Purpose:** Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.
+- **Key Concepts:** Conversational UX vs. conversation design, Example: changing a travel date, What should designers specify?, Conversational UX vs. agentic UX
+- **How It Works:** Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.
+- **Related Terms:** Agentic UX, Generative UI, AI-native Design, Progressive Disclosure
+- **SEO Title:** Conversational UX: Meaning and Examples | Product Design Glossary
+- **Sources:** What is conversation design?, Google (legacy guide) (https://developers.google.com/assistant/conversation-design/what-is-conversation-design); Feedback and Control, Google PAIR (https://pair.withgoogle.com/chapter/feedback-controls/)
+
+#### 131. Design Critique
+- **URL:** https://lexkonovalov.com/glossary/design-critique.html
+- **Category:** UX & Product Architecture (Secondary: Design Systems & Engineering)
+- **Maturity:** Established
+- **Definition:** A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.
+- **Purpose:** A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.
+- **Key Concepts:** What should a critique accomplish?, A lightweight critique process, Example: reviewing a dense operations table, Critique vs. usability testing vs. approval, How do you make feedback actionable?
+- **How It Works:** A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.
+- **Related Terms:** DesignOps, Design QA, Product Discovery, Design Strategy Alignment
+- **SEO Title:** Design Critique: Purpose and Process | Product Design Glossary
+- **Sources:** Design Critiques: Encourage a Positive Culture to Improve Products, NN/g (https://www.nngroup.com/articles/design-critiques/); Analyse a research session, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/analyse-a-research-session)
+
+#### 132. ResearchOps
+- **URL:** https://lexkonovalov.com/glossary/researchops.html
+- **Category:** UX & Product Architecture
+- **Maturity:** Established
+- **Definition:** ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.
+- **Purpose:** ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.
+- **Key Concepts:** What does ResearchOps cover?, Example: repeated recruitment delays, ResearchOps vs. DesignOps vs. research, What changes when research tools use AI?
+- **How It Works:** ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.
+- **Related Terms:** DesignOps, AI in UX Research, Synthetic User Testing, Product Discovery
+- **SEO Title:** ResearchOps: Research Operations Explained | Product Design Glossary
+- **Sources:** About ResearchOps, ResearchOps Community (https://researchops.community/about/); ResearchOps 101, NN/g (https://www.nngroup.com/articles/research-ops-101/); Getting informed consent for user research, GOV.UK (https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)
 

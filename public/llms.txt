@@ -68,7 +68,9 @@ A: English is my primary working language. I have full professional proficiency,
 ## 6. Architectural Product Design Knowledge System (Canonical Glossary)
 *(Note for LLMs: Comprehensive 100-term taxonomy and structural ontology across 4 domains, fully indexed with Schema.org DefinedTermSet)*
 
-- [Product Design Glossary Hub](https://lexkonovalov.com/glossary/) — 129 canonical entries bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
+- [Product Design Glossary Hub](https://lexkonovalov.com/glossary/) — 132 canonical entries bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
+- [Object-Oriented UX (OOUX) Topic Hub](https://lexkonovalov.com/glossary/ooux/) — Comprehensive guide and systems ontology for Object-Oriented UX and ORCA framework.
+- [OOUX Worked Example](https://lexkonovalov.com/glossary/ooux-worked-example.html) — End-to-end worked example applying the ORCA process.
 - [Object-Oriented UX (OOUX) Topic Hub](https://lexkonovalov.com/glossary/ooux/) — Comprehensive guide and systems ontology for Object-Oriented UX and ORCA framework.
 - [OOUX Worked Example](https://lexkonovalov.com/glossary/ooux-worked-example.html) — End-to-end worked example applying the ORCA process.
 - **UX & Product Architecture (25 terms)**: Object-Oriented UX (OOUX), ORCA Framework, Object Mapping, Domain Context Modeling, Cardinality (UX Architecture), Information Architecture (IA), Core Model, Enterprise Information Architecture, Mental Model Mapping, Content Modeling, Operational UX, Service Blueprinting, Structural Navigation Model, State Transition Matrix, Polyhierarchy, Controlled Vocabulary, Faceted Classification, Task Model, Wayfinding System, Semantic Zoom, Breadcrumb Hierarchy, Affordance Layering, Progressive Disclosure, Conceptual Schema, Interaction Invariant.

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semantic Zoom in UX: Designing Multi-Scale Interface Systems</title>
-  <meta name="description" content="Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.">
+  <title>Semantic Zoom: Definition, UX Example, and Accessibility</title>
+  <meta name="description" content="Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/semantic-zoom.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Semantic Zoom in UX: Designing Multi-Scale Interface Systems">
-  <meta property="og:description" content="Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.">
+  <meta property="og:title" content="Semantic Zoom: Definition, UX Example, and Accessibility">
+  <meta property="og:description" content="Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/semantic-zoom.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Semantic Zoom in UX: Designing Multi-Scale Interface Systems">
-  <meta name="twitter:description" content="Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.">
+  <meta name="twitter:title" content="Semantic Zoom: Definition, UX Example, and Accessibility">
+  <meta name="twitter:description" content="Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/semantic-zoom.html",
+      "name": "Semantic Zoom: Definition, UX Example, and Accessibility",
+      "description": "Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#breadcrumbs"
+      },
+      "citation": [
+        "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom",
+        "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#term",
       "name": "Semantic Zoom",
       "termCode": "semantic-zoom",
-      "description": "Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.",
+      "description": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.",
+      "url": "https://lexkonovalov.com/glossary/semantic-zoom.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/semantic-zoom.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,42 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.</p>
-      </section>
+    <p class="glossary-term-section__text">Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.</p>
+<p class="glossary-term-section__text">For example, a planning view might show monthly totals at one level, daily groups at another, and individual bookings at a detailed level. Optical zoom changes magnification; semantic zoom changes what is represented.</p>
+<p class="glossary-term-section__text">Microsoft's SemanticZoom control is a specific implementation that switches between two related views of grouped content. The broader design concept can involve more than two levels.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-a-hotel-planning-board">
+<h2 id="section-example-a-hotel-planning-board" class="glossary-term-section__title">Example: a hotel planning board</h2>
+<p class="glossary-term-section__text">At the overview level, a manager sees occupancy by week. Selecting a week reveals daily room availability. Opening a day shows the reservations behind its totals.</p>
+<p class="glossary-term-section__text">The transition should preserve the selected date and explain where the user is. Returning to the overview should make it easy to recognize the same period.</p>
+<p class="glossary-term-section__text">Use consistent calculations so a summary can be reconciled with its detail. If filters change the totals, show the active scope.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-when-it-helps">
+<h2 id="section-when-it-helps" class="glossary-term-section__title">When it helps</h2>
+<p class="glossary-term-section__text">Semantic zoom can help when users need both broad patterns and record-level work. It is less useful when extra levels only add navigation to a short list.</p>
+<p class="glossary-term-section__text">Define the questions each level answers and the information users need to decide where to go next.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-accessibility-checks">
+<h2 id="section-accessibility-checks" class="glossary-term-section__title">Accessibility checks</h2>
+<p class="glossary-term-section__text">Provide an operable way to move between levels without relying on a pinch gesture alone. Preserve logical focus, meaningful labels, and an understandable reading order.</p>
+<p class="glossary-term-section__text">For web products, keep browser text resizing available. Semantic zoom is an application interaction and does not replace the user's need to enlarge text.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
+<li><a href="/glossary/affordance-layering.html">Affordance Layering</a></li>
+<li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom" target="_blank" rel="noopener noreferrer">Microsoft: Semantic Zoom</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html" target="_blank" rel="noopener noreferrer">W3C: Understanding Keyboard</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables users to transition smoothly between macro-level structural overviews and micro-level operational details without losing global context.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Information granularity</span><span class="concept-tag">level of detail (LoD)</span><span class="concept-tag">spatial zooming</span><span class="concept-tag">contextual morphing.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">When a user zooms in on a UI canvas or table, low-fidelity abstract aggregates dynamically morph into high-density detail views with contextual actions.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/operational-ux.html">Operational UX</a></li><li><a href="/glossary/progressive-disclosure.html">Progressive Disclosure</a></li><li><a href="/glossary/affordance-layering.html">Affordance Layering</a></li><li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Benjamin B. Bederson, PhotoMesa: A Zoomable Image Browser, ACM</li><li>Daniel Rosenberg, UX Magic</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

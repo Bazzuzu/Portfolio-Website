@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { parseAllPublicationDrafts, ParsedItem } from './parse-publication.ts';
-import { glossaryCategories as baseCategories, glossaryTerms as initialTerms } from '../src/data/glossaryData.ts';
+import { glossaryCategories as baseCategories, glossaryTerms as initialTerms, supportingPages as initialSupporting } from '../src/data/glossaryData.ts';
 
 // 1. Parse all drafts
 const { terms: allParsedTerms, supporting: allParsedSupporting } = parseAllPublicationDrafts();
@@ -11,6 +11,10 @@ allParsedTerms.forEach(t => termsBySlug.set(t.slug, t));
 
 const supportingBySlug = new Map<string, ParsedItem>();
 allParsedSupporting.forEach(s => supportingBySlug.set(s.slug, s));
+
+// Maintain in-memory state across sequential batch executions
+const currentTerms = [...initialTerms];
+const currentSupporting = [...(initialSupporting || [])];
 
 // Define Batch memberships
 export const BATCH_DEFINITIONS = [
@@ -256,15 +260,11 @@ export function executeBatch(targetBatchNumber: number) {
   console.log(`New terms: ${batchDef.newTermSlugs.length}, Supporting: ${batchDef.supportingSlugs.length}, Updated: ${batchDef.updatedSlugs.length}`);
   console.log(`========================================\n`);
 
-  // Read current glossaryData.ts
+  // Read current glossaryData.ts path
   const gdPath = path.resolve('src/data/glossaryData.ts');
 
-  // Load existing glossaryTerms and supportingPages
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { glossaryTerms: currentTerms, supportingPages: currentSupporting = [] } = require('../src/data/glossaryData.ts');
-
-  const updatedTerms = [...currentTerms];
-  const updatedSupporting = [...currentSupporting];
+  const updatedTerms = currentTerms;
+  const updatedSupporting = currentSupporting;
 
   // 1. Apply updates to existing terms
   for (const slug of batchDef.updatedSlugs) {

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operational UX: Designing High-Density Mission-Critical Systems</title>
-  <meta name="description" content="Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.">
+  <title>Operational UX: Designing Reliable Workflows in B2B Tools</title>
+  <meta name="description" content="Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/operational-ux.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Operational UX: Designing High-Density Mission-Critical Systems">
-  <meta property="og:description" content="Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.">
+  <meta property="og:title" content="Operational UX: Designing Reliable Workflows in B2B Tools">
+  <meta property="og:description" content="Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/operational-ux.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Operational UX: Designing High-Density Mission-Critical Systems">
-  <meta name="twitter:description" content="Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.">
+  <meta name="twitter:title" content="Operational UX: Designing Reliable Workflows in B2B Tools">
+  <meta name="twitter:description" content="Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/operational-ux.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/operational-ux.html",
+      "name": "Operational UX: Designing Reliable Workflows in B2B Tools",
+      "description": "Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.nngroup.com/articles/complex-application-design/",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/grid/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/operational-ux.html#term",
       "name": "Operational UX",
       "termCode": "operational-ux",
-      "description": "Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.",
+      "description": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.",
+      "url": "https://lexkonovalov.com/glossary/operational-ux.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/operational-ux.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,38 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.</p>
-      </section>
+    <p class="glossary-term-section__text">Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.</p>
+<p class="glossary-term-section__text">The term is used descriptively rather than as a single standardized method. Relevant products include reservation tools, support queues, inventory systems, and enterprise administration interfaces.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-processing-a-booking-queue">
+<h2 id="section-example-processing-a-booking-queue" class="glossary-term-section__title">Example: processing a booking queue</h2>
+<p class="glossary-term-section__text">A travel operations team needs to identify bookings awaiting ticket issuance. A useful workspace could show the booking reference, departure date, owner, current status, and the reason a booking is blocked.</p>
+<p class="glossary-term-section__text">Opening a booking should preserve enough queue context for the operator to return to the right place. A handoff should identify the next owner and any unresolved work. If ticket issuance fails, the interface should distinguish a confirmed failure from an unknown outcome that needs checking before retrying.</p>
+<p class="glossary-term-section__text">These details affect the quality of the operation as much as the speed of an individual click.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-to-evaluate">
+<h2 id="section-what-to-evaluate" class="glossary-term-section__title">What to evaluate</h2>
+<p class="glossary-term-section__text">Choose measures that reflect the actual workflow, such as successfully completed cases, handling time, rework, and handoff delays. Review them together: faster handling can conceal more downstream corrections.</p>
+<p class="glossary-term-section__text">Test common tasks alongside exceptions, interruptions, and permission changes. Pay particular attention to selection scope in bulk actions, unsaved work, and stale data.</p>
+<p class="glossary-term-section__text">Support keyboard operation and readable information density. When implementing an interactive data grid, provide its required focus management and keyboard behavior. A visual table does not automatically need the ARIA grid role.</p>
+<p class="glossary-term-section__text">Evaluate the complete task with operators, including the tools and information they use outside the product.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/enterprise-information-architecture.html">Enterprise Information Architecture</a></li>
+<li><a href="/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
+<li><a href="/glossary/semantic-zoom.html">Semantic Zoom</a></li>
+<li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.nngroup.com/articles/complex-application-design/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Design Guidelines for Complex Applications</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/grid/" target="_blank" rel="noopener noreferrer">W3C: Grid Pattern</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Eliminates operational fatigue, prevents catastrophic human error, and optimizes workflow latency for workforce operators processing high volumes of transactions under time pressure.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Cognitive throughput</span><span class="concept-tag">situational awareness</span><span class="concept-tag">dense spatial utilization</span><span class="concept-tag">keyboard orchestration.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Interfaces are engineered with compact information density, deterministic keyboard shortcuts, explicit system state indicators, and inline validation to maximize operational velocity.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/enterprise-information-architecture.html">Enterprise Information Architecture</a></li><li><a href="/glossary/state-transition-matrix.html">State Transition Matrix</a></li><li><a href="/glossary/semantic-zoom.html">Semantic Zoom</a></li><li><a href="/glossary/interaction-invariant.html">Interaction Invariant</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Daniel Rosenberg, UX Magic, Interaction Design Foundation</li><li>Nielsen Norman Group, Enterprise Software Design Principles</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controlled Vocabularies in Product UX &amp; Search Architecture</title>
-  <meta name="description" content="A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.">
+  <title>Controlled Vocabulary: Definition and Product Design Example</title>
+  <meta name="description" content="See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/controlled-vocabulary.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Controlled Vocabularies in Product UX &amp; Search Architecture">
-  <meta property="og:description" content="A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.">
+  <meta property="og:title" content="Controlled Vocabulary: Definition and Product Design Example">
+  <meta property="og:description" content="See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/controlled-vocabulary.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Controlled Vocabularies in Product UX &amp; Search Architecture">
-  <meta name="twitter:description" content="A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.">
+  <meta name="twitter:title" content="Controlled Vocabulary: Definition and Product Design Example">
+  <meta name="twitter:description" content="See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/controlled-vocabulary.html",
+      "name": "Controlled Vocabulary: Definition and Product Design Example",
+      "description": "See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.w3.org/TR/skos-primer/",
+        "https://www.w3.org/TR/skos-reference/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#term",
       "name": "Controlled Vocabulary",
       "termCode": "controlled-vocabulary",
-      "description": "A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.",
+      "description": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.",
+      "url": "https://lexkonovalov.com/glossary/controlled-vocabulary.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/controlled-vocabulary.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,60 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.</p>
-      </section>
+    <p class="glossary-term-section__text">A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.</p>
+<p class="glossary-term-section__text">In product design, it can support navigation labels, metadata, filters, search, and documentation. W3C's SKOS provides a model for representing concepts, preferred and alternative labels, and relationships between concepts.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-booking-statuses">
+<h2 id="section-example-booking-statuses" class="glossary-term-section__title">Example: booking statuses</h2>
+<p class="glossary-term-section__text">Suppose teams use “confirmed,” “booked,” and “ticketed” inconsistently. A controlled vocabulary could define:</p>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning in this product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirmed</td>
+<td>The supplier has confirmed the reservation.</td>
+</tr>
+<tr>
+<td>Ticketed</td>
+<td>A ticket has been issued.</td>
+</tr>
+<tr>
+<td>Canceled</td>
+<td>The reservation has been canceled.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The definitions matter because “confirmed” and “ticketed” describe different states in this example. They should not be merged merely because users sometimes treat them as synonyms.</p>
+<p class="glossary-term-section__text">A separate search alias could help users who type “cancelled” find records labeled “Canceled.” Keep display labels separate from stable internal identifiers.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-to-keep-it-useful">
+<h2 id="section-how-to-keep-it-useful" class="glossary-term-section__title">How to keep it useful</h2>
+<p class="glossary-term-section__text">Start with terms that affect actual tasks. Record each term's definition, scope, accepted alternatives, and owner. Check the language with users and domain experts.</p>
+<p class="glossary-term-section__text">Map the vocabulary to interface labels, content fields, and search behavior. Establish how proposed terms are reviewed and how deprecated terms are redirected or migrated.</p>
+<p class="glossary-term-section__text">A vocabulary can provide consistent labels for AI retrieval and outputs when the application uses it. It does not ensure that a model will interpret every term correctly. Test ambiguous queries and preserve the original meaning when translating or summarizing content.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li>
+<li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: SKOS Primer</a></li>
+<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: SKOS Reference</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Eliminates lexical fragmentation, prevents synonymous confusion across disparate teams, and supports deterministic entity parsing for search algorithms and AI systems.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Term normalization</span><span class="concept-tag">synonym rings</span><span class="concept-tag">preferred labels</span><span class="concept-tag">semantic precision.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Information architects define standard terminology registries, mapping colloquially used variants and synonyms back to a standardized canonical entity.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/domain-context-modeling.html">Domain Context Modeling</a></li><li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>ANSI/NISO Z.19 Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies</li><li>Amy Warner, Lexical Analysis for IA</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

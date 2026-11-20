@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 129-term taxonomy across four foundational product design domains
+// Canonical 132-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -60,7 +60,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "ux-product-architecture",
     "name": "UX & Product Architecture",
-    "count": 46,
+    "count": 49,
     "description": "Information Architecture, Domain Modeling, and Conceptual Integrity for complex systems.",
     "primaryFocus": "Information Architecture, Domain Modeling, Conceptual Integrity",
     "representativeSpecs": "OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling",
@@ -628,26 +628,109 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Information Architecture (IA) is the structural discipline of organizing, structuring, labeling, and classifying digital content and functionality to support findability, intuitive wayfinding, and cognitive comprehension across digital ecosystems.",
-    "purpose": "Bridges business content objectives with human search behaviors, minimizing cognitive friction and information overload in large data repositories.",
+    "definition": "Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.",
+    "purpose": "Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.",
     "keyConcepts": [
-      "Taxonomy",
-      "ontology",
-      "labeling systems",
-      "search system mechanics",
-      "wayfinding."
+      "What does information architecture include?",
+      "Example: Finding an invoice",
+      "How do you evaluate information architecture?"
     ],
-    "howItWorks": "Evaluates user search patterns, content inventories, and domain contexts to construct coherent structural navigation hierarchies and associative metadata webs.",
+    "howItWorks": "Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.",
     "relatedTerms": [
-      "Core Model",
-      "Polyhierarchy",
+      "Enterprise Information Architecture",
       "Wayfinding System",
-      "Controlled Vocabulary"
+      "Content Modeling",
+      "Controlled Vocabulary",
+      "Structural Navigation Model"
     ],
-    "seoTitle": "What is Information Architecture? Modern IA Principles",
+    "seoTitle": "Information Architecture (IA): Definition and Examples",
     "sources": [
-      "Louis Rosenfeld, Peter Morville, & Jorge Arango, Information Architecture for the Web and Beyond, O'Reilly",
-      "Abby Covert, How to Make Sense of Any Mess"
+      "The Difference Between IA and Navigation, Nielsen Norman Group (https://www.nngroup.com/articles/ia-vs-navigation/)",
+      "Card Sorting vs. Tree Testing, Nielsen Norman Group (https://www.nngroup.com/articles/card-sorting-tree-testing-differences/)",
+      "Tree Testing, Nielsen Norman Group (https://www.nngroup.com/articles/tree-testing/)"
+    ],
+    "seoDescription": "Learn how information architecture organizes content, labels, navigation, and search, with a booking example and methods for testing findability.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/information-architecture.html",
+    "contentMarkdown": "# Information Architecture (IA)\n\nInformation architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.\n\n## What does information architecture include?\n\nIA decisions determine where information belongs and how people reach it. A content model identifies the types of information a product contains. A taxonomy groups that information, and labels give those groups names. Navigation, search, and filters provide ways to find it.\n\nFor example, a booking product might treat a Trip as a container for flight bookings, traveler details, and documents. An invoice belongs to a booking, and users may also need to find invoices across several trips. That relationship can support both a link on the booking page and a separate invoice search.\n\n## Example: Finding an invoice\n\nA travel team’s portal puts invoices in a section called “Resources.” Research shows that employees look inside their bookings first. The team adds a clearly named Invoices section to each booking and links it from the booking summary. Search can also retrieve invoices by booking reference.\n\nThe proposed structure follows the employee’s task and keeps the same invoice accessible through more than one route. Test whether users can find the invoice, recognize the right booking, and retrieve the document.\n\n## How do you evaluate information architecture?\n\nStart with an inventory of the content and the tasks users need to complete. Card sorting can reveal how participants group and name information. Once a hierarchy is proposed, tree testing evaluates whether people can find a destination using its categories and labels. Test the working interface as well to see whether users notice and understand the navigation.\n\nAt enterprise scale, IA also needs shared definitions and ownership across products and teams. See [Enterprise Information Architecture](/glossary/enterprise-information-architecture.html) for that broader scope.\n\n## Related terms\n\n- [Enterprise Information Architecture](/glossary/enterprise-information-architecture.html)\n- [Wayfinding System](/glossary/wayfinding-system.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n\n## Sources\n\n- [The Difference Between IA and Navigation, Nielsen Norman Group](https://www.nngroup.com/articles/ia-vs-navigation/)\n- [Card Sorting vs. Tree Testing, Nielsen Norman Group](https://www.nngroup.com/articles/card-sorting-tree-testing-differences/)\n- [Tree Testing, Nielsen Norman Group](https://www.nngroup.com/articles/tree-testing/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/information-architecture.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/information-architecture.html",
+        "name": "Information Architecture (IA): Definition and Examples",
+        "description": "Learn how information architecture organizes content, labels, navigation, and search, with a booking example and methods for testing findability.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/information-architecture.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/information-architecture.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/ia-vs-navigation/",
+          "https://www.nngroup.com/articles/card-sorting-tree-testing-differences/",
+          "https://www.nngroup.com/articles/tree-testing/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/information-architecture.html#term",
+        "name": "Information Architecture (IA)",
+        "termCode": "information-architecture",
+        "description": "Information architecture (IA) is the organization and labeling of content and functionality so people can find, understand, and use it. In websites and apps, it connects categories, relationships, labels, navigation, and search to the tasks people need to complete.",
+        "url": "https://lexkonovalov.com/glossary/information-architecture.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/information-architecture.html#webpage"
+        },
+        "alternateName": [
+          "IA",
+          "Information Architecture"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/information-architecture.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Information Architecture (IA)",
+            "item": "https://lexkonovalov.com/glossary/information-architecture.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "IA",
+      "Information Architecture"
     ]
   },
   {
@@ -657,24 +740,106 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Proprietary / Framework-Specific",
-    "definition": "The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.",
-    "purpose": "Overcomes internal organizational biases and bloated navigational hierarchies by directly serving search-first, task-oriented user entry behaviors.",
+    "definition": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.",
+    "purpose": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.",
     "keyConcepts": [
-      "Inward paths",
-      "core task fulfillment",
-      "forward paths",
-      "business objectives."
+      "What does a core model contain?",
+      "Example: A hotel room detail page",
+      "How do you use the Core Model?"
     ],
-    "howItWorks": "Teams map incoming traffic sources (inward paths), define essential user tasks and business objectives for the node, and establish contextually relevant onward routes (forward paths).",
+    "howItWorks": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Wayfinding System",
-      "Conversion Funnel"
+      "Conversion Funnel",
+      "Jobs to Be Done (JTBD)"
     ],
-    "seoTitle": "The Core Model: Inside-Out Information Architecture Guide",
+    "seoTitle": "The Core Model: User Tasks, Content, and Forward Paths",
     "sources": [
-      "Are Halland, The Core Model: Designing Inside Out for Better Results, A List Apart",
-      "TheCoreModel.com (https://www.thecoremodel.com)"
+      "The Core Model, Are Halland (https://www.thecoremodel.com/)",
+      "The Core Model: Designing Inside Out for Better Results, Ida Aalen / A List Apart (https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/)",
+      "JTBD and the Core Model, Are Halland (https://www.thecoremodel.com/jtbd/)"
+    ],
+    "seoDescription": "Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/core-model.html",
+    "contentMarkdown": "# Core Model\n\nThe Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.\n\n## What does a core model contain?\n\nChoose a core page and record its user tasks, business goals, inward paths, core content, and forward paths. These fields help a team decide what the experience must support before working on its layout.\n\n## Example: A hotel room detail page\n\n| Core Model field | Example |\n|---|---|\n| Core page | Details for a family room. |\n| User tasks | Check capacity, bed arrangements, cancellation terms, and availability for the intended dates. |\n| Business goals | Help travelers choose a suitable room and complete a booking. |\n| Inward paths | A room search result, a saved link, or a search-engine result. |\n| Core content | Room capacity, bed types, photos, applicable terms, and availability and price for selected dates. |\n| Forward paths | Select dates, book the room, compare another room, or ask a question. |\n\nA traveler entering from a saved link needs enough context to identify the room and select dates. Someone arriving from dated search results expects the price and availability to match those dates. The model makes these entry conditions explicit.\n\n## How do you use the Core Model?\n\nDevelop the model with people responsible for user research, content, product, and business outcomes. Use research to establish user tasks, then sketch how the page can support them and the intended next steps.\n\nTest the proposed experience through realistic entry paths. Can a traveler confirm the room fits their party and find the applicable cancellation terms? Can they proceed with their chosen dates? Revisit the model when the test reveals missing information or an onward path that interrupts the task.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Wayfinding System](/glossary/wayfinding-system.html)\n- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n\n## Sources\n\n- [The Core Model, Are Halland](https://www.thecoremodel.com/)\n- [The Core Model: Designing Inside Out for Better Results, Ida Aalen / A List Apart](https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/)\n- [JTBD and the Core Model, Are Halland](https://www.thecoremodel.com/jtbd/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/core-model.html",
+        "name": "The Core Model: User Tasks, Content, and Forward Paths",
+        "description": "Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/core-model.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/core-model.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.thecoremodel.com/",
+          "https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/",
+          "https://www.thecoremodel.com/jtbd/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#term",
+        "name": "Core Model",
+        "termCode": "core-model",
+        "description": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.",
+        "url": "https://lexkonovalov.com/glossary/core-model.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/core-model.html#webpage"
+        },
+        "alternateName": [
+          "The Core Model"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Core Model",
+            "item": "https://lexkonovalov.com/glossary/core-model.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "The Core Model"
     ]
   },
   {
@@ -689,14 +854,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
-    "purpose": "Prevents operational silos, fractured data views, and enterprise friction by harmonizing disparate business software suites under coherent navigation and semantic models.",
+    "purpose": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
     "keyConcepts": [
-      "Multi-tenancy",
-      "unified metadata models",
-      "access-level scoping",
-      "distributed ontologies."
+      "What does enterprise information architecture include?",
+      "An enterprise IA example: expense claims",
+      "How do you start?",
+      "How is enterprise IA different from a sitemap?"
     ],
-    "howItWorks": "Integrates corporate domain schemas with role-based access models, deploying centralized taxonomies and modular interaction patterns across business suites.",
+    "howItWorks": "Enterprise information architecture (EIA) organizes information across an organization’s products, repositories, and services so people can find, understand, and use it. It connects shared vocabulary, classification, metadata, navigation, search, and governance across teams and systems.",
     "relatedTerms": [
       "Information Architecture (IA)",
       "Domain Context Modeling",
@@ -796,25 +961,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Mental Model Mapping is the research practice of systematically diagramming a user's internal cognitive beliefs, situational reasoning, and workflows relative to a real-world task, independent of technological constraints.",
-    "purpose": "Identifies systemic disconnects between how users believe a system functions and the underlying system mechanics, guiding intentional interaction architectures.",
+    "definition": "Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.",
+    "purpose": "Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.",
     "keyConcepts": [
-      "Cognitive schema",
-      "task space mapping",
-      "conceptual gap analysis",
-      "behavioral patterns."
+      "How to build a useful map",
+      "Example: planning a family trip",
+      "Keep the evidence visible"
     ],
-    "howItWorks": "Qualitative behavioral research is synthesized into affinity matrices showing user motivations, contrasted against existing technological touchpoints to discover missing capabilities.",
+    "howItWorks": "Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Jobs to Be Done (JTBD)",
       "Task Model",
       "Conceptual Schema"
     ],
-    "seoTitle": "Mental Model Mapping: Aligning UX with User Cognition",
+    "seoTitle": "Mental Model Mapping: Definition, Research, and Example",
     "sources": [
-      "Indi Young, Mental Models: Aligning Design Strategy with Human Behavior, Rosenfeld Media",
-      "Don Norman, The Design of Everyday Things"
+      "Nielsen Norman Group: Mental Models (https://www.nngroup.com/articles/mental-models/)",
+      "Indi Young: Moviegoer Mental Model Diagram (https://indiyoung.com/examples-mmd-moviegoer/)"
+    ],
+    "seoDescription": "Learn how mental model mapping connects people",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/mental-model-mapping.html",
+    "contentMarkdown": "# Mental Model Mapping\n\nMental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.\n\nA mental model reflects a person's understanding; it can be incomplete or differ from how the system actually works. Research is needed to distinguish observed expectations from a team's assumptions.\n\n## How to build a useful map\n\nGather accounts of real experiences through interviews and, where appropriate, observation. Look for recurring goals, reasoning, expectations, and workarounds. Preserve meaningful differences between people.\n\nIndi Young's mental model diagrams organize patterns in people's thinking and compare them with the support an organization provides. That is one established approach; teams should name the method they use.\n\n## Example: planning a family trip\n\nResearch might show that travelers first work out school-date constraints, then compare total trip cost, and only later choose specific flights.\n\nA map could group those activities and the reasoning behind them. The team could compare each group with existing support: a date picker, fare results, baggage information, and a saved-trip feature.\n\nIf users expect the displayed price to include baggage while the product adds it later, the mismatch becomes a concrete design question to investigate.\n\n## Keep the evidence visible\n\nLink the map to research observations and label hypotheses. Avoid treating a navigation tree or an internally invented persona as evidence of users' thinking.\n\nA task model describes activities and dependencies. Mental model mapping examines the understanding and reasoning behind behavior; the two can inform each other. Update the map when new research challenges its patterns.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n- [Task Model](/glossary/task-model.html)\n- [Conceptual Schema](/glossary/conceptual-schema.html)\n\n## Sources\n\n- [Nielsen Norman Group: Mental Models](https://www.nngroup.com/articles/mental-models/)\n- [Indi Young: Moviegoer Mental Model Diagram](https://indiyoung.com/examples-mmd-moviegoer/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/mental-model-mapping.html",
+        "name": "Mental Model Mapping: Definition, Research, and Example",
+        "description": "Learn how mental model mapping connects people's goals and expectations to product support, with a travel-planning example and research checks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/mental-models/",
+          "https://indiyoung.com/examples-mmd-moviegoer/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#term",
+        "name": "Mental Model Mapping",
+        "termCode": "mental-model-mapping",
+        "description": "Mental model mapping is a research and synthesis practice for representing how people understand, approach, and make decisions about an activity or system. Designers use it to identify where a product supports those expectations and where gaps or mismatches occur.",
+        "url": "https://lexkonovalov.com/glossary/mental-model-mapping.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/mental-model-mapping.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mental Model Mapping",
+            "item": "https://lexkonovalov.com/glossary/mental-model-mapping.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -824,24 +1062,108 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.",
-    "purpose": "Enables modular content reuse, headless content delivery across multi-platform surfaces, and consistent information parsing for search engines and language models.",
+    "definition": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.",
+    "purpose": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.",
     "keyConcepts": [
-      "Content types",
-      "structural attributes",
-      "presentation agnosticism",
-      "relational references."
+      "What does a content model include?",
+      "Example: Reusing room content on a hotel site",
+      "How do you develop a content model?"
     ],
-    "howItWorks": "Content strategists and architects dissect editorial requirements into typed models, defining character constraints, validation rules, and inter-entity associations in headless CMS engines.",
+    "howItWorks": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.",
     "relatedTerms": [
       "Object Mapping",
       "Structured Data for LLMs",
-      "Headless UI Architecture"
+      "Headless UI Architecture",
+      "Information Architecture (IA)"
     ],
-    "seoTitle": "Content Modeling Guide: Structuring Headless Content",
+    "seoTitle": "Content Modeling: Types, Fields, and Reusable Content",
     "sources": [
-      "Rachel Lovinger, Nimble: A Thinking Person's Guide to Content Modeling, A List Apart",
-      "Carrie Hane & Mike Atherton, Designing Connected Content, New Riders"
+      "Content Modeling Basics, Contentful (https://www.contentful.com/help/content-models/content-modelling-basics/)",
+      "References, Contentful (https://www.contentful.com/help/references/)",
+      "Available Validations, Contentful (https://www.contentful.com/help/fields/available-validations/)"
+    ],
+    "seoDescription": "Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/content-modeling.html",
+    "contentMarkdown": "# Content Modeling\n\nContent modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.\n\n## What does a content model include?\n\n| Part | Example decision |\n|---|---|\n| Content type | Represent a hotel’s Room Type as a reusable type of content. |\n| Fields | Store the room type’s name, capacity, description, and photos. |\n| References | Link the room type to Hotel and Amenity entries. |\n| Validation | Require a name and capacity, and restrict an Amenity reference to the appropriate content type. |\n\nThe model describes the structure. An entry contains the actual content, such as the description and photos for a Family Room.\n\n## Example: Reusing room content on a hotel site\n\nA hotel uses the same Family Room content in a results card and a room detail page. The card shows the name, capacity, and lead photo. The detail page uses those fields plus the description, gallery, and amenity references.\n\nBoth views read the same room entry. Updating a shared Amenity entry gives consuming views a consistent source for its wording. Publishing and delivery determine when that update appears. The implementation controls which fields are displayed and how.\n\nTreat the current price and availability as booking data with their own update requirements. The content model can identify the room type that the booking system uses when it returns those values.\n\n## How do you develop a content model?\n\nInventory representative content and discuss publishing needs with editors, designers, and developers. Define the types and references, then test them with realistic entries. Include a room with a long name, missing optional content, and localized text if the product supports it.\n\nHave an editor create and update an entry, then review it in each consuming view. Check whether the model supports the intended content without duplicating information or forcing editors to use a field for an unrelated purpose.\n\n## Related terms\n\n- [Object Mapping](/glossary/object-mapping.html)\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n- [Headless UI Architecture](/glossary/headless-ui-architecture.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n\n## Sources\n\n- [Content Modeling Basics, Contentful](https://www.contentful.com/help/content-models/content-modelling-basics/)\n- [References, Contentful](https://www.contentful.com/help/references/)\n- [Available Validations, Contentful](https://www.contentful.com/help/fields/available-validations/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/content-modeling.html",
+        "name": "Content Modeling: Types, Fields, and Reusable Content",
+        "description": "Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/content-modeling.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/content-modeling.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.contentful.com/help/content-models/content-modelling-basics/",
+          "https://www.contentful.com/help/references/",
+          "https://www.contentful.com/help/fields/available-validations/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#term",
+        "name": "Content Modeling",
+        "termCode": "content-modeling",
+        "description": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.",
+        "url": "https://lexkonovalov.com/glossary/content-modeling.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/content-modeling.html#webpage"
+        },
+        "alternateName": [
+          "Content Modelling",
+          "Content Model"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Content Modeling",
+            "item": "https://lexkonovalov.com/glossary/content-modeling.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Content Modelling",
+      "Content Model"
     ]
   },
   {
@@ -851,25 +1173,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Coined / Interpretive",
-    "definition": "Operational UX is an interaction design paradigm focused on high-density, mission-critical operational tools—such as logistics, travel dispatch, and financial execution—where cognitive throughput, error recovery, and speed outweigh visual aesthetics.",
-    "purpose": "Eliminates operational fatigue, prevents catastrophic human error, and optimizes workflow latency for workforce operators processing high volumes of transactions under time pressure.",
+    "definition": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.",
+    "purpose": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.",
     "keyConcepts": [
-      "Cognitive throughput",
-      "situational awareness",
-      "dense spatial utilization",
-      "keyboard orchestration."
+      "Example: processing a booking queue",
+      "What to evaluate"
     ],
-    "howItWorks": "Interfaces are engineered with compact information density, deterministic keyboard shortcuts, explicit system state indicators, and inline validation to maximize operational velocity.",
+    "howItWorks": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.",
     "relatedTerms": [
       "Enterprise Information Architecture",
       "State Transition Matrix",
       "Semantic Zoom",
       "Interaction Invariant"
     ],
-    "seoTitle": "Operational UX: Designing High-Density Mission-Critical Systems",
+    "seoTitle": "Operational UX: Designing Reliable Workflows in B2B Tools",
     "sources": [
-      "Daniel Rosenberg, UX Magic, Interaction Design Foundation",
-      "Nielsen Norman Group, Enterprise Software Design Principles"
+      "Nielsen Norman Group: Design Guidelines for Complex Applications (https://www.nngroup.com/articles/complex-application-design/)",
+      "W3C: Grid Pattern (https://www.w3.org/WAI/ARIA/apg/patterns/grid/)"
+    ],
+    "seoDescription": "Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/operational-ux.html",
+    "contentMarkdown": "# Operational UX\n\nOperational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.\n\nThe term is used descriptively rather than as a single standardized method. Relevant products include reservation tools, support queues, inventory systems, and enterprise administration interfaces.\n\n## Example: processing a booking queue\n\nA travel operations team needs to identify bookings awaiting ticket issuance. A useful workspace could show the booking reference, departure date, owner, current status, and the reason a booking is blocked.\n\nOpening a booking should preserve enough queue context for the operator to return to the right place. A handoff should identify the next owner and any unresolved work. If ticket issuance fails, the interface should distinguish a confirmed failure from an unknown outcome that needs checking before retrying.\n\nThese details affect the quality of the operation as much as the speed of an individual click.\n\n## What to evaluate\n\nChoose measures that reflect the actual workflow, such as successfully completed cases, handling time, rework, and handoff delays. Review them together: faster handling can conceal more downstream corrections.\n\nTest common tasks alongside exceptions, interruptions, and permission changes. Pay particular attention to selection scope in bulk actions, unsaved work, and stale data.\n\nSupport keyboard operation and readable information density. When implementing an interactive data grid, provide its required focus management and keyboard behavior. A visual table does not automatically need the ARIA grid role.\n\nEvaluate the complete task with operators, including the tools and information they use outside the product.\n\n## Related terms\n\n- [Enterprise Information Architecture](/glossary/enterprise-information-architecture.html)\n- [State Transition Matrix](/glossary/state-transition-matrix.html)\n- [Semantic Zoom](/glossary/semantic-zoom.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [Nielsen Norman Group: Design Guidelines for Complex Applications](https://www.nngroup.com/articles/complex-application-design/)\n- [W3C: Grid Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/grid/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/operational-ux.html",
+        "name": "Operational UX: Designing Reliable Workflows in B2B Tools",
+        "description": "Understand operational UX with a booking-queue example and practical checks for task completion, state visibility, handoffs, errors, and accessibility.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/operational-ux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/operational-ux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/complex-application-design/",
+          "https://www.w3.org/WAI/ARIA/apg/patterns/grid/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#term",
+        "name": "Operational UX",
+        "termCode": "operational-ux",
+        "description": "Operational UX describes the design of interfaces and workflows that people use to carry out recurring business operations. It focuses on completing work accurately, understanding its status, and handling exceptions across roles and systems.",
+        "url": "https://lexkonovalov.com/glossary/operational-ux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/operational-ux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/operational-ux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Operational UX",
+            "item": "https://lexkonovalov.com/glossary/operational-ux.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -879,24 +1273,103 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Service Blueprinting is an operational diagramming methodology that visualizes end-to-end service delivery processes, mapping customer touchpoints against frontstage employee actions, backstage operational workflows, and internal support systems.",
-    "purpose": "Uncovers cross-departmental bottlenecks, system failures, and hidden technical dependencies that disrupt customer-facing interactions.",
+    "definition": "Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.",
+    "purpose": "Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.",
     "keyConcepts": [
-      "Line of visibility",
-      "frontstage interactions",
-      "backstage operations",
-      "support processes."
+      "What does a service blueprint include?",
+      "Example: Changing a flight",
+      "How do you use a blueprint?"
     ],
-    "howItWorks": "Cross-functional workflows are chronologically mapped on vertical swimlanes across the line of customer interaction, exposing technological triggers and operational friction.",
+    "howItWorks": "Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.",
     "relatedTerms": [
       "Customer Journey Mapping",
       "Operational UX",
-      "Information Architecture"
+      "Information Architecture (IA)"
     ],
-    "seoTitle": "What is a Service Blueprint? Components & Blueprinting Methods",
+    "seoTitle": "Service Blueprinting: Components and a Practical Example",
     "sources": [
-      "G. Lynn Shostack, Designing Services That Deliver, Harvard Business Review",
-      "Jim Kalbach, Mapping Experiences, O'Reilly"
+      "Service Blueprints: Definition, Nielsen Norman Group (https://www.nngroup.com/articles/service-blueprints-definition/)",
+      "Service Blueprinting FAQ, Nielsen Norman Group (https://www.nngroup.com/articles/service-blueprinting-faq/)"
+    ],
+    "seoDescription": "Learn how a service blueprint connects customer actions with frontstage, backstage, and support work, using a flight-change example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/service-blueprinting.html",
+    "contentMarkdown": "# Service Blueprinting\n\nService blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.\n\n## What does a service blueprint include?\n\nStart with a specific customer journey and map the service work around it. The line of interaction marks customer contact with the organization. The line of visibility separates work customers can see from work behind the scenes. The line of internal interaction separates customer-facing staff from supporting functions.\n\nInclude evidence such as forms, messages, and documents that participants encounter. Add owners, dependencies, and timing where they help explain how the service works.\n\n## Example: Changing a flight\n\nThis simplified blueprint follows a traveler who wants to move a booked flight.\n\n| Layer | Request the change | Review the option | Complete the change |\n|---|---|---|---|\n| Customer action | Asks for a Friday flight. | Reviews the price and terms. | Approves the change and pays any amount due. |\n| Frontstage interaction | The app acknowledges the request. | An agent presents the quote and its expiry. | The app reports the outcome. |\n| Backstage action | An agent checks the booking and fare rules. | The booking system calculates a new fare. | Ticketing issues the revised ticket after the required checks. |\n| Supporting processes and systems | Maintain booking records and access to fare inventory. | Provide pricing and payment services. | Process payment where needed and deliver confirmation. |\n| Evidence | Request acknowledgment. | Dated quote and change conditions. | Revised ticket and confirmation message. |\n\nThe map can reveal a gap between payment and ticket issuance. The team can identify who handles a failure at that point, what confirms successful issuance, and what the traveler should be told while the issue is resolved.\n\n## How do you use a blueprint?\n\nWalk through the actual service with frontline and operations staff, supported by customer research and operational records. Mark uncertain steps, assign owners to the most important gaps, and test the proposed changes. A journey map supplies the customer’s perspective. The blueprint adds the work and dependencies behind that experience.\n\n## Related terms\n\n- [Customer Journey Mapping](/glossary/customer-journey-mapping.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n\n## Sources\n\n- [Service Blueprints: Definition, Nielsen Norman Group](https://www.nngroup.com/articles/service-blueprints-definition/)\n- [Service Blueprinting FAQ, Nielsen Norman Group](https://www.nngroup.com/articles/service-blueprinting-faq/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/service-blueprinting.html",
+        "name": "Service Blueprinting: Components and a Practical Example",
+        "description": "Learn how a service blueprint connects customer actions with frontstage, backstage, and support work, using a flight-change example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/service-blueprints-definition/",
+          "https://www.nngroup.com/articles/service-blueprinting-faq/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#term",
+        "name": "Service Blueprinting",
+        "termCode": "service-blueprinting",
+        "description": "Service blueprinting is a method for mapping how an organization delivers a service. A service blueprint connects customer actions with the visible interactions, backstage work, and supporting processes that make those interactions possible.",
+        "url": "https://lexkonovalov.com/glossary/service-blueprinting.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#webpage"
+        },
+        "alternateName": [
+          "Service Blueprint"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/service-blueprinting.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Service Blueprinting",
+            "item": "https://lexkonovalov.com/glossary/service-blueprinting.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Service Blueprint"
     ]
   },
   {
@@ -1110,25 +1583,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.",
-    "purpose": "Accommodates divergent user mental models and alternate discovery paths, preventing search failures caused by rigid, singular classification silos.",
+    "definition": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.",
+    "purpose": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.",
     "keyConcepts": [
-      "Multiple inheritance",
-      "canonical indexing",
-      "taxonomy nodes",
-      "relational routing."
+      "Polyhierarchy and faceted classification",
+      "Example: two routes to one resource",
+      "What to check"
     ],
-    "howItWorks": "The database assigns multiple categorical parent references to an entity while enforcing canonical URI references to avoid SEO duplication penalties.",
+    "howItWorks": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Faceted Classification",
       "Core Model",
       "Controlled Vocabulary"
     ],
-    "seoTitle": "Polyhierarchy in Information Architecture: UX Classification Patterns",
+    "seoTitle": "Polyhierarchy: Definition, Navigation Example, and Tradeoffs",
     "sources": [
-      "Karl Fast & Peter Morville, Information Architecture, O'Reilly",
-      "ISO 25964 Thesauri and Interoperability with Other Vocabularies"
+      "W3C: SKOS Primer — Semantic Relationships (https://www.w3.org/TR/skos-primer/)",
+      "W3C: SKOS Reference — Semantic Relations (https://www.w3.org/TR/skos-reference/)"
+    ],
+    "seoDescription": "Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/polyhierarchy.html",
+    "contentMarkdown": "# Polyhierarchy\n\nA polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.\n\nFor example, “Design tokens” could appear under both “Design systems” and “Design engineering.” Both paths lead to the same glossary entry. The entry does not need to be copied to support multiple placements.\n\nSKOS permits multiple broader relationships, making it one way to represent this structure.\n\n## Polyhierarchy and faceted classification\n\nPolyhierarchy organizes broader and narrower concepts. Faceted classification describes items through separate dimensions.\n\nIn a resource library, a guide might be placed under both “Accessibility” and “Design systems.” Its facets might separately describe format, reading level, and publication date.\n\nThese approaches can work together. The distinction helps teams decide whether an additional placement expresses a category relationship or whether the attribute belongs in a filter.\n\n## Example: two routes to one resource\n\nA component documentation page could be reachable through “Components → Form controls → Date picker” and “Patterns → Booking → Date picker.”\n\nIn this example, the product keeps a single documentation record and stable URL. It can show a breadcrumb appropriate to the selected navigation context, with a clear route back to the relevant section.\n\n## What to check\n\nUse labels people understand, document the reason for each placement, and test whether users can find the resource through expected paths.\n\nAvoid cycles that make a concept its own ancestor. If category paths generate different URLs for the same content, handle canonicalization deliberately. Multiple navigation placements do not require multiple indexable copies of a page.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Faceted Classification](/glossary/faceted-classification.html)\n- [Core Model](/glossary/core-model.html)\n- [Controlled Vocabulary](/glossary/controlled-vocabulary.html)\n\n## Sources\n\n- [W3C: SKOS Primer — Semantic Relationships](https://www.w3.org/TR/skos-primer/)\n- [W3C: SKOS Reference — Semantic Relations](https://www.w3.org/TR/skos-reference/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/polyhierarchy.html",
+        "name": "Polyhierarchy: Definition, Navigation Example, and Tradeoffs",
+        "description": "Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/TR/skos-primer/",
+          "https://www.w3.org/TR/skos-reference/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#term",
+        "name": "Polyhierarchy",
+        "termCode": "polyhierarchy",
+        "description": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.",
+        "url": "https://lexkonovalov.com/glossary/polyhierarchy.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Polyhierarchy",
+            "item": "https://lexkonovalov.com/glossary/polyhierarchy.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1138,24 +1684,96 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Established",
-    "definition": "A Controlled Vocabulary is an explicitly managed, normalized list of authorized terms, phrases, and semantic synonyms used across a product ecosystem to eliminate ambiguity in labeling, data entry, and indexing.",
-    "purpose": "Eliminates lexical fragmentation, prevents synonymous confusion across disparate teams, and supports deterministic entity parsing for search algorithms and AI systems.",
+    "definition": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.",
+    "purpose": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.",
     "keyConcepts": [
-      "Term normalization",
-      "synonym rings",
-      "preferred labels",
-      "semantic precision."
+      "Example: booking statuses",
+      "How to keep it useful"
     ],
-    "howItWorks": "Information architects define standard terminology registries, mapping colloquially used variants and synonyms back to a standardized canonical entity.",
+    "howItWorks": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Domain Context Modeling",
       "Structured Data for LLMs"
     ],
-    "seoTitle": "Controlled Vocabularies in Product UX & Search Architecture",
+    "seoTitle": "Controlled Vocabulary: Definition and Product Design Example",
     "sources": [
-      "ANSI/NISO Z.19 Guidelines for the Construction, Format, and Management of Monolingual Controlled Vocabularies",
-      "Amy Warner, Lexical Analysis for IA"
+      "W3C: SKOS Primer (https://www.w3.org/TR/skos-primer/)",
+      "W3C: SKOS Reference (https://www.w3.org/TR/skos-reference/)"
+    ],
+    "seoDescription": "See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/controlled-vocabulary.html",
+    "contentMarkdown": "# Controlled Vocabulary\n\nA controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.\n\nIn product design, it can support navigation labels, metadata, filters, search, and documentation. W3C's SKOS provides a model for representing concepts, preferred and alternative labels, and relationships between concepts.\n\n## Example: booking statuses\n\nSuppose teams use “confirmed,” “booked,” and “ticketed” inconsistently. A controlled vocabulary could define:\n\n| Term | Meaning in this product |\n|---|---|\n| Confirmed | The supplier has confirmed the reservation. |\n| Ticketed | A ticket has been issued. |\n| Canceled | The reservation has been canceled. |\n\nThe definitions matter because “confirmed” and “ticketed” describe different states in this example. They should not be merged merely because users sometimes treat them as synonyms.\n\nA separate search alias could help users who type “cancelled” find records labeled “Canceled.” Keep display labels separate from stable internal identifiers.\n\n## How to keep it useful\n\nStart with terms that affect actual tasks. Record each term's definition, scope, accepted alternatives, and owner. Check the language with users and domain experts.\n\nMap the vocabulary to interface labels, content fields, and search behavior. Establish how proposed terms are reviewed and how deprecated terms are redirected or migrated.\n\nA vocabulary can provide consistent labels for AI retrieval and outputs when the application uses it. It does not ensure that a model will interpret every term correctly. Test ambiguous queries and preserve the original meaning when translating or summarizing content.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Structured Data for LLMs](/glossary/structured-data-for-llms.html)\n\n## Sources\n\n- [W3C: SKOS Primer](https://www.w3.org/TR/skos-primer/)\n- [W3C: SKOS Reference](https://www.w3.org/TR/skos-reference/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/controlled-vocabulary.html",
+        "name": "Controlled Vocabulary: Definition and Product Design Example",
+        "description": "See how a controlled vocabulary keeps product labels, search terms, and content consistent, with a booking-status example and simple governance rules.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.w3.org/TR/skos-primer/",
+          "https://www.w3.org/TR/skos-reference/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#term",
+        "name": "Controlled Vocabulary",
+        "termCode": "controlled-vocabulary",
+        "description": "A controlled vocabulary is a managed set of terms used to describe and organize information consistently. It defines which terms to use, what they mean, and, where useful, how synonyms and related concepts connect.",
+        "url": "https://lexkonovalov.com/glossary/controlled-vocabulary.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/controlled-vocabulary.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Controlled Vocabulary",
+            "item": "https://lexkonovalov.com/glossary/controlled-vocabulary.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1165,24 +1783,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.",
-    "purpose": "Powers high-precision discovery in vast, multi-attribute enterprise catalogs and e-commerce inventories without forcing users down rigid navigational paths.",
+    "definition": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.",
+    "purpose": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.",
     "keyConcepts": [
-      "Orthogonal facets",
-      "parametric filtering",
-      "attribute aggregation",
-      "dynamic counts."
+      "How do facets work?",
+      "Example: Narrowing flight results",
+      "What should teams model and test?"
     ],
-    "howItWorks": "Content attributes are indexed along independent dimensions (e.g., Price, Dimension, Material), allowing real-time parametric queries to filter active datasets.",
+    "howItWorks": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Polyhierarchy",
       "Content Modeling"
     ],
-    "seoTitle": "Faceted Classification: Designing Advanced UX Filter Architectures",
+    "seoTitle": "Faceted Classification: Categories, Filters, and Examples",
     "sources": [
-      "S. R. Ranganathan, The Colon Classification",
-      "Daniel Tunkelang, Faceted Search, Morgan & Claypool"
+      "Filters vs. Facets, Nielsen Norman Group (https://www.nngroup.com/articles/filters-vs-facets/)",
+      "Faceting, Algolia (https://www.algolia.com/doc/guides/managing-results/refine-results/faceting)"
+    ],
+    "seoDescription": "Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/faceted-classification.html",
+    "contentMarkdown": "# Faceted Classification\n\nFaceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.\n\n## How do facets work?\n\nEach item has values for the facets relevant to it. Faceted navigation exposes those values as filters. The product must define how selections combine and how counts change as the result set narrows.\n\n## Example: Narrowing flight results\n\nA traveler selects Nonstop, Morning departure, and either Airline A or Airline B. In this example, the system combines different facets with AND and the two airlines with OR. Results must satisfy all three dimensions while matching either selected airline.\n\nShow selected filters, make them removable, and update counts consistently with the chosen logic. If no flights match, identify the active constraints and provide a way to relax them. The exact combination rules should follow the product’s data and users’ expectations.\n\n## What should teams model and test?\n\nUse research to choose dimensions people actually use to decide. Define consistent values and handling for missing data. Avoid presenting two labels for the same cabin category unless the distinction matters.\n\nTest a realistic search from a broad result set to a suitable option. Check whether users understand the labels, selected states, counts, and effect of clearing a filter. Faceted classification depends on maintained metadata as well as a usable filter interface.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Polyhierarchy](/glossary/polyhierarchy.html)\n- [Content Modeling](/glossary/content-modeling.html)\n\n## Sources\n\n- [Filters vs. Facets, Nielsen Norman Group](https://www.nngroup.com/articles/filters-vs-facets/)\n- [Faceting, Algolia](https://www.algolia.com/doc/guides/managing-results/refine-results/faceting)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/faceted-classification.html",
+        "name": "Faceted Classification: Categories, Filters, and Examples",
+        "description": "Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/filters-vs-facets/",
+          "https://www.algolia.com/doc/guides/managing-results/refine-results/faceting"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#term",
+        "name": "Faceted Classification",
+        "termCode": "faceted-classification",
+        "description": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.",
+        "url": "https://lexkonovalov.com/glossary/faceted-classification.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Faceted Classification",
+            "item": "https://lexkonovalov.com/glossary/faceted-classification.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1192,24 +1883,96 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
-    "definition": "A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.",
-    "purpose": "Identifies cognitive burden, redundant confirmation loops, and procedural friction points within digital processes before writing software requirements.",
+    "definition": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.",
+    "purpose": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.",
     "keyConcepts": [
-      "Hierarchical task analysis",
-      "cognitive triggers",
-      "preconditions",
-      "operational dependencies."
+      "Example: approving an invoice",
+      "How to build one"
     ],
-    "howItWorks": "Designers dissect goals into sub-tasks, charting preconditions, required system inputs, decision forks, and final success criteria.",
+    "howItWorks": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.",
     "relatedTerms": [
       "Jobs to Be Done (JTBD)",
       "Mental Model Mapping",
       "Service Blueprinting"
     ],
-    "seoTitle": "Task Modeling in Product Design: Methods & Hierarchical Analysis",
+    "seoTitle": "Task Model in UX: Definition, Steps, and Example",
     "sources": [
-      "Dan Diaper & Neville Stanton, The Handbook of Task Analysis for Human-Computer Interaction",
-      "Don Norman, The Design of Everyday Things"
+      "Nielsen Norman Group: Task Analysis (https://www.nngroup.com/articles/task-analysis/)",
+      "W3C: Task Models (https://www.w3.org/TR/task-models/)"
+    ],
+    "seoDescription": "Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/task-model.html",
+    "contentMarkdown": "# Task Model\n\nA task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.\n\nTask models can range from a simple hierarchy to a formal representation of task relationships. Their value comes from accurately describing the work and its constraints.\n\n## Example: approving an invoice\n\nThe goal is to approve a valid invoice for payment. A simplified model might include:\n\n1. Find invoices awaiting review.\n2. Check the supplier, amount, and purchase order.\n3. Resolve missing information or discrepancies.\n4. Approve within the reviewer's authority, or route to an authorized approver.\n5. Confirm that the invoice has moved to the correct state.\n\nThe model should include exceptions: the invoice may be a duplicate, the purchase order may be missing, or the reviewer may lack approval authority. Some checks can happen independently; approval depends on the required checks being complete.\n\nThese relationships inform interface requirements such as visible status, supporting documents, and a clear handoff.\n\n## How to build one\n\nObserve people doing the work and ask about decisions, workarounds, and failures. Identify the goal before documenting the steps. Validate the model with people who actually perform the task.\n\nA user flow describes a route through an interface. A task model can describe work across screens, tools, or offline activities, including work that the future product will support differently.\n\nUse the model to test whether the design covers the task's conditions and recovery paths. Update it when responsibilities or business rules change.\n\n## Related terms\n\n- [Jobs to Be Done (JTBD)](/glossary/jobs-to-be-done-jtbd.html)\n- [Mental Model Mapping](/glossary/mental-model-mapping.html)\n- [Service Blueprinting](/glossary/service-blueprinting.html)\n\n## Sources\n\n- [Nielsen Norman Group: Task Analysis](https://www.nngroup.com/articles/task-analysis/)\n- [W3C: Task Models](https://www.w3.org/TR/task-models/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/task-model.html",
+        "name": "Task Model in UX: Definition, Steps, and Example",
+        "description": "Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/task-model.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/task-model.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/task-analysis/",
+          "https://www.w3.org/TR/task-models/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#term",
+        "name": "Task Model",
+        "termCode": "task-model",
+        "description": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.",
+        "url": "https://lexkonovalov.com/glossary/task-model.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/task-model.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Task Model",
+            "item": "https://lexkonovalov.com/glossary/task-model.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1219,25 +1982,100 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A Wayfinding System encompasses the perceptual cues, navigational milestones, spatial signposts, and contextual indicators that inform users of their location, orientation, and available movement paths.",
-    "purpose": "Prevents spatial disorientation in deep, complex multi-page software, reducing anxiety and supporting fluid task progression.",
+    "definition": "A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.",
+    "purpose": "A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.",
     "keyConcepts": [
-      "Orientation cues",
-      "spatial landmarks",
-      "environmental feedback",
-      "progressive routing."
+      "What does digital wayfinding include?",
+      "Example: Returning from an invoice to a booking list",
+      "How do you test a wayfinding system?"
     ],
-    "howItWorks": "Designers combine persistent contextual anchors—such as active page highlights, structural breadcrumbs, headers, and visual progress rails—to orient users.",
+    "howItWorks": "A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Breadcrumb Hierarchy",
       "Structural Navigation Model",
       "Semantic Zoom"
     ],
-    "seoTitle": "Digital Wayfinding Systems: Principles of Spatial UX Navigation",
+    "seoTitle": "Wayfinding in UX: Navigation and Orientation Cues",
     "sources": [
-      "Kevin Lynch, The Image of the City",
-      "Per Mollerup, Wayshowing > Wayfinding: Basic Codes for Designing Effective Wayfinding"
+      "Breadcrumbs, GOV.UK Design System (https://design-system.service.gov.uk/components/breadcrumbs/)",
+      "Navigate a Service, GOV.UK Design System (https://design-system.service.gov.uk/patterns/navigate-a-service/)",
+      "The Difference Between IA and Navigation, Nielsen Norman Group (https://www.nngroup.com/articles/ia-vs-navigation/)"
+    ],
+    "seoDescription": "Learn how digital wayfinding helps users understand where they are and where to go, with breadcrumbs, page titles, and a booking workflow example.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/wayfinding-system.html",
+    "contentMarkdown": "# Wayfinding System\n\nA wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.\n\n## What does digital wayfinding include?\n\n| User question | Interface cue |\n|---|---|\n| Where am I? | A descriptive page title, the name of the current record, and a visible current-section indicator. |\n| Where can I go? | Navigation labels and links that explain which information or action is available. |\n| How do I get back? | A route to the parent section or a return link that restores the user’s previous task context. |\n\nInformation architecture defines the structure that these cues help users navigate. Breadcrumbs show a location within that hierarchy. For a linear process, a step indicator can show how far the user has progressed.\n\n## Example: Returning from an invoice to a booking list\n\nAn operations agent opens Booking #1042 from a filtered list and then views its invoice. The invoice page identifies the document and booking. A breadcrumb offers a route back to the booking. A “Back to booking results” link restores the previous filters and page.\n\nEach cue answers a question the agent encounters during the task. A status such as “Refund pending” provides additional context, and the Invoice title makes the current document clear.\n\n## How do you test a wayfinding system?\n\nAsk users to enter through a deep link, identify what they are viewing, and find a related record. Then ask them to return to the list they were working from. Observe whether titles and labels help, whether return links preserve useful state, and where users lose their place. Repeat the task in the narrow-screen layout, where some navigation may collapse into a menu.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Breadcrumb Hierarchy](/glossary/breadcrumb-hierarchy.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n- [Semantic Zoom](/glossary/semantic-zoom.html)\n\n## Sources\n\n- [Breadcrumbs, GOV.UK Design System](https://design-system.service.gov.uk/components/breadcrumbs/)\n- [Navigate a Service, GOV.UK Design System](https://design-system.service.gov.uk/patterns/navigate-a-service/)\n- [The Difference Between IA and Navigation, Nielsen Norman Group](https://www.nngroup.com/articles/ia-vs-navigation/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/wayfinding-system.html",
+        "name": "Wayfinding in UX: Navigation and Orientation Cues",
+        "description": "Learn how digital wayfinding helps users understand where they are and where to go, with breadcrumbs, page titles, and a booking workflow example.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#breadcrumbs"
+        },
+        "citation": [
+          "https://design-system.service.gov.uk/components/breadcrumbs/",
+          "https://design-system.service.gov.uk/patterns/navigate-a-service/",
+          "https://www.nngroup.com/articles/ia-vs-navigation/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#term",
+        "name": "Wayfinding System",
+        "termCode": "wayfinding-system",
+        "description": "A wayfinding system is a set of cues that helps people understand where they are, where they can go, and how to return to a useful starting point. In digital products, those cues include page titles, current-section indicators, breadcrumbs, and clearly labeled destinations.",
+        "url": "https://lexkonovalov.com/glossary/wayfinding-system.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/wayfinding-system.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Wayfinding System",
+            "item": "https://lexkonovalov.com/glossary/wayfinding-system.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1247,25 +2085,98 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Semantic Zoom is an interaction design technique where changing magnification levels does not merely scale interface pixels, but fundamentally alters the depth, density, and nature of the displayed semantic information.",
-    "purpose": "Enables users to transition smoothly between macro-level structural overviews and micro-level operational details without losing global context.",
+    "definition": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.",
+    "purpose": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.",
     "keyConcepts": [
-      "Information granularity",
-      "level of detail (LoD)",
-      "spatial zooming",
-      "contextual morphing."
+      "Example: a hotel planning board",
+      "When it helps",
+      "Accessibility checks"
     ],
-    "howItWorks": "When a user zooms in on a UI canvas or table, low-fidelity abstract aggregates dynamically morph into high-density detail views with contextual actions.",
+    "howItWorks": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.",
     "relatedTerms": [
       "Operational UX",
       "Progressive Disclosure",
       "Affordance Layering",
       "Interaction Invariant"
     ],
-    "seoTitle": "Semantic Zoom in UX: Designing Multi-Scale Interface Systems",
+    "seoTitle": "Semantic Zoom: Definition, UX Example, and Accessibility",
     "sources": [
-      "Benjamin B. Bederson, PhotoMesa: A Zoomable Image Browser, ACM",
-      "Daniel Rosenberg, UX Magic"
+      "Microsoft: Semantic Zoom (https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom)",
+      "W3C: Understanding Keyboard (https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)"
+    ],
+    "seoDescription": "Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/semantic-zoom.html",
+    "contentMarkdown": "# Semantic Zoom\n\nSemantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.\n\nFor example, a planning view might show monthly totals at one level, daily groups at another, and individual bookings at a detailed level. Optical zoom changes magnification; semantic zoom changes what is represented.\n\nMicrosoft's SemanticZoom control is a specific implementation that switches between two related views of grouped content. The broader design concept can involve more than two levels.\n\n## Example: a hotel planning board\n\nAt the overview level, a manager sees occupancy by week. Selecting a week reveals daily room availability. Opening a day shows the reservations behind its totals.\n\nThe transition should preserve the selected date and explain where the user is. Returning to the overview should make it easy to recognize the same period.\n\nUse consistent calculations so a summary can be reconciled with its detail. If filters change the totals, show the active scope.\n\n## When it helps\n\nSemantic zoom can help when users need both broad patterns and record-level work. It is less useful when extra levels only add navigation to a short list.\n\nDefine the questions each level answers and the information users need to decide where to go next.\n\n## Accessibility checks\n\nProvide an operable way to move between levels without relying on a pinch gesture alone. Preserve logical focus, meaningful labels, and an understandable reading order.\n\nFor web products, keep browser text resizing available. Semantic zoom is an application interaction and does not replace the user's need to enlarge text.\n\n## Related terms\n\n- [Operational UX](/glossary/operational-ux.html)\n- [Progressive Disclosure](/glossary/progressive-disclosure.html)\n- [Affordance Layering](/glossary/affordance-layering.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [Microsoft: Semantic Zoom](https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom)\n- [W3C: Understanding Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/semantic-zoom.html",
+        "name": "Semantic Zoom: Definition, UX Example, and Accessibility",
+        "description": "Understand semantic zoom as changing the representation of information, with a planning-board example and checks for orientation, keyboard use, and detail.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#breadcrumbs"
+        },
+        "citation": [
+          "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/semantic-zoom",
+          "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#term",
+        "name": "Semantic Zoom",
+        "termCode": "semantic-zoom",
+        "description": "Semantic zoom changes the information or representation shown at different levels of scale. It lets users move between an overview and meaningful detail while retaining a connection to the same underlying content.",
+        "url": "https://lexkonovalov.com/glossary/semantic-zoom.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/semantic-zoom.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Semantic Zoom",
+            "item": "https://lexkonovalov.com/glossary/semantic-zoom.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1275,24 +2186,97 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "A Breadcrumb Hierarchy is a secondary contextual navigation pattern that visualizes the current page's structural position within a website's architectural hierarchy, allowing single-click upward traversal.",
-    "purpose": "Grounds users arriving via deep external links, reinforces information architecture, and provides search engine crawlers with semantic structural hierarchy.",
+    "definition": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.",
+    "purpose": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.",
     "keyConcepts": [
-      "Location breadcrumbs",
-      "attribute breadcrumbs",
-      "path breadcrumbs",
-      "schema markup."
+      "Example: An invoice inside a booking",
+      "How should you design the trail?",
+      "How does breadcrumb markup relate to navigation?"
     ],
-    "howItWorks": "The application dynamically evaluates the node's lineage in the structural taxonomy and renders an inline, serialized list of hyperlinked parent categories.",
+    "howItWorks": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.",
     "relatedTerms": [
-      "Information Architecture",
+      "Information Architecture (IA)",
       "Structural Navigation Model",
       "Wayfinding System"
     ],
-    "seoTitle": "Breadcrumb Hierarchy in UX: Structural Patterns & SEO Best Practices",
+    "seoTitle": "Breadcrumb Hierarchy: Location, Navigation, and Markup",
     "sources": [
-      "Jakob Nielsen, Breadcrumb Navigation: Increasingly Useful, Nielsen Norman Group",
-      "W3C WAI, Breadcrumb Pattern"
+      "Breadcrumbs, GOV.UK Design System (https://design-system.service.gov.uk/components/breadcrumbs/)",
+      "Breadcrumb Structured Data, Google Search Central (https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)"
+    ],
+    "seoDescription": "Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html",
+    "contentMarkdown": "# Breadcrumb Hierarchy\n\nA breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.\n\n## Example: An invoice inside a booking\n\nAn invoice page may sit under Bookings, then Booking #1042, then Invoices. The page heading identifies the current invoice, and the breadcrumb offers links to its parent locations.\n\nSomeone arriving from search or a notification can understand which booking contains the document. A separate return-to-results action can restore a previously filtered booking list when that task context is available.\n\n## How should you design the trail?\n\nChoose a meaningful parent structure and use labels people recognize. Keep the trail consistent with the information architecture, including when a record can be found through several routes. Test the layout on narrow screens and ensure links have understandable accessible names.\n\nFor a linear process such as checkout, describe progress with the process’s steps. A breadcrumb answers a question about structural location.\n\n## How does breadcrumb markup relate to navigation?\n\nSchema.org BreadcrumbList can describe the hierarchy in structured data. Its labels and destinations should agree with the visible navigation and the page’s actual place. Google documents the required properties and testing process for its breadcrumb feature. Validate the generated page and review the visible trail as part of the same publishing check.\n\n## Related terms\n\n- [Information Architecture (IA)](/glossary/information-architecture.html)\n- [Structural Navigation Model](/glossary/structural-navigation-model.html)\n- [Wayfinding System](/glossary/wayfinding-system.html)\n\n## Sources\n\n- [Breadcrumbs, GOV.UK Design System](https://design-system.service.gov.uk/components/breadcrumbs/)\n- [Breadcrumb Structured Data, Google Search Central](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html",
+        "name": "Breadcrumb Hierarchy: Location, Navigation, and Markup",
+        "description": "Learn how breadcrumbs show a page’s place in a hierarchy, with a booking example and guidance for visible navigation and BreadcrumbList markup.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#breadcrumbs"
+        },
+        "citation": [
+          "https://design-system.service.gov.uk/components/breadcrumbs/",
+          "https://developers.google.com/search/docs/appearance/structured-data/breadcrumb"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#term",
+        "name": "Breadcrumb Hierarchy",
+        "termCode": "breadcrumb-hierarchy",
+        "description": "A breadcrumb hierarchy shows where a page belongs within a website or product’s structure. A visible breadcrumb trail links to parent locations so users can move up the hierarchy and understand the context of a deep page.",
+        "url": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Breadcrumb Hierarchy",
+            "item": "https://lexkonovalov.com/glossary/breadcrumb-hierarchy.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1302,24 +2286,96 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "UX & Product Architecture",
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
-    "definition": "Affordance Layering is the intentional sequencing of visual, physical, and cognitive interaction signifiers based on user proximity, pointer focus, or operational state.",
-    "purpose": "Eliminates visual noise in high-density enterprise software by displaying secondary and tertiary action controls only when contextually relevant.",
+    "definition": "Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.",
+    "purpose": "Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.",
     "keyConcepts": [
-      "Perceived affordance",
-      "progressive visibility",
-      "interaction triggers",
-      "focus reveal."
+      "Example: an operations table",
+      "Accessibility and usability checks"
     ],
-    "howItWorks": "Primary affordances remain permanently visible; secondary tools appear on pointer hover, row selection, or focus transitions, reducing cognitive clutter.",
+    "howItWorks": "Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.",
     "relatedTerms": [
       "Progressive Disclosure",
       "Operational UX",
       "Interaction Invariant"
     ],
-    "seoTitle": "Affordance Layering: Reducing Cognitive Noise in Enterprise UX",
+    "seoTitle": "Affordance Layering: Meaning and a Practical UX Example",
     "sources": [
-      "James J. Gibson, The Ecological Approach to Visual Perception",
-      "Don Norman, Signifiers, Not Affordances, ACM Interactions"
+      "Don Norman: Signifiers, Not Affordances (https://jnd.org/signifiers-not-affordances/)",
+      "W3C: Understanding Content on Hover or Focus (https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)"
+    ],
+    "seoDescription": "Understand affordance layering in product design: make core actions discoverable, reveal useful secondary controls, and support keyboard and touch use.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/affordance-layering.html",
+    "contentMarkdown": "# Affordance Layering\n\nAffordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.\n\nThe terminology needs care. An affordance concerns what a person can do with something; a signifier communicates how or where to act. Much of what designers call affordance layering involves arranging signifiers and progressively revealing controls.\n\nIt is useful as a design description, without assuming a universal framework or prescribed number of layers.\n\n## Example: an operations table\n\nA booking table shows each reservation's status and an obvious way to open its details. Selecting rows reveals a bulk-action toolbar with the selection count. An overflow menu contains less frequent actions such as exporting a record.\n\nEach layer answers a different question: what can I inspect, what can I do with these selected records, and what else is available?\n\nKeep the main task discoverable before selection. Label the selection scope, especially when a table has multiple pages. Explain unavailable actions when the reason helps the user proceed.\n\n## Accessibility and usability checks\n\nEvery required action needs a usable path for keyboard and touch users. A control that appears only on pointer hover can leave people unable to find or operate it.\n\nFor additional content triggered by hover or focus, check WCAG's conditions for dismissal, hoverability, and persistence where they apply. Also test focus visibility, accessible names, and dismissal behavior.\n\nUse task observation to decide which controls deserve immediate visibility. Hiding an action saves space only if users can still discover it when needed.\n\n## Related terms\n\n- [Progressive Disclosure](/glossary/progressive-disclosure.html)\n- [Operational UX](/glossary/operational-ux.html)\n- [Interaction Invariant](/glossary/interaction-invariant.html)\n\n## Sources\n\n- [Don Norman: Signifiers, Not Affordances](https://jnd.org/signifiers-not-affordances/)\n- [W3C: Understanding Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/affordance-layering.html",
+        "name": "Affordance Layering: Meaning and a Practical UX Example",
+        "description": "Understand affordance layering in product design: make core actions discoverable, reveal useful secondary controls, and support keyboard and touch use.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#breadcrumbs"
+        },
+        "citation": [
+          "https://jnd.org/signifiers-not-affordances/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#term",
+        "name": "Affordance Layering",
+        "termCode": "affordance-layering",
+        "description": "Affordance layering is a descriptive design term for making actions available at different levels of visibility and context. Primary actions remain easy to find, while secondary controls appear when they become relevant.",
+        "url": "https://lexkonovalov.com/glossary/affordance-layering.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/affordance-layering.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Affordance Layering",
+            "item": "https://lexkonovalov.com/glossary/affordance-layering.html"
+          }
+        ]
+      }
     ]
   },
   {
@@ -1330,14 +2386,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Design Systems & Engineering",
     "maturity": "Established",
     "definition": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
-    "purpose": "Minimizes upfront cognitive load, avoids intimidating novice users, and streamlines primary task completion without stripping away advanced power features.",
+    "purpose": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
     "keyConcepts": [
-      "Cognitive pacing",
-      "disclosure toggles",
-      "layered complexity",
-      "default states."
+      "How does progressive disclosure work?",
+      "Example: exporting a report",
+      "What should stay visible?",
+      "Progressive disclosure vs. staged disclosure"
     ],
-    "howItWorks": "The interface surfaces only critical path decisions; secondary options are housed behind explicit disclosures (e.g., \"Advanced Settings\" or accordions) upon user demand.",
+    "howItWorks": "Progressive disclosure is an interaction design technique that shows essential information and controls first, then reveals less frequently needed options when users request them. It helps people focus on their current task while keeping additional capabilities available.",
     "relatedTerms": [
       "Affordance Layering",
       "Semantic Zoom",
@@ -1434,14 +2490,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Established",
     "definition": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
-    "purpose": "Ensures structural alignment between backend relational databases, frontend UI components, and user mental representations, eliminating architectural technical debt.",
+    "purpose": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
     "keyConcepts": [
-      "Semantic modeling",
-      "entity integrity",
-      "abstraction layers",
-      "domain primitives."
+      "What does a conceptual schema contain?",
+      "A conceptual schema example: hotel reservations",
+      "Conceptual, logical, and physical models",
+      "How does this help UX work?"
     ],
-    "howItWorks": "System architects and designers model core domain entities and relational constraints, standardizing systemic rules before API and interface definition.",
+    "howItWorks": "A conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.",
     "relatedTerms": [
       "Domain Context Modeling",
       "Object-Oriented UX",
@@ -1456,7 +2512,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "What Is Data Modeling?, IBM (https://www.ibm.com/think/topics/data-modeling)",
       "What Is an Entity Relationship Diagram?, IBM (https://www.ibm.com/think/topics/entity-relationship-diagram)"
     ],
-    "contentMarkdown": "# Conceptual Schema\n\nA conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.\n\nIn product design, this helps teams agree on concepts such as Customer, Reservation, or Payment before designing their screens and behavior. The schema describes information structure; individual records are instances of that structure.\n\n## What does a conceptual schema contain?\n\n- **Entities:** Types of things the system represents, such as a Reservation.\n- **Attributes:** Properties that describe them, such as arrival date and status.\n- **Relationships:** Connections between entities, such as a Reservation being assigned to a Room.\n- **Constraints:** Rules about valid information, such as departure occurring after arrival.\n\nAn entity-relationship diagram can show the structure. Written definitions and rules supply details that a diagram alone may leave ambiguous.\n\n## A conceptual schema example: hotel reservations\n\nConsider a simplified hotel system that sells one room per reservation. Room assignment may happen after booking. These are example requirements, not universal hotel rules.\n\n| Entity | Meaning | Example attributes |\n|---|---|---|\n| Guest | The person making the reservation | Name, contact details |\n| Reservation | A booking for one room over a date range | Arrival date, departure date, status |\n| Room | A physical room in the hotel | Room number |\n\nThe relationships and constraints are explicit:\n\n- Each Reservation has exactly one booking Guest; a Guest can have zero or many Reservations.\n- A Reservation has zero or one assigned Room. A Room can appear in many Reservations over time.\n- Two confirmed or checked-in Reservations cannot occupy the same Room for overlapping nights. One stay may begin on another’s departure date.\n\nThis model reveals a UI requirement: the reservation view needs an unassigned-room state. Here, Guest means the booker. Tracking everyone who stays would require extending the model to represent occupants separately.\n\n## Conceptual, logical, and physical models\n\nIn a common data-modeling workflow, the levels differ in detail:\n\n| Level | Typical decision |\n|---|---|\n| Conceptual | What entities exist, what they mean, and how they relate. |\n| Logical | Detailed attributes, identifiers, and relationship rules. |\n| Physical | Database-specific tables, column types, indexes, and storage choices. |\n\nTerminology varies. In the ANSI/SPARC three-schema architecture, the conceptual schema is the shared logical description of the database, between external user views and internal storage. It is not necessarily a lightweight early-stage diagram.\n\n## How does this help UX work?\n\nUse the schema to discuss labels, record relationships, empty states, and rules with users and domain experts. In the hotel example, ask what happens when a reservation changes rooms or includes multiple rooms; the answers may change the model.\n\n[Object-Oriented UX](/glossary/object-oriented-ux.html) can bring related domain questions into interface design, alongside users’ tasks and available actions. Validate the shared information model against real workflows, and update it as requirements change.\n\n## Related terms\n\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n\n## Sources\n\n- [Database architecture: the conceptual schema, University of Cape Town](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html)\n- [What Is Data Modeling?, IBM](https://www.ibm.com/think/topics/data-modeling)\n- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)",
+    "contentMarkdown": "# Conceptual Schema\n\nA conceptual schema describes the information a system represents: its entities, their properties, relationships, and constraints, independently of physical storage. It gives teams a shared definition of what the data means and which business rules it must satisfy.\n\nIn product design, this helps teams agree on concepts such as Customer, Reservation, or Payment before designing their screens and behavior. For example, the schema can define that every Reservation has one booking Guest. Reservation #1042 and its booker are individual records that must satisfy that rule.\n\n## What does a conceptual schema contain?\n\n- **Entities:** Types of things the system represents, such as a Reservation.\n- **Attributes:** Properties that describe them, such as arrival date and status.\n- **Relationships:** Connections between entities, such as a Reservation being assigned to a Room.\n- **Constraints:** Rules about valid information, such as departure occurring after arrival.\n\nAn entity-relationship diagram can show the structure. Written definitions and rules supply details that a diagram alone may leave ambiguous.\n\n## A conceptual schema example: hotel reservations\n\nConsider a simplified hotel system that sells one room per reservation. Room assignment may happen after booking. These are example requirements, not universal hotel rules.\n\n| Entity | Meaning | Example attributes |\n|---|---|---|\n| Guest | The person making the reservation | Name, contact details |\n| Reservation | A booking for one room over a date range | Arrival date, departure date, status |\n| Room | A physical room in the hotel | Room number |\n\nThe relationships and constraints are explicit:\n\n- Each Reservation has exactly one booking Guest; a Guest can have zero or many Reservations.\n- A Reservation has zero or one assigned Room. A Room can appear in many Reservations over time.\n- Two confirmed or checked-in Reservations cannot occupy the same Room for overlapping nights. One stay may begin on another’s departure date.\n\nThis model reveals a UI requirement: the reservation view needs an unassigned-room state. Here, Guest means the booker. Tracking everyone who stays would require extending the model to represent occupants separately.\n\n## Conceptual, logical, and physical models\n\nIn a common data-modeling workflow, the levels differ in detail:\n\n| Level | Typical decision |\n|---|---|\n| Conceptual | What entities exist, what they mean, and how they relate. |\n| Logical | Detailed attributes, identifiers, and relationship rules. |\n| Physical | Database-specific tables, column types, indexes, and storage choices. |\n\nTerminology varies. In the ANSI/SPARC three-schema architecture, the conceptual schema is the shared logical description of the database, between external user views and internal storage. It is not necessarily a lightweight early-stage diagram.\n\n## How does this help UX work?\n\nUse the schema to discuss labels, record relationships, empty states, and rules with users and domain experts. In the hotel example, ask what happens when a reservation changes rooms or includes multiple rooms; the answers may change the model.\n\n[Object-Oriented UX](/glossary/object-oriented-ux.html) can bring related domain questions into interface design, alongside users’ tasks and available actions. Validate the shared information model against real workflows, and update it as requirements change.\n\n## Related terms\n\n- [Domain Context Modeling](/glossary/domain-context-modeling.html)\n- [Object-Oriented UX](/glossary/object-oriented-ux.html)\n- [Content Modeling](/glossary/content-modeling.html)\n- [Knowledge Graphs (AI Context)](/glossary/knowledge-graphs-ai-context.html)\n\n## Sources\n\n- [Database architecture: the conceptual schema, University of Cape Town](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html)\n- [What Is Data Modeling?, IBM](https://www.ibm.com/think/topics/data-modeling)\n- [What Is an Entity Relationship Diagram?, IBM](https://www.ibm.com/think/topics/entity-relationship-diagram)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -5996,24 +7052,105 @@ export const glossaryTerms: GlossaryTerm[] = [
     "category": "Product Strategy & Growth",
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
-    "definition": "Customer Journey Mapping is the research-based visualization of the sequential phases, touchpoints, emotional states, pain points, and expectations a user experiences while pursuing a goal across an organization.",
-    "purpose": "Breaks down corporate organizational silos, exposing broken cross-channel transitions, redundant steps, and emotional friction across customer interactions.",
+    "definition": "Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.",
+    "purpose": "Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.",
     "keyConcepts": [
-      "Lifecycle stages",
-      "cross-channel touchpoints",
-      "emotional curves",
-      "opportunity horizons."
+      "How do you create a customer journey map?",
+      "Example: A traveler changes a flight",
+      "How do AI agents affect the journey?"
     ],
-    "howItWorks": "Synthesizes customer interviews, clickstream analytics, and support logs into a horizontal chronological timeline displaying what users do, feel, and think across every stage.",
+    "howItWorks": "Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.",
     "relatedTerms": [
       "Service Blueprinting",
       "Mental Model Mapping",
       "Conversion Funnel"
     ],
-    "seoTitle": "Customer Journey Mapping: UX Research Methods & Blueprints",
+    "seoTitle": "Customer Journey Mapping: Steps and a UX Example",
     "sources": [
-      "Jim Kalbach, Mapping Experiences, O'Reilly",
-      "Nielsen Norman Group, Customer Journey Mapping 101"
+      "Journey Mapping 101, Nielsen Norman Group (https://www.nngroup.com/articles/journey-mapping-101/)",
+      "UX Maps: Glossary, Nielsen Norman Group (https://www.nngroup.com/articles/ux-maps-glossary/)"
+    ],
+    "seoDescription": "Learn how to build a customer journey map around one user goal, connect it to research, and turn moments of friction into testable improvements.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/customer-journey-mapping.html",
+    "contentMarkdown": "# Customer Journey Mapping\n\nCustomer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.\n\n## How do you create a customer journey map?\n\n1. **Choose one actor and scenario.** Define whose experience you are mapping, their goal, and where the journey begins and ends.\n2. **Collect evidence.** Use interviews, observation, support conversations, and behavioral data to understand what happens. Label assumptions and distinguish the current experience from a proposed one.\n3. **Map the phases.** Record what the person does, what they need to know, and how they experience each phase. Ground thoughts and emotions in research.\n4. **Choose an improvement.** Connect a barrier to an owner, a design hypothesis, and a way to evaluate the result.\n\n## Example: A traveler changes a flight\n\nThe following is an illustrative starting point to validate through research.\n\n| Phase | Traveler action | Question to investigate |\n|---|---|---|\n| Request | Opens the booking and asks to change the date. | Is the traveler clear about whether the original flight is still booked? |\n| Evaluate | Reviews the new fare and conditions. | Can the traveler tell what the price covers and how long it is valid? |\n| Confirm | Approves the quote and waits for an updated ticket. | Does the traveler know whether the change is complete and what to do if confirmation is delayed? |\n\nThe final phase suggests an opportunity to test a clearer status message and recovery path. Check whether travelers understand the current state and can get help when needed. A service blueprint can then identify the internal handoff responsible for the delay.\n\n## How do AI agents affect the journey?\n\nIf an assistant acts for the traveler, include its actions, the points that need approval, and how the traveler checks progress. Use logs to examine the assistant’s behavior and user research to understand the person’s experience. Keep the map’s viewpoint explicit.\n\n## Related terms\n\n- [Service Blueprinting](/glossary/service-blueprinting.html)\n- [Mental Model Mapping](/glossary/mental-model-mapping.html)\n- [Conversion Funnel](/glossary/conversion-funnel-architecture.html)\n\n## Sources\n\n- [Journey Mapping 101, Nielsen Norman Group](https://www.nngroup.com/articles/journey-mapping-101/)\n- [UX Maps: Glossary, Nielsen Norman Group](https://www.nngroup.com/articles/ux-maps-glossary/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/customer-journey-mapping.html",
+        "name": "Customer Journey Mapping: Steps and a UX Example",
+        "description": "Learn how to build a customer journey map around one user goal, connect it to research, and turn moments of friction into testable improvements.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/journey-mapping-101/",
+          "https://www.nngroup.com/articles/ux-maps-glossary/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#term",
+        "name": "Customer Journey Mapping",
+        "termCode": "customer-journey-mapping",
+        "description": "Customer journey mapping is the process of describing a person’s experience over time as they work toward a goal. The resulting journey map connects their actions, questions, and feelings across relevant touchpoints so a team can identify barriers and opportunities.",
+        "url": "https://lexkonovalov.com/glossary/customer-journey-mapping.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#webpage"
+        },
+        "alternateName": [
+          "Journey Mapping",
+          "Customer Journey Map"
+        ]
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/customer-journey-mapping.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Customer Journey Mapping",
+            "item": "https://lexkonovalov.com/glossary/customer-journey-mapping.html"
+          }
+        ]
+      }
+    ],
+    "alternateName": [
+      "Journey Mapping",
+      "Customer Journey Map"
     ]
   },
   {
@@ -6024,14 +7161,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
-    "purpose": "Eliminates the massive hidden costs of corporate training, workplace operational fatigue, and high employee error rates typical of legacy enterprise software.",
+    "purpose": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
     "keyConcepts": [
-      "Total cost of ownership (TCO)",
-      "employee productivity ROI",
-      "change management",
-      "operational safety."
+      "What makes enterprise UX strategy different?",
+      "What should the strategy include?",
+      "Example: improving purchase approvals",
+      "How is it different from information architecture?"
     ],
-    "howItWorks": "Enterprise designers engage deep corporate stakeholders, audit regulatory obligations, and map multi-user authorization matrices to construct modern, consumer-grade workflows.",
+    "howItWorks": "Enterprise UX strategy is a plan for improving how people use enterprise software to accomplish organizational work. It connects user needs and business goals with priorities, measurable outcomes, and decisions about how teams will deliver and maintain improvements.",
     "relatedTerms": [
       "Operational UX",
       "Enterprise Information Architecture",
@@ -10244,6 +11381,314 @@ export const glossaryTerms: GlossaryTerm[] = [
             "position": 3,
             "name": "Content Prototyping",
             "item": "https://lexkonovalov.com/glossary/content-prototyping.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "name": "Conversational UX",
+    "slug": "conversational-ux",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.",
+    "purpose": "Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.",
+    "keyConcepts": [
+      "Conversational UX vs. conversation design",
+      "Example: changing a travel date",
+      "What should designers specify?",
+      "Conversational UX vs. agentic UX"
+    ],
+    "howItWorks": "Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.",
+    "relatedTerms": [
+      "Agentic UX",
+      "Generative UI",
+      "AI-native Design",
+      "Progressive Disclosure"
+    ],
+    "seoTitle": "Conversational UX: Meaning and Examples | Product Design Glossary",
+    "seoDescription": "Learn how conversational UX supports tasks through text or voice, including turn-taking, clarification, correction, and a clear path beyond the chat.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/conversational-ux.html",
+    "sources": [
+      "What is conversation design?, Google (legacy guide) (https://developers.google.com/assistant/conversation-design/what-is-conversation-design)",
+      "Feedback and Control, Google PAIR (https://pair.withgoogle.com/chapter/feedback-controls/)"
+    ],
+    "contentMarkdown": "# Conversational UX\n\nConversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.\n\n## Conversational UX vs. conversation design\n\nConversation design focuses on the structure and content of the exchange: prompts, responses, turn-taking, and repair. Conversational UX also includes the surrounding experience, such as discovering capabilities, moving between chat and other controls, and reviewing outcomes.\n\nA conversational interface does not require a generative model. It can use scripted flows, intent recognition, or a combination of techniques.\n\n## Example: changing a travel date\n\nA traveler asks, “Can I move this to Friday?” The system needs to establish which booking and which date the person means.\n\nA useful response might show the identified booking, ask for the missing date, and present available options in a comparison view. Before applying a change, it shows the selected option and any relevant consequences.\n\nIf the traveler corrects the date, the system preserves the rest of the useful context. If no options are available, it provides a clear next step rather than restarting the conversation.\n\n## What should designers specify?\n\n| Moment | Design question |\n|---|---|\n| Entry | What can this system help the person do? |\n| Clarification | Which missing detail is necessary now? |\n| Response | Does the user need text, a choice, a table, or a form? |\n| Correction | Can they change one detail without repeating everything? |\n| Completion | Can they tell what happened and what remains? |\n\nWrite sample conversations for ordinary and difficult cases. Include ambiguous references, changed intent, interrupted tasks, and failed operations.\n\nConversation design concerns the exchange's underlying logic, including what happens when the system does not understand a request. Adding a text box or voice input does not define that logic.\n\n## Conversational UX vs. agentic UX\n\nA chat can answer questions without acting on another system. An agent may perform delegated work through chat, a task queue, or another interface.\n\nWhen conversation leads to action, [agentic UX](/glossary/agentic-ux.html) adds questions about authorization, progress, review, interruption, and recovery.\n\nUse direct controls when they make the task clearer. A calendar or comparison table can complement language; users should not have to describe every precise selection in prose.\n\n## Related terms\n\n- [Agentic UX](/glossary/agentic-ux.html)\n- [Generative UI](/glossary/generative-ui.html)\n- [AI-native Design](/glossary/ai-native-design.html)\n- [Progressive Disclosure](/glossary/progressive-disclosure.html)\n\n## Sources\n\n- [What is conversation design?, Google (legacy guide)](https://developers.google.com/assistant/conversation-design/what-is-conversation-design)\n- [Feedback and Control, Google PAIR](https://pair.withgoogle.com/chapter/feedback-controls/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/conversational-ux.html",
+        "name": "Conversational UX: Meaning and Examples | Product Design Glossary",
+        "description": "Learn how conversational UX supports tasks through text or voice, including turn-taking, clarification, correction, and a clear path beyond the chat.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.google.com/assistant/conversation-design/what-is-conversation-design",
+          "https://pair.withgoogle.com/chapter/feedback-controls/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#term",
+        "name": "Conversational UX",
+        "termCode": "conversational-ux",
+        "description": "Conversational UX is the design of experiences in which people interact with a system through exchanges of language, using text, voice, or both. It covers how a conversation starts, progresses, handles misunderstandings, and helps a person complete a task.",
+        "url": "https://lexkonovalov.com/glossary/conversational-ux.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/conversational-ux.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conversational UX",
+            "item": "https://lexkonovalov.com/glossary/conversational-ux.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "name": "Design Critique",
+    "slug": "design-critique",
+    "category": "UX & Product Architecture",
+    "secondaryCategory": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.",
+    "purpose": "A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.",
+    "keyConcepts": [
+      "What should a critique accomplish?",
+      "A lightweight critique process",
+      "Example: reviewing a dense operations table",
+      "Critique vs. usability testing vs. approval",
+      "How do you make feedback actionable?"
+    ],
+    "howItWorks": "A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.",
+    "relatedTerms": [
+      "DesignOps",
+      "Design QA",
+      "Product Discovery",
+      "Design Strategy Alignment"
+    ],
+    "seoTitle": "Design Critique: Purpose and Process | Product Design Glossary",
+    "seoDescription": "Learn how to run a useful design critique with a clear question, evidence-based feedback, and recorded next steps, without turning it into a preference vote.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-critique.html",
+    "sources": [
+      "Design Critiques: Encourage a Positive Culture to Improve Products, NN/g (https://www.nngroup.com/articles/design-critiques/)",
+      "Analyse a research session, GOV.UK Service Manual (https://www.gov.uk/service-manual/user-research/analyse-a-research-session)"
+    ],
+    "contentMarkdown": "# Design Critique\n\nA design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.\n\n## What should a critique accomplish?\n\nBring a specific question, such as whether an operations screen makes urgent exceptions visible. Share the audience, task, stage of work, known constraints, and decisions that remain open.\n\nThe group should understand what kind of feedback can change the design now. Reviewing a low-fidelity flow for color polish is unlikely to answer a question about its information structure.\n\n## A lightweight critique process\n\n| Step | What to do |\n|---|---|\n| Frame | Explain the task, evidence, constraints, and review question |\n| Inspect | Let people understand the proposal and ask clarifying questions |\n| Discuss | Connect observations to goals and likely user effects |\n| Decide next steps | Separate fixes, alternatives, and questions needing research |\n\nName the decision owner. A critique can inform a decision without requiring a vote or unanimous agreement.\n\n## Example: reviewing a dense operations table\n\nSuppose the question is whether an operator can identify bookings awaiting a time-sensitive action.\n\n“Make the status brighter” is a proposed solution. “The pending action is hidden among several unrelated status labels” identifies a problem to investigate.\n\nThe team can compare options: clearer grouping, a dedicated action field, filtering, or different emphasis. It checks these against realistic records and the operator's task.\n\nRecord assumptions that need user research. A room of colleagues agreeing that an option feels clearer does not establish that operators can use it successfully.\n\n## Critique vs. usability testing vs. approval\n\nA critique draws on the participants' expertise and available evidence. Usability testing observes representative people attempting tasks. Approval authorizes a decision or release.\n\nThese activities may inform one another, but they answer different questions. Make their purpose explicit so a critique is not treated as completed user validation.\n\n## How do you make feedback actionable?\n\nDescribe the observation, its relevance, and the uncertainty. Ask why a decision was made before proposing a replacement. Focus on the work rather than the designer.\n\nKeep a concise record of the decision, rationale, owner, and next action. When the group disagrees, identify what evidence could resolve the disagreement. This gives the next review a concrete starting point.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [Design QA](/glossary/design-qa.html)\n- [Product Discovery](/glossary/product-discovery.html)\n- [Design Strategy Alignment](/glossary/design-strategy-alignment.html)\n\n## Sources\n\n- [Design Critiques: Encourage a Positive Culture to Improve Products, NN/g](https://www.nngroup.com/articles/design-critiques/)\n- [Analyse a research session, GOV.UK Service Manual](https://www.gov.uk/service-manual/user-research/analyse-a-research-session)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-critique.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-critique.html",
+        "name": "Design Critique: Purpose and Process | Product Design Glossary",
+        "description": "Learn how to run a useful design critique with a clear question, evidence-based feedback, and recorded next steps, without turning it into a preference vote.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-critique.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-critique.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.nngroup.com/articles/design-critiques/",
+          "https://www.gov.uk/service-manual/user-research/analyse-a-research-session"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-critique.html#term",
+        "name": "Design Critique",
+        "termCode": "design-critique",
+        "description": "A design critique is a structured discussion intended to improve a design by examining how well it addresses a stated problem. Participants give feedback on the work and its reasoning, using the goals, evidence, and constraints relevant to the project.",
+        "url": "https://lexkonovalov.com/glossary/design-critique.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-critique.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-critique.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design Critique",
+            "item": "https://lexkonovalov.com/glossary/design-critique.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "name": "ResearchOps",
+    "slug": "researchops",
+    "category": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.",
+    "purpose": "ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.",
+    "keyConcepts": [
+      "What does ResearchOps cover?",
+      "Example: repeated recruitment delays",
+      "ResearchOps vs. DesignOps vs. research",
+      "What changes when research tools use AI?"
+    ],
+    "howItWorks": "ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.",
+    "relatedTerms": [
+      "DesignOps",
+      "AI in UX Research",
+      "Synthetic User Testing",
+      "Product Discovery"
+    ],
+    "seoTitle": "ResearchOps: Research Operations Explained | Product Design Glossary",
+    "seoDescription": "Learn how ResearchOps supports recruitment, consent, research data, tools, and knowledge sharing, and how it differs from DesignOps and conducting a study.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/researchops.html",
+    "sources": [
+      "About ResearchOps, ResearchOps Community (https://researchops.community/about/)",
+      "ResearchOps 101, NN/g (https://www.nngroup.com/articles/research-ops-101/)",
+      "Getting informed consent for user research, GOV.UK (https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)"
+    ],
+    "contentMarkdown": "# ResearchOps\n\nResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.\n\n## What does ResearchOps cover?\n\nThe exact responsibilities vary with the organization and its research program.\n\n| Area | Typical operational work |\n|---|---|\n| Participants | Recruitment processes, scheduling, communication, and incentives |\n| Consent and data | Approved handling, access, retention, and participant requests |\n| Tools | Access, setup, evaluation, and support |\n| Knowledge | Findable evidence, research records, and clear source context |\n| Coordination | Shared calendars, support, and repeatable practices |\n| Capability | Onboarding and support for people conducting research |\n\nThe ResearchOps Community describes a broad framework for supporting research across organizations. A small team can apply the relevant practices without creating a separate department.\n\n## Example: repeated recruitment delays\n\nSuppose several product teams repeatedly struggle to recruit the same type of participant. ResearchOps can help establish a shared recruitment process, clear eligibility criteria, scheduling support, and a record of prior participation.\n\nResearchers still decide which participants fit each question and which method is appropriate. A reusable process should not quietly narrow every study to the easiest people to reach.\n\nReview who is missing from the recruitment approach, including people with relevant access needs.\n\n## ResearchOps vs. DesignOps vs. research\n\n[DesignOps](/glossary/designops.html) supports the broader operation of design work. ResearchOps focuses on the conditions and infrastructure that make research possible and useful.\n\nConducting research includes defining questions, selecting methods, collecting evidence, and interpreting findings. Operational support enables that work; it does not replace the research judgment involved.\n\nResponsibilities may overlap, and one person may perform several roles. Make ownership clear enough that a team knows where to get help.\n\n## What changes when research tools use AI?\n\nReview what material the tool receives, how it is handled, and how generated interpretations remain traceable to evidence. Maintain a distinction between participant statements and AI-produced summaries.\n\nAn automatically generated research repository still needs appropriate access, source references, and maintenance. Searchable findings can be misleading if they omit the study's date, sample, context, or limitations.\n\nStart with a recurring bottleneck and evaluate whether the operational change improves research quality and access as well as reducing coordination effort.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [AI in UX Research](/glossary/ai-ux-research.html)\n- [Synthetic User Testing](/glossary/synthetic-user-testing.html)\n- [Product Discovery](/glossary/product-discovery.html)\n\n## Sources\n\n- [About ResearchOps, ResearchOps Community](https://researchops.community/about/)\n- [ResearchOps 101, NN/g](https://www.nngroup.com/articles/research-ops-101/)\n- [Getting informed consent for user research, GOV.UK](https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/researchops.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/researchops.html",
+        "name": "ResearchOps: Research Operations Explained | Product Design Glossary",
+        "description": "Learn how ResearchOps supports recruitment, consent, research data, tools, and knowledge sharing, and how it differs from DesignOps and conducting a study.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/researchops.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/researchops.html#breadcrumbs"
+        },
+        "citation": [
+          "https://researchops.community/about/",
+          "https://www.nngroup.com/articles/research-ops-101/",
+          "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/researchops.html#term",
+        "name": "ResearchOps",
+        "termCode": "researchops",
+        "description": "ResearchOps, short for research operations, is the organization of the people, processes, tools, and resources that support research. It helps teams recruit participants, handle research material, coordinate studies, and make findings available for appropriate use.",
+        "url": "https://lexkonovalov.com/glossary/researchops.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/researchops.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/researchops.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ResearchOps",
+            "item": "https://lexkonovalov.com/glossary/researchops.html"
           }
         ]
       }

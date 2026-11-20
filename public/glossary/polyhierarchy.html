@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polyhierarchy in Information Architecture: UX Classification Patterns</title>
-  <meta name="description" content="Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.">
+  <title>Polyhierarchy: Definition, Navigation Example, and Tradeoffs</title>
+  <meta name="description" content="Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/polyhierarchy.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Polyhierarchy in Information Architecture: UX Classification Patterns">
-  <meta property="og:description" content="Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.">
+  <meta property="og:title" content="Polyhierarchy: Definition, Navigation Example, and Tradeoffs">
+  <meta property="og:description" content="Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/polyhierarchy.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Polyhierarchy in Information Architecture: UX Classification Patterns">
-  <meta name="twitter:description" content="Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.">
+  <meta name="twitter:title" content="Polyhierarchy: Definition, Navigation Example, and Tradeoffs">
+  <meta name="twitter:description" content="Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/polyhierarchy.html",
+      "name": "Polyhierarchy: Definition, Navigation Example, and Tradeoffs",
+      "description": "Learn how polyhierarchy gives a concept multiple broader categories, how it differs from facets, and how to keep navigation and URLs consistent.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.w3.org/TR/skos-primer/",
+        "https://www.w3.org/TR/skos-reference/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#term",
       "name": "Polyhierarchy",
       "termCode": "polyhierarchy",
-      "description": "Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.",
+      "description": "A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.",
+      "url": "https://lexkonovalov.com/glossary/polyhierarchy.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/polyhierarchy.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/polyhierarchy.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,42 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Polyhierarchy is an architectural taxonomy classification pattern wherein a single entity or piece of content simultaneously occupies multiple legitimate structural categories within an organization tree.</p>
-      </section>
+    <p class="glossary-term-section__text">A polyhierarchy is a hierarchical classification structure in which a concept can have more than one immediate broader concept. It lets people reach the same concept through different valid category paths.</p>
+<p class="glossary-term-section__text">For example, “Design tokens” could appear under both “Design systems” and “Design engineering.” Both paths lead to the same glossary entry. The entry does not need to be copied to support multiple placements.</p>
+<p class="glossary-term-section__text">SKOS permits multiple broader relationships, making it one way to represent this structure.</p>
+<section class="glossary-term-section" aria-labelledby="section-polyhierarchy-and-faceted-classification">
+<h2 id="section-polyhierarchy-and-faceted-classification" class="glossary-term-section__title">Polyhierarchy and faceted classification</h2>
+<p class="glossary-term-section__text">Polyhierarchy organizes broader and narrower concepts. Faceted classification describes items through separate dimensions.</p>
+<p class="glossary-term-section__text">In a resource library, a guide might be placed under both “Accessibility” and “Design systems.” Its facets might separately describe format, reading level, and publication date.</p>
+<p class="glossary-term-section__text">These approaches can work together. The distinction helps teams decide whether an additional placement expresses a category relationship or whether the attribute belongs in a filter.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-two-routes-to-one-resource">
+<h2 id="section-example-two-routes-to-one-resource" class="glossary-term-section__title">Example: two routes to one resource</h2>
+<p class="glossary-term-section__text">A component documentation page could be reachable through “Components → Form controls → Date picker” and “Patterns → Booking → Date picker.”</p>
+<p class="glossary-term-section__text">In this example, the product keeps a single documentation record and stable URL. It can show a breadcrumb appropriate to the selected navigation context, with a clear route back to the relevant section.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-to-check">
+<h2 id="section-what-to-check" class="glossary-term-section__title">What to check</h2>
+<p class="glossary-term-section__text">Use labels people understand, document the reason for each placement, and test whether users can find the resource through expected paths.</p>
+<p class="glossary-term-section__text">Avoid cycles that make a concept its own ancestor. If category paths generate different URLs for the same content, handle canonicalization deliberately. Multiple navigation placements do not require multiple indexable copies of a page.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/faceted-classification.html">Faceted Classification</a></li>
+<li><a href="/glossary/core-model.html">Core Model</a></li>
+<li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.w3.org/TR/skos-primer/" target="_blank" rel="noopener noreferrer">W3C: SKOS Primer — Semantic Relationships</a></li>
+<li><a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer">W3C: SKOS Reference — Semantic Relations</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Accommodates divergent user mental models and alternate discovery paths, preventing search failures caused by rigid, singular classification silos.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Multiple inheritance</span><span class="concept-tag">canonical indexing</span><span class="concept-tag">taxonomy nodes</span><span class="concept-tag">relational routing.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">The database assigns multiple categorical parent references to an entity while enforcing canonical URI references to avoid SEO duplication penalties.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/faceted-classification.html">Faceted Classification</a></li><li><a href="/glossary/core-model.html">Core Model</a></li><li><a href="/glossary/controlled-vocabulary.html">Controlled Vocabulary</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Karl Fast &amp; Peter Morville, Information Architecture, O&#039;Reilly</li><li>ISO 25964 Thesauri and Interoperability with Other Vocabularies</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Modeling in Product Design: Methods &amp; Hierarchical Analysis</title>
-  <meta name="description" content="A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.">
+  <title>Task Model in UX: Definition, Steps, and Example</title>
+  <meta name="description" content="Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/task-model.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Task Modeling in Product Design: Methods &amp; Hierarchical Analysis">
-  <meta property="og:description" content="A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.">
+  <meta property="og:title" content="Task Model in UX: Definition, Steps, and Example">
+  <meta property="og:description" content="Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/task-model.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Task Modeling in Product Design: Methods &amp; Hierarchical Analysis">
-  <meta name="twitter:description" content="A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.">
+  <meta name="twitter:title" content="Task Model in UX: Definition, Steps, and Example">
+  <meta name="twitter:description" content="Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/task-model.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/task-model.html",
+      "name": "Task Model in UX: Definition, Steps, and Example",
+      "description": "Learn how a UX task model captures goals, subtasks, decisions, and exceptions, with an invoice-approval example and a simple way to build one.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.nngroup.com/articles/task-analysis/",
+        "https://www.w3.org/TR/task-models/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/task-model.html#term",
       "name": "Task Model",
       "termCode": "task-model",
-      "description": "A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.",
+      "description": "A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.",
+      "url": "https://lexkonovalov.com/glossary/task-model.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/task-model.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/task-model.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,43 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">A Task Model is a formal breakdown of the physical and cognitive operations, preconditions, decisions, and system validations required for a user to accomplish an intended objective.</p>
-      </section>
+    <p class="glossary-term-section__text">A task model is a structured description of the activities people perform to achieve a goal, including subtasks, decisions, dependencies, and relevant conditions. Designers use it to understand the work an interface needs to support.</p>
+<p class="glossary-term-section__text">Task models can range from a simple hierarchy to a formal representation of task relationships. Their value comes from accurately describing the work and its constraints.</p>
+<section class="glossary-term-section" aria-labelledby="section-example-approving-an-invoice">
+<h2 id="section-example-approving-an-invoice" class="glossary-term-section__title">Example: approving an invoice</h2>
+<p class="glossary-term-section__text">The goal is to approve a valid invoice for payment. A simplified model might include:</p>
+<ol class="glossary-term-ol">
+<li>Find invoices awaiting review.</li>
+<li>Check the supplier, amount, and purchase order.</li>
+<li>Resolve missing information or discrepancies.</li>
+<li>Approve within the reviewer's authority, or route to an authorized approver.</li>
+<li>Confirm that the invoice has moved to the correct state.</li>
+</ol>
+<p class="glossary-term-section__text">The model should include exceptions: the invoice may be a duplicate, the purchase order may be missing, or the reviewer may lack approval authority. Some checks can happen independently; approval depends on the required checks being complete.</p>
+<p class="glossary-term-section__text">These relationships inform interface requirements such as visible status, supporting documents, and a clear handoff.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-to-build-one">
+<h2 id="section-how-to-build-one" class="glossary-term-section__title">How to build one</h2>
+<p class="glossary-term-section__text">Observe people doing the work and ask about decisions, workarounds, and failures. Identify the goal before documenting the steps. Validate the model with people who actually perform the task.</p>
+<p class="glossary-term-section__text">A user flow describes a route through an interface. A task model can describe work across screens, tools, or offline activities, including work that the future product will support differently.</p>
+<p class="glossary-term-section__text">Use the model to test whether the design covers the task's conditions and recovery paths. Update it when responsibilities or business rules change.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/jobs-to-be-done-jtbd.html">Jobs to Be Done (JTBD)</a></li>
+<li><a href="/glossary/mental-model-mapping.html">Mental Model Mapping</a></li>
+<li><a href="/glossary/service-blueprinting.html">Service Blueprinting</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.nngroup.com/articles/task-analysis/" target="_blank" rel="noopener noreferrer">Nielsen Norman Group: Task Analysis</a></li>
+<li><a href="https://www.w3.org/TR/task-models/" target="_blank" rel="noopener noreferrer">W3C: Task Models</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Identifies cognitive burden, redundant confirmation loops, and procedural friction points within digital processes before writing software requirements.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Hierarchical task analysis</span><span class="concept-tag">cognitive triggers</span><span class="concept-tag">preconditions</span><span class="concept-tag">operational dependencies.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Designers dissect goals into sub-tasks, charting preconditions, required system inputs, decision forks, and final success criteria.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/jobs-to-be-done-jtbd.html">Jobs to Be Done (JTBD)</a></li><li><a href="/glossary/mental-model-mapping.html">Mental Model Mapping</a></li><li><a href="/glossary/service-blueprinting.html">Service Blueprinting</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Dan Diaper &amp; Neville Stanton, The Handbook of Task Analysis for Human-Computer Interaction</li><li>Don Norman, The Design of Everyday Things</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

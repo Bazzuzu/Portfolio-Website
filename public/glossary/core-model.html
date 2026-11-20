@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Core Model: Inside-Out Information Architecture Guide</title>
-  <meta name="description" content="The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.">
+  <title>The Core Model: User Tasks, Content, and Forward Paths</title>
+  <meta name="description" content="Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/core-model.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Core Model: Inside-Out Information Architecture Guide">
-  <meta property="og:description" content="The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.">
+  <meta property="og:title" content="The Core Model: User Tasks, Content, and Forward Paths">
+  <meta property="og:description" content="Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/core-model.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Core Model: Inside-Out Information Architecture Guide">
-  <meta name="twitter:description" content="The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.">
+  <meta name="twitter:title" content="The Core Model: User Tasks, Content, and Forward Paths">
+  <meta name="twitter:description" content="Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,53 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/core-model.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/core-model.html",
+      "name": "The Core Model: User Tasks, Content, and Forward Paths",
+      "description": "Learn Are Halland’s Core Model with a hotel page example covering user tasks, business goals, inward paths, core content, and useful next steps.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.thecoremodel.com/",
+        "https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/",
+        "https://www.thecoremodel.com/jtbd/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/core-model.html#term",
       "name": "Core Model",
       "termCode": "core-model",
-      "description": "The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.",
+      "description": "The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.",
+      "url": "https://lexkonovalov.com/glossary/core-model.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/core-model.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/core-model.html#webpage"
+      },
+      "alternateName": [
+        "The Core Model"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +420,74 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">The Core Model is an inside-out information architecture framework that designs digital touchpoints by identifying core pages where specific user tasks intersect with measurable business goals, prioritizing these nodes over hierarchical site trees.</p>
-      </section>
+    <p class="glossary-term-section__text">The Core Model is Are Halland’s method for planning a page or digital experience around the overlap between user tasks and business goals. It connects the content people need with the paths that bring them there and the useful next steps they can take.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-core-model-contain">
+<h2 id="section-what-does-a-core-model-contain" class="glossary-term-section__title">What does a core model contain?</h2>
+<p class="glossary-term-section__text">Choose a core page and record its user tasks, business goals, inward paths, core content, and forward paths. These fields help a team decide what the experience must support before working on its layout.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-a-hotel-room-detail-page">
+<h2 id="section-example-a-hotel-room-detail-page" class="glossary-term-section__title">Example: A hotel room detail page</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Core Model field</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core page</td>
+<td>Details for a family room.</td>
+</tr>
+<tr>
+<td>User tasks</td>
+<td>Check capacity, bed arrangements, cancellation terms, and availability for the intended dates.</td>
+</tr>
+<tr>
+<td>Business goals</td>
+<td>Help travelers choose a suitable room and complete a booking.</td>
+</tr>
+<tr>
+<td>Inward paths</td>
+<td>A room search result, a saved link, or a search-engine result.</td>
+</tr>
+<tr>
+<td>Core content</td>
+<td>Room capacity, bed types, photos, applicable terms, and availability and price for selected dates.</td>
+</tr>
+<tr>
+<td>Forward paths</td>
+<td>Select dates, book the room, compare another room, or ask a question.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">A traveler entering from a saved link needs enough context to identify the room and select dates. Someone arriving from dated search results expects the price and availability to match those dates. The model makes these entry conditions explicit.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-use-the-core-model">
+<h2 id="section-how-do-you-use-the-core-model" class="glossary-term-section__title">How do you use the Core Model?</h2>
+<p class="glossary-term-section__text">Develop the model with people responsible for user research, content, product, and business outcomes. Use research to establish user tasks, then sketch how the page can support them and the intended next steps.</p>
+<p class="glossary-term-section__text">Test the proposed experience through realistic entry paths. Can a traveler confirm the room fits their party and find the applicable cancellation terms? Can they proceed with their chosen dates? Revisit the model when the test reveals missing information or an onward path that interrupts the task.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/wayfinding-system.html">Wayfinding System</a></li>
+<li><a href="/glossary/conversion-funnel-architecture.html">Conversion Funnel</a></li>
+<li><a href="/glossary/jobs-to-be-done-jtbd.html">Jobs to Be Done (JTBD)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.thecoremodel.com/" target="_blank" rel="noopener noreferrer">The Core Model, Are Halland</a></li>
+<li><a href="https://alistapart.com/article/the-core-model-designing-inside-out-for-better-results/" target="_blank" rel="noopener noreferrer">The Core Model: Designing Inside Out for Better Results, Ida Aalen / A List Apart</a></li>
+<li><a href="https://www.thecoremodel.com/jtbd/" target="_blank" rel="noopener noreferrer">JTBD and the Core Model, Are Halland</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Overcomes internal organizational biases and bloated navigational hierarchies by directly serving search-first, task-oriented user entry behaviors.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Inward paths</span><span class="concept-tag">core task fulfillment</span><span class="concept-tag">forward paths</span><span class="concept-tag">business objectives.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Teams map incoming traffic sources (inward paths), define essential user tasks and business objectives for the node, and establish contextually relevant onward routes (forward paths).</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/wayfinding-system.html">Wayfinding System</a></li><li><a href="/glossary/conversion-funnel-architecture.html">Conversion Funnel</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Are Halland, The Core Model: Designing Inside Out for Better Results, A List Apart</li><li>TheCoreModel.com (https://www.thecoremodel.com)</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

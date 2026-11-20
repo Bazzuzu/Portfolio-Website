@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faceted Classification: Designing Advanced UX Filter Architectures</title>
-  <meta name="description" content="Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.">
+  <title>Faceted Classification: Categories, Filters, and Examples</title>
+  <meta name="description" content="Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/faceted-classification.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Faceted Classification: Designing Advanced UX Filter Architectures">
-  <meta property="og:description" content="Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.">
+  <meta property="og:title" content="Faceted Classification: Categories, Filters, and Examples">
+  <meta property="og:description" content="Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/faceted-classification.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Faceted Classification: Designing Advanced UX Filter Architectures">
-  <meta name="twitter:description" content="Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.">
+  <meta name="twitter:title" content="Faceted Classification: Categories, Filters, and Examples">
+  <meta name="twitter:description" content="Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,49 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/faceted-classification.html",
+      "name": "Faceted Classification: Categories, Filters, and Examples",
+      "description": "Learn how facets classify items along several dimensions, with a flight-search example and checks for filter logic and result counts.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.nngroup.com/articles/filters-vs-facets/",
+        "https://www.algolia.com/doc/guides/managing-results/refine-results/faceting"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#term",
       "name": "Faceted Classification",
       "termCode": "faceted-classification",
-      "description": "Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.",
+      "description": "Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.",
+      "url": "https://lexkonovalov.com/glossary/faceted-classification.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/faceted-classification.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/faceted-classification.html#webpage"
+      }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +416,37 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Faceted Classification is an indexing and retrieval structure allowing users to browse, filter, and narrow complex datasets by dynamically combining multiple orthogonal, non-hierarchical attribute dimensions.</p>
-      </section>
+    <p class="glossary-term-section__text">Faceted classification organizes items by several dimensions, called facets, that users can combine when finding information. A travel product might classify flights by airline, number of stops, departure time, and cabin.</p>
+<section class="glossary-term-section" aria-labelledby="section-how-do-facets-work">
+<h2 id="section-how-do-facets-work" class="glossary-term-section__title">How do facets work?</h2>
+<p class="glossary-term-section__text">Each item has values for the facets relevant to it. Faceted navigation exposes those values as filters. The product must define how selections combine and how counts change as the result set narrows.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-narrowing-flight-results">
+<h2 id="section-example-narrowing-flight-results" class="glossary-term-section__title">Example: Narrowing flight results</h2>
+<p class="glossary-term-section__text">A traveler selects Nonstop, Morning departure, and either Airline A or Airline B. In this example, the system combines different facets with AND and the two airlines with OR. Results must satisfy all three dimensions while matching either selected airline.</p>
+<p class="glossary-term-section__text">Show selected filters, make them removable, and update counts consistently with the chosen logic. If no flights match, identify the active constraints and provide a way to relax them. The exact combination rules should follow the product’s data and users’ expectations.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-what-should-teams-model-and-test">
+<h2 id="section-what-should-teams-model-and-test" class="glossary-term-section__title">What should teams model and test?</h2>
+<p class="glossary-term-section__text">Use research to choose dimensions people actually use to decide. Define consistent values and handling for missing data. Avoid presenting two labels for the same cabin category unless the distinction matters.</p>
+<p class="glossary-term-section__text">Test a realistic search from a broad result set to a suitable option. Check whether users understand the labels, selected states, counts, and effect of clearing a filter. Faceted classification depends on maintained metadata as well as a usable filter interface.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+<li><a href="/glossary/polyhierarchy.html">Polyhierarchy</a></li>
+<li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.nngroup.com/articles/filters-vs-facets/" target="_blank" rel="noopener noreferrer">Filters vs. Facets, Nielsen Norman Group</a></li>
+<li><a href="https://www.algolia.com/doc/guides/managing-results/refine-results/faceting" target="_blank" rel="noopener noreferrer">Faceting, Algolia</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Powers high-precision discovery in vast, multi-attribute enterprise catalogs and e-commerce inventories without forcing users down rigid navigational paths.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Orthogonal facets</span><span class="concept-tag">parametric filtering</span><span class="concept-tag">attribute aggregation</span><span class="concept-tag">dynamic counts.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Content attributes are indexed along independent dimensions (e.g., Price, Dimension, Material), allowing real-time parametric queries to filter active datasets.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li><li><a href="/glossary/polyhierarchy.html">Polyhierarchy</a></li><li><a href="/glossary/content-modeling.html">Content Modeling</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>S. R. Ranganathan, The Colon Classification</li><li>Daniel Tunkelang, Faceted Search, Morgan &amp; Claypool</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">

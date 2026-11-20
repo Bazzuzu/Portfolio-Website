@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content Modeling Guide: Structuring Headless Content</title>
-  <meta name="description" content="Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.">
+  <title>Content Modeling: Types, Fields, and Reusable Content</title>
+  <meta name="description" content="Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.">
   <link rel="canonical" href="https://lexkonovalov.com/glossary/content-modeling.html" />
   <meta name="author" content="Oleksandr Konovalov">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Content Modeling Guide: Structuring Headless Content">
-  <meta property="og:description" content="Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.">
+  <meta property="og:title" content="Content Modeling: Types, Fields, and Reusable Content">
+  <meta property="og:description" content="Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.">
   <meta property="og:url" content="https://lexkonovalov.com/glossary/content-modeling.html">
   <meta property="og:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   <meta property="og:image:width" content="1200">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Content Modeling Guide: Structuring Headless Content">
-  <meta name="twitter:description" content="Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.">
+  <meta name="twitter:title" content="Content Modeling: Types, Fields, and Reusable Content">
+  <meta name="twitter:description" content="Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.">
   <meta name="twitter:image" content="https://lexkonovalov.com/og/home.webp?v=2">
   
   <!-- Crawler detection redirect -->
@@ -38,22 +38,54 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://lexkonovalov.com/glossary/content-modeling.html#webpage",
+      "url": "https://lexkonovalov.com/glossary/content-modeling.html",
+      "name": "Content Modeling: Types, Fields, and Reusable Content",
+      "description": "Learn how content modeling defines types, fields, relationships, and validation rules, with an example of room content reused across a hotel site.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#term"
+      },
+      "breadcrumb": {
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#breadcrumbs"
+      },
+      "citation": [
+        "https://www.contentful.com/help/content-models/content-modelling-basics/",
+        "https://www.contentful.com/help/references/",
+        "https://www.contentful.com/help/fields/available-validations/"
+      ]
+    },
+    {
       "@type": "DefinedTerm",
       "@id": "https://lexkonovalov.com/glossary/content-modeling.html#term",
       "name": "Content Modeling",
       "termCode": "content-modeling",
-      "description": "Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.",
+      "description": "Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.",
+      "url": "https://lexkonovalov.com/glossary/content-modeling.html",
       "inDefinedTermSet": {
-        "@type": "DefinedTermSet",
-        "@id": "https://lexkonovalov.com/glossary/#terms",
-        "name": "Product Design Glossary",
-        "url": "https://lexkonovalov.com/glossary/",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@id": "https://lexkonovalov.com/#website"
-        }
+        "@id": "https://lexkonovalov.com/glossary/#terms"
       },
-      "url": "https://lexkonovalov.com/glossary/content-modeling.html"
+      "mainEntityOfPage": {
+        "@id": "https://lexkonovalov.com/glossary/content-modeling.html#webpage"
+      },
+      "alternateName": [
+        "Content Modelling",
+        "Content Model"
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://lexkonovalov.com/glossary/#terms",
+      "name": "Product Design Glossary",
+      "url": "https://lexkonovalov.com/glossary/",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://lexkonovalov.com/#website"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -389,49 +421,68 @@
   </header>
 
   <article>
-    
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Definition</h2>
-        <p class="glossary-term-section__text">Content Modeling is the formal specification of structural content types, their discrete metadata attributes, editorial constraints, and systemic relationships decoupled from visual presentation templates.</p>
-      </section>
+    <p class="glossary-term-section__text">Content modeling defines the types of content a product needs, the fields that describe them, and how they relate to one another. A content model also records rules that help editors create consistent entries and lets products reuse that content across pages and channels.</p>
+<section class="glossary-term-section" aria-labelledby="section-what-does-a-content-model-include">
+<h2 id="section-what-does-a-content-model-include" class="glossary-term-section__title">What does a content model include?</h2>
+<div class="glossary-table-wrapper">
+<table class="glossary-table">
+<thead>
+<tr>
+<th>Part</th>
+<th>Example decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content type</td>
+<td>Represent a hotel’s Room Type as a reusable type of content.</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>Store the room type’s name, capacity, description, and photos.</td>
+</tr>
+<tr>
+<td>References</td>
+<td>Link the room type to Hotel and Amenity entries.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Require a name and capacity, and restrict an Amenity reference to the appropriate content type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="glossary-term-section__text">The model describes the structure. An entry contains the actual content, such as the description and photos for a Family Room.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-example-reusing-room-content-on-a-hotel-site">
+<h2 id="section-example-reusing-room-content-on-a-hotel-site" class="glossary-term-section__title">Example: Reusing room content on a hotel site</h2>
+<p class="glossary-term-section__text">A hotel uses the same Family Room content in a results card and a room detail page. The card shows the name, capacity, and lead photo. The detail page uses those fields plus the description, gallery, and amenity references.</p>
+<p class="glossary-term-section__text">Both views read the same room entry. Updating a shared Amenity entry gives consuming views a consistent source for its wording. Publishing and delivery determine when that update appears. The implementation controls which fields are displayed and how.</p>
+<p class="glossary-term-section__text">Treat the current price and availability as booking data with their own update requirements. The content model can identify the room type that the booking system uses when it returns those values.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-how-do-you-develop-a-content-model">
+<h2 id="section-how-do-you-develop-a-content-model" class="glossary-term-section__title">How do you develop a content model?</h2>
+<p class="glossary-term-section__text">Inventory representative content and discuss publishing needs with editors, designers, and developers. Define the types and references, then test them with realistic entries. Include a room with a long name, missing optional content, and localized text if the product supports it.</p>
+<p class="glossary-term-section__text">Have an editor create and update an entry, then review it in each consuming view. Check whether the model supports the intended content without duplicating information or forcing editors to use a field for an unrelated purpose.</p>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-related-terms">
+<h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
+<ul class="glossary-term-ul">
+<li><a href="/glossary/object-mapping.html">Object Mapping</a></li>
+<li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li>
+<li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
+<li><a href="/glossary/information-architecture.html">Information Architecture (IA)</a></li>
+</ul>
+</section>
+<section class="glossary-term-section" aria-labelledby="section-sources">
+<h2 id="section-sources" class="glossary-term-section__title">Sources</h2>
+<ul class="glossary-term-ul">
+<li><a href="https://www.contentful.com/help/content-models/content-modelling-basics/" target="_blank" rel="noopener noreferrer">Content Modeling Basics, Contentful</a></li>
+<li><a href="https://www.contentful.com/help/references/" target="_blank" rel="noopener noreferrer">References, Contentful</a></li>
+<li><a href="https://www.contentful.com/help/fields/available-validations/" target="_blank" rel="noopener noreferrer">Available Validations, Contentful</a></li>
+</ul>
+</section>
 
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Purpose</h2>
-        <p class="glossary-term-section__text">Enables modular content reuse, headless content delivery across multi-platform surfaces, and consistent information parsing for search engines and language models.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Key Concepts</h2>
-        <div class="concept-tags">
-          <span class="concept-tag">Content types</span><span class="concept-tag">structural attributes</span><span class="concept-tag">presentation agnosticism</span><span class="concept-tag">relational references.</span>
-        </div>
-      </section>
-      
-
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">How It Works</h2>
-        <p class="glossary-term-section__text">Content strategists and architects dissect editorial requirements into typed models, defining character constraints, validation rules, and inter-entity associations in headless CMS engines.</p>
-      </section>
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Related Terms</h2>
-        <ul class="glossary-term-ul">
-          <li><a href="/glossary/object-mapping.html">Object Mapping</a></li><li><a href="/glossary/structured-data-for-llms.html">Structured Data for LLMs</a></li><li><a href="/glossary/headless-ui-architecture.html">Headless UI Architecture</a></li>
-        </ul>
-      </section>
-      
-
-      
-      <section class="glossary-term-section">
-        <h2 class="glossary-term-section__title">Sources</h2>
-        <ul class="glossary-term-ul">
-          <li>Rachel Lovinger, Nimble: A Thinking Person&#039;s Guide to Content Modeling, A List Apart</li><li>Carrie Hane &amp; Mike Atherton, Designing Connected Content, New Riders</li>
-        </ul>
-      </section>
-      
-    
 
     <nav class="glossary-term-nav" aria-label="Glossary Navigation">
       <a href="/glossary/" class="glossary-term-nav__btn">
