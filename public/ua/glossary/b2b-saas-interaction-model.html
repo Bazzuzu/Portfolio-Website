@@ -384,34 +384,34 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Модель взаємодії в B2B SaaS описує, як користувачі взаємодіють із корпоративним програмним сервісом для роботи з його об'єктами, діями, ролями та станами робочих процесів. Вона пов'язує поведінку інтерфейсу з операційними правилами організації та логікою продукту.</p>
-<p class="glossary-term-section__text">This is a descriptive planning concept rather than one prescribed framework. The relevant model depends on the work: an invoice system, reservation platform, and inventory service need different objects and rules.</p>
-<section class="glossary-term-section" aria-labelledby="section-example-reviewing-invoices">
-<h2 id="section-example-reviewing-invoices" class="glossary-term-section__title">Example: reviewing invoices</h2>
-<p class="glossary-term-section__text">An accountant opens an invoice list for the selected organization, filters pending invoices, and inspects supporting records. A manager can approve invoices within an assigned limit; another reviewer handles larger amounts.</p>
-<p class="glossary-term-section__text">The interaction model needs to explain:</p>
+    <p class="glossary-term-section__text">Модель взаємодії в B2B SaaS (B2B SaaS Interaction Model) описує, як користувачі взаємодіють із сервісом корпоративного програмного забезпечення, працюючи з його об'єктами, діями, ролями та станами робочих процесів. Вона поєднує поведінку інтерфейсу з правилами організації та логікою продукту.</p>
+<p class="glossary-term-section__text">Це радше описова концепція планування, ніж жорстко регламентований фреймворк. Відповідна модель залежить від специфіки діяльності: система виставлення рахунків, платформа бронювання та сервіс складського обліку потребують різних об'єктів і правил.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад: перевірка рахунків-фактур</h2>
+<p class="glossary-term-section__text">Бухгалтер відкриває список рахунків для обраної організації, фільтрує рахунки зі статусом очікування та перевіряє супровідні документи. Менеджер може затверджувати рахунки в межах призначеного ліміту; інший рецензент обробляє більші суми.</p>
+<p class="glossary-term-section__text">Модель взаємодії повинна чітко пояснювати:</p>
 <ul class="glossary-term-ul">
-<li>Which organization or workspace is active.</li>
-<li>Which records the user can see.</li>
-<li>Which actions are available in the current state.</li>
-<li>How selection works across pages and filters.</li>
-<li>What happens when another person changes a record.</li>
+<li>Яка організація або робочий простір (workspace) є активним.</li>
+<li>Які записи доступні користувачеві для перегляду.</li>
+<li>Які дії доступні в поточному стані.</li>
+<li>Як працює вибір кількох елементів (selection) між різними сторінками пагінації та фільтрами.</li>
+<li>Що відбувається, коли інший користувач одночасно змінює запис.</li>
 </ul>
-<p class="glossary-term-section__text">In a multitenant product, the tenant is the customer or organizational context; it is distinct from an individual user.</p>
+<p class="glossary-term-section__text">У мультитенентному продукті (multitenant) «тенент» (орендар) є клієнтом або контекстом організації; він чітко відрізняється від окремого користувача.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-model-actions-and-exceptions">
-<h2 id="section-model-actions-and-exceptions" class="glossary-term-section__title">Model actions and exceptions</h2>
-<p class="glossary-term-section__text">For a bulk approval, show the selection count and scope before execution. If some invoices are ineligible, identify the affected records and reason. Give the user a clear account of successful, failed, and unresolved changes.</p>
-<p class="glossary-term-section__text">A disabled button can communicate availability, but the application must also enforce authorization for each request. Interface visibility alone cannot protect a record.</p>
-<p class="glossary-term-section__text">Validate the model through representative tasks with people in different roles. Include handoffs, lost access, stale records, and interrupted work. Keep the resulting rules close to the relevant component and workflow documentation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Моделювання дій та виняткових ситуацій</h2>
+<p class="glossary-term-section__text">Для масового схвалення показуйте кількість обраних елементів та обсяг дії перед її виконанням. Якщо деякі рахунки не відповідають критеріям для затвердження, чітко виділіть відповідні записи та вкажіть причину. Надавайте користувачеві прозорий звіт про успішні, невдалі та невирішені зміни.</p>
+<p class="glossary-term-section__text">Неактивна (disabled) кнопка може сигналізувати про недоступність дії, проте застосунок зобов'язаний перевіряти авторизацію для кожного запиту. Сама лише видимість чи невидимість елементів інтерфейсу не може гарантувати захист запису.</p>
+<p class="glossary-term-section__text">Валідуйте модель за допомогою репрезентативних завдань із залученням користувачів різних ролей. Включайте сценарії передачі завдань, втрати доступу, застарілих даних (stale records) та перерваної роботи. Зберігайте сформульовані правила поруч із відповідною документацією компонентів і робочих процесів.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
-<li><a href="/ua/glossary/enterprise-information-architecture.html">Enterprise Information Architecture</a></li>
-<li><a href="/ua/glossary/state-transition-matrix.html">State Transition Matrix</a></li>
-<li><a href="/ua/glossary/interaction-invariant.html">Interaction Invariant</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
+<li><a href="/ua/glossary/enterprise-information-architecture.html">Корпоративна інформаційна архітектура (Enterprise Information Architecture)</a></li>
+<li><a href="/ua/glossary/state-transition-matrix.html">Матриця переходів станів (State Transition Matrix)</a></li>
+<li><a href="/ua/glossary/interaction-invariant.html">Інваріант взаємодії (Interaction Invariant)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">

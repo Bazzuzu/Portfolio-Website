@@ -388,51 +388,51 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Запобігання відтоку клієнтів (Churn Mitigation) — це комплекс дій, спрямованих на скорочення відтоку користувачів, якого можна уникнути. У підписних продуктах це охоплює усунення причин, що спонукають клієнтів відмовитися від сервісу, а також автоматизацію відновлення після платіжних збоїв, здатних призвести до ненавмисного розірвання підписки.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-causes-customer-churn">
-<h2 id="section-what-causes-customer-churn" class="glossary-term-section__title">What causes customer churn?</h2>
-<p class="glossary-term-section__text"><strong>Voluntary churn</strong> occurs when a customer chooses to end a subscription or lets it expire intentionally. <strong>Involuntary churn</strong> occurs when the subscription ends for reasons such as an unresolved payment failure, even though the customer may want to continue. A failed charge is a billing event. Count churn when the account meets your definition of having left. For example, count it when a subscription ends after an unsuccessful recovery period.</p>
-<p class="glossary-term-section__text">A drop in usage can tell you where to investigate. In a monthly invoicing product, fewer invoice sends may reflect seasonality, a broken workflow, or a customer no longer needing the service. Check the pattern against the customer’s normal usage and look for evidence of the cause.</p>
+    <p class="glossary-term-section__text">Запобігання відтоку клієнтів (Churn Mitigation) — це діяльність зі зменшення втрат клієнтів, яких можна уникнути. У підписному продукті вона охоплює розв'язання проблем, які спонукають клієнтів піти, а також допомогу у відновленні після платіжних збоїв, здатних призвести до ненавмисного завершення підписки.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що спричиняє відтік клієнтів?</h2>
+<p class="glossary-term-section__text"><strong>Добровільний відтік (voluntary churn)</strong> відбувається тоді, коли клієнт свідомо вирішує припинити підписку або дозволяє їй закінчитися навмисно. <strong>Невідворотний відтік (involuntary churn)</strong> стається, коли підписка припиняється з таких причин, як невирішений збій оплати, навіть якщо клієнт хоче продовжувати користуватися продуктом. Невдале списання коштів — це платіжна подія. Фіксуйте відтік тоді, коли обліковий запис відповідає вашому визначенню клієнта, що залишив сервіс. Наприклад, зараховуйте його тоді, коли підписка анулюється після безуспішного періоду спроб відновлення платежу.</p>
+<p class="glossary-term-section__text">Зниження активності використання може підказати, де саме шукати проблему. У щомісячному сервісі для виставлення рахунків зменшення кількості відправлених рахунків може свідчити про сезонність, зламаний робочий процес або про те, що клієнт більше не потребує послуги. Зіставте цей паттерн зі звичайною поведінкою клієнта та шукайте фактичні підтвердження причини.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-the-product-do">
-<h2 id="section-what-should-the-product-do" class="glossary-term-section__title">What should the product do?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що повинен робити продукт?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Situation</th>
-<th>Product response</th>
+<th>Ситуація</th>
+<th>Реакція продукту</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>The customer cannot complete a recurring task</td>
-<td>Diagnose the barrier with product data and research. Fix it or offer relevant help.</td>
+<td>Клієнт не може виконати повторюване завдання</td>
+<td>Визначте бар'єр за допомогою продуктових даних і досліджень. Усуньте його або запропонуйте релевантну допомогу.</td>
 </tr>
 <tr>
-<td>The subscription no longer fits the customer’s needs</td>
-<td>Explain any suitable downgrade or pause. Keep cancellation easy to find and explain when access ends.</td>
+<td>Підписка більше не відповідає потребам клієнта</td>
+<td>Поясніть умови відповідного переходу на дешевший тариф або паузи. Зберігайте функцію скасування легкодоступною та чітко пояснюйте, коли саме припиняється доступ.</td>
 </tr>
 <tr>
-<td>A renewal payment fails</td>
-<td>Explain what happened, how to update payment details, and what happens next. Use retries where the payment provider and failure reason allow them.</td>
+<td>Платіж за поновлення не пройшов</td>
+<td>Поясніть, що сталося, як оновити платіжні реквізити та що відбуватиметься далі. Застосовуйте повторні спроби списання там, де це дозволяють платіжний провайдер і причина відхилення платежу.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-measure-the-result">
-<h2 id="section-how-do-you-measure-the-result" class="glossary-term-section__title">How do you measure the result?</h2>
-<p class="glossary-term-section__text">For one definition of monthly customer churn, divide the number of paying accounts from the start of the month that are no longer paying at month-end by the number of paying accounts at the start. If 12 of 400 starting accounts leave under this rule, monthly customer churn is <strong>3%</strong>. This month-end measure treats an account that leaves and returns before month-end as still paying. A count of cancellations during the month answers a different question.</p>
-<p class="glossary-term-section__text">Measure each intervention against the problem it addresses. For billing recovery, track the share of accounts with a failed renewal that recover within a stated period. For a downgrade or pause, check whether customers remain subscribed or return to paid use over later billing cycles. Track complaints and support contacts alongside the outcome. If completed cancellations fall, check how many customers remain subscribed over the next billing cycle and whether users can still cancel without assistance.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як вимірювати результат?</h2>
+<p class="glossary-term-section__text">Для одного з варіантів розрахунку щомісячного відтоку клієнтів розділіть кількість платних акаунтів на початок місяця, які більше не платять наприкінці місяця, на загальну кількість платних акаунтів на початку. Якщо за цим правилом іде 12 із 400 початкових акаунтів, щомісячний відтік клієнтів становить <strong>3%</strong>. Такий підрахунок на кінець місяця розглядає акаунт, який пішов і повернувся до кінця місяця, як такий, що продовжує платити. Підрахунок кількості скасувань протягом місяця відповідає на інше запитання.</p>
+<p class="glossary-term-section__text">Оцінюйте кожну дію з утримання відносно проблеми, яку вона вирішує. Для відновлення платежів відстежуйте частку акаунтів із невдалим поновленням, які відновлюють оплату протягом визначеного періоду. Для переходу на дешевший тариф або призупинення перевіряйте, чи залишаються клієнти передплатниками або чи повертаються вони до платного використання в наступних платіжних циклах. Відстежуйте скарги та звернення до служби підтримки паралельно з основним результатом. Якщо кількість завершених скасувань знижується, перевірте, скільки клієнтів залишаються підписаними протягом наступного платіжного циклу та чи можуть користувачі й надалі скасовувати підписку самостійно без сторонньої допомоги.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
-<li><a href="/ua/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li>
-<li><a href="/ua/glossary/activation-metric.html">Activation Metric</a></li>
-<li><a href="/ua/glossary/user-retention.html">User Retention</a></li>
+<li><a href="/ua/glossary/product-telemetry-analytics.html">Продуктова телеметрія та аналітика (Product Telemetry & Analytics)</a></li>
+<li><a href="/ua/glossary/ltv-to-cac-ratio.html">Співвідношення LTV до CAC (LTV:CAC Ratio)</a></li>
+<li><a href="/ua/glossary/activation-metric.html">Метрика активації (Activation Metric)</a></li>
+<li><a href="/ua/glossary/user-retention.html">Утримання користувачів (User Retention)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">

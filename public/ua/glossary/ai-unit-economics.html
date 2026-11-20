@@ -388,97 +388,93 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Одинична економіка ШІ (AI Unit Economics) — це аналіз доходів і витрат на одну базову одиницю продукту на базі ШІ, таку як клієнтський обліковий запис або завершене завдання. Аналіз на рівні завдання враховує використання моделі, виклики інструментів, повторні спроби (retries), збійні запуски та залучення людини (HITL) у межах встановлених меж собівартості.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-is-the-unit-in-an-ai-product">
-<h2 id="section-what-is-the-unit-in-an-ai-product" class="glossary-term-section__title">What is the unit in an AI product?</h2>
-<p class="glossary-term-section__text">Choose an account, workflow, or task that matches the decision. A model call is not necessarily a completed task: extracting one correct invoice record may require several calls and a human check.</p>
-<p class="glossary-term-section__text">Define success before calculating cost. For invoice extraction, acceptance might require the right supplier, date, currency, and total, checked against the source document. Producing valid JSON alone does not establish correctness.</p>
+    <p class="glossary-term-section__text">Одинична економіка ШІ (AI Unit Economics) — це аналіз доходів і витрат на одну базову одиницю продукту на базі штучного інтелекту, таку як клієнтський акаунт або успішно виконане завдання. Аналіз на рівні завдань враховує інференс моделі, виклики інструментів, повторні спроби (retries), невдалі запуски та будь-яку людську працю в межах визначених меж витрат.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що є базовою одиницею в продукті на базі ШІ?</h2>
+<p class="glossary-term-section__text">Обирайте акаунт, робочий процес (workflow) або завдання, що відповідають цілям прийняття рішень. Виклик моделі (API call) не обов'язково тотожний завершеному завданню: вилучення одного коректного запису з рахунку-фактури може вимагати кількох викликів моделі та ручної перевірки людиною.</p>
+<p class="glossary-term-section__text">Чітко визначте критерії успіху ще до розрахунку витрат. Для вилучення даних із рахунків критерієм прийому може бути точне визначення постачальника, дати, валюти та підсумкової суми, перевірених за вихідним документом. Сама лише генерація валідного JSON не є підтвердженням коректності результату.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-cost-per-successful-task">
-<h2 id="section-how-do-you-calculate-cost-per-successful-task" class="glossary-term-section__title">How do you calculate cost per successful task?</h2>
-<p class="glossary-term-section__text">For a defined group of tasks with a complete observation window:</p>
-<p class="glossary-term-section__text"><strong>Cost per successful task = total stated workflow costs ÷ tasks meeting the success criteria.</strong></p>
-<p class="glossary-term-section__text">Include costs from failed, abandoned, and retried tasks in the numerator. Count each accepted task once. State whether a task completed by a human counts as a success, and include that human work when it does.</p>
-<p class="glossary-term-section__text">This is an operational measure with a declared cost boundary, not a universally standardized accounting ratio. If no tasks succeed, the average cost per success is undefined.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як розрахувати вартість одного успішного завдання?</h2>
+<p class="glossary-term-section__text">Для визначеної групи завдань із завершеним вікном спостереження:</p>
+<p class="glossary-term-section__text"><strong>Вартість одного успішного завдання = загальні витрати на робочий процес ÷ кількість завдань, що відповідають критеріям успіху.</strong></p>
+<p class="glossary-term-section__text">У чисельнику обов'язково враховуйте витрати на невдалі, перервані та повторені завдання. Кожне прийняте завдання рахуйте лише один раз. Зафіксуйте, чи вважається успішним завдання, виконане за участю людини, і обов'язково включайте вартість цієї праці, якщо воно зараховується.</p>
+<p class="glossary-term-section__text">Це оперативна метрика з чітко задекларованими межами витрат, а не універсальний бухгалтерський стандарт. Якщо жодне завдання не завершилося успіхом, середня вартість одного успішного виконання є невизначеною.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-an-ai-unit-economics-example">
-<h2 id="section-an-ai-unit-economics-example" class="glossary-term-section__title">An AI unit economics example</h2>
-<p class="glossary-term-section__text">Consider an illustrative invoice workflow with 1,000 submitted tasks. After retries and review, 800 produce accepted records within the observation window.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад одиничної економіки для ШІ-продукту</h2>
+<p class="glossary-term-section__text">Розглянемо показовий приклад робочого процесу обробки рахунків-фактур із 1 000 поданих завдань. Після повторних спроб і перевірки 800 із них перетворилися на прийняті записи у встановлене вікно спостереження.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Cost pool for all 1,000 tasks</th>
-<th>Amount</th>
+<th>Пул витрат для всіх 1 000 завдань</th>
+<th>Сума</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Model inference across all attempts</td>
+<td>Інференс моделі в усіх спробах</td>
 <td>$120</td>
 </tr>
 <tr>
-<td>Retrieval, tools, and allocated infrastructure</td>
+<td>Пошук (retrieval), інструменти та алокована інфраструктура</td>
 <td>$30</td>
 </tr>
 <tr>
-<td>Human checking and correction</td>
+<td>Ручна перевірка та виправлення людиною</td>
 <td>$50</td>
 </tr>
 <tr>
-<td>Total stated workflow cost</td>
+<td>Загальні зафіксовані витрати на робочий процес</td>
 <td>$200</td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul class="glossary-term-ul">
-<li>Cost per submitted task = $200 ÷ 1,000 = <strong>$0.20</strong>.</li>
-<li>Cost per successful task = $200 ÷ 800 = <strong>$0.25</strong>.</li>
+<li>Вартість одного поданого завдання = $200 ÷ 1 000 = <strong>$0,20</strong>.</li>
+<li>Вартість одного успішного завдання = $200 ÷ 800 = <strong>$0,25</strong>.</li>
 </ul>
-<p class="glossary-term-section__text">If those 800 accepted tasks generate $400 in attributable revenue, $200 remains after this cost pool. That subtotal still excludes acquisition, product development, and any other unmodeled expenses; it is not automatically company net profit.</p>
-<p class="glossary-term-section__text">A variant that costs $150 but produces only 500 accepted tasks costs $0.30 per success. Compare variants on the same workload and acceptance rules.</p>
+<p class="glossary-term-section__text">Якщо ці 800 прийнятих завдань генерують $400 відповідного виторгу, після покриття цього пулу витрат залишається $200. Цей проміжний підсумок усе ще не включає витрати на залучення клієнтів, розробку продукту та інші невраховані статті витрат, тому він не є автоматично чистим прибутком компанії.</p>
+<p class="glossary-term-section__text">Варіант, який коштує $150, але забезпечує лише 500 прийнятих завдань, має вартість $0,30 за одне успішне виконання. Порівнюйте альтернативні варіанти системи на однаковому робочому навантаженні та з незмінними правилами приймання результатів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-is-token-price-insufficient">
-<h2 id="section-why-is-token-price-insufficient" class="glossary-term-section__title">Why is token price insufficient?</h2>
-<p class="glossary-term-section__text">Provider bills can distinguish input and output tokens, cache writes and reads, and paid tools. Additional attempts and growing context can change the number of billable units.</p>
-<p class="glossary-term-section__text">Use actual workflow measurements, including human effort, and reconcile estimates with billing data. A lower token rate does not establish a lower cost per accepted result.</p>
-<p class="glossary-term-section__text">When tasks span reporting periods, use a consistent task cohort or account for work still in progress. Dividing this month's costs by this month's completions can misalign work and outcomes.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому вартості токенів недостатньо?</h2>
+<p class="glossary-term-section__text">Рахунки від провайдерів розрізняють вхідні та вихідні токени, операції запису й читання кешу, а також виклики платних інструментів. Додаткові спроби та зростання контексту можуть суттєво змінювати кількість оплачуваних одиниць.</p>
+<p class="glossary-term-section__text">Використовуйте фактичні вимірювання робочого процесу, включно з витратами праці фахівців, та звіряйте теоретичні оцінки з даними реальних рахунків. Нижчий тариф за токен не гарантує нижчої вартості за один прийнятий результат.</p>
+<p class="glossary-term-section__text">Коли завдання розтягуються на кілька звітних періодів, застосовуйте узгоджену когорту завдань або належним чином обліковуйте незавершене виробництво (work in progress). Простий поділ витрат поточного місяця на кількість завершених завдань цього ж місяця може призвести до розриву між витраченими ресурсами та реальними результатами.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-product-designers-influence">
-<h2 id="section-what-should-product-designers-influence" class="glossary-term-section__title">What should product designers influence?</h2>
-<p class="glossary-term-section__text">Investigate the behavior behind costly runs:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">На що повинні впливати продуктові дизайнери?</h2>
+<p class="glossary-term-section__text">Досліджуйте причини та поведінку користувачів за дорогими запусками:</p>
 <ul class="glossary-term-ul">
-<li>Help users supply the required source information.</li>
-<li>Let users revise the affected part rather than repeat the entire workflow.</li>
-<li>Explain an estimate and obtain confirmation before expensive work where appropriate.</li>
-<li>Provide a usable recovery or human handoff when automation fails.</li>
+<li>Допомагайте користувачам надавати необхідну вихідну інформацію з першого разу.</li>
+<li>Давайте змогу редагувати проблемну частину замість повного повторного запуску всього процесу.</li>
+<li>Пояснюйте орієнтовну вартість або час та запитуйте підтвердження перед запуском дорогих операцій, де це доречно.</li>
+<li>Передбачайте зручні механізми відновлення після помилок або передачу завдання людині (human handoff), коли автоматизація не справляється.</li>
 </ul>
-<p class="glossary-term-section__text">Measure acceptance, rework, latency, and service effort alongside cost. A design that reduces calls but leaves more work for customers has shifted effort rather than necessarily improved the outcome.</p>
-<p class="glossary-term-section__text">Connect the findings to <a href="/ua/glossary/pricing-metric.html">pricing</a> and <a href="/ua/glossary/cost-to-serve.html">cost to serve</a>. An internal successful-task definition may differ from an <a href="/ua/glossary/outcome-based-pricing.html">outcome-based pricing</a> contract's billable event.</p>
+<p class="glossary-term-section__text">Вимірюйте відсоток прийняття результатів, частку доопрацювань, затримку (latency) та трудовитрати на обслуговування паралельно з грошовими витратами. Дизайн, який зменшує кількість викликів моделей, але перекладає додаткову рутинну роботу на клієнтів, просто перерозподіляє зусилля, а не покращує загальний результат.</p>
+<p class="glossary-term-section__text">Пов'язуйте отримані інсайти з <a href="/ua/glossary/pricing-metric.html">ціновою метрикою</a> та <a href="/ua/glossary/cost-to-serve.html">вартістю обслуговування</a>. Внутрішнє визначення успішного завдання може відрізнятися від оплачуваної події в контрактах із <a href="/ua/glossary/outcome-based-pricing.html">ціноутворенням на основі результатів</a>.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/unit-economics.html">Unit Economics</a></li>
-<li><a href="/ua/glossary/cost-to-serve.html">Cost to Serve</a></li>
-<li><a href="/ua/glossary/gross-margin.html">Gross Margin</a></li>
-<li><a href="/ua/glossary/outcome-based-pricing.html">Outcome-Based Pricing</a></li>
-<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Human-in-the-Loop (HITL)</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ai-model-routing.html">Model Routing</a></li>
-</ul>
-<ul class="glossary-term-ul">
-<li><a href="/ua/glossary/responsible-ai-design.html">Responsible AI Design</a></li>
+<li><a href="/ua/glossary/unit-economics.html">Одинична економіка (Unit Economics)</a></li>
+<li><a href="/ua/glossary/cost-to-serve.html">Вартість обслуговування (Cost to Serve)</a></li>
+<li><a href="/ua/glossary/gross-margin.html">Валова маржа (Gross Margin)</a></li>
+<li><a href="/ua/glossary/outcome-based-pricing.html">Ціноутворення на основі результатів</a></li>
+<li><a href="/ua/glossary/human-in-the-loop-hitl.html">Людина в контурі прийняття рішень (HITL)</a></li>
+<li><a href="/ua/glossary/ai-model-routing.html">Маршрутизація моделей ШІ (Model Routing)</a></li>
+<li><a href="/ua/glossary/responsible-ai-design.html">Відповідальний дизайн систем ШІ</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Optimizing cost per task and proving agent ROI</a></li>
-<li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic: API pricing and tool-use charges</a></li>
-<li><a href="https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html" target="_blank" rel="noopener noreferrer">AWS Well-Architected SaaS Lens: Expenditure awareness</a></li>
+<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Оптимізація вартості за завдання та доведення ROI агентів</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Anthropic: Тарифи на API та витрати на використання інструментів</a></li>
+<li><a href="https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/expenditure-awareness.html" target="_blank" rel="noopener noreferrer">AWS Well-Architected SaaS Lens: Управління та оптимізація витрат</a></li>
 </ul>
 </section>
 

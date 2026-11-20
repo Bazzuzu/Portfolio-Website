@@ -388,58 +388,58 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Час до отримання цінності (Time to Value, TTV) — це проміжок часу між визначеною початковою точкою (наприклад, реєстрацією) та першим відчутним і значущим результатом, який користувач або організація отримує від продукту. Його вимірюють в одиницях часу: хвилинах, годинах чи днях.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-measure-time-to-value">
-<h2 id="section-how-do-you-measure-time-to-value" class="glossary-term-section__title">How do you measure time to value?</h2>
-<p class="glossary-term-section__text">Define the unit, start, and end. In an invoicing tool, the unit might be a new account, the start might be signup, and the end might be the first real invoice sent. For an account that signs up at 9 a.m. and sends its first invoice at 3 p.m. that day, TTV is <strong>six hours</strong>.</p>
-<p class="glossary-term-section__text">Choose an endpoint that reflects value for your users. If your product uses the first invoice sent as its <a href="/ua/glossary/activation-metric.html">activation event</a>, time to activation and your operational measure of TTV use the same timestamps. If activation measures an earlier setup milestone, document the difference.</p>
+    <p class="glossary-term-section__text">Час до отримання цінності (Time to Value, TTV) — це проміжок часу між визначеною початковою точкою та першим відчутним результатом, який користувач або обліковий запис отримує від продукту. Команди вимірюють його в одиницях часу: хвилинах, годинах або днях.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як вимірювати час до отримання цінності?</h2>
+<p class="glossary-term-section__text">Визначте одиницю вимірювання, початкову та кінцеву точки. В інструменті для виставлення рахунків одиницею може бути новий акаунт, початком — реєстрація, а завершенням — перший надісланий реальний рахунок. Для акаунта, який зареєструвався о 09:00 і надіслав перший рахунок о 15:00 того ж дня, TTV становить <strong>шість годин</strong>.</p>
+<p class="glossary-term-section__text">Обирайте кінцеву точку, яка відображає реальну цінність для ваших користувачів. Якщо ваш продукт використовує перший надісланий рахунок як <a href="/ua/glossary/activation-metric.html">подію активації</a>, то час до активації та ваш операційний вимір TTV використовуватимуть однакові часові мітки. Якщо ж активація фіксує раніший етап налаштування, задокументуйте цю різницю.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-report-time-alongside-activation-rate">
-<h2 id="section-why-report-time-alongside-activation-rate" class="glossary-term-section__title">Why report time alongside activation rate?</h2>
-<p class="glossary-term-section__text">Suppose you compare two signup cohorts, each with 200 accounts and seven full days of observation.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чому варто зіставляти час із рівнем активації?</h2>
+<p class="glossary-term-section__text">Припустимо, ви порівнюєте дві когорти реєстрацій, кожна з яких налічує 200 акаунтів із повними сімома днями спостереження.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Cohort</th>
-<th>Sent a real invoice within seven days</th>
-<th>Median time among those accounts</th>
+<th>Когорта</th>
+<th>Надіслали реальний рахунок протягом семи днів</th>
+<th>Медіанний час серед цих акаунтів</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Earlier cohort</td>
-<td>120 of 200 (60%)</td>
-<td>24 hours</td>
+<td>Раніша когорта</td>
+<td>120 із 200 (60%)</td>
+<td>24 години</td>
 </tr>
 <tr>
-<td>Later cohort</td>
-<td>100 of 200 (50%)</td>
-<td>12 hours</td>
+<td>Пізніша когорта</td>
+<td>100 із 200 (50%)</td>
+<td>12 годин</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">In the later cohort, the median was lower among accounts that sent an invoice. Fewer accounts reached the milestone overall. Accounts that never sent an invoice within seven days are excluded from both medians and remain in the activation-rate denominator. Compare both figures using the same eligibility rules and observation window.</p>
+<p class="glossary-term-section__text">У пізнішій когорті медіанний час виявився меншим серед тих акаунтів, які надіслали рахунок. Проте загалом контрольного рубежу досягла менша кількість акаунтів. Акаунти, які так і не надіслали рахунок протягом семи днів, виключаються з розрахунку обох медіан, але залишаються в знаменнику коефіцієнта активації. Порівнюйте обидва показники, застосовуючи однакові критерії відповідності та ідентичне вікно спостереження.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-design-reduce-time-to-value">
-<h2 id="section-how-can-design-reduce-time-to-value" class="glossary-term-section__title">How can design reduce time to value?</h2>
-<p class="glossary-term-section__text">Observe where people spend time before the milestone. A delay may come from the interface, missing information, or work that needs to happen outside the product. In the invoicing example, users might pause because they cannot see what a client will receive. A preview can help them check the invoice before sending.</p>
-<p class="glossary-term-section__text">Track the outcome after a change. A shorter setup flow can save clicks without changing elapsed time. Check for accidental sends and track the share of new accounts reaching the milestone.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як дизайн може скоротити час до отримання цінності?</h2>
+<p class="glossary-term-section__text">Дослідіть, на що саме люди витрачають час до досягнення контрольного рубежу. Затримка може бути зумовлена інтерфейсом, браком інформації або діями, які необхідно виконати за межами продукту. У прикладі з рахунками користувачі можуть зупинятися через те, що не бачать, що саме отримає їхній клієнт. Попередній перегляд допоможе їм перевірити рахунок перед надсиланням.</p>
+<p class="glossary-term-section__text">Відстежуйте результат після внесення змін. Коротший процес налаштування може заощадити кліки, але не змінити загальний витрачений час. Перевіряйте наявність випадкових надсилань та відстежуйте частку нових акаунтів, які досягають контрольного етапу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/activation-metric.html">Activation Metric</a></li>
-<li><a href="/ua/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
-<li><a href="/ua/glossary/progressive-disclosure.html">Progressive Disclosure</a></li>
+<li><a href="/ua/glossary/activation-metric.html">Метрика активації (Activation Metric)</a></li>
+<li><a href="/ua/glossary/product-led-growth-plg.html">Зростання на основі продукту (PLG)</a></li>
+<li><a href="/ua/glossary/progressive-disclosure.html">Покрокове розкриття інформації (Progressive Disclosure)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://amplitude.com/blog/time-to-value-drives-user-retention" target="_blank" rel="noopener noreferrer">Time to Value, Amplitude</a></li>
-<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How Amplitude calculates retention</a></li>
+<li><a href="https://amplitude.com/blog/time-to-value-drives-user-retention" target="_blank" rel="noopener noreferrer">Time to Value, Amplitude Blog</a></li>
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How Amplitude calculates retention, Amplitude Docs</a></li>
 </ul>
 </section>
 

@@ -385,38 +385,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Метрика активації (Activation Metric) вимірює, чи досягають нові користувачі або облікові записи контрольного етапу, який свідчить про отримання первинної цінності від продукту. Подія активації фіксує поведінкову дію, що позначає цей рубіж, а коефіцієнт активації (activation rate) визначає відсоток нових користувачів або акаунтів, які досягли його протягом заданого часового проміжку.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-choose-an-activation-event">
-<h2 id="section-how-do-you-choose-an-activation-event" class="glossary-term-section__title">How do you choose an activation event?</h2>
-<p class="glossary-term-section__text">Start with the outcome people came for. In an invoicing product, account creation and opening a template are setup steps. Sending a first invoice is a stronger candidate when the product’s job is to help businesses bill their clients. If users can send test invoices, distinguish those from real ones in the event definition.</p>
-<p class="glossary-term-section__text">Use research to check whether the action reflects progress users care about. Then use behavioral data to test whether it is associated with later meaningful use. Some products need a milestone made up of several actions. In a shared workspace, for example, value may depend on two people completing a task together.</p>
+    <p class="glossary-term-section__text">Метрика активації вимірює, чи досягають нові користувачі або облікові записи контрольного етапу, який свідчить про отримання первинної цінності від продукту. Подія активації фіксує поведінкову дію, що позначає цей рубіж. Рівень активації (коефіцієнт активації) — це відсоток відповідних нових користувачів або акаунтів, які досягли його протягом визначеного часового вікна.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як обрати подію активації?</h2>
+<p class="glossary-term-section__text">Почніть із результату, заради якого люди прийшли до продукту. У сервісі для виставлення рахунків створення облікового запису та відкриття шаблону — це лише підготовчі кроки налаштування. Натомість надсилання першого рахунку є значно переконливішим кандидатом, коли завдання продукту полягає в тому, щоб допомагати бізнесу виставляти рахунки своїм клієнтам. Якщо користувачі мають змогу надсилати тестові рахунки, чітко відокремте їх від реальних у визначенні події.</p>
+<p class="glossary-term-section__text">Використовуйте дослідження, щоб перевірити, чи відображає ця дія прогрес, важливий для користувачів. Потім за допомогою поведінкових даних з'ясуйте, чи пов'язана вона з подальшим усвідомленим використанням продукту. Деяким продуктам потрібен контрольний етап, що складається з кількох дій. Наприклад, у спільному робочому просторі цінність може залежати від того, чи виконають двоє людей завдання разом.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-activation-rate">
-<h2 id="section-how-do-you-calculate-activation-rate" class="glossary-term-section__title">How do you calculate activation rate?</h2>
-<p class="glossary-term-section__text"><strong>Activation rate = eligible new users or accounts that reach the milestone within the window ÷ all eligible new users or accounts in the cohort × 100.</strong></p>
-<p class="glossary-term-section__text">In the invoicing example, count new accounts that send a first real invoice within seven days of signup. If 120 of 200 eligible accounts do so, seven-day activation is <strong>60%</strong>. Count each account once, including accounts where several teammates send invoices. Report the cohort after every account has had seven days to activate.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як розрахувати рівень активації?</h2>
+<p class="glossary-term-section__text"><strong>Рівень активації = відповідні нові користувачі або акаунти, які досягли контрольного етапу у визначеному вікні ÷ усі відповідні нові користувачі або акаунти в когорті × 100.</strong></p>
+<p class="glossary-term-section__text">У прикладі з виставленням рахунків порахуйте нові акаунти, які надіслали перший реальний рахунок протягом семи днів після реєстрації. Якщо 120 із 200 відповідних акаунтів зробили це, семиденна активація становить <strong>60%</strong>. Рахуйте кожен акаунт лише один раз, включно з акаунтами, де рахунки надсилали кілька колег по команді. Формуйте звіт за когортою лише після того, як кожен акаунт мав у своєму розпорядженні повні сім днів для активації.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-validate-the-milestone">
-<h2 id="section-how-do-you-validate-the-milestone" class="glossary-term-section__title">How do you validate the milestone?</h2>
-<p class="glossary-term-section__text">Compare later usage for accounts that reach the milestone and accounts that do not reach it by day seven. Use a later outcome both groups can reach, such as sending any real invoice during days 15–30 after signup. A second invoice would require a first and would favor accounts that have already sent one. Set the same observation window and check whether the pattern holds across comparable cohorts.</p>
-<p class="glossary-term-section__text">An association can help you choose a milestone. It cannot establish that prompting the action will improve retention. Accounts with more urgent invoicing needs may be more likely to do both. Test a change that helps users achieve the outcome and check its effect on activation and later use.</p>
-<p class="glossary-term-section__text">Read activation rate alongside <a href="/ua/glossary/time-to-value-ttv.html">time to value</a>. One tells you how many accounts reached the milestone within a window. The other tells you how long it took for accounts that reached it.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як валідувати контрольний етап?</h2>
+<p class="glossary-term-section__text">Порівняйте подальше використання серед акаунтів, які досягли контрольного етапу, та акаунтів, які не досягли його до сьомого дня. Використовуйте пізніший результат, якого можуть досягти обидві групи, наприклад надсилання будь-якого реального рахунку в проміжку між 15-м та 30-м днями після реєстрації. Вимога надіслати другий рахунок передбачала б наявність першого, що створило б штучну перевагу для акаунтів, які вже надіслали один інвойс. Встановіть однакове вікно спостереження та перевірте, чи зберігається ця закономірність у порівнянних когортах.</p>
+<p class="glossary-term-section__text">Кореляція може допомогти обрати контрольний етап. Проте вона не доводить, що стимулювання цієї дії автоматично покращить утримання. Акаунти з нагальнішою потребою у виставленні рахунків можуть із більшою ймовірністю робити і те, й інше. Протестуйте зміну, яка допомагає користувачам досягти бажаного результату, та оцініть її вплив на активацію і подальше використання.</p>
+<p class="glossary-term-section__text">Аналізуйте рівень активації разом із <a href="/ua/glossary/time-to-value-ttv.html">часом до отримання цінності (Time-to-Value)</a>. Перший показник демонструє, скільки акаунтів досягли контрольного етапу у визначеному вікні. Другий показує, скільки часу це зайняло в тих акаунтів, які його досягли.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li>
-<li><a href="/ua/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
-<li><a href="/ua/glossary/conversion-funnel-architecture.html">Conversion Funnel</a></li>
-<li><a href="/ua/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+<li><a href="/ua/glossary/time-to-value-ttv.html">Час до отримання цінності (Time to Value / TTV)</a></li>
+<li><a href="/ua/glossary/product-led-growth-plg.html">Зростання на основі продукту (PLG)</a></li>
+<li><a href="/ua/glossary/conversion-funnel-architecture.html">Архітектура воронки конверсії (Conversion Funnel)</a></li>
+<li><a href="/ua/glossary/product-telemetry-analytics.html">Продуктова телеметрія та аналітика (Product Telemetry & Analytics)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
 <li><a href="https://info.amplitude.com/rs/138-CDN-550/images/Mastering_Engagement_Playbook_02_26_19_Amplitude.pdf" target="_blank" rel="noopener noreferrer">Mastering Engagement Playbook, Amplitude</a></li>
-<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How Amplitude calculates retention</a></li>
-<li><a href="https://amplitude.com/blog/time-to-value-drives-user-retention" target="_blank" rel="noopener noreferrer">Time to Value, Amplitude</a></li>
+<li><a href="https://www.amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-calculation" target="_blank" rel="noopener noreferrer">How Amplitude calculates retention, Amplitude Docs</a></li>
+<li><a href="https://amplitude.com/blog/time-to-value-drives-user-retention" target="_blank" rel="noopener noreferrer">Time to Value, Amplitude Blog</a></li>
 </ul>
 </section>
 

@@ -391,78 +391,78 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Довічна цінність клієнта (Customer Lifetime Value, LTV або CLV) оцінює фінансову цінність, яку клієнт генерує за весь час взаємодії з бізнесом. База розрахунку має бути чітко визначена: у SaaS цей показник оцінює валовий прибуток за весь життєвий цикл клієнта, а не лише загальний виторг.</p>
-<p class="glossary-term-section__text">LTV, CLV, and CLTV are common abbreviations for customer lifetime value. In subscription software, define whether the customer is a paying account or an individual subscriber before calculating it.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-is-the-saas-ltv-formula">
-<h2 id="section-what-is-the-saas-ltv-formula" class="glossary-term-section__title">What is the SaaS LTV formula?</h2>
-<p class="glossary-term-section__text">For a simplified subscription model with stable revenue, margin, and customer churn, and no expansion revenue:</p>
-<p class="glossary-term-section__text"><strong>Estimated LTV = average monthly revenue per account × gross margin percentage ÷ monthly customer churn rate.</strong></p>
+    <p class="glossary-term-section__text">Довічна цінність клієнта (Customer Lifetime Value, LTV або CLV) оцінює сукупну цінність, яку клієнт генерує за весь час відносин із бізнесом. Базу оцінки обов'язково слід зазначати: наведений тут SaaS-розрахунок оцінює довічний валовий прибуток, а не лише сукупний виторг.</p>
+<p class="glossary-term-section__text">LTV, CLV та CLTV — поширені абревіатури для довічної цінності клієнта. У підписному програмному забезпеченні перед розрахунком обов'язково визначте, чи вважається клієнтом платний акаунт, чи окремий користувач-підписник.</p>
+<section class="glossary-term-section" aria-labelledby="section-saas-ltv">
+<h2 id="section-saas-ltv" class="glossary-term-section__title">Яка формула розрахунку SaaS LTV?</h2>
+<p class="glossary-term-section__text">Для спрощеної моделі підписки зі стабільним виторгом, постійною маржею, фіксованим відтоком клієнтів і без виторгу від розширення:</p>
+<p class="glossary-term-section__text"><strong>Оціночний LTV = середній щомісячний виторг на акаунт × відсоток валової маржі ÷ щомісячний коефіцієнт відтоку клієнтів.</strong></p>
 <ul class="glossary-term-ul">
-<li><strong>Average revenue per account (ARPA):</strong> monthly recurring revenue divided by paying customer accounts under a consistent reporting definition.</li>
-<li><strong>Gross margin percentage:</strong> revenue minus cost of revenue, divided by revenue.</li>
-<li><strong>Monthly customer churn:</strong> the share of paying accounts present at the start of the month that leave during that month.</li>
+<li><strong>Середній виторг на акаунт (ARPA):</strong> щомісячний регулярний виторг, поділений на кількість платних клієнтських акаунтів за єдиним стандартом звітності.</li>
+<li><strong>Відсоток валової маржі:</strong> виторг мінус собівартість виторгу, поділений на виторг.</li>
+<li><strong>Щомісячний відтік клієнтів:</strong> частка платних акаунтів, наявних на початку місяця, які припинили користування протягом цього місяця.</li>
 </ul>
-<p class="glossary-term-section__text">Use percentages as decimals and keep periods consistent. Monthly ARPA requires monthly churn. Revenue churn, which measures lost revenue, is a different input and should not replace customer churn in this formula.</p>
+<p class="glossary-term-section__text">Використовуйте відсотки у вигляді десяткових дробів і дотримуйтеся єдиної часової шкали. Щомісячний показник ARPA вимагає щомісячного відтоку. Відтік виторгу, який вимірює втрачений виторг, є зовсім іншим показником і не повинен підміняти відтік клієнтів у цій формулі.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-customer-lifetime-value-example">
-<h2 id="section-a-customer-lifetime-value-example" class="glossary-term-section__title">A customer lifetime value example</h2>
-<p class="glossary-term-section__text">Assume an illustrative account pays $100 per month, with $20 in monthly cost of revenue and a constant 2% monthly customer churn rate.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад розрахунку довічної цінності клієнта</h2>
+<p class="glossary-term-section__text">Припустімо, що ілюстративний акаунт сплачує $100 на місяць, щомісячна собівартість його обслуговування становить $20, а щомісячний відтік клієнтів стабільно тримається на рівні 2%.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Calculation</th>
-<th>Result</th>
+<th>Розрахунок</th>
+<th>Результат</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Monthly gross profit: $100 − $20</td>
+<td>Щомісячний валовий прибуток: $100 − $20</td>
 <td>$80</td>
 </tr>
 <tr>
-<td>Gross margin: $80 ÷ $100</td>
+<td>Валова маржа: $80 ÷ $100</td>
 <td>80%</td>
 </tr>
 <tr>
-<td>Estimated gross-profit LTV: $100 × 0.80 ÷ 0.02</td>
-<td>$4,000</td>
+<td>Оціночний LTV за валовим прибутком: $100 × 0,80 ÷ 0,02</td>
+<td>$4 000</td>
 </tr>
 <tr>
-<td>Revenue-only LTV: $100 ÷ 0.02</td>
-<td>$5,000</td>
+<td>LTV виключно за виторгом: $100 ÷ 0,02</td>
+<td>$5 000</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">The $1,000 difference is estimated lifetime cost of revenue under these assumptions. Neither result is company net profit. Acquisition cost and other operating expenses remain outside the gross-profit figure.</p>
-<p class="glossary-term-section__text">At a <a href="/ua/glossary/customer-acquisition-cost-cac.html">CAC</a> of $1,000, the gross-profit estimate gives an <a href="/ua/glossary/ltv-to-cac-ratio.html">LTV:CAC ratio</a> of 4:1. Use the same value basis when comparing periods or products.</p>
+<p class="glossary-term-section__text">Різниця в $1 000 — це прогнозована довічна собівартість надання послуг за даних припущень. Жоден із цих результатів не є чистим прибутком компанії. Вартість залучення клієнтів та інші операційні витрати не враховуються у валовому прибутку.</p>
+<p class="glossary-term-section__text">За <a href="/ua/glossary/customer-acquisition-cost-cac.html">CAC</a> у $1 000 оцінка за валовим прибутком дає <a href="/ua/glossary/ltv-to-cac-ratio.html">співвідношення LTV до CAC</a> на рівні 4:1. Завжди використовуйте однакову базу оцінки при порівнянні різних періодів або продуктів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-why-do-ltv-definitions-differ">
-<h2 id="section-why-do-ltv-definitions-differ" class="glossary-term-section__title">Why do LTV definitions differ?</h2>
-<p class="glossary-term-section__text">Some reports use expected revenue; others adjust for gross margin or additional costs. A dashboard's label alone does not identify the calculation. Stripe Billing, for example, documents subscriber LTV as average revenue per subscriber divided by subscriber churn.</p>
-<p class="glossary-term-section__text">Record the formula, customer definition, included costs, and forecast horizon beside the metric. Do not compare a revenue-only LTV with a gross-profit LTV as if they measured the same thing.</p>
+<section class="glossary-term-section" aria-labelledby="section-ltv">
+<h2 id="section-ltv" class="glossary-term-section__title">Чому визначення LTV відрізняються?</h2>
+<p class="glossary-term-section__text">В одних звітах під LTV розуміють очікуваний сукупний виторг, в інших — показник коригують на валову маржу або додаткові витрати. Назва на панелі моніторингу сама по собі не пояснює метод підрахунку. Наприклад, у документації Stripe Billing LTV підписника визначається просто як середній виторг на підписника, поділений на відтік підписників.</p>
+<p class="glossary-term-section__text">Завжди фіксуйте формулу, визначення клієнта, враховані витрати та горизонт прогнозування поруч із самою метрикою. Не порівнюйте LTV за виторгом із LTV за валовим прибутком так, ніби вони відображають одне й те саме явище.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-is-the-simple-formula-unreliable">
-<h2 id="section-when-is-the-simple-formula-unreliable" class="glossary-term-section__title">When is the simple formula unreliable?</h2>
-<p class="glossary-term-section__text">The formula assumes a constant probability of customer churn each period, not a fixed number of departures. It also leaves out expansion, contraction, discounting, and changes in delivery costs.</p>
-<p class="glossary-term-section__text">At zero churn, dividing by the observed churn rate provides no usable estimate. A short period without cancellations does not establish unlimited customer lifetime. Negative net revenue churn is not a substitute denominator.</p>
-<p class="glossary-term-section__text">For uneven retention or changing revenue, model cohorts: groups of customers acquired in the same period. Track their retained accounts, revenue, and delivery costs by month. Separate observed results from the forecast and state how far the forecast extends.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли проста формула стає ненадійною?</h2>
+<p class="glossary-term-section__text">Ця формула спирається на припущення про постійну ймовірність відтоку клієнтів у кожному періоді, а не фіксовану кількість відмов. Вона також ігнорує розширення, звуження, знижки та динаміку витрат на обслуговування.</p>
+<p class="glossary-term-section__text">За нульового відтоку ділення на спостережуваний коефіцієнт відтоку не дає змістовного результату. Короткий інтервал без жодного скасування підписки не свідчить про нескінченний життєвий цикл клієнта. Від'ємний чистий відтік виторгу також не може слугувати знаменником у цій формулі.</p>
+<p class="glossary-term-section__text">У разі нерівномірного утримання або зміни виторгу моделюйте когорти — групи клієнтів, залучених в один і той самий період. Відстежуйте збережені акаунти, виторг і витрати на обслуговування помісячно. Чітко відокремлюйте фактичні спостережувані результати від прогнозів і вказуйте часовий горизонт екстраполяції.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-product-designers-use-ltv">
-<h2 id="section-how-can-product-designers-use-ltv" class="glossary-term-section__title">How can product designers use LTV?</h2>
-<p class="glossary-term-section__text">Connect the estimate to behavior the team can investigate. An invoicing product might examine whether accounts that successfully send and reconcile their first invoice continue using the product.</p>
-<p class="glossary-term-section__text">Test onboarding changes against task completion and retained paying accounts. Include customer fit, price changes, and service costs when interpreting results. A redesign's financial effect needs evidence beyond a modeled LTV increase.</p>
-<p class="glossary-term-section__text">For an AI feature, also check whether additional retained usage increases delivery costs. Revenue growth and gross-profit growth can differ.</p>
+<section class="glossary-term-section" aria-labelledby="section-ltv">
+<h2 id="section-ltv" class="glossary-term-section__title">Як дизайнери продукту можуть використовувати LTV?</h2>
+<p class="glossary-term-section__text">Пов'язуйте цю оцінку з конкретною поведінкою користувачів, яку команда може дослідити. Наприклад, у сервісі виставлення рахунків варто перевірити, чи продовжують користуватися продуктом ті акаунти, які успішно надіслали та провели звірку свого першого інвойсу.</p>
+<p class="glossary-term-section__text">Тестуйте зміни в онбордингу, оцінюючи успішність завершення ключових завдань та частку збережених платних акаунтів. Інтерпретуючи результати, беріть до уваги цільову відповідність клієнтів, коригування цін і витрати на обслуговування. Фінансовий вплив редизайну потребує реальних доказів, а не лише гіпотетичного зростання в моделі LTV.</p>
+<p class="glossary-term-section__text">Для функціональності на основі ШІ додатково перевіряйте, чи не призводить збережене використання до надмірного зростання витрат на надання сервісу. Зростання виторгу та зростання валового прибутку можуть суттєво відрізнятися.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/unit-economics.html">Unit Economics</a></li>
-<li><a href="/ua/glossary/customer-acquisition-cost-cac.html">Customer Acquisition Cost (CAC)</a></li>
-<li><a href="/ua/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li>
-<li><a href="/ua/glossary/user-retention.html">User Retention</a></li>
-<li><a href="/ua/glossary/cac-payback-period.html">CAC Payback Period</a></li>
+<li><a href="/ua/glossary/unit-economics.html">Одинична економіка (Unit Economics)</a></li>
+<li><a href="/ua/glossary/customer-acquisition-cost-cac.html">Вартість залучення клієнта (CAC)</a></li>
+<li><a href="/ua/glossary/ltv-to-cac-ratio.html">Співвідношення LTV до CAC</a></li>
+<li><a href="/ua/glossary/user-retention.html">Утримання користувачів (User Retention)</a></li>
+<li><a href="/ua/glossary/cac-payback-period.html">Період окупності CAC</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">

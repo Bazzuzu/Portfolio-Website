@@ -385,38 +385,38 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Безперервне експериментування — це стала практика продуктової команди, що полягає в постійному тестуванні гіпотез, прийнятті рішень на основі емпіричних доказів та використанні отриманих результатів для формування наступних ітерацій. Вона інтегрує експерименти в щоденну продуктову роботу завдяки стандартизованому процесу та збереженню бази знань.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-the-cycle-work">
-<h2 id="section-how-does-the-cycle-work" class="glossary-term-section__title">How does the cycle work?</h2>
+    <p class="glossary-term-section__text">Безперервне експериментування — це практика продуктової команди, яка полягає в регулярному тестуванні гіпотез, прийнятті рішень на основі емпіричних доказів і використанні отриманих результатів для вдосконалення наступних експериментів. Воно поєднує експерименти з повсякденною продуктовою роботою через спільний процес та фіксацію здобутих знань.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює цей цикл?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Choose a question.</strong> Use research and behavioral data to identify a problem. Write down what change you expect, for whom, and why.</li>
-<li><strong>Plan the evaluation.</strong> When a randomized test is feasible, define the assignment unit, primary outcome, guardrails, and decision rules. Check that the relevant events work in both versions.</li>
-<li><strong>Review the evidence.</strong> Inspect data quality, estimate the effect, and account for uncertainty and guardrails before making a decision.</li>
-<li><strong>Record and reuse the result.</strong> Save the hypothesis, audience, variants, metric definitions, result, decision, and follow-up question. Bring that record into the next planning discussion.</li>
+<li><strong>Оберіть питання.</strong> Використовуйте результати досліджень і дані про поведінку, щоб виявити проблему. Зафіксуйте, якої зміни ви очікуєте, для кого саме та чому.</li>
+<li><strong>Сплануйте оцінювання.</strong> Якщо проведення рандомізованого тесту можливе, визначте одиницю розподілу, первинний показник, запобіжні метрики (guardrails) та правила прийняття рішень. Переконайтеся, що відстеження відповідних подій працює коректно в обох версіях.</li>
+<li><strong>Проаналізуйте докази.</strong> Перевірте якість даних, оцініть величину ефекту та врахуйте ступінь невизначеності й запобіжні метрики перед прийняттям рішення.</li>
+<li><strong>Зафіксуйте та використайте результат повторно.</strong> Збережіть гіпотезу, опис аудиторії, тестовані варіанти, визначення метрик, результат, прийняте рішення та наступне відкрите питання. Використовуйте цей запис під час подальших обговорень планів.</li>
 </ol>
-<p class="glossary-term-section__text">An <a href="/ua/glossary/ab-testing-split-testing.html">A/B test</a> estimates the effect of a change. Continuous experimentation describes the team practice that connects tests over time. A feature flag can control exposure. To estimate a causal effect with an A/B test, the team also needs random assignment and reliable measurement.</p>
+<p class="glossary-term-section__text">Окремий <a href="/ua/glossary/ab-testing-split-testing.html">A/B-тест</a> оцінює ефект конкретної зміни. Безперервне експериментування описує командну практику, яка пов'язує тести між собою в часі. Функціональний прапорець (feature flag) дозволяє контролювати показ функціональності. Проте для оцінки причинно-наслідкового ефекту за допомогою A/B-тесту команді також необхідні випадковий розподіл і надійні вимірювання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-using-one-test-to-plan-the-next">
-<h2 id="section-example-of-using-one-test-to-plan-the-next" class="glossary-term-section__title">Example of using one test to plan the next</h2>
-<p class="glossary-term-section__text">An invoicing team tests whether a client preview helps more new accounts send their first real invoice within seven days. The result is inconclusive, so the team records the uncertainty alongside the guardrails and its decision to keep the current version.</p>
-<p class="glossary-term-section__text">In follow-up sessions, some users still hesitate because they cannot tell whether the client will receive an email immediately. The next hypothesis addresses that specific uncertainty. The team can test comprehension with a prototype, then evaluate the product change with a randomized test if traffic supports it.</p>
-<p class="glossary-term-section__text">A shared experiment log is enough for a small team to get started. Keep inconclusive results and rollbacks alongside successful releases. Record the audience and context so the next team can decide whether the result applies to its work.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад використання одного тесту для планування наступного</h2>
+<p class="glossary-term-section__text">Команда продукту для виставлення інвойсів тестує, чи допомагає попередній перегляд для клієнта більшій кількості нових акаунтів надіслати перший справжній інвойс протягом семи днів. Результат виявився статистично невизначеним, тому команда фіксує цю невизначеність разом із показниками запобіжних метрик і рішенням зберегти поточну версію.</p>
+<p class="glossary-term-section__text">Під час наступних сесій деякі користувачі все одно вагаються, оскільки не можуть зрозуміти, чи надійде клієнту електронний лист негайно. Наступна гіпотеза спрямована на усунення саме цієї конкретної невизначеності. Команда може протестувати зрозумілість інтерфейсу на прототипі, а потім оцінити зміну в продукті за допомогою рандомізованого тесту, якщо обсяг трафіку є достатнім.</p>
+<p class="glossary-term-section__text">Для початку роботи невеликій команді достатньо спільного журналу експериментів. Зберігайте неоднозначні результати та відкати змін нарівні з успішними релізами. Фіксуйте аудиторію та контекст, щоб наступна команда могла визначити, чи застосовний цей результат до її завдань.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
-<li><a href="/ua/glossary/product-discovery.html">Product Discovery</a></li>
-<li><a href="/ua/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li>
-<li><a href="/ua/glossary/growth-design.html">Growth Design</a></li>
+<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B-тестування (Спліт-тестування)</a></li>
+<li><a href="/ua/glossary/product-discovery.html">Продуктове відкриття (Product Discovery)</a></li>
+<li><a href="/ua/glossary/feature-flag-strategy.html">Стратегія функціональних прапорців (Feature Flags)</a></li>
+<li><a href="/ua/glossary/growth-design.html">Дизайн зростання (Growth Design)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Post-Experiment Stage, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Патерни надійного експериментування: етап до експерименту, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Патерни надійного експериментування: етап під час експерименту, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-post-experiment-stage/" target="_blank" rel="noopener noreferrer">Патерни надійного експериментування: етап після експерименту, Microsoft Research</a></li>
 </ul>
 </section>
 

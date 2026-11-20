@@ -385,59 +385,59 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Стратегія функціональних прапорців (Feature Flag Strategy) визначає, як команда використовує конфігуровані перемикачі для керування доступом користувачів чи акаунтів до нової функціональності. Прапорці дозволяють відокремити розгортання коду від його активації для користувачів. Стратегія регламентує правила надання доступу, моніторинг релізу, поведінку системи у разі вимкнення прапорця та терміни його видалення з кодової бази.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-rollouts-and-experiments-use-flags">
-<h2 id="section-how-do-rollouts-and-experiments-use-flags" class="glossary-term-section__title">How do rollouts and experiments use flags?</h2>
+    <p class="glossary-term-section__text">Стратегія функціональних прапорців визначає, як команда використовує конфігуровані перемикачі для контролю того, які саме користувачі або облікові записи отримують доступ до нової функції. Прапорці дозволяють командам розгортати код окремо від відкриття доступу до нього. Стратегія охоплює правила надання доступу, способи перевірки релізу командою, поведінку системи у разі вимкнення прапорця та умови, за яких його можна безпечно видалити.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як поетапні розгортання та експерименти використовують прапорці?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Use</th>
-<th>What the flag controls</th>
-<th>What the team decides</th>
+<th>Сценарій використання</th>
+<th>Чим керує прапорець</th>
+<th>Що вирішує команда</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Staged rollout</td>
-<td>Which eligible accounts can use the feature as exposure expands</td>
-<td>Whether the feature is ready for more accounts</td>
+<td>Поетапне розгортання</td>
+<td>Які відповідні акаунти можуть користуватися функцією в міру розширення охоплення</td>
+<td>Чи готова функція до підключення більшої кількості акаунтів</td>
 </tr>
 <tr>
-<td>A/B test</td>
-<td>Which experience each assigned account receives</td>
-<td>Whether the tested change affects a predefined outcome</td>
+<td>A/B-тест</td>
+<td>Який користувацький досвід отримує кожен призначений акаунт</td>
+<td>Чи впливає протестована зміна на заздалегідь визначений результат</td>
 </tr>
 <tr>
-<td>Operational switch</td>
-<td>Whether a capability stays enabled during a problem</td>
-<td>When to use the fallback and how to recover</td>
+<td>Операційний перемикач</td>
+<td>Чи залишається можливість увімкненою під час технічної проблеми</td>
+<td>Коли переходити на резервний сценарій і як проводити відновлення</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">A flag can deliver the variants in an <a href="/ua/glossary/ab-testing-split-testing.html">A/B test</a>. Estimating the effect still requires sound assignment, tracking, and analysis. A staged rollout can surface problems, but changes in metrics as exposure expands can also reflect changes in the audience.</p>
+<p class="glossary-term-section__text">Прапорець може доставляти варіанти інтерфейсу в <a href="/ua/glossary/ab-testing-split-testing.html">A/B-тесті</a>. Проте точна оцінка ефекту все одно вимагає коректного розподілу, надійного відстеження та аналізу. Поетапне розгортання дає змогу виявити неполадки, але зміни в метриках під час розширення охоплення можуть також відображати зміну складу аудиторії.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-a-staged-rollout">
-<h2 id="section-example-of-a-staged-rollout" class="glossary-term-section__title">Example of a staged rollout</h2>
-<p class="glossary-term-section__text">An invoicing team releases a new preview to internal accounts, then to a small share of eligible customer accounts. Keep exposure consistent within an account so teammates working on the same invoice see the same experience. Before expanding, the team reviews preview failures and the share of eligible exposed accounts that send a first real invoice within seven days of signup. It agrees in advance which problems warrant pausing, such as a loss of draft data.</p>
-<p class="glossary-term-section__text">The team tests what happens if it switches back while an invoice draft is open. Check that the draft remains available in the original experience. Previously sent invoices should still appear in the customer’s history. Plan a separate recovery path for changes that persist after the flag is turned off.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад поетапного розгортання</h2>
+<p class="glossary-term-section__text">Команда сервісу рахунків відкриває новий режим попереднього перегляду спочатку для внутрішніх акаунтів, а потім — для невеликої частки відповідних клієнтських акаунтів. Забезпечте узгодженість варіанта інтерфейсу в межах одного акаунта, щоб колеги, які працюють над одним і тим самим рахунком, бачили однаковий інтерфейс. Перед розширенням охоплення команда аналізує помилки попереднього перегляду та частку відповідних акаунтів із доступом, які надсилають перший реальний рахунок протягом семи днів після реєстрації. Вона заздалегідь узгоджує, які саме проблеми є підставою для зупинки релізу, наприклад втрата даних чернетки.</p>
+<p class="glossary-term-section__text">Команда перевіряє, що відбувається, якщо вимкнути прапорець у момент, коли відкрита чернетка рахунку. Переконайтеся, що чернетка залишається доступною у вихідній версії інтерфейсу. Раніше надіслані рахунки повинні, як і раніше, відображатися в історії клієнта. Сплануйте окремий шлях відновлення для змін, які залишаються в системі навіть після вимкнення прапорця.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-a-flag-plan-include">
-<h2 id="section-what-should-a-flag-plan-include" class="glossary-term-section__title">What should a flag plan include?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що повинен містити план керування прапорцями?</h2>
 <ul class="glossary-term-ul">
-<li><strong>Purpose and owner.</strong> Record the decision the flag supports and who can change it.</li>
-<li><strong>Eligibility and fallback.</strong> Define the audience, assignment rules, and the default when flag configuration is unavailable. Test both experiences.</li>
-<li><strong>Monitoring and response.</strong> Specify which signals prompt a pause, an expansion, or a switch back.</li>
-<li><strong>Cleanup.</strong> Give temporary flags a review date. After the release decision, remove the flag and unused code path when it is safe to do so.</li>
+<li><strong>Призначення та відповідальний.</strong> Зафіксуйте рішення, яке забезпечує прапорець, і визначте, хто має право змінювати його стан.</li>
+<li><strong>Відповідність критеріям і резервний сценарій.</strong> Визначте цільову аудиторію, правила призначення та варіант за замовчуванням, якщо конфігурація прапорця виявиться недоступною. Протестуйте обидва сценарії роботи.</li>
+<li><strong>Моніторинг і реагування.</strong> Чітко визначте, які сигнали вимагають призупинення, розширення або повного повернення до попереднього стану.</li>
+<li><strong>Очищення.</strong> Встановіть для тимчасових прапорців дату перегляду. Після ухвалення рішення щодо релізу видаліть прапорець і невикористовувані гілки коду, щойно це стане безпечно.</li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
-<li><a href="/ua/glossary/design-engineering.html">Design Engineering</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування (Continuous Experimentation)</a></li>
+<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B-тестування (Спліт-тестування)</a></li>
+<li><a href="/ua/glossary/design-engineering.html">Дизайн-інженерія (Design Engineering)</a></li>
 <li><a href="/ua/glossary/designops.html">DesignOps</a></li>
 </ul>
 </section>

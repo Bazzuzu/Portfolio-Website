@@ -386,64 +386,64 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Оптимізація процесу чекауту (checkout flow optimization) — це практика проектування плавного сценарію оформлення замовлення, що спрощує перевірку кошика, введення даних, оплату та отримання підтвердження. Вона спрямована на усунення будь-якого зайвого тертя від моменту переходу до чекауту до фінальної підтверджувальної сторінки.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-should-you-improve-first">
-<h2 id="section-what-should-you-improve-first" class="glossary-term-section__title">What should you improve first?</h2>
+    <p class="glossary-term-section__text">Оптимізація процесу чекауту — це практика спрощення для клієнтів перегляду замовлення, надання обов'язкової інформації, здійснення оплати та розуміння фінального результату. Вона усуває небажане тертя від моменту входу в чекаут до отримання підтвердження.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що слід оптимізувати в першу чергу?</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Friction</th>
-<th>What to check</th>
+<th>Точка тертя</th>
+<th>Що необхідно перевірити</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Unexpected costs</td>
-<td>Show the total, currency, and applicable charges before customers commit. Explain changes to price when they occur.</td>
+<td>Неочікувані додаткові витрати</td>
+<td>Показуйте загальну суму, валюту та всі застосовні збори до того, як клієнти візьмуть на себе зобов'язання щодо покупки. Пояснюйте будь-які зміни ціни, коли вони виникають.</td>
 </tr>
 <tr>
-<td>Form errors</td>
-<td>Label required fields and explain errors near the relevant input. Preserve valid details where safe so customers can correct the issue and continue.</td>
+<td>Помилки валідації форм</td>
+<td>Позначайте обов'язкові поля та чітко пояснюйте помилки безпосередньо біля відповідного поля введення. Зберігайте коректно введені дані, де це безпечно, щоб клієнти могли виправити помилку й продовжити оформлення.</td>
 </tr>
 <tr>
-<td>Payment failure</td>
-<td>Explain the payment status and give a next action, such as trying another method after a confirmed decline.</td>
+<td>Збій або відхилення платежу</td>
+<td>Пояснюйте поточний статус платежу та пропонуйте наступну дію, наприклад спробувати інший спосіб оплати після підтвердженого відхилення транзакції.</td>
 </tr>
 <tr>
-<td>Unclear confirmation</td>
-<td>Tell customers whether the order is confirmed or still processing, and show a reference when available.</td>
+<td>Незрозуміле або неоднозначне підтвердження</td>
+<td>Інформуйте клієнтів про те, чи замовлення вже підтверджено, чи воно все ще перебуває в процесі обробки, і показуйте номер замовлення (reference), коли він доступний.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Use checkout events to find where people stop. Observe users attempting that step to understand whether they are confused, blocked, or reconsidering the purchase. Fix the barrier you can verify before changing the number of screens.</p>
+<p class="glossary-term-section__text">Використовуйте події аналітики чекауту (checkout events), щоб виявити, на якому саме етапі користувачі зупиняються. Спостерігайте за користувачами під час проходження цього кроку, щоб зрозуміти, чи вони заплуталися, зіткнулися з технічною перешкодою, чи знову зважують доцільність покупки. Усуньте перевірений та підтверджений бар'єр, перш ніж змінювати кількість екранів чи кроків сценарію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-payment-recovery-in-travel-checkout">
-<h2 id="section-example-of-payment-recovery-in-travel-checkout" class="glossary-term-section__title">Example of payment recovery in travel checkout</h2>
-<p class="glossary-term-section__text">A traveler has reviewed the trip total and entered passenger details. Their payment is declined. Keep the passenger details available, explain the decline in plain language, and let the traveler choose another payment method. If availability or price changed while they were paying, show the new details before asking them to commit again.</p>
-<p class="glossary-term-section__text">A delayed response needs a different design. If the payment outcome is unknown, tell the traveler you are checking it and explain where they can see the result. Confirm the original attempt’s status before offering a retry. Keep payment and booking status distinct when the booking can still be pending after payment succeeds.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад відновлення платежу в чекауті туристичного бронювання</h2>
+<p class="glossary-term-section__text">Мандрівник переглянув загальну вартість поїздки та ввів дані пасажирів. Його платіж було відхилено. Збережіть введені дані пасажирів доступними, поясніть причину відхилення простою та зрозумілою мовою й дозвольте мандрівникові обрати інший платіжний метод. Якщо доступність квитків або ціна змінилися під час проведення оплати, покажіть оновлені деталі перед тим, як просити клієнта повторно підтвердити замовлення.</p>
+<p class="glossary-term-section__text">Затримана відповідь платіжного шлюзу потребує іншого проектування інтерфейсу. Якщо фінальний результат платежу наразі невідомий, повідомте мандрівникові, що ви перевіряєте статус транзакції, і вкажіть, де саме він зможе побачити результат. Обов'язково підтвердьте статус початкової спроби перед тим, як пропонувати повторити оплату. Розділяйте статус платежу та статус бронювання, оскільки бронювання може залишатися в стані очікування (pending) навіть після успішного списання коштів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-measure-checkout-improvements">
-<h2 id="section-how-do-you-measure-checkout-improvements" class="glossary-term-section__title">How do you measure checkout improvements?</h2>
-<p class="glossary-term-section__text">Define checkout entry and successful completion at the same unit, such as a booking attempt that can contain multiple payment retries. Count confirmed bookings per eligible checkout start within a defined window. Use payment failure and recovery rates to diagnose the outcome, then check duplicate charges, cancellations, and checkout-related support contacts as guardrails.</p>
-<p class="glossary-term-section__text">Use a separate success event for the quote request. Submitting a request records interest. Confirming a booking records a completed purchase in this example.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як вимірювати результати оптимізації чекауту?</h2>
+<p class="glossary-term-section__text">Визначайте початок чекауту та його успішне завершення на одному рівні одиниці аналізу, наприклад, як спробу бронювання, що може містити кілька повторних спроб оплати. Розраховуйте кількість підтверджених бронювань на кожен відповідний критеріям старт чекауту в межах визначеного часового вікна. Використовуйте частку відхилених платежів та коефіцієнт успішного відновлення оплати (recovery rate) для діагностики результату, а як захисні метрики (guardrails) відстежуйте повторні списання коштів, скасування замовлень і кількість звернень до служби підтримки щодо чекауту.</p>
+<p class="glossary-term-section__text">Використовуйте окрему подію успіху для запиту цінової пропозиції (quote request). Відправлення запиту фіксує виявлений інтерес. Підтвердження бронювання в цьому прикладі фіксує завершену покупку.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li>
-<li><a href="/ua/glossary/conversion-funnel-architecture.html">Conversion Funnel</a></li>
-<li><a href="/ua/glossary/operational-ux.html">Operational UX</a></li>
+<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Оптимізація коефіцієнта конверсії (CRO)</a></li>
+<li><a href="/ua/glossary/conversion-funnel-architecture.html">Архітектура воронки конверсії</a></li>
+<li><a href="/ua/glossary/operational-ux.html">Операційний UX (Operational UX)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://baymard.com/research/checkout-usability" target="_blank" rel="noopener noreferrer">Cart and Checkout Usability Research, Baymard Institute</a></li>
-<li><a href="https://baymard.com/research-articles/adaptive-validation-error-messages" target="_blank" rel="noopener noreferrer">How to Improve Validation Errors, Baymard Institute</a></li>
-<li><a href="https://baymard.com/blog/payment-ux" target="_blank" rel="noopener noreferrer">Payment UX, Baymard Institute</a></li>
-<li><a href="https://docs.stripe.com/payments/paymentintents/lifecycle" target="_blank" rel="noopener noreferrer">How PaymentIntents work, Stripe documentation</a></li>
+<li><a href="https://baymard.com/research/checkout-usability" target="_blank" rel="noopener noreferrer">Дослідження юзабіліті кошика та чекауту, Baymard Institute</a></li>
+<li><a href="https://baymard.com/research-articles/adaptive-validation-error-messages" target="_blank" rel="noopener noreferrer">Як покращити повідомлення про помилки валідації, Baymard Institute</a></li>
+<li><a href="https://baymard.com/blog/payment-ux" target="_blank" rel="noopener noreferrer">UX платіжних систем, Baymard Institute</a></li>
+<li><a href="https://docs.stripe.com/payments/paymentintents/lifecycle" target="_blank" rel="noopener noreferrer">Як працюють PaymentIntents, документація Stripe</a></li>
 </ul>
 </section>
 

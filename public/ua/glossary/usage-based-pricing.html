@@ -389,93 +389,93 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Ціноутворення на основі споживання (Usage-Based Pricing) передбачає оплату відповідно до виміряного обсягу споживання продукту чи послуги, такого як API-запити, простір у сховищі або оброблені документи. Воно може комбінуватися з фіксованою підпискою, включеним пакетом використання або передоплаченими кредитами.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-usage-based-pricing-work">
-<h2 id="section-how-does-usage-based-pricing-work" class="glossary-term-section__title">How does usage-based pricing work?</h2>
-<p class="glossary-term-section__text">Define the <a href="/ua/glossary/pricing-metric.html">pricing metric</a>, how usage is counted, the rate, and the billing period. The pricing policy determines the charge; usage-based billing measures events and turns the policy into an invoice.</p>
-<p class="glossary-term-section__text">Common arrangements include:</p>
+    <p class="glossary-term-section__text">Ціноутворення на основі споживання тарифікує клієнтів відповідно до виміряного обсягу використання продукту чи послуги: наприклад, кількості API-запитів, обсягу сховища або оброблених документів. Воно може поєднуватися з фіксованою підпискою, включеним лімітом використання або передоплаченими кредитами.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює ціноутворення на основі споживання?</h2>
+<p class="glossary-term-section__text">Визначте <a href="/ua/glossary/pricing-metric.html">цінову метрику (Pricing Metric)</a>, спосіб обліку споживання, тариф і розрахунковий період. Політика ціноутворення визначає розмір оплати; білінг на основі споживання фіксує події та перетворює правила політики на рахунок для оплати.</p>
+<p class="glossary-term-section__text">Типові формати організації включають:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Model</th>
-<th>Illustrative arrangement</th>
-<th>What customers need to understand</th>
+<th>Модель</th>
+<th>Ілюстративний формат</th>
+<th>Що необхідно розуміти клієнтам</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pay as you go</td>
-<td>A charge per processed document</td>
-<td>Which documents count and when usage is billed.</td>
+<td>Оплата за фактом використання (Pay as you go)</td>
+<td>Плата за кожен оброблений документ</td>
+<td>Які документи враховуються та коли виставляється рахунок за використання.</td>
 </tr>
 <tr>
-<td>Subscription plus overage</td>
-<td>A monthly fee includes an allowance, with extra units charged separately</td>
-<td>Remaining allowance and the rate beyond it.</td>
+<td>Підписка плюс перевищення (Subscription plus overage)</td>
+<td>Щомісячна плата включає певний ліміт, а додаткові одиниці тарифікуються окремо</td>
+<td>Залишок ліміту та тариф за його перевищення.</td>
 </tr>
 <tr>
-<td>Prepaid credits</td>
-<td>Customers buy a balance consumed by specified operations</td>
-<td>Credit consumption, expiration, rollover, and refund rules.</td>
+<td>Передоплачені кредити (Prepaid credits)</td>
+<td>Клієнти купують баланс, який списується за певні операції</td>
+<td>Правила списання кредитів, термін їх дії, перенесення залишку на наступний період і повернення коштів.</td>
 </tr>
 <tr>
-<td>Graduated usage tiers</td>
-<td>Different portions of consumption have different rates</td>
-<td>Which rate applies to each portion.</td>
+<td>Багаторівневі тарифи споживання (Graduated usage tiers)</td>
+<td>Різні обсяги споживання мають різні тарифи</td>
+<td>Який тариф застосовується до кожного конкретного інтервалу.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These are examples, not recommended prices or vendor offers. A product can combine several arrangements.</p>
+<p class="glossary-term-section__text">Це ілюстративні приклади, а не рекомендовані ціни чи пропозиції постачальників. Продукт може поєднувати кілька таких підходів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-usage-based-pricing-calculation">
-<h2 id="section-a-usage-based-pricing-calculation" class="glossary-term-section__title">A usage-based pricing calculation</h2>
-<p class="glossary-term-section__text">An illustrative document service costs $49 per month, includes 1,000 processed documents, and charges $0.02 for each additional document. Assume no taxes, discounts, or other charges.</p>
-<p class="glossary-term-section__text">For 2,500 billable documents:</p>
-<p class="glossary-term-section__text"><strong>Monthly charge = $49 + (2,500 − 1,000) × $0.02 = $79.</strong></p>
-<p class="glossary-term-section__text">At 800 documents, the charge remains $49 under this policy. Unused allowance does not become a refund unless the terms explicitly provide one.</p>
-<p class="glossary-term-section__text">The service must define whether failed processing, duplicate submissions, previews, and retries count. “Processed document” is incomplete billing language until those cases are resolved.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Розрахунок ціноутворення на основі споживання</h2>
+<p class="glossary-term-section__text">Умовний сервіс обробки документів коштує $49 на місяць, включає 1,000 оброблених документів і нараховує $0.02 за кожен додатковий документ. Припустимо відсутність податків, знижок або інших нарахувань.</p>
+<p class="glossary-term-section__text">Для 2,500 оплачуваних документів:</p>
+<p class="glossary-term-section__text"><strong>Щомісячний платіж = $49 + (2,500 − 1,000) × $0.02 = $79.</strong></p>
+<p class="glossary-term-section__text">При 800 документах платіж залишається на рівні $49 за цією політикою. Невикористаний ліміт не повертається у вигляді коштів, якщо це явно не передбачено умовами надання послуг.</p>
+<p class="glossary-term-section__text">Сервіс повинен чітко визначати, чи враховуються невдалі спроби обробки, дублікати запитів, попередній перегляд і повторні спроби. Формулювання «оброблений документ» залишається неповним із точки зору білінгу, доки ці випадки не будуть чітко врегульовані.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-usage-based-vs-seat-based-and-outcome-based-pricing">
-<h2 id="section-usage-based-vs-seat-based-and-outcome-based-pricing" class="glossary-term-section__title">Usage-based vs. seat-based and outcome-based pricing</h2>
-<p class="glossary-term-section__text">Seat-based pricing counts licensed users. Usage-based pricing counts consumption. A product can charge for both.</p>
-<p class="glossary-term-section__text"><a href="/ua/glossary/outcome-based-pricing.html">Outcome-based pricing</a> counts a defined result. Charging for a document-processing attempt and charging for an accepted extraction can lead to different bills, even if both use a meter.</p>
-<p class="glossary-term-section__text">Choose the unit based on customer value, predictability, measurement reliability, and <a href="/ua/glossary/cost-to-serve.html">delivery costs</a>. Usage does not automatically correspond to value for the customer.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Споживання, робочі місця та результати: порівняння моделей</h2>
+<p class="glossary-term-section__text">Ціноутворення за робочі місця (seat-based) враховує кількість ліцензованих користувачів. Ціноутворення на основі споживання враховує обсяг використання. Продукт може стягувати плату за обидва показники одночасно.</p>
+<p class="glossary-term-section__text"><a href="/ua/glossary/outcome-based-pricing.html">Ціноутворення на основі результатів</a> враховує чітко визначений результат. Оплата за спробу обробки документа та оплата за прийняте вилучення даних можуть призвести до зовсім різних сум у рахунку, навіть якщо в обох випадках використовується лічильник.</p>
+<p class="glossary-term-section__text">Обирайте одиницю вимірювання на основі цінності для клієнта, передбачуваності, надійності вимірювання та <a href="/ua/glossary/cost-to-serve.html">витрат на надання послуги</a>. Споживання саме по собі не завжди безпосередньо відповідає цінності, яку відчуває клієнт.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-makes-the-experience-understandable">
-<h2 id="section-what-makes-the-experience-understandable" class="glossary-term-section__title">What makes the experience understandable?</h2>
-<p class="glossary-term-section__text">Show customers enough information to predict and check the bill:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що робить користувацький досвід зрозумілим?</h2>
+<p class="glossary-term-section__text">Надавайте клієнтам достатньо інформації для прогнозування та перевірки рахунку:</p>
 <ul class="glossary-term-ul">
-<li>The billable unit, included quantity, and overage rate.</li>
-<li>Consumption during the current period and when the meter last updated.</li>
-<li>Remaining credits or allowance, with an understandable estimate where feasible.</li>
-<li>The behavior of alerts, caps, and automatic top-ups.</li>
-<li>A usage history that explains significant charges and corrections.</li>
+<li>Одиниця тарифікації, включений обсяг і тариф за перевищення ліміту.</li>
+<li>Обсяг споживання в поточному періоді та час останнього оновлення лічильника.</li>
+<li>Залишок кредитів або ліміту зі зрозумілою оцінкою, де це можливо.</li>
+<li>Поведінка сповіщень, лімітів витрат і автоматичного поповнення балансу.</li>
+<li>Історія використання з поясненням значних нарахувань і коригувань.</li>
 </ul>
-<p class="glossary-term-section__text">A notification is not a hard spending cap. Stripe's documentation distinguishes usage alerts and billing thresholds and notes that threshold invoices may slightly exceed the threshold. A product promising a hard cap needs enforcement that matches that promise, including work already in progress.</p>
+<p class="glossary-term-section__text">Звичайне сповіщення не є жорстким лімітом витрат. У документації Stripe розрізняються сповіщення про використання та білінгові пороги (пороги списання), причому зазначається, що рахунки за пороговими значеннями можуть дещо перевищувати встановлений поріг. Продукт, який обіцяє клієнтам жорсткий ліміт (hard cap), повинен забезпечувати його технічне дотримання згідно з цією обіцянкою — включно із завданнями, які вже перебувають у процесі виконання.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-should-designers-test-it">
-<h2 id="section-how-should-designers-test-it" class="glossary-term-section__title">How should designers test it?</h2>
-<p class="glossary-term-section__text">Use realistic tasks: estimate the bill for 2,500 documents, identify whether a retry will cost more, find the largest source of usage, and set the intended limit.</p>
-<p class="glossary-term-section__text">Check comprehension, calculation errors, unexpected charges, and successful task completion. If credits have different consumption rates by operation, make the conversion visible before users commit.</p>
-<p class="glossary-term-section__text">For AI workflows, evaluate the customer's bill and the provider's <a href="/ua/glossary/ai-unit-economics.html">unit economics</a> separately. A fixed fee can coexist with variable delivery costs.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як дизайнерам тестувати таку модель?</h2>
+<p class="glossary-term-section__text">Використовуйте реалістичні завдання під час тестування: оцініть рахунок для 2,500 документів, визначте, чи коштуватиме повторна спроба дорожче, знайдіть найбільше джерело споживання та встановіть запланований ліміт витрат.</p>
+<p class="glossary-term-section__text">Перевіряйте зрозумілість, помилки в розрахунках, несподівані списання та успішність виконання завдань. Якщо різні операції витрачають кредити за різними коефіцієнтами, показуйте правила конвертації до того, як користувач підтвердить дію.</p>
+<p class="glossary-term-section__text">Для робочих процесів ШІ оцінюйте рахунок клієнта та <a href="/ua/glossary/ai-unit-economics.html">одиничну економіку</a> провайдера окремо. Фіксована плата може співіснувати зі змінними витратами на надання послуги.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/pricing-metric.html">Pricing Metric</a></li>
-<li><a href="/ua/glossary/outcome-based-pricing.html">Outcome-Based Pricing</a></li>
-<li><a href="/ua/glossary/ai-unit-economics.html">AI Unit Economics</a></li>
-<li><a href="/ua/glossary/cost-to-serve.html">Cost to Serve</a></li>
+<li><a href="/ua/glossary/pricing-metric.html">Цінова метрика (Pricing Metric)</a></li>
+<li><a href="/ua/glossary/outcome-based-pricing.html">Ціноутворення на основі результатів</a></li>
+<li><a href="/ua/glossary/ai-unit-economics.html">Одинична економіка ШІ (AI Unit Economics)</a></li>
+<li><a href="/ua/glossary/cost-to-serve.html">Вартість обслуговування (Cost to Serve)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://docs.stripe.com/billing/subscriptions/usage-based" target="_blank" rel="noopener noreferrer">Stripe: Usage-based billing</a></li>
-<li><a href="https://docs.stripe.com/products-prices/pricing-models" target="_blank" rel="noopener noreferrer">Stripe: Recurring pricing models</a></li>
-<li><a href="https://docs.stripe.com/billing/subscriptions/usage-based/monitor" target="_blank" rel="noopener noreferrer">Stripe: Monitor usage with alerts</a></li>
+<li><a href="https://docs.stripe.com/billing/subscriptions/usage-based" target="_blank" rel="noopener noreferrer">Stripe: Usage-based billing (Білінг на основі споживання)</a></li>
+<li><a href="https://docs.stripe.com/products-prices/pricing-models" target="_blank" rel="noopener noreferrer">Stripe: Recurring pricing models (Моделі регулярного ціноутворення)</a></li>
+<li><a href="https://docs.stripe.com/billing/subscriptions/usage-based/monitor" target="_blank" rel="noopener noreferrer">Stripe: Monitor usage with alerts (Моніторинг споживання за допомогою сповіщень)</a></li>
 </ul>
 </section>
 

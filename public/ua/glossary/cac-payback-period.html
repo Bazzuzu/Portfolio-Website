@@ -389,89 +389,89 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Період окупності CAC (CAC Payback Period) — це час, необхідний для повернення вартості залучення клієнта (CAC) за рахунок доходу, який він генерує. У SaaS-індустрії цей показник коригується на валову маржу, відстежує окупність через валовий прибуток і вимірюється в місяцях.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-is-the-cac-payback-formula">
-<h2 id="section-what-is-the-cac-payback-formula" class="glossary-term-section__title">What is the CAC payback formula?</h2>
-<p class="glossary-term-section__text">For a simplified subscription model:</p>
-<p class="glossary-term-section__text"><strong>CAC payback in months = CAC ÷ (average monthly revenue per account × gross margin percentage).</strong></p>
-<p class="glossary-term-section__text">The denominator is monthly gross profit per account. Use the same customer definition and cost boundary as your <a href="/ua/glossary/customer-acquisition-cost-cac.html">CAC</a> and <a href="/ua/glossary/customer-lifetime-value-ltv.html">LTV</a> calculations.</p>
-<p class="glossary-term-section__text">This shortcut assumes the account continues paying and produces stable monthly gross profit. It does not model cancellations, a gradual increase in usage, or changes in delivery costs.</p>
-<p class="glossary-term-section__text">If monthly gross profit is zero or negative, there is no finite payback under the unchanged assumptions. A negative arithmetic result is not a negative recovery time.</p>
+    <p class="glossary-term-section__text">Період окупності CAC (CAC Payback Period) — це час, необхідний для повернення вартості залучення клієнта (CAC) за рахунок доходу, який він генерує. Скоригована на валову маржу метрика для SaaS, описана тут, відстежує окупність через валовий прибуток і виражає цей період у місяцях.</p>
+<section class="glossary-term-section" aria-labelledby="section-cac">
+<h2 id="section-cac" class="glossary-term-section__title">Яка формула розрахунку окупності CAC?</h2>
+<p class="glossary-term-section__text">Для спрощеної передплатної моделі:</p>
+<p class="glossary-term-section__text"><strong>Окупність CAC у місяцях = CAC ÷ (середній щомісячний виторг на акаунт × відсоток валової маржі).</strong></p>
+<p class="glossary-term-section__text">Знаменником є щомісячний валовий прибуток на один акаунт. Використовуйте те саме визначення клієнта та ті самі межі витрат, що й у розрахунках <a href="/ua/glossary/customer-acquisition-cost-cac.html">CAC</a> та <a href="/ua/glossary/customer-lifetime-value-ltv.html">LTV</a>.</p>
+<p class="glossary-term-section__text">Ця спрощена формула припускає, що акаунт продовжує платити та приносить стабільний щомісячний валовий прибуток. Вона не враховує скасування підписок, поступове зростання використання або коливання витрат на надання послуг.</p>
+<p class="glossary-term-section__text">Якщо щомісячний валовий прибуток дорівнює нулю або є від'ємним, період окупності за незмінних умов прямує до нескінченності. Від'ємний арифметичний результат не означає від'ємного часу повернення інвестицій.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-saas-payback-example">
-<h2 id="section-a-saas-payback-example" class="glossary-term-section__title">A SaaS payback example</h2>
-<p class="glossary-term-section__text">An illustrative business spends $100,000 to acquire 100 paying accounts. Each account generates $100 in monthly revenue with $20 in cost of revenue.</p>
+<section class="glossary-term-section" aria-labelledby="section-saas">
+<h2 id="section-saas" class="glossary-term-section__title">Приклад розрахунку окупності для SaaS</h2>
+<p class="glossary-term-section__text">Розглянемо бізнес, який витрачає $100 000 на залучення 100 платних акаунтів. Кожен акаунт генерує $100 щомісячного виторгу за собівартості надання послуг (cost of revenue) у $20.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Calculation</th>
-<th>Result</th>
+<th>Розрахунок</th>
+<th>Результат</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>CAC: $100,000 ÷ 100</td>
-<td>$1,000</td>
+<td>CAC: $100 000 ÷ 100</td>
+<td>$1 000</td>
 </tr>
 <tr>
-<td>Monthly gross profit per account: $100 − $20</td>
+<td>Щомісячний валовий прибуток на акаунт: $100 − $20</td>
 <td>$80</td>
 </tr>
 <tr>
-<td>Gross margin: $80 ÷ $100</td>
+<td>Валова маржа: $80 ÷ $100</td>
 <td>80%</td>
 </tr>
 <tr>
-<td>Simplified payback: $1,000 ÷ $80</td>
-<td>12.5 months</td>
+<td>Спрощена окупність: $1 000 ÷ $80</td>
+<td>12,5 місяця</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">With monthly contributions posted at month-end, the account crosses the $1,000 threshold in month 13 if it remains a customer.</p>
-<p class="glossary-term-section__text">Dividing $1,000 by $100 gives 10 months, but that revenue-only calculation leaves out delivery costs. Label the basis whenever comparing payback figures.</p>
+<p class="glossary-term-section__text">Якщо щомісячні надходження зараховуються наприкінці місяця, акаунт перетинає поріг у $1 000 на 13-му місяці за умови, що він залишається клієнтом.</p>
+<p class="glossary-term-section__text">Поділ $1 000 на $100 дає 10 місяців, однак такий розрахунок на основі лише виторгу повністю ігнорує собівартість надання послуг. Завжди чітко зазначайте методологію розрахунку під час порівняння показників окупності.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-account-for-churn-and-changing-usage">
-<h2 id="section-how-do-you-account-for-churn-and-changing-usage" class="glossary-term-section__title">How do you account for churn and changing usage?</h2>
-<p class="glossary-term-section__text">Track the acquired cohort as a group. For each month after acquisition, subtract that cohort's cost of revenue from its revenue. Add the monthly gross profit until the cumulative total reaches the cohort's original acquisition spending.</p>
-<p class="glossary-term-section__text">Keep accounts that cancel in the original cohort; their later contribution is zero. Averaging only surviving customers makes recovery appear faster.</p>
-<p class="glossary-term-section__text">In the example, 2% monthly customer churn means the cohort will not keep generating its initial $8,000 of gross profit each month. A model that includes those departures therefore gives a longer payback than the 12.5-month shortcut, assuming the other inputs stay unchanged.</p>
-<p class="glossary-term-section__text">For usage-based products, track changing consumption and costs directly. If AI usage increases revenue while also increasing delivery costs, additional revenue alone does not establish faster payback.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як враховувати відтік та динаміку використання?</h2>
+<p class="glossary-term-section__text">Відстежуйте залучену когорту як єдину цілісну групу. Для кожного місяця після залучення віднімайте собівартість надання послуг цієї когорти від її виторгу. Підсумовуйте щомісячний валовий прибуток наростаючим підсумком, доки кумулятивна сума не зрівняється з початковими витратами на залучення цієї когорти.</p>
+<p class="glossary-term-section__text">Залишайте акаунти, які скасували підписку, у складі початкової когорти: їхній внесок у наступні періоди дорівнюватиме нулю. Розрахунок середнього лише на основі клієнтів, які залишилися, створює оманливе враження швидшої окупності.</p>
+<p class="glossary-term-section__text">У нашому прикладі щомісячний відтік клієнтів у 2% означає, що когорта не зможе щомісяця генерувати свої початкові $8 000 валового прибутку. Тому модель, яка враховує відтік клієнтів, покаже довший період окупності, ніж спрощений розрахунок у 12,5 місяця (за умови, що всі інші параметри залишаються незмінними).</p>
+<p class="glossary-term-section__text">Для продуктів із тарифікацією на основі використання (usage-based) безпосередньо відстежуйте динаміку споживання та витрат. Якщо використання функцій ШІ збільшує виторг, але одночасно підвищує витрати на інфраструктуру, саме лише зростання виторгу ще не гарантує швидшої окупності.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-cac-payback-vs-ltv-cac">
-<h2 id="section-cac-payback-vs-ltv-cac" class="glossary-term-section__title">CAC payback vs. LTV:CAC</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/ltv-to-cac-ratio.html">LTV:CAC</a> compares estimated lifetime value with acquisition cost. Payback measures how quickly acquisition cost is recovered.</p>
-<p class="glossary-term-section__text">Two products can have the same lifetime ratio and different payback periods. If each has $1,000 CAC and $4,000 estimated gross-profit LTV, one might generate $80 monthly gross profit while another generates $40 over a longer customer relationship.</p>
-<p class="glossary-term-section__text">A favorable lifetime ratio can still leave a long period before acquisition spending is recovered.</p>
+<section class="glossary-term-section" aria-labelledby="section-cac-ltv-cac">
+<h2 id="section-cac-ltv-cac" class="glossary-term-section__title">Співвідношення окупності CAC та LTV:CAC</h2>
+<p class="glossary-term-section__text">Метрика <a href="/ua/glossary/ltv-to-cac-ratio.html">LTV:CAC</a> зіставляє очікувану довічну цінність клієнта з витратами на його залучення. Окупність показує, наскільки швидко ці витрати на залучення повертаються.</p>
+<p class="glossary-term-section__text">Два продукти можуть мати однакове співвідношення LTV до CAC, але суттєво різний період окупності. Якщо в обох випадках CAC становить $1 000, а оцінений LTV за валовим прибутком — $4 000, один продукт може генерувати $80 щомісячного валового прибутку, тоді як інший — лише $40 протягом значно довшого життєвого циклу клієнта.</p>
+<p class="glossary-term-section__text">Навіть чудове співвідношення LTV до CAC може супроводжуватися тривалим періодом повернення капіталу, вкладеного в залучення.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-is-a-good-cac-payback-period">
-<h2 id="section-what-is-a-good-cac-payback-period" class="glossary-term-section__title">What is a good CAC payback period?</h2>
-<p class="glossary-term-section__text">There is no universal target. Customer segment, retention, margin, sales cycle, and available cash all affect interpretation.</p>
-<p class="glossary-term-section__text">Compare the same calculation across comparable cohorts. Check whether customers tend to leave before acquisition spending is recovered, and whether the business can fund the intervening costs.</p>
-<p class="glossary-term-section__text">Annual upfront billing changes cash collection timing. It does not make a year of gross profit earned immediately; distinguish cash recovery from the gross-profit payback measure used here.</p>
+<section class="glossary-term-section" aria-labelledby="section-cac">
+<h2 id="section-cac" class="glossary-term-section__title">Який період окупності CAC вважається хорошим?</h2>
+<p class="glossary-term-section__text">Універсального нормативу не існує. Інтерпретація залежить від сегмента клієнтів, рівня утримання, маржинальності, тривалості циклу продажів та доступного запасу грошових коштів (runway).</p>
+<p class="glossary-term-section__text">Порівнюйте показники, розраховані за єдиною методологією, між однорідними когортами. Аналізуйте, чи не йдуть клієнти раніше, ніж окупляться витрати на їх залучення, і чи здатний бізнес фінансувати проміжні операційні витрати.</p>
+<p class="glossary-term-section__text">Річна передплата змінює графік надходження готівки. Проте вона не означає, що весь річний валовий прибуток заробляється миттєво: чітко розрізняйте повернення грошових коштів (cash payback) та окупність за валовим прибутком, яка розглядається тут.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-can-product-designers-use-payback">
-<h2 id="section-how-can-product-designers-use-payback" class="glossary-term-section__title">How can product designers use payback?</h2>
-<p class="glossary-term-section__text">Investigate delays between acquisition and paid value: incomplete setup, failed first tasks, or confusing upgrades. Measure whether a change helps appropriate accounts reach sustained paid use, with support costs and cancellations included.</p>
-<p class="glossary-term-section__text">An interface that pushes an unsuitable annual commitment might improve cash collection while increasing refunds or distrust. Assess the whole customer outcome before interpreting a shorter cash-recovery period as a product improvement.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як дизайнери можуть використовувати метрику окупності?</h2>
+<p class="glossary-term-section__text">Досліджуйте затримки між залученням користувача та отриманням реальної цінності: незавершене налаштування (onboarding), провалені перші завдання або незрозумілі сценарії переходу на платний тариф (upgrade). Вимірюйте, чи допомагають продуктові зміни цільовим акаунтам виходити на стабільне платне використання, враховуючи витрати на службу підтримки та рівень відмов.</p>
+<p class="glossary-term-section__text">Інтерфейс, який нав'язує невідповідні річні зобов'язання, може тимчасово покращити приплив готівки, але водночас призведе до зростання повернень коштів (refunds) або втрати довіри. Завжди оцінюйте довгостроковий вплив на клієнтський досвід, перш ніж трактувати скорочення терміну повернення коштів як продуктове вдосконалення.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/unit-economics.html">Unit Economics</a></li>
-<li><a href="/ua/glossary/customer-acquisition-cost-cac.html">Customer Acquisition Cost (CAC)</a></li>
-<li><a href="/ua/glossary/customer-lifetime-value-ltv.html">Customer Lifetime Value (LTV)</a></li>
-<li><a href="/ua/glossary/ltv-to-cac-ratio.html">LTV to CAC Ratio</a></li>
-<li><a href="/ua/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li>
+<li><a href="/ua/glossary/unit-economics.html">Одинична економіка (Unit Economics)</a></li>
+<li><a href="/ua/glossary/customer-acquisition-cost-cac.html">Вартість залучення клієнта (CAC)</a></li>
+<li><a href="/ua/glossary/customer-lifetime-value-ltv.html">Довічна цінність клієнта (LTV)</a></li>
+<li><a href="/ua/glossary/ltv-to-cac-ratio.html">Співвідношення LTV до CAC</a></li>
+<li><a href="/ua/glossary/time-to-value-ttv.html">Час до отримання цінності (TTV)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://stripe.com/resources/more/what-is-the-cac-payback-period" target="_blank" rel="noopener noreferrer">Stripe: What is the CAC payback period?</a></li>
-<li><a href="https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/" target="_blank" rel="noopener noreferrer">ChartMogul: Usage-based billing cheat sheet</a></li>
-<li><a href="https://www.forentrepreneurs.com/saas-metrics-2-definitions/" target="_blank" rel="noopener noreferrer">David Skok: SaaS Metrics 2.0 — Detailed Definitions</a></li>
+<li><a href="https://stripe.com/resources/more/what-is-the-cac-payback-period" target="_blank" rel="noopener noreferrer">Stripe: Що таке період окупності CAC?</a></li>
+<li><a href="https://chartmogul.com/saas-metrics/usage-based-billing-cheat-sheet/" target="_blank" rel="noopener noreferrer">ChartMogul: Шпаргалка з білінгу на основі використання</a></li>
+<li><a href="https://www.forentrepreneurs.com/saas-metrics-2-definitions/" target="_blank" rel="noopener noreferrer">Девід Скок: SaaS Metrics 2.0 — Детальні визначення</a></li>
 </ul>
 </section>
 

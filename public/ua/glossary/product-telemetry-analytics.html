@@ -384,67 +384,67 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Продуктова телеметрія — це дані, які продукт фіксує про дії користувачів і поведінку системи. Продуктова аналітика використовує ці дані, щоб пояснити, як люди взаємодіють із продуктом, а також де вони досягають або не досягають ключових результатів. Дані можуть надходити з клієнтського інтерфейсу, бекенд-сервісів або з обох джерел.</p>
-<section class="glossary-term-section" aria-labelledby="section-what-belongs-in-a-tracking-plan">
-<h2 id="section-what-belongs-in-a-tracking-plan" class="glossary-term-section__title">What belongs in a tracking plan?</h2>
-<p class="glossary-term-section__text">Start with a decision. To learn whether new accounts send their first invoice, identify the events needed to measure that outcome. For each event, document its name, exact trigger, source, required properties, and owner. Choose an identifier and timestamp that let you link related events and count at the right level.</p>
+    <p class="glossary-term-section__text">Продуктова телеметрія — це дані, які продукт фіксує про дії користувачів і поведінку системи. Продуктова аналітика використовує ці дані, щоб відповідати на запитання про те, як люди використовують продукт і де вони досягають або не досягають важливих результатів. Дані можуть надходити з інтерфейсу, бекенд-сервісів або з обох джерел.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що має містити план відстеження?</h2>
+<p class="glossary-term-section__text">Починайте з рішення. Щоб дізнатися, чи надсилають нові акаунти свій перший рахунок-фактуру, визначте події, необхідні для вимірювання цього результату. Для кожної події задокументуйте її назву, точний тригер, джерело, обов'язкові властивості та відповідального. Оберіть ідентифікатор і часову мітку, які дозволять пов'язувати взаємопов'язані події та вести підрахунок на потрібному рівні.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-example-of-an-invoice-tracking-plan">
-<h2 id="section-example-of-an-invoice-tracking-plan" class="glossary-term-section__title">Example of an invoice tracking plan</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад плану відстеження для виставлення рахунків</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Event</th>
-<th>Trigger and source</th>
-<th>What it tells you</th>
+<th>Подія</th>
+<th>Тригер та джерело</th>
+<th>Про що це свідчить</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Account Created</td>
-<td>The backend successfully creates an account</td>
-<td>When the account enters the signup cohort</td>
+<td>Створення акаунта (Account Created)</td>
+<td>Бекенд успішно створює обліковий запис</td>
+<td>Коли акаунт потрапляє до когорти реєстрацій</td>
 </tr>
 <tr>
-<td>Invoice Preview Opened</td>
-<td>The interface displays the preview</td>
-<td>Whether someone saw the preview</td>
+<td>Відкриття перегляду рахунка (Invoice Preview Opened)</td>
+<td>Інтерфейс відображає попередній перегляд</td>
+<td>Чи бачив хтось попередній перегляд</td>
 </tr>
 <tr>
-<td>Invoice Sent</td>
-<td>The sending service records a successful send</td>
-<td>Whether the account reached the activation milestone</td>
+<td>Рахунок надіслано (Invoice Sent)</td>
+<td>Сервіс надсилання фіксує успішне відправлення</td>
+<td>Чи досяг акаунт етапу активації</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">In this example, the tracking plan uses an account identifier to join signup and sending. The send event includes an invoice ID and a test flag. Use a stable event ID to deduplicate repeated delivery of the same event. In this product, a successful send means the provider accepted the message for delivery. Delivery, payment, and a click on “Send” are separate signals.</p>
+<p class="glossary-term-section__text">У цьому прикладі план відстеження використовує ідентифікатор акаунта для об'єднання подій реєстрації та відправлення. Подія надсилання містить ідентифікатор рахунка та тестовий прапорець (test flag). Використовуйте стабільний ID події для дедуплікації повторного надходження однієї й тієї самої події. У цьому продукті успішне відправлення означає, що провайдер прийняв повідомлення для доставки. Доставка, оплата та клік на «Надіслати» — це окремі сигнали.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-check-the-data-before-using-it">
-<h2 id="section-how-do-you-check-the-data-before-using-it" class="glossary-term-section__title">How do you check the data before using it?</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як перевірити дані перед їх використанням?</h2>
 <ol class="glossary-term-ol">
-<li><strong>Verify the trigger.</strong> Run a successful send, a failed send, and a test send. Check that only a qualifying real send counts toward activation.</li>
-<li><strong>Check repeated events.</strong> Retry the same operation and check how the event pipeline handles duplicates. For activation, count each eligible account once within the seven-day window.</li>
-<li><strong>Reconcile a sample.</strong> Compare the analytics events with the product records and investigate mismatched counts, missing IDs, and delayed events.</li>
-<li><strong>Limit what you collect.</strong> Use the properties needed for the analysis. Invoice content and recipient details can stay out of this tracking plan.</li>
+<li><strong>Перевірте тригер.</strong> Виконайте успішне відправлення, невдале відправлення та тестове відправлення. Переконайтеся, що лише валідне реальне відправлення зараховується для активації.</li>
+<li><strong>Перевірте повторювані події.</strong> Повторіть ту саму операцію та перевірте, як конвеєр подій обробляє дублікати. Для активації рахуйте кожен відповідний акаунт один раз протягом семиденного вікна.</li>
+<li><strong>Звірте вибірку.</strong> Порівняйте аналітичні події із записами продукту та з'ясуйте причини розбіжностей у підрахунках, відсутніх ідентифікаторів і затриманих подій.</li>
+<li><strong>Обмежте обсяг збору даних.</strong> Використовуйте лише ті властивості, які необхідні для аналізу. Вміст рахунка та контактні дані одержувача можуть не включатися до цього плану відстеження.</li>
 </ol>
-<p class="glossary-term-section__text">A sequence of preview and send events can show how often accounts continue after seeing the preview. To find out why, observe users trying to send an invoice or ask about the decision they made at that step.</p>
+<p class="glossary-term-section__text">Послідовність подій попереднього перегляду та надсилання може показати, як часто акаунти продовжують взаємодію після перегляду рахунка. Щоб зрозуміти причини, поспостерігайте за користувачами, які намагаються надіслати рахунок, або запитайте їх про рішення, ухвалені на цьому кроці.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/component-telemetry.html">Component Telemetry</a></li>
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B Testing (Split Testing)</a></li>
-<li><a href="/ua/glossary/activation-metric.html">Activation Metric</a></li>
+<li><a href="/ua/glossary/component-telemetry.html">Телеметрія компонентів</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування</a></li>
+<li><a href="/ua/glossary/ab-testing-split-testing.html">A/B-тестування (Спліт-тестування)</a></li>
+<li><a href="/ua/glossary/activation-metric.html">Метрика активації (Activation Metric)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://amplitude.com/docs/get-started/plan-your-implementation" target="_blank" rel="noopener noreferrer">Plan your implementation, Amplitude Docs</a></li>
-<li><a href="https://www.amplitude.com/docs/data/user-properties-and-events" target="_blank" rel="noopener noreferrer">User properties and event properties, Amplitude Docs</a></li>
+<li><a href="https://amplitude.com/docs/get-started/plan-your-implementation" target="_blank" rel="noopener noreferrer">Сплануйте впровадження аналітики, документація Amplitude</a></li>
+<li><a href="https://www.amplitude.com/docs/data/user-properties-and-events" target="_blank" rel="noopener noreferrer">Властивості користувачів і властивості подій, документація Amplitude</a></li>
 </ul>
 </section>
 

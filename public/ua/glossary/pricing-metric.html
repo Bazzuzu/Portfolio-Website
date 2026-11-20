@@ -388,95 +388,95 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Метрика ціноутворення (Pricing Metric) — це одиниця, за якою розраховується вартість використання продукту для клієнта (наприклад, ліцензований користувач, API-запит чи перевірений результат). Її вибір визначає, що саме тарифікується в міру того, як клієнти масштабують використання продукту та змінюють свої потреби.</p>
-<section class="glossary-term-section" aria-labelledby="section-pricing-metric-vs-value-metric">
-<h2 id="section-pricing-metric-vs-value-metric" class="glossary-term-section__title">Pricing metric vs. value metric</h2>
-<p class="glossary-term-section__text">Pricing practitioners often use <strong>value metric</strong> for a charging unit intended to grow with the value customers receive. Paddle uses the term in this pricing context.</p>
-<p class="glossary-term-section__text">Treat that connection as something to investigate. A countable event does not prove customer value. A pricing metric is also different from a product success metric such as activation rate or task completion.</p>
-<p class="glossary-term-section__text">Separate three decisions:</p>
+    <p class="glossary-term-section__text">Цінова метрика — це одиниця, яку продукт використовує для розрахунку суми оплати клієнтом: наприклад, ліцензований користувач, API-запит чи підтверджений результат. Її вибір визначає, що саме підлягає обліку в міру того, як клієнти впроваджують продукт і змінюються їхні потреби.</p>
+<section class="glossary-term-section" aria-labelledby="section-value-metric">
+<h2 id="section-value-metric" class="glossary-term-section__title">Цінова метрика чи метрика цінності (Value Metric)?</h2>
+<p class="glossary-term-section__text">Фахівці з ціноутворення часто використовують термін <strong>метрика цінності (value metric)</strong> для одиниці тарифікації, яка має масштабуватися пропорційно цінності, яку отримує клієнт. Компанія Paddle застосовує цей термін саме в цьому контексті ціноутворення.</p>
+<p class="glossary-term-section__text">Розглядайте цей зв'язок як гіпотезу, що потребує перевірки. Подія, яку можна порахувати, сама по собі не гарантує цінності для клієнта. Крім того, цінова метрика відрізняється від продуктових метрик успіху, таких як коефіцієнт активації чи відсоток завершення завдань.</p>
+<p class="glossary-term-section__text">Розділяйте три різні рішення:</p>
 <ul class="glossary-term-ul">
-<li><strong>Metric:</strong> what is counted, such as a licensed editor.</li>
-<li><strong>Rate:</strong> the amount charged per unit.</li>
-<li><strong>Packaging:</strong> the capabilities and allowances included in a plan.</li>
+<li><strong>Метрика (Metric):</strong> що саме підраховується (наприклад, ліцензований редактор).</li>
+<li><strong>Тариф (Rate):</strong> сума, яка стягується за одиницю.</li>
+<li><strong>Пакетизація (Packaging):</strong> функціональні можливості та ліміти (квоти), включені в тарифний план.</li>
 </ul>
-<p class="glossary-term-section__text">A flat subscription can coexist with a metered allowance, and a product can use more than one charging unit.</p>
+<p class="glossary-term-section__text">Фіксована підписка може поєднуватися з тарифікованим лімітом, а продукт може використовувати більше ніж одну одиницю нарахування.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-examples-of-pricing-metrics">
-<h2 id="section-examples-of-pricing-metrics" class="glossary-term-section__title">Examples of pricing metrics</h2>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклади цінових метрик</h2>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Metric</th>
-<th>Possible fit</th>
-<th>Question to investigate</th>
+<th>Метрика</th>
+<th>Де доречна</th>
+<th>Питання для дослідження</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Licensed user or seat</td>
-<td>Products where more participating users receive useful access</td>
-<td>Does charging for each participant discourage necessary collaboration?</td>
+<td>Ліцензований користувач або робоче місце (Seat)</td>
+<td>Продукти, де кожен новий користувач отримує корисний індивідуальний доступ</td>
+<td>Чи не стримує плата за кожного учасника необхідну співпрацю?</td>
 </tr>
 <tr>
-<td>Processed document or API request</td>
-<td>Services with measurable consumption</td>
-<td>Can buyers predict volume, and do failed attempts count?</td>
+<td>Оброблений документ або API-запит</td>
+<td>Сервіси з вимірюваним обсягом споживання</td>
+<td>Чи можуть покупці прогнозувати обсяги, і чи тарифікуються невдалі спроби?</td>
 </tr>
 <tr>
-<td>Stored data</td>
-<td>Products where maintained storage is a meaningful resource</td>
-<td>Can customers understand, manage, and export what is counted?</td>
+<td>Збережені дані</td>
+<td>Продукти, де підтримка сховища є суттєвим ресурсом</td>
+<td>Чи можуть клієнти розуміти, контролювати та експортувати враховані ресурси?</td>
 </tr>
 <tr>
-<td>Verified outcome</td>
-<td>Services with an observable accepted result</td>
-<td>Can both parties verify the result and handle reversals?</td>
+<td>Підтверджений результат</td>
+<td>Сервіси з очевидним і прийнятим кінцевим результатом</td>
+<td>Чи можуть обидві сторони перевірити результат і врегулювати його скасування?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">These are candidates, not universal recommendations. The right choice depends on the product, audience, and delivery model.</p>
+<p class="glossary-term-section__text">Це можливі варіанти, а не універсальні рекомендації. Правильний вибір залежить від самого продукту, його аудиторії та моделі надання послуги.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-product-design-example">
-<h2 id="section-a-product-design-example" class="glossary-term-section__title">A product-design example</h2>
-<p class="glossary-term-section__text">Imagine a procurement tool with two candidate metrics: licensed users and completed purchase orders.</p>
-<p class="glossary-term-section__text">Charging for all users might affect how a company invites occasional approvers. Charging per purchase order might better reflect activity, but requires clear rules for drafts, canceled orders, and corrections.</p>
-<p class="glossary-term-section__text">Interview buyers and the people doing the work. Ask them to estimate next month's charge for realistic scenarios and explain which activity feels related to the value they receive. Compare those answers with actual usage and <a href="/ua/glossary/cost-to-serve.html">cost to serve</a>.</p>
-<p class="glossary-term-section__text">Do not select a metric solely because it is easy for the billing system to count.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Приклад із продуктового дизайну</h2>
+<p class="glossary-term-section__text">Уявіть інструмент для закупівель із двома потенційними метриками: ліцензовані користувачі та оформлені замовлення на закупівлю.</p>
+<p class="glossary-term-section__text">Стягнення плати за кожного користувача може вплинути на те, як компанія підключає співробітників, яким потрібно лише зрідка погодити заявку. Оплата за кожне замовлення на закупівлю може точніше відображати активність, але потребує чітких правил щодо чернеток, скасованих замовлень і виправлень.</p>
+<p class="glossary-term-section__text">Проводьте інтерв'ю з покупцями та людьми, які безпосередньо працюють у системі. Попросіть їх оцінити платіж за наступний місяць для реалістичних сценаріїв і пояснити, яка дія відчувається ними як безпосередньо пов'язана з отриманою цінністю. Порівняйте ці відповіді з фактичним використанням і <a href="/ua/glossary/cost-to-serve.html">вартістю обслуговування (Cost to Serve)</a>.</p>
+<p class="glossary-term-section__text">Не обирайте метрику виключно через те, що білінговій системі її легко рахувати.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-should-you-evaluate-a-candidate">
-<h2 id="section-how-should-you-evaluate-a-candidate" class="glossary-term-section__title">How should you evaluate a candidate?</h2>
-<p class="glossary-term-section__text">Check five practical questions:</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як оцінювати потенційну метрику?</h2>
+<p class="glossary-term-section__text">Перевірте п'ять практичних критеріїв:</p>
 <ol class="glossary-term-ol">
-<li><strong>Value:</strong> Does a larger count usually correspond to something customers find useful?</li>
-<li><strong>Predictability:</strong> Can the buyer estimate a bill and manage a budget?</li>
-<li><strong>Verifiability:</strong> Can customers inspect how the quantity was counted?</li>
-<li><strong>Delivery economics:</strong> How do revenue and costs change as the quantity grows?</li>
-<li><strong>Behavior:</strong> Does charging this way discourage the collaboration or task completion the product needs?</li>
+<li><strong>Цінність (Value):</strong> Чи зазвичай більша кількість одиниць відповідає чомусь дійсно корисному для клієнта?</li>
+<li><strong>Прогнозованість (Predictability):</strong> Чи здатний покупець спрогнозувати рахунок і спланувати свій бюджет?</li>
+<li><strong>Верифікованість (Verifiability):</strong> Чи можуть клієнти перевірити, як саме була порахована підсумкова кількість?</li>
+<li><strong>Економіка доставки (Delivery economics):</strong> Як змінюються доходи та витрати зі зростанням обсягу?</li>
+<li><strong>Поведінка (Behavior):</strong> Чи не демотивує така тарифікація співпрацю або виконання завдань, критично важливих для продукту?</li>
 </ol>
-<p class="glossary-term-section__text">For <a href="/ua/glossary/ai-unit-economics.html">AI products</a>, tokens can be a useful internal cost measure but difficult for some buyers to forecast. A task-based metric still needs rules for retries and acceptance.</p>
+<p class="glossary-term-section__text">Для <a href="/ua/glossary/ai-unit-economics.html">ШІ-продуктів</a> токени можуть бути корисною внутрішньою мірою витрат, але багатьом покупцям вкрай важко їх прогнозувати. Метрика на основі завдань усе одно вимагає чітких правил щодо повторних спроб і критеріїв прийняття.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-is-the-difference-from-a-pricing-model">
-<h2 id="section-what-is-the-difference-from-a-pricing-model" class="glossary-term-section__title">What is the difference from a pricing model?</h2>
-<p class="glossary-term-section__text">The metric is the unit. The model describes how charges are organized, such as a flat subscription, graduated tiers, or <a href="/ua/glossary/usage-based-pricing.html">usage-based pricing</a>.</p>
-<p class="glossary-term-section__text">For example, documents can be sold individually, included in a subscription allowance, or covered by prepaid credits. <a href="/ua/glossary/outcome-based-pricing.html">Outcome-based pricing</a> adds a result requirement to what becomes billable.</p>
-<p class="glossary-term-section__text">Changing a metric can change customer behavior as well as revenue. Test comprehension and workflow effects, and provide a clear transition for existing customers rather than assuming a pricing-page rewrite is sufficient.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Чим це відрізняється від моделі ціноутворення?</h2>
+<p class="glossary-term-section__text">Метрика — це одиниця вимірювання. Модель описує те, як організовані платежі: наприклад, фіксована підписка, багаторівневі тарифи або <a href="/ua/glossary/usage-based-pricing.html">ціноутворення на основі споживання</a>.</p>
+<p class="glossary-term-section__text">Наприклад, документи можна продавати поштучно, включати в пакет підписки або списувати за передоплачені кредити. <a href="/ua/glossary/outcome-based-pricing.html">Ціноутворення на основі результатів</a> додає обов'язкову вимогу до результату, перш ніж послуга вважатиметься оплачуваною.</p>
+<p class="glossary-term-section__text">Зміна метрики здатна змінити як дохід, так і поведінку клієнтів. Тестуйте зрозумілість нової моделі та її вплив на робочі процеси користувачів, а також забезпечте плавний перехід для існуючих клієнтів замість того, щоб обмежитися простим оновленням сторінки з цінами.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/usage-based-pricing.html">Usage-Based Pricing</a></li>
-<li><a href="/ua/glossary/outcome-based-pricing.html">Outcome-Based Pricing</a></li>
-<li><a href="/ua/glossary/ai-unit-economics.html">AI Unit Economics</a></li>
-<li><a href="/ua/glossary/product-led-growth-plg.html">Product-Led Growth (PLG)</a></li>
+<li><a href="/ua/glossary/usage-based-pricing.html">Ціноутворення на основі споживання</a></li>
+<li><a href="/ua/glossary/outcome-based-pricing.html">Ціноутворення на основі результатів</a></li>
+<li><a href="/ua/glossary/ai-unit-economics.html">Одинична економіка ШІ (AI Unit Economics)</a></li>
+<li><a href="/ua/glossary/product-led-growth-plg.html">Зростання на основі продукту (PLG)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.paddle.com/blog/value-metrics-pricing" target="_blank" rel="noopener noreferrer">Paddle: How to use value metrics to optimize pricing</a></li>
-<li><a href="https://docs.stripe.com/products-prices/pricing-models" target="_blank" rel="noopener noreferrer">Stripe: Recurring pricing models</a></li>
+<li><a href="https://www.paddle.com/blog/value-metrics-pricing" target="_blank" rel="noopener noreferrer">Paddle: How to use value metrics to optimize pricing (Як використовувати метрики цінності для оптимізації ціноутворення)</a></li>
+<li><a href="https://docs.stripe.com/products-prices/pricing-models" target="_blank" rel="noopener noreferrer">Stripe: Recurring pricing models (Моделі регулярного ціноутворення)</a></li>
 </ul>
 </section>
 

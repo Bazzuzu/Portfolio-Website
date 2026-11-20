@@ -389,92 +389,92 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Ціноутворення на основі результату (Outcome-Based Pricing) прив'язує оплату до конкретного результату, а не лише до факту доступу, часу чи обсягу дій. У ШІ-продукті таким результатом може бути успішно вирішене звернення в службу підтримки або верифіковані дані з документа, з чіткими правилами зарахування успіху та тарифікації.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-does-outcome-based-pricing-work">
-<h2 id="section-how-does-outcome-based-pricing-work" class="glossary-term-section__title">How does outcome-based pricing work?</h2>
-<p class="glossary-term-section__text">The product needs an operational definition of the result and a way to verify it. A support tool might charge per resolved case; a data service might charge per accepted record.</p>
-<p class="glossary-term-section__text">A billable event does not automatically prove the customer's broader business goal. A support case marked resolved can differ from a customer who is satisfied and able to continue their work.</p>
-<p class="glossary-term-section__text">Document these rules before designing the meter:</p>
+    <p class="glossary-term-section__text">Ціноутворення на основі результатів прив'язує плату до конкретно досягнутого результату, а не лише до факту надання доступу, витраченого часу чи обсягу активності. У ШІ-продукті таким результатом може бути успішно вирішене звернення до служби підтримки або прийняте вилучення даних із документа — із чіткими правилами щодо того, що саме вважається результатом і коли за нього нараховується плата.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як працює ціноутворення на основі результатів?</h2>
+<p class="glossary-term-section__text">Продукт потребує операційного визначення результату та надійного способу його верифікації. Інструмент клієнтської підтримки може стягувати плату за кожне вирішене звернення, тоді як сервіс обробки даних — за кожен прийнятий запис.</p>
+<p class="glossary-term-section__text">Оплачувана подія не є автоматичним доказом досягнення ширшої бізнес-мети клієнта. Звернення до служби підтримки, позначене як вирішене, може суттєво відрізнятися від ситуації, коли клієнт справді задоволений і спроможний продовжувати свою роботу.</p>
+<p class="glossary-term-section__text">Зафіксуйте ці правила ще до проектування лічильника обліку:</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Rule</th>
-<th>Question to resolve</th>
+<th>Правило</th>
+<th>Питання для вирішення</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Outcome</td>
-<td>What result counts, for which customer or task?</td>
+<td>Результат (Outcome)</td>
+<td>Який саме результат зараховується, для якого клієнта чи завдання?</td>
 </tr>
 <tr>
-<td>Evidence</td>
-<td>Is acceptance confirmed, inferred, or independently checked?</td>
+<td>Підтвердження (Evidence)</td>
+<td>Прийняття підтверджується явно, визначається непрямо чи перевіряється незалежно?</td>
 </tr>
 <tr>
-<td>Timing</td>
-<td>When is the result final enough to charge?</td>
+<td>Час фіксації (Timing)</td>
+<td>У який момент результат стає остаточним для списання коштів?</td>
 </tr>
 <tr>
-<td>Reversal</td>
-<td>What happens if the case reopens or the result is rejected?</td>
+<td>Скасування (Reversal)</td>
+<td>Що відбувається, якщо звернення відкривається повторно або результат відхиляється?</td>
 </tr>
 <tr>
-<td>Deduplication</td>
-<td>Can repeated actions create more than one charge?</td>
+<td>Дедуплікація (Deduplication)</td>
+<td>Чи можуть повторювані дії спричинити кілька списань?</td>
 </tr>
 <tr>
-<td>Human work</td>
-<td>Do escalation or human-assisted completion count?</td>
+<td>Людська праця (Human work)</td>
+<td>Чи враховується ескалація на людину або виконання за участю оператора?</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-simple-outcome-pricing-example">
-<h2 id="section-a-simple-outcome-pricing-example" class="glossary-term-section__title">A simple outcome-pricing example</h2>
-<p class="glossary-term-section__text">Consider a fictional support product charging $2 per resolved case. Its policy requires customer confirmation and no reopening during a seven-day verification window.</p>
-<p class="glossary-term-section__text">Of 100 initially confirmed cases, 10 reopen before the window closes. After every case completes that window, 90 qualify:</p>
-<p class="glossary-term-section__text"><strong>Charge = 90 billable outcomes × $2 = $180.</strong></p>
-<p class="glossary-term-section__text">This is an illustrative policy, not a universal definition of resolution. The provider also incurs costs for the reopened cases and any work that never qualified for billing.</p>
-<p class="glossary-term-section__text">If the product shows provisional charges before verification ends, label them as pending and explain when they can change.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Простий приклад ціноутворення за результатом</h2>
+<p class="glossary-term-section__text">Розглянемо умовний продукт підтримки, який стягує $2 за кожне вирішене звернення. Його політика вимагає підтвердження від клієнта та відсутності повторних звернень протягом семиденного вікна верифікації.</p>
+<p class="glossary-term-section__text">Зі 100 початково підтверджених звернень 10 відкриваються знову до закриття вікна. Після того як кожне звернення проходить це вікно, кваліфікованими залишаються 90:</p>
+<p class="glossary-term-section__text"><strong>Нарахована плата = 90 оплачуваних результатів × $2 = $180.</strong></p>
+<p class="glossary-term-section__text">Це ілюстративна політика, а не універсальне визначення вирішення звернень. Провайдер також несе витрати на повторно відкриті звернення та на будь-яку роботу, яка так і не набула статусу оплачуваної.</p>
+<p class="glossary-term-section__text">Якщо продукт відображає попередні нарахування до завершення верифікації, позначайте їх як такі, що очікують підтвердження (pending), та пояснюйте, коли саме вони можуть змінитися.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-a-real-ai-example-intercom-fin">
-<h2 id="section-a-real-ai-example-intercom-fin" class="glossary-term-section__title">A real AI example: Intercom Fin</h2>
-<p class="glossary-term-section__text">Intercom documents both confirmed and assumed resolutions. An assumed resolution can occur when a customer leaves after an answer without asking for further help. Its policy also describes adjustments when a customer returns to the same conversation for assistance.</p>
-<p class="glossary-term-section__text">Intercom caps outcome charges at one per conversation even when several actions occur. These are vendor-specific billing rules, not a general definition every AI product follows. Check the current documentation when evaluating the service.</p>
+<section class="glossary-term-section" aria-labelledby="section-intercom-fin">
+<h2 id="section-intercom-fin" class="glossary-term-section__title">Реальний приклад у сфері ШІ: Intercom Fin</h2>
+<p class="glossary-term-section__text">Intercom документує як підтверджені, так і передбачувані (assumed) вирішення. Передбачуване вирішення може бути зафіксоване, коли клієнт залишає чат після отримання відповіді, не звертаючись за додатковою допомогою. Політика компанії також описує коригування на випадок, коли клієнт повертається в ту саму розмову за подальшою підтримкою.</p>
+<p class="glossary-term-section__text">Intercom обмежує нарахування за результат максимум одним списанням за розмову, навіть якщо було виконано кілька дій. Це специфічні білінг-правила конкретного постачальника, а не загальне правило для всіх ШІ-продуктів. Оцінюючи сервіс, завжди перевіряйте його актуальну документацію.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-outcome-based-vs-usage-based-pricing">
-<h2 id="section-outcome-based-vs-usage-based-pricing" class="glossary-term-section__title">Outcome-based vs. usage-based pricing</h2>
-<p class="glossary-term-section__text"><a href="/ua/glossary/usage-based-pricing.html">Usage-based pricing</a> can charge for attempts or resource consumption. Outcome-based pricing makes the defined result central to the charge.</p>
-<p class="glossary-term-section__text">The provider's costs still arise during attempts, retries, and failures. Review <a href="/ua/glossary/ai-unit-economics.html">cost per successful task</a> as well as the price per billed outcome. They may use different success definitions and include different tasks.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Ціноутворення за результатом чи за споживанням?</h2>
+<p class="glossary-term-section__text"><a href="/ua/glossary/usage-based-pricing.html">Ціноутворення на основі споживання</a> може тарифікувати спроби або обсяг витрачених ресурсів. Ціноутворення на основі результатів робить центральним елементом оплати саме визначений результат.</p>
+<p class="glossary-term-section__text">При цьому витрати провайдера все одно виникають під час спроб, повторів і помилок. Аналізуйте <a href="/ua/glossary/ai-unit-economics.html">вартість одного успішного завдання</a> поряд із ціною за оплачуваний результат. Вони можуть базуватися на різних критеріях успіху та охоплювати різний набір завдань.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-product-designers-make-visible">
-<h2 id="section-what-should-product-designers-make-visible" class="glossary-term-section__title">What should product designers make visible?</h2>
-<p class="glossary-term-section__text">Show the charging rule before customers rely on the service. Provide a history with the task, outcome, verification status, amount, and any correction.</p>
-<p class="glossary-term-section__text">Let customers inspect the evidence and find a clear route to dispute a charge. Explain what happens after a spending limit is reached, including whether work pauses or passes to a person.</p>
-<p class="glossary-term-section__text">Evaluate the quality measure separately from billable volume. A change that marks more cases resolved may increase charges without improving task success or satisfaction.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що дизайнери продукту повинні зробити прозорим?</h2>
+<p class="glossary-term-section__text">Показуйте правила тарифікації до того, як клієнти почнуть покладатися на сервіс. Надавайте історію із зазначенням завдання, результату, статусу верифікації, суми та будь-яких коригувань.</p>
+<p class="glossary-term-section__text">Дозвольте клієнтам переглядати докази виконання та забезпечте зрозумілий шлях для оскарження списань. Поясніть, що відбувається після досягнення ліміту витрат — зокрема, чи ставиться робота на паузу, чи передається людині.</p>
+<p class="glossary-term-section__text">Оцінюйте метрики якості окремо від обсягу списань. Зміна логіки, яка позначає більше звернень як вирішені, може збільшити нарахування, але не покращити реальний успіх виконання завдань чи задоволеність користувачів.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-when-does-this-model-become-difficult">
-<h2 id="section-when-does-this-model-become-difficult" class="glossary-term-section__title">When does this model become difficult?</h2>
-<p class="glossary-term-section__text">Outcome pricing becomes harder when the result depends on events outside the product, appears much later, or is difficult for both parties to verify. Define attribution and disputes carefully rather than implying that every generated output is a delivered outcome.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Коли ця модель стає складною?</h2>
+<p class="glossary-term-section__text">Ціноутворення за результатом ускладнюється тоді, коли результат залежить від зовнішніх щодо продукту подій, настає зі значною затримкою або важко піддається перевірці обома сторонами. Ретельно формалізуйте атрибуцію та порядок вирішення спорів замість того, щоб стверджувати, ніби кожен згенерований результат автоматично є доставленою цінністю.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/usage-based-pricing.html">Usage-Based Pricing</a></li>
-<li><a href="/ua/glossary/pricing-metric.html">Pricing Metric</a></li>
-<li><a href="/ua/glossary/ai-unit-economics.html">AI Unit Economics</a></li>
-<li><a href="/ua/glossary/cost-to-serve.html">Cost to Serve</a></li>
+<li><a href="/ua/glossary/usage-based-pricing.html">Ціноутворення на основі споживання</a></li>
+<li><a href="/ua/glossary/pricing-metric.html">Цінова метрика (Pricing Metric)</a></li>
+<li><a href="/ua/glossary/ai-unit-economics.html">Одинична економіка ШІ (AI Unit Economics)</a></li>
+<li><a href="/ua/glossary/cost-to-serve.html">Вартість обслуговування (Cost to Serve)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes" target="_blank" rel="noopener noreferrer">Intercom: Fin AI Agent outcomes</a></li>
-<li><a href="https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage" target="_blank" rel="noopener noreferrer">Intercom: See and manage usage</a></li>
-<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Optimizing cost per task and proving agent ROI</a></li>
+<li><a href="https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes" target="_blank" rel="noopener noreferrer">Intercom: Fin AI Agent outcomes (Результати ШІ-агента Fin)</a></li>
+<li><a href="https://www.intercom.com/help/en/articles/8991894-how-to-see-and-manage-your-usage" target="_blank" rel="noopener noreferrer">Intercom: See and manage usage (Перегляд та керування використанням)</a></li>
+<li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS: Optimizing cost per task and proving agent ROI (Оптимізація вартості завдання та підтвердження ROI агентів на Amazon Bedrock)</a></li>
 </ul>
 </section>
 

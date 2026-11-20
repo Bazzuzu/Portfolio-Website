@@ -387,68 +387,68 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">Воронка конверсії — це концептуальна та аналітична модель для вимірювання частки користувачів або акаунтів, які проходять визначену послідовність кроків на шляху до результату. Вона демонструє показники проходження та рівень відтоку (drop-off) між ключовими етапами сценарію, наприклад, від перегляду результатів пошуку до завершення бронювання.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-define-the-steps">
-<h2 id="section-how-do-you-define-the-steps" class="glossary-term-section__title">How do you define the steps?</h2>
-<p class="glossary-term-section__text">Choose milestones you can identify reliably. Define who enters the funnel, what counts as completing each step, and how much time people have to progress. Decide whether participants must enter at the first step. In Google Analytics, a closed funnel starts at the first step, while an open funnel can admit users at later steps.</p>
-<p class="glossary-term-section__text">Keep the unit consistent. For a travel quote funnel, count unique travelers across the steps and use linked records to follow the same request through qualification and booking. Specify what “qualified lead” means in your business before comparing results.</p>
+    <p class="glossary-term-section__text">Воронка конверсії — це модель для вимірювання того, скільки відповідних користувачів або акаунтів проходять визначену послідовність кроків на шляху до результату. Вона показує завершення етапів та відтік (drop-off) між контрольними точками, такими як перегляд результатів подорожей, запит цінової пропозиції та завершення бронювання.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як визначати етапи?</h2>
+<p class="glossary-term-section__text">Обирайте контрольні точки (milestones), які ви можете надійно ідентифікувати. Визначте, хто входить у воронку, що саме вважається завершенням кожного кроку і скільки часу мають люди для просування вперед. Вирішіть, чи обов'язково учасники повинні входити на першому кроці. У Google Analytics закрита воронка починається з першого кроку, тоді як відкрита воронка може приймати користувачів на пізніших етапах.</p>
+<p class="glossary-term-section__text">Зберігайте єдину одиницю аналізу. Для воронки запитів на подорожі рахуйте унікальних мандрівників на всіх кроках і використовуйте пов'язані записи, щоб відстежувати той самий запит через етапи кваліфікації та бронювання. Чітко визначте, що означає «кваліфікований лід» у вашому бізнесі, перш ніж порівнювати результати.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-calculate-funnel-conversion">
-<h2 id="section-how-do-you-calculate-funnel-conversion" class="glossary-term-section__title">How do you calculate funnel conversion?</h2>
-<p class="glossary-term-section__text">Suppose 1,000 travelers view results. Count each traveler once per step if they complete that step in sequence within 30 days of entry. Qualification and booking must refer to the same quote request.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як розраховується конверсія воронки?</h2>
+<p class="glossary-term-section__text">Припустимо, 1 000 мандрівників переглядають результати. Рахуйте кожного мандрівника один раз на кожному кроці, якщо він проходить цей крок послідовно протягом 30 днів після входу. Кваліфікація та бронювання мають стосуватися одного й того самого запиту пропозиції.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Step</th>
-<th>Travelers reaching the step</th>
-<th>Conversion from previous step</th>
+<th>Крок</th>
+<th>Мандрівники, які дійшли до кроку</th>
+<th>Конверсія з попереднього кроку</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>View results</td>
-<td>1,000</td>
+<td>Перегляд результатів</td>
+<td>1 000</td>
 <td>—</td>
 </tr>
 <tr>
-<td>Submit quote request</td>
+<td>Надсилання запиту пропозиції</td>
 <td>200</td>
 <td>20%</td>
 </tr>
 <tr>
-<td>Have the request qualified</td>
+<td>Кваліфікація запиту</td>
 <td>80</td>
 <td>40%</td>
 </tr>
 <tr>
-<td>Complete the booking</td>
+<td>Завершення бронювання</td>
 <td>20</td>
 <td>25%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text"><strong>Step conversion</strong> divides a step’s count by the previous step’s count. Here, qualified lead to booking is 20 ÷ 80 = <strong>25%</strong>. <strong>Overall conversion</strong> divides the final count by the entry count. Here, results to booking is 20 ÷ 1,000 = <strong>2%</strong>. Label the denominator so readers can tell which part of the journey each rate describes.</p>
+<p class="glossary-term-section__text"><strong>Покрокова конверсія (Step conversion)</strong> розраховується діленням показника поточного кроку на показник попереднього кроку. У цьому випадку перехід від кваліфікованого ліда до бронювання становить 20 ÷ 80 = <strong>25%</strong>. <strong>Загальна конверсія (Overall conversion)</strong> розраховується діленням фінального показника на кількість користувачів на вході. Тут перехід від результатів до бронювання становить 20 ÷ 1 000 = <strong>2%</strong>. Завжди підписуйте знаменник, щоб читачі могли зрозуміти, яку саме частину шляху описує кожен показник.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-does-drop-off-tell-you">
-<h2 id="section-what-does-drop-off-tell-you" class="glossary-term-section__title">What does drop-off tell you?</h2>
-<p class="glossary-term-section__text">The funnel shows where fewer people continue. It can reflect a design problem, a deliberate choice, or a business rule. In this example, travelers may choose to browse without requesting a quote, and some requests will fail qualification by design.</p>
-<p class="glossary-term-section__text">Check tracking first, then investigate a promising step with research. For example, observe whether travelers understand what submitting a quote request commits them to. If you change the form, monitor completed bookings and lead quality as well as submissions. The funnel helps locate the question your research or experiment needs to answer.</p>
+<section class="glossary-term-section" aria-labelledby="section-drop-off">
+<h2 id="section-drop-off" class="glossary-term-section__title">Про що свідчить відтік (drop-off)?</h2>
+<p class="glossary-term-section__text">Воронка показує, де менше людей продовжує рух далі. Це може свідчити про проблему в дизайні, свідомий вибір користувача або бізнес-правило. У цьому прикладі мандрівники можуть вирішити просто переглянути варіанти без запиту вартості, а деякі запити не пройдуть кваліфікацію за задумом бізнес-процесу.</p>
+<p class="glossary-term-section__text">Спершу перевірте налаштування аналітики, а потім дослідіть перспективний крок за допомогою якісних досліджень. Наприклад, поспостерігайте, чи розуміють мандрівники, до чого їх зобов'язує надсилання запиту пропозиції. Якщо ви змінюєте форму, відстежуйте завершені бронювання та якість лідів так само ретельно, як і кількість відправок форми. Воронка допомагає визначити питання, на яке має відповісти ваше дослідження чи експеримент.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li>
-<li><a href="/ua/glossary/checkout-flow-optimization.html">Checkout Flow Optimization</a></li>
-<li><a href="/ua/glossary/time-to-value-ttv.html">Time-to-Value (TTV)</a></li>
+<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Оптимізація коефіцієнта конверсії (CRO)</a></li>
+<li><a href="/ua/glossary/checkout-flow-optimization.html">Оптимізація процесу чекауту</a></li>
+<li><a href="/ua/glossary/time-to-value-ttv.html">Час до отримання цінності (Time to Value / TTV)</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://support.google.com/analytics/answer/9327974?hl=en" target="_blank" rel="noopener noreferrer">Funnel exploration, Google Analytics Help</a></li>
-<li><a href="https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions" target="_blank" rel="noopener noreferrer">How Amplitude computes conversions through funnels, Amplitude Docs</a></li>
+<li><a href="https://support.google.com/analytics/answer/9327974?hl=en" target="_blank" rel="noopener noreferrer">Дослідження воронки, Довідка Google Analytics</a></li>
+<li><a href="https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-how-amplitude-computes-conversions" target="_blank" rel="noopener noreferrer">Як Amplitude обчислює конверсії у воронках, Amplitude Docs</a></li>
 </ul>
 </section>
 

@@ -389,68 +389,68 @@
   </header>
 
   <article>
-    <p class="glossary-term-section__text">A/B-тестування (спліт-тестування) — це контрольований експеримент, у якому репрезентативна вибірка користувачів випадковим чином розподіляється між різними варіантами продуктового інтерфейсу для порівняння заздалегідь визначених показників. Грамотно організований тест дозволяє оцінити причинно-наслідковий ефект зміни для цільової аудиторії за заданих умов.</p>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-plan-a-ux-a-b-test">
-<h2 id="section-how-do-you-plan-a-ux-a-b-test" class="glossary-term-section__title">How do you plan a UX A/B test?</h2>
-<p class="glossary-term-section__text">Suppose new accounts draft an invoice but hesitate to send it because they cannot see what their client will receive. The team tests a preview that shows the invoice as the client would see it.</p>
+    <p class="glossary-term-section__text">A/B-тестування (спліт-тестування) — це контрольований експеримент, у якому відповідні учасники випадковим чином розподіляються між різними версіями взаємодії з продуктом для порівняння заздалегідь визначених результатів. Якісно проведений тест допомагає оцінити ефект зміни для конкретної аудиторії та в тестованих умовах.</p>
+<section class="glossary-term-section" aria-labelledby="section-ux-a-b">
+<h2 id="section-ux-a-b" class="glossary-term-section__title">Як спланувати UX A/B-тест?</h2>
+<p class="glossary-term-section__text">Припустимо, нові облікові записи створюють чернетку рахунку-фактури (інвойсу), але вагаються надсилати його, оскільки не бачать, що саме отримає їхній клієнт. Команда тестує функцію попереднього перегляду, яка показує інвойс саме так, як його побачить клієнт.</p>
 <div class="glossary-table-wrapper">
 <table class="glossary-table">
 <thead>
 <tr>
-<th>Decision</th>
-<th>Example</th>
+<th>Рішення</th>
+<th>Приклад</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Hypothesis</td>
-<td>A preview helps more new accounts send a first real invoice by showing what the client will receive.</td>
+<td>Гіпотеза</td>
+<td>Попередній перегляд допоможе більшій кількості нових акаунтів надіслати перший справжній інвойс, демонструючи, що саме отримає клієнт.</td>
 </tr>
 <tr>
-<td>Control and treatment</td>
-<td>Group A sees the current experience. Group B gets an option to preview the invoice as the client would see it.</td>
+<td>Контрольна та тестова групи</td>
+<td>Група A бачить поточний інтерфейс. Група B отримує можливість попереднього перегляду інвойсу в тому вигляді, в якому його побачить клієнт.</td>
 </tr>
 <tr>
-<td>Unit of randomization</td>
-<td>Assign each eligible new account at signup so teammates use the same version.</td>
+<td>Одиниця рандомізації</td>
+<td>Розподіл кожного нового відповідного акаунта під час реєстрації, щоб колеги використовували однакову версію.</td>
 </tr>
 <tr>
-<td>Primary metric</td>
-<td>Percentage of assigned accounts that send a first real invoice within seven days.</td>
+<td>Первинна метрика</td>
+<td>Відсоток призначених акаунтів, які надіслали перший справжній інвойс протягом семи днів.</td>
 </tr>
 <tr>
-<td>Guardrails</td>
-<td>Accidental sends and invoice-related support requests per assigned account.</td>
+<td>Запобіжні метрики (guardrails)</td>
+<td>Випадкові відправлення та кількість звернень до служби підтримки щодо інвойсів на один призначений акаунт.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="glossary-term-section__text">Before launch, agree on the smallest effect worth acting on, the sample and duration needed, and the analysis and stopping rules. Make sure each account has the full outcome window before the final analysis. In this example, the denominator includes all eligible assigned accounts, including accounts that never open the preview.</p>
+<p class="glossary-term-section__text">Перед запуском узгодьте мінімальний ефект, що вартий дій, необхідний розмір вибірки й тривалість, а також правила аналізу та критерії зупинки. Переконайтеся, що кожен акаунт має повне часове вікно для фіксації результату до фінального аналізу. У цьому прикладі знаменник включає всі відповідні призначені акаунти, включно з тими, які жодного разу не відкрили попередній перегляд.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-what-should-you-check-before-reading-the-result">
-<h2 id="section-what-should-you-check-before-reading-the-result" class="glossary-term-section__title">What should you check before reading the result?</h2>
-<p class="glossary-term-section__text">Verify that assignment and events work in both variants. Compare the observed group sizes with the planned allocation. A statistically significant difference between the observed and planned group proportions is a <strong>sample ratio mismatch</strong>. It can indicate problems with assignment, eligibility, or tracking. Diagnose it before interpreting the treatment effect.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Що слід перевірити перед аналізом результату?</h2>
+<p class="glossary-term-section__text">Переконайтеся, що розподіл користувачів та фіксація подій коректно працюють в обох варіантах. Порівняйте фактичні розміри груп із запланованим розподілом. Статистично значуща різниця між фактичними та запланованими пропорціями груп є <strong>невідповідністю співвідношення вибірки (Sample Ratio Mismatch, SRM)</strong>. Вона може свідчити про проблеми з розподілом, критеріями вибірки або відстеженням. Обов'язково діагностуйте причину SRM перед тим, як інтерпретувати ефект експерименту.</p>
 </section>
-<section class="glossary-term-section" aria-labelledby="section-how-do-you-interpret-an-inconclusive-test">
-<h2 id="section-how-do-you-interpret-an-inconclusive-test" class="glossary-term-section__title">How do you interpret an inconclusive test?</h2>
-<p class="glossary-term-section__text">Review the estimated difference and its uncertainty alongside guardrails. Suppose the estimated change is +2 percentage points, with a 95% confidence interval from −1 to +5 points. The interval spans both a decrease and an improvement. If those outcomes would lead to different decisions, the test has left the decision uncertain.</p>
-<p class="glossary-term-section__text">Agree on the next step based on what is still unknown. Verify the implementation if data quality is in doubt. Revisit the hypothesis if users did not understand the preview. If you need a more precise estimate, plan a follow-up with enough traffic and a suitable analysis rule.</p>
+<section class="glossary-term-section" aria-labelledby="section-">
+<h2 id="section-" class="glossary-term-section__title">Як інтерпретувати неоднозначний результат тесту?</h2>
+<p class="glossary-term-section__text">Оцініть розраховану різницю та її невизначеність разом із запобіжними метриками. Припустимо, оцінена зміна становить +2 процентні пункти з 95% довірчим інтервалом від −1 до +5 пунктів. Цей інтервал охоплює як погіршення, так і покращення. Якщо такі результати призвели б до різних рішень, тест залишив рішення невизначеним.</p>
+<p class="glossary-term-section__text">Узгодьте наступний крок на основі того, що саме залишається невідомим. Перевірте технічну реалізацію, якщо є сумніви щодо якості даних. Перегляньте гіпотезу, якщо користувачі не зрозуміли попередній перегляд. Якщо вам потрібна точніша оцінка, сплануйте повторний тест із достатнім обсягом трафіку та відповідним правилом аналізу.</p>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Пов'язані терміни</h2>
 <ul class="glossary-term-ul">
-<li><a href="/ua/glossary/continuous-experimentation.html">Continuous Experimentation</a></li>
-<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Conversion Rate Optimization (CRO)</a></li>
-<li><a href="/ua/glossary/feature-flag-strategy.html">Feature Flag Strategy</a></li>
-<li><a href="/ua/glossary/product-telemetry-analytics.html">Product Telemetry & Analytics</a></li>
+<li><a href="/ua/glossary/continuous-experimentation.html">Безперервне експериментування</a></li>
+<li><a href="/ua/glossary/conversion-rate-optimization-cro.html">Оптимізація коефіцієнта конверсії (CRO)</a></li>
+<li><a href="/ua/glossary/feature-flag-strategy.html">Стратегія функціональних прапорців (Feature Flags)</a></li>
+<li><a href="/ua/glossary/product-telemetry-analytics.html">Продуктова телеметрія та аналітика</a></li>
 </ul>
 </section>
 <section class="glossary-term-section" aria-labelledby="section-">
 <h2 id="section-" class="glossary-term-section__title">Джерела</h2>
 <ul class="glossary-term-ul">
-<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: Pre-Experiment Stage, Microsoft Research</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Patterns of Trustworthy Experimentation: During-Experiment Stage, Microsoft Research</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/" target="_blank" rel="noopener noreferrer">Diagnosing Sample Ratio Mismatch in Online Controlled Experiments, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/" target="_blank" rel="noopener noreferrer">Патерни надійного експериментування: етап до експерименту, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/" target="_blank" rel="noopener noreferrer">Патерни надійного експериментування: етап під час експерименту, Microsoft Research</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/" target="_blank" rel="noopener noreferrer">Діагностика Sample Ratio Mismatch в онлайн-експериментах, Microsoft Research</a></li>
 </ul>
 </section>
 
