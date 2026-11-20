@@ -298,7 +298,7 @@ Bypassed static Figma mocks to directly model dynamic fee calculations. Delivere
 
 ## 6. Architectural Product Design Knowledge System (A Canonical Glossary and Structural Ontology)
 **Index URL:** https://lexkonovalov.com/glossary/
-**Total Canonical Terms:** 132
+**Total Canonical Terms:** 142
 **Supporting Pages:** https://lexkonovalov.com/glossary/ooux/, https://lexkonovalov.com/glossary/ooux-worked-example.html
 
 This ontology establishes an authoritative, search-indexable reference bridging conceptual UX models with programmatic execution and Generative Engine Optimization (GEO).
@@ -310,7 +310,7 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Representative Frameworks:** OOUX, ORCA, Core Model, Semantic Zoom, Mental Modeling
 - **Maturity Distribution:** 70% Established, 20% Proprietary, 10% Emerging
 
-#### Design Systems & Engineering (31 terms)
+#### Design Systems & Engineering (41 terms)
 - **Primary Focus:** Token Interoperability, Component Contracts, Accessibility
 - **Representative Frameworks:** W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components
 - **Maturity Distribution:** 75% Established, 25% Emerging
@@ -646,10 +646,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.
-- **Purpose:** Establishes a single source of truth for design decisions and UI code, accelerating product development velocity and ensuring cross-platform brand and UX cohesion.
-- **Key Concepts:** Foundations and tokens, Component library, UI kit vs design system, Patterns and guidance, System maintenance and contribution
-- **How It Works:** Unifies tokens, reusable components, and interaction guidelines under continuous governance, allowing product teams to compose interfaces reliably while sharing bug fixes and improvements.
-- **Related Terms:** Design Tokens, Component Architecture, DesignOps, Component Libraries, Design System Governance
+- **Purpose:** A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.
+- **Key Concepts:** What does a design system include?, Design system vs. component library vs. UI kit, Example of a shared button, How do you start a design system?
+- **How It Works:** A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.
+- **Related Terms:** Design Tokens, Component Architecture, DesignOps, Component Libraries, Design System Governance, Design System Documentation, Design System Audit, AI-ready Design System
 - **SEO Title:** What Is a Design System? | Product Design Glossary
 - **Sources:** GOV.UK Design System (https://design-system.service.gov.uk/); Button, GOV.UK Design System (https://design-system.service.gov.uk/components/button/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
 
@@ -658,9 +658,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.
-- **Purpose:** Serves as the single source of truth for design variables, automating synchronization across design tools, Web, iOS, and Android production repositories.
-- **Key Concepts:** Name-value pairs, platform agnosticism, automation pipelines, single source of truth.
-- **How It Works:** Designers update token values in design tools; build engines consume the JSON schema and compile native CSS variables, Swift constants, or Android XML files.
+- **Purpose:** Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.
+- **Key Concepts:** What are primitive, semantic, and component tokens?, A simple design token example, How do tokens get from design to code?, Do design tokens have to use JSON?
+- **How It Works:** Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.
 - **Related Terms:** Design System, Semantic Tokens, Design Primitives, Style Dictionary, Design Tokens Format Module (DTCG)
 - **SEO Title:** Design Tokens: Definition & Examples | Product Design Glossary
 - **Sources:** Design tokens explained, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Design Tokens Format Module 2025.10, Design Tokens Community Group (https://www.designtokens.org/tr/2025.10/format/); Style Dictionary documentation (https://styledictionary.com/)
@@ -670,9 +670,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.
-- **Purpose:** Standardizes cross-tool design token exchange syntax, decoupling token definitions from specific platforms, plugins, and proprietary design tool formats.
-- **Key Concepts:** DTCG 2025.10 standard, Token $type and $value, Token reference syntax ({group.token}), Format Module vs Resolver Module, Tool interoperability
-- **How It Works:** Defines a standardized JSON schema where design tokens are structured with explicit types, values, and alias references, enabling deterministic translation into multi-platform styling formats.
+- **Purpose:** The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.
+- **Key Concepts:** What does a DTCG token look like?, What does the Format Module cover?, How do you check interoperability?
+- **How It Works:** The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.
 - **Related Terms:** Design Tokens, Style Dictionary, Semantic Tokens, Token Resolver Engine
 - **SEO Title:** DTCG Design Tokens Format Module | Product Design Glossary
 - **Sources:** Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/); Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/); Technical reports, DTCG (https://www.designtokens.org/technical-reports/)
@@ -682,10 +682,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.
-- **Purpose:** Abstracts raw visual values into purposeful UI roles, enabling scalable theming, dark mode mapping, and brand variation without modifying component code.
-- **Key Concepts:** Role-based token naming, Theme context mapping (Light vs Dark), Semantic token vs token alias, Scope hierarchy, Component-scoped tokens
-- **How It Works:** Maps functional UI intent to underlying primitive palette values or literal definitions, allowing runtime theme switching to alter appearance globally while preserving design integrity.
-- **Related Terms:** Design Tokens, Design Primitives, Figma Variables & Modes, Component Architecture
+- **Purpose:** A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.
+- **Key Concepts:** How do semantic tokens work across themes?, Is a semantic token the same as an alias?, How do you name and introduce semantic tokens?
+- **How It Works:** A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.
+- **Related Terms:** Design Tokens, Design Primitives, Figma Variables & Modes, Component Architecture, Theming
 - **SEO Title:** Semantic Tokens: Naming and Theming | Product Design Glossary
 - **Sources:** Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/); Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/)
 
@@ -694,9 +694,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.
-- **Purpose:** Establishes raw, unopinionated foundational values and low-level structural components upon which semantic decisions and complex patterns are assembled.
-- **Key Concepts:** Primitive token vs semantic token, Named scale steps (e.g. space.200), Primitive layout components (Stack, Inline), Scope of base value changes, Foundational scales
-- **How It Works:** Provides immutable, math-driven scales of color palettes, typographic steps, and spacing increments alongside atomic structural components to ensure foundational mathematical harmony.
+- **Purpose:** Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.
+- **Key Concepts:** What are primitive tokens?, What does a primitive component do?, When should you change a base value?
+- **How It Works:** Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.
 - **Related Terms:** Design Tokens, Semantic Tokens, Component Architecture, Atomic Design
 - **SEO Title:** Design Primitives and Primitive Tokens | Product Design Glossary
 - **Sources:** Design Tokens, Atlassian Design System (https://atlassian.design/foundations/tokens/design-tokens/); Primitives overview, Atlassian Design System (https://atlassian.design/foundations/spacing/primitives); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
@@ -730,10 +730,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.
-- **Purpose:** Establishes clear contribution criteria, review workflows, and ownership models so shared systems evolve sustainably without fragmentation or bottlenecks.
-- **Key Concepts:** Contribution criteria, Decision ownership, Proposal review workflow, Adoption & migration support, Lightweight governance
-- **How It Works:** Routes component proposals through multi-disciplinary review gates, evaluating shared need and accessibility before approving contributions into canonical libraries.
-- **Related Terms:** DesignOps, Design System, Design System Versioning & SemVer, Component Architecture
+- **Purpose:** Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.
+- **Key Concepts:** What decisions does governance cover?, Example of reviewing a shared dialog change, How can a small team keep governance lightweight?, Centralized and federated ownership, What should a design system RFC contain?
+- **How It Works:** Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.
+- **Related Terms:** DesignOps, Design System, Design System Versioning & SemVer, Component Architecture, Design System Adoption, Design System Audit, Design Debt
 - **SEO Title:** Design System Governance | Product Design Glossary
 - **Sources:** Propose a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/propose-a-component-or-pattern/); Develop a component or pattern, GOV.UK Design System (https://design-system.service.gov.uk/community/develop-a-component-or-pattern/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
 
@@ -754,9 +754,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
 - **Maturity:** Emerging
 - **Definition:** A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.
-- **Purpose:** Bridges the gap between Figma design assets and multi-platform production code through automated token extraction, component mapping, and rapid preview verification.
-- **Key Concepts:** Figma Code Connect, design tokens pipeline, component mapping, visual preview verification, automated regression checks
-- **How It Works:** Maps Figma component variants directly to production code components, compiles design tokens into platform styling artifacts, and generates interactive previews for design review.
+- **Purpose:** A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.
+- **Key Concepts:** What does a design-to-code workflow include?, Example: A booking-change dialog, What can the team automate?, Where does design handoff fit?
+- **How It Works:** A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.
 - **Related Terms:** Design Tokens, Style Dictionary, Design Engineering, Vibe Coding, Visual Regression Testing
 - **SEO Title:** Design-to-Code Workflow: From Figma to Production | Product Design Glossary
 - **Sources:** Figma Code Connect, Figma Developer Docs (https://developers.figma.com/docs/code-connect/); Use Code Snippets in Dev Mode, Figma (https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/); Configuration, Style Dictionary (https://styledictionary.com/reference/config/)
@@ -778,10 +778,10 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.
-- **Purpose:** Enables native design token management, mode switching (light/dark, responsive density, multi-brand theming), and alias resolution directly within Figma design files.
-- **Key Concepts:** Variable types (color, number, string, boolean), Collections and Modes, Variable alias binding, Mode inheritance and overrides, DTCG JSON token import/export
-- **How It Works:** Binds UI layer fills, strokes, dimensions, and text to variable aliases organized into collections, allowing parent frame mode toggles to cascade across nested child layers.
-- **Related Terms:** Semantic Tokens, Design Tokens, Design-to-Code Workflow, Design Tokens Format Module (DTCG)
+- **Purpose:** Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.
+- **Key Concepts:** How do variables, collections, and modes work?, Why is a layer still showing the wrong mode?, Can you use Figma variables as design tokens?
+- **How It Works:** Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.
+- **Related Terms:** Semantic Tokens, Design Tokens, Design-to-Code Workflow, Design Tokens Format Module (DTCG), Theming
 - **SEO Title:** Figma Variables and Modes | Product Design Glossary
 - **Sources:** Overview of variables, collections, and modes, Figma (https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes); Modes for variables, Figma (https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)
 
@@ -838,21 +838,21 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.
-- **Purpose:** Scales design impact, reduces operational friction, clarifies decision governance, and streamlines cross-functional delivery across expanding product organizations.
-- **Key Concepts:** Design onboarding & tooling, ways of working & review cadence, governance & adoption coordination, knowledge sharing, cross-functional alignment
-- **How It Works:** Establishes standardized design reviews, maintains centralized documentation, coordinates design system migrations across product squads, and optimizes design tooling.
-- **Related Terms:** Design System Governance, Design Engineering, Continuous Experimentation, Component Telemetry
+- **Purpose:** DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.
+- **Key Concepts:** What does DesignOps cover?, DesignOps and design system governance, What can DesignOps automate?, How should teams govern design tools?, DesignOps vs. ResearchOps
+- **How It Works:** DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.
+- **Related Terms:** Design System Governance, Design Engineering, Continuous Experimentation, Component Telemetry, Design System Migration, Design Debt
 - **SEO Title:** What Is DesignOps? Design Operations in Practice | Product Design Glossary
-- **Sources:** DesignOps 101, Nielsen Norman Group (https://www.nngroup.com/articles/design-operations-101/)
+- **Sources:** DesignOps 101, Nielsen Norman Group (https://www.nngroup.com/articles/design-operations-101/); About ResearchOps, ResearchOps Community (https://researchops.community/about/)
 
 #### 043. Style Dictionary
 - **URL:** https://lexkonovalov.com/glossary/style-dictionary.html
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.
-- **Purpose:** Automates the deterministic translation of platform-agnostic design tokens into native iOS, Android, web, and design tool artifacts from a single source of truth.
-- **Key Concepts:** Token compilation build, Transforms and transform groups, Formats (css/variables, json, etc.), DTCG input support, Platform targets (web, ios, android)
-- **How It Works:** Parses hierarchical token definitions, resolves alias references, executes platform-specific transforms, and formats code files for automated downstream consumption.
+- **Purpose:** Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.
+- **Key Concepts:** How does a Style Dictionary build work?, Example of building CSS variables, How do themes and aliases affect the build?
+- **How It Works:** Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Design Engineering, Design-to-Code Workflow
 - **SEO Title:** Style Dictionary for Design Tokens | Product Design Glossary
 - **Sources:** Configuration, Style Dictionary (https://styledictionary.com/reference/config/); Built-in formats, Style Dictionary (https://styledictionary.com/reference/hooks/formats/predefined/); DTCG support, Style Dictionary (https://styledictionary.com/info/dtcg/); Using the CLI, Style Dictionary (https://styledictionary.com/getting-started/using_the_cli/); Built-in transforms, Style Dictionary (https://styledictionary.com/reference/hooks/transforms/predefined/)
@@ -862,9 +862,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.
-- **Purpose:** Resolves nested token alias references, contextual theme overrides, and mode inheritance rules deterministically according to DTCG resolution order specifications.
-- **Key Concepts:** Resolution order precedence, Context modifiers (theme, density, brand), Winning reference selection, Circular reference prevention, DTCG Resolver Module 2025.10
-- **How It Works:** Applies cascading token sets in a declared sequence where subsequent modifiers override preceding values, traversing reference graphs until concrete primitives are resolved.
+- **Purpose:** A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.
+- **Key Concepts:** What does a resolver do?, Example of resolving link text, What should you test?
+- **How It Works:** A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Style Dictionary, Semantic Tokens
 - **SEO Title:** Design Token Resolution and Theming | Product Design Glossary
 - **Sources:** Design Tokens Resolver Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/resolver/); Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
@@ -886,9 +886,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
 - **Maturity:** Established
 - **Definition:** A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.
-- **Purpose:** Encapsulates multi-property design decisions (such as shadows, typography, and borders) into a single cohesive, type-safe token unit.
-- **Key Concepts:** Composite token vs token group, Multi-property $value object, Shadow composite structure (color, offsets, blur, spread), Composite type validation, Cross-platform output compilation
-- **How It Works:** Groups tightly-coupled properties into a single semantic token object, ensuring dependent values resolve simultaneously when consumed by design components or code.
+- **Purpose:** A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.
+- **Key Concepts:** How is a composite token different from a group?, DTCG example of a shadow token, When should you use a composite token?
+- **How It Works:** A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.
 - **Related Terms:** Design Tokens, Design Tokens Format Module (DTCG), Semantic Tokens, Design Primitives
 - **SEO Title:** Composite Design Tokens | Product Design Glossary
 - **Sources:** Design Tokens Format Module 2025.10, DTCG (https://www.designtokens.org/tr/2025.10/format/)
@@ -934,9 +934,9 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
 - **Maturity:** Established
 - **Definition:** Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.
-- **Purpose:** Governs package releases and migration paths across consuming codebases, communicating backward-compatible vs breaking structural changes transparently.
-- **Key Concepts:** Semantic Versioning (MAJOR.MINOR.PATCH), Public API compatibility contract, Breaking change deprecation window, Design file and code release alignment, Migration guides & release notes
-- **How It Works:** Increments PATCH for backward-compatible bug fixes, MINOR for new backward-compatible capabilities, and MAJOR for breaking public contract modifications.
+- **Purpose:** Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.
+- **Key Concepts:** What counts as the public API?, Major, minor, and patch examples, How do you plan a breaking change?, Component lifecycle and release notes
+- **How It Works:** Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.
 - **Related Terms:** Design System Governance, Component Architecture, DesignOps
 - **SEO Title:** Design System Versioning and SemVer | Product Design Glossary
 - **Sources:** Semantic Versioning 2.0.0 (https://semver.org/)
@@ -1924,4 +1924,124 @@ This ontology establishes an authoritative, search-indexable reference bridging 
 - **Related Terms:** DesignOps, AI in UX Research, Synthetic User Testing, Product Discovery
 - **SEO Title:** ResearchOps: Research Operations Explained | Product Design Glossary
 - **Sources:** About ResearchOps, ResearchOps Community (https://researchops.community/about/); ResearchOps 101, NN/g (https://www.nngroup.com/articles/research-ops-101/); Getting informed consent for user research, GOV.UK (https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research)
+
+#### 133. Figma Code Connect
+- **URL:** https://lexkonovalov.com/glossary/figma-code-connect.html
+- **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.
+- **Purpose:** Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.
+- **Key Concepts:** What does Code Connect add?, Code Connect UI vs. CLI, How does it relate to the Figma MCP server?, Example: a booking action button, What should teams maintain?
+- **How It Works:** Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.
+- **Related Terms:** Figma MCP Server, Design-to-Code Workflow, Component Architecture, Design System Documentation
+- **SEO Title:** Figma Code Connect Explained | Product Design Glossary
+- **Sources:** Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/); Getting started with Code Connect CLI, Figma (https://developers.figma.com/docs/code-connect/quickstart-guide/)
+
+#### 134. Figma MCP Server
+- **URL:** https://lexkonovalov.com/glossary/figma-mcp-server.html
+- **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.
+- **Purpose:** The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.
+- **Key Concepts:** What can the Figma MCP server provide?, Example: implementing a reservation card, Figma MCP vs. Code Connect vs. a design system MCP, What context improves the result?
+- **How It Works:** The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.
+- **Related Terms:** Model Context Protocol, Figma Code Connect, Design Harness, Design-to-Code Workflow, Code-to-Design Workflow
+- **SEO Title:** Figma MCP Server Explained | Product Design Glossary
+- **Sources:** Figma MCP server introduction (https://developers.figma.com/docs/figma-mcp-server/); Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/)
+
+#### 135. Code-to-Design Workflow
+- **URL:** https://lexkonovalov.com/glossary/code-to-design-workflow.html
+- **Category:** Design Systems & Engineering (Secondary: AI & Agentic Systems)
+- **Maturity:** Established
+- **Definition:** A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.
+- **Purpose:** A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.
+- **Key Concepts:** When is code-to-design useful?, Example: reviewing a quote-request flow, Does capture preserve the original components?, Code-to-design vs. design-to-code
+- **How It Works:** A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.
+- **Related Terms:** Design-to-Code Workflow, Figma MCP Server, Figma Code Connect, Design QA
+- **SEO Title:** Code-to-Design Workflow Explained | Product Design Glossary
+- **Sources:** Code to canvas, Figma (https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/); Figma MCP server introduction (https://developers.figma.com/docs/figma-mcp-server/)
+
+#### 136. Design System Adoption
+- **URL:** https://lexkonovalov.com/glossary/design-system-adoption.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.
+- **Purpose:** Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.
+- **Key Concepts:** What counts as adoption?, Example: adoption across eight products, How do you improve adoption?, Adoption vs. design system value
+- **How It Works:** Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.
+- **Related Terms:** Design System Metrics, Component Telemetry, Design System Governance, Design System Migration
+- **SEO Title:** Design System Adoption Explained | Product Design Glossary
+- **Sources:** USWDS maturity model (https://designsystem.digital.gov/maturity-model/); Community, GOV.UK Design System (https://design-system.service.gov.uk/community/)
+
+#### 137. Design System Audit
+- **URL:** https://lexkonovalov.com/glossary/design-system-audit.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.
+- **Purpose:** A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.
+- **Key Concepts:** What should a design system audit cover?, Example: three implementations of a date field, How do you turn findings into action?, Design system audit vs. accessibility audit
+- **How It Works:** A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.
+- **Related Terms:** Design System Adoption, Design System Metrics, Design Debt, Web Accessibility Audit
+- **SEO Title:** Design System Audit Checklist | Product Design Glossary
+- **Sources:** Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/); USWDS maturity model (https://designsystem.digital.gov/maturity-model/); Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)
+
+#### 138. Design System Documentation
+- **URL:** https://lexkonovalov.com/glossary/design-system-documentation.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.
+- **Purpose:** Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.
+- **Key Concepts:** What should design system documentation include?, Example: documenting an address field, Documentation vs. a component catalog, How do you keep documentation useful?
+- **How It Works:** Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.
+- **Related Terms:** Design System, Component Architecture, Storybook, Design System Governance
+- **SEO Title:** Design System Documentation | Product Design Glossary
+- **Sources:** Button guidance, GOV.UK Design System (https://design-system.service.gov.uk/components/button/); Autodocs, Storybook (https://storybook.js.org/docs/writing-docs/autodocs)
+
+#### 139. Design System Metrics
+- **URL:** https://lexkonovalov.com/glossary/design-system-metrics.html
+- **Category:** Design Systems & Engineering (Secondary: Product Strategy & Growth)
+- **Maturity:** Established
+- **Definition:** Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.
+- **Purpose:** Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.
+- **Key Concepts:** Which design system metrics are useful?, Example: measuring field reuse, Metrics vs. component telemetry, How do you estimate design system ROI?
+- **How It Works:** Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.
+- **Related Terms:** Design System Adoption, Component Telemetry, Design System Audit, DesignOps
+- **SEO Title:** Design System Metrics: What to Measure | Product Design Glossary
+- **Sources:** Measuring the User Experience on a Large Scale, Google Research (https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/); Design Systems Report 2026, Zeroheight (https://report.zeroheight.com/2026)
+
+#### 140. Design System Migration
+- **URL:** https://lexkonovalov.com/glossary/design-system-migration.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.
+- **Purpose:** A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.
+- **Key Concepts:** Migration vs. versioning, A practical migration plan, Example: replacing a date picker, How do you manage a phased migration?, When is the migration complete?
+- **How It Works:** A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.
+- **Related Terms:** Design System Versioning and SemVer, Design System Adoption, Design System Audit, Design QA
+- **SEO Title:** Design System Migration: A Practical Plan | Product Design Glossary
+- **Sources:** Migration guide overview, Carbon Design System (https://www.carbondesignsystem.com/getting-started/migrating/guide/overview); Semantic Versioning 2.0.0 (https://semver.org/)
+
+#### 141. Theming
+- **URL:** https://lexkonovalov.com/glossary/design-system-theming.html
+- **Category:** Design Systems & Engineering
+- **Maturity:** Established
+- **Definition:** Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.
+- **Purpose:** Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.
+- **Key Concepts:** How does theming work with design tokens?, Theme vs. mode vs. component variant, Example: two brands with light and dark appearances, What should you test across themes?
+- **How It Works:** Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.
+- **Related Terms:** Semantic Tokens, Figma Variables and Modes, Design Tokens, WCAG Color Contrast
+- **SEO Title:** Design System Theming Explained | Product Design Glossary
+- **Sources:** Design tokens and theming, Atlassian (https://developer.atlassian.com/platform/forge/design-tokens-and-theming/); Contrast (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
+
+#### 142. Pattern Library
+- **URL:** https://lexkonovalov.com/glossary/pattern-library.html
+- **Category:** Design Systems & Engineering (Secondary: UX & Product Architecture)
+- **Maturity:** Established
+- **Definition:** A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.
+- **Purpose:** A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.
+- **Key Concepts:** What belongs in a UI pattern?, Pattern library vs. component library vs. design system, Example: reviewing a booking change, How do you create and maintain a pattern library?
+- **How It Works:** A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.
+- **Related Terms:** Component Libraries, Component Architecture, Design System Documentation, Design System Governance
+- **SEO Title:** Pattern Library vs. Component Library | Product Design Glossary
+- **Sources:** Patterns, GOV.UK Design System (https://design-system.service.gov.uk/patterns/); Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)
 

@@ -1,4 +1,5 @@
 import { execSync } from 'child_process';
+import fs from 'fs';
 import { executeBatch, BATCH_DEFINITIONS } from './publish-orchestrator.ts';
 
 function runCommand(cmd: string) {
@@ -6,8 +7,19 @@ function runCommand(cmd: string) {
   execSync(cmd, { stdio: 'inherit' });
 }
 
+function safeGitCommit(commitMsg: string) {
+  if (fs.existsSync('.git/index.lock')) {
+    fs.unlinkSync('.git/index.lock');
+  }
+  runCommand('git add -A');
+  if (fs.existsSync('.git/index.lock')) {
+    fs.unlinkSync('.git/index.lock');
+  }
+  runCommand(`git commit -m "${commitMsg}"`);
+}
+
 async function main() {
-  const batchesToRun = [2, 3, 4, 5];
+  const batchesToRun = [3, 4, 5];
 
   for (const bNum of batchesToRun) {
     const bDef = BATCH_DEFINITIONS.find(b => b.batchNumber === bNum)!;
@@ -38,8 +50,7 @@ async function main() {
     // 6. Git commit
     console.log('\nCommitting batch...');
     const commitMsg = `feat(glossary): publish batch ${bNum} - ${bDef.name} (${bDef.newTermSlugs.length} new, ${bDef.updatedSlugs.length} updated)`;
-    runCommand('git add -A');
-    runCommand(`git commit -m "${commitMsg}"`);
+    safeGitCommit(commitMsg);
 
     console.log(`\nSUCCESS: Batch ${bNum} published and committed!`);
   }

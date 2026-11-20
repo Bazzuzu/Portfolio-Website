@@ -1,5 +1,5 @@
 // src/data/glossaryData.ts
-// Canonical 132-term taxonomy across four foundational product design domains
+// Canonical 142-term taxonomy across four foundational product design domains
 
 export type MaturityLevel = 
   | "Established"
@@ -69,7 +69,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   {
     "id": "design-systems-engineering",
     "name": "Design Systems & Engineering",
-    "count": 31,
+    "count": 41,
     "description": "Deterministic contracts between design tools and multi-platform production code repositories.",
     "primaryFocus": "Token Interoperability, Component Contracts, Accessibility",
     "representativeSpecs": "W3C DTCG Format Module 2025.10, WCAG 2.2/3.0, W3C Web Components",
@@ -2622,21 +2622,23 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
-    "purpose": "Establishes a single source of truth for design decisions and UI code, accelerating product development velocity and ensuring cross-platform brand and UX cohesion.",
+    "purpose": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
     "keyConcepts": [
-      "Foundations and tokens",
-      "Component library",
-      "UI kit vs design system",
-      "Patterns and guidance",
-      "System maintenance and contribution"
+      "What does a design system include?",
+      "Design system vs. component library vs. UI kit",
+      "Example of a shared button",
+      "How do you start a design system?"
     ],
-    "howItWorks": "Unifies tokens, reusable components, and interaction guidelines under continuous governance, allowing product teams to compose interfaces reliably while sharing bug fixes and improvements.",
+    "howItWorks": "A design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.",
     "relatedTerms": [
       "Design Tokens",
       "Component Architecture",
       "DesignOps",
       "Component Libraries",
-      "Design System Governance"
+      "Design System Governance",
+      "Design System Documentation",
+      "Design System Audit",
+      "AI-ready Design System"
     ],
     "seoTitle": "What Is a Design System? | Product Design Glossary",
     "sources": [
@@ -2718,7 +2720,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Design System\n\nA design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.\n\n## What does a design system include?\n\n| Part | What it helps teams decide |\n|---|---|\n| Foundations and tokens | Which colors, spacing, and other design decisions to reuse |\n| Components | How common controls such as buttons and text inputs look and behave |\n| Patterns and guidance | How to combine components for tasks such as entering an address or recovering from an error |\n| Maintenance | Who reviews changes, how teams contribute, and how products adopt updates |\n\nStart with the parts your teams repeatedly need. The GOV.UK Design System is a public example with styles, components, patterns, and contribution criteria.\n\n## Design system vs. component library vs. UI kit\n\nA **UI kit** typically provides reusable design assets in a design tool. A **component library** provides reusable interface components. A design system connects those assets and implementations to usage guidance and maintenance. A team can use a library from another organization and document the additional decisions its own products need.\n\n## Example of a shared button\n\nSuppose two teams use a primary button in checkout and account settings. They agree on how the button presents a label and keyboard focus, which tokens it uses, and when a secondary action should have less visual emphasis. The [component library](/glossary/component-libraries.html) provides the implementation. The system documents when to use it and how to request a change.\n\nIf checkout introduces a pending state, the teams review what happens to the label, feedback, and repeat submissions. They decide which behavior belongs in the shared component and which belongs to checkout. They test the button in both products. Checkout owns the payment request and its outcome, while the system can document how the button presents a pending action.\n\n## How do you start a design system?\n\nPick one recurring pattern with a clear owner and two real places to try it. Document what should stay consistent and what product teams can configure. Check the result in context and record how consuming teams will get future fixes. Use feedback from the first two implementations to decide what to document or share next.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [DesignOps](/glossary/designops.html)\n- [Component Libraries](/glossary/component-libraries.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n## Sources\n\n- [GOV.UK Design System](https://design-system.service.gov.uk/)\n- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)"
+    "contentMarkdown": "# Design System\n\nA design system is a maintained set of shared decisions, reusable components, and guidelines for designing and building a product or family of products. It gives teams a common way to create interfaces and a process for improving the pieces they share.\n\n## What does a design system include?\n\n| Part | What it helps teams decide |\n|---|---|\n| Foundations and tokens | Which colors, spacing, and other design decisions to reuse |\n| Components | How common controls such as buttons and text inputs look and behave |\n| [Patterns](/glossary/pattern-library.html) and guidance | How to combine components for tasks such as entering an address or recovering from an error |\n| Maintenance | Who reviews changes, how teams contribute, and how products adopt updates |\n\nStart with the parts your teams repeatedly need. The GOV.UK Design System is a public example with styles, components, patterns, and contribution criteria.\n\n## Design system vs. component library vs. UI kit\n\nA **UI kit** typically provides reusable design assets in a design tool. A **component library** provides reusable interface components. A design system connects those assets and implementations to usage guidance and maintenance. A team can use a library from another organization and document the additional decisions its own products need.\n\n## Example of a shared button\n\nSuppose two teams use a primary button in checkout and account settings. They agree on how the button presents a label and keyboard focus, which tokens it uses, and when a secondary action should have less visual emphasis. The [component library](/glossary/component-libraries.html) provides the implementation. The system documents when to use it and how to request a change.\n\nIf checkout introduces a pending state, the teams review what happens to the label, feedback, and repeat submissions. They decide which behavior belongs in the shared component and which belongs to checkout. They test the button in both products. Checkout owns the payment request and its outcome, while the system can document how the button presents a pending action.\n\n## How do you start a design system?\n\nPick one recurring pattern with a clear owner and two real places to try it. Document what should stay consistent and what product teams can configure. Check the result in context and record how consuming teams will get future fixes. Use feedback from the first two implementations to decide what to document or share next.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [DesignOps](/glossary/designops.html)\n- [Component Libraries](/glossary/component-libraries.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n- [Design System Documentation](/glossary/design-system-documentation.html)\n\n- [Design System Audit](/glossary/design-system-audit.html)\n\n- [AI-ready Design System](/glossary/ai-ready-design-system.html)\n\n## Sources\n\n- [GOV.UK Design System](https://design-system.service.gov.uk/)\n- [Button, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)"
   },
   {
     "id": "027",
@@ -2731,14 +2733,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
-    "purpose": "Serves as the single source of truth for design variables, automating synchronization across design tools, Web, iOS, and Android production repositories.",
+    "purpose": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
     "keyConcepts": [
-      "Name-value pairs",
-      "platform agnosticism",
-      "automation pipelines",
-      "single source of truth."
+      "What are primitive, semantic, and component tokens?",
+      "A simple design token example",
+      "How do tokens get from design to code?",
+      "Do design tokens have to use JSON?"
     ],
-    "howItWorks": "Designers update token values in design tools; build engines consume the JSON schema and compile native CSS variables, Swift constants, or Android XML files.",
+    "howItWorks": "Design tokens are named values that represent reusable design decisions, such as colors, spacing, typography, and motion. They give designers and developers a shared way to describe and apply those decisions across components, themes, and platforms.",
     "relatedTerms": [
       "Design System",
       "Semantic Tokens",
@@ -2839,15 +2841,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
-    "purpose": "Standardizes cross-tool design token exchange syntax, decoupling token definitions from specific platforms, plugins, and proprietary design tool formats.",
+    "purpose": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
     "keyConcepts": [
-      "DTCG 2025.10 standard",
-      "Token $type and $value",
-      "Token reference syntax ({group.token})",
-      "Format Module vs Resolver Module",
-      "Tool interoperability"
+      "What does a DTCG token look like?",
+      "What does the Format Module cover?",
+      "How do you check interoperability?"
     ],
-    "howItWorks": "Defines a standardized JSON schema where design tokens are structured with explicit types, values, and alias references, enabling deterministic translation into multi-platform styling formats.",
+    "howItWorks": "The Design Tokens Format Module is a specification from the Design Tokens Community Group (DTCG) for exchanging design tokens in JSON. It defines how a file represents named tokens, groups, types, values, and references. The group lists version 2025.10 as stable. It is a Community Group specification published outside the W3C Standards Track.",
     "relatedTerms": [
       "Design Tokens",
       "Style Dictionary",
@@ -2952,20 +2952,19 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
-    "purpose": "Abstracts raw visual values into purposeful UI roles, enabling scalable theming, dark mode mapping, and brand variation without modifying component code.",
+    "purpose": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
     "keyConcepts": [
-      "Role-based token naming",
-      "Theme context mapping (Light vs Dark)",
-      "Semantic token vs token alias",
-      "Scope hierarchy",
-      "Component-scoped tokens"
+      "How do semantic tokens work across themes?",
+      "Is a semantic token the same as an alias?",
+      "How do you name and introduce semantic tokens?"
     ],
-    "howItWorks": "Maps functional UI intent to underlying primitive palette values or literal definitions, allowing runtime theme switching to alter appearance globally while preserving design integrity.",
+    "howItWorks": "A semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.",
     "relatedTerms": [
       "Design Tokens",
       "Design Primitives",
       "Figma Variables & Modes",
-      "Component Architecture"
+      "Component Architecture",
+      "Theming"
     ],
     "seoTitle": "Semantic Tokens: Naming and Theming | Product Design Glossary",
     "sources": [
@@ -3047,7 +3046,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Semantic Tokens\n\nA semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.\n\n## How do semantic tokens work across themes?\n\nA checkout link might use `color.text.link`. In a light theme, that role might point to `color.blue.600`. In a dark theme, it might point to `color.blue.300`. The link still asks for the color assigned to link text. The theme supplies the appropriate value.\n\n| Name | What the name tells you |\n|---|---|\n| `color.blue.600` | A step in a base palette |\n| `color.text.link` | The role the color serves in the interface |\n| `button.primary.background` | A decision scoped to a specific component and variant |\n\nThese names are illustrative. The palette step number is local to this system. Document how each role should be used and verify each foreground and background pairing in the actual interface.\n\n## Is a semantic token the same as an alias?\n\n“Semantic” describes what the name means. An alias is a reference to another token. A semantic token can use an alias to reuse a palette value, or it can store a value directly. The reference is a mechanism for sharing the value.\n\n## How do you name and introduce semantic tokens?\n\n1. **Start with a repeated purpose.** Inspect where teams use a color or spacing decision. Identify the purpose those uses share.\n2. **Name the role.** Make the name useful when someone chooses a token. For example, link text and a selected background can use different roles even when they happen to share a value.\n3. **Set values per theme and test them.** Check representative components, states, and backgrounds in the contexts where people use them.\n4. **Move consumers to the shared role.** Review each use before replacing the original values. If a component needs its own change policy, document a component token for that decision.\n\nChange the narrowest token that matches the intended scope. To update link text across checkout and settings, change the link text role. To update only one component, inspect whether it already has a dedicated token or setting.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Design Primitives](/glossary/design-primitives.html)\n- [Figma Variables & Modes](/glossary/figma-variables-modes.html)\n- [Component Architecture](/glossary/component-architecture.html)\n\n## Sources\n\n- [Design Tokens, Atlassian Design System](https://atlassian.design/foundations/tokens/design-tokens/)\n- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)\n- [Design Tokens Resolver Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/resolver/)"
+    "contentMarkdown": "# Semantic Tokens\n\nA semantic token is a design token whose name describes what a value is for, such as the color of link text. Teams can reuse the same role across components and assign it different values for light and dark themes.\n\n## How do semantic tokens work across themes?\n\nA checkout link might use `color.text.link`. In a light theme, that role might point to `color.blue.600`. In a dark theme, it might point to `color.blue.300`. The link still asks for the color assigned to link text. The theme supplies the appropriate value.\n\n| Name | What the name tells you |\n|---|---|\n| `color.blue.600` | A step in a base palette |\n| `color.text.link` | The role the color serves in the interface |\n| `button.primary.background` | A decision scoped to a specific component and variant |\n\nThese names are illustrative. The palette step number is local to this system. Document how each role should be used and verify each foreground and background pairing in the actual interface.\n\n## Is a semantic token the same as an alias?\n\n“Semantic” describes what the name means. An alias is a reference to another token. A semantic token can use an alias to reuse a palette value, or it can store a value directly. The reference is a mechanism for sharing the value.\n\n## How do you name and introduce semantic tokens?\n\n1. **Start with a repeated purpose.** Inspect where teams use a color or spacing decision. Identify the purpose those uses share.\n2. **Name the role.** Make the name useful when someone chooses a token. For example, link text and a selected background can use different roles even when they happen to share a value.\n3. **Set values per theme and test them.** Check representative components, states, and backgrounds in the contexts where people use them.\n4. **Move consumers to the shared role.** Review each use before replacing the original values. If a component needs its own change policy, document a component token for that decision.\n\nChange the narrowest token that matches the intended scope. To update link text across checkout and settings, change the link text role. To update only one component, inspect whether it already has a dedicated token or setting.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Design Primitives](/glossary/design-primitives.html)\n- [Figma Variables & Modes](/glossary/figma-variables-modes.html)\n- [Component Architecture](/glossary/component-architecture.html)\n\n- [Theming](/glossary/design-system-theming.html)\n\n## Sources\n\n- [Design Tokens, Atlassian Design System](https://atlassian.design/foundations/tokens/design-tokens/)\n- [Design Tokens Format Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/format/)\n- [Design Tokens Resolver Module 2025.10, DTCG](https://www.designtokens.org/tr/2025.10/resolver/)"
   },
   {
     "id": "030",
@@ -3057,15 +3056,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
-    "purpose": "Establishes raw, unopinionated foundational values and low-level structural components upon which semantic decisions and complex patterns are assembled.",
+    "purpose": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
     "keyConcepts": [
-      "Primitive token vs semantic token",
-      "Named scale steps (e.g. space.200)",
-      "Primitive layout components (Stack, Inline)",
-      "Scope of base value changes",
-      "Foundational scales"
+      "What are primitive tokens?",
+      "What does a primitive component do?",
+      "When should you change a base value?"
     ],
-    "howItWorks": "Provides immutable, math-driven scales of color palettes, typographic steps, and spacing increments alongside atomic structural components to ensure foundational mathematical harmony.",
+    "howItWorks": "Design primitives are basic building blocks that a design system uses to compose more specific decisions or interfaces. In a token model, a primitive usually means a named base value. In a component library, it can mean a small reusable component for a basic task such as layout.",
     "relatedTerms": [
       "Design Tokens",
       "Semantic Tokens",
@@ -3380,20 +3377,23 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
-    "purpose": "Establishes clear contribution criteria, review workflows, and ownership models so shared systems evolve sustainably without fragmentation or bottlenecks.",
+    "purpose": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
     "keyConcepts": [
-      "Contribution criteria",
-      "Decision ownership",
-      "Proposal review workflow",
-      "Adoption & migration support",
-      "Lightweight governance"
+      "What decisions does governance cover?",
+      "Example of reviewing a shared dialog change",
+      "How can a small team keep governance lightweight?",
+      "Centralized and federated ownership",
+      "What should a design system RFC contain?"
     ],
-    "howItWorks": "Routes component proposals through multi-disciplinary review gates, evaluating shared need and accessibility before approving contributions into canonical libraries.",
+    "howItWorks": "Design system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.",
     "relatedTerms": [
       "DesignOps",
       "Design System",
       "Design System Versioning & SemVer",
-      "Component Architecture"
+      "Component Architecture",
+      "Design System Adoption",
+      "Design System Audit",
+      "Design Debt"
     ],
     "seoTitle": "Design System Governance | Product Design Glossary",
     "sources": [
@@ -3475,7 +3475,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Design System Governance\n\nDesign system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.\n\n## What decisions does governance cover?\n\nGive teams a clear route for asking for a change and a clear owner for deciding what happens. The GOV.UK Design System publishes a proposal process, contribution criteria, and guidance for developing components and patterns. A smaller system can use a shared issue tracker and named maintainers.\n\n| Decision | What to agree on |\n|---|---|\n| Scope | Which needs are shared across products and which can stay within one product? |\n| Evidence | What examples, user research, or compatibility checks support the proposal? |\n| Responsibility | Who proposes, reviews, maintains, and communicates the change? |\n| Adoption | Who updates guidance, writes migration steps, and supports consuming teams? |\n\n## Example of reviewing a shared dialog change\n\nA checkout team requests a wider dialog for reviewing a booking change. It shows where the current width makes it hard to compare the original and proposed fares. The system maintainers check whether other products need the same option and whether it affects focus, small screens, or longer content.\n\nIf a wider layout serves several teams, the maintainers can approve an optional variant with the existing default unchanged. Assign someone to build, document, and maintain it. A comparison layout that only checkout needs can stay in checkout and use the existing dialog behavior. Record the decision and its reason so another team can revisit it when it has new evidence.\n\n## How can a small team keep governance lightweight?\n\nAsk for a short proposal with the problem, candidate change, and affected consumers. Agree on a review owner and check the change in at least one real screen. If consumers need to change their code or designs, include a [version and migration plan](/glossary/design-system-versioning-semver.html). Close the loop by updating the documentation and telling the teams whose work is affected.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [Design System](/glossary/design-system.html)\n- [Design System Versioning & SemVer](/glossary/design-system-versioning-semver.html)\n- [Component Architecture](/glossary/component-architecture.html)\n\n## Sources\n\n- [Propose a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/)\n- [Develop a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/develop-a-component-or-pattern/)\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)"
+    "contentMarkdown": "# Design System Governance\n\nDesign system governance is how teams decide what belongs in a shared system, who can change it, and how those changes reach the products that use it. It defines who owns decisions, how contributors make proposals, what reviewers check, and who supports adoption.\n\n## What decisions does governance cover?\n\nGive teams a clear route for asking for a change and a clear owner for deciding what happens. The GOV.UK Design System publishes a proposal process, contribution criteria, and guidance for developing components and patterns. A smaller system can use a shared issue tracker and named maintainers.\n\n| Decision | What to agree on |\n|---|---|\n| Scope | Which needs are shared across products and which can stay within one product? |\n| Evidence | What examples, user research, or compatibility checks support the proposal? |\n| Responsibility | Who proposes, reviews, maintains, and communicates the change? |\n| Adoption | Who updates guidance, writes migration steps, and supports consuming teams? |\n\n## Example of reviewing a shared dialog change\n\nA checkout team requests a wider dialog for reviewing a booking change. It shows where the current width makes it hard to compare the original and proposed fares. The system maintainers check whether other products need the same option and whether it affects focus, small screens, or longer content.\n\nIf a wider layout serves several teams, the maintainers can approve an optional variant with the existing default unchanged. Assign someone to build, document, and maintain it. A comparison layout that only checkout needs can stay in checkout and use the existing dialog behavior. Record the decision and its reason so another team can revisit it when it has new evidence.\n\n## How can a small team keep governance lightweight?\n\nAsk for a short proposal with the problem, candidate change, and affected consumers. Agree on a review owner and check the change in at least one real screen. If consumers need to change their code or designs, include a [version and migration plan](/glossary/design-system-versioning-semver.html). Close the loop by updating the documentation and telling the teams whose work is affected.\n\n## Centralized and federated ownership\n\nA centralized model places shared-system decisions with a core team. In a federated model, people from product teams share defined system responsibilities. A hybrid can combine central maintenance with distributed contributions.\n\nState which decisions are shared and who resolves disagreements. Federation without explicit review and maintenance responsibilities can leave a component with several contributors but no accountable owner.\n\n## What should a design system RFC contain?\n\nA request for comments (RFC) can be a short proposal recording the problem, evidence, affected consumers, proposed change, alternatives, and compatibility implications. Set a review owner and a way to record the outcome.\n\nThe contribution model should also explain who implements, documents, supports, and eventually retires the result. Record an approved exception with its reason and review condition; do not make a new shared component merely to close a request.\n\n## Related terms\n\n- [DesignOps](/glossary/designops.html)\n- [Design System](/glossary/design-system.html)\n- [Design System Versioning & SemVer](/glossary/design-system-versioning-semver.html)\n- [Component Architecture](/glossary/component-architecture.html)\n\n- [Design System Adoption](/glossary/design-system-adoption.html)\n\n- [Design System Audit](/glossary/design-system-audit.html)\n\n- [Design Debt](/glossary/design-debt.html)\n\n## Sources\n\n- [Propose a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/propose-a-component-or-pattern/)\n- [Develop a component or pattern, GOV.UK Design System](https://design-system.service.gov.uk/community/develop-a-component-or-pattern/)\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)"
   },
   {
     "id": "034",
@@ -3588,15 +3588,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "AI & Agentic Systems",
     "maturity": "Emerging",
     "definition": "A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.",
-    "purpose": "Bridges the gap between Figma design assets and multi-platform production code through automated token extraction, component mapping, and rapid preview verification.",
+    "purpose": "A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.",
     "keyConcepts": [
-      "Figma Code Connect",
-      "design tokens pipeline",
-      "component mapping",
-      "visual preview verification",
-      "automated regression checks"
+      "What does a design-to-code workflow include?",
+      "Example: A booking-change dialog",
+      "What can the team automate?",
+      "Where does design handoff fit?"
     ],
-    "howItWorks": "Maps Figma component variants directly to production code components, compiles design tokens into platform styling artifacts, and generates interactive previews for design review.",
+    "howItWorks": "A design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.",
     "relatedTerms": [
       "Design Tokens",
       "Style Dictionary",
@@ -3612,7 +3611,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     "seoDescription": "Learn how a design-to-code workflow connects Figma components, design tokens, production code, and UI review. See what to automate and what to verify.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/design-to-code-workflow.html",
-    "contentMarkdown": "# Design-to-Code Workflow\n\nA design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.\n\n## What does a design-to-code workflow include?\n\n1. **Map designs to existing components.** Identify which production components, variants, and states the design uses. Resolve gaps with the team before building a new component.\n2. **Build platform outputs from shared tokens.** For example, transform a token source into CSS custom properties. Decide which source owns the values and where changes get reviewed.\n3. **Implement the interaction.** Assemble existing components and connect them to product data, validation, loading, and error handling.\n4. **Review a working preview.** Check the layout with realistic content and test keyboard behavior, focus, and state changes. Add automated checks for states that are easy to break.\n\n## Example: A booking-change dialog\n\nA designer uses the shared Dialog and Button in Figma. The developer finds their production counterparts, reuses the spacing and color tokens, and connects the dialog to the booking service. In the preview, the team checks a long fare description on mobile, a failed request, and where keyboard focus goes after the dialog closes.\n\n## What can the team automate?\n\nA token build can produce platform files, and screenshot comparisons can flag visual changes. With the Code Connect CLI, teams can publish usage snippets for mapped production components in Figma Dev Mode. The team still owns decisions about component behavior, real data, and whether the working interface matches the design intent.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Style Dictionary](/glossary/style-dictionary.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Vibe Coding](/glossary/vibe-coding.html)\n- [Visual Regression Testing](/glossary/visual-regression-testing.html)\n\n## Sources\n\n- [Figma Code Connect, Figma Developer Docs](https://developers.figma.com/docs/code-connect/)\n- [Use Code Snippets in Dev Mode, Figma](https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/)\n- [Configuration, Style Dictionary](https://styledictionary.com/reference/config/)",
+    "contentMarkdown": "# Design-to-Code Workflow\n\nA design-to-code workflow is the process of turning a design into a working product interface. It connects design components, tokens, and interaction specifications with production code, then checks the result in the browser or app.\n\n## What does a design-to-code workflow include?\n\n1. **Map designs to existing components.** Identify which production components, variants, and states the design uses. Resolve gaps with the team before building a new component.\n2. **Build platform outputs from shared tokens.** For example, transform a token source into CSS custom properties. Decide which source owns the values and where changes get reviewed.\n3. **Implement the interaction.** Assemble existing components and connect them to product data, validation, loading, and error handling.\n4. **Review a working preview.** Check the layout with realistic content and test keyboard behavior, focus, and state changes. Add automated checks for states that are easy to break.\n\n## Example: A booking-change dialog\n\nA designer uses the shared Dialog and Button in Figma. The developer finds their production counterparts, reuses the spacing and color tokens, and connects the dialog to the booking service. In the preview, the team checks a long fare description on mobile, a failed request, and where keyboard focus goes after the dialog closes.\n\n## What can the team automate?\n\nA token build can produce platform files, and screenshot comparisons can flag visual changes. With the Code Connect CLI, teams can publish usage snippets for mapped production components in Figma Dev Mode. The team still owns decisions about component behavior, real data, and whether the working interface matches the design intent.\n\n## Where does design handoff fit?\n\nDesign handoff communicates the decisions needed for implementation: component references, data, states, interactions, and acceptance criteria. It can continue throughout the work rather than ending with a static file.\n\nFor an AI-assisted workflow, the [Figma MCP server](/glossary/figma-mcp-server.html) can supply design context and [Figma Code Connect](/glossary/figma-code-connect.html) can identify related code. Review the resulting experience through [design QA](/glossary/design-qa.html).\n\nA [code-to-design workflow](/glossary/code-to-design-workflow.html) can bring the current implementation back into design review. Neither direction guarantees automatic synchronization.\n\n## Related terms\n\n- [Design Tokens](/glossary/design-tokens.html)\n- [Style Dictionary](/glossary/style-dictionary.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Vibe Coding](/glossary/vibe-coding.html)\n- [Visual Regression Testing](/glossary/visual-regression-testing.html)\n\n## Sources\n\n- [Figma Code Connect, Figma Developer Docs](https://developers.figma.com/docs/code-connect/)\n- [Use Code Snippets in Dev Mode, Figma](https://help.figma.com/hc/en-us/articles/15023202277399-Use-code-snippets-in-Dev-Mode/)\n- [Configuration, Style Dictionary](https://styledictionary.com/reference/config/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -3723,20 +3722,19 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
-    "purpose": "Enables native design token management, mode switching (light/dark, responsive density, multi-brand theming), and alias resolution directly within Figma design files.",
+    "purpose": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
     "keyConcepts": [
-      "Variable types (color, number, string, boolean)",
-      "Collections and Modes",
-      "Variable alias binding",
-      "Mode inheritance and overrides",
-      "DTCG JSON token import/export"
+      "How do variables, collections, and modes work?",
+      "Why is a layer still showing the wrong mode?",
+      "Can you use Figma variables as design tokens?"
     ],
-    "howItWorks": "Binds UI layer fills, strokes, dimensions, and text to variable aliases organized into collections, allowing parent frame mode toggles to cascade across nested child layers.",
+    "howItWorks": "Figma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.",
     "relatedTerms": [
       "Semantic Tokens",
       "Design Tokens",
       "Design-to-Code Workflow",
-      "Design Tokens Format Module (DTCG)"
+      "Design Tokens Format Module (DTCG)",
+      "Theming"
     ],
     "seoTitle": "Figma Variables and Modes | Product Design Glossary",
     "sources": [
@@ -3816,7 +3814,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Figma Variables & Modes\n\nFigma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.\n\n## How do variables, collections, and modes work?\n\nFigma supports color, number, string, and Boolean variables. A variable can store a value directly or reference another variable through an alias. A collection defines which modes its variables share. Each mode supplies one value per variable.\n\n| In Figma | Example |\n|---|---|\n| Palette collection | Color variables named `blue/600` and `blue/300` |\n| Semantic colors collection | Light and Dark modes |\n| Semantic variable | `color/text/link`, referencing `blue/600` in Light and `blue/300` in Dark |\n\nBind the link’s text fill to the semantic variable. In the frame’s Appearance settings, choose Light or Dark for the Semantic colors collection. The same link layer keeps its variable binding as the color changes. Check contrast against the actual background in both themes.\n\n## Why is a layer still showing the wrong mode?\n\nFor a collection, an object set to Auto looks up its parent hierarchy for an explicit mode. If a nested frame has an explicit override, its children can use that mode even when the outer frame changes. Check the layer’s binding, the collection it comes from, and the nearest mode setting. When no override applies, Figma uses the applicable default.\n\nUse separate collections for choices that need to vary independently. A color theme and a spacing density can have separate modes so you can review Dark with either Compact or Comfortable spacing.\n\n## Can you use Figma variables as design tokens?\n\nVariables can represent token decisions inside Figma. Figma documents DTCG JSON import for supported token types and JSON export of variable modes. For example, its dimension import expects pixels, and its duration import expects seconds. Cross-collection alias import uses Figma-specific extension data.\n\nTry exporting Light and Dark and importing them into a test collection. Check both values and whether the link variable still references its palette variable. If Figma cannot find the target collection, check the mapping before using the files in a [design-to-code workflow](/glossary/design-to-code-workflow.html). Agree on which source owns the values and how a change reaches the application.\n\n## Related terms\n\n- [Semantic Tokens](/glossary/semantic-tokens.html)\n- [Design Tokens](/glossary/design-tokens.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)\n\n## Sources\n\n- [Overview of variables, collections, and modes, Figma](https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)\n- [Modes for variables, Figma](https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)"
+    "contentMarkdown": "# Figma Variables & Modes\n\nFigma variables store reusable values that you can apply to supported design properties. A collection groups variables, and its modes provide different sets of values for those variables. Switching a frame’s mode changes how its bound properties resolve, so the same design can show a light or dark theme.\n\n## How do variables, collections, and modes work?\n\nFigma supports color, number, string, and Boolean variables. A variable can store a value directly or reference another variable through an alias. A collection defines which modes its variables share. Each mode supplies one value per variable.\n\n| In Figma | Example |\n|---|---|\n| Palette collection | Color variables named `blue/600` and `blue/300` |\n| Semantic colors collection | Light and Dark modes |\n| Semantic variable | `color/text/link`, referencing `blue/600` in Light and `blue/300` in Dark |\n\nBind the link’s text fill to the semantic variable. In the frame’s Appearance settings, choose Light or Dark for the Semantic colors collection. The same link layer keeps its variable binding as the color changes. Check contrast against the actual background in both themes.\n\n## Why is a layer still showing the wrong mode?\n\nFor a collection, an object set to Auto looks up its parent hierarchy for an explicit mode. If a nested frame has an explicit override, its children can use that mode even when the outer frame changes. Check the layer’s binding, the collection it comes from, and the nearest mode setting. When no override applies, Figma uses the applicable default.\n\nUse separate collections for choices that need to vary independently. A color theme and a spacing density can have separate modes so you can review Dark with either Compact or Comfortable spacing.\n\n## Can you use Figma variables as design tokens?\n\nVariables can represent token decisions inside Figma. Figma documents DTCG JSON import for supported token types and JSON export of variable modes. For example, its dimension import expects pixels, and its duration import expects seconds. Cross-collection alias import uses Figma-specific extension data.\n\nTry exporting Light and Dark and importing them into a test collection. Check both values and whether the link variable still references its palette variable. If Figma cannot find the target collection, check the mapping before using the files in a [design-to-code workflow](/glossary/design-to-code-workflow.html). Agree on which source owns the values and how a change reaches the application.\n\n## Related terms\n\n- [Semantic Tokens](/glossary/semantic-tokens.html)\n- [Design Tokens](/glossary/design-tokens.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n- [Design Tokens Format Module (DTCG)](/glossary/design-tokens-format-module-dtcg.html)\n\n- [Theming](/glossary/design-system-theming.html)\n\n## Sources\n\n- [Overview of variables, collections, and modes, Figma](https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)\n- [Modes for variables, Figma](https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)"
   },
   {
     "id": "038",
@@ -4202,28 +4200,31 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.",
-    "purpose": "Scales design impact, reduces operational friction, clarifies decision governance, and streamlines cross-functional delivery across expanding product organizations.",
+    "purpose": "DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.",
     "keyConcepts": [
-      "Design onboarding & tooling",
-      "ways of working & review cadence",
-      "governance & adoption coordination",
-      "knowledge sharing",
-      "cross-functional alignment"
+      "What does DesignOps cover?",
+      "DesignOps and design system governance",
+      "What can DesignOps automate?",
+      "How should teams govern design tools?",
+      "DesignOps vs. ResearchOps"
     ],
-    "howItWorks": "Establishes standardized design reviews, maintains centralized documentation, coordinates design system migrations across product squads, and optimizes design tooling.",
+    "howItWorks": "DesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.",
     "relatedTerms": [
       "Design System Governance",
       "Design Engineering",
       "Continuous Experimentation",
-      "Component Telemetry"
+      "Component Telemetry",
+      "Design System Migration",
+      "Design Debt"
     ],
     "seoTitle": "What Is DesignOps? Design Operations in Practice | Product Design Glossary",
     "sources": [
-      "DesignOps 101, Nielsen Norman Group (https://www.nngroup.com/articles/design-operations-101/)"
+      "DesignOps 101, Nielsen Norman Group (https://www.nngroup.com/articles/design-operations-101/)",
+      "About ResearchOps, ResearchOps Community (https://researchops.community/about/)"
     ],
     "seoDescription": "Learn how DesignOps improves the way design teams work, with examples of onboarding, design reviews, and coordinating a design system migration.",
     "canonicalUrl": "https://lexkonovalov.com/glossary/designops.html",
-    "contentMarkdown": "# DesignOps\n\nDesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.\n\n## What does DesignOps cover?\n\n- **Onboarding and access.** Help new designers find the current component library, research, and people who can answer questions.\n- **Ways of working.** Set up design reviews and make it clear who gives feedback, who makes decisions, and where the team records them.\n- **Coordination and adoption.** Maintain shared documentation, communicate changes, and help teams plan migrations that affect several products.\n\nA small team might start by assigning an owner to the design review and keeping decisions in one shared place. Larger organizations may have dedicated DesignOps staff.\n\n## DesignOps and design system governance\n\n[Design system governance](/glossary/design-system-governance.html) defines who can approve a change, how teams contribute, and how exceptions are handled. DesignOps helps affected teams put those decisions into practice through communication, documentation, and coordination. One person can be responsible for both.\n\nFor example, after maintainers approve a change to a shared booking-change dialog, DesignOps can help identify affected teams, assign migration owners, and make the new guidance easy to find.\n\n## Related terms\n\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Component Telemetry](/glossary/component-telemetry.html)\n\n## Sources\n\n- [DesignOps 101, Nielsen Norman Group](https://www.nngroup.com/articles/design-operations-101/)",
+    "contentMarkdown": "# DesignOps\n\nDesignOps, short for design operations, is the practice of improving how design teams work together and deliver work. It covers the processes, tools, and support teams use to onboard people, collaborate, review work, and share what they learn.\n\n## What does DesignOps cover?\n\n- **Onboarding and access.** Help new designers find the current component library, research, and people who can answer questions.\n- **Ways of working.** Set up design reviews and make it clear who gives feedback, who makes decisions, and where the team records them.\n- **Coordination and adoption.** Maintain shared documentation, communicate changes, and help teams plan migrations that affect several products.\n\nA small team might start by assigning an owner to the design review and keeping decisions in one shared place. Larger organizations may have dedicated DesignOps staff.\n\n## DesignOps and design system governance\n\n[Design system governance](/glossary/design-system-governance.html) defines who can approve a change, how teams contribute, and how exceptions are handled. DesignOps helps affected teams put those decisions into practice through communication, documentation, and coordination. One person can be responsible for both.\n\nFor example, after maintainers approve a change to a shared booking-change dialog, DesignOps can help identify affected teams, assign migration owners, and make the new guidance easy to find.\n\n## What can DesignOps automate?\n\nRepeatable work can include checking documentation links, preparing a release summary, or routing a contribution request. Define the inputs, expected output, and exception owner before automating the process.\n\nAn AI-generated summary needs a route back to the actual changes. Check the component version, affected consumers, and migration guidance before sending it to teams. Track the effort to review and correct the output as well as the time to generate it.\n\n## How should teams govern design tools?\n\nGive shared libraries, integrations, and automation a named owner. Record access needs, supported workflows, data handling, and how a tool or plugin is updated or retired. Test a new integration on a bounded task before making other teams depend on it.\n\nUse [design system metrics](/glossary/design-system-metrics.html) to investigate a specific operating problem rather than merely counting tool activity.\n\n## DesignOps vs. ResearchOps\n\n[ResearchOps](/glossary/researchops.html) focuses on supporting research through recruitment, consent, data, tools, and knowledge management. DesignOps supports the broader operation of design work. The responsibilities can overlap, particularly in a small team.\n\nKeep the review purpose clear: a [design critique](/glossary/design-critique.html) examines a proposal, while [design QA](/glossary/design-qa.html) checks an implemented experience. Neither should be treated as completed user research.\n\n## Related terms\n\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Design Engineering](/glossary/design-engineering.html)\n- [Continuous Experimentation](/glossary/continuous-experimentation.html)\n- [Component Telemetry](/glossary/component-telemetry.html)\n\n- [Design System Migration](/glossary/design-system-migration.html)\n\n- [Design Debt](/glossary/design-debt.html)\n\n## Sources\n\n- [DesignOps 101, Nielsen Norman Group](https://www.nngroup.com/articles/design-operations-101/)\n- [About ResearchOps, ResearchOps Community](https://researchops.community/about/)",
     "structuredDataGraph": [
       {
         "@type": "WebPage",
@@ -4242,7 +4243,8 @@ export const glossaryTerms: GlossaryTerm[] = [
           "@id": "https://lexkonovalov.com/glossary/designops.html#breadcrumbs"
         },
         "citation": [
-          "https://www.nngroup.com/articles/design-operations-101/"
+          "https://www.nngroup.com/articles/design-operations-101/",
+          "https://researchops.community/about/"
         ]
       },
       {
@@ -4303,15 +4305,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
-    "purpose": "Automates the deterministic translation of platform-agnostic design tokens into native iOS, Android, web, and design tool artifacts from a single source of truth.",
+    "purpose": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
     "keyConcepts": [
-      "Token compilation build",
-      "Transforms and transform groups",
-      "Formats (css/variables, json, etc.)",
-      "DTCG input support",
-      "Platform targets (web, ios, android)"
+      "How does a Style Dictionary build work?",
+      "Example of building CSS variables",
+      "How do themes and aliases affect the build?"
     ],
-    "howItWorks": "Parses hierarchical token definitions, resolves alias references, executes platform-specific transforms, and formats code files for automated downstream consumption.",
+    "howItWorks": "Style Dictionary is an open-source build tool that transforms shared design tokens into files for applications to consume. A build can produce CSS custom properties for the web and different outputs for other platforms from the same source definitions.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
@@ -4412,15 +4412,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
-    "purpose": "Resolves nested token alias references, contextual theme overrides, and mode inheritance rules deterministically according to DTCG resolution order specifications.",
+    "purpose": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
     "keyConcepts": [
-      "Resolution order precedence",
-      "Context modifiers (theme, density, brand)",
-      "Winning reference selection",
-      "Circular reference prevention",
-      "DTCG Resolver Module 2025.10"
+      "What does a resolver do?",
+      "Example of resolving link text",
+      "What should you test?"
     ],
-    "howItWorks": "Applies cascading token sets in a declared sequence where subsequent modifiers override preceding values, traversing reference graphs until concrete primitives are resolved.",
+    "howItWorks": "A token resolver is software that determines which values apply to design tokens for a given context, such as a light or dark theme. It can combine token sources in a defined order and follow references to determine the values a consuming tool should use.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
@@ -4626,15 +4624,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "UX & Product Architecture",
     "maturity": "Established",
     "definition": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
-    "purpose": "Encapsulates multi-property design decisions (such as shadows, typography, and borders) into a single cohesive, type-safe token unit.",
+    "purpose": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
     "keyConcepts": [
-      "Composite token vs token group",
-      "Multi-property $value object",
-      "Shadow composite structure (color, offsets, blur, spread)",
-      "Composite type validation",
-      "Cross-platform output compilation"
+      "How is a composite token different from a group?",
+      "DTCG example of a shadow token",
+      "When should you use a composite token?"
     ],
-    "howItWorks": "Groups tightly-coupled properties into a single semantic token object, ensuring dependent values resolve simultaneously when consumed by design components or code.",
+    "howItWorks": "A composite design token represents one design decision with a value made up of several related properties. For example, a shadow can combine a color, two offsets, a blur radius, and a spread. A component can use the named shadow as one decision.",
     "relatedTerms": [
       "Design Tokens",
       "Design Tokens Format Module (DTCG)",
@@ -4966,15 +4962,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     "secondaryCategory": "Product Strategy & Growth",
     "maturity": "Established",
     "definition": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
-    "purpose": "Governs package releases and migration paths across consuming codebases, communicating backward-compatible vs breaking structural changes transparently.",
+    "purpose": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
     "keyConcepts": [
-      "Semantic Versioning (MAJOR.MINOR.PATCH)",
-      "Public API compatibility contract",
-      "Breaking change deprecation window",
-      "Design file and code release alignment",
-      "Migration guides & release notes"
+      "What counts as the public API?",
+      "Major, minor, and patch examples",
+      "How do you plan a breaking change?",
+      "Component lifecycle and release notes"
     ],
-    "howItWorks": "Increments PATCH for backward-compatible bug fixes, MINOR for new backward-compatible capabilities, and MAJOR for breaking public contract modifications.",
+    "howItWorks": "Design system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.",
     "relatedTerms": [
       "Design System Governance",
       "Component Architecture",
@@ -5062,7 +5057,7 @@ export const glossaryTerms: GlossaryTerm[] = [
         ]
       }
     ],
-    "contentMarkdown": "# Design System Versioning & SemVer\n\nDesign system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.\n\n## What counts as the public API?\n\nDocument which component exports, props, supported behaviors, and token names consumers can rely on. This is the compatibility contract for the package. Decide whether particular visual behavior is part of that contract and describe other visible changes in the release notes.\n\nDesign files and code can have different release schedules. Map a design library update to its matching code release when their changes are meant to be used together, and tell teams where to check compatibility.\n\n## Major, minor, and patch examples\n\nFor a stable package at `2.4.1`, treat each row as a separate release example.\n\n| Change | Next version | Why |\n|---|---|---|\n| Fix a dialog bug so focus returns to the trigger as documented | `2.4.2` | Backward-compatible bug fix |\n| Add an optional wide dialog variant and keep the current default | `2.5.0` | Backward-compatible addition |\n| Remove a documented dialog prop | `3.0.0` | Breaking change to the public API |\n\nA token color update does not automatically determine the version bump. Check the compatibility contract first. A change that breaks a declared guarantee needs a major bump even if it only changes a value. Communicate visible changes in any release. For example, removing a documented token name is different from correcting its value to match the documented design.\n\n## How do you plan a breaking change?\n\nIf you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.\n\nPublish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.\n\n## Related terms\n\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [DesignOps](/glossary/designops.html)\n\n## Sources\n\n- [Semantic Versioning 2.0.0](https://semver.org/)"
+    "contentMarkdown": "# Design System Versioning & SemVer\n\nDesign system versioning helps teams identify releases and understand what changes when they upgrade a shared system. Semantic Versioning (SemVer) is one scheme for versioning software packages based on changes to a declared public API.\n\n## What counts as the public API?\n\nDocument which component exports, props, supported behaviors, and token names consumers can rely on. This is the compatibility contract for the package. Decide whether particular visual behavior is part of that contract and describe other visible changes in the release notes.\n\nDesign files and code can have different release schedules. Map a design library update to its matching code release when their changes are meant to be used together, and tell teams where to check compatibility.\n\n## Major, minor, and patch examples\n\nFor a stable package at `2.4.1`, treat each row as a separate release example.\n\n| Change | Next version | Why |\n|---|---|---|\n| Fix a dialog bug so focus returns to the trigger as documented | `2.4.2` | Backward-compatible bug fix |\n| Add an optional wide dialog variant and keep the current default | `2.5.0` | Backward-compatible addition |\n| Remove a documented dialog prop | `3.0.0` | Breaking change to the public API |\n\nA token color update does not automatically determine the version bump. Check the compatibility contract first. A change that breaks a declared guarantee needs a major bump even if it only changes a value. Communicate visible changes in any release. For example, removing a documented token name is different from correcting its value to match the documented design.\n\n## How do you plan a breaking change?\n\nIf you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.\n\nPublish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.\n\n## Component lifecycle and release notes\n\nTeams can label components experimental, supported, deprecated, or retired, with explicit meanings for each status. These lifecycle labels describe support expectations; they are not a replacement for the package's compatibility policy.\n\nRelease notes should explain the user or consumer effect, the required action, and where to find a [migration plan](/glossary/design-system-migration.html). For example: “The next major release removes the old dialog width prop. Use the size option shown in the migration example, then check narrow layouts and long content.”\n\nKeep planned removal conditions distinct from the date an old component actually disappears. Record who can help consumers resolve a blocker.\n\n## Related terms\n\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [DesignOps](/glossary/designops.html)\n\n## Sources\n\n- [Semantic Versioning 2.0.0](https://semver.org/)"
   },
   {
     "id": "051",
@@ -11689,6 +11684,1026 @@ export const glossaryTerms: GlossaryTerm[] = [
             "position": 3,
             "name": "ResearchOps",
             "item": "https://lexkonovalov.com/glossary/researchops.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "name": "Figma Code Connect",
+    "slug": "figma-code-connect",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.",
+    "purpose": "Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.",
+    "keyConcepts": [
+      "What does Code Connect add?",
+      "Code Connect UI vs. CLI",
+      "How does it relate to the Figma MCP server?",
+      "Example: a booking action button",
+      "What should teams maintain?"
+    ],
+    "howItWorks": "Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.",
+    "relatedTerms": [
+      "Figma MCP Server",
+      "Design-to-Code Workflow",
+      "Component Architecture",
+      "Design System Documentation"
+    ],
+    "seoTitle": "Figma Code Connect Explained | Product Design Glossary",
+    "seoDescription": "Learn how Figma Code Connect maps design components to code, how it supports MCP context, and what teams still need to document and verify.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/figma-code-connect.html",
+    "sources": [
+      "Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/)",
+      "Getting started with Code Connect CLI, Figma (https://developers.figma.com/docs/code-connect/quickstart-guide/)"
+    ],
+    "contentMarkdown": "# Figma Code Connect\n\nFigma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.\n\n## What does Code Connect add?\n\nA design component and a code component can have different names, property values, and composition rules. A connection records how the two relate, rather than asking someone to infer the implementation from appearance.\n\nFor example, a Figma button might have a Size value of Large, while the code API accepts `size=\"large\"`. Mapping that relationship makes the intended implementation easier to retrieve.\n\nA connection is a reference to implementation knowledge. It does not prove that every screen using the component behaves correctly.\n\n## Code Connect UI vs. CLI\n\nFigma provides a UI for connecting design components to repository implementations and a CLI for publishing connections and code examples. The CLI's recommended template approach lets teams control the snippets and property mappings they expose.\n\nThe interfaces have different editing and configuration workflows. Check Figma's current comparison and access requirements before choosing one. Avoid assuming that every connection method produces the same Dev Mode snippet experience.\n\n## How does it relate to the Figma MCP server?\n\nThe [Figma MCP server](/glossary/figma-mcp-server.html) supplies design context to a connected agent. Code Connect can enrich that context with references to the actual components in the codebase.\n\nThey solve related problems: MCP provides an interface for retrieving and using context; Code Connect establishes particular design-to-code mappings. Neither replaces the component's usage guidance or the application's business rules.\n\n## Example: a booking action button\n\nSuppose a team maps its Figma BookingButton to a shared code component. The mapping identifies the import and supported size and emphasis options. A working example shows a pending state.\n\nThe implementation task still needs to specify when a booking request starts, how repeat submission is handled, and what happens after a failure. These decisions belong in the product flow and relevant documentation.\n\nReview the generated use of the component against its real API, then test the surrounding interaction.\n\n## What should teams maintain?\n\nUpdate mappings when component identities, imports, or supported properties change. Check representative design instances against the current released implementation. Give unresolved mappings a visible owner instead of treating them as successful connections.\n\nKeep version and access details in the project's setup documentation. Treat the mapping as a maintained connection to implementation, and check the resulting behavior in the product.\n\n## Related terms\n\n- [Figma MCP Server](/glossary/figma-mcp-server.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System Documentation](/glossary/design-system-documentation.html)\n\n## Sources\n\n- [Code Connect introduction, Figma](https://developers.figma.com/docs/code-connect/)\n- [Getting started with Code Connect CLI, Figma](https://developers.figma.com/docs/code-connect/quickstart-guide/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/figma-code-connect.html",
+        "name": "Figma Code Connect Explained | Product Design Glossary",
+        "description": "Learn how Figma Code Connect maps design components to code, how it supports MCP context, and what teams still need to document and verify.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.figma.com/docs/code-connect/",
+          "https://developers.figma.com/docs/code-connect/quickstart-guide/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#term",
+        "name": "Figma Code Connect",
+        "termCode": "figma-code-connect",
+        "description": "Figma Code Connect links components in a Figma design library to their implementations in a codebase. Those connections help developers and AI agents find the real code associated with a design component.",
+        "url": "https://lexkonovalov.com/glossary/figma-code-connect.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/figma-code-connect.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Figma Code Connect",
+            "item": "https://lexkonovalov.com/glossary/figma-code-connect.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "name": "Figma MCP Server",
+    "slug": "figma-mcp-server",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.",
+    "purpose": "The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.",
+    "keyConcepts": [
+      "What can the Figma MCP server provide?",
+      "Example: implementing a reservation card",
+      "Figma MCP vs. Code Connect vs. a design system MCP",
+      "What context improves the result?"
+    ],
+    "howItWorks": "The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.",
+    "relatedTerms": [
+      "Model Context Protocol",
+      "Figma Code Connect",
+      "Design Harness",
+      "Design-to-Code Workflow",
+      "Code-to-Design Workflow"
+    ],
+    "seoTitle": "Figma MCP Server Explained | Product Design Glossary",
+    "seoDescription": "Understand the Figma MCP server, its role in AI design workflows, and how it differs from Code Connect and other design system MCP integrations.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/figma-mcp-server.html",
+    "sources": [
+      "Figma MCP server introduction (https://developers.figma.com/docs/figma-mcp-server/)",
+      "Code Connect introduction, Figma (https://developers.figma.com/docs/code-connect/)"
+    ],
+    "contentMarkdown": "# Figma MCP Server\n\nThe Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.\n\n## What can the Figma MCP server provide?\n\nFigma's documented capabilities include retrieving component, variable, and layout context; using design-to-code mappings; and working with supported resources from design files. Some remote-server workflows also support writing to the canvas or bringing a browser interface into editable Figma layers.\n\nAvailability depends on the connection, client, permissions, and feature. The official documentation distinguishes remote and desktop servers. Follow its current setup and access guidance rather than assuming the two expose identical capabilities.\n\n## Example: implementing a reservation card\n\nA designer gives an agent the URL of a specific Figma selection and identifies the repository to use. The agent retrieves design context and checks for connected code components.\n\nBefore implementation, the task specifies the real data fields, loading state, and behavior for a canceled reservation. Afterward, the team reviews long names, missing values, keyboard interaction, and layout at a narrow width.\n\nThe Figma selection helps describe the intended interface. It does not supply every business rule or demonstrate that the generated implementation works.\n\n## Figma MCP vs. Code Connect vs. a design system MCP\n\n| Term | Main role |\n|---|---|\n| Model Context Protocol | A protocol through which a client interacts with tools and context |\n| Figma MCP server | A Figma-specific integration exposing supported tools |\n| Figma Code Connect | Mappings between design components and code implementations |\n| Design system MCP | A descriptive label for an integration that exposes a system's components or guidance |\n\nThere is no single mandatory “design system MCP” product or content format. A [Storybook](/glossary/storybook.html) integration, for example, exposes different implementation context from a Figma integration.\n\n## What context improves the result?\n\nGive the agent a specific selection, the intended task, repository conventions, and references to existing components. State what it may change and the checks the result must pass. An instruction to reuse a component is useful only if the agent can find its supported API.\n\n[Code Connect](/glossary/figma-code-connect.html) can make the mapping to actual code more explicit. Human review and appropriate tests still determine whether the output meets the requirements.\n\nUse the official setup documentation for connection details. Choose the connection supported by your client, then confirm which tools it exposes before planning the workflow.\n\n## Related terms\n\n- [Model Context Protocol](/glossary/model-context-protocol-mcp.html)\n- [Figma Code Connect](/glossary/figma-code-connect.html)\n- [Design Harness](/glossary/design-harness.html)\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n\n- [Code-to-Design Workflow](/glossary/code-to-design-workflow.html)\n\n## Sources\n\n- [Figma MCP server introduction](https://developers.figma.com/docs/figma-mcp-server/)\n- [Code Connect introduction, Figma](https://developers.figma.com/docs/code-connect/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/figma-mcp-server.html",
+        "name": "Figma MCP Server Explained | Product Design Glossary",
+        "description": "Understand the Figma MCP server, its role in AI design workflows, and how it differs from Code Connect and other design system MCP integrations.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.figma.com/docs/figma-mcp-server/",
+          "https://developers.figma.com/docs/code-connect/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#term",
+        "name": "Figma MCP Server",
+        "termCode": "figma-mcp-server",
+        "description": "The Figma MCP server connects compatible AI tools to Figma through the Model Context Protocol. It provides tools for accessing design context and, in supported workflows, creating or modifying native Figma content.",
+        "url": "https://lexkonovalov.com/glossary/figma-mcp-server.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/figma-mcp-server.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Figma MCP Server",
+            "item": "https://lexkonovalov.com/glossary/figma-mcp-server.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "name": "Code-to-Design Workflow",
+    "slug": "code-to-design-workflow",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "AI & Agentic Systems",
+    "maturity": "Established",
+    "definition": "A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.",
+    "purpose": "A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.",
+    "keyConcepts": [
+      "When is code-to-design useful?",
+      "Example: reviewing a quote-request flow",
+      "Does capture preserve the original components?",
+      "Code-to-design vs. design-to-code"
+    ],
+    "howItWorks": "A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.",
+    "relatedTerms": [
+      "Design-to-Code Workflow",
+      "Figma MCP Server",
+      "Figma Code Connect",
+      "Design QA"
+    ],
+    "seoTitle": "Code-to-Design Workflow Explained | Product Design Glossary",
+    "seoDescription": "Understand code-to-design workflows, how rendered interfaces become editable design references, and why capture does not guarantee automatic synchronization.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/code-to-design-workflow.html",
+    "sources": [
+      "Code to canvas, Figma (https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/)",
+      "Figma MCP server introduction (https://developers.figma.com/docs/figma-mcp-server/)"
+    ],
+    "contentMarkdown": "# Code-to-Design Workflow\n\nA code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.\n\n## When is code-to-design useful?\n\nA product may have changed in code while design files remain behind. Capturing the current interface can help a team compare states, discuss a flow, or explore a revision using the implementation as a reference.\n\nIt can also help when an interactive prototype was built directly in code. The team can review its visible states together rather than treating an earlier design file as an exact record of the latest interface.\n\n## Example: reviewing a quote-request flow\n\nSuppose an AI-assisted prototype includes an initial form, validation errors, a loading state, and confirmation. The designer captures each important state and arranges them together for review.\n\nThe review identifies an unclear error message and a missing recovery route. The team records the changes, implements them in code, and checks the running flow again.\n\nThe captured screens support discussion. They do not replace testing the interaction, data handling, or accessibility of the working page.\n\n## Does capture preserve the original components?\n\nNot necessarily. A capture can reproduce visible layers without preserving the code's component boundaries, design-library instances, or business logic.\n\nFigma's documented code-to-canvas workflow uses a supported client and the remote MCP server to capture live browser UI into editable Figma layers. The guide distinguishes capture from creating content with existing library components.\n\nCheck what a particular method preserves. Editable text or an associated variable does not establish a complete connection to the original component or source code.\n\n## Code-to-design vs. design-to-code\n\n[Design-to-code](/glossary/design-to-code-workflow.html) starts with a design representation and creates or updates implementation. Code-to-design starts with implementation and brings information back into design work.\n\nA round trip may include both. It does not imply continuous, lossless, bidirectional synchronization. Teams still need to identify the authoritative implementation, the reviewed state, and how decisions become changes.\n\nCapture representative states with safe test data, note the implementation version, and keep a route back to the running interface. A static visual reference is useful when its scope and age are clear.\n\n## Related terms\n\n- [Design-to-Code Workflow](/glossary/design-to-code-workflow.html)\n- [Figma MCP Server](/glossary/figma-mcp-server.html)\n- [Figma Code Connect](/glossary/figma-code-connect.html)\n- [Design QA](/glossary/design-qa.html)\n\n## Sources\n\n- [Code to canvas, Figma](https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/)\n- [Figma MCP server introduction](https://developers.figma.com/docs/figma-mcp-server/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/code-to-design-workflow.html",
+        "name": "Code-to-Design Workflow Explained | Product Design Glossary",
+        "description": "Understand code-to-design workflows, how rendered interfaces become editable design references, and why capture does not guarantee automatic synchronization.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/",
+          "https://developers.figma.com/docs/figma-mcp-server/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#term",
+        "name": "Code-to-Design Workflow",
+        "termCode": "code-to-design-workflow",
+        "description": "A code-to-design workflow brings an implemented interface into a design environment for inspection, discussion, or further exploration. It can capture rendered screens as editable design layers or connect code-based components to design work.",
+        "url": "https://lexkonovalov.com/glossary/code-to-design-workflow.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/code-to-design-workflow.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Code-to-Design Workflow",
+            "item": "https://lexkonovalov.com/glossary/code-to-design-workflow.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "name": "Design System Adoption",
+    "slug": "design-system-adoption",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.",
+    "purpose": "Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.",
+    "keyConcepts": [
+      "What counts as adoption?",
+      "Example: adoption across eight products",
+      "How do you improve adoption?",
+      "Adoption vs. design system value"
+    ],
+    "howItWorks": "Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.",
+    "relatedTerms": [
+      "Design System Metrics",
+      "Component Telemetry",
+      "Design System Governance",
+      "Design System Migration"
+    ],
+    "seoTitle": "Design System Adoption Explained | Product Design Glossary",
+    "seoDescription": "Learn what design system adoption means, how to measure meaningful use, and how to identify barriers beyond installing a package or enabling a library.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-adoption.html",
+    "sources": [
+      "USWDS maturity model (https://designsystem.digital.gov/maturity-model/)",
+      "Community, GOV.UK Design System (https://design-system.service.gov.uk/community/)"
+    ],
+    "contentMarkdown": "# Design System Adoption\n\nDesign system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.\n\n## What counts as adoption?\n\nDefine the behavior you want to understand before counting it.\n\n| Signal | What it can establish |\n|---|---|\n| A package is installed | A project has a dependency |\n| A component is imported | Code references that component |\n| A component appears in a flow | The implementation is used in that context |\n| A team updates and contributes | There is continuing participation |\n\nThese signals answer different questions. None alone proves that the resulting experience is usable or that the system meets the team's needs.\n\n## Example: adoption across eight products\n\nSuppose five of eight eligible products use the current shared form controls. Product-level adoption for that defined scope is 5 ÷ 8, or 62.5%.\n\nThat does not mean 62.5% of all fields use those controls. Component coverage needs a different denominator, such as the number of eligible field instances in inspected flows.\n\nRecord the eligibility rule, version, measurement method, and date. Treat a pilot using one component differently from a product that has migrated its main workflows.\n\n## How do you improve adoption?\n\nStart with a recurring need the system can meet. Work with a consuming team to integrate the relevant component into a real task. Observe where the API, guidance, access, or migration process creates friction.\n\nUseful responses may include a working example, a clearer contribution route, compatibility support, or a missing component state. Avoid treating every exception as resistance: an unsupported need may justify an extension or a different solution.\n\nUSWDS provides an example of incremental adoption through principles, guidance, and code. A team does not have to replace every interface at once to begin using shared practices.\n\n## Adoption vs. design system value\n\nAdoption describes use. Value concerns what that use helps people and teams achieve.\n\nPair usage signals with outcomes such as fewer repeated implementation problems, easier maintenance, or better task performance. Record the baseline and other changes that might affect the result. More system usage is not automatically a better user experience.\n\nGive teams a way to report gaps and receive updates. Sustainable adoption depends on a maintained relationship between system owners and product teams.\n\n## Related terms\n\n- [Design System Metrics](/glossary/design-system-metrics.html)\n- [Component Telemetry](/glossary/component-telemetry.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n- [Design System Migration](/glossary/design-system-migration.html)\n\n## Sources\n\n- [USWDS maturity model](https://designsystem.digital.gov/maturity-model/)\n- [Community, GOV.UK Design System](https://design-system.service.gov.uk/community/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-adoption.html",
+        "name": "Design System Adoption Explained | Product Design Glossary",
+        "description": "Learn what design system adoption means, how to measure meaningful use, and how to identify barriers beyond installing a package or enabling a library.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#breadcrumbs"
+        },
+        "citation": [
+          "https://designsystem.digital.gov/maturity-model/",
+          "https://design-system.service.gov.uk/community/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#term",
+        "name": "Design System Adoption",
+        "termCode": "design-system-adoption",
+        "description": "Design system adoption is the extent to which teams use and maintain a design system's shared components, guidance, and practices in their products. Adoption includes the ongoing work of integrating updates and using the system appropriately.",
+        "url": "https://lexkonovalov.com/glossary/design-system-adoption.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-adoption.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design System Adoption",
+            "item": "https://lexkonovalov.com/glossary/design-system-adoption.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "name": "Design System Audit",
+    "slug": "design-system-audit",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.",
+    "purpose": "A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.",
+    "keyConcepts": [
+      "What should a design system audit cover?",
+      "Example: three implementations of a date field",
+      "How do you turn findings into action?",
+      "Design system audit vs. accessibility audit"
+    ],
+    "howItWorks": "A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.",
+    "relatedTerms": [
+      "Design System Adoption",
+      "Design System Metrics",
+      "Design Debt",
+      "Web Accessibility Audit"
+    ],
+    "seoTitle": "Design System Audit Checklist | Product Design Glossary",
+    "seoDescription": "Learn how to audit design assets, code, tokens, documentation, and real product usage, then turn discrepancies into a focused design system backlog.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-audit.html",
+    "sources": [
+      "Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)",
+      "USWDS maturity model (https://designsystem.digital.gov/maturity-model/)",
+      "Evaluating Web Accessibility, W3C WAI (https://www.w3.org/WAI/test-evaluate/)"
+    ],
+    "contentMarkdown": "# Design System Audit\n\nA design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.\n\n## What should a design system audit cover?\n\nSet the scope before gathering findings. Record the products, libraries, packages, versions, flows, and dates included.\n\n| Area | Questions to investigate |\n|---|---|\n| Design assets | Are components current, findable, and clearly named? |\n| Code | Which implementations and versions are actually used? |\n| Tokens | Are roles consistent, and where are values overridden? |\n| Documentation | Do examples match supported APIs and behavior? |\n| Product experience | Do shared parts work together in real tasks? |\n| Ownership | Can teams resolve a gap or request a change? |\n\nA visual inventory is a useful starting point. It cannot establish whether the code API, keyboard behavior, or maintenance process is correct.\n\n## Example: three implementations of a date field\n\nSuppose an audit finds three date fields with similar appearance. One uses the current shared component, one uses an old version, and one is a local implementation.\n\nCheck why each exists. The local field may support a genuine requirement the shared component lacks. The old version may be blocked by a compatibility issue.\n\nRecord the evidence, affected tasks, likely impact, owner, and proposed next step. “Replace everything with the newest field” is premature until the team understands those differences.\n\n## How do you turn findings into action?\n\nGroup findings by cause, such as an unclear API, a missing interaction state, or an outdated migration guide. Separate a correction to one product from a change to the shared system.\n\nPrioritize by user impact, repetition, dependencies, and effort. Assign a concrete outcome: fix a focus problem, document an exception, consolidate a duplicate, or retire an unsupported asset.\n\nKeep a record of what was inspected. An audit covering two flows should not be reported as a complete organization-wide assessment.\n\n## Design system audit vs. accessibility audit\n\nAn audit can find accessibility problems, but a design system inventory is not a WCAG conformance evaluation. That requires a defined accessibility scope and appropriate evaluation methods.\n\nLikewise, passing component checks does not establish accessibility for every consuming page. Use a [web accessibility audit](/glossary/web-accessibility-audit.html) and task testing where the question concerns complete experiences.\n\nRepeat the relevant checks after remediation. A backlog entry marked complete is not evidence that the original discrepancy has disappeared.\n\n## Related terms\n\n- [Design System Adoption](/glossary/design-system-adoption.html)\n- [Design System Metrics](/glossary/design-system-metrics.html)\n- [Design Debt](/glossary/design-debt.html)\n- [Web Accessibility Audit](/glossary/web-accessibility-audit.html)\n\n## Sources\n\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)\n- [USWDS maturity model](https://designsystem.digital.gov/maturity-model/)\n- [Evaluating Web Accessibility, W3C WAI](https://www.w3.org/WAI/test-evaluate/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-audit.html",
+        "name": "Design System Audit Checklist | Product Design Glossary",
+        "description": "Learn how to audit design assets, code, tokens, documentation, and real product usage, then turn discrepancies into a focused design system backlog.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#breadcrumbs"
+        },
+        "citation": [
+          "https://design-system.service.gov.uk/community/contribution-criteria/",
+          "https://designsystem.digital.gov/maturity-model/",
+          "https://www.w3.org/WAI/test-evaluate/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#term",
+        "name": "Design System Audit",
+        "termCode": "design-system-audit",
+        "description": "A design system audit is a structured review of a system's assets, implementation, guidance, and use in products. It identifies gaps and inconsistencies so teams can decide what to fix, consolidate, document, or retire.",
+        "url": "https://lexkonovalov.com/glossary/design-system-audit.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-audit.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design System Audit",
+            "item": "https://lexkonovalov.com/glossary/design-system-audit.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "name": "Design System Documentation",
+    "slug": "design-system-documentation",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.",
+    "purpose": "Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.",
+    "keyConcepts": [
+      "What should design system documentation include?",
+      "Example: documenting an address field",
+      "Documentation vs. a component catalog",
+      "How do you keep documentation useful?"
+    ],
+    "howItWorks": "Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.",
+    "relatedTerms": [
+      "Design System",
+      "Component Architecture",
+      "Storybook",
+      "Design System Governance"
+    ],
+    "seoTitle": "Design System Documentation | Product Design Glossary",
+    "seoDescription": "Learn what design system documentation should include, from component behavior and accessibility to working examples, ownership, and updates.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-documentation.html",
+    "sources": [
+      "Button guidance, GOV.UK Design System (https://design-system.service.gov.uk/components/button/)",
+      "Autodocs, Storybook (https://storybook.js.org/docs/writing-docs/autodocs)"
+    ],
+    "contentMarkdown": "# Design System Documentation\n\nDesign system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.\n\n## What should design system documentation include?\n\nOrganize guidance around questions people need to answer while working.\n\n| Question | Useful documentation |\n|---|---|\n| Should I use this component? | Purpose, suitable scenarios, and alternatives |\n| How does it behave? | States, keyboard interaction, validation, and responsive behavior |\n| How do I implement it? | Supported API, imports, token references, and working examples |\n| What can change? | Ownership, release status, compatibility, and migration guidance |\n\nA screenshot shows appearance. A working example can expose behavior. Written guidance explains the conditions and decisions that neither makes obvious.\n\n## Example: documenting an address field\n\nSuppose a shared address field supports autocomplete and manual entry. Document what happens when no suggestion matches, whether users can edit the returned address, and how validation errors appear.\n\nProvide an example with a long address, an unavailable lookup service, and a keyboard-only interaction. Specify which component version the example uses. The application still owns delivery rules and whether an address is accepted.\n\nThis gives a product team enough information to choose and integrate the field without copying a screenshot and inventing the missing behavior.\n\n## Documentation vs. a component catalog\n\nA [component library](/glossary/component-libraries.html) provides reusable implementations. Its catalog shows the available parts. Documentation also explains when those parts are appropriate and how to combine them into a task.\n\n[Storybook](/glossary/storybook.html) can present rendered component states and implementation details. Broader guidance may live beside it or elsewhere, provided the links and ownership stay clear. A generated list of properties does not explain the product decisions behind those properties.\n\n## How do you keep documentation useful?\n\nStart with a frequent task and its most consequential mistakes. Link the guidance from the places where people select or implement the component. Ask a teammate to complete the task using only that guidance, and record where they need help.\n\nUpdate examples when the component changes. Assign an owner who can correct discrepancies between the guidance, design assets, and released code. Archive superseded instructions with a visible route to the current version.\n\nFor AI-assisted implementation, expose the same supported APIs and examples in a form the agent can retrieve. Verify its output against the implementation: machine-readable documentation can still be incomplete or outdated.\n\n## Related terms\n\n- [Design System](/glossary/design-system.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Storybook](/glossary/storybook.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n## Sources\n\n- [Button guidance, GOV.UK Design System](https://design-system.service.gov.uk/components/button/)\n- [Autodocs, Storybook](https://storybook.js.org/docs/writing-docs/autodocs)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-documentation.html",
+        "name": "Design System Documentation | Product Design Glossary",
+        "description": "Learn what design system documentation should include, from component behavior and accessibility to working examples, ownership, and updates.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#breadcrumbs"
+        },
+        "citation": [
+          "https://design-system.service.gov.uk/components/button/",
+          "https://storybook.js.org/docs/writing-docs/autodocs"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#term",
+        "name": "Design System Documentation",
+        "termCode": "design-system-documentation",
+        "description": "Design system documentation explains how to use, implement, and maintain a design system. It connects reusable components and tokens to the decisions teams need to make when building a product.",
+        "url": "https://lexkonovalov.com/glossary/design-system-documentation.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-documentation.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design System Documentation",
+            "item": "https://lexkonovalov.com/glossary/design-system-documentation.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "139",
+    "name": "Design System Metrics",
+    "slug": "design-system-metrics",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "Product Strategy & Growth",
+    "maturity": "Established",
+    "definition": "Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.",
+    "purpose": "Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.",
+    "keyConcepts": [
+      "Which design system metrics are useful?",
+      "Example: measuring field reuse",
+      "Metrics vs. component telemetry",
+      "How do you estimate design system ROI?"
+    ],
+    "howItWorks": "Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.",
+    "relatedTerms": [
+      "Design System Adoption",
+      "Component Telemetry",
+      "Design System Audit",
+      "DesignOps"
+    ],
+    "seoTitle": "Design System Metrics: What to Measure | Product Design Glossary",
+    "seoDescription": "Choose design system metrics for adoption, quality, team effort, and user outcomes. Learn how to define denominators and avoid unsupported ROI claims.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-metrics.html",
+    "sources": [
+      "Measuring the User Experience on a Large Scale, Google Research (https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/)",
+      "Design Systems Report 2026, Zeroheight (https://report.zeroheight.com/2026)"
+    ],
+    "contentMarkdown": "# Design System Metrics\n\nDesign system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.\n\n## Which design system metrics are useful?\n\nStart with a goal, identify observable signals, and define a measure. Google's HEART research describes this goals-to-metrics approach for user experience; the following design system examples are practical applications, not a required HEART scorecard.\n\n| Decision | Possible measure | Important boundary |\n|---|---|---|\n| Where is adoption blocked? | Eligible products using supported components | Define eligibility and version |\n| Are releases difficult to consume? | Time to complete a specified migration | Compare similar changes and team conditions |\n| Is quality improving? | Verified recurring defects in sampled flows | Keep inspection scope consistent |\n| Is support sustainable? | Resolution time and repeated support requests | Fewer requests can also mean disengagement |\n\nUse a small set that informs an actual decision. A single overall “system health” score can hide why a result changed.\n\n## Example: measuring field reuse\n\nSuppose an audit finds that 36 of 60 eligible field instances use the shared component. Coverage in that sample is 60%.\n\nAfter a migration, repeat the same inspection rules. Report changes in the sample and eligibility rules alongside the result. A package download count cannot substitute for this instance-level measure.\n\nIf teams also report faster implementation, define the task and include review and rework time. Comparing an initial complex field with a later simple field would not isolate the system's contribution.\n\n## Metrics vs. component telemetry\n\n[Component telemetry](/glossary/component-telemetry.html) is one way to collect usage or behavior data. Metrics define what those observations mean for a decision.\n\nA metric may instead come from a code inventory, a support log, a task study, or a documented survey. Choose the method that fits the question and the privacy constraints.\n\n## How do you estimate design system ROI?\n\nROI compares estimated benefits with costs over a stated period. One conventional expression is `(benefit − cost) ÷ cost`.\n\nInclude maintenance, documentation, support, migration, and consumer effort in the relevant cost scope. State how saved time was estimated and whether it actually became available for other work. Avoid converting every reused component into a fixed number of saved hours.\n\nReport measured outcomes separately from modeled financial benefits. If attribution is uncertain, present assumptions and a range instead of a precise-looking promise.\n\n## Related terms\n\n- [Design System Adoption](/glossary/design-system-adoption.html)\n- [Component Telemetry](/glossary/component-telemetry.html)\n- [Design System Audit](/glossary/design-system-audit.html)\n- [DesignOps](/glossary/designops.html)\n\n## Sources\n\n- [Measuring the User Experience on a Large Scale, Google Research](https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/)\n- [Design Systems Report 2026, Zeroheight](https://report.zeroheight.com/2026)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-metrics.html",
+        "name": "Design System Metrics: What to Measure | Product Design Glossary",
+        "description": "Choose design system metrics for adoption, quality, team effort, and user outcomes. Learn how to define denominators and avoid unsupported ROI claims.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#breadcrumbs"
+        },
+        "citation": [
+          "https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/",
+          "https://report.zeroheight.com/2026"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#term",
+        "name": "Design System Metrics",
+        "termCode": "design-system-metrics",
+        "description": "Design system metrics are measures used to understand a design system's use, quality, operating effort, and effects on product work. A useful metric answers a specific decision rather than simply reporting how many components exist.",
+        "url": "https://lexkonovalov.com/glossary/design-system-metrics.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-metrics.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design System Metrics",
+            "item": "https://lexkonovalov.com/glossary/design-system-metrics.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "140",
+    "name": "Design System Migration",
+    "slug": "design-system-migration",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.",
+    "purpose": "A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.",
+    "keyConcepts": [
+      "Migration vs. versioning",
+      "A practical migration plan",
+      "Example: replacing a date picker",
+      "How do you manage a phased migration?",
+      "When is the migration complete?"
+    ],
+    "howItWorks": "A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.",
+    "relatedTerms": [
+      "Design System Versioning and SemVer",
+      "Design System Adoption",
+      "Design System Audit",
+      "Design QA"
+    ],
+    "seoTitle": "Design System Migration: A Practical Plan | Product Design Glossary",
+    "seoDescription": "Learn how to plan a design system migration across components, tokens, design assets, and documentation, with pilots, validation, and clear ownership.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-migration.html",
+    "sources": [
+      "Migration guide overview, Carbon Design System (https://www.carbondesignsystem.com/getting-started/migrating/guide/overview)",
+      "Semantic Versioning 2.0.0 (https://semver.org/)"
+    ],
+    "contentMarkdown": "# Design System Migration\n\nA design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.\n\n## Migration vs. versioning\n\n[Versioning](/glossary/design-system-versioning-semver.html) communicates changes under a defined compatibility policy. Migration is the work consuming teams perform to adopt them.\n\nA change described as a visual refresh may still alter layout, interaction, or API expectations. Identify the actual consumer impact rather than assuming the release label describes all necessary work.\n\n## A practical migration plan\n\n| Step | What to establish |\n|---|---|\n| Inventory | Affected products, versions, overrides, and owners |\n| Map changes | Replacements, removed options, and intentional behavior differences |\n| Pilot | One representative flow with meaningful edge cases |\n| Validate | Behavior, accessibility, visual changes, and integration |\n| Roll out | Team responsibilities, sequence, support, and retirement conditions |\n\nRecord the starting state so the team can distinguish migration effects from other product changes.\n\n## Example: replacing a date picker\n\nSuppose a new shared date picker changes its value format and error behavior. Updating the import alone would leave the consuming form with the wrong assumptions.\n\nThe pilot checks parsing, locale display, keyboard operation, invalid dates, and the submitted value. It also reviews layout with existing error messages and help text.\n\nThe team documents the mapping, updates design examples, and identifies which remaining flows need manual attention. A codemod may help with a mechanical replacement; it cannot decide every interaction or business rule.\n\n## How do you manage a phased migration?\n\nDefine what can coexist, for how long, and who maintains compatibility during the transition. Make exceptions and blockers visible.\n\nGive consumers a tested example and a way to request support. Publish deprecation and removal conditions with enough practical information to act on them. Carbon's migration documentation is an example of separating design and development guidance for a specific system change.\n\nPlan recovery for a failed rollout. Reverting a UI package does not necessarily reverse related data or configuration changes.\n\n## When is the migration complete?\n\nUse explicit acceptance criteria, such as verified target versions, resolved exceptions, updated documentation, and the removal of unsupported resources.\n\nCheck representative product tasks after rollout. A completed dependency update is evidence of a code change, not by itself evidence that the migrated experience works.\n\n## Related terms\n\n- [Design System Versioning and SemVer](/glossary/design-system-versioning-semver.html)\n- [Design System Adoption](/glossary/design-system-adoption.html)\n- [Design System Audit](/glossary/design-system-audit.html)\n- [Design QA](/glossary/design-qa.html)\n\n## Sources\n\n- [Migration guide overview, Carbon Design System](https://www.carbondesignsystem.com/getting-started/migrating/guide/overview)\n- [Semantic Versioning 2.0.0](https://semver.org/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-migration.html",
+        "name": "Design System Migration: A Practical Plan | Product Design Glossary",
+        "description": "Learn how to plan a design system migration across components, tokens, design assets, and documentation, with pilots, validation, and clear ownership.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#breadcrumbs"
+        },
+        "citation": [
+          "https://www.carbondesignsystem.com/getting-started/migrating/guide/overview",
+          "https://semver.org/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#term",
+        "name": "Design System Migration",
+        "termCode": "design-system-migration",
+        "description": "A design system migration moves products from one set of shared design resources or implementations to another. It can involve component versions, token names, design libraries, APIs, documentation, and the workflows that depend on them.",
+        "url": "https://lexkonovalov.com/glossary/design-system-migration.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-migration.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design System Migration",
+            "item": "https://lexkonovalov.com/glossary/design-system-migration.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "name": "Theming",
+    "slug": "design-system-theming",
+    "category": "Design Systems & Engineering",
+    "maturity": "Established",
+    "definition": "Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.",
+    "purpose": "Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.",
+    "keyConcepts": [
+      "How does theming work with design tokens?",
+      "Theme vs. mode vs. component variant",
+      "Example: two brands with light and dark appearances",
+      "What should you test across themes?"
+    ],
+    "howItWorks": "Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.",
+    "relatedTerms": [
+      "Semantic Tokens",
+      "Figma Variables and Modes",
+      "Design Tokens",
+      "WCAG Color Contrast"
+    ],
+    "seoTitle": "Design System Theming Explained | Product Design Glossary",
+    "seoDescription": "Learn how design system theming maps shared roles to different values for dark mode, brands, and other contexts without rebuilding every component.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/design-system-theming.html",
+    "sources": [
+      "Design tokens and theming, Atlassian (https://developer.atlassian.com/platform/forge/design-tokens-and-theming/)",
+      "Contrast (Minimum), W3C WAI (https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)"
+    ],
+    "contentMarkdown": "# Theming\n\nTheming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.\n\n## How does theming work with design tokens?\n\nA component can request a semantic role such as `color.text.primary`. A theme supplies the value for that role. The component does not need a separate implementation for each palette.\n\nIllustrative mappings might look like this:\n\n| Role | Light theme | Dark theme |\n|---|---|---|\n| Primary text | A dark neutral | A light neutral |\n| Page surface | A light neutral | A dark neutral |\n| Link text | A darker brand color | A lighter brand color |\n\nThe table describes roles, not tested color combinations. Verify the actual values and states in the product.\n\n## Theme vs. mode vs. component variant\n\nA **theme** groups coordinated values. A design tool's **mode** is one mechanism for selecting values in a variable collection. A **component variant** represents a supported variation, such as primary and secondary button emphasis.\n\nThese concepts can work together, but changing a Figma mode does not by itself implement the corresponding runtime theme. Design assets, generated tokens, and application styles need an agreed mapping.\n\n## Example: two brands with light and dark appearances\n\nSuppose two booking products share a component library. Both use the same field behavior and keyboard interactions, but each has its own accent and typography choices. Each brand also supports light and dark appearances.\n\nKeep brand identity and color appearance explicit. Decide which combinations are supported, how a user preference is selected and retained, and what happens when no preference is available.\n\nA component may use a component-specific token that points to a semantic role. Keep that indirection only when it gives the team a useful scope for future changes.\n\n## What should you test across themes?\n\nCheck readable text, focus indicators, control boundaries, validation states, selected states, and charts. Review images and icons that may disappear or convey the wrong meaning on a different surface.\n\nTest in the application, including nested surfaces and overlays. A token palette cannot establish accessibility for every foreground and background pairing.\n\nFor multi-brand systems, document which differences are intentional and which behavior stays shared. A theme should not silently change what an action does.\n\n## Related terms\n\n- [Semantic Tokens](/glossary/semantic-tokens.html)\n- [Figma Variables and Modes](/glossary/figma-variables-modes.html)\n- [Design Tokens](/glossary/design-tokens.html)\n- [WCAG Color Contrast](/glossary/wcag-color-contrast.html)\n\n## Sources\n\n- [Design tokens and theming, Atlassian](https://developer.atlassian.com/platform/forge/design-tokens-and-theming/)\n- [Contrast (Minimum), W3C WAI](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/design-system-theming.html",
+        "name": "Design System Theming Explained | Product Design Glossary",
+        "description": "Learn how design system theming maps shared roles to different values for dark mode, brands, and other contexts without rebuilding every component.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#breadcrumbs"
+        },
+        "citation": [
+          "https://developer.atlassian.com/platform/forge/design-tokens-and-theming/",
+          "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#term",
+        "name": "Theming",
+        "termCode": "design-system-theming",
+        "description": "Theming is the practice of applying a coordinated set of design values to a shared interface. In a design system, a theme can change colors, typography, or other supported decisions while components retain a consistent purpose and API.",
+        "url": "https://lexkonovalov.com/glossary/design-system-theming.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/design-system-theming.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Theming",
+            "item": "https://lexkonovalov.com/glossary/design-system-theming.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "142",
+    "name": "Pattern Library",
+    "slug": "pattern-library",
+    "category": "Design Systems & Engineering",
+    "secondaryCategory": "UX & Product Architecture",
+    "maturity": "Established",
+    "definition": "A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.",
+    "purpose": "A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.",
+    "keyConcepts": [
+      "What belongs in a UI pattern?",
+      "Pattern library vs. component library vs. design system",
+      "Example: reviewing a booking change",
+      "How do you create and maintain a pattern library?"
+    ],
+    "howItWorks": "A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.",
+    "relatedTerms": [
+      "Component Libraries",
+      "Component Architecture",
+      "Design System Documentation",
+      "Design System Governance"
+    ],
+    "seoTitle": "Pattern Library vs. Component Library | Product Design Glossary",
+    "seoDescription": "Learn what a UI pattern library documents, how it differs from a component catalog, and how patterns connect shared components to complete user tasks.",
+    "canonicalUrl": "https://lexkonovalov.com/glossary/pattern-library.html",
+    "sources": [
+      "Patterns, GOV.UK Design System (https://design-system.service.gov.uk/patterns/)",
+      "Contribution criteria, GOV.UK Design System (https://design-system.service.gov.uk/community/contribution-criteria/)"
+    ],
+    "contentMarkdown": "# Pattern Library\n\nA UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.\n\n## What belongs in a UI pattern?\n\nA useful pattern describes the problem, the context in which the approach works, its interaction flow, and the decisions a team must adapt.\n\nIt can include relevant components, example content, accessibility considerations, and known limitations. The goal is to help someone solve a recurring problem, not simply reproduce a screenshot.\n\nTeams use “pattern library” differently. State whether a particular library includes interaction patterns, component examples, visual styles, or a combination.\n\n## Pattern library vs. component library vs. design system\n\n| Resource | Main question |\n|---|---|\n| Component library | Which reusable building block can I implement? |\n| Pattern library | How can those pieces support this recurring task? |\n| Design system | Which shared decisions, resources, and practices govern the experience? |\n\nA button is a component. Reviewing a request before sending it is a pattern that can combine headings, summaries, change links, and a confirmation action.\n\nA pattern can be implemented using different components while retaining its important interaction principles.\n\n## Example: reviewing a booking change\n\nSuppose several products need users to review a proposed booking change. The pattern identifies the original and proposed values, any relevant consequences, and a clear route to correct a detail.\n\nIt also specifies what happens after submission, including an uncertain or failed result. One product may present this in a page, another in a dialog, depending on the task and constraints.\n\nThe pattern should explain which decisions are shared and which depend on the product. It should not invent a universal approval rule for every booking workflow.\n\n## How do you create and maintain a pattern library?\n\nStart with a repeated need observed in real product work. Compare existing implementations and the evidence behind them. Document the common approach and the reasons for any differences.\n\nGOV.UK's pattern collection illustrates guidance organized around tasks and information needs, alongside a separate component collection.\n\nAssign an owner and link working examples. Check that the pattern still fits the components and product constraints it depends on. When teams repeatedly need exceptions, investigate the pattern's scope instead of adding a new near-duplicate for every screen.\n\n## Related terms\n\n- [Component Libraries](/glossary/component-libraries.html)\n- [Component Architecture](/glossary/component-architecture.html)\n- [Design System Documentation](/glossary/design-system-documentation.html)\n- [Design System Governance](/glossary/design-system-governance.html)\n\n## Sources\n\n- [Patterns, GOV.UK Design System](https://design-system.service.gov.uk/patterns/)\n- [Contribution criteria, GOV.UK Design System](https://design-system.service.gov.uk/community/contribution-criteria/)",
+    "structuredDataGraph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://lexkonovalov.com/glossary/pattern-library.html#webpage",
+        "url": "https://lexkonovalov.com/glossary/pattern-library.html",
+        "name": "Pattern Library vs. Component Library | Product Design Glossary",
+        "description": "Learn what a UI pattern library documents, how it differs from a component catalog, and how patterns connect shared components to complete user tasks.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://lexkonovalov.com/glossary/pattern-library.html#term"
+        },
+        "breadcrumb": {
+          "@id": "https://lexkonovalov.com/glossary/pattern-library.html#breadcrumbs"
+        },
+        "citation": [
+          "https://design-system.service.gov.uk/patterns/",
+          "https://design-system.service.gov.uk/community/contribution-criteria/"
+        ]
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://lexkonovalov.com/glossary/pattern-library.html#term",
+        "name": "Pattern Library",
+        "termCode": "pattern-library",
+        "description": "A UI pattern library documents reusable approaches to recurring interaction problems, such as entering an address or reviewing information before submission. A pattern explains how components, content, and behavior work together in a particular kind of task.",
+        "url": "https://lexkonovalov.com/glossary/pattern-library.html",
+        "inDefinedTermSet": {
+          "@id": "https://lexkonovalov.com/glossary/#terms"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://lexkonovalov.com/glossary/pattern-library.html#webpage"
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://lexkonovalov.com/glossary/#terms",
+        "name": "Product Design Glossary",
+        "url": "https://lexkonovalov.com/glossary/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://lexkonovalov.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lexkonovalov.com/glossary/pattern-library.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lexkonovalov.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Product Design Glossary",
+            "item": "https://lexkonovalov.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pattern Library",
+            "item": "https://lexkonovalov.com/glossary/pattern-library.html"
           }
         ]
       }

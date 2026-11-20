@@ -462,6 +462,12 @@
 <p class="glossary-term-section__text">If you are renaming a public prop, add the replacement while keeping the old prop working. Mark the old one deprecated in a minor release and explain how to migrate. Agree on the deprecation window and check representative products before removing it in a major release.</p>
 <p class="glossary-term-section__text">Publish migration notes with the affected consumers, a before-and-after example, and any manual checks. For a shared dialog, include a keyboard test in a real flow. For a prop rename, show the replacement prop and explain when teams can remove the old one from their code.</p>
 </section>
+<section class="glossary-term-section" aria-labelledby="section-component-lifecycle-and-release-notes">
+<h2 id="section-component-lifecycle-and-release-notes" class="glossary-term-section__title">Component lifecycle and release notes</h2>
+<p class="glossary-term-section__text">Teams can label components experimental, supported, deprecated, or retired, with explicit meanings for each status. These lifecycle labels describe support expectations; they are not a replacement for the package's compatibility policy.</p>
+<p class="glossary-term-section__text">Release notes should explain the user or consumer effect, the required action, and where to find a <a href="/glossary/design-system-migration.html">migration plan</a>. For example: “The next major release removes the old dialog width prop. Use the size option shown in the migration example, then check narrow layouts and long content.”</p>
+<p class="glossary-term-section__text">Keep planned removal conditions distinct from the date an old component actually disappears. Record who can help consumers resolve a blocker.</p>
+</section>
 <section class="glossary-term-section" aria-labelledby="section-related-terms">
 <h2 id="section-related-terms" class="glossary-term-section__title">Related terms</h2>
 <ul class="glossary-term-ul">
